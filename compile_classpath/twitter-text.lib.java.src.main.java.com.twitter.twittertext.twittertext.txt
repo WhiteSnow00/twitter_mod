@@ -1,0 +1,2 @@
+compile/rsc/c1e3836b60e5/twitter-text.lib.java.src.main.java.com.twitter.twittertext.twittertext/current/zinc/classes
+resolve/coursier/e2197a99ff41/cache/relative/https/artifactory-ci.twitter.biz/repo1.maven.org/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar
