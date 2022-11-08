@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="event_header_image_height">48dp</dimen>
+    <dimen name="font_size_body">15sp</dimen>
+    <dimen name="font_size_headline_1">20sp</dimen>
+    <dimen name="font_size_headline_2">17sp</dimen>
+    <dimen name="font_size_jumbo">30sp</dimen>
+    <dimen name="font_size_large">18sp</dimen>
+    <dimen name="font_size_normal">15sp</dimen>
+    <dimen name="font_size_prompt_long_title">16sp</dimen>
+    <dimen name="font_size_small">13sp</dimen>
+    <dimen name="font_size_subtext_1">14sp</dimen>
+    <dimen name="font_size_subtext_2">13sp</dimen>
+    <dimen name="font_size_subtext_3">11sp</dimen>
+    <dimen name="font_size_title_1">34sp</dimen>
+    <dimen name="font_size_title_2">31sp</dimen>
+    <dimen name="font_size_title_3">26sp</dimen>
+    <dimen name="font_size_title_4">23sp</dimen>
+    <dimen name="font_size_xlarge">22sp</dimen>
+    <dimen name="font_size_xsmall">11sp</dimen>
+    <dimen name="font_size_xxsmall">9sp</dimen>
+    <dimen name="navigation_drawer_width">300dp</dimen>
+    <dimen name="prompt_long_message_header_margin">16dp</dimen>
+</resources>

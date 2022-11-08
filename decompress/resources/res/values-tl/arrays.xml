@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Makakatanggap ka ng mga abiso para sa mga bagong Tweet.</item>
+        <item>Makakatanggap ka ng mga abiso para sa mga bagong Super Follower lang na Tweet.</item>
+        <item>Makakakuha ka ng mga abiso para sa mga bagong Live na video Tweet.</item>
+        <item>Makakakuha ka ng mga abiso para sa mga bagong Tweet sa Spaces.</item>
+        <item>Hindi ka na makakatanggap ng mga abiso para sa mga bagong Tweet.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>Mga Tweet</item>
+        <item>Mga Super Follower lang na Tweet</item>
+        <item>Live na video</item>
+        <item>Spaces</item>
+        <item>Wala</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Lahat ng Tweet</item>
+        <item>Mga Super Follower Lang na Tweet</item>
+        <item>Live na video lang</item>
+        <item>Spaces lang</item>
+        <item>Off</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Makakuha ng mga abiso para sa lahat ng Tweet ng account na ito.</item>
+        <item>Makatanggap ng mga abiso para lang sa mga Super Follow na Tweet.</item>
+        <item>Makakuha lang ng mga abiso para sa mga live na broadcast.</item>
+        <item>Makakuha lang ng mga abiso para sa Spaces.</item>
+        <item>I-off ang mga abiso para sa mga Tweet ng account na ito.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>I-tweet ang link</item>
+        <item>Kopyahin ang link</item>
+        <item>Ipadala ang link</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Ano ang kabuuang kasiyahan mo sa %1$s?</item>
+        <item>Gaano ka nasiyahan sa %1$s?</item>
+        <item>Sa kabuuan, gaano ka nasiyahan sa iyong kamakailang karanasan sa %1$s?</item>
+        <item>Paano mo ire-rate ang pangkalahatang karanasan sa %1$s?</item>
+        <item>Paano mo ire-rate ang pangkalahatang karanasan mo sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong karanasan sa %1$s hanggang ngayon?</item>
+        <item>Paano mo ire-rate ang karanasan mo sa Twitter ng %1$s?</item>
+        <item>Nasiyahan ka ba sa kamakailan mong karanasan sa %1$s?</item>
+        <item>Gaano kabuti naabot ng %1$s ang inaasahan mo?</item>
+        <item>Paano mo ire-rate ang karanasan mo bilang bisita ng %1$s?</item>
+        <item>Paano mo ire-rate ang serbisyo sa iyo ng %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang karanasan sa serbisyo ng %1$s?</item>
+        <item>Paano mo ire-rate ang serbisyong natanggap mo mula sa %1$s?</item>
+        <item>Nasiyahan ka ba sa naging resulta ng iyong interaksyon sa %1$s?</item>
+        <item>Paano mo ire-rate ang kakayahang lutasin ang iyong isyu sa %1$s?</item>
+        <item>Paano mo ire-rate ang panahon ng pagsagot ng %1$s?</item>
+        <item>Paano mo ire-rate ang bilis ng serbisyo mula sa %1$s?</item>
+        <item>Paano mo ire-rate ang panahon ng paglutas ng %1$s?</item>
+        <item>Paano mo ire-rate ang panahon ng paglutas ng iyong isyu sa %1$s?</item>
+        <item>Paano mo ire-rate ang bilis ng paglutas ng %1$s?</item>
+        <item>Paano mo ire-rate ang pagkabihasa ng tagapayo ng %1$s?</item>
+        <item>Gaano ka nasiyahan sa ahente ng %1$s na tumulong sa iyo?</item>
+        <item>Gaano ka nasiyahan sa espesyalista ng %1$s na tumulong sa iyo?</item>
+        <item>Gaano ka nasiyahan sa kinatawan ng %1$s na tumulong sa iyo?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang karanasan sa pagbabangko sa %1$s?</item>
+        <item>Paano mo ire-rate ang pangkalahatang karanasan sa event ng %1$s?</item>
+        <item>Paano mo ire-rate ang iyong karanasan sa pagbabayad ng bill sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong karanasan sa pagbili sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong karanasan sa pamimili sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong karanasan sa pagtanggap ng padala sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong karanasan sa pagrerenta sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang pagbisita sa tindahan ng %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang pamamalagi sa hotel sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang flight sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang pagsakay sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang biyahe sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang pagbisita sa %1$s?</item>
+        <item>Paano mo ire-rate ang iyong kamakailang pagkain sa %1$s?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 araw</item>
+        <item>12 buwan</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Normal</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Gaano kalamang na irerekomenda mo ang %1$s sa isang kaibigan?</item>
+        <item>Gaano kalamang na irerekomenda mo ang %1$s sa isang kaibigan?</item>
+        <item>Gaano kalamang na irerekomenda mo ang %1$s sa isang kasamahan?</item>
+        <item>Gaano kalamang na irerekomenda mo ang %1$s sa isang miyembro ng pamilya?</item>
+        <item>Gaano kalamang na irerekomenda mo ang %1$s sa ibang tao?</item>
+        <item>Gaano kalamang na irerekomenda mo ang %1$s sa isang kaibigan o kasamahan?</item>
+        <item>Gaano kalamang na bibili ka sa %1$s sa hinaharap?</item>
+        <item>Gaano kalamang na irerekomenda mo ang %1$s?</item>
+        <item>Irerekomenda mo ba ang %1$s sa isang kaibigan o kasamahan?</item>
+        <item>Gaano kalamang na irerekomenda mo ang iyong karanasan sa %1$s sa isang kaibigan?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Magandang Bilang ng Manonood</item>
+        <item>Positibong Komunidad</item>
+        <item>Kalidad ng Video</item>
+        <item>Nakakaengganyong Chat</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Mababang Bilang ng Manonood</item>
+        <item>Panliligalig</item>
+        <item>Mga Isyu sa Video</item>
+        <item>Spam sa Chat</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minuto</item>
+        <item>30 minuto</item>
+        <item>1 oras</item>
+        <item>2 oras</item>
+        <item>4 na oras</item>
+        <item>Araw-araw</item>
+    </array>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Добијаћеш обавештења за нове твитове.</item>
+        <item>Добијаћеш обавештења за новог Супер-пратиоца на Твитеру.</item>
+        <item>Добијаћеш обавештења о новим видео-твитовима уживо.</item>
+        <item>Добијаћеш обавештења о новим твитовима у Просторима.</item>
+        <item>Више нећеш добијати обавештења о новим твитовима.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>твит(ов)а</item>
+        <item>Само твитови са супер-праћењем</item>
+        <item>Видео уживо</item>
+        <item>Простори</item>
+        <item>Ниједно</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Сви твитови</item>
+        <item>Твитови са супер-праћењем</item>
+        <item>Само видео уживо</item>
+        <item>Само Простори</item>
+        <item>Искључи</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Добијаћеш обавештења за све твитове са овог налога.</item>
+        <item>Добијај обавештења само за твитове са супер-праћењем.</item>
+        <item>Добијаћеш обавештења само за емитовања уживо.</item>
+        <item>Добијаћеш обавештења само о Просторима.</item>
+        <item>Искључи обавештења о твитовима са овог налога.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Твитуј линк</item>
+        <item>Копирај линк</item>
+        <item>Пошаљи линк</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Које је твоје укупно задовољство са %1$s?</item>
+        <item>Колико си задовољан/на са %1$s?</item>
+        <item>Колико си задовољан/на својим недавним искуством са %1$s?</item>
+        <item>Како оцењујеш укупно искуство са %1$s?</item>
+        <item>Како оцењујеш своје укупно искуство са %1$s?</item>
+        <item>Како оцењујеш своје искуство до сада са %1$s?</item>
+        <item>Како оцењујеш своје искуство на Твитеру са %1$s?</item>
+        <item>Да ли си задовољан/на са својим недавним искуством са %1$s?</item>
+        <item>Колико је %1$s испунила твоја очекивања?</item>
+        <item>Како оцењујеш своје искуство као госта %1$s?</item>
+        <item>Како оцењујеш своје искуство за услуге %1$s?</item>
+        <item>Како оцењујеш своје недавно искуство услуге са %1$s?</item>
+        <item>Како оцењујеш услуге добијене од %1$s?</item>
+        <item>Да ли си задовољан/на резултатом своје интеракције са %1$s?</item>
+        <item>Како оцењујеш способност решавања твог проблема са %1$s?</item>
+        <item>Како оцењујеш време одговора од стране %1$s?</item>
+        <item>Како оцењујеш брзину услуге од стране %1$s?</item>
+        <item>Како оцењујеш време за решавање %1$s?</item>
+        <item>Како оцењујеш време решавања твог проблема са %1$s?</item>
+        <item>Како оцењујеш брзину решавања %1$s?</item>
+        <item>Како оцењујеш стручност саветника компаније %1$s?</item>
+        <item>У којој мери си задовољан/на агентом %1$s који ти је помогао?</item>
+        <item>У којој мери си задовољан/на стручњаком компаније %1$s који ти је помогао?</item>
+        <item>У којој мери си задовољан/на представником комапније %1$s који ти је помогао?</item>
+        <item>Како оцењујеш своје недавно искуство са банком %1$s?</item>
+        <item>Како оцењујеш укупно искуство догађаја у %1$s?</item>
+        <item>Како оцењујеш своје искуство плаћања рачуна са %1$s?</item>
+        <item>Како оцењујеш своје искуство куповине са %1$s?</item>
+        <item>Како оцењујеш своје искуство куповине са %1$s?</item>
+        <item>Како оцењујеш своје искуство испоруке са %1$s?</item>
+        <item>Како оцењујеш своје искуство најма са %1$s?</item>
+        <item>Како оцењујеш своју недавну посету продавници %1$s?</item>
+        <item>Како оцењујеш свој недавни боравак у хотелу %1$s?</item>
+        <item>Како оцењујеш свој недавни лет са %1$s?</item>
+        <item>Како оцењујеш своју недавну вожњу са %1$s?</item>
+        <item>Како оцењујеш своје недавно путовање са %1$s?</item>
+        <item>Како оцењујеш своју недавну посету %1$s?</item>
+        <item>Како оцењујеш свој недавни оброк у %1$s?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 дана</item>
+        <item>12 месеци</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25x</item>
+        <item>0,5x</item>
+        <item>0,75x</item>
+        <item>Нормално</item>
+        <item>1,25x</item>
+        <item>1,5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Колико је вероватно да препоручиш %1$s пријатељу?</item>
+        <item>Колико је вероватно да препоручиш %1$s пријатељу?</item>
+        <item>Колико је вероватно да препоручиш %1$s колеги?</item>
+        <item>Колико је вероватно да препоручиш %1$s члановима породице?</item>
+        <item>Колико је вероватно да препоручиш %1$s неком другом?</item>
+        <item>Колико је вероватно да препоручиш %1$s пријатељу или колеги?</item>
+        <item>Колико је вероватно да купујеш у %1$s у будућности?</item>
+        <item>Колико је вероватно да препоручиш %1$s?</item>
+        <item>Да ли би препоручио/ла %1$s пријатељу или колеги?</item>
+        <item>Колико је вероватно да препоручиш своје искуство са %1$s пријатељу?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Добар број гледалаца</item>
+        <item>Позитивна заједница</item>
+        <item>Квалитет видео снимка</item>
+        <item>Интересантно ћаскање</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Мали број гледалаца</item>
+        <item>Узнемиравање</item>
+        <item>Проблеми са видео снимком</item>
+        <item>Непожељни садржај у ћаскању</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 минута</item>
+        <item>30 минута</item>
+        <item>1 сат</item>
+        <item>2 сата</item>
+        <item>4 сата</item>
+        <item>Дневно</item>
+    </array>
+</resources>

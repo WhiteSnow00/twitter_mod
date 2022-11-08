@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_wide_width">300dp</dimen>
+    <dimen name="list_horizontal_padding">144dp</dimen>
+    <dimen name="search_card_image_height">300dp</dimen>
+</resources>

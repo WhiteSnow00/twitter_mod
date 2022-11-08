@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Saat ilmoituksia uusista twiiteistä.</item>
+        <item>Saat ilmoitukset uusista twiiteistä vain Superseuraajille.</item>
+        <item>Saat ilmoitukset uusista live-videotwiiteistä.</item>
+        <item>Saat ilmoitukset uusista Huoneet-twiiteistä.</item>
+        <item>Et enää saa ilmoituksia uusista twiiteistä.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>uutta twiittiä</item>
+        <item>Twiitit vain Superseuraajille</item>
+        <item>Live-video</item>
+        <item>Huoneet</item>
+        <item>Ei mitään</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Kaikki twiitit</item>
+        <item>Twiitit vain Superseuraajille</item>
+        <item>Vain live-video</item>
+        <item>Vain Huoneet</item>
+        <item>Pois</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Saa ilmoitus kaikista tämän tilin twiiteistä.</item>
+        <item>Saa ilmoitus uusista twiiteistä vain Superseuraajille.</item>
+        <item>Saa ilmoitus vain live-lähetyksistä.</item>
+        <item>Saa ilmoitus vain Huoneista.</item>
+        <item>Poista käytöstä ilmoitus tämän tilin twiiteistä.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Twiittaa linkki</item>
+        <item>Kopioi linkki</item>
+        <item>Lähetä linkki</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Miten tyytyväinen olet kaikkiaan yritykseen %1$s?</item>
+        <item>Miten tyytyväinen olet yritykseen %1$s?</item>
+        <item>Miten tyytyväinen olit kaikkiaan äskettäiseen kokemukseesi yrityksestä %1$s?</item>
+        <item>Minkä kokonaisarvosanan %1$s saa sinulta?</item>
+        <item>Minkä kokonaisarvosanan %1$s saa sinulta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta tähänastisen kokemuksesi perusteella?</item>
+        <item>Minkä arvosanan %1$s saa sinulta Twitter-toiminnastaan?</item>
+        <item>Olitko tyytyväinen asiointiisi yrityksen %1$s kanssa?</item>
+        <item>Miten hyvin %1$s vastaa odotuksiasi?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vierailustasi?</item>
+        <item>Minkä arvosanan %1$s saa sinulta palvelusta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vastikään saamastasi palvelusta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta palvelusta?</item>
+        <item>Olitko tyytyväinen asioinnin lopputulokseen yrityksen %1$s kanssa?</item>
+        <item>Minkä arvosanan %1$s saa sinulta pulmasi ratkaisemisesta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vastausajasta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta palvelunopeudesta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta asiasi ratkaisuun kuluneesta ajasta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta pulmasi ratkaisunopeudesta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta asiasi ratkaisunopeudesta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta asiakaspalvelijan osaamisesta?</item>
+        <item>Miten tyytyväinen olit sinua auttaneeseen yrityksen %1$s asiakaspalvelijaan?</item>
+        <item>Miten tyytyväinen olit sinua auttaneeseen yrityksen %1$s asiantuntijaan?</item>
+        <item>Miten tyytyväinen olit sinua auttaneeseen yrityksen %1$s edustajaan?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vastikään saamastasi pankkipalvelusta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta tapahtumasta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta laskunmaksusta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta ostotapahtumasta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta ostoskokemuksesta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta toimituksesta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vuokrauspalvelusta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta käynnistäsi myymälässä?</item>
+        <item>Minkä arvosanan %1$s saa sinulta äskettäisestä hotelliyöpymisestäsi?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vastikään tekemästäsi lentomatkasta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vastikään saamastasi kyydistä?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vastikään tekemästäsi matkasta?</item>
+        <item>Minkä arvosanan %1$s saa sinulta viimeaikaisesta käynnistäsi?</item>
+        <item>Minkä arvosanan %1$s saa sinulta vastikään nauttimastasi ateriasta?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 päivää</item>
+        <item>12 kuukautta</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25x</item>
+        <item>0,5x</item>
+        <item>0,75x</item>
+        <item>Normaali</item>
+        <item>1,25x</item>
+        <item>1,5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Kuinka todennäköisesti suosittelisit yritystä %1$s ystävälle?</item>
+        <item>Kuinka todennäköisesti suosittelisit yritystä %1$s ystävällesi?</item>
+        <item>Kuinka todennäköisesti suosittelisit yritystä %1$s kollegalle?</item>
+        <item>Kuinka todennäköisesti suosittelisit yritystä %1$s perheenjäsenelle?</item>
+        <item>Kuinka todennäköisesti suosittelisit yritystä %1$s jollekulle muulle?</item>
+        <item>Kuinka todennäköisesti suosittelisit yritystä %1$s ystävälle tai kollegalle?</item>
+        <item>Kuinka todennäköisesti asioit yrityksessä %1$s tulevaisuudessa?</item>
+        <item>Kuinka todennäköisesti suosittelisit yritystä %1$s?</item>
+        <item>Suosittelisitko yritystä %1$s ystävälle tai kollegalle?</item>
+        <item>Kuinka todennäköisesti suosittelisit kokemustasi yrityksen kanssa %1$s ystävälle?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Hyvä katsojamäärä</item>
+        <item>Myönteinen yhteisö</item>
+        <item>Videon laatu</item>
+        <item>Kiinnostava keskustelu</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Alhainen katsojamäärä</item>
+        <item>Häirintä</item>
+        <item>Ongelmat videossa</item>
+        <item>Roskapostia keskustelussa</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minuuttia</item>
+        <item>30 minuuttia</item>
+        <item>1 tunti</item>
+        <item>2 tuntia</item>
+        <item>4 tuntia</item>
+        <item>Päivittäin</item>
+    </array>
+</resources>

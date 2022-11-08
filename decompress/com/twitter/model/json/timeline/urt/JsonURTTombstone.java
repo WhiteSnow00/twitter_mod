@@ -1,0 +1,45 @@
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
+package com.twitter.model.json.timeline.urt;
+
+import java.util.Locale;
+import com.bluelinelabs.logansquare.annotation.JsonField;
+import com.bluelinelabs.logansquare.annotation.JsonObject;
+
+@JsonObject
+public class JsonURTTombstone extends aih<wqv>
+{
+    @JsonField(typeConverter = JsonURTTombstone.JsonURTTombstone$a.class)
+    public String a;
+    @JsonField
+    public brv b;
+    @JsonField(name = { "tweet", "tombstoneTweet" })
+    public c6t c;
+    
+    public JsonURTTombstone() {
+        this.a = "unknown";
+    }
+    
+    @Override
+    public final Object s() {
+        final boolean equals = "unknown".equals(this.a);
+        Object o = null;
+        if (!equals) {
+            if ("Inline".equals(this.a) && this.b == null) {
+                e9a.d((Throwable)new IllegalStateException(String.format(Locale.ENGLISH, "A Tombstone with display type 'inline' must have a valid tombstoneInfo. DisplayType: %s", this.a)));
+            }
+            else if ("NonCompliant".equals(this.a) && this.b == null) {
+                e9a.d((Throwable)new IllegalStateException(String.format(Locale.ENGLISH, "A Tombstone with display type 'NonCompliant' must have a valid tombstoneInfo. DisplayType: %s", this.a)));
+            }
+            else {
+                o = new wqv(this.a, this.b, this.c);
+            }
+        }
+        else {
+            e9a.d((Throwable)new IllegalStateException(String.format(Locale.ENGLISH, "A Tombstone must have a valid display type. DisplayType: %s", this.a)));
+        }
+        return o;
+    }
+}

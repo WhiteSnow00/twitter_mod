@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_config_prefDialogWidth">440dp</dimen>
+    <dimen name="abc_dialog_fixed_height_major">60%</dimen>
+    <dimen name="abc_dialog_fixed_height_minor">90%</dimen>
+    <dimen name="abc_dialog_fixed_width_major">60%</dimen>
+    <dimen name="abc_dialog_fixed_width_minor">90%</dimen>
+    <dimen name="abc_dialog_min_width_major">55%</dimen>
+    <dimen name="abc_dialog_min_width_minor">80%</dimen>
+    <dimen name="glad_you_are_here_checkbox_margin_bottom">84dp</dimen>
+    <dimen name="glad_you_are_here_cta_margin_bottom">60dp</dimen>
+    <dimen name="photo_row_height">200dp</dimen>
+    <dimen name="welcome_screen_desc_margin_bottom">120dp</dimen>
+    <dimen name="welcome_screen_logo_margin_top">60dp</dimen>
+    <dimen name="welcome_screen_padding">52dp</dimen>
+    <dimen name="welcome_screen_title_margin_bottom">30dp</dimen>
+</resources>

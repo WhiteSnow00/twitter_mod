@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="one">%d સભ્ય</item>
+        <item quantity="other">%d સભ્ય</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="one">%d નવી વસ્તુ</item>
+        <item quantity="other">%d નવી વસ્તુઓ</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="one">%1$d કો-હોસ્ટ</item>
+        <item quantity="other">%1$d કો-હોસ્ટ</item>
+    </plurals>
+    <plurals name="communities_tweet_replies_count">
+        <item quantity="one">%1$s પ્રત્યુતર</item>
+        <item quantity="other">%1$s પ્રત્યુતર</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="one">%d કોમ્યુનિટી સભ્ય</item>
+        <item quantity="other">%d કોમ્યુનિટી સભ્ય</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="one">%d મોડરેટર</item>
+        <item quantity="other">%d મોડરેટર</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="one">%s વિનંતી</item>
+        <item quantity="other">%s વિનંતી</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="one">%s નવી ટ્વીટ</item>
+        <item quantity="other">%s નવી ટ્વીટ</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="one">%s રિપોર્ટ</item>
+        <item quantity="other">%s રિપોર્ટ</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="one">%d અક્ષર વધુ લાંબુ છે</item>
+        <item quantity="other">%d અક્ષરો વધુ લાંબુ છે</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="one">%d અક્ષર બાકી છે</item>
+        <item quantity="other">%d અક્ષરો બાકી છે</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_days">
+        <item quantity="one">%1$d દિવસ બાકી</item>
+        <item quantity="other">%1$d દિવસ બાકી છે</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_hours">
+        <item quantity="one">%1$d કલાક બાકી</item>
+        <item quantity="other">%1$d કલાક બાકી છે</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_minutes">
+        <item quantity="one">%1$d મિનિટ બાકી</item>
+        <item quantity="other">%1$d મિનિટ બાકી છે</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="one">%2$d અન્ય લોકોની સાથે %1$sની સ્પેસ</item>
+        <item quantity="other">%2$d અન્ય લોકોની સાથે %1$sની સ્પેસ</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="one">%d નવી ક્રિયાપ્રતિક્રિયા</item>
+        <item quantity="other">%d નવી ક્રિયાપ્રતિક્રિયાઓ</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d દિવસ</item>
+        <item quantity="other">%d દિવસો</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">%d દિવસ પહેલાં</item>
+        <item quantity="other">%d દિવસ પહેલાં</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="one">વપરાશકારને આ સમૂહમાં ઉમેરી શકાય તેમ નથી.</item>
+        <item quantity="other">%d વપરાશકારોને આ સમૂહમાં ઉમેરી શકાય તેમ નથી.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="one">સમૂહમાં વપરાશકારને ઉમેર્યા.</item>
+        <item quantity="other">સમૂહમાં %d વપરાશકારોને ઉમેર્યા.</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="one">1 વ્યક્તિ</item>
+        <item quantity="other">%d લોકો</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="one">%d વ્યક્તિ સાથેની સમૂહ ચેટ</item>
+        <item quantity="other">%d લોકો સાથેની સમૂહ ચેટ</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="one">%s માટે પ્રોફાઈલ છબી</item>
+        <item quantity="other">%s માટે પ્રોફાઈલ છબીઓ</item>
+    </plurals>
+    <plurals name="dm_more_in_this_group">
+        <item quantity="one">આ જૂથમાં %1$s છે</item>
+        <item quantity="other">આ જૂથમાં %1$s છે</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="one">જેમને તમે જાણતા હો તેવી %d નવી વ્યક્તિ</item>
+        <item quantity="other">જેમને તમે જાણતા હો તેવા %d નવા લોકો</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="one">%d નવી વિનંતી</item>
+        <item quantity="other">%d નવી વિનંતી</item>
+    </plurals>
+    <plurals name="dm_other_people">
+        <item quantity="one">%1$d અન્ય વ્યક્તિ</item>
+        <item quantity="other">%1$d અન્ય લોકો</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="one">%1$s ઉમેરવામાં આવ્યું હતું</item>
+        <item quantity="other">%1$s ઉમેરવામાં આવ્યા હતાં</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="one">%d બાકી વિનંતી</item>
+        <item quantity="other">%s બાકી વિનંતી</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="one">જેમને તમે જાણતા હો તેવી %d વ્યક્તિ</item>
+        <item quantity="other">જેમને તમે જાણતા હો તેવા %d લોકો</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="one">તમે ફક્ત %d ચૅટને પિન કરી શકો છો</item>
+        <item quantity="other">તમે ફક્ત %d ચૅટને પિન કરી શકો છો</item>
+    </plurals>
+    <plurals name="dm_quick_share_collapsed">
+        <item quantity="one">%1$s + %2$d અન્ય</item>
+        <item quantity="other">%1$s + %2$d અન્યો</item>
+    </plurals>
+    <plurals name="dm_seen_by_list_others_overflow">
+        <item quantity="one">અને {{}}%d અન્ય{{}}</item>
+        <item quantity="other">અને {{}}%d અન્ય{{}}</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="one">%d વ્યક્તિ દ્વારા જોયેલું</item>
+        <item quantity="other">%d લોકો દ્વારા જોયેલું</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="one">%d ન વંચાયેલ સંદેશો</item>
+        <item quantity="other">%d ન વંચાયેલા સંદેશા</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d સેકન્ડ ફાસ્ટ ફૉરવર્ડ કરો</item>
+        <item quantity="other">%d સેકન્ડ ફાસ્ટ ફૉરવર્ડ કરો</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d સેકન્ડ રિવાઇન્ડ કરો</item>
+        <item quantity="other">%d સેકન્ડ રિવાઇન્ડ કરો</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="one">%s માટેની પ્રોફાઈલ છબી</item>
+        <item quantity="other">%s માટેની પ્રોફાઈલ છબીઓ</item>
+    </plurals>
+    <plurals name="followed_by_count">
+        <item quantity="one">%1$s અને %2$d અન્ય દ્વારા અનુસર્યા</item>
+        <item quantity="other">%1$s અને %2$d અન્યો દ્વારા અનુસર્યા</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="one">%d ઉમેરો</item>
+        <item quantity="other">%d ઉમેરો</item>
+    </plurals>
+    <plurals name="generated_alt_text_banner">
+        <item quantity="one">@string/generated_alt_text_banner_single</item>
+        <item quantity="other">@string/generated_alt_text_banner_multiple</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="one">તમને ફક્ત %1$d કો-હોસ્ટને આમંત્રિત કરવાની મંજૂરી છે.</item>
+        <item quantity="other">તમને ફક્ત %1$d કો-હોસ્ટને આમંત્રિત કરવાની મંજૂરી છે.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="one">%1$d જેટલી વધુ વ્યક્તિને ઉમેરો.</item>
+        <item quantity="other">%1$d જેટલા વધુ લોકોને ઉમેરો.</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="one">તમને %1$d નવો અનુયાયી મળ્યો!</item>
+        <item quantity="other">તમને %1$d નવા અનુયાયી મળ્યા!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d કલાક</item>
+        <item quantity="other">%d કલાક</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="one">%d કલાક પહેલાં</item>
+        <item quantity="other">%d કલાક પહેલાં</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="one">%1$s%2$sને અનુસરે છે.</item>
+        <item quantity="other">%1$s%2$sને અનુસરે છે.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="one">તમે અને %1$s બંને મુદ્દો %2$sને અનુસરો છો.</item>
+        <item quantity="other">તમે અને %1$s બંને મુદ્દા %2$sને અનુસરો છો.</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="one">સભ્ય</item>
+        <item quantity="other">સભ્યો</item>
+    </plurals>
+    <plurals name="list_subscriber_count">
+        <item quantity="one">‧ %d સબ્સ્ક્રાઇબર</item>
+        <item quantity="other">‧ %d સબ્સ્ક્રાઇબર્સ</item>
+    </plurals>
+    <plurals name="magic_recs_follow_notif">
+        <item quantity="one">%1$s અને %2$d વ્યક્તિ કે જેને તમે અનુસરો છો તેના દ્વારા હમણાં અનુસર્યા</item>
+        <item quantity="other">%1$s અને %2$d લોકો કે જેને તમે અનુસરો છો તેના દ્વારા હમણાં અનુસર્યા</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="one">સારી છબીનાં વર્ણનો સંક્ષિપ્ત, તેમ છતાં વિગતવારનાં હોય છે. છબીમાં રહેલા કોઈપણ ટેક્સ્ટને લખવાની અથવા તેનો સારાંશ આપવાની ખાતરી કરો.\10\10તમારું વર્ણન Twitterને અક્ષમતાઓ ધરાવતાં લોકો અથવા વધુ સંદર્ભ ઈચ્છનારી દરેક વ્યક્તિ માટે ઍક્સેસિબલ બનાવે છે.\10\10તમે ઍક્સેસિબિલિટી સેટિંગ્સમાં જઈને આ રિમાઇન્ડરને બંધ કરી શકો છો.</item>
+        <item quantity="other">સારી છબીનાં વર્ણનો સંક્ષિપ્ત, તેમ છતાં વિગતવારનાં હોય છે. છબીમાં રહેલા કોઈપણ ટેક્સ્ટને લખવાની અથવા તેનો સારાંશ આપવાની ખાતરી કરો.\10\10તમારાં વર્ણન Twitterને અક્ષમતાઓ ધરાવતાં લોકો અથવા વધુ સંદર્ભ ઈચ્છનારી દરેક વ્યક્તિ માટે ઍક્સેસિબલ બનાવે છે.\10\10તમે ઍક્સેસિબિલિટી સેટિંગ્સમાં જઈને આ રિમાઇન્ડરને બંધ કરી શકો છો.</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="one">વર્ણન ઉમેરો</item>
+        <item quantity="other">વર્ણનો ઉમેરો</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="one">તમારી છબીને ઍક્સેસિબલ બનાવવાનું ભૂલશો નહીં</item>
+        <item quantity="other">તમારી છબીઓને ઍક્સેસિબલ બનાવવાનું ભૂલશો નહીં</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="one">%d પસંદ કરેલી શ્રેણી</item>
+        <item quantity="other">%d પસંદ કરેલી શ્રેણીઓ</item>
+    </plurals>
+    <plurals name="media_tag_prompt">
+        <item quantity="one">આ ફોટામાં કોણ છે?</item>
+        <item quantity="other">આ ફોટામાં કોણ છે?</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="one">%d વધુ વ્યક્તિ સુધી ટેગ કરો.</item>
+        <item quantity="other">%d વધુ લોકોને ટેગ કરો.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="one">%d વ્યક્તિને કર્યા</item>
+        <item quantity="other">%d લોકોને ટેગ કર્યા</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="one">%s સભ્ય</item>
+        <item quantity="other">%s સભ્ય</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d મિનિટ</item>
+        <item quantity="other">%d મિનિટ</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="one">%d મિનિટ પહેલાં</item>
+        <item quantity="other">%d મિનિટ પહેલાં</item>
+    </plurals>
+    <plurals name="moment_fullscreen_cover_n_likes">
+        <item quantity="one">%s લાઈક</item>
+        <item quantity="other">%s લાઈક્સ</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d નવું નોટિફિકેશન</item>
+        <item quantity="other">%d નવા નોટિફિકેશન</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="one">%d શબ્દ કાઢી નાખ્યો</item>
+        <item quantity="other">%d શબ્દ કાઢી નાખ્યા</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="one">%d પસંદ કર્યા</item>
+        <item quantity="other">%d પસંદ કર્યા</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="one">%s સભ્ય</item>
+        <item quantity="other">%s સભ્ય</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="one">%s વ્યક્તિ</item>
+        <item quantity="other">%s લોકો</item>
+    </plurals>
+    <plurals name="new_tweet_count">
+        <item quantity="one">%d નવી ટ્વીટ</item>
+        <item quantity="other">%d નવી ટ્વીટસ</item>
+    </plurals>
+    <plurals name="newsletter_card_subtitle_subscriber_count">
+        <item quantity="one">ન્યૂઝલેટર્સ • %s સબ્સ્ક્રાઈબર</item>
+        <item quantity="other">ન્યૂઝલેટર • %s સબ્સ્ક્રાઈબર</item>
+    </plurals>
+    <plurals name="nft_detail_verified_owners">
+        <item quantity="one">ચકાસાયેલ માલિક</item>
+        <item quantity="other">ચકાસાયેલા માલિકો</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="one">1 અન્ય</item>
+        <item quantity="other">%d અન્ય</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="one">%1$d ઉત્પાદન</item>
+        <item quantity="other">%1$d ઉત્પાદન</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="one">અનુયાયી</item>
+        <item quantity="other">અનુયાયીઓ</item>
+    </plurals>
+    <plurals name="profile_followers_count_label">
+        <item quantity="one">અનુસરનાર</item>
+        <item quantity="other">અનુસરનારાઓ</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="one">%d અન્ય</item>
+        <item quantity="other">%d અન્યો</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="one">સુપર અનુયાયી</item>
+        <item quantity="other">સુપર અનુયાયી</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="one">%sલાઈકસ</item>
+        <item quantity="other">%sલાઈક્સ</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="one">%s ફોટો</item>
+        <item quantity="other">%s ફોટા અને વિડિઓઝ</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="one">%s ટ્વીટ</item>
+        <item quantity="other">%s ટ્વીટસ્</item>
+    </plurals>
+    <plurals name="profile_tweets_count_label">
+        <item quantity="one">ટ્વીટ</item>
+        <item quantity="other">ટ્વીટસ</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="zero">કોઇ અનુયાયીઓ નથી</item>
+        <item quantity="one">%d અનુયાયી</item>
+        <item quantity="other">%d અનુયાયીઓ</item>
+    </plurals>
+    <plurals name="reactions_stats_total_label">
+        <item quantity="one">પ્રતિક્રિયા</item>
+        <item quantity="other">પ્રતિક્રિયાઓ</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="one">%s રિપ્લે</item>
+        <item quantity="other">%s રિપ્લેઝ</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="one">%d અન્ય વ્યક્તિ</item>
+        <item quantity="other">%d અન્ય લોકો</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">﻿%1$s અને %2$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">﻿%1$s અને %2$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યા છો. તમારો પ્રત્યુતર અન્ય સુપર અનુયાયીઓને પણ દેખાશે.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">﻿%3$s﻿માં ﻿%1$s અને %2$d અન્ય લોકો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">﻿%1$s %2$s અને %3$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">﻿%1$s %2$s અને %3$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યા છો. તમારો પ્રત્યુતર અન્ય સુપર અનુયાયીઓને પણ દેખાશે.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">﻿%4$s﻿માં ﻿%1$s %2$s અને %3$d અન્ય લોકો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="one">અમે સંભવિત રીતે %d અપમાનજનક અથવા બિનજરૂરી એકાઉન્ટને ફ્લેગ કર્યું છે.</item>
+        <item quantity="other">અમે સંભવિત રીતે %d અપમાનજનક અથવા બિનજરૂરી એકાઉન્ટ્સને ફ્લેગ કર્યા છે.</item>
+    </plurals>
+    <plurals name="search_user_name_pile">
+        <item quantity="one">%1$s અને વધુ</item>
+        <item quantity="other">%1$s, %2$s અને વધુ</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d સેકન્ડ</item>
+        <item quantity="other">%d સેકન્ડ</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="one">%d સેકન્ડ પહેલાં</item>
+        <item quantity="other">%d સેકન્ડ પહેલાં</item>
+    </plurals>
+    <plurals name="seen_by_people_count">
+        <item quantity="one">1 વ્યક્તિ દ્વારા જોયેલું</item>
+        <item quantity="other">%s લોકો દ્વારા જોવાયેલું</item>
+    </plurals>
+    <plurals name="self_thread_replies_count">
+        <item quantity="one">આ થ્રેડમાં %1$d વધુ બતાવો</item>
+        <item quantity="other">આ થ્રેડમાં %1$d વધુ બતાવો</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="one">કો-હોસ્ટ તરીકે જોડાવાનું આમંત્રણ મોકલો</item>
+        <item quantity="other">કો-હોસ્ટ તરીકે જોડાવાના આમંત્રણો મોકલો</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="one">%d વ્યક્તિ</item>
+        <item quantity="other">%d લોકો</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="one">%1$s, %2$s, અને %3$d અન્ય અનુસર્યા</item>
+        <item quantity="other">%1$s, %2$s, અને %3$d અન્યો અનુસરે</item>
+    </plurals>
+    <plurals name="spaces_additional_cohosts">
+        <item quantity="one">કો-હોસ્ટ</item>
+        <item quantity="other">કો-હોસ્ટ્સ</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="one">+%1$s અન્ય શ્રોતા</item>
+        <item quantity="other">+%1$s અન્ય શ્રોતા</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="one">તમે બોલી રહેલી %1$d વ્યક્તિને અવરોધિત કરી છે</item>
+        <item quantity="other">તમે બોલી રહેલા %1$d લોકોને અવરોધિત કર્યા છે</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="one">આ સ્પેસમાં %1$s છે</item>
+        <item quantity="other">આ સ્પેસમાં %1$s છે</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="one">આ સ્પેસમાં %1$s હતા</item>
+        <item quantity="other">આ સ્પેસમાં %1$s હતા</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="one">%1$d વ્યક્તિને આ સ્પેસ પર આમંત્રિત કરવામાં આવી છે</item>
+        <item quantity="other">%1$d લોકોને આ સ્પેસ પર આમંત્રિત કરવામાં આવ્યા છે</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="one">%1$d સ્પીકર</item>
+        <item quantity="other">%1$d સ્પીકર</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="one">%1$d વ્યક્તિ સાંભળી રહી છે</item>
+        <item quantity="other">%1$d લોકો સાંભળી રહ્યા છે</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="one">%1$d ઉપલબ્ધ સ્થાન</item>
+        <item quantity="other">%1$d ઉપલબ્ધ સ્થાન</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="one">%1$d વિનંતી</item>
+        <item quantity="other">%1$d વિનંતી</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="one">લાઈક</item>
+        <item quantity="other">લાઈક્સ</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="one">અવતરણની સાથે ટ્વીટ</item>
+        <item quantity="other">અવતરણની સાથે ટ્વીટ્સ</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="one">પુનટ્વીટ</item>
+        <item quantity="other">પુનટ્વીટ્સ</item>
+    </plurals>
+    <plurals name="stat_label_views">
+        <item quantity="one">જુઓ</item>
+        <item quantity="other">જોયા</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="one">વ્યૂ</item>
+        <item quantity="other">વ્યૂ</item>
+    </plurals>
+    <plurals name="subscriber_count">
+        <item quantity="one">%s સબ્સ્ક્રાઈબર</item>
+        <item quantity="other">%s સબ્સ્ક્રાઈબર્સ</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="one">%dદિ</item>
+        <item quantity="other">%dદિ</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="one">%d દિવસ પહેલાં</item>
+        <item quantity="other">%d દિવસો પહેલાં</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="one">%dક</item>
+        <item quantity="other">%dક</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">%d કલાક પહેલાં</item>
+        <item quantity="other">%d કલાક પહેલાં</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="one">%dમિ</item>
+        <item quantity="other">%dમિ</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="one">%d મિનિટ પહેલાં</item>
+        <item quantity="other">%d મિનિટ પહેલાં</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="one">%ds</item>
+        <item quantity="other">%dસે</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="one">છેલ્લા એક કલાક</item>
+        <item quantity="other">છેલ્લા %s કલાક</item>
+    </plurals>
+    <plurals name="tweet_reaction_stat_accessibility_string">
+        <item quantity="one">એક %1$s પ્રતિક્રિયા</item>
+        <item quantity="other">%1$s %2$s પ્રતિક્રિયાઓ</item>
+    </plurals>
+    <plurals name="typing_users_count">
+        <item quantity="one">%d વ્યક્તિ ટાઈપ કરી રહ્યાં છે</item>
+        <item quantity="other">%d લોકો ટાઈપ કરે છે</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="one">%d સેકન્ડ</item>
+        <item quantity="other">%d સેકન્ડ</item>
+    </plurals>
+</resources>

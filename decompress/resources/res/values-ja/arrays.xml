@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>新しいツイートの通知を受け取ります。</item>
+        <item>新しいスーパーフォロワー専用ツイートの通知を受け取ります。</item>
+        <item>新しいライブ動画ツイートの通知を受け取ります。</item>
+        <item>新しいスペースツイートの通知を受け取ります。</item>
+        <item>新しいツイートの通知を受け取りません。</item>
+    </array>
+    <array name="account_notif_options">
+        <item>ツイート</item>
+        <item>スーパーフォロワー専用ツイート</item>
+        <item>ライブ動画</item>
+        <item>スペース</item>
+        <item>なし</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>すべてのツイート</item>
+        <item>スーパーフォローツイートのみ</item>
+        <item>ライブ動画のみ</item>
+        <item>スペースのみ</item>
+        <item>オフ</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>このアカウントのすべてのツイートについての通知を受け取ります。</item>
+        <item>スーパーフォローツイートの通知のみ受け取ります。</item>
+        <item>放送中のライブ放送についての通知のみ受け取ります。</item>
+        <item>スペースの通知のみ受け取ります。</item>
+        <item>このアカウントのツイートについての通知をオフにします。</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>リンクをツイート</item>
+        <item>リンクをコピー</item>
+        <item>リンクを送信</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>全体的な印象として%1$sはいかがでしたか？</item>
+        <item>%1$sはいかがでしたか？</item>
+        <item>全体的な印象として最近利用された%1$sはいかがでしたか？</item>
+        <item>全体的な印象として%1$sはいかがでしたか？</item>
+        <item>全体的な印象として%1$sはいかがでしたか？</item>
+        <item>これまでの印象として%1$sはいかがでしたか？</item>
+        <item>Twitterで利用された%1$sはいかがでしたか？</item>
+        <item>最近利用された%1$sはいかがでしたか？</item>
+        <item>%1$sの満足度はどれくらいですか？</item>
+        <item>利用された%1$sはいかがでしたか？</item>
+        <item>%1$sのサービスはいかがでしたか？</item>
+        <item>最近利用された%1$sのサービスはいかがでしたか？</item>
+        <item>%1$sのサービスはいかがでしたか？</item>
+        <item>%1$sとやり取りした結果はいかがでしたか？</item>
+        <item>%1$sの問題解決力はいかがでしたか？</item>
+        <item>%1$sの回答までにかかる時間はいかがでしたか？</item>
+        <item>%1$sのサービスの速さはいかがでしたか？</item>
+        <item>%1$sの解決までにかかる時間はいかがでしたか？</item>
+        <item>%1$sの問題解決までにかかる時間はいかがでしたか？</item>
+        <item>%1$sの解決の速さはいかがでしたか？</item>
+        <item>%1$sで対応されたアドバイザーの知識はいかがでしたか？</item>
+        <item>%1$sで対応されたエージェントはいかかでしたか？</item>
+        <item>%1$sで対応された専門家はいかかでしたか？</item>
+        <item>%1$sで対応された代理人はいかかでしたか？</item>
+        <item>最近取引された%1$sはいかがでしたか？</item>
+        <item>全体的な印象として%1$sでのイベントはいかがでしたか？</item>
+        <item>%1$sでのお支払いはいかがでしたか？</item>
+        <item>%1$sでのご購入はいかがでしたか？</item>
+        <item>%1$sでのショッピングはいかがでしたか？</item>
+        <item>%1$sのデリバリーはいかがでしたか？</item>
+        <item>レンタルを利用された%1$sはいかがでしたか？</item>
+        <item>最近行かれた%1$sはいかがでしたか？</item>
+        <item>最近宿泊された%1$sはいかがでしたか？</item>
+        <item>最近フライトを利用された%1$sはいかがでしたか？</item>
+        <item>最近利用された%1$sはいかがでしたか？</item>
+        <item>最近旅行された%1$sはいかがでしたか？</item>
+        <item>最近行かれた%1$sはいかがでしたか？</item>
+        <item>最近お食事された%1$sはいかがでしたか？</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30日</item>
+        <item>12ヶ月</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>標準</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>%1$sをどの程度お友だちにおすすめしますか？</item>
+        <item>%1$sをどの程度お友だちにおすすめしますか？</item>
+        <item>%1$sをどの程度同僚におすすめしますか？</item>
+        <item>%1$sをどの程度ご家族におすすめしますか？</item>
+        <item>%1$sをどの程度他のユーザーにおすすめしますか？</item>
+        <item>%1$sをどの程度お友だちや同僚におすすめしますか？</item>
+        <item>%1$sでどの程度今後もショッピングしたいですか？</item>
+        <item>%1$sをどの程度おすすめしますか？</item>
+        <item>%1$sをお友だちや同僚におすすめしますか？</item>
+        <item>利用された%1$sをどの程度お友だちにおすすめしますか？</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>視聴者数が多い</item>
+        <item>コミュニティが前向きである</item>
+        <item>画質が高い</item>
+        <item>チャットが魅力的である</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>視聴者数が少ない</item>
+        <item>嫌がらせ</item>
+        <item>動画に問題がある</item>
+        <item>チャットにスパムがある</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15分</item>
+        <item>30分</item>
+        <item>1時間</item>
+        <item>2時間</item>
+        <item>4時間</item>
+        <item>毎日</item>
+    </array>
+</resources>

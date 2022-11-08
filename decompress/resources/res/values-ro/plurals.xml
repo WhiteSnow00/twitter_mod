@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="one">%d membru</item>
+        <item quantity="other">%d de membri</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="one">%d element nou</item>
+        <item quantity="other">%d elemente noi</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="one">%1$d co-gazdă</item>
+        <item quantity="other">%1$d co-gazde</item>
+    </plurals>
+    <plurals name="communities_tweet_replies_count">
+        <item quantity="one">%1$s răspuns</item>
+        <item quantity="other">%1$s (de) răspunsuri</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="one">%d membru al Comunității</item>
+        <item quantity="other">%d membri ai Comunității</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="one">%d moderator</item>
+        <item quantity="other">%d moderatori</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="one">%s solicitare</item>
+        <item quantity="other">%s (de) solicitări</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="one">%s Tweet nou</item>
+        <item quantity="other">%s (de) Tweeturi noi</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="one">%s raport</item>
+        <item quantity="other">%s (de) rapoarte</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="one">Depășește cu %d caracter</item>
+        <item quantity="other">Depășește cu %d caractere</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="one">%d caracter rămas</item>
+        <item quantity="other">%d caractere rămase</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_days">
+        <item quantity="one">%1$d zi rămasă</item>
+        <item quantity="other">%1$d zile rămase</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_hours">
+        <item quantity="one">%1$d oră rămasă</item>
+        <item quantity="other">%1$d ore rămase</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_minutes">
+        <item quantity="one">%1$d minut rămas</item>
+        <item quantity="other">%1$d minute rămase</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="one">Spațiul utilizatorului %1$s, cu încă %2$d persoană</item>
+        <item quantity="other">Spațiul utilizatorului %1$s, cu încă %2$d de persoane</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="one">%d interacțiune nouă</item>
+        <item quantity="other">%d interacțiuni noi</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d zi</item>
+        <item quantity="other">%d zile</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">în urmă cu %d zi</item>
+        <item quantity="other">în urmă cu %d zile</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="one">Utilizatorul nu a putut fi adăugat la acest grup.</item>
+        <item quantity="other">%d utilizatori nu au putut fi adăugați la acest grup.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="one">S-a adăugat utilizatorul la grup.</item>
+        <item quantity="other">S-au adăugat %d utilizatori la grup.</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="one">o persoană</item>
+        <item quantity="other">%d (de) persoane</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="one">Chat de grup cu %d persoană</item>
+        <item quantity="other">Chat de grup cu %d persoane</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="one">Imaginea de profil a lui %s</item>
+        <item quantity="other">Imagini de profil pentru %s</item>
+    </plurals>
+    <plurals name="dm_more_in_this_group">
+        <item quantity="one">Există %1$s în acest grup</item>
+        <item quantity="other">Există %1$s în acest grup</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="one">%d persoană nouă pe care s-ar putea să o cunoști</item>
+        <item quantity="other">%d (de) persoane noi pe care s-ar putea să le cunoști</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="one">%d solicitare nouă</item>
+        <item quantity="other">%d (de) solicitări noi</item>
+    </plurals>
+    <plurals name="dm_other_people">
+        <item quantity="one">încă %1$d o persoană</item>
+        <item quantity="other">încă %1$d persoane</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="one">%1$s a fost adăugat</item>
+        <item quantity="other">%1$s au fost adăugați</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="one">%d solicitare în așteptare</item>
+        <item quantity="other">%s (de) solicitări în așteptare</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="one">%d persoană pe care s-ar putea să o cunoști</item>
+        <item quantity="other">%d (de) persoane pe care s-ar putea să le cunoști</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="one">Poți fixa numai %d chat</item>
+        <item quantity="other">Poți fixa numai %d (de) chaturi</item>
+    </plurals>
+    <plurals name="dm_quick_share_collapsed">
+        <item quantity="one">%1$s + încă %2$d persoană</item>
+        <item quantity="other">%1$s + încă %2$d persoane</item>
+    </plurals>
+    <plurals name="dm_seen_by_list_others_overflow">
+        <item quantity="one">și încă {{}}%d {{}}</item>
+        <item quantity="other">și încă {{}}%d {{}}</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="one">Văzut de %d persoană</item>
+        <item quantity="other">Văzut de %d persoane</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="one">%d mesaj necitit</item>
+        <item quantity="other">%d mesaje necitite</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Derulează rapid înainte cu %d secundă</item>
+        <item quantity="few">Derulează rapid înainte cu %d secunde</item>
+        <item quantity="other">Derulează rapid înainte cu %d de secunde</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Derulează înapoi cu %d secundă</item>
+        <item quantity="few">Derulează înapoi cu %d secunde</item>
+        <item quantity="other">Derulează înapoi cu %d de secunde</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="one">Imagine de profil pentru %s</item>
+        <item quantity="other">Imagini de profil pentru %s</item>
+    </plurals>
+    <plurals name="followed_by_count">
+        <item quantity="one">Urmărit de %1$s și alți %2$d</item>
+        <item quantity="other">Urmărit de %1$s și alți %2$d</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="one">Adaugă %d</item>
+        <item quantity="other">Adaugă %d</item>
+    </plurals>
+    <plurals name="generated_alt_text_banner">
+        <item quantity="one">@string/generated_alt_text_banner_single</item>
+        <item quantity="other">@string/generated_alt_text_banner_multiple</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="one">Ai permisiunea pentru %1$d co-gazdă.</item>
+        <item quantity="other">Ai permisiunea pentru %1$d co-gazde.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="one">Adaugă până la încă %1$d persoană.</item>
+        <item quantity="other">Adaugă cel mult încă %1$d persoană(e).</item>
+    </plurals>
+    <plurals name="guests_in_broadcast">
+        <item quantity="one">*%1$s* a fost invitat</item>
+        <item quantity="other">*%1$s* au fost invitați</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="one">Ai obținut %1$d urmăritor nou!</item>
+        <item quantity="other">Ai obținut %1$d (de) urmăritori noi!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d oră</item>
+        <item quantity="other">%d ore</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="one">În urmă cu %d oră</item>
+        <item quantity="other">în urmă cu %d ore</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="one">%1$s urmărește utilizatorul %2$s.</item>
+        <item quantity="other">%1$s urmăresc %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="one">Tu și %1$s urmăriți subiectul %2$s.</item>
+        <item quantity="other">Tu și %1$s urmăriți subiectele %2$s.</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="one">Membru</item>
+        <item quantity="other">Membri</item>
+    </plurals>
+    <plurals name="list_subscriber_count">
+        <item quantity="one">‧ %d abonat</item>
+        <item quantity="other">‧ %d de abonați</item>
+    </plurals>
+    <plurals name="magic_recs_follow_notif">
+        <item quantity="one">Tocmai a fost urmărit de %1$s și %2$d persoană pe care o urmărești</item>
+        <item quantity="other">Tocmai a fost urmărit de către %1$s și %2$d persoane pe care le urmărești</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="one">Descrierile de imagine bune sunt concise, dar detaliate. Asigură-te că ai rezumat sau ai adăugat text la imaginea propriu-zisă.\10\10Descrierea ta face Twitter accesibil persoanelor cu dizabilități și tuturor celor care doresc mai mult context.\10\10Poți dezactiva acest memento în Setări de accesibilitate.</item>
+        <item quantity="other">Descrierile de imagine bune sunt concise, dar detaliate. Asigură-te că ai rezumat sau ai adăugat text la imaginea propriu-zisă.\10\10Descrierile tale fac Twitter accesibil persoanelor cu dizabilități și tuturor celor care doresc mai mult context.\10\10Poți dezactiva acest memento în Setări de accesibilitate.</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="one">Adaugă descriere</item>
+        <item quantity="other">Adaugă descrieri</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="one">Nu uita să faci imaginea ta accesibilă</item>
+        <item quantity="other">Nu uita să faci imaginile tale accesibile</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="one">%d categorie selectată</item>
+        <item quantity="other">%d (de) categorii selectate</item>
+    </plurals>
+    <plurals name="media_tag_prompt">
+        <item quantity="one">Cine e în fotografie?</item>
+        <item quantity="other">Cine e în aceste fotografii?</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="one">Etichetează maxim alte %d persoane.</item>
+        <item quantity="other">Etichetează maxim alte %d persoane.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="one">%d persoană etichetată</item>
+        <item quantity="other">%d persoane etichetate</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="one">%s membru</item>
+        <item quantity="other">%s membri</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minute</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="one">în urmă cu %d minut</item>
+        <item quantity="other">în urmă cu %d minute</item>
+    </plurals>
+    <plurals name="moment_fullscreen_cover_n_likes">
+        <item quantity="one">%s apreciere</item>
+        <item quantity="other">%s aprecieri</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d notificare nouă</item>
+        <item quantity="few">%d notificări noi</item>
+        <item quantity="other">%d de notificări noi</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="one">A fost șters %d cuvânt</item>
+        <item quantity="other">Au fost șterse %d cuvinte</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="one">%d selectat</item>
+        <item quantity="other">%d selectate</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="one">%s Membru</item>
+        <item quantity="other">%s Membri</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="one">%s persoană</item>
+        <item quantity="other">%s (de) persoane</item>
+    </plurals>
+    <plurals name="new_tweet_count">
+        <item quantity="one">%d Tweet nou</item>
+        <item quantity="other">%d tweeturi noi</item>
+    </plurals>
+    <plurals name="newsletter_card_subtitle_subscriber_count">
+        <item quantity="one">Buletin informativ • %s Abonat</item>
+        <item quantity="other">Buletin informativ • %s (de) Abonați</item>
+    </plurals>
+    <plurals name="nft_detail_verified_owners">
+        <item quantity="one">proprietar verificat</item>
+        <item quantity="other">proprietari verificați</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="one">încă 1</item>
+        <item quantity="other">încă %d</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="one">%1$d produs</item>
+        <item quantity="other">%1$d (de) produse</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="one">Urmăritor</item>
+        <item quantity="other">Urmăritori</item>
+    </plurals>
+    <plurals name="profile_followers_count_label">
+        <item quantity="one">Urmăritor</item>
+        <item quantity="other">Urmăritori</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="one">încă %d</item>
+        <item quantity="other">încă %d</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="one">Super-urmăritor</item>
+        <item quantity="other">Super-urmăritori</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="one">%s apreciere</item>
+        <item quantity="other">%s aprecieri</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="one">%s fotografie</item>
+        <item quantity="other">%s Fotogafii și videoclipuri</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="one">Tweet de la %s</item>
+        <item quantity="other">%s Tweeturi</item>
+    </plurals>
+    <plurals name="profile_tweets_count_label">
+        <item quantity="one">Tweet</item>
+        <item quantity="other">Tweeturi</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="zero">Graficul spectatorilor transmisiunii</item>
+        <item quantity="one">Graficul spectatorilor transmisiunii. Ai avut %1$d spectator de vârf la ora %2$s.</item>
+        <item quantity="other">Graficul spectatorilor transmisiunii. Ai avut %1$d spectatori de vârf la ora %2$s.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="one">Ai avut %1$d spectator la ora %2$s.</item>
+        <item quantity="other">Ai avut %1$d spectatori la ora %2$s.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="zero">Nu există urmăritori</item>
+        <item quantity="one">%d urmăritor</item>
+        <item quantity="other">%d de urmăritori</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers">
+        <item quantity="one">%1$s a invitat %2$s persoană</item>
+        <item quantity="other">%1$s a invitat %2$s persoane</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="one">*%1$s* a invitat %2$s persoană</item>
+        <item quantity="other">*%1$s* a invitat %2$s persoane</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="one">*Ignorat de* %1$s</item>
+        <item quantity="other">*Ignorat de* %1$s (%2$d)</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="one">%1$s *a anulat ignorarea*</item>
+        <item quantity="other">%1$s (%2$d) *a anulat ignorarea*</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="one">%1$d mesaj nou</item>
+        <item quantity="other">%1$d mesaje noi</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="one">%s inimă</item>
+        <item quantity="other">%s inimi</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="one">SPECTATOR ÎN DIRECT</item>
+        <item quantity="other">SPECTATORI ÎN DIRECT</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="one">SPECTATORI LA RELUARE</item>
+        <item quantity="other">SPECTATORI LA RELUARE</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="one">%d zi</item>
+        <item quantity="other">%d zile</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="one">%d oră</item>
+        <item quantity="other">%d ore</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="one">%d minut</item>
+        <item quantity="other">%d minute</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="one">%d secundă</item>
+        <item quantity="other">%d secunde</item>
+    </plurals>
+    <plurals name="reactions_stats_total_label">
+        <item quantity="one">Reacție</item>
+        <item quantity="other">Reacții</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="one">%s reluări</item>
+        <item quantity="other">%s reluări</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="one">încă %d persoană</item>
+        <item quantity="other">încă %d (de) persoane</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Răspuns către ﻿%1$s și alte %2$d persoane﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Le răspunzi lui ﻿%1$s și altor %2$d﻿. Răspunsul tău va fi vizibil și altor Super-urmăritori.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Răspuns către ﻿%1$s și altor %2$d﻿ în ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Răspuns către ﻿%1$s %2$s și încă %3$d﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Le răspunzi lui ﻿%1$s %2$s și altor%3$d﻿. Răspunsul tău va fi vizibil și altor Super-urmăritori.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Răspuns către ﻿%1$s %2$s și altor %3$d﻿ în ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="one">Am marcat %d cont potențial abuziv sau de tip spam.</item>
+        <item quantity="other">Am marcat %d (de) conturi potențial abuzive sau de tip spam.</item>
+    </plurals>
+    <plurals name="search_user_name_pile">
+        <item quantity="one">%1$s și alții</item>
+        <item quantity="other">%1$s, %2$s și alții</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d secundă</item>
+        <item quantity="other">%d secunde</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="one">în urmă cu %d secundă</item>
+        <item quantity="other">În urmă cu %d secunde</item>
+    </plurals>
+    <plurals name="seen_by_people_count">
+        <item quantity="one">Văzut de o persoană</item>
+        <item quantity="other">Văzut de %s persoane</item>
+    </plurals>
+    <plurals name="self_thread_replies_count">
+        <item quantity="one">Afișează încă %1$d în acest fir</item>
+        <item quantity="other">Afișează încă %1$d în acest fir</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="one">Trimite o invitație de co-gazdă</item>
+        <item quantity="other">Trimite invitații de co-gazdă</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="one">%d persoană</item>
+        <item quantity="other">%d persoane</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="one">%1$s, %2$s și încă %3$d persoane urmăresc</item>
+        <item quantity="other">Urmărit de %1$s, %2$s și alți %3$d</item>
+    </plurals>
+    <plurals name="spaces_additional_cohosts">
+        <item quantity="one">co-gazdă</item>
+        <item quantity="other">co-gazde</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="one">+%1$s alt ascultător</item>
+        <item quantity="other">+%1$s alți ascultători</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="one">Ai deblocat %1$d persoană care vorbește</item>
+        <item quantity="other">Ai blocat %1$d de persoane care vorbesc</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="one">%1$s este în acest Spațiu</item>
+        <item quantity="other">%1$s sunt în acest Spațiu</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="one">%1$s a fost în acest Spațiu</item>
+        <item quantity="other">%1$s au fost în acest Spațiu</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="one">%1$d persoană a fost invitată în acest Spațiu</item>
+        <item quantity="other">%1$d persoane au fost invitate în acest Spațiu</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="one">%1$d vorbitor</item>
+        <item quantity="other">%1$d de vorbitori</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="one">%1$d persoană ascultă</item>
+        <item quantity="other">%1$d de persoane ascultă</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="one">%1$d post deschis</item>
+        <item quantity="other">%1$d de posturi deschise</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="one">%1$d solicitare</item>
+        <item quantity="other">%1$d de solicitări</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="one">Apreciere</item>
+        <item quantity="other">Aprecieri</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="one">Tweet cu citat</item>
+        <item quantity="other">Tweeturi cu citat</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="one">Redistribuire</item>
+        <item quantity="other">Retweeturi</item>
+    </plurals>
+    <plurals name="stat_label_views">
+        <item quantity="one">VIZUALIZAT</item>
+        <item quantity="other">VIZUALIZĂRI</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="one">Vizualizare</item>
+        <item quantity="other">Vizualizări</item>
+    </plurals>
+    <plurals name="subscriber_count">
+        <item quantity="one">%s abonat</item>
+        <item quantity="other">%s abonați</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="one">%d zi</item>
+        <item quantity="other">%d de zile</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="one">ÎN URMĂ CU %d ZI</item>
+        <item quantity="other">ÎN URMĂ CU %d ZILE</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="one">%d h</item>
+        <item quantity="other">%d h</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">ÎN URMĂ CU %d ORĂ</item>
+        <item quantity="other">ÎN URMĂ CU %d ORE</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="one">ÎN URMĂ CU %d MINUT</item>
+        <item quantity="other">ÎN URMĂ CU %d MINUTE</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="one">%ds</item>
+        <item quantity="other">%d sec</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="one">Ultima oră</item>
+        <item quantity="other">Ultimele %s (de) ore</item>
+    </plurals>
+    <plurals name="tweet_reaction_stat_accessibility_string">
+        <item quantity="one">O %1$s reacție</item>
+        <item quantity="other">%1$s %2$s reacții</item>
+    </plurals>
+    <plurals name="typing_users_count">
+        <item quantity="one">%d persoană tastează</item>
+        <item quantity="other">%d persoane scriu</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="one">%d secundă</item>
+        <item quantity="other">%d secunde</item>
+    </plurals>
+</resources>

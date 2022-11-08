@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Primat ćete obavijesti o novim tweetovima.</item>
+        <item>Primat ćete obavijesti samo o novim tweetovima super korisnika.</item>
+        <item>Primat ćete obavijesti o novim tweetovima s videozapisima uživo.</item>
+        <item>Primat ćete obavijesti o novim tweetovima u Prostorima.</item>
+        <item>Više nećete primati obavijesti o novim tweetovima.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>tweetova</item>
+        <item>Samo tweetovi super korisnika</item>
+        <item>Videoprijenos uživo</item>
+        <item>Prostori</item>
+        <item>Ništa</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Svi tweetovi</item>
+        <item>Samo tweetovi super korisnika</item>
+        <item>Samo videozapis uživo</item>
+        <item>Samo Prostori</item>
+        <item>Isključeno</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Primajte obavijesti o svim tweetovima za taj račun.</item>
+        <item>Primat ćete obavijesti samo o tweetovima super korisnika.</item>
+        <item>Obavijesti primajte samo za emitiranja uživo.</item>
+        <item>Primajte obavijesti samo za Prostore.</item>
+        <item>Isključite obavijesti o tweetovima za taj račun.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Pošalji tweet s poveznicom</item>
+        <item>Kopiraj poveznicu</item>
+        <item>Pošalji poveznicu</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Koliko ste sveukupno zadovoljni tvrtkom %1$s?</item>
+        <item>Koliko ste zadovoljni s tvrtkom %1$s?</item>
+        <item>Koliko ste sveukupno zadovoljni nedavnim iskustvom s tvrtkom %1$s?</item>
+        <item>Kako biste ocijenili cjelokupno iskustvo s tvrtkom %1$s?</item>
+        <item>Kako biste ocijenili svoje cjelokupno iskustvo s tvrtkom %1$s?</item>
+        <item>Kako biste ocijenili dosadašnje iskustvo s tvrtkom %1$s?</item>
+        <item>Kako biste ocijenili iskustvo na Twitteru s tvrtkom %1$s?</item>
+        <item>Jeste li zadovoljni nedavnim iskustvom s tvrtkom %1$s?</item>
+        <item>Koliko kvalitetno %1$s ispunjava vaša očekivanja?</item>
+        <item>Kako biste ocjenili posjet sljedećem: %1$s?</item>
+        <item>Kako biste ocijenili uslugu koju pruža %1$s?</item>
+        <item>Kako biste ocijenili nedavno korištenje usluga koje pruža %1$s?</item>
+        <item>Kako biste ocijenili uslugu koju vam je pružila tvrtka %1$s?</item>
+        <item>Jeste li zadovoljni rezultatom interakcije s tvrtkom %1$s?</item>
+        <item>Kako biste ocijenili sposobnost rješavanja problema tvrtke %1$s?</item>
+        <item>Kako biste ocijenili vrijeme čekanja na odgovor od tvrtke %1$s?</item>
+        <item>Kako biste ocijenili brzinu pružanja usluge tvrtke %1$s?</item>
+        <item>Kako biste ocijenili vrijeme potrebno za rješavanje problema s tvrtkom %1$s?</item>
+        <item>Kako biste ocijenili količinu vremena koja je bila potrebna za rješavanje problema koje je obavila tvrtka %1$s?</item>
+        <item>Kako biste ocijenili vrijeme potrebno za rješavanje problema koje je obavila tvrtka %1$s?</item>
+        <item>Kako biste ocijenili stručnost savjetnika tvrtke %1$s?</item>
+        <item>Koliko ste zadovoljni agentom tvrtke %1$s kojem ste se obratili za pomoć?</item>
+        <item>Koliko ste zadovoljni stručnjakom tvrtke %1$s kojem ste se obratili za pomoć?</item>
+        <item>Koliko ste zadovoljni predstavnikom tvrtke %1$s kojem ste se obratili za pomoć?</item>
+        <item>Kako biste ocijenili bankovne transakcije koje nudi %1$s?</item>
+        <item>Kako biste ocijenili ukupnu organizaciju događaja na sljedećoj lokaciji: %1$s?</item>
+        <item>Kako biste ocijenili plaćanje računa za usluge koje pruža %1$s?</item>
+        <item>Kako biste ocijenili postupak plaćanja kupnje koju nudi %1$s?</item>
+        <item>Kako biste ocijenili postupak kupnje koju nudi %1$s?</item>
+        <item>Kako biste ocijenili uslugu dostave koju pruža %1$s?</item>
+        <item>Kako biste ocijenili nedavnu uslugu iznajmljivača %1$s?</item>
+        <item>Kako biste ocijenili svoj nedavni posjet trgovini %1$s?</item>
+        <item>Kako biste ocijenili svoj nedavni boravak u hotelu %1$s?</item>
+        <item>Kako biste ocijenili svoj nedavni let posredstvom avioprijevoznika %1$s?</item>
+        <item>Kako biste ocijenili nedavno korištenje usluge prijevoza koju pruža %1$s?</item>
+        <item>Kako biste ocijenili svoje nedavno putovanje posredstvom agencije %1$s?</item>
+        <item>Kako biste ocijenili svoj nedavni posjet sljedećem: %1$s?</item>
+        <item>Kako biste ocijenili svoj nedavni obrok u objektu %1$s?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 dana</item>
+        <item>12 mjeseci</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25 x</item>
+        <item>0,5 x</item>
+        <item>0,75 x</item>
+        <item>Uobičajeno</item>
+        <item>1,25 x</item>
+        <item>1,5 x</item>
+        <item>2 x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Kolika je vjerojatnost da ćete %1$s preporučiti prijateljima?</item>
+        <item>Kolika je vjerojatnost da ćete %1$s preporučiti prijateljima?</item>
+        <item>Kolika je vjerojatnost da ćete %1$s preporučiti kolegama?</item>
+        <item>Kolika je vjerojatnost da ćete %1$s preporučiti članovima obitelji?</item>
+        <item>Kolika je vjerojatnost da ćete %1$s preporučiti drugim osobama?</item>
+        <item>Kolika je vjerojatnost da ćete %1$s preporučiti prijateljima ili kolegama?</item>
+        <item>Kolika je vjerojatnost da ćete ubuduće kupovati u trgovini %1$s?</item>
+        <item>Kolika je vjerojatnost da ćete nekome preporučiti %1$s?</item>
+        <item>Biste li %1$s preporučili prijateljima i kolegama?</item>
+        <item>Koja je vjerojatnost da biste iskustvo s tvrtkom %1$s preporučili prijatelju?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Zadovoljavajuć broj gledatelja</item>
+        <item>Pozitivna zajednica</item>
+        <item>Kvaliteta videozapisa</item>
+        <item>Zanimljivo čavrljanje</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Mali broj gledatelja</item>
+        <item>Uznemiravanje</item>
+        <item>Problemi s videozapisom</item>
+        <item>Neželjeni sadržaj u čavrljanju</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minuta</item>
+        <item>30 minuta</item>
+        <item>1 sat</item>
+        <item>2 sata</item>
+        <item>4 sata</item>
+        <item>Svaki dan</item>
+    </array>
+</resources>

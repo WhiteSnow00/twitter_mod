@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>‏سوف تتلقى تنبيهات للتغريدات الجديدة.</item>
+        <item>‏ستتلقى تنبيهات لتغريدات المتابعين الفائقين الجديدة فقط.</item>
+        <item>‏ستتلقى تنبيهات للتغريدات الجديدة التي تحتوي على فيديو مباشر.</item>
+        <item>‏ستتلقى تنبيهات للتغريدات الجديدة الخاصة بالمساحات.</item>
+        <item>‏لن تتلقى بعد الآن تنبيهات للتغريدات الجديدة.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>‏التغريدات</item>
+        <item>‏تغريدات المتابعين الفائقين فقط</item>
+        <item>‏فيديو مباشر</item>
+        <item>‏المساحات</item>
+        <item>‏لا شيء</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>‏كلّ التغريدات</item>
+        <item>‏تغريدات المتابعات الفائقة فقط</item>
+        <item>‏الفيديو المباشر فقط</item>
+        <item>‏المساحات فقط</item>
+        <item>‏إيقاف التشغيل</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>‏احصل على تنبيهات لجميع تغريدات هذا الحساب.</item>
+        <item>‏احصل على تنبيهات فقط لتغريدات المتابعات الفائقة.</item>
+        <item>‏احصل على تنبيهات لعمليات البث المباشرة فقط.</item>
+        <item>‏احصل على تنبيهات للمساحات فقط.</item>
+        <item>‏أوقف تشغيل التنبيهات الخاصة بتغريدات هذا الحساب.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>‏غرِّد الرابط</item>
+        <item>‏نسخ الرابط</item>
+        <item>‏إرسال الرابط</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>‏ما مدى رضاك العام مع %1$s؟</item>
+        <item>‏ما مدى رضاك عن %1$s؟</item>
+        <item>‏عمومًا، ما مدى رضاك عن تجربتك الأخيرة مع %1$s؟</item>
+        <item>‏كيف تقيّم عموم التجربة مع %1$s؟</item>
+        <item>‏كيف تقيّم عموم تجربتك مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك حتى الآن مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك على تويتر مع %1$s؟</item>
+        <item>‏هل كنت راضيًا عن تجربتك الأخيرة مع %1$s؟</item>
+        <item>‏ما مدى تلبية %1$s لتوقّعاتك؟</item>
+        <item>‏كيف تقيّم تجربة استضافتك مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك للخدمة مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربة خدمتك الأخيرة مع %1$s؟</item>
+        <item>‏كيف تقيّم الخدمة التي تلقّيتها من %1$s؟</item>
+        <item>‏هل كنت راضيًا عن نتيجة تفاعلك مع %1$s؟</item>
+        <item>‏كيف تقيّم القدرة على حلّ مشكلتك مع %1$s؟</item>
+        <item>‏كيف تقيّم وقت الاستجابة من %1$s؟</item>
+        <item>‏كيف تقيّم سرعة الخدمة من %1$s؟</item>
+        <item>‏كيف تقيّم زمن حلّ مشكلتك مع %1$s؟</item>
+        <item>‏كيف تقيّم زمن حلّ مشكلتك مع %1$s؟</item>
+        <item>‏كيف تقّيم سرعة حلّ مشكلتك مع %1$s؟</item>
+        <item>‏كيف تقيّم خبرة مستشار %1$s؟</item>
+        <item>‏ما مدى رضاك عن وكيل %1$s الذي ساعدك؟</item>
+        <item>‏ما مدى رضاك عن متخصّص %1$s الذي ساعدك؟</item>
+        <item>‏ما مدى رضاك عن ممثل %1$s الذي ساعدك؟</item>
+        <item>‏كيف تقيّم تجربتك المصرفيّة الأخيرة مع %1$s؟</item>
+        <item>‏كيف تقيّم عموم التجربة في %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك للدفع مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك للشراء مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك للتسوّق مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك لخدمة التوصيل مع %1$s؟</item>
+        <item>‏كيف تقيّم تجربتك للاستئجار مع %1$s؟</item>
+        <item>‏كيف تقيّم زيارتك الأخيرة لمتجر %1$s؟</item>
+        <item>‏كيف تقيّم إقامتك الأخيرة في فندق %1$s؟</item>
+        <item>‏كيف تقيّم رحلتك الجويّة الأخيرة مع %1$s؟</item>
+        <item>‏كيف تقيّم رحلتك الأخيرة مع %1$s؟</item>
+        <item>‏كيف تقيّم رحلتك الأخيرة مع %1$s؟</item>
+        <item>‏كيف تقيّم زيارتك الأخيرة إلى %1$s؟</item>
+        <item>‏كيف تقيّم وجبتك الأخيرة لدى %1$s؟</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>‏30 يوم</item>
+        <item>‏12 شهرًا</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>أسرع بـ 0.25 مرة</item>
+        <item>أسرع بـ 0.5 مرات</item>
+        <item>أسرع بـ 0.75 مرة</item>
+        <item>عادية</item>
+        <item>أسرع بـ 1.25 مرة</item>
+        <item>أسرع بـ 1.5 مرة</item>
+        <item>أسرع بمرتين</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>‏إلى أي مدى تُوصي بـ %1$s إلى صديق؟</item>
+        <item>‏إلى أي مدى قد تُوصي بـ %1$s إلى صديق؟</item>
+        <item>‏ما مدى احتمال أن تقوم بتوصية %1$s لزميل؟</item>
+        <item>‏ما مدى احتمال أن تقوم بتوصية %1$s لأحد أفراد الأسرة؟</item>
+        <item>‏إلى أي مدى قد تُوصي بـ %1$s لشخص آخر؟</item>
+        <item>‏إلى أي مدى قد تُوصي بـ %1$s لصديق أو زميل؟</item>
+        <item>‏إلى أي مدى قد ترغب بالتسوّق في %1$s مستقبلًا؟</item>
+        <item>‏ما مدى احتمال أن تقوم بتوصية %1$s؟</item>
+        <item>‏هل ستوصي %1$s لصديق أو زميل؟</item>
+        <item>‏إلى أي مدى قد تُوصي بتجربتك مع %1$s إلى صديق؟</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>‏عدد مشاهدين جيد</item>
+        <item>‏مجتمع إيجابي</item>
+        <item>‏جودة الفيديو</item>
+        <item>‏دردشة جذابة</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>‏عدد مشاهدين منخفض</item>
+        <item>‏مضايقة</item>
+        <item>‏مشكلات الفيديو</item>
+        <item>‏رسائل مزعجة في الدردشة</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>‏‎@string/reader_mode_text_size_large</item>
+        <item>‏‎@string/reader_mode_text_size_medium</item>
+        <item>‏‎@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>‏‎@string/reader_mode_text_size_large_label</item>
+        <item>‏‎@string/reader_mode_text_size_medium_label</item>
+        <item>‏‎@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>‏15 دقيقة</item>
+        <item>‏30 دقيقة</item>
+        <item>‏ساعة واحدة</item>
+        <item>‏ساعتان</item>
+        <item>‏4 ساعات</item>
+        <item>‏يوميًا</item>
+    </array>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Będziesz otrzymywać powiadomienia o nowych Tweetach.</item>
+        <item>Będziesz otrzymywać powiadomienia o nowych Tweetach dla superobserwujących.</item>
+        <item>Będziesz otrzymywać powiadomienia o nowych Tweetach z filmami na żywo.</item>
+        <item>Będziesz otrzymywać powiadomienia o nowych Tweetach na temat Pokoi.</item>
+        <item>Nie będziesz już otrzymywać powiadomień o nowych Tweetach.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>nowe Tweety</item>
+        <item>Tylko Tweety dla superobserwujących</item>
+        <item>Nagranie na żywo</item>
+        <item>Pokoje</item>
+        <item>Brak</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Wszystkie Tweety</item>
+        <item>Tylko Tweety dla superobserwujących</item>
+        <item>Tylko filmy na żywo</item>
+        <item>Tylko Pokoje</item>
+        <item>Wył.</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Otrzymuj powiadomienia o wszystkich Tweetach z tego konta.</item>
+        <item>Otrzymuj powiadomienia tylko o nowych Tweetach dla superobserwujących.</item>
+        <item>Otrzymuj powiadomienia tylko o transmisjach na żywo.</item>
+        <item>Otrzymuj tylko powiadomienia dotyczące Pokoi.</item>
+        <item>Wyłącz powiadomienia o Tweetach z tego konta.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Tweetnij link</item>
+        <item>Skopiuj link</item>
+        <item>Wyślij link</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Jaki jest Twój ogólny poziom zadowolenia z firmy %1$s?</item>
+        <item>Jaki jest Twój poziom zadowolenia z firmy %1$s?</item>
+        <item>Jaki jest Twój ogólny poziom zadowolenia z ostatniego kontaktu z firmą %1$s?</item>
+        <item>Jak ogólnie oceniasz kontakt z firmą %1$s?</item>
+        <item>Jak ogólnie oceniasz kontakt z firmą %1$s?</item>
+        <item>Jak oceniasz swój dotychczasowy kontakt z firmą %1$s?</item>
+        <item>Jak oceniasz obecność firmy %1$s na Twitterze?</item>
+        <item>Czy jesteś zadowolony/a z ostatniego kontaktu z firmą %1$s?</item>
+        <item>W jakim stopniu firma %1$s spełnia Twoje oczekiwania?</item>
+        <item>Jak oceniasz swój pobyt w obiekcie firmy %1$s?</item>
+        <item>Jak oceniasz swój poziom zadowolenia z obsługi w firmie %1$s?</item>
+        <item>Jak oceniasz swój poziom zadowolenia z obsługi podczas ostatniego kontaktu z firmą %1$s?</item>
+        <item>Jak oceniasz usługi świadczone przez firmę %1$s?</item>
+        <item>Czy jesteś zadowolony/a z wyników kontaktu z firmą %1$s?</item>
+        <item>Jak oceniasz możliwość rozwiązania Twojego problemu w firmie %1$s?</item>
+        <item>Jak oceniasz czas, w jakim firma %1$s udzieliła odpowiedzi?</item>
+        <item>Jak oceniasz szybkość usługi w firmie %1$s?</item>
+        <item>Jak oceniasz czas, w jakim firma %1$s rozwiązała Twój problem?</item>
+        <item>Jak oceniasz czas potrzebny do rozwiązania Twojego problemu w firmie %1$s?</item>
+        <item>Jak oceniasz tempo rozwiązywania problemu w firmie %1$s?</item>
+        <item>Jak oceniasz wiedzę konsultanta z firmy %1$s?</item>
+        <item>Jaki jest Twój poziom zadowolenia z pomocy pracownika firmy %1$s?</item>
+        <item>Jaki jest Twój poziom zadowolenia z pomocy specjalisty z firmy %1$s?</item>
+        <item>Jaki jest Twój poziom zadowolenia z pomocy przedstawiciela firmy %1$s?</item>
+        <item>Jak oceniasz swój ostatni kontakt w sprawach bankowych z firmą %1$s?</item>
+        <item>Jak oceniasz swoje ogólne wrażenia związane z wydarzeniem w firmie %1$s?</item>
+        <item>Jak oceniasz kontakt w sprawie płatności z firmą %1$s?</item>
+        <item>Jak oceniasz zakupy w firmie %1$s?</item>
+        <item>Jak oceniasz zakupy w firmie %1$s?</item>
+        <item>Jak oceniasz dostawę w firmie %1$s?</item>
+        <item>Jak oceniasz usługę wypożyczenia w firmie %1$s?</item>
+        <item>Jak oceniasz swoją ostatnią wizytę w sklepie firmy %1$s?</item>
+        <item>Jak oceniasz swój ostatni pobyt w hotelu %1$s?</item>
+        <item>Jak oceniasz swój ostatni lot z firmą %1$s?</item>
+        <item>Jak oceniasz swój ostatni przejazd z firmą %1$s?</item>
+        <item>Jak oceniasz swoją ostatnią podróż z firmą %1$s?</item>
+        <item>Jak ocenisz swoją ostatnią wizytę w firmie %1$s?</item>
+        <item>Jak oceniasz swój ostatni posiłek od firmy %1$s?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 dni</item>
+        <item>12 miesięcy</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25x</item>
+        <item>0,5x</item>
+        <item>0,75x</item>
+        <item>Normalna</item>
+        <item>1,25x</item>
+        <item>1,5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Jak duża jest szansa, że polecisz firmę %1$s znajomym?</item>
+        <item>Jak duża jest szansa, że polecisz firmę %1$s znajomemu?</item>
+        <item>Jak duża jest szansa, że polecisz firmę %1$s koledze z pracy?</item>
+        <item>Jak duża jest szansa, że polecisz firmę %1$s członkowi rodziny?</item>
+        <item>Jak duża jest szansa, że polecisz komuś innemu firmę %1$s?</item>
+        <item>Jak duża jest szansa, że polecisz firmę %1$s znajomemu lub koledze z pracy?</item>
+        <item>Jak duża jest szansa, że w przyszłości zrobisz zakupy w firmie %1$s?</item>
+        <item>Jak duża jest szansa, że polecisz firmę %1$s znajomym?</item>
+        <item>Czy polecisz firmę %1$s znajomemu lub koledze z pracy?</item>
+        <item>Jak duża jest szansa, że polecisz usługi firmy %1$s znajomym?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Duża liczba widzów</item>
+        <item>Pozytywna społeczność</item>
+        <item>Jakość filmów</item>
+        <item>Ciekawa rozmowa</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Mała liczba widzów</item>
+        <item>Nękanie</item>
+        <item>Problemy z jakością wideo</item>
+        <item>Przesyłanie spamu w czacie</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minut</item>
+        <item>30 minut</item>
+        <item>1 godzina</item>
+        <item>2 godziny</item>
+        <item>4 godziny</item>
+        <item>Codziennie</item>
+    </array>
+</resources>

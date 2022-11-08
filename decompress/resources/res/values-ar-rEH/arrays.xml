@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>‏ستتلقين تنبيهات للتغريدات الجديدة.</item>
+        <item>‏ستتلقين تنبيهات لتغريدات المتابِعات الفائقات الجديدة فقط.</item>
+        <item>‏ستتلقين تنبيهات للتغريدات الجديدة التي تتضمن فيديو مباشرًا.</item>
+        <item>‏ستتلقين تنبيهات للتغريدات الجديدة الخاصة بالمساحات.</item>
+        <item>‏لن تتلقي بعد الآن تنبيهات للتغريدات الجديدة.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>‏التغريدات</item>
+        <item>‏تغريدات المتابِعات الفائقة فقط</item>
+        <item>‏فيديو مباشر</item>
+        <item>‏المساحات</item>
+        <item>‏لا شيء</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>‏كل التغريدات</item>
+        <item>‏تغريدات المتابَعات الفائقة فقط</item>
+        <item>‏فيديو البث المباشر فقط</item>
+        <item>‏المساحات فقط</item>
+        <item>‏إيقاف التشغيل</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>‏احصلي على تنبيهات لجميع التغريدات التي ينشرها هذا الحساب.</item>
+        <item>‏احصلي على تنبيهات فقط لتغريدات المتابَعات الفائقة.</item>
+        <item>‏احصلي على تنبيهات لعمليات البث المباشر فقط.</item>
+        <item>‏احصلي على تنبيهات للمساحات فقط.</item>
+        <item>‏يمكنكِ إيقاف تشغيل التنبيهات لجميع تغريدات هذا الحساب.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>‏تغريد الرابط</item>
+        <item>‏نسخ الرابط</item>
+        <item>‏إرسال الرابط</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>‏ما مدى رضاكِ بشكل عام عن %1$s؟</item>
+        <item>‏ما مدى رضاكِ عن %1$s؟</item>
+        <item>‏بشكلٍ عام، ما مدى رضاكِ عن تجربتكِ الأخيرة مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربتكِ مع %1$s بشكل عام؟</item>
+        <item>‏ما تقييمكِ لتجربتكِ مع %1$s بشكل عام؟</item>
+        <item>‏ما تقييمكِ لتجربتكِ مع %1$s حتى الآن؟</item>
+        <item>‏ما تقييمكِ لتجربتكِ مع %1$s على Twitter؟</item>
+        <item>‏هل كنتِ راضية عن تجربتكِ الأخيرة مع %1$s؟</item>
+        <item>‏إلى أي مدى يلبي %1$s توقعاتكِ؟</item>
+        <item>‏ما تقييمكِ لتجربتكِ كضيف مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة الخدمة مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة الخدمة الأخيرة مع %1$s؟</item>
+        <item>‏ما تقييمكِ للخدمة التي تلقيتِها مؤخرًا من %1$s؟</item>
+        <item>‏هل كنتِ راضية عن نتيجة تفاعُلكِ مع %1$s؟</item>
+        <item>‏ما تقييمكِ لقدرة %1$s على حل مشكلتكِ؟</item>
+        <item>‏ما تقييمكِ للوقت الذي استغرقه %1$s للاستجابة؟</item>
+        <item>‏ما تقييمكِ لسرعة الخدمة التي يوفرها %1$s؟</item>
+        <item>‏ما تقييمكِ للوقت الذي استغرقه %1$s لحل مشكلتكِ؟</item>
+        <item>‏ما تقييمكِ للوقت الذي استغرقه %1$s لحل مشكلتكِ؟</item>
+        <item>‏ما تقييمكِ لسرعة حل مشكلتكِ من قِبل %1$s؟</item>
+        <item>‏ما تقييمكِ لخبرة مستشارة %1$s؟</item>
+        <item>‏ما مدى رضاكِ عن موظف %1$s الذي قدم إليكِ المساعدة؟</item>
+        <item>‏ما مدى رضاكِ عن اختصاصي %1$s الذي قدم إليكِ المساعدة؟</item>
+        <item>‏ما مدى رضاكِ عن ممثل %1$s الذي قدم إليكِ المساعدة؟</item>
+        <item>‏ما تقييمكِ لتجربتكِ المصرفية الأخيرة مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة الحدث في %1$s بشكل عام؟</item>
+        <item>‏ما تقييمكِ لتجربة دفع فواتيركِ مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة الشراء الخاصة بكِ مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة التسوق الخاصة بكِ مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة خدمة التوصيل مع %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة خدمة الإيجار مع %1$s؟</item>
+        <item>‏ما تقييمكِ لزيارتكِ الأخيرة لمتجر %1$s؟</item>
+        <item>‏ما تقييمكِ لتجربة إقامتكِ الأخيرة في فندق %1$s؟</item>
+        <item>‏ما تقييمكِ لرحلتكِ الجوية الأخيرة مع %1$s؟</item>
+        <item>‏ما تقييمكِ لجولتكِ الأخيرة مع %1$s؟</item>
+        <item>‏ما تقييمكِ لرحلتكِ الأخيرة مع %1$s؟</item>
+        <item>‏ما تقييمكِ لزيارتكِ الأخيرة إلى %1$s؟</item>
+        <item>‏ما تقييمكِ للوجبة الأخيرة التي تناولتِها في %1$s؟</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>‏30 يومًا</item>
+        <item>‏12 شهرًا</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>‏ما احتمالية أن توصي صديقًا بـ %1$s؟</item>
+        <item>‏ما احتمالية أن توصي صديقًا بـ %1$s؟</item>
+        <item>‏ما احتمالية أن توصي زميل بـ %1$s؟</item>
+        <item>‏ما احتمالية أن توصي أحد أفراد العائلة بـ %1$s؟</item>
+        <item>‏ما احتمالية أن توصي شخص آخر بـ %1$s؟</item>
+        <item>‏ما احتمالية أن توصي صديقًا أو زميلًا بـ %1$s؟</item>
+        <item>‏ما احتمالية أن تتسوقي في %1$s مستقبلًا؟</item>
+        <item>‏ما احتمالية أن توصي بـ %1$s؟</item>
+        <item>‏هل ستوصي بـ %1$s لصديق أو زميل؟</item>
+        <item>‏ما احتمالية أن توصي صديق بتجربتكِ مع %1$s؟</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>‏‎@string/reader_mode_text_size_large</item>
+        <item>‏‎@string/reader_mode_text_size_medium</item>
+        <item>‏‎@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>‏‎@string/reader_mode_text_size_large_label</item>
+        <item>‏‎@string/reader_mode_text_size_medium_label</item>
+        <item>‏‎@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>‏15 دقيقة</item>
+        <item>‏30 دقيقة</item>
+        <item>‏ساعة واحدة</item>
+        <item>‏ساعتان</item>
+        <item>‏4 ساعات</item>
+        <item>‏يوميًا</item>
+    </array>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Rebràs notificacions de tuits nous.</item>
+        <item>Rebràs notificacions de nous tuits exclusius per a superseguidors.</item>
+        <item>Rebràs notificacions de nous tuits amb vídeos en directe.</item>
+        <item>Rebràs notificacions de nous tuits sobre Espais.</item>
+        <item>Ja no rebràs notificacions de tuits nous.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>Tuits</item>
+        <item>Tuits exclusius per a superseguidors</item>
+        <item>Vídeo en directe</item>
+        <item>Espais</item>
+        <item>Cap</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Tots els tuits</item>
+        <item>Tuits exclusius per a superseguidors</item>
+        <item>Només vídeo en directe</item>
+        <item>Només Espais</item>
+        <item>Desactivades</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Rep notificacions per a tots els tuits del compte.</item>
+        <item>Rep notificacions de nous tuits exclusius per a superseguidors.</item>
+        <item>Rep notificacions només per a emissions en directe.</item>
+        <item>Rep notificacions només per als Espais.</item>
+        <item>Desactiva les notificacions per als tuits del compte.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Enllaç al tuit</item>
+        <item>Copia l&apos;enllaç</item>
+        <item>Envia l&apos;enllaç</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Quina és la satisfacció en general amb %1$s?</item>
+        <item>Com de satisfet estàs amb %1$s?</item>
+        <item>En general, com estàs de satisfet de l&apos;experiència amb %1$s fa poc?</item>
+        <item>Com valoraries en general l&apos;experiència amb %1$s?</item>
+        <item>Com valoraries en general l&apos;experiència amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència fins ara amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència al Twitter amb %1$s?</item>
+        <item>Estàs satisfet amb l&apos;experiència amb %1$s fa poc?</item>
+        <item>S&apos;han complert les expectatives que tenies amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència com a hoste de %1$s?</item>
+        <item>Com valoraries el servei que t&apos;ha donat %1$s?</item>
+        <item>Com valoraries el servei que t&apos;ha donat %1$s fa poc?</item>
+        <item>Com valoraries el servei que has rebut de %1$s?</item>
+        <item>Estàs satisfet amb els resultats de la interacció amb %1$s?</item>
+        <item>Com valoraries la capacitat de %1$s per resoldre la incidència?</item>
+        <item>Com qualificaries el temps de resposta de %1$s?</item>
+        <item>Com qualificaries la rapidesa del servei de %1$s?</item>
+        <item>Com qualificaries el temps de resolució amb %1$s?</item>
+        <item>Com valoraries el temps en què %1$s ha resolt el teu problema?</item>
+        <item>Com valoraries la rapidesa de resolució amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència com a assessors de: %1$s?</item>
+        <item>Com estàs de satisfet amb l&apos;ajuda de l&apos;agent de %1$s?</item>
+        <item>Com estàs de satisfet de l&apos;ajuda de l&apos;especialista %1$s?</item>
+        <item>Com estàs de satisfet amb l&apos;ajuda del representant de %1$s?</item>
+        <item>Com valoraries el servei bancari que t&apos;ha ofert %1$s fa poc?</item>
+        <item>Com valoraries en general l&apos;esdeveniment a %1$s?</item>
+        <item>Com valoraries l&apos;experiència de pagament amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència d&apos;adquisició amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència de compra amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència d&apos;entrega amb %1$s?</item>
+        <item>Com valoraries l&apos;experiència de lloguer amb %1$s?</item>
+        <item>Com valoraries la visita al comerç de %1$s fa poc?</item>
+        <item>Com qualificaries l&apos;estada a l&apos;hotel %1$s fa poc?</item>
+        <item>Com valoraries el vol que has fet amb %1$s fa poc?</item>
+        <item>Com valoraries el trajecte que has fet amb %1$s fa poc?</item>
+        <item>Com valoraries el viatge que has fet amb %1$s fa poc?</item>
+        <item>Com valoraries la visita que has fet a %1$s fa poc?</item>
+        <item>Com valoraries l&apos;àpat que has fet a %1$s fa poc?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 dies</item>
+        <item>12 mesos</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25x</item>
+        <item>0,5x</item>
+        <item>0,75x</item>
+        <item>Normal</item>
+        <item>1,25x</item>
+        <item>1,5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Amb quina probabilitat recomanaries %1$s a una amistat?</item>
+        <item>Amb quina probabilitat recomanaries %1$s a una amistat?</item>
+        <item>Amb quina probabilitat recomanaries %1$s a un company?</item>
+        <item>Amb quina probabilitat recomanaries %1$s a un familiar?</item>
+        <item>Amb quina probabilitat recomanaries %1$s a algú?</item>
+        <item>Amb quina probabilitat recomanaries %1$s a una amistat o un company?</item>
+        <item>Amb quina probabilitat tornaràs a comprar a %1$s?</item>
+        <item>Amb quina probabilitat recomanaries %1$s?</item>
+        <item>Recomanaries %1$s a una amistat o company?</item>
+        <item>Amb quina probabilitat recomanaries %1$s a una amistat?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Nombre adequat d&apos;espectadors</item>
+        <item>Comunitat positiva</item>
+        <item>Qualitat del vídeo</item>
+        <item>Xat interessant</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Nombre baix d&apos;espectadors</item>
+        <item>Assetjament</item>
+        <item>Problemes amb el vídeo</item>
+        <item>Brossa al xat</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minuts</item>
+        <item>30 minuts</item>
+        <item>1 hora</item>
+        <item>2 hores</item>
+        <item>4 hores</item>
+        <item>Diàriament</item>
+    </array>
+</resources>

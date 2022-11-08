@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="PillChevronIcon">
+        <item name="android:src">@drawable/ic_vector_chevron_right</item>
+        <item name="android:scaleX">-1</item>
+    </style>
+</resources>

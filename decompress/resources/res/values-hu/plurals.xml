@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="one">%d tag</item>
+        <item quantity="other">%d tag</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="one">%d új elem</item>
+        <item quantity="other">%d új elem</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="one">%1$d társhoszt</item>
+        <item quantity="other">%1$d társhoszt</item>
+    </plurals>
+    <plurals name="communities_tweet_replies_count">
+        <item quantity="one">%1$s válasz</item>
+        <item quantity="other">%1$s válasz</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="one">%d Közösségi tag</item>
+        <item quantity="other">%d Közösségi tag</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="one">%d moderátor</item>
+        <item quantity="other">%d moderátor</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="one">%s kérés</item>
+        <item quantity="other">%s kérés</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="one">%s új Tweet</item>
+        <item quantity="other">%s új Tweet</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="one">%s jelentés</item>
+        <item quantity="other">%s jelentés</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="one">%d karakterrel hosszabb a megengedettnél</item>
+        <item quantity="other">%d karakterrel hosszabb a megengedettnél</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="one">Még %d karakter maradt</item>
+        <item quantity="other">Még %d karakter maradt</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_days">
+        <item quantity="one">%1$d nap van hátra</item>
+        <item quantity="other">%1$d nap van hátra</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_hours">
+        <item quantity="one">%1$d óra van hátra</item>
+        <item quantity="other">%1$d óra van hátra</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_minutes">
+        <item quantity="one">%1$d perc van hátra</item>
+        <item quantity="other">%1$d perc van hátra</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="one">%1$s tere %2$d másik felhasználóval</item>
+        <item quantity="other">%1$s tere %2$d másik felhasználóval</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="one">%d új interakció</item>
+        <item quantity="other">%d új interakció</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d nap</item>
+        <item quantity="other">%d nap</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">%d napja</item>
+        <item quantity="other">%d napja</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="one">Nem adható hozzá felhasználó ehhez a csoporthoz.</item>
+        <item quantity="other">%d felhasználó nem vehető fel ebbe a csoportba.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="one">Felhasználó hozzáadva a csoporthoz.</item>
+        <item quantity="other">%d felhasználó hozzáadva a csoporthoz.</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="one">1 személy</item>
+        <item quantity="other">%d személy</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="one">Csoportos csevegés %d emberrel</item>
+        <item quantity="other">Csoportos csevegés %d emberrel</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="one">%s profilképe</item>
+        <item quantity="other">%s profilképei</item>
+    </plurals>
+    <plurals name="dm_more_in_this_group">
+        <item quantity="one">%1$s felhasználó van a csoportban</item>
+        <item quantity="other">%1$s felhasználó van a csoportban</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="one">%d új ember, akit ismerhetsz</item>
+        <item quantity="other">%d új ember, akit ismerhetsz</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="one">%d új kérés</item>
+        <item quantity="other">%d új kérés</item>
+    </plurals>
+    <plurals name="dm_other_people">
+        <item quantity="one">%1$d másik felhasználó</item>
+        <item quantity="other">%1$d másik felhasználó</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="one">%1$s hozzáadva</item>
+        <item quantity="other">%1$s hozzáadva</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="one">%d függőben lévő kérés</item>
+        <item quantity="other">%s függőben lévő kérés</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="one">%d ember akit ismerhetsz</item>
+        <item quantity="other">%d ember akit ismerhetsz</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="one">Csak %d csevegés rögzíthető</item>
+        <item quantity="other">Csak %d csevegés rögzíthető</item>
+    </plurals>
+    <plurals name="dm_quick_share_collapsed">
+        <item quantity="one">%1$s + %2$d másik</item>
+        <item quantity="other">%1$s + %2$d másik felhasználó</item>
+    </plurals>
+    <plurals name="dm_seen_by_list_others_overflow">
+        <item quantity="one">és {{}}%d másik{{}}</item>
+        <item quantity="other">és {{}}%d másik{{}}</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="one">Látta %d személy</item>
+        <item quantity="other">Látta %d ember</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="one">%d olvasatlan üzenet</item>
+        <item quantity="other">%d olvasatlan üzenet</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Előretekerés %d másodperccel</item>
+        <item quantity="other">Előretekerés %d másodperccel</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Visszatekerés %d másodperccel</item>
+        <item quantity="other">Visszatekerés %d másodperccel</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="one">%s profilképe</item>
+        <item quantity="other">%s profilképei</item>
+    </plurals>
+    <plurals name="followed_by_count">
+        <item quantity="one">%1$s és %2$d másik felhasználó követi</item>
+        <item quantity="other">%1$s és %2$d másik felhasználó követi</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="one">%d hozzáadása</item>
+        <item quantity="other">%d hozzáadása</item>
+    </plurals>
+    <plurals name="generated_alt_text_banner">
+        <item quantity="one">@string/generated_alt_text_banner_single</item>
+        <item quantity="other">@string/generated_alt_text_banner_multiple</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="one">Csak %1$d társhosztot adhatsz hozzá.</item>
+        <item quantity="other">Csak %1$d társhosztot adhatsz hozzá.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="one">Max. %1$d további embert adhatsz hozzá.</item>
+        <item quantity="other">Max. %1$d további embert adhatsz hozzá.</item>
+    </plurals>
+    <plurals name="guests_in_broadcast">
+        <item quantity="one">*%1$s* vendég volt</item>
+        <item quantity="other">*%1$s* vendég volt</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="one">%1$d új követőt szereztél.</item>
+        <item quantity="other">%1$d új követőt szereztél.</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d óra</item>
+        <item quantity="other">%d óra</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="one">%d órája</item>
+        <item quantity="other">%d órája</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="one">%1$s követi: %2$s.</item>
+        <item quantity="other">%1$s követi: %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="one">Te és %1$s követitek a(z) %2$s Témakört.</item>
+        <item quantity="other">Te és %1$s követitek a(z) %2$s Témaköröket.</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="one">tag</item>
+        <item quantity="other">tag</item>
+    </plurals>
+    <plurals name="list_subscriber_count">
+        <item quantity="one">‧ %d feliratkozó</item>
+        <item quantity="other">‧ %d feliratkozó</item>
+    </plurals>
+    <plurals name="magic_recs_follow_notif">
+        <item quantity="one">Épp most kezdte követni %1$s és %2$d másik, általad követett felhasználó</item>
+        <item quantity="other">Épp most kezdte követni %1$s és %2$d másik, általad követett felhasználó</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="one">A jó képleírások tömörek, mégis részletesek. Foglald össze vagy írd ki a képen látható szöveget.\10\10A leírásod révén a Twitter elérhetővé válik a fogyatékkal élők és mindenki más számára, aki több kontextusra vágyik.\10\10Kikapcsolhatod ezt az értesítést a Kisegítő lehetőségek beállításaiban.</item>
+        <item quantity="other">A jó képleírások tömörek, mégis részletesek. Foglald össze vagy írd ki a képen látható szöveget.\10\10A leírásaid révén a Twitter elérhetővé válik a fogyatékkal élők és mindenki más számára, aki több kontextusra vágyik.\10\10Kikapcsolhatod ezt az értesítést a Kisegítő lehetőségek beállításaiban.</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="one">Leírás hozzáadása</item>
+        <item quantity="other">Leírások hozzáadása</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="one">Ne felejtsd el hozzáférhetővé tenni a képeidet!</item>
+        <item quantity="other">Ne felejtsd el hozzáférhetővé tenni a képeidet!</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="one">%d kategória kiválasztva</item>
+        <item quantity="other">%d kategória kiválasztva</item>
+    </plurals>
+    <plurals name="media_tag_prompt">
+        <item quantity="one">Ki van ezen a fényképen?</item>
+        <item quantity="other">Kik vannak ezeken a fényképeken?</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="one">Még %d személyt lehet megjelölni.</item>
+        <item quantity="other">Még %d személyt lehet megjelölni.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="one">%d személy megjelölve</item>
+        <item quantity="other">%d személy megjelölve</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="one">%s tag</item>
+        <item quantity="other">%s tag</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d perc</item>
+        <item quantity="other">%d perc</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="one">%d perce</item>
+        <item quantity="other">%d perce</item>
+    </plurals>
+    <plurals name="moment_fullscreen_cover_n_likes">
+        <item quantity="one">%s kedvelés</item>
+        <item quantity="other">%s kedvelés</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d új értesítés</item>
+        <item quantity="other">%d új értesítés</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="one">%d szó törölve</item>
+        <item quantity="other">%d szó törölve</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="one">%d kiválasztva</item>
+        <item quantity="other">%d kiválasztva</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="one">%s tag</item>
+        <item quantity="other">%s tag</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="one">%s személy</item>
+        <item quantity="other">%s személy</item>
+    </plurals>
+    <plurals name="new_tweet_count">
+        <item quantity="one">%d új Tweet</item>
+        <item quantity="other">%d új Tweet</item>
+    </plurals>
+    <plurals name="newsletter_card_subtitle_subscriber_count">
+        <item quantity="one">Hírlevél • %s előfizető</item>
+        <item quantity="other">Hírlevél • %s előfizető</item>
+    </plurals>
+    <plurals name="nft_detail_verified_owners">
+        <item quantity="one">ellenőrzött tulajdonos</item>
+        <item quantity="other">ellenőrzött tulajdonos</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="one">1 másik felhasználó</item>
+        <item quantity="other">%d másik felhasználó</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="one">%1$d termék</item>
+        <item quantity="other">%1$d termék</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="one">követő</item>
+        <item quantity="other">követő</item>
+    </plurals>
+    <plurals name="profile_followers_count_label">
+        <item quantity="one">Követő</item>
+        <item quantity="other">Követők</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="one">%d másik felhasználó</item>
+        <item quantity="other">%d másik felhasználó</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="one">Kiemelt követő</item>
+        <item quantity="other">Kiemelt követők</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="one">%s kedvelés</item>
+        <item quantity="other">%s Kedvelések</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="one">%s fénykép</item>
+        <item quantity="other">%s fénykép és videó</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="one">%s Tweet</item>
+        <item quantity="other">%s Tweet</item>
+    </plurals>
+    <plurals name="profile_tweets_count_label">
+        <item quantity="one">Tweet</item>
+        <item quantity="other">Tweetek</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="zero">A közvetítés nézőinek grafikonja</item>
+        <item quantity="one">A közvetítés nézőinek grafikonja. %1$d csúcsnéződ volt ekkor: %2$s.</item>
+        <item quantity="other">A közvetítés nézőinek grafikonja. %1$d csúcsnéződ volt ekkor: %2$s.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="one">%1$d néződ volt ekkor: %2$s.</item>
+        <item quantity="other">%1$d néződ volt ekkor: %2$s.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="zero">Nincsenek követők</item>
+        <item quantity="one">%d követő</item>
+        <item quantity="other">%d követő</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers">
+        <item quantity="one">%1$s meghívott %2$s személyt</item>
+        <item quantity="other">%1$s meghívott %2$s személyt</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="one">*%1$s* meghívott %2$s személyt</item>
+        <item quantity="other">*%1$s* meghívott %2$s személyt</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="one">%1$s *elnémította*</item>
+        <item quantity="other">%1$s (%2$d) *elnémította*</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="one">%1$s *feloldotta a némítást*</item>
+        <item quantity="other">%1$s (%2$d) *feloldotta a némítást*</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="one">%1$d új üzenet</item>
+        <item quantity="other">%1$d új üzenet</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="one">%s szív</item>
+        <item quantity="other">%s szív</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="one">ÉLŐBEN NÉZŐ</item>
+        <item quantity="other">ÉLŐBEN NÉZŐK</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="one">VISSZAJÁTSZÁST NÉZŐ</item>
+        <item quantity="other">VISSZAJÁTSZÁST NÉZŐK</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="one">%d nap</item>
+        <item quantity="other">%d nap</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="one">%d óra</item>
+        <item quantity="other">%d óra</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="one">%d perc</item>
+        <item quantity="other">%d perc</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="one">%d másodperc</item>
+        <item quantity="other">%d másodperc</item>
+    </plurals>
+    <plurals name="reactions_stats_total_label">
+        <item quantity="one">reakció</item>
+        <item quantity="other">reakció</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="one">%s visszajátszás</item>
+        <item quantity="other">%s visszajátszás</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="one">%d másik felhasználó</item>
+        <item quantity="other">%d másik felhasználó</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Válasz ﻿%1$s és %2$d másik felhasználónak﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Válasz ﻿%1$s és %2$d másik felhasználónak﻿. A válaszodat más Kiemelt követők is látni fogják.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Válasz ﻿%1$s és %2$d másik felhasználónak ﻿ itt: ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Válasz ﻿%1$s, %2$s és %3$d másik felhasználónak﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Válasz ﻿%1$s, %2$s és %3$d másik felhasználónak﻿. A válaszodat más Kiemelt követők is látni fogják.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Válasz ﻿%1$s %2$s és %3$d másik felhasználónak﻿ itt: ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="one">%d potenciálisan sértő vagy spamelő felhasználói fiókot jelöltünk meg.</item>
+        <item quantity="other">%d potenciálisan sértő vagy spamelő felhasználói fiókot jelöltünk meg.</item>
+    </plurals>
+    <plurals name="search_user_name_pile">
+        <item quantity="one">%1$s és további</item>
+        <item quantity="other">%1$s, %2$s és további</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d mp</item>
+        <item quantity="other">%d mp</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="one">%d másodperce</item>
+        <item quantity="other">%d másodperce</item>
+    </plurals>
+    <plurals name="seen_by_people_count">
+        <item quantity="one">1 ember látta</item>
+        <item quantity="other">%s felhasználó látta</item>
+    </plurals>
+    <plurals name="self_thread_replies_count">
+        <item quantity="one">%1$d további megjelenítése ebben a hozzászólásláncban</item>
+        <item quantity="other">%1$d további megjelenítése ebben a hozzászólásláncban</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="one">Társhoszti meghívás küldése</item>
+        <item quantity="other">Társhoszti meghívások küldése</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="one">%d személy</item>
+        <item quantity="other">%d személy</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="one">%1$s, %2$s és %3$d másik felhasználó követi</item>
+        <item quantity="other">%1$s, %2$s, és %3$d másik felhasználó követi</item>
+    </plurals>
+    <plurals name="spaces_additional_cohosts">
+        <item quantity="one">társhoszt</item>
+        <item quantity="other">társhoszt</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="one">+%1$s másik hallgató</item>
+        <item quantity="other">+%1$s másik hallgató</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="one">Letiltottál %1$d embert, aki beszél</item>
+        <item quantity="other">Letiltottál %1$d embert, aki beszél</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="one">%1$s ebben a Térben van</item>
+        <item quantity="other">%1$s ebben a Térben vannak</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="one">%1$s részt vett a Térben</item>
+        <item quantity="other">%1$s részt vett a Térben</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="one">%1$d felhasználó kapott meghívót ebbe a Térbe</item>
+        <item quantity="other">%1$d felhasználó kapott meghívót ebbe a Térbe</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="one">%1$d hozzászóló</item>
+        <item quantity="other">%1$d hozzászóló</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="one">%1$d felhasználó hallgatja</item>
+        <item quantity="other">%1$d felhasználó hallgatja</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="one">%1$d szabad hely</item>
+        <item quantity="other">%1$d szabad hely</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="one">%1$d kérés</item>
+        <item quantity="other">%1$d kérés</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="one">Kedvelés</item>
+        <item quantity="other">Kedvelés</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="one">Tweet-idézés</item>
+        <item quantity="other">Tweet-idézés</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="one">Retweet</item>
+        <item quantity="other">Retweet</item>
+    </plurals>
+    <plurals name="stat_label_views">
+        <item quantity="one">MEGTEKINTÉS</item>
+        <item quantity="other">MEGTEKINTÉSEK</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="one">megtekintés</item>
+        <item quantity="other">megtekintés</item>
+    </plurals>
+    <plurals name="subscriber_count">
+        <item quantity="one">%s feliratkozó</item>
+        <item quantity="other">%s feliratkozó</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="one">%d n</item>
+        <item quantity="other">%d n</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="one">%d NAPPAL EZELŐTT</item>
+        <item quantity="other">%d NAPPAL EZELŐTT</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="one">%d ó</item>
+        <item quantity="other">%d ó</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">%d ÓRÁVAL EZELŐTT</item>
+        <item quantity="other">%d ÓRÁVAL EZELŐTT</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="one">%d p</item>
+        <item quantity="other">%d p</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="one">%d PERCE</item>
+        <item quantity="other">%d PERCE</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="one">%dmp</item>
+        <item quantity="other">%d mp</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="one">Utolsó óra</item>
+        <item quantity="other">Utolsó %s óra</item>
+    </plurals>
+    <plurals name="tweet_reaction_stat_accessibility_string">
+        <item quantity="one">Egy %1$s reakció</item>
+        <item quantity="other">%1$s %2$s reakció</item>
+    </plurals>
+    <plurals name="typing_users_count">
+        <item quantity="one">%d személy ír</item>
+        <item quantity="other">%d személy ír</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="one">%d mp</item>
+        <item quantity="other">%d mp</item>
+    </plurals>
+</resources>

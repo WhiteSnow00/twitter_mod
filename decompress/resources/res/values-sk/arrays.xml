@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Budete dostávať notifikácie o nových Tweetoch.</item>
+        <item>Budete dostávať notifikácie o nových Tweetoch len pre supersledujúcich.</item>
+        <item>Budete dostávať notifikácie o nových Tweetoch s videom naživo.</item>
+        <item>Budete dostávať notifikácie o nových Tweetoch s Priestormi.</item>
+        <item>Nebudete už dostávať notifikácie o nových Tweetoch.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>Tweety</item>
+        <item>Tweety len pre supersledujúcich</item>
+        <item>Video naživo</item>
+        <item>Priestory</item>
+        <item>Žiadne</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Všetky Tweety</item>
+        <item>Iba Tweety pre supersledujúcich</item>
+        <item>Iba videá naživo</item>
+        <item>Iba Priestory</item>
+        <item>Vypnúť</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Získavajte notifikácie o všetkých Tweetoch tohto účtu.</item>
+        <item>Dostávajte notifikácie len o Tweetoch pre supersledujúcich.</item>
+        <item>Dostávajte notifikácie len o vysielaniach naživo.</item>
+        <item>Dostávajte notifikácie iba o Priestoroch.</item>
+        <item>Vypnite notifikácie o Tweetoch tohto účtu.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Tweetnuť odkaz</item>
+        <item>Kopírovať odkaz</item>
+        <item>Poslať odkaz</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Ako by ste ohodnotili svoju celkovú spokojnosť so spoločnosťou %1$s?</item>
+        <item>Ako ste spokojní so spoločnosťou %1$s?</item>
+        <item>Ako ste boli celkove spokojní so svojimi poslednými skúsenosťami so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoje celkové skúsenosti so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoje celkové skúsenosti so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoje doterajšie skúsenosti so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoje skúsenosti so spoločnosťou %1$s na Twitteri?</item>
+        <item>Boli ste spokojní s posledným využitím služieb spoločnosti %1$s?</item>
+        <item>Do akej miery spĺňa %1$s vaše očakávania?</item>
+        <item>Ako by ste ohodnotili svoje skúsenosti so službami spoločnosti %1$s ako hosť?</item>
+        <item>Ako by ste ohodnotili svoje skúsenosti so službami spoločnosti %1$s?</item>
+        <item>Ako by ste ohodnotili svoje posledné skúsenosti so službami spoločnosti %1$s?</item>
+        <item>Ako by ste ohodnotili služby spoločnosti %1$s, ktoré ste využili?</item>
+        <item>Boli ste spokojní s výsledkom vašej interakcie so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili schopnosť spoločnosti %1$s vyriešiť váš problém?</item>
+        <item>Ako by ste ohodnotili čas, ktorý spoločnosť %1$s potrebovala na odpoveď?</item>
+        <item>Ako by ste ohodnotili rýchlosť služieb spoločnosti %1$s?</item>
+        <item>Ako by ste ohodnotili čas, ktorý spoločnosť %1$s potrebovala na riešenie?</item>
+        <item>Ako by ste ohodnotili čas, ktorý spoločnosť %1$s potrebovala na vyriešenie vášho problému?</item>
+        <item>Ako by ste ohodnotili rýchlosť riešenia zo strany spoločnosti %1$s?</item>
+        <item>Ako by ste ohodnotili odborné znalosti poradcu spoločnosti %1$s?</item>
+        <item>Ako ste boli spokojní so zástupcom spoločnosti %1$s, ktorý vám pomohol?</item>
+        <item>Ako ste boli spokojní so špecialistom spoločnosti %1$s, ktorý vám pomohol?</item>
+        <item>Ako ste boli spokojní so zástupcom spoločnosti %1$s, ktorý vám pomohol?</item>
+        <item>Ako by ste ohodnotili svoje posledné skúsenosti so službami bankovníctva, ktoré poskytuje %1$s?</item>
+        <item>Ako by ste celkovo ohodnotili podujatie s miestom konania %1$s?</item>
+        <item>Ako by ste ohodnotili svoje skúsenosti s platením faktúr cez %1$s?</item>
+        <item>Ako by ste hodnotili svoje skúsenosti s nakupovaním cez %1$s?</item>
+        <item>Ako by ste hodnotili svoje skúsenosti s nakupovaním cez %1$s?</item>
+        <item>Ako by ste ohodnotili svoje skúsenosti s doručením zo spoločnosti %1$s?</item>
+        <item>Ako by ste ohodnotili svoje skúsenosti s prenájmom poskytovaným spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoju poslednú návštevu obchodu %1$s?</item>
+        <item>Ako by ste ohodnotili svoj posledný pobyt v hoteli %1$s?</item>
+        <item>Ako by ste ohodnotili svoj posledný let so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoju poslednú jazdu so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoj posledný výlet so spoločnosťou %1$s?</item>
+        <item>Ako by ste ohodnotili svoju poslednú návštevu obchodu %1$s?</item>
+        <item>Ako by ste ohodnotili svoje posledné jedlo v reštaurácii %1$s?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 dní</item>
+        <item>12 mesiacov</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25 ×</item>
+        <item>0,5 ×</item>
+        <item>0,75 ×</item>
+        <item>Normálne</item>
+        <item>1,25 ×</item>
+        <item>1,5 ×</item>
+        <item>2 ×</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>S akou pravdepodobnosťou by ste %1$s odporučili svojim priateľom?</item>
+        <item>S akou pravdepodobnosťou by ste %1$s odporučili svojim priateľom?</item>
+        <item>S akou pravdepodobnosťou by ste %1$s odporučili svojim kolegom?</item>
+        <item>S akou pravdepodobnosťou by ste %1$s odporučili svojim rodinným príslušníkom?</item>
+        <item>S akou pravdepodobnosťou by ste %1$s odporučili niekomu ďalšiemu?</item>
+        <item>S akou pravdepodobnosťou by ste %1$s odporučili svojim priateľom alebo kolegom?</item>
+        <item>S akou pravdepodobnosťou by ste nakúpili cez %1$s aj v budúcnosti?</item>
+        <item>S akou pravdepodobnosťou by ste odporučili %1$s?</item>
+        <item>Odporučili by ste %1$s priateľom alebo kolegom?</item>
+        <item>S akou pravdepodobnosťou by ste svoje skúsenosti so spoločnosťou %1$s odporučili priateľovi?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Vysoký počet divákov</item>
+        <item>Pozitívne naladená komunita</item>
+        <item>Kvalita videa</item>
+        <item>Pútavý chat</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Nízky počet divákov</item>
+        <item>Obťažovanie</item>
+        <item>Problémy s videom</item>
+        <item>Spam v chate</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minút</item>
+        <item>30 minút</item>
+        <item>1 hodina</item>
+        <item>2 hodiny</item>
+        <item>4 hodiny</item>
+        <item>Denne</item>
+    </array>
+</resources>

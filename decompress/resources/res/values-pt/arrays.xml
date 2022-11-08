@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Você receberá notificações sobre novos Tweets.</item>
+        <item>Você receberá notificações sobre novos Tweets exclusivos para Super Followers.</item>
+        <item>Você receberá notificações de novos Tweets de vídeo ao vivo.</item>
+        <item>Você receberá notificações sobre novos Tweets dos Espaços.</item>
+        <item>Você não receberá mais notificações sobre novos Tweets.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>Tweets</item>
+        <item>Tweets exclusivos para Super Follower</item>
+        <item>Vídeo ao vivo</item>
+        <item>Espaços</item>
+        <item>Nenhum</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Todos os Tweets</item>
+        <item>Somente Tweets do Super Follows</item>
+        <item>Somente vídeos ao vivo</item>
+        <item>Somente Espaços</item>
+        <item>Desativado</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Receba notificações para todos os Tweets dessa conta.</item>
+        <item>Receba notificações somente de Tweets do Super Follows.</item>
+        <item>Receba notificações somente para transmissões ao vivo.</item>
+        <item>Receba notificações somente para Espaços.</item>
+        <item>Desative as notificações para os Tweets desta conta.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Tweetar com o link</item>
+        <item>Copiar link</item>
+        <item>Enviar link</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Qual é o seu nível de satisfação geral com o estabelecimento %1$s?</item>
+        <item>Qual é o seu nível de satisfação com o estabelecimento %1$s?</item>
+        <item>Em geral, qual é o seu nível de satisfação com a sua recente experiência no estabelecimento %1$s?</item>
+        <item>Como você classificaria a experiência geral com o estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência geral com o estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência até o momento com o estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência no Twitter com o estabelecimento %1$s?</item>
+        <item>Você ficou satisfeito com a sua experiência recente com o estabelecimento %1$s?</item>
+        <item>Até que ponto o estabelecimento %1$s atendeu às suas expectativas?</item>
+        <item>Como você classificaria a sua experiência como hóspede no hotel %1$s?</item>
+        <item>Como você classificaria a experiência de serviço do estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência de serviço recente com o estabelecimento %1$s?</item>
+        <item>Como você classificaria o serviço que recebeu do estabelecimento %1$s?</item>
+        <item>Você ficou satisfeito com o resultado de sua interação com o estabelecimento %1$s?</item>
+        <item>Como você classificaria a capacidade de resolver seu problema do estabelecimento %1$s?</item>
+        <item>Como você classificaria o tempo de resposta do estabelecimento %1$s?</item>
+        <item>Como você classificaria a agilidade do serviço do estabelecimento %1$s?</item>
+        <item>Como você classificaria o tempo de resposta do estabelecimento %1$s?</item>
+        <item>Como você classificaria o tempo gasto para resolver seu problema com o estabelecimento %1$s?</item>
+        <item>Como você classificaria a agilidade na resolução de problemas do estabelecimento %1$s?</item>
+        <item>Como você classificaria o conhecimento do consultor do %1$s?</item>
+        <item>Qual é o seu nível de satisfação com o agente do estabelecimento %1$s que ajudou você?</item>
+        <item>Qual é o seu nível de satisfação com o especialista do estabelecimento %1$s que ajudou você?</item>
+        <item>Qual é o seu nível de satisfação com o representante do estabelecimento %1$s que ajudou você?</item>
+        <item>Como você classificaria a sua experiência recente com o serviço do banco %1$s?</item>
+        <item>Como você classificaria a sua experiência geral de evento no estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência de pagamento de contas com o estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência de compra com o estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência de compra com o estabelecimento %1$s?,</item>
+        <item>Como você classificaria a experiência de entrega do estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua experiência de locação com a empresa %1$s?</item>
+        <item>Como você classificaria a sua visita recente à loja %1$s?</item>
+        <item>Como você classificaria a sua estadia recente no hotel %1$s?,</item>
+        <item>Como você classificaria o seu voo recente com a empresa %1$s?</item>
+        <item>Como você classificaria o seu passeio recente com a empresa %1$s?</item>
+        <item>Como você classificaria a sua viagem recente com a empresa %1$s?</item>
+        <item>Como você classificaria a sua visita recente ao estabelecimento %1$s?</item>
+        <item>Como você classificaria a sua refeição recente no estabelecimento %1$s?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 dias</item>
+        <item>12 meses</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25x</item>
+        <item>0,5x</item>
+        <item>0,75x</item>
+        <item>Normal</item>
+        <item>1,25x</item>
+        <item>1,5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Qual a probabilidade de você recomendar o estabelecimento %1$s a um amigo?</item>
+        <item>Qual a probabilidade de você recomendar o estabelecimento %1$s a um amigo?</item>
+        <item>Qual a probabilidade de você recomendar o estabelecimento %1$s a um colega?</item>
+        <item>Qual a probabilidade de você recomendar o estabelecimento %1$s a um familiar?</item>
+        <item>Qual a probabilidade de você recomendar o estabelecimento %1$s a outra pessoa?</item>
+        <item>Qual a probabilidade de você recomendar o estabelecimento %1$s a um amigo ou colega?</item>
+        <item>Qual a probabilidade de você fazer compras no estabelecimento %1$s no futuro?</item>
+        <item>Qual a probabilidade de você recomendar o estabelecimento %1$s?</item>
+        <item>Você recomendaria o estabelecimento %1$s a um amigo ou colega?</item>
+        <item>Qual a probabilidade de você recomendar sua experiência com o estabelecimento %1$s a um amigo?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Boa contagem de espectadores</item>
+        <item>Comunidade positiva</item>
+        <item>Qualidade do vídeo</item>
+        <item>Bate-papo interessante</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Baixa contagem de espectadores</item>
+        <item>Assédio</item>
+        <item>Problemas de vídeo</item>
+        <item>Spam no bate-papo</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minutos</item>
+        <item>30 minutos</item>
+        <item>1 hora</item>
+        <item>2 horas</item>
+        <item>4 horas</item>
+        <item>Diariamente</item>
+    </array>
+</resources>

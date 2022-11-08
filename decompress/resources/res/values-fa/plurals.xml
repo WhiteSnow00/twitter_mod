@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="one">‏%d عضو</item>
+        <item quantity="other">‏%d عضو</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="one">‏%d مورد جدید</item>
+        <item quantity="other">‏%d مورد جديد</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="one">‏%1$d میزبان همکار</item>
+        <item quantity="other">‏%1$d میزبان همکار</item>
+    </plurals>
+    <plurals name="communities_tweet_replies_count">
+        <item quantity="one">‏%1$s پاسخ</item>
+        <item quantity="other">‏%1$s پاسخ</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="one">‏%d عضو انجمن</item>
+        <item quantity="other">‏%d عضو انجمن</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="one">‏%d ناظم</item>
+        <item quantity="other">‏%d ناظم‌ها</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="one">‏%s درخواست</item>
+        <item quantity="other">‏%s درخواست</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="one">‏%s توییت جدید</item>
+        <item quantity="other">‏%s توییت جدید</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="one">‏%s گزارش</item>
+        <item quantity="other">‏%s گزارش</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="one">‏%d نویسه خیلی طولانی است</item>
+        <item quantity="other">‏%d نویسه خیلی طولانی است</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="one">‏%d نویسه باقی مانده</item>
+        <item quantity="other">‏%d نویسه باقی مانده</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_days">
+        <item quantity="one">‏%1$d روز باقی‌مانده</item>
+        <item quantity="other">‏%1$d روز باقی مانده</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_hours">
+        <item quantity="one">‏%1$d ساعت باقی‌مانده</item>
+        <item quantity="other">‏%1$d ساعت باقی مانده</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_minutes">
+        <item quantity="one">‏%1$d دقیقه باقی‌مانده</item>
+        <item quantity="other">‏%1$d دقیقه باقی مانده</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="one">‏اتاق گفت‌وگوی %1$s با %2$d نفر دیگر</item>
+        <item quantity="other">‏اتاق گفت‌وگوی %1$s با %2$d نفر دیگر</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="one">‏%d تعامل جدید</item>
+        <item quantity="other">‏%d تعامل‌های جدید</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">‏%d روز</item>
+        <item quantity="other">‏%d روز</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">‏%d روز پیش</item>
+        <item quantity="other">‏%d روز پیش</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="one">‏کاربر به این گروه اضافه نشد.</item>
+        <item quantity="other">‏%d کاربر به این گروه اضافه نشدند.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="one">‏کاربر به گروه اضافه شد.</item>
+        <item quantity="other">‏%d کاربر به گروه اضافه شدند.</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="one">‏١ نفر</item>
+        <item quantity="other">‏%d نفر</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="one">‏گپ گروهی با %d نفر</item>
+        <item quantity="other">‏گپ گروهی با %d نفر</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="one">‏تصویر نمایه برای %s</item>
+        <item quantity="other">‏تصاویر نمایه برای %s</item>
+    </plurals>
+    <plurals name="dm_more_in_this_group">
+        <item quantity="one">‏%1$s در این گروه هست</item>
+        <item quantity="other">‏%1$s در این گروه هستند</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="one">‏%d نفر جدید که شاید بشناسید</item>
+        <item quantity="other">‏%d نفر جدید که شاید بشناسید</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="one">‏%d درخواست تازه</item>
+        <item quantity="other">‏%d درخواست تازه</item>
+    </plurals>
+    <plurals name="dm_other_people">
+        <item quantity="one">‏%1$d نفر دیگر</item>
+        <item quantity="other">‏%1$d نفر دیگر</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="one">‏%1$s اضافه شد</item>
+        <item quantity="other">‏%1$s اضافه شد</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="one">‏%d درخواست دردست بررسی</item>
+        <item quantity="other">‏%s درخواست دردست بررسی</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="one">‏%d نفر جدید که شاید بشناسید</item>
+        <item quantity="other">‏%d نفر که شاید بشناسید</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="one">‏فقط %d گپ می‌توانید سنجاق کنید</item>
+        <item quantity="other">‏فقط %d گپ می‌توانید سنجاق کنید</item>
+    </plurals>
+    <plurals name="dm_quick_share_collapsed">
+        <item quantity="one">‏%1$s + %2$d فرد دیگر</item>
+        <item quantity="other">‏%1$s + %2$d فرد دیگر</item>
+    </plurals>
+    <plurals name="dm_seen_by_list_others_overflow">
+        <item quantity="one">‏و{{}}%d عدد دیگر{{}}</item>
+        <item quantity="other">‏و {{}}%d نفر دیگر{{}}</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="one">‏%d نفر دیده‌اند</item>
+        <item quantity="other">‏دیده شده توسط %d نفر</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="one">‏%d پیام خوانده نشده</item>
+        <item quantity="other">‏%d پیام خوانده نشده</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">%d ثانیه سریع به‌جلو بردن</item>
+        <item quantity="other">%d ثانیه سریع به‌جلو بردن</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">%d ثانیه به‌عقب بردن</item>
+        <item quantity="other">%d ثانیه به‌عقب بردن</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="one">‏تصویر نمایه برای %s</item>
+        <item quantity="other">‏تصاویر نمایه برای %s</item>
+    </plurals>
+    <plurals name="followed_by_count">
+        <item quantity="one">‏دنبال‌شده توسط %1$s و %2$d نفر دیگر</item>
+        <item quantity="other">‏دنبال‌شده توسط %1$s و %2$d نفر دیگر</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="one">‏افزودن %d</item>
+        <item quantity="other">‏افزودن %d مورد</item>
+    </plurals>
+    <plurals name="generated_alt_text_banner">
+        <item quantity="one">‏‎@string/generated_alt_text_banner_single</item>
+        <item quantity="other">‏‎@string/generated_alt_text_banner_multiple</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="one">‏فقط %1$d میزبان می‌توانید داشته باشید.</item>
+        <item quantity="other">‏فقط %1$d میزبان می‌توانید داشته باشید.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="one">‏حداکثر %1$d نفر دیگر اضافه کنید.</item>
+        <item quantity="other">‏حداکثر %1$d نفر دیگر اضافه کنید.</item>
+    </plurals>
+    <plurals name="guests_in_broadcast">
+        <item quantity="one">‏*%1$s* مهمان بود</item>
+        <item quantity="other">‏*%1$s* مهمان بودند</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="one">‏%1$d دنبال‌کننده جدید دارید!</item>
+        <item quantity="other">‏%1$d دنبال‌کننده جدید دارید!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">‏%d ساعت</item>
+        <item quantity="other">‏%d ساعت</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="one">‏%d ساعت پیش</item>
+        <item quantity="other">‏%d ساعت پیش</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="one">‏%1$s %2$s را دنبال می‌کند.</item>
+        <item quantity="other">‏%1$s %2$s را دنبال می‌کنند.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="one">‏شما و %1$s هر دو سرفصل %2$s را دنبال می‌کنید.</item>
+        <item quantity="other">‏شما و %1$s هر دو این سرفصل‌ها را دنبال می‌کنید: %2$s</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="one">‏عضو</item>
+        <item quantity="other">‏عضو</item>
+    </plurals>
+    <plurals name="list_subscriber_count">
+        <item quantity="one">‏‧ %d مشترک</item>
+        <item quantity="other">‏‧ %d مشترک</item>
+    </plurals>
+    <plurals name="magic_recs_follow_notif">
+        <item quantity="one">‏همین حالا توسط %1$s و %2$d نفر که شما دنبال می کنید، دنبال شد</item>
+        <item quantity="other">‏همین حالا توسط %1$s و %2$d نفر که شما دنبال می کنید، دنبال شد</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="one">‏شرح‌های خوب مختصر ولی دارای جزئیات هستند. حتماً متن موجود در خود تصویر را خلاصه یا بازنویسی کنید.\10\10شرح شما باعث می‌شود Twitter برای افرادی که معلولیتی دارند و هرکسی که اطلاعات زمینه‌ای بیشتری لازم دارد دسترس‌پذیر شود.\10\10می‌توانید این یادآور را در «تنظیمات دسترس‌پذیری» غیرفعال کنید.</item>
+        <item quantity="other">‏شرح‌های خوب مختصر ولی دارای جزئیات هستند. حتماً متن موجود در خود تصویر را خلاصه یا بازنویسی کنید.\10\10شرح‌های شما باعث می‌شود Twitter برای افرادی که معلولیتی دارند و هرکسی که اطلاعات زمینه‌ای بیشتری لازم دارد دسترس‌پذیر شود.\10\10می‌توانید این یادآور را در «تنظیمات دسترس‌پذیری» غیرفعال کنید.</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="one">‏افزودن شرح</item>
+        <item quantity="other">‏افزودن شرح</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="one">‏فراموش نکنید تصویرتان را دسترس‌پذیر کنید</item>
+        <item quantity="other">‏فراموش نکنید تصاویرتان را دسترس‌پذیر کنید</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="one">‏%d دسته انتخاب شد</item>
+        <item quantity="other">‏%d دسته انتخاب شد</item>
+    </plurals>
+    <plurals name="media_tag_prompt">
+        <item quantity="one">‏چه کسی در این عکس است؟</item>
+        <item quantity="other">‏چه کسانی در این عکس ها هستند؟</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="one">‏حداکثر %d نفر دیگر را تگ کنید.</item>
+        <item quantity="other">‏حداکثر %d نفر دیگر را تگ کنید.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="one">‏%d نفر برچسب‌زده شده</item>
+        <item quantity="other">‏%d نفر تگ شدند</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="one">‏%s عضو</item>
+        <item quantity="other">‏%s عضو</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">‏%d دقیقه</item>
+        <item quantity="other">‏%d دقیقه</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="one">‏%d دقیقه پیش</item>
+        <item quantity="other">‏%d دقیقه پیش</item>
+    </plurals>
+    <plurals name="moment_fullscreen_cover_n_likes">
+        <item quantity="one">‏%s پسند</item>
+        <item quantity="other">‏%s پسند</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d اعلان جدید</item>
+        <item quantity="other">%d اعلان جدید</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="one">‏%d واژه حذف شد</item>
+        <item quantity="other">‏%d واژه حذف شد</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="one">‏%d مورد انتخاب شد</item>
+        <item quantity="other">‏%d مورد انتخاب شد</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="one">‏%s عضو</item>
+        <item quantity="other">‏%s عضو</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="one">‏%s نفر</item>
+        <item quantity="other">‏%s نفر</item>
+    </plurals>
+    <plurals name="new_tweet_count">
+        <item quantity="one">‏%d توییت جدید</item>
+        <item quantity="other">‏%d توییت جدید</item>
+    </plurals>
+    <plurals name="newsletter_card_subtitle_subscriber_count">
+        <item quantity="one">‏خبرنامه • %s مشترک</item>
+        <item quantity="other">‏خبرنامه • %s مشترک</item>
+    </plurals>
+    <plurals name="nft_detail_verified_owners">
+        <item quantity="one">‏مالک تأییدشده</item>
+        <item quantity="other">‏مالک تأییدشده</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="one">‏یک نفر دیگر</item>
+        <item quantity="other">‏%d نفر دیگر</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="one">‏%1$d محصول</item>
+        <item quantity="other">‏%1$d محصول</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="one">‏دنبال‌کننده</item>
+        <item quantity="other">‏دنبال‌كننده</item>
+    </plurals>
+    <plurals name="profile_followers_count_label">
+        <item quantity="one">‏دنبال کننده</item>
+        <item quantity="other">‏دنبال کننده‌ها</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="one">‏%d نفر دیگر</item>
+        <item quantity="other">‏%d نفر دیگر</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="one">‏سوپردنبال‌کننده</item>
+        <item quantity="other">‏سوپردنبال‌کننده</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="one">‏%s مورد پسندیده شده</item>
+        <item quantity="other">‏%s مورد پسندیده شده</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="one">‏تصویر %s</item>
+        <item quantity="other">‏%s عکس و ویدیو</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="one">‏%s توییت</item>
+        <item quantity="other">‏%s توییت</item>
+    </plurals>
+    <plurals name="profile_tweets_count_label">
+        <item quantity="one">‏توییت</item>
+        <item quantity="other">‏توییت‌ها</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="zero">‏نمودار بییندگان پخش</item>
+        <item quantity="one">‏نمودار بییندگان پخش. حداکثر %1$d بیننده در %2$s داشته‌اید.</item>
+        <item quantity="other">‏نمودار بییندگان پخش. حداکثر %1$d بیننده در %2$s داشته‌اید.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="one">‏شما %1$d بیننده در %2$s داشته‌اید.</item>
+        <item quantity="other">‏شما %1$d بیننده در %2$s داشته‌اید.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="zero">‏بدون دنبال‌کننده</item>
+        <item quantity="one">‏%d دنبال‌کننده‌</item>
+        <item quantity="other">‏%d دنبال‌کننده‌</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers">
+        <item quantity="one">‏%1$s ،%2$s نفر را دعوت کرد</item>
+        <item quantity="other">‏%1$s ،%2$s نفر را دعوت کرد</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="one">‏*%1$s* ،%2$s نفر را دعوت کرد</item>
+        <item quantity="other">‏*%1$s* ،%2$s نفر را دعوت کرد</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="one">‏*خموش‌شده توسط* %1$s</item>
+        <item quantity="other">‏*خموش‌شده توسط* %1$s ‏(%2$d)</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="one">‏*گویاشده توسط* %1$s</item>
+        <item quantity="other">‏*گویاشده توسط* %1$s ‏(%2$d)</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="one">‏%1$d پیام جدید</item>
+        <item quantity="other">‏%1$d پیام جدید</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="one">‏%s قلب</item>
+        <item quantity="other">‏%s قلب</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="one">‏بیننده حاضر</item>
+        <item quantity="other">‏بینندگان حاضر</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="one">‏بیننده بازپخش</item>
+        <item quantity="other">‏بینندگان بازپخش</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="one">‏%d روز</item>
+        <item quantity="other">‏%d روز</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="one">‏%d ساعت</item>
+        <item quantity="other">‏%d ساعت</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="one">‏%d دقیقه</item>
+        <item quantity="other">‏%d دقیقه</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="one">‏%d ثانیه</item>
+        <item quantity="other">‏%d ثانیه</item>
+    </plurals>
+    <plurals name="reactions_stats_total_label">
+        <item quantity="one">‏واکنش</item>
+        <item quantity="other">‏واکنش</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="one">‏%s بازپخش</item>
+        <item quantity="other">‏%s بازپخش</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="one">‏%d نفر دیگر</item>
+        <item quantity="other">‏%d نفر دیگر</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">‏در حال پاسخ به ﻿%1$s و %2$d نفر دیگر﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">‏در پاسخ به ﻿%1$s و %2$d نفر دیگر﻿. پاسخ شما را سوپردنبال‌کننده‌های دیگر هم خواهند دید.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">‏در پاسخ به ﻿%1$s و %2$d نفر دیگر﻿ در ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">‏در حال پاسخ به ﻿%1$s %2$s و %3$d نفر دیگر﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">‏در پاسخ به ﻿%1$s %2$s و %3$d نفر دیگر﻿. پاسخ شما را سوپردنبال‌کننده‌های دیگر هم خواهند دید.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">‏در پاسخ به ﻿%1$s %2$s و %3$d نفر دیگر﻿ در ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="one">‏ما %d حساب کاربری بالقوه اهانت‌آمیز یا هرزنامه‌ای را پرچم‌گذاری کردیم.</item>
+        <item quantity="other">‏ما %d حساب کاربری بالقوه اهانت‌آمیز یا هرزنامه‌ای را پرچم‌گذاری کردیم.</item>
+    </plurals>
+    <plurals name="search_user_name_pile">
+        <item quantity="one">‏%1$s و بیشتر</item>
+        <item quantity="other">‏%1$s, %2$s و بیشتر</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">‏%d ثانیه</item>
+        <item quantity="other">‏%d ثانیه</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="one">‏%d ثانیه پیش</item>
+        <item quantity="other">‏%d ثانیه پیش</item>
+    </plurals>
+    <plurals name="seen_by_people_count">
+        <item quantity="one">‏۱ نفر دیده است</item>
+        <item quantity="other">‏%s نفر دیده‌اند</item>
+    </plurals>
+    <plurals name="self_thread_replies_count">
+        <item quantity="one">‏نمایش %1$d مورد بیشتر در این رشته‌توییت</item>
+        <item quantity="other">‏نمایش %1$d مورد بیشتر در این رشته‌توییت</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="one">‏ارسال دعوت همکاری در میزبانی</item>
+        <item quantity="other">‏ارسال دعوت همکاری در میزبانی</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="one">‏%d نفر</item>
+        <item quantity="other">‏%d نفر</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="one">‏%1$s، %2$s و %3$d نفر دیگر دنبال کردند</item>
+        <item quantity="other">‏%1$s، %2$s و %3$d نفر دیگر دنبال می کنند</item>
+    </plurals>
+    <plurals name="spaces_additional_cohosts">
+        <item quantity="one">‏میزبان</item>
+        <item quantity="other">‏میزبان‌ها</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="one">‏و %1$s شنونده دیگر</item>
+        <item quantity="other">‏و %1$s شنونده دیگر</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="one">‏%1$d نفر را که دارد صحبت می‌کند مسدود کرده‌اید</item>
+        <item quantity="other">‏%1$d نفر را که دارند صحبت می‌کنند مسدود کرده‌اید</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="one">‏%1$s در این اتاق گفت‌وگو است</item>
+        <item quantity="other">‏%1$s در این اتاق گفت‌وگو هستند</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="one">‏%1$s در این اتاق گفت‌وگو بود</item>
+        <item quantity="other">‏%1$s در این اتاق گفت‌وگو بودند</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="one">‏%1$d نفر به این اتاق گفت‌وگو دعوت شده است</item>
+        <item quantity="other">‏%1$d نفر به این «اتاق گفت‌وگو» دعوت شده‌اند</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="one">‏%1$d سخنران</item>
+        <item quantity="other">‏%1$d سخنران</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="one">‏%1$d نفر شنونده است</item>
+        <item quantity="other">‏%1$d نفر شنونده هستند</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="one">‏%1$d جای خالی</item>
+        <item quantity="other">‏%1$d جای خالی</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="one">‏%1$d درخواست</item>
+        <item quantity="other">‏%1$d درخواست</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="one">‏پسند</item>
+        <item quantity="other">‏پسند</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="one">‏نقل‌توییت</item>
+        <item quantity="other">‏نقل‌توییت</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="one">‏بازتوییت</item>
+        <item quantity="other">‏بازتوییت</item>
+    </plurals>
+    <plurals name="stat_label_views">
+        <item quantity="one">‏مشاهده</item>
+        <item quantity="other">‏مشاهده</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="one">‏بازدید</item>
+        <item quantity="other">‏بازدید</item>
+    </plurals>
+    <plurals name="subscriber_count">
+        <item quantity="one">‏%s مشترک</item>
+        <item quantity="other">‏%s مشترک</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="one">‏%dر</item>
+        <item quantity="other">‏%dر</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="one">‏%d روز پیش</item>
+        <item quantity="other">‏%d روز پیش</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="one">‏%dس</item>
+        <item quantity="other">‏%dس</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">‏%d ساعت پیش</item>
+        <item quantity="other">‏%d ساعت پیش</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="one">‏%dد</item>
+        <item quantity="other">‏%dد</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="one">‏%d دقیقه پیش</item>
+        <item quantity="other">‏%d دقیقه پیش</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="one">‏%dثانیه</item>
+        <item quantity="other">‏%dث</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="one">‏۱ ساعت گذشته</item>
+        <item quantity="other">‏%s ساعت گذشته</item>
+    </plurals>
+    <plurals name="tweet_reaction_stat_accessibility_string">
+        <item quantity="one">‏یک واکنش %1$s</item>
+        <item quantity="other">‏%1$s %2$s واکنش</item>
+    </plurals>
+    <plurals name="typing_users_count">
+        <item quantity="one">‏%d نفر در حال نوشتن</item>
+        <item quantity="other">‏%d نفر در حال نوشتن هستند</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="one">‏%d ثانیه</item>
+        <item quantity="other">‏%d ثانیه</item>
+    </plurals>
+</resources>

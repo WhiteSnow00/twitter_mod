@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="event_header_image_height">@dimen/search_card_image_height</dimen>
+    <dimen name="font_size_prompt_long_title">18sp</dimen>
+    <dimen name="preference_category_padding_start">56dp</dimen>
+    <dimen name="prompt_long_message_header_margin">24dp</dimen>
+</resources>

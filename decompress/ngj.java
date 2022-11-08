@@ -1,0 +1,36 @@
+import android.app.Activity;
+
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
+public final class ngj extends rn
+{
+    public final Activity C0;
+    
+    public ngj(final Activity c0) {
+        zzd.f((Object)c0, "activity");
+        this.C0 = c0;
+    }
+    
+    public final Activity a() {
+        return this.C0;
+    }
+    
+    public final boolean equals(final Object o) {
+        return this == o || (o instanceof ngj && zzd.a((Object)this.C0, (Object)((ngj)o).C0));
+    }
+    
+    public final int hashCode() {
+        return this.C0.hashCode();
+    }
+    
+    public final String toString() {
+        final Activity c0 = this.C0;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("OnActivityStopped(activity=");
+        sb.append(c0);
+        sb.append(")");
+        return sb.toString();
+    }
+}

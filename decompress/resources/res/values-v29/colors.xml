@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bottom_sheet_edge_to_edge_navbar_color">@android:color/transparent</color>
+</resources>

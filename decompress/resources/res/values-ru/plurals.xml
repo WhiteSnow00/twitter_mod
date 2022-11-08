@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="one">%d участник</item>
+        <item quantity="other">Участников: %d</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="one">%d новый значкок</item>
+        <item quantity="other">%d новых значка(-ов)</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="one">%1$d соведущий</item>
+        <item quantity="other">Соведущих: %1$d</item>
+    </plurals>
+    <plurals name="communities_tweet_replies_count">
+        <item quantity="one">%1$s ответ</item>
+        <item quantity="other">%1$s ответа</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="one">%d участник Сообщества</item>
+        <item quantity="other">Участников Сообщества: %d</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="one">%d модератор</item>
+        <item quantity="other">Модераторов: %d</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="one">%s запрос</item>
+        <item quantity="other">Запросов: %s</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="one">%s новый Твит</item>
+        <item quantity="other">Новых твитов: %s</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="one">%s отчет</item>
+        <item quantity="other">Отчетов: %s</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="one">Лишних символов: %d</item>
+        <item quantity="other">Лишних символов: %d</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="one">Осталось символов: %d</item>
+        <item quantity="other">Осталось символов: %d</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_days">
+        <item quantity="one">Осталось дней: %1$d</item>
+        <item quantity="other">Осталось дней: %1$d</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_hours">
+        <item quantity="one">Осталось часов: %1$d</item>
+        <item quantity="other">Осталось часов: %1$d</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_minutes">
+        <item quantity="one">Осталась %1$d минута</item>
+        <item quantity="other">Осталось минут: %1$d</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="one">Аудиокомната пользователя %1$s с %2$d гостем</item>
+        <item quantity="other">Аудиокомната пользователя %1$s с %2$d гостями</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="one">%d новый отклик</item>
+        <item quantity="other">%d новых откликов</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d дн.</item>
+        <item quantity="other">%d дн.</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">%d день назад</item>
+        <item quantity="other">%d дн. назад</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="one">Не удалось добавить пользователя в группу.</item>
+        <item quantity="other">Не удалось добавить в группу %d пользователя(-ей)</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="one">Добавил(а) пользователя в группу.</item>
+        <item quantity="other">Добавил(а) %d пользователя(-ей) в группу.</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="one">1 человек</item>
+        <item quantity="other">%d чел.</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="one">Групповой чат, %d участник</item>
+        <item quantity="other">Групповой чат, участников: %d</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="one">Изображение профиля для %s</item>
+        <item quantity="other">Изображения профиля для %s</item>
+    </plurals>
+    <plurals name="dm_more_in_this_group">
+        <item quantity="one">В этой группе есть еще %1$s</item>
+        <item quantity="other">В этой группе есть еще %1$s</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="one">%d новый человек, которого вы можете знать</item>
+        <item quantity="other">Новых пользователей, которых вы можете знать: %d</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="one">%d новый запрос</item>
+        <item quantity="other">Новых запросов: %d</item>
+    </plurals>
+    <plurals name="dm_other_people">
+        <item quantity="one">%1$d человек</item>
+        <item quantity="other">%1$d человек(а)</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="one">%1$s добавлен(а)</item>
+        <item quantity="other">%1$s добавлены</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="one">%d запрос ожидает рассмотрения</item>
+        <item quantity="other">Запросов, ожидающих рассмотрения: %s</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="one">%d человек, которого вы можете знать</item>
+        <item quantity="other">Пользователей, которых вы можете знать: %d</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="one">Закрепить можно только %d чат</item>
+        <item quantity="other">Закрепить можно не более %d чатов</item>
+    </plurals>
+    <plurals name="dm_quick_share_collapsed">
+        <item quantity="one">%1$s + %2$d других</item>
+        <item quantity="other">%1$s + %2$d других</item>
+    </plurals>
+    <plurals name="dm_seen_by_list_others_overflow">
+        <item quantity="one">и еще {{}}%d пользователь{{}}</item>
+        <item quantity="other">и еще {{}}%d других пользователя(-ей){{}}</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="one">Количество просмотров: %d</item>
+        <item quantity="other">Просмотрено %d пользователями</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="one">%d непрочитанное сообщение</item>
+        <item quantity="other">Непрочитанных сообщений: %d</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Перемотать на %d секунду вперед</item>
+        <item quantity="few">Перемотать на %d секунды вперед</item>
+        <item quantity="many">Перемотать на %d секунд вперед</item>
+        <item quantity="other">Перемотать на %d секунды вперед</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Перемотать на %d секунду назад</item>
+        <item quantity="few">Перемотать на %d секунды назад</item>
+        <item quantity="many">Перемотать на %d секунд назад</item>
+        <item quantity="other">Перемотать на %d секунды назад</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="one">Изображение профиля для %s</item>
+        <item quantity="other">Изображения профиля для %s</item>
+    </plurals>
+    <plurals name="followed_by_count">
+        <item quantity="one">В читаемых у %1$s и еще %2$d</item>
+        <item quantity="other">В читаемых у %1$s и ещё %2$d</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="one">Добавить %d</item>
+        <item quantity="other">Добавить %d</item>
+    </plurals>
+    <plurals name="generated_alt_text_banner">
+        <item quantity="one">@string/generated_alt_text_banner_single</item>
+        <item quantity="other">@string/generated_alt_text_banner_multiple</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="one">Вы можете добавить только %1$d соведущего.</item>
+        <item quantity="other">Вы можете добавить только %1$d соведущих.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="one">Вы можете добавить еще %1$d человека.</item>
+        <item quantity="other">Вы можете добавить еще %1$d человек.</item>
+    </plurals>
+    <plurals name="guests_in_broadcast">
+        <item quantity="one">*%1$s* был(а) гостем</item>
+        <item quantity="other">*%1$s* были гостями</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="one">У вас %1$d новый читатель!</item>
+        <item quantity="other">У вас %1$d новых читателей!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d час</item>
+        <item quantity="other">%d ч.</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="one">%d ч. назад</item>
+        <item quantity="other">%d ч. назад</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="one">%1$s читает %2$s.</item>
+        <item quantity="other">%1$s читают %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="one">Вы и %1$s читаете тему «%2$s».</item>
+        <item quantity="other">Вы и %1$s читаете темы «%2$s».</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="one">участник</item>
+        <item quantity="other">участники(-ов)</item>
+    </plurals>
+    <plurals name="list_subscriber_count">
+        <item quantity="one">‧ %d подписчик</item>
+        <item quantity="other">‧ %d подписчика(-ов)</item>
+    </plurals>
+    <plurals name="magic_recs_follow_notif">
+        <item quantity="one">Добавлен(а) в читаемые пользователем %1$s и ещё %2$d, который читает вас</item>
+        <item quantity="other">Добавлен(а) в читаемые пользователем %1$s и ещё %2$d другими, которые читают вас</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="one">Хорошие описания изображений лаконичны и в то же время детальны. Обязательно суммируйте или выписывайте любой текст на самом изображении.\10\10Ваше описание делает Twitter доступным для людей с ограниченными возможностями и всех, кому нужен дополнительный контекст.\10\10Вы можете отключить это напоминание в Настройках доступности.</item>
+        <item quantity="other">Хорошие описания лаконичны, но достаточно подробны. Обязательно перепишите текст с изображения или представьте его краткое содержание.\10\10Ваши описания делают Twitter доступным для людей с ограниченными возможностями и для всех, кому нужен дополнительный контекст.\10\10Вы можете отключить это напоминание в настройках специальных возможностей.</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="one">Добавить описание</item>
+        <item quantity="other">Добавить описания</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="one">Не забудьте сделать свое изображение доступным для людей с ограниченными возможностями</item>
+        <item quantity="other">Не забудьте сделать свои изображения доступным для людей с ограниченными возможностями</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="one">Категория выбрана: %d</item>
+        <item quantity="other">Категорий выбрано: %d</item>
+    </plurals>
+    <plurals name="media_tag_prompt">
+        <item quantity="one">Кто на этой фотографии?</item>
+        <item quantity="other">Кто на этих фотографиях?</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="one">Можно отметить еще не более %d человек.</item>
+        <item quantity="other">Можно отметить еще не более %d человек.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="one">Отмечен %d человек</item>
+        <item quantity="other">Отмечено %d человек(а)</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="one">%s участник</item>
+        <item quantity="other">Участников: %s</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d мин.</item>
+        <item quantity="other">%d мин.</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="one">%d мин. назад</item>
+        <item quantity="other">%d мин. назад</item>
+    </plurals>
+    <plurals name="moment_fullscreen_cover_n_likes">
+        <item quantity="one">%s отметка «Нравится»</item>
+        <item quantity="other">%s отметки(-ок) «Нравится»</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">%d новых уведомления</item>
+        <item quantity="many">%d новых уведомлений</item>
+        <item quantity="other">%d нового уведомления</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="one">Удалено %d слово</item>
+        <item quantity="other">Удалено %d слов(а)</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="one">Выбрано: %d</item>
+        <item quantity="other">Выбрано: %d</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="one">%s участник</item>
+        <item quantity="other">Участников: %s</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="one">%s чел.</item>
+        <item quantity="other">%s чел.</item>
+    </plurals>
+    <plurals name="new_tweet_count">
+        <item quantity="one">Новые твиты: %d</item>
+        <item quantity="other">Новые твиты: %d</item>
+    </plurals>
+    <plurals name="newsletter_card_subtitle_subscriber_count">
+        <item quantity="one">Новостная рассылка • %s подписчик</item>
+        <item quantity="other">Новостная рассылка • Подписчиков: %s</item>
+    </plurals>
+    <plurals name="nft_detail_verified_owners">
+        <item quantity="one">подтвержденный владелец</item>
+        <item quantity="other">подтвержденные владельцы</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="one">Еще 1</item>
+        <item quantity="other">Еще %d</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="one">%1$d товар</item>
+        <item quantity="other">Товаров: %1$d</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="one">читатель</item>
+        <item quantity="other">читателя(-ей)</item>
+    </plurals>
+    <plurals name="profile_followers_count_label">
+        <item quantity="one">Читатель</item>
+        <item quantity="other">Читатели</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="one">еще: %d</item>
+        <item quantity="other">еще: %d</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="one">Суперчитатель</item>
+        <item quantity="other">Суперчитатели</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="one">Нравится %s</item>
+        <item quantity="other">%s отметки(-ок) «Нравится»</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="one">%s фотография</item>
+        <item quantity="other">Фото и видео %s</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="one">%s твит</item>
+        <item quantity="other">Твитов: %s</item>
+    </plurals>
+    <plurals name="profile_tweets_count_label">
+        <item quantity="one">Твит</item>
+        <item quantity="other">Твиты</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="zero">График динамики аудитории.</item>
+        <item quantity="one">График динамики аудитории. Пиковое значение количества зрителей — %1$d человек на %2$s трансляции.</item>
+        <item quantity="other">График динамики аудитории. Пиковое значение количества зрителей — %1$d человек(а) на %2$s трансляции.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="one">На %2$s трансляции ее смотрел %1$d зритель.</item>
+        <item quantity="other">На %2$s трансляции ее смотрело %1$d зрителя(-ей).</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="zero">Читателей нет</item>
+        <item quantity="one">%d читатель</item>
+        <item quantity="other">Читателей: %d</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers">
+        <item quantity="one">%1$s пригласил(а) %2$s человека</item>
+        <item quantity="other">%1$s пригласил(а) %2$s человек</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="one">*%1$s* пригласил(а) %2$s человека</item>
+        <item quantity="other">*%1$s* пригласил(а) %2$s человек</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="one">*Заблокировано модератором* %1$s</item>
+        <item quantity="other">*Заблокировано модераторами* %1$s (%2$d)</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="one">*Разблокировано модератором* %1$s</item>
+        <item quantity="other">*Разблокировано модераторами* %1$s (%2$d)</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="one">%1$d новое сообщение</item>
+        <item quantity="other">Новых сообщений: %1$d</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="one">%s сердечко</item>
+        <item quantity="other">Сердечек: %s</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="one">ЗРИТЕЛЬ ПРЯМОГО ЭФИРА</item>
+        <item quantity="other">ЗРИТЕЛИ ПРЯМОГО ЭФИРА</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="one">ЗРИТЕЛЬ ПОВТОРА</item>
+        <item quantity="other">ЗРИТЕЛИ ПОВТОРА</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="one">%d день</item>
+        <item quantity="other">%d дн</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="one">%d ч.</item>
+        <item quantity="other">%d ч.</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="one">%d мин.</item>
+        <item quantity="other">%d мин.</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="one">%d сек.</item>
+        <item quantity="other">%d сек.</item>
+    </plurals>
+    <plurals name="reactions_stats_total_label">
+        <item quantity="one">реакция</item>
+        <item quantity="other">Реакции</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="one">%s повторное воспроизведение</item>
+        <item quantity="other">Повторных воспроизведений: %s</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="one">%d пользователь</item>
+        <item quantity="other">еще %d чел.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">В ответ ﻿%1$s и еще %2$d﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Вы отвечаете ﻿%1$s и еще %2$d пользователям﻿. Ваш ответ также будет виден другим суперчитателям.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">В ответ ﻿%1$s и еще %2$d чел.﻿ в ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">В ответ ﻿%1$s, %2$s и еще %3$d﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Вы отвечаете ﻿%1$s, %2$s и еще %3$d пользователям﻿. Ваш ответ также будет виден другим суперчитателям.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">В ответ ﻿%1$s %2$s и еще %3$d чел.﻿ в ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="one">Мы пометили %d пользователя, который подозревается в оскорбительном поведении или рассылке спама.</item>
+        <item quantity="other">Мы пометили %d пользователей, которые подозреваются в оскорбительном поведении или рассылке спама.</item>
+    </plurals>
+    <plurals name="search_user_name_pile">
+        <item quantity="one">%1$s и другие</item>
+        <item quantity="other">%1$s, %2$s и другие</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d сек.</item>
+        <item quantity="other">%d сек.</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="one">%d сек. назад</item>
+        <item quantity="other">%d сек. назад</item>
+    </plurals>
+    <plurals name="seen_by_people_count">
+        <item quantity="one">Просмотрено 1 пользователем</item>
+        <item quantity="other">Просмотрено %s пользователями</item>
+    </plurals>
+    <plurals name="self_thread_replies_count">
+        <item quantity="one">Показать еще %1$d твита(-ов) в этой ветке</item>
+        <item quantity="other">Показать еще %1$d твита(-ов) в этой ветке</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="one">Пригласить как соведущего</item>
+        <item quantity="other">Пригласить соведущих</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="one">%d человек</item>
+        <item quantity="other">%d пользователей</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="one">%1$s, %2$s и %3$d других пользователя(-ей) читают</item>
+        <item quantity="other">%1$s, %2$s, и ещё %3$d других читают</item>
+    </plurals>
+    <plurals name="spaces_additional_cohosts">
+        <item quantity="one">соведущий</item>
+        <item quantity="other">соведущих</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="one">+ еще %1$s слушатель</item>
+        <item quantity="other">Других слушателей: %1$s</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="one">Вы внесли в черный список %1$d выступающего</item>
+        <item quantity="other">Вы внесли в черный список %1$d выступающих</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="one">В этой Аудиокомнате %1$s чел.</item>
+        <item quantity="other">В этой Аудиокомнате %1$s чел.</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="one">В этой Аудиокомнате был %1$s чел.</item>
+        <item quantity="other">В этой Аудиокомнате было %1$s чел.</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="one">В эту аудиокомнату приглашен %1$d человек</item>
+        <item quantity="other">В эту Аудиокомнату приглашены %1$d чел.</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="one">%1$d выступающий</item>
+        <item quantity="other">Выступающих: %1$d</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="one">%1$d слушатель</item>
+        <item quantity="other">Слушателей: %1$d</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="one">%1$d свободное место</item>
+        <item quantity="other">Свободных мест: %1$d</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="one">%1$d запрос</item>
+        <item quantity="other">Запросов: %1$d</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="one">Отметка «Нравится»</item>
+        <item quantity="other">Отметки(-ок) «Нравится»</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="one">твит с цитатой</item>
+        <item quantity="other">твита(-ов) с цитатами</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="one">Ретвит</item>
+        <item quantity="other">Ретвита(-ов)</item>
+    </plurals>
+    <plurals name="stat_label_views">
+        <item quantity="one">ПРОСМОТР</item>
+        <item quantity="other">ПРОСМОТРОВ</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="one">Просмотр</item>
+        <item quantity="other">Просмотры</item>
+    </plurals>
+    <plurals name="subscriber_count">
+        <item quantity="one">%s подписчик</item>
+        <item quantity="other">Подписчиков: %s</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="one">%d д.</item>
+        <item quantity="other">%d дн.</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="one">%d ДН. НАЗАД</item>
+        <item quantity="other">%d ДН. НАЗАД</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="one">%d ч.</item>
+        <item quantity="other">%d ч.</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">%d Ч. НАЗАД</item>
+        <item quantity="other">%d Ч. НАЗАД</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="one">%d мин.</item>
+        <item quantity="other">%d мин.</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="one">%d МИН. НАЗАД</item>
+        <item quantity="other">%d МИН. НАЗАД</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="one">%d сек</item>
+        <item quantity="other">%d с.</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="one">Последний час</item>
+        <item quantity="other">Последние %s ч.</item>
+    </plurals>
+    <plurals name="tweet_reaction_stat_accessibility_string">
+        <item quantity="one">Одна реакция %1$s</item>
+        <item quantity="other">Реакций %2$s: %1$s</item>
+    </plurals>
+    <plurals name="typing_users_count">
+        <item quantity="one">%d человек печатают</item>
+        <item quantity="other">%d человек печатают</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="one">%d сек.</item>
+        <item quantity="other">%d сек.</item>
+    </plurals>
+</resources>

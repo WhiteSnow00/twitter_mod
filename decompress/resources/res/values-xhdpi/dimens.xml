@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="csat_feedback_card_prompts_text_top_margin">38dp</dimen>
+    <dimen name="csat_feedback_privacy_margin_top">14dp</dimen>
+    <dimen name="csat_feedback_score_background_line_thickness">1dp</dimen>
+    <dimen name="csat_feedback_score_button_horiz_margin">0dp</dimen>
+    <dimen name="csat_feedback_score_button_horiz_margin_landscape">12dp</dimen>
+    <dimen name="csat_feedback_score_button_padding_for_emojis">6dp</dimen>
+    <dimen name="csat_feedback_score_button_row_top_margin">14dp</dimen>
+    <dimen name="csat_feedback_score_button_side">42dp</dimen>
+    <dimen name="csat_feedback_score_button_target">54dp</dimen>
+    <dimen name="csat_feedback_score_button_to_description_padding">2dp</dimen>
+    <dimen name="csat_feedback_score_label_max_width">160dp</dimen>
+    <dimen name="feedback_card_center_button_top_bottom_margin">18dp</dimen>
+    <dimen name="feedback_card_content_minimum_side_margin">24dp</dimen>
+    <dimen name="feedback_card_dismiss_button_corner_margin">7dp</dimen>
+    <dimen name="feedback_card_dismiss_button_internal_padding">7dp</dimen>
+    <dimen name="feedback_card_medium_text_size">@dimen/font_size_normal</dimen>
+    <dimen name="feedback_card_privacy_notice_bottom_margin">14dp</dimen>
+    <dimen name="feedback_card_small_text_size">@dimen/font_size_xsmall</dimen>
+    <dimen name="feedback_card_title_text_size">@dimen/font_size_large</dimen>
+    <dimen name="feedback_complete_view_bottom_padding">44dp</dimen>
+    <dimen name="moments_guide_badge_margin">-4.5dp</dimen>
+    <dimen name="nps_feedback_card_prompts_text_top_margin">29dp</dimen>
+    <dimen name="nps_feedback_score_button_circle_thickness">1.5dp</dimen>
+    <dimen name="nps_feedback_score_button_diameter">34dp</dimen>
+    <dimen name="nps_feedback_score_button_padding_horizontal">16dp</dimen>
+    <dimen name="nps_feedback_score_button_padding_vertical">7dp</dimen>
+    <dimen name="nps_feedback_score_button_to_description_padding">8dp</dimen>
+    <dimen name="nps_feedback_score_view_double_row_buttons_top_padding">28dp</dimen>
+    <dimen name="nps_feedback_score_view_double_row_privacy_top_padding">31dp</dimen>
+    <dimen name="nps_feedback_score_view_single_row_buttons_top_padding">25dp</dimen>
+    <dimen name="nps_feedback_score_view_single_row_privacy_bottom_padding">13dp</dimen>
+    <dimen name="nps_feedback_score_view_single_row_privacy_top_padding">14dp</dimen>
+    <dimen name="photo_row_height">140dp</dimen>
+    <dimen name="pull_to_refresh_drawable_width">60dp</dimen>
+</resources>

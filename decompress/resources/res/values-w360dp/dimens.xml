@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="inline_action_gallery_label_max_text_size">16dp</dimen>
+    <dimen name="inline_action_label_margin">8dp</dimen>
+    <dimen name="inline_action_label_max_text_size">13dp</dimen>
+</resources>

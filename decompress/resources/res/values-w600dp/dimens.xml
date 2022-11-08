@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="message_content_max_width">384dp</dimen>
+    <dimen name="message_text_max_width">378dp</dimen>
+    <dimen name="search_card_image_height">230dp</dimen>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="deep_transparent_twitter_blue">@android:color/search_widget_corpus_item_background</color>
+    <color name="twitter_blue">@android:color/search_widget_corpus_item_background</color>
+    <color name="twitter_blue_fill_pressed">@android:color/sliding_tab_text_color_active</color>
+    <color name="twitter_blue_opacity_30">@android:color/search_url_text_selected</color>
+    <color name="twitter_blue_opacity_50">@android:color/search_url_text_pressed</color>
+    <color name="twitter_blue_opacity_58">@android:color/search_widget_corpus_item_background</color>
+</resources>

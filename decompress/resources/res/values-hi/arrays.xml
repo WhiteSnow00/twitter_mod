@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>आपको नए ट्वीट्स के लिए सूचनाएं मिलेंगी.</item>
+        <item>नए सुपर फ़ॉलोअर केवल ट्वीट्स करते हैं, इसके लिए आपको सूचनाएं मिलेंगी.</item>
+        <item>आपको नए लाइव वीडियो ट्वीट्स के लिए सूचनाएं मिलेंगी.</item>
+        <item>आपको नए Spaces ट्वीट्स के लिए सूचनाएं मिलेंगी.</item>
+        <item>अब आप नए ट्वीट्स के लिए सूचनाएं प्राप्त नहीं करेंगे.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>ट्वीट्स</item>
+        <item>सुपर फ़ॉलोअर केवल ट्वीट्स करते हैं</item>
+        <item>लाइव वीडियो</item>
+        <item>Spaces</item>
+        <item>कोई नहीं</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>सभी ट्वीट्स</item>
+        <item>केवल सुपर फ़ॉलोज़ ट्वीट्स</item>
+        <item>केवल लाइव वीडियो</item>
+        <item>केवल Spaces</item>
+        <item>बंद</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>इस खाते के सभी ट्वीट्स के लिए सूचनाएं प्राप्त करें.</item>
+        <item>केवल सुपर फ़ॉलोज़ ट्वीट्स के लिए सूचनाएं पाएं.</item>
+        <item>केवल लाइव प्रसारण के लिए सूचनाएं प्राप्त करें.</item>
+        <item>केवल Spaces के लिए सूचनाएं प्राप्त करें.</item>
+        <item>इस खाते के ट्वीट्स के लिए सूचनाएं बंद करें.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>लिंक ट्वीट करें</item>
+        <item>लिंक कॉपी करें</item>
+        <item>लिंक भेजें</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>%1$s से आप कितने संतुष्ट हैं?</item>
+        <item>आप %1$s से कितने संतुष्ट हैं?</item>
+        <item>कुल मिलाकर, आप %1$s के साथ अपने हाल ही के अनुभव से कितने संतुष्ट हैं?</item>
+        <item>%1$s के साथ अपने समग्र अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपने समग्र अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपने अभी तक के अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>Twitter पर %1$s के साथ हुए अपने अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>क्या आप %1$s के साथ अपने हाल ही के अनुभव से संतुष्ट थे?</item>
+        <item>%1$s आपकी आशाओं पर कितने खरा उतरा?</item>
+        <item>%1$s के साथ अपने गेस्ट अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपने सर्विस अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ हुए अपने हाल ही के सर्विस अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के द्वारा उपलब्ध कराई सर्विस को आप कैसे रेट करेंगे?</item>
+        <item>क्या आप %1$s के साथ अपनी बातचीत के परिणाम से संतुष्ट थे?</item>
+        <item>आपकी समस्या को हल करने की %1$s की क्षमता को आप कैसे रेट करेंगे?</item>
+        <item>%1$s से जबाव मिलने के समय को आप कैसे रेट करेंगे?</item>
+        <item>आप %1$s के द्वारा उपलब्ध कराई सर्विस की गति कैसे रेट करेंगे?</item>
+        <item>समस्या को हल करने में %1$s द्वारा लगाए समय को आप कैसे रेट करेंगे?</item>
+        <item>आपकी समस्या को हल करने में %1$s द्वारा लगाए गये समय को आप कैसे रेट करेंगे?</item>
+        <item>%1$s द्वारा समस्या को हल करने की गति को आप कैसे रेट करेंगे?</item>
+        <item>%1$s सलाहकार की विशेषज्ञता को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के जिस एजेंट ने आपकी सहायता की उससे आप कितने संतुष्ट थे?</item>
+        <item>%1$s के जिस विशेषज्ञ ने आपकी सहायता की उससे आप कितने संतुष्ट हैं?</item>
+        <item>%1$s के जिस प्रतिनिधि ने आपकी सहायता की उससे आप कितने संतुष्ट हैं?</item>
+        <item>%1$s के साथ हुए अपने हाल ही के बैंकिंग अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ हुए समग्र इवेंट अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ हुए अपने बिल भुगतान अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपने खरीदी अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ हुए अपने शॉपिंग अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपने डिलिवरी अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपने रेंटल अनुभव को आप कैसे रेट करेंगे?</item>
+        <item>आप %1$s पर अपने हाल ही के स्टोर विज़िट को कैसे रेट करेंगे?</item>
+        <item>आप हाल ही में %1$s होटल में ठहरने को कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपनी हाल ही की फ्लाइट को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ हाल ही में की गई सवारी को आप कैसे रेट करेंगे?</item>
+        <item>%1$s के साथ अपने हाल ही के ट्रिप को आप कैसे रेट करेंगे?</item>
+        <item>%1$s पर अपने हाल ही के विज़िट को आप कैसे रेट करेंगे?</item>
+        <item>%1$s पर हाल ही में किए गए भोजन को आप कैसे रेट करेंगे?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 दिन</item>
+        <item>12 महीने</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>सामान्य</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>इसकी कितनी संभावना है कि आप %1$s की अपने किसी दोस्त से सिफारिश करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप %1$s की अपने किसी दोस्त से सिफारिश करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप %1$s की अपने किसी सहयोगी से सिफारिश करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप %1$s के लिए परिवार के किसी सदस्य से सिफारिश करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप %1$s की किसी से सिफारिश करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप %1$s की अपने किसी दोस्त या सहयोगी से सिफारिश करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप भविष्य में %1$s से शॉपिंग करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप %1$s के लिए सिफारिश करेंगे?</item>
+        <item>क्या आप अपने किसी दोस्त या सहयोगी से %1$s की सिफारिश करेंगे?</item>
+        <item>इसकी कितनी संभावना है कि आप %1$s के साथ हुए अपने अनुभव की किसी दोस्त से सिफारिश करेंगे?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>अच्छी दर्शक संख्या</item>
+        <item>सकारात्मक समुदाय</item>
+        <item>वीडियो गुणवत्ता</item>
+        <item>दिलचस्प चैट</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>कम दर्शक संख्या</item>
+        <item>उत्पीड़न</item>
+        <item>वीडियो में समस्याएं</item>
+        <item>चैट में स्पैम</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 मिनट</item>
+        <item>30 मिनट</item>
+        <item>1 घंटा</item>
+        <item>2 घंटे</item>
+        <item>4 घंटे</item>
+        <item>रोज़</item>
+    </array>
+</resources>

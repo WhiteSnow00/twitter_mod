@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="admin_tools_subtitle_members">
+        <item quantity="one">%d miyembro</item>
+        <item quantity="other">%d (na) miyembro</item>
+    </plurals>
+    <plurals name="badge_item_count">
+        <item quantity="one">%d (na) bagong item</item>
+        <item quantity="other">%d bagong mga item</item>
+    </plurals>
+    <plurals name="cohost_current_count">
+        <item quantity="one">%1$d co-host</item>
+        <item quantity="other">%1$d (na) co-host</item>
+    </plurals>
+    <plurals name="communities_tweet_replies_count">
+        <item quantity="one">%1$s Sagot</item>
+        <item quantity="other">%1$s (na) Sagot</item>
+    </plurals>
+    <plurals name="community_member_count">
+        <item quantity="one">%d miyembro ng Komunidad</item>
+        <item quantity="other">%d (na) Miyembro ng Komunidad</item>
+    </plurals>
+    <plurals name="community_moderator_count">
+        <item quantity="one">%d Moderator</item>
+        <item quantity="other">%d (na) Moderator</item>
+    </plurals>
+    <plurals name="community_navigation_join_requests_label">
+        <item quantity="one">%s kahilingan</item>
+        <item quantity="other">%s (na) kahilingan</item>
+    </plurals>
+    <plurals name="community_navigation_new_unread_tweets_label">
+        <item quantity="one">%s bagong Tweet</item>
+        <item quantity="other">%s (na) bagong Tweet</item>
+    </plurals>
+    <plurals name="community_navigation_pending_reports_label">
+        <item quantity="one">%s ulat</item>
+        <item quantity="other">%s (na) ulat</item>
+    </plurals>
+    <plurals name="composer_count_progress_overflow_warning">
+        <item quantity="one">Lampas ng %d character</item>
+        <item quantity="other">Lampas ng %d (na) character</item>
+    </plurals>
+    <plurals name="composer_count_progress_warning">
+        <item quantity="one">%d character ang natitira</item>
+        <item quantity="other">%d (na) character ang natitira</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_days">
+        <item quantity="one">%1$d (na) araw ang natitira</item>
+        <item quantity="other">%1$d (na) araw ang natitira</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_hours">
+        <item quantity="one">%1$d (na) oras ang natitira</item>
+        <item quantity="other">%1$d (na) araw ang natitira</item>
+    </plurals>
+    <plurals name="consumer_poll_card_time_remaining_minutes">
+        <item quantity="one">%1$d (na) minuto ang natitira</item>
+        <item quantity="other">%1$d (na) minuto ang natitira</item>
+    </plurals>
+    <plurals name="content_description_fleet_item_space_with_others">
+        <item quantity="one">Space ni %1$s kasama ang %2$d pa</item>
+        <item quantity="other">Space ni %1$s kasama ang %2$d pa</item>
+    </plurals>
+    <plurals name="data_sync_notif_title">
+        <item quantity="one">%d bagong interaksyon</item>
+        <item quantity="other">%d (na) mga bagong interaksyon</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d (na) araw</item>
+        <item quantity="other">%d mga araw</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="one">%d araw ang nakalipas</item>
+        <item quantity="other">%d (na) araw ang nakalipas</item>
+    </plurals>
+    <plurals name="dm_add_people_failure">
+        <item quantity="one">Hindi maidagdag ang user sa grupong ito.</item>
+        <item quantity="other">Hindi maidagdag ang %d na) user sa grupong ito.</item>
+    </plurals>
+    <plurals name="dm_add_people_success">
+        <item quantity="one">Idinagdag ang user sa grupo.</item>
+        <item quantity="other">Idinagdag ang %d (na) user sa grupo.</item>
+    </plurals>
+    <plurals name="dm_group_account_name">
+        <item quantity="one">1 tao</item>
+        <item quantity="other">%d (na) tao</item>
+    </plurals>
+    <plurals name="dm_group_chat_count">
+        <item quantity="one">Makipag-group chat sa %d tao</item>
+        <item quantity="other">Makipag-group chat sa %d (na) tao</item>
+    </plurals>
+    <plurals name="dm_image_profile">
+        <item quantity="one">Larawan ng profile ni/ng %s</item>
+        <item quantity="other">Mga larawan ng profile para sa/kay %s</item>
+    </plurals>
+    <plurals name="dm_more_in_this_group">
+        <item quantity="one">May %1$s sa grupong ito</item>
+        <item quantity="other">May %1$s sa grupong ito</item>
+    </plurals>
+    <plurals name="dm_new_people_you_may_know">
+        <item quantity="one">%d bagong taong baka kilala mo</item>
+        <item quantity="other">%d (na) bagong taong baka kilala mo</item>
+    </plurals>
+    <plurals name="dm_new_requests">
+        <item quantity="one">%d bagong kahilingan</item>
+        <item quantity="other">%d (na) bagong kahilingan</item>
+    </plurals>
+    <plurals name="dm_other_people">
+        <item quantity="one">%1$d pang tao</item>
+        <item quantity="other">%1$d pang tao</item>
+    </plurals>
+    <plurals name="dm_participant_added_by_deleted_user">
+        <item quantity="one">Idinagdag si %1$s</item>
+        <item quantity="other">Idinagdag si %1$s</item>
+    </plurals>
+    <plurals name="dm_pending_requests">
+        <item quantity="one">%d nakabinbing kahilingan</item>
+        <item quantity="other">%s (na) nakabinbing kahilingan</item>
+    </plurals>
+    <plurals name="dm_people_you_may_know">
+        <item quantity="one">%d taong baka kilala mo</item>
+        <item quantity="other">%d (na) taong baka kilala mo</item>
+    </plurals>
+    <plurals name="dm_pinned_conversations_max_count_exceeded_title">
+        <item quantity="one">%d chat lang ang mapi-pin mo</item>
+        <item quantity="other">%d (na) chat lang ang mapi-pin mo</item>
+    </plurals>
+    <plurals name="dm_quick_share_collapsed">
+        <item quantity="one">%1$s + %2$d pa</item>
+        <item quantity="other">%1$s + %2$d pang iba</item>
+    </plurals>
+    <plurals name="dm_seen_by_list_others_overflow">
+        <item quantity="one">at {{}}%d iba pa{{}}</item>
+        <item quantity="other">at {{}}%d (na) iba pa{{}}</item>
+    </plurals>
+    <plurals name="dm_state_seen_by">
+        <item quantity="one">Nakita ng %d (na) tao</item>
+        <item quantity="other">Nakita ng %d tao</item>
+    </plurals>
+    <plurals name="dm_unread_messages">
+        <item quantity="one">%d mensaheng hindi pa nababasa</item>
+        <item quantity="other">%d (na) mensaheng hindi pa nababasa</item>
+    </plurals>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">I-fast forward nang %d segundo</item>
+        <item quantity="other">I-fast forward nang %d na segundo</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">I-rewind nang %d segundo</item>
+        <item quantity="other">I-rewind nang %d na segundo</item>
+    </plurals>
+    <plurals name="facepile_content_description">
+        <item quantity="one">Larawan ng profile ni %s</item>
+        <item quantity="other">Mga larawan ng profile para sa/kay %s</item>
+    </plurals>
+    <plurals name="followed_by_count">
+        <item quantity="one">Sinundan ni %1$s at %2$d pang iba</item>
+        <item quantity="other">Sinundan ni %1$s at %2$d pang iba</item>
+    </plurals>
+    <plurals name="full_screen_gallery_header_add">
+        <item quantity="one">Idagdag ang %d</item>
+        <item quantity="other">Idagdag ang %d</item>
+    </plurals>
+    <plurals name="generated_alt_text_banner">
+        <item quantity="one">@string/generated_alt_text_banner_single</item>
+        <item quantity="other">@string/generated_alt_text_banner_multiple</item>
+    </plurals>
+    <plurals name="guest_management_max_cohost_count_label">
+        <item quantity="one">%1$d co-host lang ang puwede sa iyo.</item>
+        <item quantity="other">%1$d (na) co-host lang ang puwede sa iyo.</item>
+    </plurals>
+    <plurals name="guest_management_open_cohost_count_label">
+        <item quantity="one">Magdagdag ng hanggang %1$d pang tao.</item>
+        <item quantity="other">Magdagdag ng hanggang %1$d pang tao.</item>
+    </plurals>
+    <plurals name="guests_in_broadcast">
+        <item quantity="one">Bisita si *%1$s*</item>
+        <item quantity="other">Mga bisita sina *%1$s*</item>
+    </plurals>
+    <plurals name="host_kudos_num_followers_gained">
+        <item quantity="one">May %1$d kang bagong tagasunod!</item>
+        <item quantity="other">May %1$d kang bagong tagasunod!</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d oras</item>
+        <item quantity="other">%d (na) oras</item>
+    </plurals>
+    <plurals name="hours_ago">
+        <item quantity="one">%d oras ang nakalipas</item>
+        <item quantity="other">%d (na) oras ang nakalipas</item>
+    </plurals>
+    <plurals name="humanization_prompt_followers">
+        <item quantity="one">Sinusundan ni %1$s si %2$s.</item>
+        <item quantity="other">Sinusundan ng %1$s si %2$s.</item>
+    </plurals>
+    <plurals name="humanization_prompt_topics">
+        <item quantity="one">pareho ninyong sinusundan ni %1$s ang Paksang %2$s.</item>
+        <item quantity="other">Pareho ninyong sinusundan ni %1$s ang Mga Paksang %2$s.</item>
+    </plurals>
+    <plurals name="list_member_count">
+        <item quantity="one">Miyembro</item>
+        <item quantity="other">Mga Miyembro</item>
+    </plurals>
+    <plurals name="list_subscriber_count">
+        <item quantity="one">‧ %d subscriber</item>
+        <item quantity="other">‧ %d (na) subscriber</item>
+    </plurals>
+    <plurals name="magic_recs_follow_notif">
+        <item quantity="one">Sinundan ni %1$s at %2$d taong sinusundan mo</item>
+        <item quantity="other">Sinundan ni %1$s at %2$d taong sinusundan mo</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_message">
+        <item quantity="one">Maikli pero detalyado ang magagandang paglalarawan. Tiyaking ibuod o isulat ang anumang text na nasa mismong larawan.\10\10Sa pamamagitan ng paglalarawan mo, nagiging accessible ang Twitter sa mga taong may kapansanan, at sa lahat ng may gusto ng higit pang konteksto.\10\10Puwede mong i-off ang paalalang ito sa Mga Setting ng Accessibility.</item>
+        <item quantity="other">Maikli pero detalyado ang magagandang paglalarawan. Tiyaking ibuod o isulat ang anumang text na nasa mismong larawan.\10\10Sa pamamagitan ng mga paglalarawan mo, nagiging accessible ang Twitter sa mga taong may kapansanan, at sa lahat ng may gusto ng higit pang konteksto.\10\10Puwede mong i-off ang paalalang ito sa Mga Setting ng Accessibility.</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
+        <item quantity="one">Magdagdag ng paglalarawan</item>
+        <item quantity="other">Magdagdag ng mga paglalarawan</item>
+    </plurals>
+    <plurals name="media_alt_text_prompt_dialog_title">
+        <item quantity="one">Huwag kalimutang gawing accessible ang larawan mo</item>
+        <item quantity="other">Huwag kalimutang gawing accessible ang mga larawan mo</item>
+    </plurals>
+    <plurals name="media_monetization_settings_categories_selected">
+        <item quantity="one">%d kategoryang pinili</item>
+        <item quantity="other">%d mga kategoryang pinili</item>
+    </plurals>
+    <plurals name="media_tag_prompt">
+        <item quantity="one">Sino ang nasa larawang ito?</item>
+        <item quantity="other">Sino ang nasa mga larawang ito?</item>
+    </plurals>
+    <plurals name="media_tag_remaining">
+        <item quantity="one">Mag-tag nang hanggang %d (na) tao.</item>
+        <item quantity="other">Mag-Tag ng hanggang %d pang tao.</item>
+    </plurals>
+    <plurals name="media_tag_tagged">
+        <item quantity="one">%d (na) tao ang na-tag</item>
+        <item quantity="other">%d mga tao ang na-tag</item>
+    </plurals>
+    <plurals name="member_count">
+        <item quantity="one">%s Miyembro</item>
+        <item quantity="other">%s (na) Miyembro</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d (na) minuto</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="one">%d minuto ang nakalipas</item>
+        <item quantity="other">%d (na) minuto ang nakalipas</item>
+    </plurals>
+    <plurals name="moment_fullscreen_cover_n_likes">
+        <item quantity="one">%s (na) Gusto</item>
+        <item quantity="other">%s (na) Gusto</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d bagong notification</item>
+        <item quantity="other">%d na bagong notification</item>
+    </plurals>
+    <plurals name="muted_keyword_bulk_delete_success">
+        <item quantity="one">Na-delete ang %d salita</item>
+        <item quantity="other">Na-delete ang %d (na) salita</item>
+    </plurals>
+    <plurals name="muted_keyword_selected_count">
+        <item quantity="one">%d ang napili</item>
+        <item quantity="other">%d ang napili</item>
+    </plurals>
+    <plurals name="narrowcast_community_member_count">
+        <item quantity="one">Miyembro ng %s</item>
+        <item quantity="other">%s (na) Miyembro</item>
+    </plurals>
+    <plurals name="narrowcast_trusted_friends_count">
+        <item quantity="one">%s tao</item>
+        <item quantity="other">%s (na) tao</item>
+    </plurals>
+    <plurals name="new_tweet_count">
+        <item quantity="one">%d (na) Bagong Tweet</item>
+        <item quantity="other">%d Mga Bagong Tweet</item>
+    </plurals>
+    <plurals name="newsletter_card_subtitle_subscriber_count">
+        <item quantity="one">Newsletter • %s Subscriber</item>
+        <item quantity="other">Newsletter • %s (na) Subscriber</item>
+    </plurals>
+    <plurals name="nft_detail_verified_owners">
+        <item quantity="one">beripikadong may-ari</item>
+        <item quantity="other">mga beripikadong may-ari</item>
+    </plurals>
+    <plurals name="others">
+        <item quantity="one">1 pa</item>
+        <item quantity="other">%d pang iba</item>
+    </plurals>
+    <plurals name="product_count">
+        <item quantity="one">%1$d produkto</item>
+        <item quantity="other">%1$d (na) produkto</item>
+    </plurals>
+    <plurals name="profile_follower_count">
+        <item quantity="one">Tagasunod</item>
+        <item quantity="other">Mga Tagasunod</item>
+    </plurals>
+    <plurals name="profile_followers_count_label">
+        <item quantity="one">Tagasunod</item>
+        <item quantity="other">Mga Tagasunod</item>
+    </plurals>
+    <plurals name="profile_friends_following_others">
+        <item quantity="one">%d pa</item>
+        <item quantity="other">%d pang iba</item>
+    </plurals>
+    <plurals name="profile_super_followers_count">
+        <item quantity="one">Super Follower</item>
+        <item quantity="other">Mga Super Follower</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_likes">
+        <item quantity="one">%s (na) Gusto</item>
+        <item quantity="other">%s (na) Gusto</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_media">
+        <item quantity="one">Larawan ni %s</item>
+        <item quantity="other">%s Mga litrato at video</item>
+    </plurals>
+    <plurals name="profile_toolbar_subtitle_timeline">
+        <item quantity="one">%s Tweet</item>
+        <item quantity="other">%s Tweet</item>
+    </plurals>
+    <plurals name="profile_tweets_count_label">
+        <item quantity="one">I-tweet</item>
+        <item quantity="other">Mga Tweet</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_peak_msg">
+        <item quantity="zero">Graph ng tagapanood ng broadcast</item>
+        <item quantity="one">Graph ng tagapanood ng broadcast. Nagkaroon ka ng %1$d (na) pinakamaraming tagapanood sa panahong %2$s.</item>
+        <item quantity="other">Graph ng tagapanood ng broadcast. Nagkaroon ka ng %1$d na pinakamaraming tagapanood sa panahong %2$s.</item>
+    </plurals>
+    <plurals name="ps__accessibility_broadcaster_stats_graph_point_msg">
+        <item quantity="one">Nagkaroon ka ng %1$d (na) tagapanood sa panahong %2$s.</item>
+        <item quantity="other">Nagkaroon ka ng %1$d (na) tagapanood sa panahong %2$s.</item>
+    </plurals>
+    <plurals name="ps__invite_follower">
+        <item quantity="zero">Walang tagasunod</item>
+        <item quantity="one">%d tagasunod</item>
+        <item quantity="other">%d (na) tagasunod</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers">
+        <item quantity="one">Inimbitahan ni %1$s ang %2$s tao</item>
+        <item quantity="other">Inimbitahan ni %1$s ang %2$s (na) tao</item>
+    </plurals>
+    <plurals name="ps__invited_num_followers_embolden">
+        <item quantity="one">Inimbitahan ni *%1$s* ang %2$s tao</item>
+        <item quantity="other">Inimbitahan ni *%1$s* ang %2$s (na) tao</item>
+    </plurals>
+    <plurals name="ps__moderation_report_muted_by_moderator">
+        <item quantity="one">*Na-mute ni* %1$s</item>
+        <item quantity="other">*Na-mute ni* %1$s (%2$d)</item>
+    </plurals>
+    <plurals name="ps__moderation_report_unmuted_by_moderator">
+        <item quantity="one">*Na-unmute ni* %1$s</item>
+        <item quantity="other">*Na-unmute ni* %1$s (%2$d)</item>
+    </plurals>
+    <plurals name="ps__new_messages">
+        <item quantity="one">%1$d Bagong Mensahe</item>
+        <item quantity="other">%1$d (na) Bagong Mensahe</item>
+    </plurals>
+    <plurals name="ps__num_hearts">
+        <item quantity="one">%s puso</item>
+        <item quantity="other">%s (na) puso</item>
+    </plurals>
+    <plurals name="ps__stats_live_viewers">
+        <item quantity="one">NANONOOD NGAYON</item>
+        <item quantity="other">MGA NANONOOD NGAYON</item>
+    </plurals>
+    <plurals name="ps__stats_replay_viewers">
+        <item quantity="one">MANONOOD NG REPLAY</item>
+        <item quantity="other">MGA MANONOOD NG REPLAY</item>
+    </plurals>
+    <plurals name="ps__time_format_days">
+        <item quantity="one">%d Araw</item>
+        <item quantity="other">%d Mga Araw</item>
+    </plurals>
+    <plurals name="ps__time_format_hours">
+        <item quantity="one">%d Oras</item>
+        <item quantity="other">%d Mga Oras</item>
+    </plurals>
+    <plurals name="ps__time_format_minutes">
+        <item quantity="one">%d Minuto</item>
+        <item quantity="other">%d Mga Minuto</item>
+    </plurals>
+    <plurals name="ps__time_format_seconds">
+        <item quantity="one">%d Segundo</item>
+        <item quantity="other">%d Mga Segundo</item>
+    </plurals>
+    <plurals name="reactions_stats_total_label">
+        <item quantity="one">Reaksyon</item>
+        <item quantity="other">(na) Reaksyon</item>
+    </plurals>
+    <plurals name="recording_replay_count_preview">
+        <item quantity="one">%s I-replay</item>
+        <item quantity="other">%s (na) replay</item>
+    </plurals>
+    <plurals name="relationship_followers_following_others">
+        <item quantity="one">%d pa</item>
+        <item quantity="other">%d pa</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others">
+        <item quantity="other">Sumasagot kay ﻿%1$s at %2$d pang iba﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_exclusive">
+        <item quantity="other">Sumasagot kay ﻿%1$s at sa %2$d pa﻿. Makikita rin ng iba pang Super Follower ang sagot mo.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_and_n_others_in_space">
+        <item quantity="other">Sumasagot kay ﻿%1$s at sa %2$d pa﻿ sa ﻿%3$s﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others">
+        <item quantity="other">Sumasagot kay ﻿%1$s %2$s at %3$d pang iba﻿</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
+        <item quantity="other">Sumasagot kina ﻿%1$s %2$s at sa %3$d pa﻿. Makikita rin ng iba pang Super Follower ang sagot mo.</item>
+    </plurals>
+    <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
+        <item quantity="other">Sumasagot kay ﻿%1$s %2$s at sa %3$d pa﻿ sa ﻿%4$s﻿</item>
+    </plurals>
+    <plurals name="safety_mode_preview_description">
+        <item quantity="one">Nakapag-flag kami ng %d (na) potensyal na mapang-abuso o ma-spam na account.</item>
+        <item quantity="other">Nakapag-flag kami ng %d potensyal na mapang-abuso o ma-spam na account.</item>
+    </plurals>
+    <plurals name="search_user_name_pile">
+        <item quantity="one">%1$s at higit pa</item>
+        <item quantity="other">%1$s,%2$s at iba pa</item>
+    </plurals>
+    <plurals name="seconds">
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d (na) segundo</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="one">%d segundo ang nakalipas</item>
+        <item quantity="other">%d (na) segundo ang nakalipas</item>
+    </plurals>
+    <plurals name="seen_by_people_count">
+        <item quantity="one">Nakita ng 1 tao</item>
+        <item quantity="other">Nakita ng %s (na) tao</item>
+    </plurals>
+    <plurals name="self_thread_replies_count">
+        <item quantity="one">Magpakita ng %1$d pa sa thread na ito</item>
+        <item quantity="other">Magpakita ng %1$d pa sa thread na ito</item>
+    </plurals>
+    <plurals name="send_cohost_invite">
+        <item quantity="one">Magpadala ng imbitasyon sa pagiging co-host</item>
+        <item quantity="other">Magpadala ng mga imbitasyon sa pagiging co-host</item>
+    </plurals>
+    <plurals name="settings_notif_tweets_count">
+        <item quantity="one">%d (na) tao</item>
+        <item quantity="other">%d tao</item>
+    </plurals>
+    <plurals name="social_follow_and_follow_and_others">
+        <item quantity="one">Sinusundan nina %1$s, %2$s, at %3$d pang iba</item>
+        <item quantity="other">Sinusundan nina %1$s, %2$s, at %3$d pang iba</item>
+    </plurals>
+    <plurals name="spaces_additional_cohosts">
+        <item quantity="one">co-host</item>
+        <item quantity="other">(na) co-host</item>
+    </plurals>
+    <plurals name="spaces_additional_participants">
+        <item quantity="one">+%1$s pang tagapakinig</item>
+        <item quantity="other">+%1$s pang tagapakinig</item>
+    </plurals>
+    <plurals name="spaces_blocked_warning">
+        <item quantity="one">Nag-block ka ng %1$d taong nagsasalita</item>
+        <item quantity="other">Nag-block ka ng %1$d (na) taong nagsasalita</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_in_progress">
+        <item quantity="one">%1$s ang nasa Space na ito</item>
+        <item quantity="other">%1$s ang nasa Space na ito</item>
+    </plurals>
+    <plurals name="spaces_card_social_proof_replay">
+        <item quantity="one">Nasa Space na ito si %1$s</item>
+        <item quantity="other">%1$s ang nasa Space na ito</item>
+    </plurals>
+    <plurals name="spaces_invite_confirmation">
+        <item quantity="one">%1$d tao ang inimbitahan sa Space na ito</item>
+        <item quantity="other">%1$d (na) tao ang inimbitahan sa Space na ito</item>
+    </plurals>
+    <plurals name="speakers_current_count">
+        <item quantity="one">%1$d tagapagsalita</item>
+        <item quantity="other">%1$d (na) tagapagsalita</item>
+    </plurals>
+    <plurals name="speakers_listeners_count">
+        <item quantity="one">%1$d tao ang nakikinig</item>
+        <item quantity="other">%1$d (na) tao ang nakikinig</item>
+    </plurals>
+    <plurals name="speakers_open_spots_count">
+        <item quantity="one">%1$d bukas na spot</item>
+        <item quantity="other">%1$d (na) bukas na spot</item>
+    </plurals>
+    <plurals name="speakers_requests_count">
+        <item quantity="one">%1$d kahilingan</item>
+        <item quantity="other">%1$d (na) kahilingan</item>
+    </plurals>
+    <plurals name="stat_label_likes_sentence_case">
+        <item quantity="one">Gusto</item>
+        <item quantity="other">(Na) Gusto</item>
+    </plurals>
+    <plurals name="stat_label_quote_tweets">
+        <item quantity="one">Quote na Tweet</item>
+        <item quantity="other">Mga Quote na Tweet</item>
+    </plurals>
+    <plurals name="stat_label_retweets_sentence_case">
+        <item quantity="one">Retweet</item>
+        <item quantity="other">(Na) Retweet</item>
+    </plurals>
+    <plurals name="stat_label_views">
+        <item quantity="one">TINGNAN</item>
+        <item quantity="other">MGA VIEW</item>
+    </plurals>
+    <plurals name="stat_label_views_sentence_case">
+        <item quantity="one">View</item>
+        <item quantity="other">Mga View</item>
+    </plurals>
+    <plurals name="subscriber_count">
+        <item quantity="one">%s Subscriber</item>
+        <item quantity="other">%s (na) Subscriber</item>
+    </plurals>
+    <plurals name="time_days">
+        <item quantity="one">%dd</item>
+        <item quantity="other">%dd</item>
+    </plurals>
+    <plurals name="time_days_ago">
+        <item quantity="one">%d (NA) ARAW ANG NAKALIPAS</item>
+        <item quantity="other">%d ARAW ANG NAKALIPAS</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="one">%dh</item>
+        <item quantity="other">%dh</item>
+    </plurals>
+    <plurals name="time_hours_ago">
+        <item quantity="one">%d (NA) ORAS ANG NAKALIPAS</item>
+        <item quantity="other">%d ORAS ANG NAKALIPAS</item>
+    </plurals>
+    <plurals name="time_mins">
+        <item quantity="one">%dm</item>
+        <item quantity="other">%dm</item>
+    </plurals>
+    <plurals name="time_mins_ago">
+        <item quantity="one">%d (NA) MINUTO ANG NAKALIPAS</item>
+        <item quantity="other">%d MINUTO ANG NAKALIPAS</item>
+    </plurals>
+    <plurals name="time_secs">
+        <item quantity="one">%ds</item>
+        <item quantity="other">%ds</item>
+    </plurals>
+    <plurals name="top_articles_time_window">
+        <item quantity="one">Nakalipas na oras</item>
+        <item quantity="other">Nakalipas na %s (na) oras</item>
+    </plurals>
+    <plurals name="tweet_reaction_stat_accessibility_string">
+        <item quantity="one">Isang %1$s na reaksyon</item>
+        <item quantity="other">%1$s (na) %2$s na reaksyon</item>
+    </plurals>
+    <plurals name="typing_users_count">
+        <item quantity="one">%d tao ang nagta-type</item>
+        <item quantity="other">Nagta-type ang %d tao</item>
+    </plurals>
+    <plurals name="undo_send_period_in_seconds">
+        <item quantity="one">%d segundo</item>
+        <item quantity="other">%d (na) segundo</item>
+    </plurals>
+</resources>

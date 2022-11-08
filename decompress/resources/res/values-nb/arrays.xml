@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="account_notif_confirmations">
+        <item>Du vil motta varsler for nye Tweeter.</item>
+        <item>Du mottar varsler om nye tweets bare for superfølgere.</item>
+        <item>Du mottar varsler om nye tweets med direktesendt video.</item>
+        <item>Du mottar varsler om nye tweets om Områder.</item>
+        <item>Du vil ikke lenger motta varsler om nye tweets.</item>
+    </array>
+    <array name="account_notif_options">
+        <item>Tweets</item>
+        <item>Tweets bare for superfølgere</item>
+        <item>Direktesendt video</item>
+        <item>Områder</item>
+        <item>Ingen</item>
+    </array>
+    <array name="account_notif_options_old">
+        <item>Alle tweets</item>
+        <item>Bare superfølgertweets</item>
+        <item>Bare direktesendt video</item>
+        <item>Bare Områder</item>
+        <item>Av</item>
+    </array>
+    <array name="account_notif_subtitles">
+        <item>Få varsler for alle denne kontoens Tweets.</item>
+        <item>Bare bli varslet om superfølgertweets.</item>
+        <item>Bare bli varslet om direktesendinger.</item>
+        <item>Bare bli varslet om Områder.</item>
+        <item>Slå av varsler for denne kontoens tweets.</item>
+    </array>
+    <array name="card_long_press_options">
+        <item>Tweet lenke</item>
+        <item>Kopier lenke</item>
+        <item>Send lenke</item>
+    </array>
+    <array name="csat_prompt_feedback_variants">
+        <item>Hva er ditt helhetsinntrykk av %1$s?</item>
+        <item>Hvor fornøyd er du med %1$s?</item>
+        <item>Hvor fornøyd er du med din nylige opplevelse av %1$s?</item>
+        <item>Hvordan vurderer du totalopplevelsen av %1$s?</item>
+        <item>Hvordan ville du rangert din opplevelse med %1$s?</item>
+        <item>Hvordan vil du vurdere din erfaring med %1$s så langt?</item>
+        <item>Hvordan vil du vurdere din erfaring på Twitter med %1$s?</item>
+        <item>Hvor fornøyd er du med din nylige erfaring med %1$s?</item>
+        <item>I hvor stor grad innfrir %1$s forventningene dine?</item>
+        <item>Hvordan vurderer du opplevelsen som gjest hos %1$s?</item>
+        <item>Hvordan vil du vurdere servicen du fikk fra %1$s?</item>
+        <item>Hvordan vil du vurdere din nylige erfaring med service fra %1$s?</item>
+        <item>Hvordan vurderer du servicen du fikk av %1$s?</item>
+        <item>Hvor fornøyd er du med resultatene av din interaksjon med %1$s?</item>
+        <item>Hvordan vil du vurdere muligheten til å løse ditt problem med %1$s?</item>
+        <item>Hvordan vil du vurdere responstiden fra %1$s?</item>
+        <item>Hvordan vurderer du effektiviteten av servicen du fikk av %1$s?</item>
+        <item>Hvordan vurderer du problemløsningstiden til %1$s?</item>
+        <item>Hvordan vurderer du tiden det tok %1$s å løse problemet ditt?</item>
+        <item>Hvordan vurderer du problemløsningstiden til %1$s?</item>
+        <item>Hvordan vil du vurdere %1$s-rådgiverens ekspertise?</item>
+        <item>Hvor fornøyd er du med %1$s-agenten som hjalp deg?</item>
+        <item>Hvor fornøyd er du med hjelpen fra %1$s-representanten?</item>
+        <item>Hvor fornøyd er du med hjelpen fra %1$s-representanten?</item>
+        <item>Hvordan vurderer du opplevelsen din med bruk av banktjenester fra %1$s?</item>
+        <item>Hvordan vurderer du totalopplevelsen for arrangementer hos %1$s?</item>
+        <item>Hvordan vurderer du betalingsopplevelsen hos %1$s?</item>
+        <item>Hvordan vil du vurdere din kjøpsopplevelse med %1$s?</item>
+        <item>Hvordan vil du vurdere din handelsopplevelse med %1$s?</item>
+        <item>Hvordan vurderer du leveringsopplevelsen fra %1$s?</item>
+        <item>Hvordan vurderer du opplevelsen med å leie fra %1$s?</item>
+        <item>Hvordan vurderer du besøket ditt i butikken til %1$s?</item>
+        <item>Hvordan vurderer du hotelloppholdet ditt på %1$s?</item>
+        <item>Hvordan vurderer du flyturen du nylig hadde med %1$s?</item>
+        <item>Hvordan vurderer du turen du nylig hadde med %1$s?</item>
+        <item>Hvordan vurderer du reisen du nylig hadde med %1$s?</item>
+        <item>Hvordan vurderer du ditt nylige besøk hos %1$s?</item>
+        <item>Hvordan vurderer du ditt seneste måltid hos %1$s?</item>
+    </array>
+    <array name="data_retention_periods">
+        <item>30 dager</item>
+        <item>12 måneder</item>
+    </array>
+    <array name="exo_controls_playback_speeds">
+        <item>0,25x</item>
+        <item>0,5x</item>
+        <item>0,75x</item>
+        <item>Normal</item>
+        <item>1,25x</item>
+        <item>1,5x</item>
+        <item>2x</item>
+    </array>
+    <array name="nps_prompt_feedback_variants">
+        <item>Hvor sannsynlig er det at du anbefaler %1$s til en venn?</item>
+        <item>Hvor sannsynlig er det at du ville anbefalt %1$s til en venn?</item>
+        <item>Hvor sannsynlig er det at du anbefaler %1$s til en kollega?</item>
+        <item>Hvor sannsynlig er det at du ville anbefalt %1$s til noen i familien?</item>
+        <item>Hvor sannsynlig er det at du ville anbefalt %1$s til noen andre?</item>
+        <item>Hvor sannsynlig er det at du ville anbefalt %1$s til en venn eller kollega?</item>
+        <item>Hvor sannsynlig er det at du ville handlet hos %1$s i fremtiden?</item>
+        <item>Hvor sannsynlig er det at du ville anbefalt %1$s?</item>
+        <item>Ville du anbefalt %1$s til en venn eller kollega?</item>
+        <item>Hvor sannsynlig er det at du ville anbefalt din opplevelse med %1$s til en venn?</item>
+    </array>
+    <array name="ps__broadcaster_survey_high_rating_reasons">
+        <item>Mange seere</item>
+        <item>Positive brukere</item>
+        <item>Videokvalitet</item>
+        <item>Engasjerende chat</item>
+    </array>
+    <array name="ps__broadcaster_survey_low_rating_reasons">
+        <item>Få seere</item>
+        <item>Trakassering</item>
+        <item>Problemer med video</item>
+        <item>Spam i chat</item>
+    </array>
+    <array name="reader_text_sizes">
+        <item>@string/reader_mode_text_size_large</item>
+        <item>@string/reader_mode_text_size_medium</item>
+        <item>@string/reader_mode_text_size_small</item>
+    </array>
+    <array name="reader_text_sizes_label">
+        <item>@string/reader_mode_text_size_large_label</item>
+        <item>@string/reader_mode_text_size_medium_label</item>
+        <item>@string/reader_mode_text_size_small_label</item>
+    </array>
+    <array name="refresh_intervals">
+        <item>15 minutter</item>
+        <item>30 minutter</item>
+        <item>1 time</item>
+        <item>2 timer</item>
+        <item>4 timer</item>
+        <item>Daglig</item>
+    </array>
+</resources>
