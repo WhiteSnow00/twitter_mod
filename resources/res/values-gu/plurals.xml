@@ -455,6 +455,18 @@
         <item quantity="one">%s સબ્સ્ક્રાઈબર</item>
         <item quantity="other">%s સબ્સ્ક્રાઈબર્સ</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">દિવસ</item>
+        <item quantity="other">%d દિવસ</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">મહિના</item>
+        <item quantity="other">%d મહિના</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">વર્ષ</item>
+        <item quantity="other">%d વર્ષ</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dદિ</item>
         <item quantity="other">%dદિ</item>

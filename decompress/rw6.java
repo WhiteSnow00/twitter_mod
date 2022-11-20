@@ -2,11 +2,15 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface rw6 extends mr0
+public final class rw6 implements y19
 {
-    v3f I6();
+    public final mhs a;
     
-    s3f q3();
+    public rw6(final mhs a) {
+        this.a = a;
+    }
     
-    qn s0();
+    public final void dispose() {
+        this.a.l();
+    }
 }

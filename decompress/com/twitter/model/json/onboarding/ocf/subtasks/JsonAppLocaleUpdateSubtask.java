@@ -9,26 +9,25 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonAppLocaleUpdateSubtask extends lhh<qn0>
+public class JsonAppLocaleUpdateSubtask extends qhh<ln0>
 {
     @JsonField
-    public xrv a;
+    public ssv a;
     @JsonField
-    public hn0 b;
+    public cn0 b;
     @JsonField
     public boolean c;
     
-    @Override
-    public final h4j t() {
-        final qn0$a qn0$a = new qn0$a();
-        final xrv a = this.a;
-        pf8.r(a);
-        ((lsr$a)qn0$a).a = a;
-        final int a2 = w4j.a;
-        final hn0 b = this.b;
-        zzd.f((Object)b, "locale");
-        qn0$a.k = b;
-        qn0$a.l = this.c;
-        return (h4j)qn0$a;
+    public final n4j t() {
+        final ln0$a ln0$a = new ln0$a();
+        final ssv a = this.a;
+        jee.l((Object)a);
+        ((dtr$a)ln0$a).a = a;
+        final int a2 = c5j.a;
+        final cn0 b = this.b;
+        czd.f((Object)b, "locale");
+        ln0$a.k = b;
+        ln0$a.l = this.c;
+        return (n4j)ln0$a;
     }
 }

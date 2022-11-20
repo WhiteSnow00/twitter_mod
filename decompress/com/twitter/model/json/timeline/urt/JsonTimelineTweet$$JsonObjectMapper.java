@@ -13,7 +13,7 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineTweet$$JsonObjectMapper extends JsonMapper<JsonTimelineTweet>
 {
-    public static final r0t TIMELINE_PREVIEW_METADATA_UNION_CONVERTER;
+    public static final h1t TIMELINE_PREVIEW_METADATA_UNION_CONVERTER;
     public static final d TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER;
     public static final JsonTimelineTweet$a TWEET_DISPLAY_SIZE_TYPE_CONVERTER;
     public static final JsonTimelineTweet$b TWEET_DISPLAY_TYPE_TYPE_CONVERTER;
@@ -22,158 +22,158 @@ public final class JsonTimelineTweet$$JsonObjectMapper extends JsonMapper<JsonTi
         TWEET_DISPLAY_TYPE_TYPE_CONVERTER = new JsonTimelineTweet$b();
         TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER = new d();
         TWEET_DISPLAY_SIZE_TYPE_CONVERTER = new JsonTimelineTweet$a();
-        TIMELINE_PREVIEW_METADATA_UNION_CONVERTER = new r0t();
+        TIMELINE_PREVIEW_METADATA_UNION_CONVERTER = new h1t();
     }
     
-    public static JsonTimelineTweet _parse(final khe khe) throws IOException {
+    public static JsonTimelineTweet _parse(final tge tge) throws IOException {
         final JsonTimelineTweet jsonTimelineTweet = new JsonTimelineTweet();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineTweet, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineTweet, d, tge);
+            tge.l0();
         }
         return jsonTimelineTweet;
     }
     
-    public static void _serialize(final JsonTimelineTweet jsonTimelineTweet, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineTweet jsonTimelineTweet, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTimelineTweet.t != null) {
-            LoganSquare.typeConverterFor((Class)nts.class).serialize((Object)jsonTimelineTweet.t, "conversationAnnotation", true, tfe);
+            LoganSquare.typeConverterFor((Class)fus.class).serialize((Object)jsonTimelineTweet.t, "conversationAnnotation", true, afe);
         }
         final String d = jsonTimelineTweet.d;
         if (d != null) {
-            ((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_SIZE_TYPE_CONVERTER).serialize((Object)d, "displaySize", true, tfe);
+            ((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_SIZE_TYPE_CONVERTER).serialize((Object)d, "displaySize", true, afe);
         }
         final String c = jsonTimelineTweet.c;
         if (c != null) {
-            ((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_TYPE_TYPE_CONVERTER).serialize((Object)c, "tweetDisplayType", true, tfe);
+            ((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_TYPE_TYPE_CONVERTER).serialize((Object)c, "tweetDisplayType", true, afe);
         }
         if (jsonTimelineTweet.p != null) {
-            LoganSquare.typeConverterFor((Class)elu.class).serialize((Object)jsonTimelineTweet.p, "forwardPivot", true, tfe);
+            LoganSquare.typeConverterFor((Class)ylu.class).serialize((Object)jsonTimelineTweet.p, "forwardPivot", true, afe);
         }
-        tfe.e("hasModeratedReplies", jsonTimelineTweet.m);
+        afe.e("hasModeratedReplies", jsonTimelineTweet.m);
         if (jsonTimelineTweet.g != null) {
-            tfe.i("highlights");
-            JsonTweetHighlights$$JsonObjectMapper._serialize(jsonTimelineTweet.g, tfe, true);
+            afe.i("highlights");
+            JsonTweetHighlights$$JsonObjectMapper._serialize(jsonTimelineTweet.g, afe, true);
         }
-        tfe.u0("id", jsonTimelineTweet.b);
-        final d4t o = jsonTimelineTweet.o;
+        afe.t0("id", jsonTimelineTweet.b);
+        final u4t o = jsonTimelineTweet.o;
         if (o != null) {
-            ((twj<d4t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).serialize(o, "tweetSocialProof", true, tfe);
+            ((ywj<u4t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).serialize(o, "tweetSocialProof", true, afe);
             throw null;
         }
         if (jsonTimelineTweet.q != null) {
-            LoganSquare.typeConverterFor((Class)elu.class).serialize((Object)jsonTimelineTweet.q, "innerForwardPivot", true, tfe);
+            LoganSquare.typeConverterFor((Class)ylu.class).serialize((Object)jsonTimelineTweet.q, "innerForwardPivot", true, afe);
         }
         if (jsonTimelineTweet.h != null) {
-            LoganSquare.typeConverterFor((Class)brv.class).serialize((Object)jsonTimelineTweet.h, "innerTombstoneInfo", true, tfe);
+            LoganSquare.typeConverterFor((Class)wrv.class).serialize((Object)jsonTimelineTweet.h, "innerTombstoneInfo", true, afe);
         }
-        tfe.e("isModerated", jsonTimelineTweet.l);
+        afe.e("isModerated", jsonTimelineTweet.l);
         if (jsonTimelineTweet.j != null) {
-            LoganSquare.typeConverterFor((Class)mwk.class).serialize((Object)jsonTimelineTweet.j, "prerollMetadata", true, tfe);
+            LoganSquare.typeConverterFor((Class)uwk.class).serialize((Object)jsonTimelineTweet.j, "prerollMetadata", true, afe);
         }
-        final q0t k = jsonTimelineTweet.k;
+        final g1t k = jsonTimelineTweet.k;
         if (k != null) {
-            ((twj<q0t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_PREVIEW_METADATA_UNION_CONVERTER).serialize(k, "previewMetadata", true, tfe);
+            ((ywj<g1t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_PREVIEW_METADATA_UNION_CONVERTER).serialize(k, "previewMetadata", true, afe);
             throw null;
         }
         if (jsonTimelineTweet.e != null) {
-            tfe.i("tweetPromotedMetadata");
-            JsonPromotedContentUrt$$JsonObjectMapper._serialize(jsonTimelineTweet.e, tfe, true);
+            afe.i("tweetPromotedMetadata");
+            JsonPromotedContentUrt$$JsonObjectMapper._serialize(jsonTimelineTweet.e, afe, true);
         }
         final ArrayList r = jsonTimelineTweet.r;
         if (r != null) {
-            final Iterator g = q1a.g(tfe, "reactiveTriggers", r);
-            while (g.hasNext()) {
-                final ozl.b b2 = g.next();
-                if (b2 != null) {
-                    LoganSquare.typeConverterFor((Class)ozl.b.class).serialize((Object)b2, "lslocalreactiveTriggersElement", false, tfe);
+            final Iterator a = br.A(afe, "reactiveTriggers", r);
+            while (a.hasNext()) {
+                final d0m$b d0m$b = a.next();
+                if (d0m$b != null) {
+                    LoganSquare.typeConverterFor((Class)d0m$b.class).serialize((Object)d0m$b, "lslocalreactiveTriggersElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (jsonTimelineTweet.u != null) {
-            LoganSquare.typeConverterFor((Class)wg1.class).serialize((Object)jsonTimelineTweet.u, "replyBadge", true, tfe);
+            LoganSquare.typeConverterFor((Class)sg1.class).serialize((Object)jsonTimelineTweet.u, "replyBadge", true, afe);
         }
-        final d4t f = jsonTimelineTweet.f;
+        final u4t f = jsonTimelineTweet.f;
         if (f == null) {
             if (jsonTimelineTweet.i != null) {
-                LoganSquare.typeConverterFor((Class)b9t.class).serialize((Object)jsonTimelineTweet.i, "timelinesScoreInfo", true, tfe);
+                LoganSquare.typeConverterFor((Class)r9t.class).serialize((Object)jsonTimelineTweet.i, "timelinesScoreInfo", true, afe);
             }
             if (jsonTimelineTweet.s != null) {
-                LoganSquare.typeConverterFor((Class)d6t.class).serialize((Object)jsonTimelineTweet.s, "topicFollowPrompt", true, tfe);
+                LoganSquare.typeConverterFor((Class)v6t.class).serialize((Object)jsonTimelineTweet.s, "topicFollowPrompt", true, afe);
             }
             if (jsonTimelineTweet.n != null) {
-                LoganSquare.typeConverterFor((Class)meu.class).serialize((Object)jsonTimelineTweet.n, "tweetContext", true, tfe);
+                LoganSquare.typeConverterFor((Class)ffu.class).serialize((Object)jsonTimelineTweet.n, "tweetContext", true, afe);
             }
             if (jsonTimelineTweet.a != null) {
-                LoganSquare.typeConverterFor((Class)apu$a.class).serialize((Object)jsonTimelineTweet.a, "tweetResult", true, tfe);
+                LoganSquare.typeConverterFor((Class)upu.a.class).serialize((Object)jsonTimelineTweet.a, "tweetResult", true, afe);
             }
             if (b) {
-                tfe.h();
+                afe.h();
             }
             return;
         }
-        ((twj<d4t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).serialize(f, "socialContext", true, tfe);
+        ((ywj<u4t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).serialize(f, "socialContext", true, afe);
         throw null;
     }
     
-    public static void parseField(final JsonTimelineTweet jsonTimelineTweet, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineTweet jsonTimelineTweet, final String s, final tge tge) throws IOException {
         if ("conversationAnnotation".equals(s)) {
-            jsonTimelineTweet.t = (nts)LoganSquare.typeConverterFor((Class)nts.class).parse(khe);
+            jsonTimelineTweet.t = (fus)LoganSquare.typeConverterFor((Class)fus.class).parse(tge);
         }
         else if ("displaySize".equals(s)) {
-            jsonTimelineTweet.d = (String)((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_SIZE_TYPE_CONVERTER).parse(khe);
+            jsonTimelineTweet.d = (String)((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_SIZE_TYPE_CONVERTER).parse(tge);
         }
         else if (!"tweetDisplayType".equals(s) && !"displayType".equals(s)) {
             if ("forwardPivot".equals(s)) {
-                jsonTimelineTweet.p = (elu)LoganSquare.typeConverterFor((Class)elu.class).parse(khe);
+                jsonTimelineTweet.p = (ylu)LoganSquare.typeConverterFor((Class)ylu.class).parse(tge);
             }
             else if ("hasModeratedReplies".equals(s)) {
-                jsonTimelineTweet.m = khe.k();
+                jsonTimelineTweet.m = tge.k();
             }
             else if ("highlights".equals(s)) {
-                jsonTimelineTweet.g = JsonTweetHighlights$$JsonObjectMapper._parse(khe);
+                jsonTimelineTweet.g = JsonTweetHighlights$$JsonObjectMapper._parse(tge);
             }
             else if ("id".equals(s)) {
-                jsonTimelineTweet.b = khe.T((String)null);
+                jsonTimelineTweet.b = tge.T((String)null);
             }
             else if ("tweetSocialProof".equals(s)) {
-                jsonTimelineTweet.o = (d4t)((age)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).parse(khe);
+                jsonTimelineTweet.o = ((hfe<u4t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).parse(tge);
             }
             else if ("innerForwardPivot".equals(s)) {
-                jsonTimelineTweet.q = (elu)LoganSquare.typeConverterFor((Class)elu.class).parse(khe);
+                jsonTimelineTweet.q = (ylu)LoganSquare.typeConverterFor((Class)ylu.class).parse(tge);
             }
             else if ("innerTombstoneInfo".equals(s)) {
-                jsonTimelineTweet.h = (brv)LoganSquare.typeConverterFor((Class)brv.class).parse(khe);
+                jsonTimelineTweet.h = (wrv)LoganSquare.typeConverterFor((Class)wrv.class).parse(tge);
             }
             else if ("isModerated".equals(s)) {
-                jsonTimelineTweet.l = khe.k();
+                jsonTimelineTweet.l = tge.k();
             }
             else if ("prerollMetadata".equals(s)) {
-                jsonTimelineTweet.j = (mwk)LoganSquare.typeConverterFor((Class)mwk.class).parse(khe);
+                jsonTimelineTweet.j = (uwk)LoganSquare.typeConverterFor((Class)uwk.class).parse(tge);
             }
             else if ("previewMetadata".equals(s)) {
-                jsonTimelineTweet.k = (q0t)((age)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_PREVIEW_METADATA_UNION_CONVERTER).parse(khe);
+                jsonTimelineTweet.k = ((hfe<g1t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_PREVIEW_METADATA_UNION_CONVERTER).parse(tge);
             }
             else if (!"tweetPromotedMetadata".equals(s) && !"promotedMetadata".equals(s)) {
                 if ("reactiveTriggers".equals(s)) {
-                    if (khe.e() == lje.M0) {
+                    if (tge.e() == vie.N0) {
                         final ArrayList r = new ArrayList();
-                        while (khe.i0() != lje.N0) {
-                            final ozl.b b = (ozl.b)LoganSquare.typeConverterFor((Class)ozl.b.class).parse(khe);
-                            if (b != null) {
-                                r.add(b);
+                        while (tge.h0() != vie.O0) {
+                            final d0m$b d0m$b = (d0m$b)LoganSquare.typeConverterFor((Class)d0m$b.class).parse(tge);
+                            if (d0m$b != null) {
+                                r.add(d0m$b);
                             }
                         }
                         jsonTimelineTweet.r = r;
@@ -183,39 +183,47 @@ public final class JsonTimelineTweet$$JsonObjectMapper extends JsonMapper<JsonTi
                     }
                 }
                 else if ("replyBadge".equals(s)) {
-                    jsonTimelineTweet.u = (wg1)LoganSquare.typeConverterFor((Class)wg1.class).parse(khe);
+                    jsonTimelineTweet.u = (sg1)LoganSquare.typeConverterFor((Class)sg1.class).parse(tge);
                 }
                 else if ("socialContext".equals(s)) {
-                    jsonTimelineTweet.f = (d4t)((age)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).parse(khe);
+                    jsonTimelineTweet.f = ((hfe<u4t>)JsonTimelineTweet$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).parse(tge);
                 }
                 else if ("timelinesScoreInfo".equals(s)) {
-                    jsonTimelineTweet.i = (b9t)LoganSquare.typeConverterFor((Class)b9t.class).parse(khe);
+                    jsonTimelineTweet.i = (r9t)LoganSquare.typeConverterFor((Class)r9t.class).parse(tge);
                 }
                 else if ("topicFollowPrompt".equals(s)) {
-                    jsonTimelineTweet.s = (d6t)LoganSquare.typeConverterFor((Class)d6t.class).parse(khe);
+                    jsonTimelineTweet.s = (v6t)LoganSquare.typeConverterFor((Class)v6t.class).parse(tge);
                 }
                 else if ("tweetContext".equals(s)) {
-                    jsonTimelineTweet.n = (meu)LoganSquare.typeConverterFor((Class)meu.class).parse(khe);
+                    jsonTimelineTweet.n = (ffu)LoganSquare.typeConverterFor((Class)ffu.class).parse(tge);
                 }
                 else if ("tweetResult".equals(s)) {
-                    jsonTimelineTweet.a = (apu$a)LoganSquare.typeConverterFor((Class)apu$a.class).parse(khe);
+                    jsonTimelineTweet.a = (upu.a)LoganSquare.typeConverterFor((Class)upu.a.class).parse(tge);
                 }
             }
             else {
-                jsonTimelineTweet.e = JsonPromotedContentUrt$$JsonObjectMapper._parse(khe);
+                jsonTimelineTweet.e = JsonPromotedContentUrt$$JsonObjectMapper._parse(tge);
                 jsonTimelineTweet.b = null;
             }
         }
         else {
-            jsonTimelineTweet.c = (String)((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_TYPE_TYPE_CONVERTER).parse(khe);
+            jsonTimelineTweet.c = (String)((StringBasedTypeConverter)JsonTimelineTweet$$JsonObjectMapper.TWEET_DISPLAY_TYPE_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonTimelineTweet parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineTweet parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineTweet jsonTimelineTweet, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineTweet, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineTweet jsonTimelineTweet, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineTweet, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineTweet)o, afe, b);
     }
 }

@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFoundMediaCursor$$JsonObjectMapper extends JsonMapper<JsonFoundMediaCursor>
 {
-    public static JsonFoundMediaCursor _parse(final khe khe) throws IOException {
+    public static JsonFoundMediaCursor _parse(final tge tge) throws IOException {
         final JsonFoundMediaCursor jsonFoundMediaCursor = new JsonFoundMediaCursor();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFoundMediaCursor, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFoundMediaCursor, d, tge);
+            tge.l0();
         }
         return jsonFoundMediaCursor;
     }
     
-    public static void _serialize(final JsonFoundMediaCursor jsonFoundMediaCursor, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFoundMediaCursor jsonFoundMediaCursor, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("next", jsonFoundMediaCursor.a);
-        tfe.u0("prev", jsonFoundMediaCursor.b);
+        afe.t0("next", jsonFoundMediaCursor.a);
+        afe.t0("prev", jsonFoundMediaCursor.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFoundMediaCursor jsonFoundMediaCursor, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFoundMediaCursor jsonFoundMediaCursor, final String s, final tge tge) throws IOException {
         if ("next".equals(s)) {
-            jsonFoundMediaCursor.a = khe.T((String)null);
+            jsonFoundMediaCursor.a = tge.T((String)null);
         }
         else if ("prev".equals(s)) {
-            jsonFoundMediaCursor.b = khe.T((String)null);
+            jsonFoundMediaCursor.b = tge.T((String)null);
         }
     }
     
-    public JsonFoundMediaCursor parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFoundMediaCursor parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFoundMediaCursor jsonFoundMediaCursor, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFoundMediaCursor, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFoundMediaCursor jsonFoundMediaCursor, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFoundMediaCursor, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFoundMediaCursor)o, afe, b);
     }
 }

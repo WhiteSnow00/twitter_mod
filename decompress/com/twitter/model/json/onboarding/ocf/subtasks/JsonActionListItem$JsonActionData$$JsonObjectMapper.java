@@ -9,55 +9,63 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonActionListItem$JsonActionData$$JsonObjectMapper extends JsonMapper<JsonActionListItem.JsonActionData>
 {
-    public static JsonActionListItem.JsonActionData _parse(final khe khe) throws IOException {
+    public static JsonActionListItem.JsonActionData _parse(final tge tge) throws IOException {
         final JsonActionListItem.JsonActionData jsonActionData = new JsonActionListItem.JsonActionData();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonActionData, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonActionData, d, tge);
+            tge.l0();
         }
         return jsonActionData;
     }
     
-    public static void _serialize(final JsonActionListItem.JsonActionData jsonActionData, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonActionListItem.JsonActionData jsonActionData, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonActionData.b != null) {
-            tfe.i("link_data");
-            JsonActionListItem$JsonActionListLinkData$$JsonObjectMapper._serialize(jsonActionData.b, tfe, true);
+            afe.i("link_data");
+            JsonActionListItem$JsonActionListLinkData$$JsonObjectMapper._serialize(jsonActionData.b, afe, true);
         }
         if (jsonActionData.a != null) {
-            tfe.i("text_data");
-            JsonActionListItem$JsonActionListTextData$$JsonObjectMapper._serialize(jsonActionData.a, tfe, true);
+            afe.i("text_data");
+            JsonActionListItem$JsonActionListTextData$$JsonObjectMapper._serialize(jsonActionData.a, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonActionListItem.JsonActionData jsonActionData, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonActionListItem.JsonActionData jsonActionData, final String s, final tge tge) throws IOException {
         if ("link_data".equals(s)) {
-            jsonActionData.b = JsonActionListItem$JsonActionListLinkData$$JsonObjectMapper._parse(khe);
+            jsonActionData.b = JsonActionListItem$JsonActionListLinkData$$JsonObjectMapper._parse(tge);
         }
         else if ("text_data".equals(s)) {
-            jsonActionData.a = JsonActionListItem$JsonActionListTextData$$JsonObjectMapper._parse(khe);
+            jsonActionData.a = JsonActionListItem$JsonActionListTextData$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonActionListItem.JsonActionData parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonActionListItem.JsonActionData parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonActionListItem.JsonActionData jsonActionData, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonActionData, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonActionListItem.JsonActionData jsonActionData, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonActionData, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonActionListItem.JsonActionData)o, afe, b);
     }
 }

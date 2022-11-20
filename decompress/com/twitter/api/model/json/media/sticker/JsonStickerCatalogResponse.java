@@ -11,38 +11,32 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonStickerCatalogResponse extends aih<xfr>
+public class JsonStickerCatalogResponse extends fih<sgr>
 {
-    public static final kub<hhr, hhr> c;
     @JsonField
-    public List<hhr> a;
+    public List<bir> a;
     @JsonField
-    public List<hhr> b;
+    public List<bir> b;
     
-    static {
-        JsonStickerCatalogResponse.c = uzf.c;
-    }
-    
-    @Override
     public final Object s() {
         final ArrayList a = this.a;
         Object o;
         if (a == null) {
-            xpa.p("Sticker response must include categories");
+            i48.t("Sticker response must include categories");
             o = null;
         }
         else {
-            final List g = ced.g((List)a);
+            final List g = gdd.g((List)a);
             final ArrayList b = this.b;
             Object o2;
             if (b == null) {
-                o2 = ced.D0;
-                final int a2 = w4j.a;
+                o2 = gdd.E0;
+                final int a2 = c5j.a;
             }
             else {
-                o2 = hr4.c((List)b, (kub)JsonStickerCatalogResponse.c);
+                o2 = fq4.c((List)b, (jtb)gie.b);
             }
-            o = new xfr(g, (List)o2);
+            o = new sgr(g, (List)o2);
         }
         return o;
     }

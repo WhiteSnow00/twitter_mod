@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonRect extends ige
+public class JsonRect extends qfe
 {
     @JsonField
     public int a;

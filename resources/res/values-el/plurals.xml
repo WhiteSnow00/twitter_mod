@@ -516,6 +516,18 @@
         <item quantity="one">%s εγγεγραμμένος χρήστης</item>
         <item quantity="other">%s εγγεγραμμένοι χρήστες</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">ημέρα</item>
+        <item quantity="other">%d ημέρες</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">μήνας</item>
+        <item quantity="other">%d μήνες</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">έτος</item>
+        <item quantity="other">%d έτη</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d η</item>
         <item quantity="other">%d η</item>

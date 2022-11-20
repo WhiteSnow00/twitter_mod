@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonMomentSportsEvent extends lhh<hph>
+public class JsonMomentSportsEvent extends qhh<mph>
 {
     @JsonField
     public String a;
@@ -21,20 +21,44 @@ public class JsonMomentSportsEvent extends lhh<hph>
     @JsonField
     public long d;
     @JsonField
-    public List<hph$b> e;
+    public List<mph$b> e;
     
-    @Override
-    public final h4j t() {
-        final hph$a hph$a = new hph$a();
+    public final n4j t() {
+        final mph$a mph$a = new mph$a();
         String a;
         if ((a = this.a) == null) {
             a = "";
         }
-        hph$a.a = a;
-        hph$a.e = this.b;
-        hph$a.d = this.c;
-        hph$a.b = this.d;
-        hph$a.c = this.e;
-        return (h4j)hph$a;
+        mph$a.a = a;
+        mph$a.e = this.b;
+        mph$a.d = this.c;
+        mph$a.b = this.d;
+        mph$a.c = this.e;
+        return (n4j)mph$a;
+    }
+    
+    @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+    public static class JsonParticipantScore extends fih<mph$b>
+    {
+        @JsonField
+        public oph a;
+        @JsonField
+        public String b;
+        
+        public final Object s() {
+            final oph a = this.a;
+            Object o;
+            if (a != null) {
+                String b;
+                if ((b = this.b) == null) {
+                    b = "";
+                }
+                o = new mph$b(a, b);
+            }
+            else {
+                o = null;
+            }
+            return o;
+        }
     }
 }

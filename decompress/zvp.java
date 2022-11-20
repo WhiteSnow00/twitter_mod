@@ -1,59 +1,41 @@
+import java.util.Objects;
 import android.content.Context;
-import android.widget.TextView;
-import android.widget.ProgressBar;
-import android.widget.Button;
-import android.widget.ImageView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zvp
+public final class zvp extends ste implements qsb<vei, fzv>
 {
-    public final u3s a;
-    public final u3s b;
-    public final u3s c;
-    public final u3s d;
-    public final u3s e;
-    public final u3s f;
+    public final awp D0;
+    public final qo7 E0;
+    public final us7 F0;
+    public final ftb<tj7, Context, fzv> G0;
     
-    public zvp(final rtp rtp) {
-        zzd.f((Object)rtp, "viewProvider");
-        this.a = (u3s)rp2.z0((otb)new otb<ImageView>() {
-            public final Object invoke() {
-                return rtp.c().getView().findViewById(2131432354);
-            }
-        });
-        this.b = (u3s)rp2.z0((otb)new otb<Button>() {
-            public final Object invoke() {
-                return rtp.c().getView().findViewById(2131431472);
-            }
-        });
-        this.c = (u3s)rp2.z0((otb)new otb<ProgressBar>() {
-            public final Object invoke() {
-                return rtp.c().getView().findViewById(2131429846);
-            }
-        });
-        this.d = (u3s)rp2.z0((otb)new otb<TextView>() {
-            public final Object invoke() {
-                return rtp.c().getView().findViewById(2131432073);
-            }
-        });
-        this.e = (u3s)rp2.z0((otb)new otb<TextView>() {
-            public final Object invoke() {
-                return rtp.c().getView().findViewById(2131431798);
-            }
-        });
-        this.f = (u3s)rp2.z0((otb)new otb<Context>() {
-            public final Object invoke() {
-                return rtp.c().getView().getContext();
-            }
-        });
+    public zvp(final awp d0, final qo7 e0, final us7 f0, final ftb<? super tj7, ? super Context, fzv> g0) {
+        this.D0 = d0;
+        this.E0 = e0;
+        this.F0 = f0;
+        this.G0 = (ftb<tj7, Context, fzv>)g0;
+        super(1);
     }
     
-    public final Context a() {
-        final Object value = this.f.getValue();
-        zzd.e(value, "<get-context>(...)");
-        return (Context)value;
+    public final Object invoke(final Object o) {
+        final vei vei = (vei)o;
+        awp.b(this.D0);
+        final awp d0 = this.D0;
+        final qo7 e0 = this.E0;
+        final String e2 = vei.e();
+        Objects.requireNonNull(d0);
+        qo7 qo7 = e0;
+        if (e2 != null) {
+            final qo7.a a = new qo7.a(e0);
+            a.d = e2;
+            qo7 = (qo7)a.e();
+        }
+        final awp d2 = this.D0;
+        awp.a(this.D0, vei.e(), d2.g.b(qo7, this.F0, d2.a), this.G0);
+        this.D0.e.b(s9i.r(vei));
+        return fzv.a;
     }
 }

@@ -4,41 +4,43 @@
 
 public final class i9w
 {
-    public static final a Companion;
-    public static final i9w.i9w$b b;
-    public final j9w a;
+    public final String a;
+    public final gbl b;
     
-    static {
-        Companion = new a();
-        b = new i9w.i9w$b();
-    }
-    
-    public i9w(final j9w a) {
-        zzd.f((Object)a, "inviteActionResults");
+    public i9w(final String a, final gbl b) {
+        czd.f((Object)a, "moduleId");
+        czd.f((Object)b, "profileModule");
         this.a = a;
+        this.b = b;
     }
     
     @Override
     public final boolean equals(final Object o) {
-        return this == o || (o instanceof i9w && zzd.a((Object)this.a, (Object)((i9w)o).a));
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof i9w)) {
+            return false;
+        }
+        final i9w i9w = (i9w)o;
+        return czd.a((Object)this.a, (Object)i9w.a) && czd.a((Object)this.b, (Object)i9w.b);
     }
     
     @Override
     public final int hashCode() {
-        return this.a.hashCode();
+        return this.b.hashCode() + this.a.hashCode() * 31;
     }
     
     @Override
     public final String toString() {
-        final j9w a = this.a;
+        final String a = this.a;
+        final gbl b = this.b;
         final StringBuilder sb = new StringBuilder();
-        sb.append("UserCommunityActions(inviteActionResults=");
+        sb.append("UserBusinessModuleResponseV1(moduleId=");
         sb.append(a);
+        sb.append(", profileModule=");
+        sb.append(b);
         sb.append(")");
         return sb.toString();
-    }
-    
-    public static final class a
-    {
     }
 }

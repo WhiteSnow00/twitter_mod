@@ -528,6 +528,18 @@
         <item quantity="one">‏%s مشترك</item>
         <item quantity="other">‏%s مشارك</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">‏يوم</item>
+        <item quantity="other">‏%d من الأيام</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">‏شهر</item>
+        <item quantity="other">‏%d من الأشهر</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">‏سنة</item>
+        <item quantity="other">‏%d من السنوات</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">‏%d ي</item>
         <item quantity="other">‏%d ي</item>

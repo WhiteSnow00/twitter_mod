@@ -1,18 +1,25 @@
-import java.util.List;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteQuery;
+import android.database.sqlite.SQLiteCursorDriver;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase$CursorFactory;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface fik
+public final class fik implements SQLiteDatabase$CursorFactory
 {
-    void a(final fhs p0, final v9d p1, final rtb<? super List<? extends hr9>, oyv> p2, final rtb<? super u9d, oyv> p3);
+    public final khj a;
     
-    void b();
+    public fik(final khj a) {
+        this.a = a;
+    }
     
-    void c(final fhs p0, final fhs p1);
-    
-    void d();
-    
-    void e();
+    public final Cursor newCursor(final SQLiteDatabase sqLiteDatabase, final SQLiteCursorDriver sqLiteCursorDriver, final String s, final SQLiteQuery sqLiteQuery) {
+        final khj a = this.a;
+        czd.e((Object)sqLiteCursorDriver, "masterQuery");
+        czd.e((Object)sqLiteQuery, "query");
+        return (Cursor)new gik(sqLiteCursorDriver, s, sqLiteQuery, a);
+    }
 }

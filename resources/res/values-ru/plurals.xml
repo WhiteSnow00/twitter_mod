@@ -522,6 +522,18 @@
         <item quantity="one">%s подписчик</item>
         <item quantity="other">Подписчиков: %s</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">день</item>
+        <item quantity="other">%d дней</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">месяц</item>
+        <item quantity="other">%d месяцев</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">год</item>
+        <item quantity="other">%d лет</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d д.</item>
         <item quantity="other">%d дн.</item>

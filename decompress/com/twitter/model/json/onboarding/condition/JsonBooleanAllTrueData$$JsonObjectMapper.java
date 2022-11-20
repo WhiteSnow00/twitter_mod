@@ -13,51 +13,51 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonBooleanAllTrueData$$JsonObjectMapper extends JsonMapper<JsonBooleanAllTrueData>
 {
-    public static JsonBooleanAllTrueData _parse(final khe khe) throws IOException {
+    public static JsonBooleanAllTrueData _parse(final tge tge) throws IOException {
         final JsonBooleanAllTrueData jsonBooleanAllTrueData = new JsonBooleanAllTrueData();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonBooleanAllTrueData, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonBooleanAllTrueData, d, tge);
+            tge.l0();
         }
         return jsonBooleanAllTrueData;
     }
     
-    public static void _serialize(final JsonBooleanAllTrueData jsonBooleanAllTrueData, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonBooleanAllTrueData jsonBooleanAllTrueData, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final List<String> a = jsonBooleanAllTrueData.a;
         if (a != null) {
-            final Iterator f = x30.F(tfe, "component_identifiers", (List)a);
-            while (f.hasNext()) {
-                tfe.s0((String)f.next());
+            final Iterator g = hee.g(afe, "component_identifiers", (List)a);
+            while (g.hasNext()) {
+                afe.r0((String)g.next());
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonBooleanAllTrueData jsonBooleanAllTrueData, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonBooleanAllTrueData jsonBooleanAllTrueData, final String s, final tge tge) throws IOException {
         if ("component_identifiers".equals(s)) {
-            if (khe.e() != lje.M0) {
+            if (tge.e() != vie.N0) {
                 Objects.requireNonNull(jsonBooleanAllTrueData);
-                zzd.f((Object)null, "<set-?>");
+                czd.f((Object)null, "<set-?>");
                 throw null;
             }
             final ArrayList a = new ArrayList();
-            while (khe.i0() != lje.N0) {
-                final String t = khe.T((String)null);
+            while (tge.h0() != vie.O0) {
+                final String t = tge.T((String)null);
                 if (t != null) {
                     a.add(t);
                 }
@@ -67,11 +67,19 @@ public final class JsonBooleanAllTrueData$$JsonObjectMapper extends JsonMapper<J
         }
     }
     
-    public JsonBooleanAllTrueData parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonBooleanAllTrueData parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonBooleanAllTrueData jsonBooleanAllTrueData, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonBooleanAllTrueData, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonBooleanAllTrueData jsonBooleanAllTrueData, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonBooleanAllTrueData, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonBooleanAllTrueData)o, afe, b);
     }
 }

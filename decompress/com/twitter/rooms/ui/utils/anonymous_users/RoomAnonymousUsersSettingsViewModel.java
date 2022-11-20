@@ -10,26 +10,35 @@ import com.twitter.rooms.manager.RoomStateManager;
 import kotlin.Metadata;
 import com.twitter.weaver.mvi.MviViewModel;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001¨\u0006\u0005" }, d2 = { "Lcom/twitter/rooms/ui/utils/anonymous_users/RoomAnonymousUsersSettingsViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lc0n;", "Lyzm;", "Lwzm;", "feature.tfa.rooms.ui.utils.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
-public final class RoomAnonymousUsersSettingsViewModel extends MviViewModel<c0n, yzm, wzm>
+@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001¨\u0006\u0005" }, d2 = { "Lcom/twitter/rooms/ui/utils/anonymous_users/RoomAnonymousUsersSettingsViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lr0n;", "Ln0n;", "Ll0n;", "feature.tfa.rooms.ui.utils.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
+public final class RoomAnonymousUsersSettingsViewModel extends MviViewModel<r0n, n0n, l0n>
 {
-    public static final /* synthetic */ soe<Object>[] O0;
-    public final gyh N0;
+    public static final coe<Object>[] P0;
+    public final hyh O0;
     
     static {
-        O0 = new soe[] { (soe)hi.m(RoomAnonymousUsersSettingsViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
+        P0 = new coe[] { (coe)w9.f((Class)RoomAnonymousUsersSettingsViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
     }
     
-    public RoomAnonymousUsersSettingsViewModel(final RoomStateManager roomStateManager, final RoomAnonymousUsersSettingsArgs roomAnonymousUsersSettingsArgs, final ibm ibm) {
-        zzd.f((Object)roomStateManager, "roomStateManager");
-        zzd.f((Object)roomAnonymousUsersSettingsArgs, "args");
-        zzd.f((Object)ibm, "releaseCompletable");
-        Objects.requireNonNull(c0n.Companion);
-        super((fae)ibm, (oax)new c0n(roomAnonymousUsersSettingsArgs.getRoomId(), roomAnonymousUsersSettingsArgs.getRemainingUsersCount()));
-        this.N0 = oyz.f0(this, (rtb)new RoomAnonymousUsersSettingsViewModel$a(this));
+    public RoomAnonymousUsersSettingsViewModel(final RoomStateManager roomStateManager, final RoomAnonymousUsersSettingsArgs roomAnonymousUsersSettingsArgs, final xbm xbm) {
+        czd.f((Object)roomStateManager, "roomStateManager");
+        czd.f((Object)roomAnonymousUsersSettingsArgs, "args");
+        czd.f((Object)xbm, "releaseCompletable");
+        Objects.requireNonNull(r0n.Companion);
+        super((k9e)xbm, (jbx)new r0n(roomAnonymousUsersSettingsArgs.getRoomId(), roomAnonymousUsersSettingsArgs.getRemainingUsersCount()));
+        this.O0 = ewj.n(this, (qsb)new qsb<jyh<n0n>, fzv>(this) {
+            public final RoomAnonymousUsersSettingsViewModel D0;
+            
+            public final Object invoke(final Object o) {
+                final jyh jyh = (jyh)o;
+                czd.f((Object)jyh, "$this$weaver");
+                jyh.a(v9m.a((Class)n0n$a.class), (ftb)new a(this.D0, (go6)null));
+                return fzv.a;
+            }
+        });
     }
     
-    public final iyh<yzm> v() {
-        return (iyh<yzm>)this.N0.a((soe)RoomAnonymousUsersSettingsViewModel.O0[0]);
+    public final jyh<n0n> v() {
+        return (jyh<n0n>)this.O0.a((coe)RoomAnonymousUsersSettingsViewModel.P0[0]);
     }
 }

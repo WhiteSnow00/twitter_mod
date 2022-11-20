@@ -12,58 +12,58 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfDetailRichTextOptions$$JsonObjectMapper extends JsonMapper<JsonOcfDetailRichTextOptions>
 {
-    public static JsonOcfDetailRichTextOptions _parse(final khe khe) throws IOException {
+    public static JsonOcfDetailRichTextOptions _parse(final tge tge) throws IOException {
         final JsonOcfDetailRichTextOptions jsonOcfDetailRichTextOptions = new JsonOcfDetailRichTextOptions();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonOcfDetailRichTextOptions, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonOcfDetailRichTextOptions, d, tge);
+            tge.l0();
         }
         return jsonOcfDetailRichTextOptions;
     }
     
-    public static void _serialize(final JsonOcfDetailRichTextOptions jsonOcfDetailRichTextOptions, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfDetailRichTextOptions jsonOcfDetailRichTextOptions, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonOcfDetailRichTextOptions.a != null) {
-            LoganSquare.typeConverterFor((Class)dsr.class).serialize((Object)jsonOcfDetailRichTextOptions.a, "count_subtask_data_reference", true, tfe);
+            LoganSquare.typeConverterFor((Class)vsr.class).serialize((Object)jsonOcfDetailRichTextOptions.a, "count_subtask_data_reference", true, afe);
         }
         final ArrayList b2 = jsonOcfDetailRichTextOptions.b;
         if (b2 != null) {
-            final Iterator g = q1a.g(tfe, "label_conditional_text", b2);
-            while (g.hasNext()) {
-                final mxm mxm = g.next();
-                if (mxm != null) {
-                    LoganSquare.typeConverterFor((Class)mxm.class).serialize((Object)mxm, "lslocallabel_conditional_textElement", false, tfe);
+            final Iterator a = br.A(afe, "label_conditional_text", b2);
+            while (a.hasNext()) {
+                final dym dym = a.next();
+                if (dym != null) {
+                    LoganSquare.typeConverterFor((Class)dym.class).serialize((Object)dym, "lslocallabel_conditional_textElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonOcfDetailRichTextOptions jsonOcfDetailRichTextOptions, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonOcfDetailRichTextOptions jsonOcfDetailRichTextOptions, final String s, final tge tge) throws IOException {
         if ("count_subtask_data_reference".equals(s)) {
-            jsonOcfDetailRichTextOptions.a = (dsr)LoganSquare.typeConverterFor((Class)dsr.class).parse(khe);
+            jsonOcfDetailRichTextOptions.a = (vsr)LoganSquare.typeConverterFor((Class)vsr.class).parse(tge);
         }
         else if ("label_conditional_text".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList b = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final mxm mxm = (mxm)LoganSquare.typeConverterFor((Class)mxm.class).parse(khe);
-                    if (mxm != null) {
-                        b.add(mxm);
+                while (tge.h0() != vie.O0) {
+                    final dym dym = (dym)LoganSquare.typeConverterFor((Class)dym.class).parse(tge);
+                    if (dym != null) {
+                        b.add(dym);
                     }
                 }
                 jsonOcfDetailRichTextOptions.b = b;
@@ -74,11 +74,19 @@ public final class JsonOcfDetailRichTextOptions$$JsonObjectMapper extends JsonMa
         }
     }
     
-    public JsonOcfDetailRichTextOptions parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonOcfDetailRichTextOptions parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonOcfDetailRichTextOptions jsonOcfDetailRichTextOptions, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonOcfDetailRichTextOptions, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonOcfDetailRichTextOptions jsonOcfDetailRichTextOptions, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonOcfDetailRichTextOptions, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonOcfDetailRichTextOptions)o, afe, b);
     }
 }

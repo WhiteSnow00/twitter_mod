@@ -4,64 +4,36 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class n16
+public final class n16 implements xq<o06$h>
 {
-    public static final b Companion;
-    public List<? extends fqp> a;
-    public List<? extends fqp> b;
-    public List<? extends fqp> c;
-    public List<? extends fqp> d;
-    public List<? extends fqp> e;
+    public static final n16 a;
+    public static final List<String> b;
     
     static {
-        Companion = new b();
+        a = new n16();
+        b = s9i.r("__typename");
     }
     
-    public n16(final n16$a n16$a) {
-        this.a = n16$a.a;
-        this.b = n16$a.b;
-        final List c = n16$a.c;
-        this.c = c;
-        this.d = c;
-        this.e = n16$a.e;
+    public final void a(final ale ale, final fa7 fa7, final Object o) {
+        final o06$h o06$h = (o06$h)o;
+        czd.f((Object)ale, "writer");
+        czd.f((Object)fa7, "customScalarAdapters");
+        czd.f((Object)o06$h, "value");
+        ale.z1("__typename");
+        ar.a.a(ale, fa7, (Object)o06$h.a);
+        mr8.a.d(ale, fa7, o06$h.b);
     }
     
-    public static final class b
-    {
-    }
-    
-    public static final class c extends s4j<n16>
-    {
-        public static final c b;
-        
-        static {
-            b = new c();
+    public final Object b(final ohe ohe, final fa7 fa7) {
+        czd.f((Object)ohe, "reader");
+        czd.f((Object)fa7, "customScalarAdapters");
+        Object o = null;
+        while (ohe.j3((List)n16.b) == 0) {
+            o = ar.a.b(ohe, fa7);
         }
-        
-        public final Object d(final elp elp, final int n) {
-            zzd.f((Object)elp, "input");
-            final n16$a n16$a = new n16$a();
-            final jx6 e = fqp.e;
-            n16$a.a = (List)((s4j)new xq4$a((alp)e)).a(elp);
-            n16$a.b = (List)((s4j)new xq4$a((alp)e)).a(elp);
-            n16$a.c = (List)((s4j)new xq4$a((alp)e)).a(elp);
-            n16$a.d = (List)((s4j)new xq4$a((alp)e)).a(elp);
-            n16$a.e = (List)((s4j)new xq4$a((alp)e)).a(elp);
-            return ((h4j)n16$a).e();
-        }
-        
-        public final void f(final flp flp, final Object o) {
-            final n16 n16 = (n16)o;
-            zzd.f((Object)flp, "output");
-            zzd.f((Object)n16, "componentCollection");
-            final List<? extends fqp> a = n16.a;
-            final jx6 e = fqp.e;
-            t4a.m(e, flp, (List)a);
-            final int a2 = w4j.a;
-            t4a.m(e, flp, (List)n16.b);
-            t4a.m(e, flp, (List)n16.c);
-            t4a.m(e, flp, (List)n16.d);
-            t4a.m(e, flp, (List)n16.e);
-        }
+        ohe.G();
+        final er8 c = mr8.a.c(ohe, fa7);
+        czd.c(o);
+        return new o06$h((String)o, c);
     }
 }

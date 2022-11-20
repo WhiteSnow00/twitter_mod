@@ -12,259 +12,267 @@ import java.util.Map;
 import java.io.IOException;
 import com.bluelinelabs.logansquare.JsonMapper;
 
-public final class JsonLiveEventMetadataResponse$JsonTwitterObjects$$JsonObjectMapper extends JsonMapper<JsonLiveEventMetadataResponse$JsonTwitterObjects>
+public final class JsonLiveEventMetadataResponse$JsonTwitterObjects$$JsonObjectMapper extends JsonMapper<JsonLiveEventMetadataResponse.JsonTwitterObjects>
 {
-    public static JsonLiveEventMetadataResponse$JsonTwitterObjects _parse(final khe khe) throws IOException {
-        final JsonLiveEventMetadataResponse$JsonTwitterObjects jsonLiveEventMetadataResponse$JsonTwitterObjects = new JsonLiveEventMetadataResponse$JsonTwitterObjects();
-        if (khe.e() == null) {
-            khe.i0();
+    public static JsonLiveEventMetadataResponse.JsonTwitterObjects _parse(final tge tge) throws IOException {
+        final JsonLiveEventMetadataResponse.JsonTwitterObjects jsonTwitterObjects = new JsonLiveEventMetadataResponse.JsonTwitterObjects();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveEventMetadataResponse$JsonTwitterObjects, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTwitterObjects, d, tge);
+            tge.l0();
         }
-        return jsonLiveEventMetadataResponse$JsonTwitterObjects;
+        return jsonTwitterObjects;
     }
     
-    public static void _serialize(final JsonLiveEventMetadataResponse$JsonTwitterObjects jsonLiveEventMetadataResponse$JsonTwitterObjects, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveEventMetadataResponse.JsonTwitterObjects jsonTwitterObjects, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final HashMap b2 = jsonLiveEventMetadataResponse$JsonTwitterObjects.b;
+        final HashMap b2 = jsonTwitterObjects.b;
         if (b2 != null) {
-            final Iterator h = q1a.h(tfe, "audiospaces", b2);
-            while (h.hasNext()) {
-                final Map.Entry<String, fpf> entry = h.next();
-                if (o1a.g((String)entry.getKey(), tfe, (Map.Entry)entry) == null) {
-                    tfe.j();
+            final Iterator z = mw.z(afe, "audiospaces", b2);
+            while (z.hasNext()) {
+                final Map.Entry<String, rof> entry = z.next();
+                if (sde.e((String)entry.getKey(), afe, (Map.Entry)entry) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry.getValue() == null) {
                         continue;
                     }
-                    LoganSquare.typeConverterFor((Class)fpf.class).serialize((Object)entry.getValue(), "lslocalaudiospacesElement", false, tfe);
+                    LoganSquare.typeConverterFor((Class)rof.class).serialize((Object)entry.getValue(), "lslocalaudiospacesElement", false, afe);
                 }
             }
-            tfe.h();
+            afe.h();
         }
-        final HashMap a = jsonLiveEventMetadataResponse$JsonTwitterObjects.a;
+        final HashMap a = jsonTwitterObjects.a;
         if (a != null) {
-            final Iterator h2 = q1a.h(tfe, "broadcasts", a);
-            while (h2.hasNext()) {
-                final Map.Entry<String, b> entry2 = h2.next();
-                if (o1a.g((String)entry2.getKey(), tfe, (Map.Entry)entry2) == null) {
-                    tfe.j();
+            final Iterator z2 = mw.z(afe, "broadcasts", a);
+            while (z2.hasNext()) {
+                final Map.Entry<String, b> entry2 = z2.next();
+                if (sde.e((String)entry2.getKey(), afe, (Map.Entry)entry2) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry2.getValue() == null) {
                         continue;
                     }
-                    LoganSquare.typeConverterFor((Class)b.class).serialize((Object)entry2.getValue(), "lslocalbroadcastsElement", false, tfe);
+                    LoganSquare.typeConverterFor((Class)b.class).serialize((Object)entry2.getValue(), "lslocalbroadcastsElement", false, afe);
                 }
             }
-            tfe.h();
+            afe.h();
         }
-        final HashMap c = jsonLiveEventMetadataResponse$JsonTwitterObjects.c;
+        final HashMap c = jsonTwitterObjects.c;
         if (c != null) {
-            final Iterator h3 = q1a.h(tfe, "live_events", c);
-            while (h3.hasNext()) {
-                final Map.Entry<String, qof> entry3 = h3.next();
-                if (o1a.g((String)entry3.getKey(), tfe, (Map.Entry)entry3) == null) {
-                    tfe.j();
+            final Iterator z3 = mw.z(afe, "live_events", c);
+            while (z3.hasNext()) {
+                final Map.Entry<String, cof> entry3 = z3.next();
+                if (sde.e((String)entry3.getKey(), afe, (Map.Entry)entry3) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry3.getValue() == null) {
                         continue;
                     }
-                    LoganSquare.typeConverterFor((Class)qof.class).serialize((Object)entry3.getValue(), "lslocallive_eventsElement", false, tfe);
+                    LoganSquare.typeConverterFor((Class)cof.class).serialize((Object)entry3.getValue(), "lslocallive_eventsElement", false, afe);
                 }
             }
-            tfe.h();
+            afe.h();
         }
-        final HashMap d = jsonLiveEventMetadataResponse$JsonTwitterObjects.d;
+        final HashMap d = jsonTwitterObjects.d;
         if (d != null) {
-            final Iterator h4 = q1a.h(tfe, "slates", d);
-            while (h4.hasNext()) {
-                final Map.Entry<String, mdq> entry4 = h4.next();
-                if (o1a.g((String)entry4.getKey(), tfe, (Map.Entry)entry4) == null) {
-                    tfe.j();
+            final Iterator z4 = mw.z(afe, "slates", d);
+            while (z4.hasNext()) {
+                final Map.Entry<String, deq> entry4 = z4.next();
+                if (sde.e((String)entry4.getKey(), afe, (Map.Entry)entry4) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry4.getValue() == null) {
                         continue;
                     }
-                    LoganSquare.typeConverterFor((Class)mdq.class).serialize((Object)entry4.getValue(), "lslocalslatesElement", false, tfe);
+                    LoganSquare.typeConverterFor((Class)deq.class).serialize((Object)entry4.getValue(), "lslocalslatesElement", false, afe);
                 }
             }
-            tfe.h();
+            afe.h();
         }
-        final HashMap e = jsonLiveEventMetadataResponse$JsonTwitterObjects.e;
+        final HashMap e = jsonTwitterObjects.e;
         if (e != null) {
-            final Iterator h5 = q1a.h(tfe, "tweets", e);
-            while (h5.hasNext()) {
-                final Map.Entry<String, rh0> entry5 = h5.next();
-                if (o1a.g((String)entry5.getKey(), tfe, (Map.Entry)entry5) == null) {
-                    tfe.j();
+            final Iterator z5 = mw.z(afe, "tweets", e);
+            while (z5.hasNext()) {
+                final Map.Entry<String, nh0> entry5 = z5.next();
+                if (sde.e((String)entry5.getKey(), afe, (Map.Entry)entry5) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry5.getValue() == null) {
                         continue;
                     }
-                    LoganSquare.typeConverterFor((Class)rh0.class).serialize((Object)entry5.getValue(), "lslocaltweetsElement", false, tfe);
+                    LoganSquare.typeConverterFor((Class)nh0.class).serialize((Object)entry5.getValue(), "lslocaltweetsElement", false, afe);
                 }
             }
-            tfe.h();
+            afe.h();
         }
-        final HashMap f = jsonLiveEventMetadataResponse$JsonTwitterObjects.f;
+        final HashMap f = jsonTwitterObjects.f;
         if (f != null) {
-            final Iterator h6 = q1a.h(tfe, "users", f);
-            while (h6.hasNext()) {
-                final Map.Entry<String, hfv> entry6 = h6.next();
-                if (o1a.g((String)entry6.getKey(), tfe, (Map.Entry)entry6) == null) {
-                    tfe.j();
+            final Iterator z6 = mw.z(afe, "users", f);
+            while (z6.hasNext()) {
+                final Map.Entry<String, cgv> entry6 = z6.next();
+                if (sde.e((String)entry6.getKey(), afe, (Map.Entry)entry6) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry6.getValue() == null) {
                         continue;
                     }
-                    LoganSquare.typeConverterFor((Class)hfv.class).serialize((Object)entry6.getValue(), "lslocalusersElement", false, tfe);
+                    LoganSquare.typeConverterFor((Class)cgv.class).serialize((Object)entry6.getValue(), "lslocalusersElement", false, afe);
                 }
             }
-            tfe.h();
+            afe.h();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveEventMetadataResponse$JsonTwitterObjects jsonLiveEventMetadataResponse$JsonTwitterObjects, String s, final khe khe) throws IOException {
-        if ("audiospaces".equals(s)) {
-            if (khe.e() == lje.K0) {
+    public static void parseField(final JsonLiveEventMetadataResponse.JsonTwitterObjects jsonTwitterObjects, String j, final tge tge) throws IOException {
+        if ("audiospaces".equals(j)) {
+            if (tge.e() == vie.L0) {
                 final HashMap b = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    final String j = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
-                        b.put(j, null);
+                while (tge.h0() != vie.M0) {
+                    final String i = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
+                        b.put(i, null);
                     }
                     else {
-                        b.put(j, LoganSquare.typeConverterFor((Class)fpf.class).parse(khe));
+                        b.put(i, LoganSquare.typeConverterFor((Class)rof.class).parse(tge));
                     }
                 }
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.b = b;
+                jsonTwitterObjects.b = b;
             }
             else {
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.b = null;
+                jsonTwitterObjects.b = null;
             }
         }
-        else if ("broadcasts".equals(s)) {
-            if (khe.e() == lje.K0) {
+        else if ("broadcasts".equals(j)) {
+            if (tge.e() == vie.L0) {
                 final HashMap a = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    s = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
-                        a.put(s, null);
+                while (tge.h0() != vie.M0) {
+                    final String k = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
+                        a.put(k, null);
                     }
                     else {
-                        a.put(s, LoganSquare.typeConverterFor((Class)b.class).parse(khe));
+                        a.put(k, LoganSquare.typeConverterFor((Class)b.class).parse(tge));
                     }
                 }
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.a = a;
+                jsonTwitterObjects.a = a;
             }
             else {
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.a = null;
+                jsonTwitterObjects.a = null;
             }
         }
-        else if ("live_events".equals(s)) {
-            if (khe.e() == lje.K0) {
+        else if ("live_events".equals(j)) {
+            if (tge.e() == vie.L0) {
                 final HashMap c = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    s = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
-                        c.put(s, null);
+                while (tge.h0() != vie.M0) {
+                    j = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
+                        c.put(j, null);
                     }
                     else {
-                        c.put(s, LoganSquare.typeConverterFor((Class)qof.class).parse(khe));
+                        c.put(j, LoganSquare.typeConverterFor((Class)cof.class).parse(tge));
                     }
                 }
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.c = c;
+                jsonTwitterObjects.c = c;
             }
             else {
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.c = null;
+                jsonTwitterObjects.c = null;
             }
         }
-        else if ("slates".equals(s)) {
-            if (khe.e() == lje.K0) {
+        else if ("slates".equals(j)) {
+            if (tge.e() == vie.L0) {
                 final HashMap d = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    final String i = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
-                        d.put(i, null);
+                while (tge.h0() != vie.M0) {
+                    final String l = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
+                        d.put(l, null);
                     }
                     else {
-                        d.put(i, LoganSquare.typeConverterFor((Class)mdq.class).parse(khe));
+                        d.put(l, LoganSquare.typeConverterFor((Class)deq.class).parse(tge));
                     }
                 }
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.d = d;
+                jsonTwitterObjects.d = d;
             }
             else {
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.d = null;
+                jsonTwitterObjects.d = null;
             }
         }
-        else if ("tweets".equals(s)) {
-            if (khe.e() == lje.K0) {
+        else if ("tweets".equals(j)) {
+            if (tge.e() == vie.L0) {
                 final HashMap e = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    final String k = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
-                        e.put(k, null);
+                while (tge.h0() != vie.M0) {
+                    final String m = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
+                        e.put(m, null);
                     }
                     else {
-                        e.put(k, LoganSquare.typeConverterFor((Class)rh0.class).parse(khe));
+                        e.put(m, LoganSquare.typeConverterFor((Class)nh0.class).parse(tge));
                     }
                 }
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.e = e;
+                jsonTwitterObjects.e = e;
             }
             else {
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.e = null;
+                jsonTwitterObjects.e = null;
             }
         }
-        else if ("users".equals(s)) {
-            if (khe.e() == lje.K0) {
+        else if ("users".equals(j)) {
+            if (tge.e() == vie.L0) {
                 final HashMap f = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    final String l = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
-                        f.put(l, null);
+                while (tge.h0() != vie.M0) {
+                    final String j2 = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
+                        f.put(j2, null);
                     }
                     else {
-                        f.put(l, LoganSquare.typeConverterFor((Class)hfv.class).parse(khe));
+                        f.put(j2, LoganSquare.typeConverterFor((Class)cgv.class).parse(tge));
                     }
                 }
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.f = f;
+                jsonTwitterObjects.f = f;
             }
             else {
-                jsonLiveEventMetadataResponse$JsonTwitterObjects.f = null;
+                jsonTwitterObjects.f = null;
             }
         }
     }
     
-    public JsonLiveEventMetadataResponse$JsonTwitterObjects parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveEventMetadataResponse.JsonTwitterObjects parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveEventMetadataResponse$JsonTwitterObjects jsonLiveEventMetadataResponse$JsonTwitterObjects, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveEventMetadataResponse$JsonTwitterObjects, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveEventMetadataResponse.JsonTwitterObjects jsonTwitterObjects, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTwitterObjects, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveEventMetadataResponse.JsonTwitterObjects)o, afe, b);
     }
 }

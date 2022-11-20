@@ -10,33 +10,33 @@ import com.twitter.rooms.model.helpers.RoomUserItem;
 import java.util.Set;
 import com.twitter.rooms.di.room.RoomObjectGraph;
 
-public final class s extends gue implements rtb<RoomObjectGraph, oyv>
+public final class s extends ste implements qsb<RoomObjectGraph, fzv>
 {
-    public final /* synthetic */ gqn C0;
-    public final /* synthetic */ Set<RoomUserItem> D0;
-    public final /* synthetic */ Set<RoomUserItem> E0;
-    public final /* synthetic */ Set<RoomUserItem> F0;
-    public final /* synthetic */ Set<RoomUserItem> G0;
-    public final /* synthetic */ RoomStateManager H0;
+    public final vqn D0;
+    public final Set<RoomUserItem> E0;
+    public final Set<RoomUserItem> F0;
+    public final Set<RoomUserItem> G0;
+    public final Set<RoomUserItem> H0;
+    public final RoomStateManager I0;
     
-    public s(final gqn c0, final Set<RoomUserItem> d0, final Set<RoomUserItem> e0, final Set<RoomUserItem> f0, final Set<RoomUserItem> g0, final RoomStateManager h0) {
-        this.C0 = c0;
+    public s(final vqn d0, final Set<RoomUserItem> e0, final Set<RoomUserItem> f0, final Set<RoomUserItem> g0, final Set<RoomUserItem> h0, final RoomStateManager i0) {
         this.D0 = d0;
         this.E0 = e0;
         this.F0 = f0;
         this.G0 = g0;
         this.H0 = h0;
+        this.I0 = i0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
         final RoomObjectGraph roomObjectGraph = (RoomObjectGraph)o;
-        zzd.f((Object)roomObjectGraph, "$this$withCurrentRoom");
-        final boolean b = this.C0.d == qh6.C0;
-        final boolean empty = ymp.Y(ymp.a0((Set)this.D0, (Iterable)this.E0), (Iterable)ymp.a0((Set)this.F0, (Iterable)this.G0)).isEmpty();
+        czd.f((Object)roomObjectGraph, "$this$withCurrentRoom");
+        final boolean b = this.D0.d == wg6.D0;
+        final boolean empty = onp.Y0(onp.a1((Set)this.E0, (Iterable)this.F0), (Iterable)onp.a1((Set)this.G0, (Iterable)this.H0)).isEmpty();
         if (b && (empty ^ true)) {
-            final j7o s3 = roomObjectGraph.s3();
-            if (!((hr0)s3.c).e()) {
+            final y7o s3 = roomObjectGraph.s3();
+            if (!((ar0)s3.c).e()) {
                 if (!s3.f.hasNext()) {
                     s3.f = s3.e.iterator();
                 }
@@ -47,14 +47,14 @@ public final class s extends gue implements rtb<RoomObjectGraph, oyv>
                     s3.a((String)s3.f.next(), true);
                 }
                 else {
-                    s3.g.c(b5j.timer(20L, TimeUnit.MINUTES).subscribe((fk6)new ccj((rtb)new k7o(s3), 12)));
+                    s3.g.c(h5j.timer(20L, TimeUnit.MINUTES).subscribe((lj6)new qsq((qsb)new z7o(s3), 5)));
                 }
             }
         }
-        final Set y = ymp.Y((Set)this.D0, (Iterable)this.F0);
-        final xqn r1 = this.H0.r1;
-        Objects.requireNonNull(r1);
-        r1.a.onNext((Object)y);
-        return oyv.a;
+        final Set y0 = onp.Y0((Set)this.E0, (Iterable)this.G0);
+        final mrn s4 = this.I0.s1;
+        Objects.requireNonNull(s4);
+        s4.a.onNext((Object)y0);
+        return fzv.a;
     }
 }

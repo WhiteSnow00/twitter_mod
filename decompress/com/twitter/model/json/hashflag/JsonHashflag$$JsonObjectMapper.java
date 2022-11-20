@@ -12,56 +12,56 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonHashflag$$JsonObjectMapper extends JsonMapper<JsonHashflag>
 {
-    public static JsonHashflag _parse(final khe khe) throws IOException {
+    public static JsonHashflag _parse(final tge tge) throws IOException {
         final JsonHashflag jsonHashflag = new JsonHashflag();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonHashflag, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonHashflag, d, tge);
+            tge.l0();
         }
         return jsonHashflag;
     }
     
-    public static void _serialize(final JsonHashflag jsonHashflag, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonHashflag jsonHashflag, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList e = jsonHashflag.e;
         if (e != null) {
-            final Iterator g = q1a.g(tfe, "animations", e);
-            while (g.hasNext()) {
-                final gb0 gb0 = g.next();
-                if (gb0 != null) {
-                    LoganSquare.typeConverterFor((Class)gb0.class).serialize((Object)gb0, "lslocalanimationsElement", false, tfe);
+            final Iterator a = br.A(afe, "animations", e);
+            while (a.hasNext()) {
+                final cb0 cb0 = a.next();
+                if (cb0 != null) {
+                    LoganSquare.typeConverterFor((Class)cb0.class).serialize((Object)cb0, "lslocalanimationsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("assetUrl", jsonHashflag.b);
-        tfe.u0("endingTimestampMs", jsonHashflag.d);
-        tfe.u0("hashtag", jsonHashflag.a);
-        tfe.u0("startingTimestampMs", jsonHashflag.c);
+        afe.t0("assetUrl", jsonHashflag.b);
+        afe.t0("endingTimestampMs", jsonHashflag.d);
+        afe.t0("hashtag", jsonHashflag.a);
+        afe.t0("startingTimestampMs", jsonHashflag.c);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonHashflag jsonHashflag, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonHashflag jsonHashflag, final String s, final tge tge) throws IOException {
         if ("animations".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList e = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final gb0 gb0 = (gb0)LoganSquare.typeConverterFor((Class)gb0.class).parse(khe);
-                    if (gb0 != null) {
-                        e.add(gb0);
+                while (tge.h0() != vie.O0) {
+                    final cb0 cb0 = (cb0)LoganSquare.typeConverterFor((Class)cb0.class).parse(tge);
+                    if (cb0 != null) {
+                        e.add(cb0);
                     }
                 }
                 jsonHashflag.e = e;
@@ -73,26 +73,34 @@ public final class JsonHashflag$$JsonObjectMapper extends JsonMapper<JsonHashfla
         else if (!"assetUrl".equals(s) && !"asset_url".equals(s)) {
             if (!"endingTimestampMs".equals(s) && !"ending_timestamp_ms".equals(s)) {
                 if ("hashtag".equals(s)) {
-                    jsonHashflag.a = khe.T((String)null);
+                    jsonHashflag.a = tge.T((String)null);
                 }
                 else if ("startingTimestampMs".equals(s) || "starting_timestamp_ms".equals(s)) {
-                    jsonHashflag.c = khe.T((String)null);
+                    jsonHashflag.c = tge.T((String)null);
                 }
             }
             else {
-                jsonHashflag.d = khe.T((String)null);
+                jsonHashflag.d = tge.T((String)null);
             }
         }
         else {
-            jsonHashflag.b = khe.T((String)null);
+            jsonHashflag.b = tge.T((String)null);
         }
     }
     
-    public JsonHashflag parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonHashflag parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonHashflag jsonHashflag, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonHashflag, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonHashflag jsonHashflag, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonHashflag, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonHashflag)o, afe, b);
     }
 }

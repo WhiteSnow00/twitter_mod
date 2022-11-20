@@ -12,63 +12,63 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFoundMediaData$$JsonObjectMapper extends JsonMapper<JsonFoundMediaData>
 {
-    public static JsonFoundMediaData _parse(final khe khe) throws IOException {
+    public static JsonFoundMediaData _parse(final tge tge) throws IOException {
         final JsonFoundMediaData jsonFoundMediaData = new JsonFoundMediaData();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFoundMediaData, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFoundMediaData, d, tge);
+            tge.l0();
         }
         return jsonFoundMediaData;
     }
     
-    public static void _serialize(final JsonFoundMediaData jsonFoundMediaData, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFoundMediaData jsonFoundMediaData, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList a = jsonFoundMediaData.a;
         if (a != null) {
-            final Iterator g = q1a.g(tfe, "groups", a);
-            while (g.hasNext()) {
-                final nnb nnb = g.next();
-                if (nnb != null) {
-                    LoganSquare.typeConverterFor((Class)nnb.class).serialize((Object)nnb, "lslocalgroupsElement", false, tfe);
+            final Iterator a2 = br.A(afe, "groups", a);
+            while (a2.hasNext()) {
+                final kmb kmb = a2.next();
+                if (kmb != null) {
+                    LoganSquare.typeConverterFor((Class)kmb.class).serialize((Object)kmb, "lslocalgroupsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         final ArrayList b2 = jsonFoundMediaData.b;
         if (b2 != null) {
-            final Iterator g2 = q1a.g(tfe, "items", b2);
-            while (g2.hasNext()) {
-                final qnb qnb = g2.next();
-                if (qnb != null) {
-                    LoganSquare.typeConverterFor((Class)qnb.class).serialize((Object)qnb, "lslocalitemsElement", false, tfe);
+            final Iterator a3 = br.A(afe, "items", b2);
+            while (a3.hasNext()) {
+                final nmb nmb = a3.next();
+                if (nmb != null) {
+                    LoganSquare.typeConverterFor((Class)nmb.class).serialize((Object)nmb, "lslocalitemsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFoundMediaData jsonFoundMediaData, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFoundMediaData jsonFoundMediaData, final String s, final tge tge) throws IOException {
         if ("groups".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final nnb nnb = (nnb)LoganSquare.typeConverterFor((Class)nnb.class).parse(khe);
-                    if (nnb != null) {
-                        a.add(nnb);
+                while (tge.h0() != vie.O0) {
+                    final kmb kmb = (kmb)LoganSquare.typeConverterFor((Class)kmb.class).parse(tge);
+                    if (kmb != null) {
+                        a.add(kmb);
                     }
                 }
                 jsonFoundMediaData.a = a;
@@ -78,12 +78,12 @@ public final class JsonFoundMediaData$$JsonObjectMapper extends JsonMapper<JsonF
             }
         }
         else if ("items".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList b = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final qnb qnb = (qnb)LoganSquare.typeConverterFor((Class)qnb.class).parse(khe);
-                    if (qnb != null) {
-                        b.add(qnb);
+                while (tge.h0() != vie.O0) {
+                    final nmb nmb = (nmb)LoganSquare.typeConverterFor((Class)nmb.class).parse(tge);
+                    if (nmb != null) {
+                        b.add(nmb);
                     }
                 }
                 jsonFoundMediaData.b = b;
@@ -94,11 +94,19 @@ public final class JsonFoundMediaData$$JsonObjectMapper extends JsonMapper<JsonF
         }
     }
     
-    public JsonFoundMediaData parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFoundMediaData parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFoundMediaData jsonFoundMediaData, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFoundMediaData, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFoundMediaData jsonFoundMediaData, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFoundMediaData, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFoundMediaData)o, afe, b);
     }
 }

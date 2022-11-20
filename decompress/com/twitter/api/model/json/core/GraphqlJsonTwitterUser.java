@@ -12,7 +12,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject;
 public class GraphqlJsonTwitterUser extends RestJsonTwitterUser
 {
     @JsonField(name = { "professional" })
-    public v3l A0;
+    public e4l A0;
     @JsonField(name = { "has_nft_avatar", "ext_has_nft_avatar" })
     public Boolean B0;
     @JsonField(name = { "verified_phone_status" })
@@ -20,7 +20,7 @@ public class GraphqlJsonTwitterUser extends RestJsonTwitterUser
     @JsonField(name = { "is_blue_verified", "ext_is_blue_verified" })
     public Boolean D0;
     @JsonField(name = { "affiliates_highlighted_label" })
-    public kdw k0;
+    public xdw k0;
     @JsonField(name = { "is_profile_translatable" })
     public Boolean l0;
     @JsonField
@@ -38,7 +38,7 @@ public class GraphqlJsonTwitterUser extends RestJsonTwitterUser
     @JsonField(name = { "exclusive_tweet_following" })
     public Boolean s0;
     @JsonField(name = { "tipjar" })
-    public fdt t0;
+    public udt t0;
     @JsonField(name = { "smart_blocked_by" })
     public Boolean u0;
     @JsonField(name = { "smart_blocking" })

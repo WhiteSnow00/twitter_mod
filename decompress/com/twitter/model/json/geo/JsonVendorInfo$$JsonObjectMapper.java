@@ -10,53 +10,61 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonVendorInfo$$JsonObjectMapper extends JsonMapper<JsonVendorInfo>
 {
-    public static JsonVendorInfo _parse(final khe khe) throws IOException {
+    public static JsonVendorInfo _parse(final tge tge) throws IOException {
         final JsonVendorInfo jsonVendorInfo = new JsonVendorInfo();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonVendorInfo, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonVendorInfo, d, tge);
+            tge.l0();
         }
         return jsonVendorInfo;
     }
     
-    public static void _serialize(final JsonVendorInfo jsonVendorInfo, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonVendorInfo jsonVendorInfo, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonVendorInfo.b != null) {
-            LoganSquare.typeConverterFor((Class)vpw$a.class).serialize((Object)jsonVendorInfo.b, "foursquare", true, tfe);
+            LoganSquare.typeConverterFor((Class)pqw$a.class).serialize((Object)jsonVendorInfo.b, "foursquare", true, afe);
         }
         if (jsonVendorInfo.a != null) {
-            LoganSquare.typeConverterFor((Class)vpw.c.class).serialize((Object)jsonVendorInfo.a, "yelp", true, tfe);
+            LoganSquare.typeConverterFor((Class)pqw$c.class).serialize((Object)jsonVendorInfo.a, "yelp", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonVendorInfo jsonVendorInfo, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonVendorInfo jsonVendorInfo, final String s, final tge tge) throws IOException {
         if ("foursquare".equals(s)) {
-            jsonVendorInfo.b = (vpw$a)LoganSquare.typeConverterFor((Class)vpw$a.class).parse(khe);
+            jsonVendorInfo.b = (pqw$a)LoganSquare.typeConverterFor((Class)pqw$a.class).parse(tge);
         }
         else if ("yelp".equals(s)) {
-            jsonVendorInfo.a = (vpw.c)LoganSquare.typeConverterFor((Class)vpw.c.class).parse(khe);
+            jsonVendorInfo.a = (pqw$c)LoganSquare.typeConverterFor((Class)pqw$c.class).parse(tge);
         }
     }
     
-    public JsonVendorInfo parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonVendorInfo parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonVendorInfo jsonVendorInfo, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonVendorInfo, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonVendorInfo jsonVendorInfo, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonVendorInfo, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonVendorInfo)o, afe, b);
     }
 }

@@ -10,28 +10,27 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNudge extends lhh<szi>
+public class JsonNudge extends qhh<yzi>
 {
     @SuppressLint({ "NullableEnum" })
-    @JsonField(typeConverter = yge.class)
-    public o1j a;
+    @JsonField(typeConverter = hge.class)
+    public u1j a;
     @JsonField
     public String b;
     @JsonField
     public String c;
     @JsonField
-    public ieu d;
+    public bfu d;
     
-    @Override
-    public final h4j t() {
-        final szi$a szi$a = new szi$a();
-        szi$a.b = this.a;
-        szi$a.a = this.b;
-        szi$a.c = this.c;
-        final ieu d = this.d;
+    public final n4j t() {
+        final yzi$a yzi$a = new yzi$a();
+        yzi$a.b = this.a;
+        yzi$a.a = this.b;
+        yzi$a.c = this.c;
+        final bfu d = this.d;
         if (d != null) {
-            szi$a.d = d.a;
+            yzi$a.d = d.a;
         }
-        return (h4j)szi$a;
+        return (n4j)yzi$a;
     }
 }

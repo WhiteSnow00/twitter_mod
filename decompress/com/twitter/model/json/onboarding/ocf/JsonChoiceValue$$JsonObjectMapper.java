@@ -11,66 +11,74 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonChoiceValue$$JsonObjectMapper extends JsonMapper<JsonChoiceValue>
 {
-    public static JsonChoiceValue _parse(final khe khe) throws IOException {
+    public static JsonChoiceValue _parse(final tge tge) throws IOException {
         final JsonChoiceValue jsonChoiceValue = new JsonChoiceValue();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonChoiceValue, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonChoiceValue, d, tge);
+            tge.l0();
         }
         return jsonChoiceValue;
     }
     
-    public static void _serialize(final JsonChoiceValue jsonChoiceValue, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonChoiceValue jsonChoiceValue, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonChoiceValue.d != null) {
-            tfe.i("icon");
-            JsonOcfHorizonIcon$$JsonObjectMapper._serialize(jsonChoiceValue.d, tfe, true);
+            afe.i("icon");
+            JsonOcfHorizonIcon$$JsonObjectMapper._serialize(jsonChoiceValue.d, afe, true);
         }
-        tfe.u0("id", jsonChoiceValue.a);
+        afe.t0("id", jsonChoiceValue.a);
         if (jsonChoiceValue.c != null) {
-            tfe.i("subtext");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceValue.c, tfe, true);
+            afe.i("subtext");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceValue.c, afe, true);
         }
         if (jsonChoiceValue.b != null) {
-            tfe.i("text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceValue.b, tfe, true);
+            afe.i("text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceValue.b, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonChoiceValue jsonChoiceValue, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonChoiceValue jsonChoiceValue, final String s, final tge tge) throws IOException {
         if ("icon".equals(s)) {
-            jsonChoiceValue.d = JsonOcfHorizonIcon$$JsonObjectMapper._parse(khe);
+            jsonChoiceValue.d = JsonOcfHorizonIcon$$JsonObjectMapper._parse(tge);
         }
         else if ("id".equals(s)) {
-            jsonChoiceValue.a = khe.T((String)null);
+            jsonChoiceValue.a = tge.T((String)null);
         }
         else if ("subtext".equals(s)) {
-            jsonChoiceValue.c = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonChoiceValue.c = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("text".equals(s)) {
-            jsonChoiceValue.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonChoiceValue.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonChoiceValue parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonChoiceValue parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonChoiceValue jsonChoiceValue, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonChoiceValue, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonChoiceValue jsonChoiceValue, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonChoiceValue, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonChoiceValue)o, afe, b);
     }
 }

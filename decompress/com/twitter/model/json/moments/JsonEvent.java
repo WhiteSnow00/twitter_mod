@@ -9,16 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonEvent extends lhh<aca>
+public class JsonEvent extends qhh<iba>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     
-    @Override
-    public final h4j t() {
-        final aca.a a = new aca.a();
+    public final n4j t() {
+        final iba.a a = new iba.a();
         a.a = this.a;
         a.b = this.b;
         return a;

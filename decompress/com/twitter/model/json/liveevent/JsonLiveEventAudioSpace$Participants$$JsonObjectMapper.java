@@ -11,50 +11,50 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLiveEventAudioSpace$Participants$$JsonObjectMapper extends JsonMapper<JsonLiveEventAudioSpace.Participants>
 {
-    public static JsonLiveEventAudioSpace.Participants _parse(final khe khe) throws IOException {
+    public static JsonLiveEventAudioSpace.Participants _parse(final tge tge) throws IOException {
         final JsonLiveEventAudioSpace.Participants participants = new JsonLiveEventAudioSpace.Participants();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(participants, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(participants, d, tge);
+            tge.l0();
         }
         return participants;
     }
     
-    public static void _serialize(final JsonLiveEventAudioSpace.Participants participants, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveEventAudioSpace.Participants participants, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList a = participants.a;
         if (a != null) {
-            final Iterator g = q1a.g(tfe, "admins", a);
-            while (g.hasNext()) {
-                final JsonLiveEventAudioSpace.Admins admins = g.next();
+            final Iterator a2 = br.A(afe, "admins", a);
+            while (a2.hasNext()) {
+                final JsonLiveEventAudioSpace.Admins admins = a2.next();
                 if (admins != null) {
-                    JsonLiveEventAudioSpace$Admins$$JsonObjectMapper._serialize(admins, tfe, true);
+                    JsonLiveEventAudioSpace$Admins$$JsonObjectMapper._serialize(admins, afe, true);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveEventAudioSpace.Participants participants, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveEventAudioSpace.Participants participants, final String s, final tge tge) throws IOException {
         if ("admins".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final JsonLiveEventAudioSpace.Admins parse = JsonLiveEventAudioSpace$Admins$$JsonObjectMapper._parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final JsonLiveEventAudioSpace.Admins parse = JsonLiveEventAudioSpace$Admins$$JsonObjectMapper._parse(tge);
                     if (parse != null) {
                         a.add(parse);
                     }
@@ -67,11 +67,19 @@ public final class JsonLiveEventAudioSpace$Participants$$JsonObjectMapper extend
         }
     }
     
-    public JsonLiveEventAudioSpace.Participants parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveEventAudioSpace.Participants parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveEventAudioSpace.Participants participants, final tfe tfe, final boolean b) throws IOException {
-        _serialize(participants, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveEventAudioSpace.Participants participants, final afe afe, final boolean b) throws IOException {
+        _serialize(participants, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveEventAudioSpace.Participants)o, afe, b);
     }
 }

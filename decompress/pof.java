@@ -1,42 +1,25 @@
+import com.twitter.model.liveevent.LiveEventConfiguration;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pof implements xbj<Object>
+public final class pof implements hzf
 {
-    public Object C0;
-    public final /* synthetic */ lbs D0;
-    public final /* synthetic */ Object E0;
-    public final /* synthetic */ xub F0;
-    public final /* synthetic */ q2h G0;
+    public static final pof a;
     
-    public pof(final lbs d0, final Object e0, final xub f0, final q2h g0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = g0;
-        this.C0 = null;
+    static {
+        a = new pof();
     }
     
-    public final void a(final Object o) {
-        ((krx)this.D0).a((Runnable)new Runnable() {
-            @Override
-            public final void run() {
-                synchronized (pof.this.E0) {
-                    final Object apply = pof.this.F0.apply(o);
-                    final pof d0 = pof.this;
-                    final Object c0 = d0.C0;
-                    if (c0 == null && apply != null) {
-                        d0.C0 = apply;
-                        ((sth<Object>)d0.G0).i(apply);
-                    }
-                    else if (c0 != null && !c0.equals(apply)) {
-                        final pof d2 = pof.this;
-                        d2.C0 = apply;
-                        ((sth<Object>)d2.G0).i(apply);
-                    }
-                }
-            }
-        });
+    public final Object a(final Object o, final Object o2, final Object o3) {
+        final LiveEventConfiguration liveEventConfiguration = (LiveEventConfiguration)o;
+        final hvf hvf = (hvf)o2;
+        final i1 e = (i1)o3;
+        final hi2 hi2 = new hi2(hvf, liveEventConfiguration);
+        ((d0x)hi2).e = e;
+        final int a = c5j.a;
+        ((d0x)hi2).c = true;
+        return hi2;
     }
 }

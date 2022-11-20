@@ -4,6 +4,9 @@
 
 public enum zw
 {
-    C0, 
-    D0;
+    D0, 
+    E0, 
+    F0;
+    
+    public static final zw[] G0;
 }

@@ -10,55 +10,63 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTrendMetadata$$JsonObjectMapper extends JsonMapper<JsonTrendMetadata>
 {
-    public static JsonTrendMetadata _parse(final khe khe) throws IOException {
+    public static JsonTrendMetadata _parse(final tge tge) throws IOException {
         final JsonTrendMetadata jsonTrendMetadata = new JsonTrendMetadata();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTrendMetadata, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTrendMetadata, d, tge);
+            tge.l0();
         }
         return jsonTrendMetadata;
     }
     
-    public static void _serialize(final JsonTrendMetadata jsonTrendMetadata, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTrendMetadata jsonTrendMetadata, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("domainContext", jsonTrendMetadata.c);
-        tfe.u0("metaDescription", jsonTrendMetadata.b);
+        afe.t0("domainContext", jsonTrendMetadata.c);
+        afe.t0("metaDescription", jsonTrendMetadata.b);
         if (jsonTrendMetadata.a != null) {
-            LoganSquare.typeConverterFor((Class)q7t.class).serialize((Object)jsonTrendMetadata.a, "url", true, tfe);
+            LoganSquare.typeConverterFor((Class)i8t.class).serialize((Object)jsonTrendMetadata.a, "url", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTrendMetadata jsonTrendMetadata, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTrendMetadata jsonTrendMetadata, final String s, final tge tge) throws IOException {
         if ("domainContext".equals(s)) {
-            jsonTrendMetadata.c = khe.T((String)null);
+            jsonTrendMetadata.c = tge.T((String)null);
         }
         else if ("metaDescription".equals(s)) {
-            jsonTrendMetadata.b = khe.T((String)null);
+            jsonTrendMetadata.b = tge.T((String)null);
         }
         else if ("url".equals(s)) {
-            jsonTrendMetadata.a = (q7t)LoganSquare.typeConverterFor((Class)q7t.class).parse(khe);
+            jsonTrendMetadata.a = (i8t)LoganSquare.typeConverterFor((Class)i8t.class).parse(tge);
         }
     }
     
-    public JsonTrendMetadata parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTrendMetadata parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTrendMetadata jsonTrendMetadata, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTrendMetadata, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTrendMetadata jsonTrendMetadata, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTrendMetadata, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTrendMetadata)o, afe, b);
     }
 }

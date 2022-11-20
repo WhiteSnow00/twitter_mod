@@ -1,102 +1,163 @@
-import android.view.View;
-import com.twitter.ui.user.BaseUserView;
-import android.view.LayoutInflater;
-import android.widget.TextView;
-import com.twitter.ui.widget.ToggleImageButton;
-import java.util.Objects;
-import com.twitter.ui.user.BaseUserView$a;
-import android.view.ViewGroup;
 import com.twitter.util.user.UserIdentifier;
-import android.content.Context;
-import com.twitter.ui.user.UserView;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class bdw extends v3e<hbw, dkw<UserView>>
+public abstract class bdw implements adw
 {
-    public final Context d;
-    public final UserIdentifier e;
-    public final bdw.bdw$a f;
+    public final amr<cgv> c;
+    public final amr<ziw> d;
+    public final long e;
+    public cgv f;
+    public ziw g;
+    public fds h;
+    public List<UserIdentifier> i;
+    public zjw j;
     
-    public bdw(final Context d, final UserIdentifier e, final bdw.bdw$a f) {
-        super((Class)hbw.class);
+    public bdw() {
+        this.c = new mv1();
+        final mv1 d = new mv1();
         this.d = d;
-        this.e = e;
-        this.f = f;
+        final ziw g = new ziw();
+        this.g = g;
+        final gdd$b e0 = gdd.E0;
+        final int a = c5j.a;
+        this.i = (List<UserIdentifier>)e0;
+        this.j = zjw.F0;
+        d.onNext((Object)g);
+        final m4s a2 = hq1.a;
+        this.e = System.currentTimeMillis();
     }
     
-    public void n(final dkw<UserView> dkw, final hbw hbw, final ibm ibm) {
-        final UserView userView = (UserView)dkw.D0;
-        final hfv h = hbw.h;
-        pf8.r(h);
-        final long c0 = h.C0;
-        userView.setUser(h);
-        userView.setIsFollower(tdy.d0(h.H1));
-        ((BaseUserView)userView).setPromotedContent(h.a1);
-        ((BaseUserView)userView).a(bgl.d(h.F0), this.f.i);
-        if (this.f.a != null) {
-            userView.setFollowButtonClickListener((BaseUserView$a)new xcw(this, h));
+    @Override
+    public final ziw A() {
+        synchronized (this) {
+            return this.g;
         }
-        if (this.f.f != null) {
-            userView.setProfileClickListener((BaseUserView$a)new ycw(this, h));
-        }
-        if (this.f.b != null) {
-            userView.setBlockButtonClickListener((BaseUserView$a)new wcw((Object)this, (Object)h, 0));
-        }
-        if (this.f.c != null) {
-            userView.setAutoblockButtonClickListener((BaseUserView$a)new vcw((v3e)this, (Object)h, 0));
-        }
-        if (this.f.d != null) {
-            userView.setPendingButtonClickListener((BaseUserView$a)new zcw(this, h));
-        }
-        userView.d();
-        final bdw.bdw$a f = this.f;
-        if (f.h && (f.j || this.e.getId() != c0)) {
-            if (tdy.o0(h.H1) == Boolean.TRUE) {
-                userView.setAutoblockVisibility(0);
-                ((BaseUserView)userView).a((jeu)null, false);
+    }
+    
+    @Override
+    public final boolean a() {
+        return this.j == zjw.G0;
+    }
+    
+    @Override
+    public final String c() {
+        final int a = zcw.a;
+        return this.getUser().K0;
+    }
+    
+    @Override
+    public adw d(ziw g) {
+        monitorenter(this);
+        Label_0017: {
+            if (g != null) {
+                break Label_0017;
             }
-            else if (tdy.Y(h.H1)) {
-                final ToggleImageButton u0 = userView.U0;
-                if (u0 != null) {
-                    u0.setToggledOn(true);
-                }
-                userView.setBlockVisibility(0);
-                ((BaseUserView)userView).a((jeu)null, false);
+            try {
+                g = new ziw();
+                this.g = g;
+                monitorexit(this);
+                this.d.onNext((Object)g);
+                return this;
             }
-            else if (tdy.c0(h.H1)) {
-                userView.setPendingVisibility(0);
-            }
-            else {
-                userView.setFollowVisibility(0);
-                userView.setIsFollowing(tdy.e0(h.H1));
-            }
-            Objects.requireNonNull(this.f);
-        }
-        if (this.f.k) {
-            userView.d();
-            userView.setDeleteUserVisibility(0);
-            if (this.f.g != null) {
-                userView.setDeleteUserButtonClickListener((BaseUserView$a)new xno((Object)this, (Object)h, 0));
-            }
-        }
-        if (this.f.l && userView.Y0 != null) {
-            if (tdy.Y(h.H1)) {
-                final TextView z0 = userView.Z0;
-                if (z0 != null) {
-                    z0.setText((CharSequence)this.d.getString(2131952221, new Object[] { h.J0 }));
-                }
-                userView.Y0.setVisibility(0);
-            }
-            else {
-                userView.Y0.setVisibility(8);
+            finally {
+                monitorexit(this);
             }
         }
     }
     
-    public dkw<UserView> o(final ViewGroup viewGroup) {
-        return (dkw<UserView>)dkw.l0(LayoutInflater.from(((View)viewGroup).getContext()), viewGroup, 2131625946);
+    @Override
+    public final h5j<cgv> e() {
+        return (h5j<cgv>)((h5j)this.c).observeOn(gmw.x());
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        return o == this || (o instanceof adw && this.k().equals((Object)((adw)o).k()));
+    }
+    
+    @Override
+    public final List<UserIdentifier> f() {
+        synchronized (this) {
+            return this.i;
+        }
+    }
+    
+    @Override
+    public final boolean g() {
+        synchronized (this) {
+            return this.h != null;
+        }
+    }
+    
+    @Override
+    public final cgv getUser() {
+        synchronized (this) {
+            final cgv f = this.f;
+            if (f != null) {
+                return f;
+            }
+            throw new IllegalStateException("The user has not been set.");
+        }
+    }
+    
+    @Override
+    public final int hashCode() {
+        return this.k().hashCode();
+    }
+    
+    @Override
+    public final boolean i() {
+        synchronized (this) {
+            return this.i.isEmpty() ^ true;
+        }
+    }
+    
+    @Override
+    public final fds j() {
+        synchronized (this) {
+            final fds h = this.h;
+            if (h != null) {
+                return h;
+            }
+            throw new IllegalStateException("The user is not a contributee. Ensure that you check isTeamsContributee() before calling this method.");
+        }
+    }
+    
+    @Override
+    public final UserIdentifier k() {
+        final int a = zcw.a;
+        return this.getUser().f();
+    }
+    
+    @Override
+    public final h5j<ziw> l() {
+        return (h5j<ziw>)((h5j)this.d).observeOn(gmw.x());
+    }
+    
+    @Override
+    public final adw m(final ryt ryt) {
+        zcw.a((adw)this, ryt);
+        return this;
+    }
+    
+    @Override
+    public final boolean n() {
+        synchronized (this) {
+            return this.f != null;
+        }
+    }
+    
+    @Override
+    public final zjw o() {
+        return this.j;
+    }
+    
+    @Override
+    public final long s() {
+        return this.e;
     }
 }

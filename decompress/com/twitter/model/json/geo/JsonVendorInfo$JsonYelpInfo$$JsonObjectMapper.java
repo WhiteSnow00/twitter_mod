@@ -7,63 +7,71 @@ package com.twitter.model.json.geo;
 import java.io.IOException;
 import com.bluelinelabs.logansquare.JsonMapper;
 
-public final class JsonVendorInfo$JsonYelpInfo$$JsonObjectMapper extends JsonMapper<JsonVendorInfo$JsonYelpInfo>
+public final class JsonVendorInfo$JsonYelpInfo$$JsonObjectMapper extends JsonMapper<JsonVendorInfo.JsonYelpInfo>
 {
-    public static JsonVendorInfo$JsonYelpInfo _parse(final khe khe) throws IOException {
-        final JsonVendorInfo$JsonYelpInfo jsonVendorInfo$JsonYelpInfo = new JsonVendorInfo$JsonYelpInfo();
-        if (khe.e() == null) {
-            khe.i0();
+    public static JsonVendorInfo.JsonYelpInfo _parse(final tge tge) throws IOException {
+        final JsonVendorInfo.JsonYelpInfo jsonYelpInfo = new JsonVendorInfo.JsonYelpInfo();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonVendorInfo$JsonYelpInfo, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonYelpInfo, d, tge);
+            tge.l0();
         }
-        return jsonVendorInfo$JsonYelpInfo;
+        return jsonYelpInfo;
     }
     
-    public static void _serialize(final JsonVendorInfo$JsonYelpInfo jsonVendorInfo$JsonYelpInfo, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonVendorInfo.JsonYelpInfo jsonYelpInfo, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("business_id", jsonVendorInfo$JsonYelpInfo.a);
-        tfe.u0("mobile_url", jsonVendorInfo$JsonYelpInfo.c);
-        tfe.N("rating", jsonVendorInfo$JsonYelpInfo.e);
-        tfe.T("review_count", jsonVendorInfo$JsonYelpInfo.d);
-        tfe.u0("url", jsonVendorInfo$JsonYelpInfo.b);
+        afe.t0("business_id", jsonYelpInfo.a);
+        afe.t0("mobile_url", jsonYelpInfo.c);
+        afe.N("rating", jsonYelpInfo.e);
+        afe.T("review_count", jsonYelpInfo.d);
+        afe.t0("url", jsonYelpInfo.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonVendorInfo$JsonYelpInfo jsonVendorInfo$JsonYelpInfo, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonVendorInfo.JsonYelpInfo jsonYelpInfo, final String s, final tge tge) throws IOException {
         if ("business_id".equals(s)) {
-            jsonVendorInfo$JsonYelpInfo.a = khe.T((String)null);
+            jsonYelpInfo.a = tge.T((String)null);
         }
         else if ("mobile_url".equals(s)) {
-            jsonVendorInfo$JsonYelpInfo.c = khe.T((String)null);
+            jsonYelpInfo.c = tge.T((String)null);
         }
         else if ("rating".equals(s)) {
-            jsonVendorInfo$JsonYelpInfo.e = khe.p();
+            jsonYelpInfo.e = tge.p();
         }
         else if ("review_count".equals(s)) {
-            jsonVendorInfo$JsonYelpInfo.d = khe.z();
+            jsonYelpInfo.d = tge.y();
         }
         else if ("url".equals(s)) {
-            jsonVendorInfo$JsonYelpInfo.b = khe.T((String)null);
+            jsonYelpInfo.b = tge.T((String)null);
         }
     }
     
-    public JsonVendorInfo$JsonYelpInfo parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonVendorInfo.JsonYelpInfo parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonVendorInfo$JsonYelpInfo jsonVendorInfo$JsonYelpInfo, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonVendorInfo$JsonYelpInfo, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonVendorInfo.JsonYelpInfo jsonYelpInfo, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonYelpInfo, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonVendorInfo.JsonYelpInfo)o, afe, b);
     }
 }

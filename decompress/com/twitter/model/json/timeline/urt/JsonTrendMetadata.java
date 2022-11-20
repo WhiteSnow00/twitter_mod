@@ -8,10 +8,10 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTrendMetadata extends ige
+public class JsonTrendMetadata extends qfe
 {
     @JsonField
-    public q7t a;
+    public i8t a;
     @JsonField
     public String b;
     @JsonField

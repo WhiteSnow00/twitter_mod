@@ -2,22 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public enum i94
+public final class i94 extends ste implements nsb<Integer>
 {
-    public static final alp<i94> C0;
-    public static final a Companion;
-    
-    D0, 
-    E0, 
-    F0;
+    public static final i94 D0;
     
     static {
-        Companion = new a();
-        final hx6$h a = hx6.a;
-        i94.C0 = new ix6((Class)i94.class);
+        D0 = new i94();
     }
     
-    public static final class a
-    {
+    public i94() {
+        super(0);
+    }
+    
+    public final Object invoke() {
+        return asa.c().f("android_chrome_view_recycling_pool_size", 5);
     }
 }

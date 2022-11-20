@@ -9,53 +9,61 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonConfigEventBuilder$$JsonObjectMapper extends JsonMapper<JsonConfigEventBuilder>
 {
-    public static JsonConfigEventBuilder _parse(final khe khe) throws IOException {
+    public static JsonConfigEventBuilder _parse(final tge tge) throws IOException {
         final JsonConfigEventBuilder jsonConfigEventBuilder = new JsonConfigEventBuilder();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonConfigEventBuilder, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonConfigEventBuilder, d, tge);
+            tge.l0();
         }
         return jsonConfigEventBuilder;
     }
     
-    public static void _serialize(final JsonConfigEventBuilder jsonConfigEventBuilder, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonConfigEventBuilder jsonConfigEventBuilder, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.W("heartbeat_millis", jsonConfigEventBuilder.c);
-        tfe.u0("session_id", jsonConfigEventBuilder.a);
-        tfe.W("subscription_ttl_millis", jsonConfigEventBuilder.b);
+        afe.V("heartbeat_millis", jsonConfigEventBuilder.c);
+        afe.t0("session_id", jsonConfigEventBuilder.a);
+        afe.V("subscription_ttl_millis", jsonConfigEventBuilder.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonConfigEventBuilder jsonConfigEventBuilder, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonConfigEventBuilder jsonConfigEventBuilder, final String s, final tge tge) throws IOException {
         if ("heartbeat_millis".equals(s)) {
-            jsonConfigEventBuilder.c = khe.L();
+            jsonConfigEventBuilder.c = tge.K();
         }
         else if ("session_id".equals(s)) {
-            jsonConfigEventBuilder.a = khe.T((String)null);
+            jsonConfigEventBuilder.a = tge.T((String)null);
         }
         else if ("subscription_ttl_millis".equals(s)) {
-            jsonConfigEventBuilder.b = khe.L();
+            jsonConfigEventBuilder.b = tge.K();
         }
     }
     
-    public JsonConfigEventBuilder parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonConfigEventBuilder parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonConfigEventBuilder jsonConfigEventBuilder, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonConfigEventBuilder, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonConfigEventBuilder jsonConfigEventBuilder, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonConfigEventBuilder, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonConfigEventBuilder)o, afe, b);
     }
 }

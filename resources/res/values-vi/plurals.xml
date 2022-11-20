@@ -516,6 +516,18 @@
         <item quantity="one">%s Người đăng ký</item>
         <item quantity="other">%s Người đăng ký</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">ngày</item>
+        <item quantity="other">%d ngày</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">tháng</item>
+        <item quantity="other">%d tháng</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">năm</item>
+        <item quantity="other">%d năm</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d ngày</item>
         <item quantity="other">%d ngày</item>

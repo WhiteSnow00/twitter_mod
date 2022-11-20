@@ -16,48 +16,56 @@ public final class JsonOcfFooter$$JsonObjectMapper extends JsonMapper<JsonOcfFoo
         STYLE_TYPE_CONVERTER = new JsonOcfFooter.a();
     }
     
-    public static JsonOcfFooter _parse(final khe khe) throws IOException {
+    public static JsonOcfFooter _parse(final tge tge) throws IOException {
         final JsonOcfFooter jsonOcfFooter = new JsonOcfFooter();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonOcfFooter, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonOcfFooter, d, tge);
+            tge.l0();
         }
         return jsonOcfFooter;
     }
     
-    public static void _serialize(final JsonOcfFooter jsonOcfFooter, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfFooter jsonOcfFooter, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final zcj$b a = jsonOcfFooter.a;
+        final edj$b a = jsonOcfFooter.a;
         if (a != null) {
-            ((StringBasedTypeConverter)JsonOcfFooter$$JsonObjectMapper.STYLE_TYPE_CONVERTER).serialize((Object)a, "style", true, tfe);
+            ((StringBasedTypeConverter)JsonOcfFooter$$JsonObjectMapper.STYLE_TYPE_CONVERTER).serialize((Object)a, "style", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonOcfFooter jsonOcfFooter, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonOcfFooter jsonOcfFooter, final String s, final tge tge) throws IOException {
         if ("style".equals(s)) {
-            jsonOcfFooter.a = (zcj$b)((StringBasedTypeConverter)JsonOcfFooter$$JsonObjectMapper.STYLE_TYPE_CONVERTER).parse(khe);
+            jsonOcfFooter.a = (edj$b)((StringBasedTypeConverter)JsonOcfFooter$$JsonObjectMapper.STYLE_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonOcfFooter parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonOcfFooter parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonOcfFooter jsonOcfFooter, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonOcfFooter, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonOcfFooter jsonOcfFooter, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonOcfFooter, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonOcfFooter)o, afe, b);
     }
 }

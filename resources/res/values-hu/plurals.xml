@@ -516,6 +516,18 @@
         <item quantity="one">%s feliratkozó</item>
         <item quantity="other">%s feliratkozó</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">nap</item>
+        <item quantity="other">%d nap</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">hónap</item>
+        <item quantity="other">%d hónap</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">év</item>
+        <item quantity="other">%d év</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d n</item>
         <item quantity="other">%d n</item>

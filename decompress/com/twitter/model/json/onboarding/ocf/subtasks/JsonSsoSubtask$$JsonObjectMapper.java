@@ -14,98 +14,98 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSsoSubtask$$JsonObjectMapper extends JsonMapper<JsonSsoSubtask>
 {
-    public static final r4r SSO_PROVIDER_TYPE_CONVERTER;
+    public static final k5r SSO_PROVIDER_TYPE_CONVERTER;
     
     static {
-        SSO_PROVIDER_TYPE_CONVERTER = new r4r();
+        SSO_PROVIDER_TYPE_CONVERTER = new k5r();
     }
     
-    public static JsonSsoSubtask _parse(final khe khe) throws IOException {
+    public static JsonSsoSubtask _parse(final tge tge) throws IOException {
         final JsonSsoSubtask jsonSsoSubtask = new JsonSsoSubtask();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSsoSubtask, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSsoSubtask, d, tge);
+            tge.l0();
         }
         return jsonSsoSubtask;
     }
     
-    public static void _serialize(final JsonSsoSubtask jsonSsoSubtask, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSsoSubtask jsonSsoSubtask, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("auth_url", jsonSsoSubtask.g);
+        afe.t0("auth_url", jsonSsoSubtask.g);
         if (jsonSsoSubtask.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSsoSubtask.c, "cancel_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSsoSubtask.c, "cancel_link", true, afe);
         }
         if (jsonSsoSubtask.j != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonSsoSubtask.j, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonSsoSubtask.j, afe, true);
         }
-        tfe.u0("exchange_url", jsonSsoSubtask.h);
+        afe.t0("exchange_url", jsonSsoSubtask.h);
         if (jsonSsoSubtask.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSsoSubtask.b, "fail_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSsoSubtask.b, "fail_link", true, afe);
         }
         if (jsonSsoSubtask.a != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSsoSubtask.a, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSsoSubtask.a, "next_link", true, afe);
         }
-        final q4r d = jsonSsoSubtask.d;
+        final j5r d = jsonSsoSubtask.d;
         if (d != null) {
-            ((StringBasedTypeConverter)JsonSsoSubtask$$JsonObjectMapper.SSO_PROVIDER_TYPE_CONVERTER).serialize((Object)d, "provider", true, tfe);
+            ((StringBasedTypeConverter)JsonSsoSubtask$$JsonObjectMapper.SSO_PROVIDER_TYPE_CONVERTER).serialize((Object)d, "provider", true, afe);
         }
-        tfe.u0("redirect_uri", jsonSsoSubtask.f);
+        afe.t0("redirect_uri", jsonSsoSubtask.f);
         final ArrayList e = jsonSsoSubtask.e;
         if (e != null) {
-            final Iterator g = q1a.g(tfe, "scopes", e);
-            while (g.hasNext()) {
-                tfe.s0((String)g.next());
+            final Iterator a = br.A(afe, "scopes", e);
+            while (a.hasNext()) {
+                afe.r0((String)a.next());
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("state", jsonSsoSubtask.i);
+        afe.t0("state", jsonSsoSubtask.i);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSsoSubtask jsonSsoSubtask, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSsoSubtask jsonSsoSubtask, final String s, final tge tge) throws IOException {
         if ("auth_url".equals(s)) {
-            jsonSsoSubtask.g = khe.T((String)null);
+            jsonSsoSubtask.g = tge.T((String)null);
         }
         else if ("cancel_link".equals(s)) {
-            jsonSsoSubtask.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSsoSubtask.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("component_collection".equals(s)) {
-            jsonSsoSubtask.j = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonSsoSubtask.j = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("exchange_url".equals(s)) {
-            jsonSsoSubtask.h = khe.T((String)null);
+            jsonSsoSubtask.h = tge.T((String)null);
         }
         else if ("fail_link".equals(s)) {
-            jsonSsoSubtask.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSsoSubtask.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonSsoSubtask.a = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSsoSubtask.a = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("provider".equals(s)) {
-            jsonSsoSubtask.d = (q4r)((StringBasedTypeConverter)JsonSsoSubtask$$JsonObjectMapper.SSO_PROVIDER_TYPE_CONVERTER).parse(khe);
+            jsonSsoSubtask.d = (j5r)((StringBasedTypeConverter)JsonSsoSubtask$$JsonObjectMapper.SSO_PROVIDER_TYPE_CONVERTER).parse(tge);
         }
         else if ("redirect_uri".equals(s)) {
-            jsonSsoSubtask.f = khe.T((String)null);
+            jsonSsoSubtask.f = tge.T((String)null);
         }
         else if ("scopes".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList e = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final String t = khe.T((String)null);
+                while (tge.h0() != vie.O0) {
+                    final String t = tge.T((String)null);
                     if (t != null) {
                         e.add(t);
                     }
@@ -117,15 +117,23 @@ public final class JsonSsoSubtask$$JsonObjectMapper extends JsonMapper<JsonSsoSu
             }
         }
         else if ("state".equals(s)) {
-            jsonSsoSubtask.i = khe.T((String)null);
+            jsonSsoSubtask.i = tge.T((String)null);
         }
     }
     
-    public JsonSsoSubtask parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSsoSubtask parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSsoSubtask jsonSsoSubtask, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSsoSubtask, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSsoSubtask jsonSsoSubtask, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSsoSubtask, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSsoSubtask)o, afe, b);
     }
 }

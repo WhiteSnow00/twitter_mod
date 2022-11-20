@@ -1,78 +1,46 @@
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class i0f
+@sa8(c = "androidx.compose.foundation.lazy.layout.LazyLayoutSemanticsKt$lazyLayoutSemantics$1$scrollToIndexAction$1$2", f = "LazyLayoutSemantics.kt", l = { 92 }, m = "invokeSuspend")
+public final class i0f extends p0s implements ftb<cy6, go6<? super fzv>, Object>
 {
-    public final xro a;
-    public final otb<j0f> b;
-    public final Map<Object, a> c;
+    public int D0;
+    public final d0f E0;
+    public final int F0;
     
-    public i0f(final xro a, final otb<? extends j0f> b) {
-        zzd.f((Object)a, "saveableStateHolder");
-        this.a = a;
-        this.b = (otb<j0f>)b;
-        this.c = new LinkedHashMap();
+    public i0f(final d0f e0, final int f0, final go6<? super i0f> go6) {
+        this.E0 = e0;
+        this.F0 = f0;
+        super(2, (go6)go6);
     }
     
-    public final gub<m76, Integer, oyv> a(final int n, final Object o) {
-        zzd.f(o, "key");
-        final a a = this.c.get(o);
-        final Object b = ((j0f)this.b.invoke()).b(n);
-        gub<m76, Integer, oyv> gub;
-        if (a != null && ((Number)((nhq)a.c).getValue()).intValue() == n && zzd.a(a.b, b)) {
-            gub = a.a();
+    public final go6<fzv> create(final Object o, final go6<?> go6) {
+        return (go6<fzv>)new i0f(this.E0, this.F0, (go6<? super i0f>)go6);
+    }
+    
+    public final Object invoke(final Object o, final Object o2) {
+        return ((i0f)this.create(o, (go6<?>)o2)).invokeSuspend(fzv.a);
+    }
+    
+    public final Object invokeSuspend(final Object o) {
+        final dy6 d0 = dy6.D0;
+        final int d2 = this.D0;
+        if (d2 != 0) {
+            if (d2 != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            b1n.u(o);
         }
         else {
-            final a a2 = new a(n, o, b);
-            this.c.put(o, a2);
-            gub = a2.a();
-        }
-        return gub;
-    }
-    
-    public final Object b(Object o) {
-        final a a = this.c.get(o);
-        if (a != null) {
-            o = a.b;
-        }
-        else {
-            final j0f j0f = (j0f)this.b.invoke();
-            final Integer n = j0f.f().get(o);
-            if (n != null) {
-                o = j0f.b(n);
-            }
-            else {
-                o = null;
+            b1n.u(o);
+            final d0f e0 = this.E0;
+            final int f0 = this.F0;
+            this.D0 = 1;
+            if (e0.b(f0, (go6)this) == d0) {
+                return d0;
             }
         }
-        return o;
-    }
-    
-    public final class a
-    {
-        public final Object a;
-        public final Object b;
-        public final cwj c;
-        public gub<? super m76, ? super Integer, oyv> d;
-        
-        public a(final int n, final Object a, final Object b) {
-            zzd.f(a, "key");
-            this.a = a;
-            this.b = b;
-            this.c = (cwj)nkz.r((Object)n);
-        }
-        
-        public final gub<m76, Integer, oyv> a() {
-            Object d;
-            if ((d = this.d) == null) {
-                d = m8y.k(1403994769, true, new h0f(i0f.this, this));
-                this.d = (gub<? super m76, ? super Integer, oyv>)d;
-            }
-            return (gub<m76, Integer, oyv>)d;
-        }
+        return fzv.a;
     }
 }

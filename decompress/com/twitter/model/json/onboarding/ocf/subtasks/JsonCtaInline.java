@@ -10,30 +10,29 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCtaInline extends lhh<z77>
+public class JsonCtaInline extends qhh<d77>
 {
     @JsonField
     public String a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
     public JsonOcfComponentCollection c;
     
-    @Override
-    public final h4j t() {
-        final z77.a a = new z77.a();
-        a.k = this.a;
-        a.a = this.b;
-        final int a2 = w4j.a;
+    public final n4j t() {
+        final d77$a d77$a = new d77$a();
+        d77$a.k = this.a;
+        ((dtr$a)d77$a).a = this.b;
+        final int a = c5j.a;
         final JsonOcfComponentCollection c = this.c;
-        n16 t;
+        x06 t;
         if (c != null) {
             t = c.t();
         }
         else {
             t = null;
         }
-        a.j = t;
-        return (h4j)a;
+        ((dtr$a)d77$a).j = t;
+        return (n4j)d77$a;
     }
 }

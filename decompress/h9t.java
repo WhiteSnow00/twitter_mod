@@ -1,104 +1,60 @@
-import java.util.Objects;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class h9t
+public final class h9t extends mxs implements mxs$a
 {
-    public long a;
-    public long b;
-    public long c;
-    public final ThreadLocal<Long> d;
+    @d5d
+    public final s8t j;
     
-    public h9t(final long n) {
-        this.d = new ThreadLocal<Long>();
-        this.e(n);
+    public h9t(final String s, final long n, final h0p h0p, final qvs qvs, final long n2, final s8t j, final boolean b, final amh amh) {
+        super(s, n, h0p, qvs, n2, b, (j1t)null, amh);
+        this.j = j;
     }
     
-    public final long a(final long c) {
-        monitorenter(this);
-        if (c == -9223372036854775807L) {
-            monitorexit(this);
-            return -9223372036854775807L;
+    public final zus$a a(final w3c w3c, final wrm wrm) {
+        final cgv f = w3c.f(this.j.a);
+        final b9t$a b9t$a = new b9t$a();
+        b9t$a.p = f;
+        final s8t j = this.j;
+        b9t$a.r = j.c;
+        b9t$a.q = j.b;
+        b9t$a.s = j.e;
+        ((zus$a)b9t$a).c = ((evs)this).c;
+        ((zus$a)b9t$a).a = ((evs)this).b;
+        ((zus$a)b9t$a).h = (u4t)j.d;
+        final qvs f2 = super.f;
+        xua a;
+        if (f2 != null) {
+            a = wrm.a(f2);
         }
-        try {
-            if (this.b == -9223372036854775807L) {
-                long n;
-                if ((n = this.a) == 9223372036854775806L) {
-                    final Long n2 = this.d.get();
-                    Objects.requireNonNull(n2);
-                    n = n2;
-                }
-                this.b = n - c;
-                this.notifyAll();
-            }
-            this.c = c;
-            final long b = this.b;
-            monitorexit(this);
-            return c + b;
+        else {
+            a = null;
         }
-        finally {
-            monitorexit(this);
-        }
+        ((zus$a)b9t$a).g = a;
+        ((zus$a)b9t$a).f = super.e;
+        ((zus$a)b9t$a).n = super.h;
+        ((zus$a)b9t$a).o = super.i;
+        b9t$a.t = this.j.f;
+        return (zus$a)b9t$a;
     }
     
-    public final long b(long a) {
-        monitorenter(this);
-        if (a == -9223372036854775807L) {
-            monitorexit(this);
-            return -9223372036854775807L;
+    public final boolean equals(final Object o) {
+        boolean b = true;
+        if (this == o) {
+            return true;
         }
-        try {
-            final long c = this.c;
-            long n = a;
-            if (c != -9223372036854775807L) {
-                final long n2 = c * 90000L / 1000000L;
-                final long n3 = (4294967296L + n2) / 8589934592L;
-                final long n4 = (n3 - 1L) * 8589934592L + a;
-                a = (n = a + n3 * 8589934592L);
-                if (Math.abs(n4 - n2) < Math.abs(a - n2)) {
-                    n = n4;
-                }
-            }
-            a = this.a(n * 1000000L / 90000L);
-            return a;
+        if (!(o instanceof h9t)) {
+            return false;
         }
-        finally {
-            monitorexit(this);
+        final h9t h9t = (h9t)o;
+        if (!super.equals(o) || !c5j.a((Object)this.j, (Object)h9t.j)) {
+            b = false;
         }
+        return b;
     }
     
-    public final long c() {
-        synchronized (this) {
-            final long a = this.a;
-            if (a != Long.MAX_VALUE) {
-                final long n = a;
-                if (a != 9223372036854775806L) {
-                    return n;
-                }
-            }
-            return -9223372036854775807L;
-        }
-    }
-    
-    public final long d() {
-        synchronized (this) {
-            return this.b;
-        }
-    }
-    
-    public final void e(long n) {
-        synchronized (this) {
-            this.a = n;
-            if (n == Long.MAX_VALUE) {
-                n = 0L;
-            }
-            else {
-                n = -9223372036854775807L;
-            }
-            this.b = n;
-            this.c = -9223372036854775807L;
-        }
+    public final int hashCode() {
+        return c5j.g((Object)this.j, (Object)super.hashCode());
     }
 }

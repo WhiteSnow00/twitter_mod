@@ -12,88 +12,96 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLocationPermissionPrompt$$JsonObjectMapper extends JsonMapper<JsonLocationPermissionPrompt>
 {
-    public static final o6k PERMISSION_REPROMPT_BEHAVIOR_CONVERTER;
+    public static final w6k PERMISSION_REPROMPT_BEHAVIOR_CONVERTER;
     
     static {
-        PERMISSION_REPROMPT_BEHAVIOR_CONVERTER = new o6k();
+        PERMISSION_REPROMPT_BEHAVIOR_CONVERTER = new w6k();
     }
     
-    public static JsonLocationPermissionPrompt _parse(final khe khe) throws IOException {
+    public static JsonLocationPermissionPrompt _parse(final tge tge) throws IOException {
         final JsonLocationPermissionPrompt jsonLocationPermissionPrompt = new JsonLocationPermissionPrompt();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLocationPermissionPrompt, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonLocationPermissionPrompt, d, tge);
+            tge.l0();
         }
         return jsonLocationPermissionPrompt;
     }
     
-    public static void _serialize(final JsonLocationPermissionPrompt jsonLocationPermissionPrompt, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLocationPermissionPrompt jsonLocationPermissionPrompt, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonLocationPermissionPrompt.d != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonLocationPermissionPrompt.d, "denied_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonLocationPermissionPrompt.d, "denied_link", true, afe);
         }
         if (jsonLocationPermissionPrompt.b != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonLocationPermissionPrompt.b, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonLocationPermissionPrompt.b, afe, true);
         }
         if (jsonLocationPermissionPrompt.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonLocationPermissionPrompt.c, "granted_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonLocationPermissionPrompt.c, "granted_link", true, afe);
         }
         if (jsonLocationPermissionPrompt.a != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)jsonLocationPermissionPrompt.a, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)jsonLocationPermissionPrompt.a, "header", true, afe);
         }
         if (jsonLocationPermissionPrompt.f != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonLocationPermissionPrompt.f, "previously_denied_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonLocationPermissionPrompt.f, "previously_denied_link", true, afe);
         }
-        ((StringBasedTypeConverter)JsonLocationPermissionPrompt$$JsonObjectMapper.PERMISSION_REPROMPT_BEHAVIOR_CONVERTER).serialize((Object)jsonLocationPermissionPrompt.g, "previously_denied_reprompt_behavior", true, tfe);
+        ((StringBasedTypeConverter)JsonLocationPermissionPrompt$$JsonObjectMapper.PERMISSION_REPROMPT_BEHAVIOR_CONVERTER).serialize((Object)jsonLocationPermissionPrompt.g, "previously_denied_reprompt_behavior", true, afe);
         if (jsonLocationPermissionPrompt.e != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonLocationPermissionPrompt.e, "previously_granted_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonLocationPermissionPrompt.e, "previously_granted_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLocationPermissionPrompt jsonLocationPermissionPrompt, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLocationPermissionPrompt jsonLocationPermissionPrompt, final String s, final tge tge) throws IOException {
         if ("denied_link".equals(s)) {
-            jsonLocationPermissionPrompt.d = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonLocationPermissionPrompt.d = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            jsonLocationPermissionPrompt.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonLocationPermissionPrompt.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("granted_link".equals(s)) {
-            jsonLocationPermissionPrompt.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonLocationPermissionPrompt.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("header".equals(s)) {
-            jsonLocationPermissionPrompt.a = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            jsonLocationPermissionPrompt.a = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("previously_denied_link".equals(s)) {
-            jsonLocationPermissionPrompt.f = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonLocationPermissionPrompt.f = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("previously_denied_reprompt_behavior".equals(s)) {
-            jsonLocationPermissionPrompt.g = (int)((StringBasedTypeConverter)JsonLocationPermissionPrompt$$JsonObjectMapper.PERMISSION_REPROMPT_BEHAVIOR_CONVERTER).parse(khe);
+            jsonLocationPermissionPrompt.g = (int)((StringBasedTypeConverter)JsonLocationPermissionPrompt$$JsonObjectMapper.PERMISSION_REPROMPT_BEHAVIOR_CONVERTER).parse(tge);
         }
         else if ("previously_granted_link".equals(s)) {
-            jsonLocationPermissionPrompt.e = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonLocationPermissionPrompt.e = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonLocationPermissionPrompt parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLocationPermissionPrompt parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLocationPermissionPrompt jsonLocationPermissionPrompt, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLocationPermissionPrompt, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLocationPermissionPrompt jsonLocationPermissionPrompt, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonLocationPermissionPrompt, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLocationPermissionPrompt)o, afe, b);
     }
 }

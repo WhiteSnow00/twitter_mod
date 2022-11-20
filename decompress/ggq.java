@@ -1,24 +1,30 @@
+import androidx.recyclerview.widget.RecyclerView$m;
+import android.view.View;
+import androidx.recyclerview.widget.RecyclerView$x;
+import android.util.DisplayMetrics;
+import androidx.recyclerview.widget.u;
+import androidx.recyclerview.widget.RecyclerView$y;
+import androidx.recyclerview.widget.RecyclerView;
+import android.content.Context;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ggq extends gue implements gub<m76, Integer, oyv>
+public class ggq extends LinearLayoutManager
 {
-    public final /* synthetic */ gub<m76, Integer, oyv> C0;
-    public final /* synthetic */ gub<m76, Integer, oyv> D0;
-    public final /* synthetic */ int E0;
-    
-    public ggq(final gub<? super m76, ? super Integer, oyv> c0, final gub<? super m76, ? super Integer, oyv> d0, final int e0) {
-        this.C0 = (gub<m76, Integer, oyv>)c0;
-        this.D0 = (gub<m76, Integer, oyv>)d0;
-        this.E0 = e0;
-        super(2);
+    public ggq(final Context context, final int n) {
+        super(n);
     }
     
-    public final Object invoke(final Object o, final Object o2) {
-        final m76 m76 = (m76)o;
-        ((Number)o2).intValue();
-        lgq.c((gub)this.C0, (gub)this.D0, m76, this.E0 | 0x1);
-        return oyv.a;
+    public final void d1(final RecyclerView recyclerView, final RecyclerView$y recyclerView$y, final int a) {
+        final u u = new u(((View)recyclerView).getContext()) {
+            public final float k(final DisplayMetrics displayMetrics) {
+                return 100.0f / displayMetrics.densityDpi;
+            }
+        };
+        ((RecyclerView$x)u).a = a;
+        ((RecyclerView$m)this).e1((RecyclerView$x)u);
     }
 }

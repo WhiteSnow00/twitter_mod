@@ -10,60 +10,60 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOriginalInfo$$JsonObjectMapper extends JsonMapper<JsonOriginalInfo>
 {
-    public static JsonOriginalInfo _parse(final khe khe) throws IOException {
+    public static JsonOriginalInfo _parse(final tge tge) throws IOException {
         final JsonOriginalInfo jsonOriginalInfo = new JsonOriginalInfo();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonOriginalInfo, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonOriginalInfo, d, tge);
+            tge.l0();
         }
         return jsonOriginalInfo;
     }
     
-    public static void _serialize(final JsonOriginalInfo jsonOriginalInfo, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOriginalInfo jsonOriginalInfo, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonOriginalInfo.e != null) {
-            tfe.i("focus_rect");
-            JsonRect$$JsonObjectMapper._serialize(jsonOriginalInfo.e, tfe, true);
+            afe.i("focus_rect");
+            JsonRect$$JsonObjectMapper._serialize(jsonOriginalInfo.e, afe, true);
         }
         final JsonRect[] d = jsonOriginalInfo.d;
         if (d != null) {
-            tfe.i("focus_rects");
-            tfe.q0();
+            afe.i("focus_rects");
+            afe.p0();
             for (final JsonRect jsonRect : d) {
                 if (jsonRect != null) {
-                    JsonRect$$JsonObjectMapper._serialize(jsonRect, tfe, true);
+                    JsonRect$$JsonObjectMapper._serialize(jsonRect, afe, true);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.T("height", jsonOriginalInfo.c);
-        tfe.u0("url", jsonOriginalInfo.a);
-        tfe.T("width", jsonOriginalInfo.b);
+        afe.T("height", jsonOriginalInfo.c);
+        afe.t0("url", jsonOriginalInfo.a);
+        afe.T("width", jsonOriginalInfo.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonOriginalInfo jsonOriginalInfo, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonOriginalInfo jsonOriginalInfo, final String s, final tge tge) throws IOException {
         if ("focus_rect".equals(s)) {
-            jsonOriginalInfo.e = JsonRect$$JsonObjectMapper._parse(khe);
+            jsonOriginalInfo.e = JsonRect$$JsonObjectMapper._parse(tge);
         }
         else if ("focus_rects".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList list = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final JsonRect parse = JsonRect$$JsonObjectMapper._parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final JsonRect parse = JsonRect$$JsonObjectMapper._parse(tge);
                     if (parse != null) {
                         list.add(parse);
                     }
@@ -75,21 +75,29 @@ public final class JsonOriginalInfo$$JsonObjectMapper extends JsonMapper<JsonOri
             }
         }
         else if ("height".equals(s)) {
-            jsonOriginalInfo.c = khe.z();
+            jsonOriginalInfo.c = tge.y();
         }
         else if ("url".equals(s)) {
-            jsonOriginalInfo.a = khe.T((String)null);
+            jsonOriginalInfo.a = tge.T((String)null);
         }
         else if ("width".equals(s)) {
-            jsonOriginalInfo.b = khe.z();
+            jsonOriginalInfo.b = tge.y();
         }
     }
     
-    public JsonOriginalInfo parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonOriginalInfo parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonOriginalInfo jsonOriginalInfo, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonOriginalInfo, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonOriginalInfo jsonOriginalInfo, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonOriginalInfo, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonOriginalInfo)o, afe, b);
     }
 }

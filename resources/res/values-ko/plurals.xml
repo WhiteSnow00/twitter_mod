@@ -209,8 +209,8 @@
         <item quantity="other">내가 팔로우하는 %1$s 님 외 %2$d명이 방금 팔로우했습니다.</item>
     </plurals>
     <plurals name="media_alt_text_prompt_dialog_message">
-        <item quantity="one">간결하지만 상세한 설명이 좋은 설명입니다. 이미지에 문구가 있으면 요약하거나 작성해 주세요.\10\10설명을 추가하면 장애가 있는 사람과 추가적인 배경 정보를 찾는 모든 사람이 Twitter를 이용할 수 있습니다.\10\10접근성 설정에서 이 알림을 끌 수 있습니다.</item>
-        <item quantity="other">간결하지만 상세한 설명이 좋은 설명입니다. 이미지에 문구가 있으면 요약하거나 작성해 주세요.\10\10설명을 추가하면 장애가 있는 사람과 추가적인 배경 정보를 찾는 모든 사람이 Twitter를 이용할 수 있습니다.\10\10접근성 설정에서 이 알림을 끌 수 있습니다.</item>
+        <item quantity="one">이미지 설명은 간결하지만 상세한 것이 좋습니다. 이미지에 문구가 있으면 요약하거나 작성해 주세요.\10\10설명을 추가하면 장애가 있는 사람과 추가적인 배경 정보를 찾는 모든 사람이 Twitter를 이용할 수 있습니다.\10\10접근성 설정에서 이 알림을 끌 수 있습니다.</item>
+        <item quantity="other">이미지 설명은 간결하지만 상세한 것이 좋습니다. 이미지에 문구가 있으면 요약하거나 작성해 주세요.\10\10설명을 추가하면 장애가 있는 사람과 추가적인 배경 정보를 찾는 모든 사람이 Twitter를 이용할 수 있습니다.\10\10접근성 설정에서 이 알림을 끌 수 있습니다.</item>
     </plurals>
     <plurals name="media_alt_text_prompt_dialog_positive_btn_text">
         <item quantity="one">설명 추가하기</item>
@@ -515,6 +515,18 @@
     <plurals name="subscriber_count">
         <item quantity="one">구독자 %s명</item>
         <item quantity="other">%s 구독자</item>
+    </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">일</item>
+        <item quantity="other">%d일</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">월</item>
+        <item quantity="other">%d개월</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">년</item>
+        <item quantity="other">%d년</item>
     </plurals>
     <plurals name="time_days">
         <item quantity="one">%d일</item>

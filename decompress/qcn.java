@@ -2,15 +2,20 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class qcn
+public final class qcn extends ste implements qsb<pyh<rcn, fzv>, fzv>
 {
-    public final ggm<String> a;
-    public final rv1<xj6<String>> b;
+    public static final qcn D0;
+    
+    static {
+        D0 = new qcn();
+    }
     
     public qcn() {
-        final ggm a = ggm.Companion.a();
-        this.a = (ggm<String>)a;
-        this.b = (rv1<xj6<String>>)new rv1();
-        a.a((Object)"");
+        super(1);
+    }
+    
+    public final Object invoke(final Object o) {
+        czd.f((Object)o, "$this$intoWeaver");
+        return fzv.a;
     }
 }

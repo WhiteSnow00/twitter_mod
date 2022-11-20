@@ -1,20 +1,44 @@
+import java.util.WeakHashMap;
+import android.view.View;
+import android.content.res.Resources;
+import android.widget.ImageView;
+import android.graphics.Point;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class l3o extends gue implements rtb<u3o, u3o>
+public final class l3o extends ste implements ftb<Point, edq, Point>
 {
-    public final /* synthetic */ rtb C0;
-    public final /* synthetic */ u3o D0;
+    public final j3o D0;
+    public final ImageView E0;
     
-    public l3o(final rtb c0, final u3o d0) {
-        this.C0 = c0;
+    public l3o(final j3o d0, final ImageView e0) {
         this.D0 = d0;
-        super(1);
+        this.E0 = e0;
+        super(2);
     }
     
-    public final Object invoke(final Object o) {
-        zzd.f((Object)o, "$this$setState");
-        return this.C0.invoke((Object)this.D0);
+    public final Object invoke(final Object o, final Object o2) {
+        final Point point = (Point)o;
+        final edq edq = (edq)o2;
+        czd.f((Object)point, "anchorPosition");
+        czd.f((Object)edq, "popupSize");
+        final View d0 = this.D0.D0;
+        czd.f((Object)d0, "<this>");
+        final WeakHashMap a = j6x.a;
+        final int d2 = j6x$e.d(d0);
+        boolean b = true;
+        if (d2 != 1) {
+            b = false;
+        }
+        int n;
+        if (b) {
+            n = point.x - ((View)this.E0).getWidth();
+        }
+        else {
+            n = ((View)this.E0).getWidth() * 2 + point.x - edq.a;
+        }
+        return new Point(n, (int)(((View)this.E0).getHeight() * Resources.getSystem().getDisplayMetrics().density) / 2 + point.y + (int)(16 * Resources.getSystem().getDisplayMetrics().density));
     }
 }

@@ -1,9 +1,10 @@
-import com.twitter.util.user.UserIdentifier;
+import android.app.Notification;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface fsi extends ara<Integer, String, ncq, Boolean, UserIdentifier, log<xqb>>
+public interface fsi<T extends ksi>
 {
+    kog<Notification> a(final qqi p0, final lsi p1, final T p2);
 }

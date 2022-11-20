@@ -11,7 +11,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSticker extends lhh<rfr>
+public class JsonSticker extends qhh<mgr>
 {
     @JsonField
     public long a;
@@ -30,33 +30,32 @@ public class JsonSticker extends lhh<rfr>
     @JsonField
     public String h;
     @JsonField
-    public chr i;
+    public whr i;
     @JsonField
     public long j;
     @JsonField
     public String k;
-    @JsonField(typeConverter = xie.class)
+    @JsonField(typeConverter = iie.class)
     public Date l;
-    @JsonField(typeConverter = xie.class)
+    @JsonField(typeConverter = iie.class)
     public Date m;
     
-    @Override
-    public final h4j t() {
+    public final n4j t() {
         if (this.c == null) {
             this.c = "";
         }
-        final rfr$a rfr$a = new rfr$a();
-        rfr$a.a = this.a;
-        rfr$a.b = this.b;
-        rfr$a.c = this.c;
-        rfr$a.d = this.d;
-        rfr$a.e = this.h;
-        rfr$a.f = this.e;
-        rfr$a.g = this.g;
-        rfr$a.h = UserIdentifier.fromId(this.f);
-        rfr$a.i = this.i;
-        rfr$a.j = this.j;
-        rfr$a.k = this.k;
+        final mgr$a mgr$a = new mgr$a();
+        mgr$a.a = this.a;
+        mgr$a.b = this.b;
+        mgr$a.c = this.c;
+        mgr$a.d = this.d;
+        mgr$a.e = this.h;
+        mgr$a.f = this.e;
+        mgr$a.g = this.g;
+        mgr$a.h = UserIdentifier.fromId(this.f);
+        mgr$a.i = this.i;
+        mgr$a.j = this.j;
+        mgr$a.k = this.k;
         final Date l = this.l;
         long time;
         if (l != null) {
@@ -65,7 +64,7 @@ public class JsonSticker extends lhh<rfr>
         else {
             time = 0L;
         }
-        rfr$a.l = time;
+        mgr$a.l = time;
         final Date m = this.m;
         long time2;
         if (m != null) {
@@ -74,9 +73,9 @@ public class JsonSticker extends lhh<rfr>
         else {
             time2 = Long.MAX_VALUE;
         }
-        rfr$a.m = time2;
-        final t3s a = mq1.a;
-        rfr$a.n = System.currentTimeMillis();
-        return (h4j)rfr$a;
+        mgr$a.m = time2;
+        final m4s a = hq1.a;
+        mgr$a.n = System.currentTimeMillis();
+        return (n4j)mgr$a;
     }
 }

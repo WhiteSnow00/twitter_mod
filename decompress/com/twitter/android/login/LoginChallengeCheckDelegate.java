@@ -6,12 +6,12 @@ package com.twitter.android.login;
 
 import android.os.Handler;
 
-@a91
+@v81
 public class LoginChallengeCheckDelegate
 {
     public String a;
     public final LoginChallengeCheckDelegate.LoginChallengeCheckDelegate$b b;
-    public oag c;
+    public dag c;
     public final Handler d;
     public a e;
     public int f;
@@ -21,13 +21,13 @@ public class LoginChallengeCheckDelegate
     public LoginChallengeCheckDelegate() {
         this.b = new LoginChallengeCheckDelegate.LoginChallengeCheckDelegate$b(this);
         this.d = new Handler();
-        final int f = dta.b().f("login_challenge_polling_interval", 0);
+        final int f = asa.b().f("login_challenge_polling_interval", 0);
         this.f = f;
         if (f == 0) {
             this.f = 2;
         }
         this.f *= (int)1000L;
-        final float e = dta.b().e("login_challenge_polling_backoff", 0.0f);
+        final float e = asa.b().e("login_challenge_polling_backoff", 0.0f);
         this.g = e;
         if (e == 0.0f) {
             this.g = 1.2f;
@@ -36,7 +36,7 @@ public class LoginChallengeCheckDelegate
     
     public final void a() {
         this.c = null;
-        zi.a().e(this.a);
+        k6e.b().e(this.a);
     }
     
     public final void b() {
@@ -49,11 +49,17 @@ public class LoginChallengeCheckDelegate
     
     public final class a implements Runnable
     {
+        public final LoginChallengeCheckDelegate D0;
+        
+        public a(final LoginChallengeCheckDelegate d0) {
+            this.D0 = d0;
+        }
+        
         @Override
         public final void run() {
-            final oag c = LoginChallengeCheckDelegate.this.c;
+            final dag c = this.D0.c;
             if (c != null && !c.g4().isFinishing()) {
-                LoginChallengeCheckDelegate.this.a = zi.a().d(LoginChallengeCheckDelegate.this.c.q1().a, LoginChallengeCheckDelegate.this.c.q1().b, (x64)LoginChallengeCheckDelegate.this.b);
+                this.D0.a = k6e.b().d(this.D0.c.q1().a, this.D0.c.q1().b, (a64)this.D0.b);
             }
         }
     }

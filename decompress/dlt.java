@@ -1,93 +1,62 @@
+import java.io.IOException;
+import java.util.List;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class dlt
 {
+    public static final rlp<dlt> d;
     public final String a;
-    public final String b;
-    public final wr8 c;
+    public final cej b;
+    public final List<elt> c;
     
-    public dlt(final String a, final String b, final wr8 c) {
+    static {
+        dlt.d = new b();
+    }
+    
+    public dlt(final dlt$a dlt$a) {
+        final String a = dlt$a.a;
+        jee.l((Object)a);
         this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof dlt)) {
-            return false;
-        }
-        final dlt dlt = (dlt)o;
-        return zzd.a((Object)this.a, (Object)dlt.a) && zzd.a((Object)this.b, (Object)dlt.b) && zzd.a((Object)this.c, (Object)dlt.c);
-    }
-    
-    @Override
-    public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final String b = this.b;
-        int hashCode2 = 0;
-        int hashCode3;
+        final cej b = dlt$a.b;
+        final cej l0 = cej.L0;
+        cej b2 = b;
         if (b == null) {
-            hashCode3 = 0;
+            b2 = l0;
         }
-        else {
-            hashCode3 = b.hashCode();
+        this.b = b2;
+        Object c;
+        if ((c = dlt$a.c) == null) {
+            c = f2a.D0;
         }
-        final wr8 c = this.c;
-        if (c != null) {
-            hashCode2 = c.hashCode();
-        }
-        return (hashCode * 31 + hashCode3) * 31 + hashCode2;
+        this.c = (List<elt>)c;
     }
     
-    @Override
-    public final String toString() {
-        final String a = this.a;
-        final String b = this.b;
-        final wr8 c = this.c;
-        final StringBuilder y = mb0.y("TopicDetailComponentItem(title=", a, ", subtitle=", b, ", destination=");
-        y.append(c);
-        y.append(")");
-        return y.toString();
-    }
-    
-    public static final class b extends js2<dlt, dlt$a>
+    public static final class b extends zr2<dlt, dlt$a>
     {
-        public static final b c;
-        
-        static {
-            c = new b();
-        }
-        
         public b() {
             super(0);
         }
         
-        public final void f(final flp flp, final Object o) {
+        public final void f(final wlp wlp, final Object o) throws IOException {
             final dlt dlt = (dlt)o;
-            zzd.f((Object)flp, "output");
-            zzd.f((Object)dlt, "detailComponent");
-            flp.G(dlt.a);
-            flp.G(dlt.b);
+            wlp.E(dlt.a);
+            wlp.A((Object)dlt.b, (rlp)cej.K0);
+            ((y4j)new vp4$a((rlp)elt.c)).c(wlp, (Object)dlt.c);
+            final int a = c5j.a;
         }
         
-        public final h4j g() {
-            return (h4j)new dlt$a((String)null, (String)null, 3, (hg8)null);
+        public final n4j g() {
+            return (n4j)new dlt$a();
         }
         
-        public final void h(final elp elp, final h4j h4j, final int n) {
-            final dlt$a dlt$a = (dlt$a)h4j;
-            zzd.f((Object)elp, "input");
-            zzd.f((Object)dlt$a, "builder");
-            final String c = elp.C();
-            zzd.e((Object)c, "input.readNotNullString()");
-            dlt$a.b = c;
-            dlt$a.c = elp.I();
+        public final void h(final vlp vlp, final n4j n4j, final int n) throws IOException, ClassNotFoundException {
+            final dlt$a dlt$a = (dlt$a)n4j;
+            dlt$a.a = vlp.A();
+            dlt$a.b = (cej)vlp.z((rlp)cej.K0);
+            dlt$a.c = (List)((y4j)new vp4$a((rlp)elt.c)).a(vlp);
         }
     }
 }

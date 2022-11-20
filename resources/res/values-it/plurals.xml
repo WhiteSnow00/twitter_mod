@@ -516,6 +516,18 @@
         <item quantity="one">%s iscritto</item>
         <item quantity="other">%s iscritti</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">giorno</item>
+        <item quantity="other">%d giorni</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">mese</item>
+        <item quantity="other">%d mesi</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">anno</item>
+        <item quantity="other">%d anni</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dg</item>
         <item quantity="other">%dg</item>

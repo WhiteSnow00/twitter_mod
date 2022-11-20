@@ -516,6 +516,18 @@
         <item quantity="one">‏%s مشترک</item>
         <item quantity="other">‏%s مشترک</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">‏روز</item>
+        <item quantity="other">‏%d روز</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">‏ماه</item>
+        <item quantity="other">‏%d ماه</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">‏سال</item>
+        <item quantity="other">‏%d سال</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">‏%dر</item>
         <item quantity="other">‏%dر</item>

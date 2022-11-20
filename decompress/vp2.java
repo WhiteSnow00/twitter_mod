@@ -1,64 +1,76 @@
-import android.content.Context;
-import android.app.Activity;
-import android.content.Intent;
-import android.webkit.WebSettings;
-import java.lang.ref.WeakReference;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class vp2 implements up2
+public abstract class vp2
 {
-    public final WeakReference<gob> a;
-    public final fxe<z9i> b;
-    public final kn c;
-    
-    public vp2(final gob gob, final fxe<z9i> b, final kn c) {
-        this.a = new WeakReference<gob>(gob);
-        this.b = b;
-        this.c = c;
-    }
-    
-    public final void a(final WebSettings webSettings) {
-        final gob gob = this.a.get();
-        if (gob != null) {
-            rp2.I(webSettings, ((Context)gob).getResources());
+    public static final class a extends vp2
+    {
+        public static final a a;
+        
+        static {
+            a = new a();
         }
     }
     
-    public final void b(final String title) {
-        ((z9i)this.b.get()).setTitle((CharSequence)title);
-    }
-    
-    public void c(final String s) {
-        ((z9i)this.b.get()).a((CharSequence)s);
-    }
-    
-    public final void d() {
-        this.c.a();
-    }
-    
-    public final void e() {
-        ((z9i)this.b.get()).setTitle(2131954815);
-    }
-    
-    public final void f(final Intent intent) {
-        final Activity activity = this.a.get();
-        if (activity != null) {
-            activity.startActivity(intent);
+    public static final class b extends vp2
+    {
+        public static final b a;
+        
+        static {
+            a = new b();
         }
     }
     
-    public final boolean g() {
-        final Activity activity = this.a.get();
-        return activity != null && ((Context)activity).getPackageManager().hasSystemFeature("android.hardware.touchscreen.multitouch");
+    public static final class c extends vp2
+    {
+        public final xp2.c a;
+        public final faa b;
+        
+        public c(final xp2.c a, final faa b) {
+            czd.f((Object)a, "destination");
+            czd.f((Object)b, "sourceComponent");
+            this.a = a;
+            this.b = b;
+        }
+        
+        @Override
+        public final boolean equals(final Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (!(o instanceof c)) {
+                return false;
+            }
+            final c c = (c)o;
+            return czd.a((Object)this.a, (Object)c.a) && this.b == c.b;
+        }
+        
+        @Override
+        public final int hashCode() {
+            return this.b.hashCode() + this.a.hashCode() * 31;
+        }
+        
+        @Override
+        public final String toString() {
+            final xp2.c a = this.a;
+            final faa b = this.b;
+            final StringBuilder sb = new StringBuilder();
+            sb.append("NavigateToDestination(destination=");
+            sb.append(a);
+            sb.append(", sourceComponent=");
+            sb.append(b);
+            sb.append(")");
+            return sb.toString();
+        }
     }
     
-    public final void terminate() {
-        final Activity activity = this.a.get();
-        if (activity != null) {
-            activity.finish();
+    public static final class d extends vp2
+    {
+        public static final d a;
+        
+        static {
+            a = new d();
         }
     }
 }

@@ -9,45 +9,53 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelinesScoreInfo$$JsonObjectMapper extends JsonMapper<JsonTimelinesScoreInfo>
 {
-    public static JsonTimelinesScoreInfo _parse(final khe khe) throws IOException {
+    public static JsonTimelinesScoreInfo _parse(final tge tge) throws IOException {
         final JsonTimelinesScoreInfo jsonTimelinesScoreInfo = new JsonTimelinesScoreInfo();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelinesScoreInfo, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelinesScoreInfo, d, tge);
+            tge.l0();
         }
         return jsonTimelinesScoreInfo;
     }
     
-    public static void _serialize(final JsonTimelinesScoreInfo jsonTimelinesScoreInfo, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelinesScoreInfo jsonTimelinesScoreInfo, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.P("score", jsonTimelinesScoreInfo.a);
+        afe.O("score", jsonTimelinesScoreInfo.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelinesScoreInfo jsonTimelinesScoreInfo, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelinesScoreInfo jsonTimelinesScoreInfo, final String s, final tge tge) throws IOException {
         if ("score".equals(s)) {
-            jsonTimelinesScoreInfo.a = (float)khe.p();
+            jsonTimelinesScoreInfo.a = (float)tge.p();
         }
     }
     
-    public JsonTimelinesScoreInfo parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelinesScoreInfo parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelinesScoreInfo jsonTimelinesScoreInfo, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelinesScoreInfo, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelinesScoreInfo jsonTimelinesScoreInfo, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelinesScoreInfo, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelinesScoreInfo)o, afe, b);
     }
 }

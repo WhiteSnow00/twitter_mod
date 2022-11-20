@@ -11,7 +11,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTweetCompositionNudgePayload extends lhh<vzi$b>
+public class JsonTweetCompositionNudgePayload extends qhh<b0j.b>
 {
     @JsonField
     public String a;
@@ -20,28 +20,27 @@ public class JsonTweetCompositionNudgePayload extends lhh<vzi$b>
     @JsonField
     public String c;
     @JsonField
-    public zzi d;
+    public f0j d;
     
-    @Override
-    public final h4j t() {
-        final vzi$b$a vzi$b$a = new vzi$b$a();
-        vzi$b$a.a = this.a;
+    public final n4j t() {
+        final b0j.b.a a = new b0j.b.a();
+        a.a = this.a;
         final String b = this.b;
-        xwm b2;
+        oxm b2;
         if (b != null) {
-            b2 = new xwm(b, (Map)a3a.C0);
+            b2 = new oxm(b, (Map)k2a.D0);
         }
         else {
             b2 = null;
         }
-        vzi$b$a.b = b2;
+        a.b = (oxm<sfs>)b2;
         final String c = this.c;
-        vzi$b$a.c = c;
-        final Icon d = vzi.a.get(c);
+        a.c = c;
+        final Icon d = b0j.a.get(c);
         if (d != null) {
-            vzi$b$a.d = d;
+            a.d = d;
         }
-        vzi$b$a.e = this.d;
-        return (h4j)vzi$b$a;
+        a.e = this.d;
+        return a;
     }
 }

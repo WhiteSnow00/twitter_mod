@@ -17,60 +17,68 @@ public final class JsonURTTombstone$$JsonObjectMapper extends JsonMapper<JsonURT
         TOMBSTONE_DISPLAY_TYPE_TYPE_CONVERTER = new JsonURTTombstone$a();
     }
     
-    public static JsonURTTombstone _parse(final khe khe) throws IOException {
+    public static JsonURTTombstone _parse(final tge tge) throws IOException {
         final JsonURTTombstone jsonURTTombstone = new JsonURTTombstone();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonURTTombstone, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonURTTombstone, d, tge);
+            tge.l0();
         }
         return jsonURTTombstone;
     }
     
-    public static void _serialize(final JsonURTTombstone jsonURTTombstone, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonURTTombstone jsonURTTombstone, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final String a = jsonURTTombstone.a;
         if (a != null) {
-            ((StringBasedTypeConverter)JsonURTTombstone$$JsonObjectMapper.TOMBSTONE_DISPLAY_TYPE_TYPE_CONVERTER).serialize((Object)a, "displayType", true, tfe);
+            ((StringBasedTypeConverter)JsonURTTombstone$$JsonObjectMapper.TOMBSTONE_DISPLAY_TYPE_TYPE_CONVERTER).serialize((Object)a, "displayType", true, afe);
         }
         if (jsonURTTombstone.b != null) {
-            LoganSquare.typeConverterFor((Class)brv.class).serialize((Object)jsonURTTombstone.b, "tombstoneInfo", true, tfe);
+            LoganSquare.typeConverterFor((Class)wrv.class).serialize((Object)jsonURTTombstone.b, "tombstoneInfo", true, afe);
         }
         if (jsonURTTombstone.c != null) {
-            LoganSquare.typeConverterFor((Class)c6t.class).serialize((Object)jsonURTTombstone.c, "tweet", true, tfe);
+            LoganSquare.typeConverterFor((Class)u6t.class).serialize((Object)jsonURTTombstone.c, "tweet", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonURTTombstone jsonURTTombstone, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonURTTombstone jsonURTTombstone, final String s, final tge tge) throws IOException {
         if ("displayType".equals(s)) {
-            jsonURTTombstone.a = (String)((StringBasedTypeConverter)JsonURTTombstone$$JsonObjectMapper.TOMBSTONE_DISPLAY_TYPE_TYPE_CONVERTER).parse(khe);
+            jsonURTTombstone.a = (String)((StringBasedTypeConverter)JsonURTTombstone$$JsonObjectMapper.TOMBSTONE_DISPLAY_TYPE_TYPE_CONVERTER).parse(tge);
         }
         else if ("tombstoneInfo".equals(s)) {
-            jsonURTTombstone.b = (brv)LoganSquare.typeConverterFor((Class)brv.class).parse(khe);
+            jsonURTTombstone.b = (wrv)LoganSquare.typeConverterFor((Class)wrv.class).parse(tge);
         }
         else if ("tweet".equals(s) || "tombstoneTweet".equals(s)) {
-            jsonURTTombstone.c = (c6t)LoganSquare.typeConverterFor((Class)c6t.class).parse(khe);
+            jsonURTTombstone.c = (u6t)LoganSquare.typeConverterFor((Class)u6t.class).parse(tge);
         }
     }
     
-    public JsonURTTombstone parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonURTTombstone parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonURTTombstone jsonURTTombstone, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonURTTombstone, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonURTTombstone jsonURTTombstone, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonURTTombstone, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonURTTombstone)o, afe, b);
     }
 }

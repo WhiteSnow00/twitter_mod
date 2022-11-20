@@ -1,184 +1,70 @@
-import org.checkerframework.checker.nullness.qual.RequiresNonNull;
-import com.google.android.exoplayer2.n$a;
-import java.io.IOException;
-import java.util.regex.Matcher;
-import com.google.android.exoplayer2.ParserException;
-import android.text.TextUtils;
-import java.util.Arrays;
-import java.util.Objects;
-import java.util.regex.Pattern;
+import org.chromium.support_lib_boundary.WebViewProviderFactoryBoundaryInterface;
+import java.lang.reflect.Method;
+import java.lang.reflect.InvocationTargetException;
+import android.webkit.WebView;
+import android.os.Build$VERSION;
+import java.lang.reflect.InvocationHandler;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cnx implements joa
+public final class cnx
 {
-    public static final Pattern g;
-    public static final Pattern h;
-    public final String a;
-    public final h9t b;
-    public final mwj c;
-    public ooa d;
-    public byte[] e;
-    public int f;
-    
-    static {
-        g = Pattern.compile("LOCAL:([^,]+)");
-        h = Pattern.compile("MPEGTS:(-?\\d+)");
-    }
-    
-    public cnx(final String a, final h9t b) {
-        this.a = a;
-        this.b = b;
-        this.c = new mwj();
-        this.e = new byte[1024];
-    }
-    
-    @Override
-    public final int a(final koa koa, final rrk rrk) throws IOException {
-        Objects.requireNonNull(this.d);
-        final int n = (int)koa.getLength();
-        final int f = this.f;
-        final byte[] e = this.e;
-        if (f == e.length) {
-            int length;
-            if (n != -1) {
-                length = n;
+    public static InvocationHandler a() throws IllegalAccessException, InvocationTargetException, ClassNotFoundException, NoSuchMethodException {
+        Label_0050: {
+            if (Build$VERSION.SDK_INT >= 28) {
+                final ClassLoader classLoader = WebView.getWebViewClassLoader();
+                break Label_0050;
             }
-            else {
-                length = e.length;
+            try {
+                final Method declaredMethod = WebView.class.getDeclaredMethod("getFactory", (Class<?>[])new Class[0]);
+                declaredMethod.setAccessible(true);
+                final ClassLoader classLoader = declaredMethod.invoke(null, new Object[0]).getClass().getClassLoader();
+                return (InvocationHandler)Class.forName("org.chromium.support_lib_glue.SupportLibReflectionUtil", false, classLoader).getDeclaredMethod("createWebViewProviderFactory", (Class<?>[])new Class[0]).invoke(null, new Object[0]);
             }
-            this.e = Arrays.copyOf(e, length * 3 / 2);
-        }
-        final byte[] e2 = this.e;
-        final int f2 = this.f;
-        final int b = koa.b(e2, f2, e2.length - f2);
-        if (b != -1) {
-            final int f3 = this.f + b;
-            this.f = f3;
-            if (n == -1 || f3 != n) {
-                return 0;
+            catch (final IllegalAccessException ex) {
+                throw new RuntimeException(ex);
+            }
+            catch (final InvocationTargetException ex2) {
+                throw new RuntimeException(ex2);
+            }
+            catch (final NoSuchMethodException ex3) {
+                throw new RuntimeException(ex3);
             }
         }
-        final mwj mwj = new mwj(this.e);
-        dnx.d(mwj);
-        String s = mwj.f();
-        long c;
-        long n2 = c = 0L;
-        Matcher matcher;
-        while (true) {
-            final boolean empty = TextUtils.isEmpty((CharSequence)s);
-            matcher = null;
-            if (empty) {
-                break;
-            }
-            if (s.startsWith("X-TIMESTAMP-MAP")) {
-                final Matcher matcher2 = cnx.g.matcher(s);
-                if (!matcher2.find()) {
-                    String concat;
-                    if (s.length() != 0) {
-                        concat = "X-TIMESTAMP-MAP doesn't contain local timestamp: ".concat(s);
-                    }
-                    else {
-                        concat = new String("X-TIMESTAMP-MAP doesn't contain local timestamp: ");
-                    }
-                    throw ParserException.a(concat, (Throwable)null);
-                }
-                final Matcher matcher3 = cnx.h.matcher(s);
-                if (!matcher3.find()) {
-                    String concat2;
-                    if (s.length() != 0) {
-                        concat2 = "X-TIMESTAMP-MAP doesn't contain media timestamp: ".concat(s);
-                    }
-                    else {
-                        concat2 = new String("X-TIMESTAMP-MAP doesn't contain media timestamp: ");
-                    }
-                    throw ParserException.a(concat2, (Throwable)null);
-                }
-                final String group = matcher2.group(1);
-                Objects.requireNonNull(group);
-                c = dnx.c(group);
-                final String group2 = matcher3.group(1);
-                Objects.requireNonNull(group2);
-                n2 = Long.parseLong(group2) * 1000000L / 90000L;
-            }
-            s = mwj.f();
-        }
-        Matcher matcher4;
-        while (true) {
-            final String f4 = mwj.f();
-            matcher4 = matcher;
-            if (f4 == null) {
-                break;
-            }
-            if (dnx.a.matcher(f4).matches()) {
-                String f5;
-                do {
-                    f5 = mwj.f();
-                } while (f5 != null && !f5.isEmpty());
-            }
-            else {
-                matcher4 = anx.a.matcher(f4);
-                if (matcher4.matches()) {
-                    break;
-                }
-                continue;
-            }
-        }
-        if (matcher4 == null) {
-            this.d(0L);
-        }
-        else {
-            final String group3 = matcher4.group(1);
-            Objects.requireNonNull(group3);
-            final long c2 = dnx.c(group3);
-            final long b2 = this.b.b((n2 + c2 - c) * 90000L / 1000000L % 8589934592L);
-            final ovt d = this.d(b2 - c2);
-            this.c.B(this.e, this.f);
-            d.d(this.c, this.f);
-            d.b(b2, 1, this.f, 0, (ovt$a)null);
-        }
-        return -1;
     }
     
-    @Override
-    public final boolean b(final koa koa) throws IOException {
-        final byte[] e = this.e;
-        final gh8 gh8 = (gh8)koa;
-        gh8.c(e, 0, 6, false);
-        this.c.B(this.e, 6);
-        if (dnx.a(this.c)) {
-            return true;
+    public static final class a
+    {
+        public static final s5r a;
+        
+        static {
+            a = new s5r(b.a.getWebkitToCompatConverter(), 2);
         }
-        ((koa)gh8).c(this.e, 6, 3, false);
-        this.c.B(this.e, 9);
-        return dnx.a(this.c);
     }
     
-    @Override
-    public final void c(final long n, final long n2) {
-        throw new IllegalStateException();
-    }
-    
-    @RequiresNonNull({ "output" })
-    public final ovt d(final long o) {
-        final ovt s = this.d.s(0, 3);
-        final n$a n$a = new n$a();
-        n$a.k = "text/vtt";
-        n$a.c = this.a;
-        n$a.o = o;
-        s.e(n$a.a());
-        this.d.q();
-        return s;
-    }
-    
-    @Override
-    public final void i(final ooa d) {
-        (this.d = d).n((ebp)new ebp.b(-9223372036854775807L));
-    }
-    
-    @Override
-    public final void release() {
+    public static final class b
+    {
+        public static final gnx a;
+        
+        static {
+            try {
+                final Object o = new v4j(wa2.e((Class)WebViewProviderFactoryBoundaryInterface.class, cnx.a()));
+                goto Label_0043;
+            }
+            catch (final NoSuchMethodException ex) {
+                throw new RuntimeException(ex);
+            }
+            catch (final ClassNotFoundException ex2) {
+                final Object o = new omy();
+            }
+            catch (final InvocationTargetException ex3) {
+                throw new RuntimeException(ex3);
+            }
+            catch (final IllegalAccessException ex4) {
+                throw new RuntimeException(ex4);
+            }
+        }
     }
 }

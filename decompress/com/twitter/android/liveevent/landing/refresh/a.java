@@ -6,36 +6,28 @@ package com.twitter.android.liveevent.landing.refresh;
 
 public final class a
 {
-    public final ewf a;
+    public final pvf a;
     public final a b;
-    public final myf c;
-    public final rd6 d;
+    public final yxf c;
+    public final wc6 d;
     public a e;
     public String f;
     
-    public a(final vxf vxf, final gqj gqj, final ewf a, final cwf cwf, final myf c, final a b, final ibm ibm) {
-        final rd6 d = new rd6();
+    public a(final hxf hxf, final lqj lqj, final pvf a, final nvf nvf, final yxf c, final a b, final xbm xbm) {
+        final wc6 d = new wc6();
         this.d = d;
-        this.e = com.twitter.android.liveevent.landing.refresh.a.a.s0;
+        this.e = (a)com.twitter.android.liveevent.landing.refresh.a.a.t0;
         this.a = a;
         this.c = c;
         this.b = b;
-        d.a(b5j.combineLatest((naj)vxf.d(), (naj)gqj.a(), (ew1)psf.d1).subscribe((fk6)new shd((Object)this, 4)));
-        d.a(((b5j)((ggm)cwf).C0).subscribe((fk6)new gdm((Object)this, 6), (fk6)new pcs((Object)this, 8)));
-        ibm.i((rj)new ht1((Object)this, 4));
+        d.a(h5j.combineLatest((taj)hxf.d(), (taj)lqj.a(), (zv1)kwf.E0).subscribe((lj6)new vgd(this, 4)));
+        d.a(((h5j)((wgm)nvf).D0).subscribe((lj6)new ydm((Object)this, 6), (lj6)new kds((Object)this, 8)));
+        xbm.i((oj)new dt1((Object)this, 4));
     }
     
     public interface a
     {
-        public static final a$a$a s0 = new a() {
-            @Override
-            public final void S() {
-            }
-            
-            @Override
-            public final void X0(final boolean b) {
-            }
-        };
+        public static final a$a$a t0 = new a$a$a();
         
         void S();
         

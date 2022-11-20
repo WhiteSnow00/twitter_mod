@@ -9,16 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCreateNudgeResponse extends lhh<e57>
+public class JsonCreateNudgeResponse extends qhh<i47>
 {
     @JsonField
-    public szi a;
+    public yzi a;
     @JsonField
-    public szi b;
+    public yzi b;
     
-    @Override
-    public final h4j t() {
-        final e57.a a = new e57.a();
+    public final n4j t() {
+        final i47.a a = new i47.a();
         a.a = this.a;
         a.b = this.b;
         return a;

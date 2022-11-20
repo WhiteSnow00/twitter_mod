@@ -5,167 +5,170 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dtg extends w5w implements oy, of3
+public final class dtg extends h6w implements py, xe3
 {
-    public static final alp<dtg> o1;
-    public static final alp<pug> p1;
-    public final long M0;
+    public static final rlp<dtg> p1;
+    public static final rlp<pug> q1;
     public final long N0;
     public final long O0;
-    public final ebh P0;
-    public final String Q0;
-    public final moj R0;
-    public final dtg$c S0;
-    public final ncq T0;
-    public final h2h U0;
-    public final List<s0h> V0;
-    public final List<umu> W0;
-    public final cxw X0;
-    public final String Y0;
-    public final boolean Z0;
-    public final String a1;
-    public final boolean b1;
-    public final String c1;
-    public final ezg d1;
-    public final i0h e1;
-    public final List<rr4> f1;
-    public final boolean g1;
-    public final fwg h1;
-    public final pbc i1;
-    public final frg j1;
-    public final List<r6d> k1;
-    public final boolean l1;
-    public Set<jhp> m1;
-    public final zhh n1;
+    public final long P0;
+    public final gbh Q0;
+    public final String R0;
+    public final soj S0;
+    public final c T0;
+    public final edq U0;
+    public final i2h V0;
+    public final List<u0h> W0;
+    public final List<onu> X0;
+    public final vxw Y0;
+    public final String Z0;
+    public final boolean a1;
+    public final String b1;
+    public final boolean c1;
+    public final String d1;
+    public final fzg e1;
+    public final k0h f1;
+    public final List<pq4> g1;
+    public final boolean h1;
+    public final fwg i1;
+    public final pac j1;
+    public final frg k1;
+    public final List<v5d> l1;
+    public final boolean m1;
+    public Set<aip> n1;
+    public final eih o1;
     
     static {
-        dtg.o1 = new dtg.dtg$b();
-        dtg.p1 = pug.E0;
+        dtg.p1 = new dtg.dtg$b();
+        dtg.q1 = pug.F0;
     }
     
     public dtg(final a a) {
-        super((w5w$a)a);
-        this.M0 = a.g;
-        this.N0 = a.h;
+        super((h6w.a)a);
+        this.N0 = a.g;
+        this.O0 = a.h;
         final String j = a.j;
-        final String h0 = super.H0;
-        String q0 = j;
+        final String i0 = super.I0;
+        String r0 = j;
         if (j == null) {
-            q0 = h0;
+            r0 = i0;
         }
-        this.Q0 = q0;
-        this.R0 = a.k;
-        this.O0 = a.i;
-        this.S0 = a.l;
-        this.T0 = a.m;
-        this.W0 = ijf.x((List)a.n);
-        this.V0 = ijf.x((List)a.p);
-        this.U0 = a.o;
-        this.X0 = a.q;
-        final String r = a.r;
+        this.R0 = r0;
+        this.S0 = a.k;
+        this.P0 = a.i;
+        this.T0 = a.l;
+        this.U0 = a.m;
+        this.X0 = rif.x((List)a.n);
+        this.W0 = rif.x((List)a.p);
+        this.V0 = a.o;
+        this.Y0 = a.q;
+        final String r2 = a.r;
         final String s = "";
-        String y0;
-        if ((y0 = r) == null) {
-            y0 = "";
+        String z0;
+        if ((z0 = r2) == null) {
+            z0 = "";
         }
-        this.Y0 = y0;
-        this.Z0 = a.s;
+        this.Z0 = z0;
+        this.a1 = a.s;
         String t;
         if ((t = a.t) == null) {
             t = "";
         }
-        this.a1 = t;
-        this.P0 = a.u;
-        this.b1 = a.v;
+        this.b1 = t;
+        this.Q0 = a.u;
+        this.c1 = a.v;
         String w = a.w;
         if (w == null) {
             w = s;
         }
-        this.c1 = w;
-        this.d1 = a.x;
-        this.e1 = a.y;
-        Object f1;
-        if ((f1 = a.z) == null) {
-            f1 = v2a.C0;
+        this.d1 = w;
+        this.e1 = a.x;
+        this.f1 = a.y;
+        Object g1;
+        if ((g1 = a.z) == null) {
+            g1 = f2a.D0;
         }
-        this.f1 = (List<rr4>)f1;
-        this.g1 = a.A;
-        this.h1 = a.B;
-        this.i1 = a.C;
-        this.j1 = a.D;
-        this.k1 = a.E;
-        this.l1 = a.F;
-        Object m1;
-        if ((m1 = a.G) == null) {
-            m1 = f3a.C0;
+        this.g1 = (List<pq4>)g1;
+        this.h1 = a.A;
+        this.i1 = a.B;
+        this.j1 = a.C;
+        this.k1 = a.D;
+        this.l1 = a.E;
+        this.m1 = a.F;
+        Object n1;
+        if ((n1 = a.G) == null) {
+            n1 = p2a.D0;
         }
-        this.m1 = (Set<jhp>)m1;
-        this.n1 = a.H;
+        this.n1 = (Set<aip>)n1;
+        this.o1 = a.H;
     }
     
     public final String b() {
-        return this.c1;
+        return this.d1;
     }
     
-    public final Set<jhp> e() {
-        return this.m1;
+    public final Set<aip> e() {
+        return this.n1;
     }
     
+    @Override
     public final boolean equals(final Object o) {
         return this == o || (o instanceof dtg && this.m((dtg)o));
     }
     
-    public final d7a.a g() {
-        return (d7a.a)new a(this);
+    public final m6a$a g() {
+        return new a(this);
     }
     
+    @Override
     public final int hashCode() {
-        return w4j.g((Object)this.M0, (Object)super.hashCode());
+        return c5j.g((Object)this.N0, (Object)super.hashCode());
     }
     
-    public final w5w$a j() {
+    @Override
+    public final h6w.a j() {
         return new a(this);
     }
     
     public final boolean m(final dtg dtg) {
-        return this == dtg || (this.i((w5w)dtg) && this.M0 == dtg.M0);
+        return this == dtg || (this.i(dtg) && this.N0 == dtg.N0);
     }
     
-    public static final class a extends w5w$a<dtg, a>
+    public static final class a extends h6w.a<dtg, a>
     {
         public boolean A;
         public fwg B;
-        public pbc C;
+        public pac C;
         public frg D;
-        public List<r6d> E;
+        public List<v5d> E;
         public boolean F;
-        public Set<jhp> G;
-        public zhh H;
+        public Set<aip> G;
+        public eih H;
         public long g;
         public long h;
         public long i;
         public String j;
-        public moj k;
-        public dtg$c l;
-        public ncq m;
-        public List<umu> n;
-        public h2h o;
-        public List<s0h> p;
-        public cxw q;
+        public soj k;
+        public c l;
+        public edq m;
+        public List<onu> n;
+        public i2h o;
+        public List<u0h> p;
+        public vxw q;
         public String r;
         public boolean s;
         public String t;
-        public ebh u;
+        public gbh u;
         public boolean v;
         public String w;
-        public ezg x;
-        public i0h y;
-        public List<rr4> z;
+        public fzg x;
+        public k0h y;
+        public List<pq4> z;
         
         public a() {
-            this.k = moj.e;
-            this.l = dtg$c.D0;
-            this.m = ncq.c;
+            this.k = soj.e;
+            this.l = c.E0;
+            this.m = edq.c;
             this.s = false;
             this.A = false;
             this.F = false;
@@ -173,62 +176,83 @@ public final class dtg extends w5w implements oy, of3
         }
         
         public a(final dtg dtg) {
-            super((w5w)dtg);
-            this.k = moj.e;
-            this.l = dtg$c.D0;
-            final ncq c = ncq.c;
-            this.g = dtg.M0;
-            this.h = dtg.N0;
-            this.i = dtg.O0;
-            this.j = dtg.Q0;
-            this.k = dtg.R0;
-            this.l = dtg.S0;
-            this.m = dtg.T0;
-            this.n = dtg.W0;
-            this.o = dtg.U0;
-            this.p = dtg.V0;
-            this.q = dtg.X0;
-            this.r = dtg.Y0;
-            this.s = dtg.Z0;
-            this.t = dtg.a1;
-            this.u = dtg.P0;
-            this.v = dtg.b1;
-            this.w = dtg.c1;
-            this.x = dtg.d1;
-            this.y = dtg.e1;
-            this.z = dtg.f1;
-            this.A = dtg.g1;
-            this.B = dtg.h1;
-            this.C = dtg.i1;
-            this.D = dtg.j1;
-            this.E = dtg.k1;
-            this.F = dtg.l1;
-            this.G = dtg.m1;
-            this.H = dtg.n1;
+            super(dtg);
+            this.k = soj.e;
+            this.l = c.E0;
+            final edq c = edq.c;
+            this.g = dtg.N0;
+            this.h = dtg.O0;
+            this.i = dtg.P0;
+            this.j = dtg.R0;
+            this.k = dtg.S0;
+            this.l = dtg.T0;
+            this.m = dtg.U0;
+            this.n = dtg.X0;
+            this.o = dtg.V0;
+            this.p = dtg.W0;
+            this.q = dtg.Y0;
+            this.r = dtg.Z0;
+            this.s = dtg.a1;
+            this.t = dtg.b1;
+            this.u = dtg.Q0;
+            this.v = dtg.c1;
+            this.w = dtg.d1;
+            this.x = dtg.e1;
+            this.y = dtg.f1;
+            this.z = dtg.g1;
+            this.A = dtg.h1;
+            this.B = dtg.i1;
+            this.C = dtg.j1;
+            this.D = dtg.k1;
+            this.E = dtg.l1;
+            this.F = dtg.m1;
+            this.G = dtg.n1;
+            this.H = dtg.o1;
         }
         
         public final Object i() {
             return new dtg(this);
         }
         
-        public final a p(moj e) {
+        public final a p(soj e) {
             if (e == null) {
-                e = moj.e;
+                e = soj.e;
             }
             this.k = e;
             return this;
         }
         
-        public final a q(final hfv hfv) {
-            ebh a;
-            if (hfv != null) {
-                a = ebh.a(hfv);
+        public final a q(final cgv cgv) {
+            gbh a;
+            if (cgv != null) {
+                a = gbh.a(cgv);
             }
             else {
                 a = null;
             }
             this.u = a;
             return this;
+        }
+    }
+    
+    public enum c
+    {
+        E0(0), 
+        F0(1), 
+        G0(2), 
+        H0(3), 
+        I0(4);
+        
+        public static final c[] J0;
+        public static final c[] K0;
+        public final int D0;
+        
+        static {
+            J0 = values();
+        }
+        
+        public c(final int d0) {
+            this.D0 = d0;
         }
     }
 }

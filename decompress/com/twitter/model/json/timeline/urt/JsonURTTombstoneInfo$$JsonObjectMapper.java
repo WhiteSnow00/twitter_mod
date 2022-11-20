@@ -10,67 +10,75 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonURTTombstoneInfo$$JsonObjectMapper extends JsonMapper<JsonURTTombstoneInfo>
 {
-    public static JsonURTTombstoneInfo _parse(final khe khe) throws IOException {
+    public static JsonURTTombstoneInfo _parse(final tge tge) throws IOException {
         final JsonURTTombstoneInfo jsonURTTombstoneInfo = new JsonURTTombstoneInfo();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonURTTombstoneInfo, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonURTTombstoneInfo, d, tge);
+            tge.l0();
         }
         return jsonURTTombstoneInfo;
     }
     
-    public static void _serialize(final JsonURTTombstoneInfo jsonURTTombstoneInfo, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonURTTombstoneInfo jsonURTTombstoneInfo, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonURTTombstoneInfo.b != null) {
-            LoganSquare.typeConverterFor((Class)xqv.class).serialize((Object)jsonURTTombstoneInfo.b, "cta", true, tfe);
+            LoganSquare.typeConverterFor((Class)srv.class).serialize((Object)jsonURTTombstoneInfo.b, "cta", true, afe);
         }
-        tfe.u0("revealText", jsonURTTombstoneInfo.c);
+        afe.t0("revealText", jsonURTTombstoneInfo.c);
         if (jsonURTTombstoneInfo.e != null) {
-            LoganSquare.typeConverterFor((Class)xwm.class).serialize((Object)jsonURTTombstoneInfo.e, "richRevealText", true, tfe);
+            LoganSquare.typeConverterFor((Class)oxm.class).serialize((Object)jsonURTTombstoneInfo.e, "richRevealText", true, afe);
         }
         if (jsonURTTombstoneInfo.d != null) {
-            LoganSquare.typeConverterFor((Class)xwm.class).serialize((Object)jsonURTTombstoneInfo.d, "richText", true, tfe);
+            LoganSquare.typeConverterFor((Class)oxm.class).serialize((Object)jsonURTTombstoneInfo.d, "richText", true, afe);
         }
-        tfe.u0("text", jsonURTTombstoneInfo.a);
+        afe.t0("text", jsonURTTombstoneInfo.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonURTTombstoneInfo jsonURTTombstoneInfo, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonURTTombstoneInfo jsonURTTombstoneInfo, final String s, final tge tge) throws IOException {
         if ("cta".equals(s)) {
-            jsonURTTombstoneInfo.b = (xqv)LoganSquare.typeConverterFor((Class)xqv.class).parse(khe);
+            jsonURTTombstoneInfo.b = (srv)LoganSquare.typeConverterFor((Class)srv.class).parse(tge);
         }
         else if ("revealText".equals(s)) {
-            jsonURTTombstoneInfo.c = khe.T((String)null);
+            jsonURTTombstoneInfo.c = tge.T((String)null);
         }
         else if ("richRevealText".equals(s)) {
-            jsonURTTombstoneInfo.e = (xwm)LoganSquare.typeConverterFor((Class)xwm.class).parse(khe);
+            jsonURTTombstoneInfo.e = (oxm)LoganSquare.typeConverterFor((Class)oxm.class).parse(tge);
         }
         else if ("richText".equals(s)) {
-            jsonURTTombstoneInfo.d = (xwm)LoganSquare.typeConverterFor((Class)xwm.class).parse(khe);
+            jsonURTTombstoneInfo.d = (oxm)LoganSquare.typeConverterFor((Class)oxm.class).parse(tge);
         }
         else if ("text".equals(s)) {
-            jsonURTTombstoneInfo.a = khe.T((String)null);
+            jsonURTTombstoneInfo.a = tge.T((String)null);
         }
     }
     
-    public JsonURTTombstoneInfo parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonURTTombstoneInfo parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonURTTombstoneInfo jsonURTTombstoneInfo, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonURTTombstoneInfo, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonURTTombstoneInfo jsonURTTombstoneInfo, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonURTTombstoneInfo, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonURTTombstoneInfo)o, afe, b);
     }
 }

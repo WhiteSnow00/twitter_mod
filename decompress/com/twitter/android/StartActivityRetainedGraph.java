@@ -7,10 +7,10 @@ package com.twitter.android;
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 import com.twitter.app.common.inject.retained.RetainedObjectGraph;
 
-@l4j
+@r4j
 public interface StartActivityRetainedGraph extends RetainedObjectGraph
 {
-    @l4j
+    @r4j
     public interface StartActivityViewGraph extends ViewObjectGraph
     {
     }

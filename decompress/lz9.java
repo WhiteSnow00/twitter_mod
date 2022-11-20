@@ -4,34 +4,43 @@
 
 public final class lz9
 {
-    public final String a;
-    public final String b;
+    public final boolean a;
+    public final boolean b;
+    public final boolean c;
+    public final boolean d;
+    public final boolean e;
+    public final boolean f;
+    public final boolean g;
+    public final boolean h;
+    public final boolean i;
+    public final boolean j;
+    public final boolean k;
+    public final boolean l;
+    public final boolean m;
+    public final boolean n;
+    public final boolean o;
+    public final boolean p;
+    public final hz9 q;
+    public final iz9 r;
     
-    public lz9(final String a, final String b) {
-        zzd.f((Object)b, "body");
-        this.a = a;
-        this.b = b;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof lz9)) {
-            return false;
-        }
-        final lz9 lz9 = (lz9)o;
-        return zzd.a((Object)this.a, (Object)lz9.a) && zzd.a((Object)this.b, (Object)lz9.b);
-    }
-    
-    @Override
-    public final int hashCode() {
-        return this.b.hashCode() + this.a.hashCode() * 31;
-    }
-    
-    @Override
-    public final String toString() {
-        return yqh.k("EmailContent(subject=", this.a, ", body=", this.b, ")");
+    public lz9(final lz9.lz9$a lz9$a) {
+        this.a = lz9$a.a;
+        this.b = lz9$a.b;
+        this.c = lz9$a.c;
+        this.d = lz9$a.d;
+        this.e = lz9$a.e;
+        this.f = lz9$a.f;
+        this.g = lz9$a.g;
+        this.h = lz9$a.h;
+        this.i = lz9$a.i;
+        this.j = lz9$a.j;
+        this.k = lz9$a.k;
+        this.l = lz9$a.l;
+        this.m = lz9$a.m;
+        this.n = lz9$a.n;
+        this.o = lz9$a.o;
+        this.p = lz9$a.p;
+        this.q = lz9$a.q;
+        this.r = lz9$a.r;
     }
 }

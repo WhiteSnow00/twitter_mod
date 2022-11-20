@@ -1,0 +1,14 @@
+import android.content.Context;
+
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
+public final class ray
+{
+    public final Context a;
+    
+    public ray(final Context a) {
+        this.a = a;
+    }
+}

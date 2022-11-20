@@ -7,18 +7,18 @@ import android.view.View;
 
 public final class jw implements Runnable
 {
-    public final /* synthetic */ View C0;
-    public final /* synthetic */ View D0;
-    public final /* synthetic */ AlertController E0;
+    public final View D0;
+    public final View E0;
+    public final AlertController F0;
     
-    public jw(final AlertController e0, final View c0, final View d0) {
-        this.E0 = e0;
-        this.C0 = c0;
+    public jw(final AlertController f0, final View d0, final View e0) {
+        this.F0 = f0;
         this.D0 = d0;
+        this.E0 = e0;
     }
     
     @Override
     public final void run() {
-        AlertController.c((View)this.E0.w, this.C0, this.D0);
+        AlertController.c((View)this.F0.w, this.D0, this.E0);
     }
 }

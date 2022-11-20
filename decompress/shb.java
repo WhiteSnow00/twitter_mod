@@ -2,21 +2,13 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class shb extends gue implements rtb<whb, Boolean>
+public final class shb extends eud
 {
-    public static final shb C0;
-    
-    static {
-        C0 = new shb();
+    public final boolean a(final lsi lsi) {
+        return lsi.g() && lsi.w == 23;
     }
     
-    public shb() {
-        super(1);
-    }
-    
-    public final Object invoke(final Object o) {
-        final whb whb = (whb)o;
-        zzd.f((Object)whb, "it");
-        return whb.a;
+    public final /* bridge */ boolean apply(final Object o) {
+        return this.a((lsi)o);
     }
 }

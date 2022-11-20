@@ -1,48 +1,45 @@
+import java.io.IOException;
+import java.util.Objects;
+import java.util.Set;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hnp
+public final class hnp<T> implements tqd
 {
-    public long checkInterval;
-    public a limits;
-    public b nightTime;
+    public final Set<T> b;
     
-    public hnp() {
-        this.limits = new a();
-        this.nightTime = new b();
-        this.checkInterval = 15L;
+    public hnp(final Set<T> set) {
+        this.b = qdd.g((Set)set);
     }
     
-    public static final class a
+    @Override
+    public final boolean equals(final Object o) {
+        return this == o || (o instanceof hnp && c5j.a((Object)this.b, (Object)((hnp)o).b));
+    }
+    
+    @Override
+    public final int hashCode() {
+        return c5j.e((Iterable)this.b);
+    }
+    
+    public static final class a<T> extends y4j<hnp<T>>
     {
-        public long daily;
-        public long hourly;
-        public long monthly;
-        public long triggerInterval;
-        public long weekly;
-        public long yearly;
-        
-        public a() {
-            this.hourly = 0L;
-            this.daily = 0L;
-            this.weekly = 0L;
-            this.monthly = 0L;
-            this.yearly = 0L;
-            this.triggerInterval = 0L;
+        public final Object d(final vlp vlp, int a) throws IOException, ClassNotFoundException {
+            final yp4 yp4 = new yp4((rlp)lw6.j);
+            Objects.requireNonNull(vlp);
+            final Object a2 = ((y4j)yp4).a(vlp);
+            a = c5j.a;
+            return new hnp((Set<Object>)a2);
         }
-    }
-    
-    public static final class b
-    {
-        public boolean enabled;
-        public String end;
-        public String start;
         
-        public b() {
-            this.enabled = false;
-            this.start = "23:00";
-            this.end = "06:00";
+        public final void f(final wlp wlp, final Object o) throws IOException {
+            final Set<T> b = ((hnp)o).b;
+            final yp4 yp4 = new yp4((rlp)lw6.j);
+            Objects.requireNonNull(wlp);
+            ((y4j)yp4).c(wlp, (Object)b);
+            final int a = c5j.a;
         }
     }
 }

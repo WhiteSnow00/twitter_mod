@@ -519,6 +519,18 @@
         <item quantity="one">%s pretplatnik</item>
         <item quantity="other">Broj pretplatnika: %s</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">dan</item>
+        <item quantity="other">%d dana</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">mjesec</item>
+        <item quantity="other">%d mjeseci</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">godina</item>
+        <item quantity="other">%d godine</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d d.</item>
         <item quantity="other">%d d.</item>

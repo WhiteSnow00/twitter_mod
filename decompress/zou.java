@@ -2,7 +2,6 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface zou extends dfw
+public interface zou
 {
-    je6 x4();
 }

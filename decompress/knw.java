@@ -1,4 +1,7 @@
-import java.util.List;
+import android.text.TextUtils;
+import java.util.Objects;
+import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -6,45 +9,41 @@ import java.util.List;
 
 public final class knw
 {
-    public final int a;
-    public final String b;
-    public final List<jo6> c;
+    public static final long b;
+    public static final Pattern c;
+    public static knw d;
+    public final ii8 a;
     
-    public knw(final int a, final String b, final List<jo6> c) {
-        zzd.f((Object)b, "reason");
+    static {
+        b = TimeUnit.HOURS.toSeconds(1L);
+        c = Pattern.compile("\\AA[\\w-]{38}\\z");
+    }
+    
+    public knw(final ii8 a) {
         this.a = a;
-        this.b = b;
-        this.c = c;
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
+    public static knw c() {
+        if (ii8.K0 == null) {
+            ii8.K0 = new ii8();
         }
-        if (!(o instanceof knw)) {
-            return false;
+        final ii8 k0 = ii8.K0;
+        if (knw.d == null) {
+            knw.d = new knw(k0);
         }
-        final knw knw = (knw)o;
-        return this.a == knw.a && zzd.a((Object)this.b, (Object)knw.b) && zzd.a((Object)this.c, (Object)knw.c);
+        return knw.d;
     }
     
-    @Override
-    public final int hashCode() {
-        final int a = l7k.a(this.b, this.a * 31, 31);
-        final List<jo6> c = this.c;
-        int hashCode;
-        if (c == null) {
-            hashCode = 0;
-        }
-        else {
-            hashCode = c.hashCode();
-        }
-        return a + hashCode;
+    public final long a() {
+        Objects.requireNonNull(this.a);
+        return System.currentTimeMillis();
     }
     
-    @Override
-    public final String toString() {
-        return gp.A(t4a.k("ValidationError(code=", this.a, ", reason=", this.b, ", contextMap="), (List)this.c, ")");
+    public final long b() {
+        return TimeUnit.MILLISECONDS.toSeconds(this.a());
+    }
+    
+    public final boolean d(final u7k u7k) {
+        return TextUtils.isEmpty((CharSequence)u7k.a()) || u7k.b() + u7k.g() < this.b() + knw.b;
     }
 }

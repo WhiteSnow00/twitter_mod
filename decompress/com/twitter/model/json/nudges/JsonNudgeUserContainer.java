@@ -9,20 +9,19 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNudgeUserContainer extends lhh<qtc>
+public class JsonNudgeUserContainer extends qhh<usc>
 {
     @JsonField
     public JsonHumanizationNudgeUser a;
     
-    @Override
-    public final h4j t() {
-        final qtc$b qtc$b = new qtc$b();
+    public final n4j t() {
+        final usc$b usc$b = new usc$b();
         final JsonHumanizationNudgeLegacyUser a = this.a.a;
-        qtc$b.c = a.e;
-        qtc$b.d = a.a;
-        qtc$b.b = a.b;
-        qtc$b.a = a.c;
-        qtc$b.e = a.d;
-        return (h4j)qtc$b;
+        usc$b.c = a.e;
+        usc$b.d = a.a;
+        usc$b.b = a.b;
+        usc$b.a = a.c;
+        usc$b.e = a.d;
+        return (n4j)usc$b;
     }
 }

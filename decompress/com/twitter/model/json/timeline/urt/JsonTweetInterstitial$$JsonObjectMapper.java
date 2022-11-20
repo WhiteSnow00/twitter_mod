@@ -10,57 +10,65 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTweetInterstitial$$JsonObjectMapper extends JsonMapper<JsonTweetInterstitial>
 {
-    public static JsonTweetInterstitial _parse(final khe khe) throws IOException {
+    public static JsonTweetInterstitial _parse(final tge tge) throws IOException {
         final JsonTweetInterstitial jsonTweetInterstitial = new JsonTweetInterstitial();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTweetInterstitial, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTweetInterstitial, d, tge);
+            tge.l0();
         }
         return jsonTweetInterstitial;
     }
     
-    public static void _serialize(final JsonTweetInterstitial jsonTweetInterstitial, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTweetInterstitial jsonTweetInterstitial, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("display_type", jsonTweetInterstitial.c);
+        afe.t0("display_type", jsonTweetInterstitial.c);
         if (jsonTweetInterstitial.b != null) {
-            LoganSquare.typeConverterFor((Class)xwm.class).serialize((Object)jsonTweetInterstitial.b, "reveal_text", true, tfe);
+            LoganSquare.typeConverterFor((Class)oxm.class).serialize((Object)jsonTweetInterstitial.b, "reveal_text", true, afe);
         }
         if (jsonTweetInterstitial.a != null) {
-            LoganSquare.typeConverterFor((Class)xwm.class).serialize((Object)jsonTweetInterstitial.a, "text", true, tfe);
+            LoganSquare.typeConverterFor((Class)oxm.class).serialize((Object)jsonTweetInterstitial.a, "text", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTweetInterstitial jsonTweetInterstitial, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTweetInterstitial jsonTweetInterstitial, final String s, final tge tge) throws IOException {
         if ("display_type".equals(s)) {
-            jsonTweetInterstitial.c = khe.T((String)null);
+            jsonTweetInterstitial.c = tge.T((String)null);
         }
         else if ("reveal_text".equals(s)) {
-            jsonTweetInterstitial.b = (xwm)LoganSquare.typeConverterFor((Class)xwm.class).parse(khe);
+            jsonTweetInterstitial.b = (oxm)LoganSquare.typeConverterFor((Class)oxm.class).parse(tge);
         }
         else if ("text".equals(s)) {
-            jsonTweetInterstitial.a = (xwm)LoganSquare.typeConverterFor((Class)xwm.class).parse(khe);
+            jsonTweetInterstitial.a = (oxm)LoganSquare.typeConverterFor((Class)oxm.class).parse(tge);
         }
     }
     
-    public JsonTweetInterstitial parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTweetInterstitial parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTweetInterstitial jsonTweetInterstitial, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTweetInterstitial, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTweetInterstitial jsonTweetInterstitial, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTweetInterstitial, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTweetInterstitial)o, afe, b);
     }
 }

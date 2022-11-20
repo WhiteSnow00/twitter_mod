@@ -10,57 +10,65 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonCheckLoggedInAccount$$JsonObjectMapper extends JsonMapper<JsonCheckLoggedInAccount>
 {
-    public static JsonCheckLoggedInAccount _parse(final khe khe) throws IOException {
+    public static JsonCheckLoggedInAccount _parse(final tge tge) throws IOException {
         final JsonCheckLoggedInAccount jsonCheckLoggedInAccount = new JsonCheckLoggedInAccount();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonCheckLoggedInAccount, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonCheckLoggedInAccount, d, tge);
+            tge.l0();
         }
         return jsonCheckLoggedInAccount;
     }
     
-    public static void _serialize(final JsonCheckLoggedInAccount jsonCheckLoggedInAccount, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonCheckLoggedInAccount jsonCheckLoggedInAccount, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonCheckLoggedInAccount.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonCheckLoggedInAccount.c, "false_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonCheckLoggedInAccount.c, "false_link", true, afe);
         }
         if (jsonCheckLoggedInAccount.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonCheckLoggedInAccount.b, "true_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonCheckLoggedInAccount.b, "true_link", true, afe);
         }
-        tfe.u0("user_id", jsonCheckLoggedInAccount.a);
+        afe.t0("user_id", jsonCheckLoggedInAccount.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonCheckLoggedInAccount jsonCheckLoggedInAccount, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonCheckLoggedInAccount jsonCheckLoggedInAccount, final String s, final tge tge) throws IOException {
         if ("false_link".equals(s)) {
-            jsonCheckLoggedInAccount.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonCheckLoggedInAccount.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("true_link".equals(s)) {
-            jsonCheckLoggedInAccount.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonCheckLoggedInAccount.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("user_id".equals(s)) {
-            jsonCheckLoggedInAccount.a = khe.T((String)null);
+            jsonCheckLoggedInAccount.a = tge.T((String)null);
         }
     }
     
-    public JsonCheckLoggedInAccount parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonCheckLoggedInAccount parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonCheckLoggedInAccount jsonCheckLoggedInAccount, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonCheckLoggedInAccount, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonCheckLoggedInAccount jsonCheckLoggedInAccount, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonCheckLoggedInAccount, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonCheckLoggedInAccount)o, afe, b);
     }
 }

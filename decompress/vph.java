@@ -1,28 +1,23 @@
-import android.view.View;
-import android.graphics.drawable.Drawable;
-import android.graphics.Paint;
 import android.content.Context;
+import com.twitter.util.user.UserIdentifier;
+import android.app.Activity;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class vph extends o3x
+public final class vph
 {
-    public vph(final Context context) {
-        super(context, false);
-        this.setLayerType(0, null);
-        ((View)this).setBackgroundDrawable((Drawable)null);
-    }
-    
-    public final void b(final String s, final ncq ncq, final boolean b, final boolean b2) {
-        super.b(s, ncq, false, b2);
-    }
-    
-    public final void setLayerType(final int n, final Paint paint) {
-        if (n == 2) {
-            return;
+    public static void a(final Activity activity, final UserIdentifier c, final obi<?> obi, final String s) {
+        if (c.isRegularUser()) {
+            final c8w$a c8w$a = new c8w$a(((Context)activity).getResources());
+            c8w$a.c = c;
+            ((xi1.a)c8w$a).a.putExtra("moments_owner_id", c.getId());
+            ((xi1.a)c8w$a).a.putExtra("moments_owner_username", s);
+            obi.d((ym)((n4j)c8w$a).e());
         }
-        super.setLayerType(n, paint);
+        else {
+            mw.B("Trying to start a user guide without a valid userId");
+        }
     }
 }

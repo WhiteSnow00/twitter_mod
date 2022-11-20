@@ -10,73 +10,81 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLiveVideoStream$$JsonObjectMapper extends JsonMapper<JsonLiveVideoStream>
 {
-    public static final ege JSON_LIVE_VIDEO_RESTRICTION;
+    public static final lfe JSON_LIVE_VIDEO_RESTRICTION;
     
     static {
-        JSON_LIVE_VIDEO_RESTRICTION = new ege();
+        JSON_LIVE_VIDEO_RESTRICTION = new lfe();
     }
     
-    public static JsonLiveVideoStream _parse(final khe khe) throws IOException {
+    public static JsonLiveVideoStream _parse(final tge tge) throws IOException {
         final JsonLiveVideoStream jsonLiveVideoStream = new JsonLiveVideoStream();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveVideoStream, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonLiveVideoStream, d, tge);
+            tge.l0();
         }
         return jsonLiveVideoStream;
     }
     
-    public static void _serialize(final JsonLiveVideoStream jsonLiveVideoStream, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveVideoStream jsonLiveVideoStream, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("chatToken", jsonLiveVideoStream.c);
-        tfe.u0("lifecycleToken", jsonLiveVideoStream.b);
-        final List e = jsonLiveVideoStream.e;
+        afe.t0("chatToken", jsonLiveVideoStream.c);
+        afe.t0("lifecycleToken", jsonLiveVideoStream.b);
+        final List<p1g> e = jsonLiveVideoStream.e;
         if (e != null) {
-            ((pmf)JsonLiveVideoStream$$JsonObjectMapper.JSON_LIVE_VIDEO_RESTRICTION).b(e, "restrictions", tfe);
+            ((amf)JsonLiveVideoStream$$JsonObjectMapper.JSON_LIVE_VIDEO_RESTRICTION).b((List)e, "restrictions", afe);
         }
-        tfe.u0("shareUrl", jsonLiveVideoStream.d);
+        afe.t0("shareUrl", jsonLiveVideoStream.d);
         if (jsonLiveVideoStream.a != null) {
-            tfe.i("source");
-            JsonLiveVideoStreamSource$$JsonObjectMapper._serialize(jsonLiveVideoStream.a, tfe, true);
+            afe.i("source");
+            JsonLiveVideoStreamSource$$JsonObjectMapper._serialize(jsonLiveVideoStream.a, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveVideoStream jsonLiveVideoStream, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveVideoStream jsonLiveVideoStream, final String s, final tge tge) throws IOException {
         if ("chatToken".equals(s)) {
-            jsonLiveVideoStream.c = khe.T((String)null);
+            jsonLiveVideoStream.c = tge.T((String)null);
         }
         else if ("lifecycleToken".equals(s)) {
-            jsonLiveVideoStream.b = khe.T((String)null);
+            jsonLiveVideoStream.b = tge.T((String)null);
         }
         else if ("restrictions".equals(s)) {
-            jsonLiveVideoStream.e = ((pmf)JsonLiveVideoStream$$JsonObjectMapper.JSON_LIVE_VIDEO_RESTRICTION).a(khe);
+            jsonLiveVideoStream.e = ((amf)JsonLiveVideoStream$$JsonObjectMapper.JSON_LIVE_VIDEO_RESTRICTION).a(tge);
         }
         else if ("shareUrl".equals(s)) {
-            jsonLiveVideoStream.d = khe.T((String)null);
+            jsonLiveVideoStream.d = tge.T((String)null);
         }
         else if ("source".equals(s)) {
-            jsonLiveVideoStream.a = JsonLiveVideoStreamSource$$JsonObjectMapper._parse(khe);
+            jsonLiveVideoStream.a = JsonLiveVideoStreamSource$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonLiveVideoStream parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveVideoStream parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveVideoStream jsonLiveVideoStream, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveVideoStream, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveVideoStream jsonLiveVideoStream, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonLiveVideoStream, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveVideoStream)o, afe, b);
     }
 }

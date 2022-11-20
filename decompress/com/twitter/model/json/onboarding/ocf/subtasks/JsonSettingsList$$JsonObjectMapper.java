@@ -14,113 +14,113 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSettingsList$$JsonObjectMapper extends JsonMapper<JsonSettingsList>
 {
-    public static JsonSettingsList _parse(final khe khe) throws IOException {
+    public static JsonSettingsList _parse(final tge tge) throws IOException {
         final JsonSettingsList list = new JsonSettingsList();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(list, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(list, d, tge);
+            tge.l0();
         }
         return list;
     }
     
-    public static void _serialize(final JsonSettingsList list, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSettingsList list, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (list.l != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(list.l, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(list.l, afe, true);
         }
         if (list.g != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(list.g, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(list.g, afe, true);
         }
         if (list.j != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)list.j, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)list.j, "header", true, afe);
         }
-        tfe.e("is_bottom_bar_alignment_vertical", list.m);
+        afe.e("is_bottom_bar_alignment_vertical", list.m);
         if (list.e != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)list.e, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)list.e, "next_link", true, afe);
         }
         if (list.k != null) {
-            LoganSquare.typeConverterFor((Class)s3a.class).serialize((Object)list.k, "next_link_enable_condition", true, tfe);
+            LoganSquare.typeConverterFor((Class)c3a.class).serialize((Object)list.k, "next_link_enable_condition", true, afe);
         }
         if (list.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(list.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(list.a, afe, true);
         }
-        tfe.u0("scroll_hint", list.c);
+        afe.t0("scroll_hint", list.c);
         if (list.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(list.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(list.b, afe, true);
         }
         final ArrayList d = list.d;
         if (d != null) {
-            final Iterator g = q1a.g(tfe, "settings", d);
-            while (g.hasNext()) {
-                final fqp fqp = g.next();
-                if (fqp != null) {
-                    LoganSquare.typeConverterFor((Class)fqp.class).serialize((Object)fqp, "lslocalsettingsElement", false, tfe);
+            final Iterator a = br.A(afe, "settings", d);
+            while (a.hasNext()) {
+                final wqp wqp = a.next();
+                if (wqp != null) {
+                    LoganSquare.typeConverterFor((Class)wqp.class).serialize((Object)wqp, "lslocalsettingsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.e("show_divider", list.i);
+        afe.e("show_divider", list.i);
         if (list.h != null) {
-            LoganSquare.typeConverterFor((Class)ioh.class).serialize((Object)list.h, "show_more", true, tfe);
+            LoganSquare.typeConverterFor((Class)noh.class).serialize((Object)list.h, "show_more", true, afe);
         }
         if (list.f != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)list.f, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)list.f, "skip_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSettingsList list, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSettingsList list, final String s, final tge tge) throws IOException {
         if ("component_collection".equals(s)) {
-            list.l = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            list.l = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            list.g = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            list.g = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("header".equals(s)) {
-            list.j = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            list.j = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("is_bottom_bar_alignment_vertical".equals(s)) {
-            list.m = khe.k();
+            list.m = tge.k();
         }
         else if ("next_link".equals(s)) {
-            list.e = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            list.e = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link_enable_condition".equals(s)) {
-            list.k = (s3a)LoganSquare.typeConverterFor((Class)s3a.class).parse(khe);
+            list.k = (c3a)LoganSquare.typeConverterFor((Class)c3a.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            list.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            list.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("scroll_hint".equals(s)) {
-            list.c = khe.T((String)null);
+            list.c = tge.T((String)null);
         }
         else if ("secondary_text".equals(s)) {
-            list.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            list.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("settings".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList d = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final fqp fqp = (fqp)LoganSquare.typeConverterFor((Class)fqp.class).parse(khe);
-                    if (fqp != null) {
-                        d.add(fqp);
+                while (tge.h0() != vie.O0) {
+                    final wqp wqp = (wqp)LoganSquare.typeConverterFor((Class)wqp.class).parse(tge);
+                    if (wqp != null) {
+                        d.add(wqp);
                     }
                 }
                 list.d = d;
@@ -130,21 +130,29 @@ public final class JsonSettingsList$$JsonObjectMapper extends JsonMapper<JsonSet
             }
         }
         else if ("show_divider".equals(s)) {
-            list.i = khe.k();
+            list.i = tge.k();
         }
         else if ("show_more".equals(s)) {
-            list.h = (ioh)LoganSquare.typeConverterFor((Class)ioh.class).parse(khe);
+            list.h = (noh)LoganSquare.typeConverterFor((Class)noh.class).parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            list.f = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            list.f = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonSettingsList parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSettingsList parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSettingsList list, final tfe tfe, final boolean b) throws IOException {
-        _serialize(list, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSettingsList list, final afe afe, final boolean b) throws IOException {
+        _serialize(list, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSettingsList)o, afe, b);
     }
 }

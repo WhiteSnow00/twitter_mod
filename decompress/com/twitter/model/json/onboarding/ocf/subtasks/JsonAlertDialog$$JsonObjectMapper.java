@@ -12,80 +12,88 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonAlertDialog$$JsonObjectMapper extends JsonMapper<JsonAlertDialog>
 {
-    public static JsonAlertDialog _parse(final khe khe) throws IOException {
+    public static JsonAlertDialog _parse(final tge tge) throws IOException {
         final JsonAlertDialog jsonAlertDialog = new JsonAlertDialog();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonAlertDialog, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonAlertDialog, d, tge);
+            tge.l0();
         }
         return jsonAlertDialog;
     }
     
-    public static void _serialize(final JsonAlertDialog jsonAlertDialog, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonAlertDialog jsonAlertDialog, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonAlertDialog.d != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonAlertDialog.d, "cancel_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonAlertDialog.d, "cancel_link", true, afe);
         }
         if (jsonAlertDialog.f != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonAlertDialog.f, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonAlertDialog.f, afe, true);
         }
         if (jsonAlertDialog.e != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonAlertDialog.e, "dismiss_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonAlertDialog.e, "dismiss_link", true, afe);
         }
         if (jsonAlertDialog.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonAlertDialog.c, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonAlertDialog.c, "next_link", true, afe);
         }
         if (jsonAlertDialog.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonAlertDialog.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonAlertDialog.a, afe, true);
         }
         if (jsonAlertDialog.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonAlertDialog.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonAlertDialog.b, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonAlertDialog jsonAlertDialog, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonAlertDialog jsonAlertDialog, final String s, final tge tge) throws IOException {
         if ("cancel_link".equals(s)) {
-            jsonAlertDialog.d = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonAlertDialog.d = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("component_collection".equals(s)) {
-            jsonAlertDialog.f = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonAlertDialog.f = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("dismiss_link".equals(s)) {
-            jsonAlertDialog.e = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonAlertDialog.e = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonAlertDialog.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonAlertDialog.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonAlertDialog.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonAlertDialog.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("secondary_text".equals(s)) {
-            jsonAlertDialog.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonAlertDialog.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonAlertDialog parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonAlertDialog parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonAlertDialog jsonAlertDialog, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonAlertDialog, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonAlertDialog jsonAlertDialog, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonAlertDialog, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonAlertDialog)o, afe, b);
     }
 }

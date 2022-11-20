@@ -1,5 +1,4 @@
-import java.io.File;
-import android.content.Context;
+import java.util.concurrent.atomic.AtomicReference;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -7,31 +6,9 @@ import android.content.Context;
 
 public final class jxz
 {
-    public final Context a;
+    public static final AtomicReference<kwz> a;
     
-    public jxz(final Context a) {
-        this.a = a;
-    }
-    
-    public static long a(final File file) {
-        if (!file.isDirectory()) {
-            return file.length();
-        }
-        final File[] listFiles = file.listFiles();
-        long n2;
-        long n = n2 = 0L;
-        if (listFiles != null) {
-            final int length = listFiles.length;
-            int n3 = 0;
-            while (true) {
-                n2 = n;
-                if (n3 >= length) {
-                    break;
-                }
-                n += a(listFiles[n3]);
-                ++n3;
-            }
-        }
-        return n2;
+    static {
+        a = new AtomicReference<kwz>(null);
     }
 }

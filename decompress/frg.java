@@ -1,19 +1,21 @@
+import java.io.IOException;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class frg
 {
-    public static final alp<frg> d;
+    public static final rlp<frg> d;
     public final String a;
     public final String b;
-    public final n1h c;
+    public final o1h c;
     
     static {
-        frg.d = new frg.frg$a();
+        frg.d = new a();
     }
     
-    public frg(final String a, final String b, final n1h c) {
+    public frg(final String a, final String b, final o1h c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -29,7 +31,7 @@ public final class frg
             return false;
         }
         final frg frg = (frg)o;
-        if (!w4j.a((Object)this.a, (Object)frg.a) || !w4j.a((Object)this.b, (Object)frg.b) || !w4j.a((Object)this.c, (Object)frg.c)) {
+        if (!c5j.a((Object)this.a, (Object)frg.a) || !c5j.a((Object)this.b, (Object)frg.b) || !c5j.a((Object)this.c, (Object)frg.c)) {
             b = false;
         }
         return b;
@@ -37,6 +39,32 @@ public final class frg
     
     @Override
     public final int hashCode() {
-        return w4j.h((Object)this.a, (Object)this.b, (Object)this.c);
+        return c5j.h((Object)this.a, (Object)this.b, (Object)this.c);
+    }
+    
+    public static final class a extends y4j<frg>
+    {
+        public a() {
+            super(1);
+        }
+        
+        public final Object d(final vlp vlp, final int n) throws IOException, ClassNotFoundException {
+            frg frg;
+            if (n < 1) {
+                frg = new frg(vlp.A(), vlp.G(), null);
+            }
+            else {
+                frg = new frg(vlp.A(), vlp.G(), (o1h)((y4j)o1h.b).a(vlp));
+            }
+            return frg;
+        }
+        
+        public final void f(final wlp wlp, final Object o) throws IOException {
+            final frg frg = (frg)o;
+            wlp.E(frg.a);
+            wlp.E(frg.b);
+            ((y4j)new o1h$b()).c(wlp, (Object)frg.c);
+            final int a = c5j.a;
+        }
     }
 }

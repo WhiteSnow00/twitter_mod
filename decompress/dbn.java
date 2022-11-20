@@ -4,15 +4,20 @@ import tv.periscope.android.api.service.hydra.model.guestservice.GuestServiceBas
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dbn extends gue implements rtb<GuestServiceBaseResponse, oyv>
+public final class dbn extends ste implements qsb<GuestServiceBaseResponse, fzv>
 {
-    public static final dbn C0;
+    public static final dbn D0;
     
     static {
-        C0 = new dbn();
+        D0 = new dbn();
     }
     
     public dbn() {
         super(1);
+    }
+    
+    public final /* bridge */ Object invoke(final Object o) {
+        final GuestServiceBaseResponse guestServiceBaseResponse = (GuestServiceBaseResponse)o;
+        return fzv.a;
     }
 }

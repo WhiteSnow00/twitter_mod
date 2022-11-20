@@ -1,28 +1,23 @@
-import java.util.Locale;
+import com.twitter.util.user.UserIdentifier;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kz9 extends rj8<String, pd1>
+public final class kz9 extends enm<tmi, xrc<lz9, kbv>, jz9>
 {
-    public final String c;
+    public final UserIdentifier E0;
     
-    public kz9(final Locale locale) {
-        super(pd1.class, "email_availability_check");
-        this.c = jgw.H(locale);
+    public kz9(final UserIdentifier e0) {
+        this.E0 = e0;
     }
     
-    public final int g() {
-        return 2;
+    public final orc c(final Object o) {
+        final tmi tmi = (tmi)o;
+        return (orc)new jz9(this.E0);
     }
     
-    @Override
-    public final void i(final qrc.a a, final Object o) {
-        final String s = (String)o;
-        a.n("/i/users/email_available.json", "/");
-        final int a2 = w4j.a;
-        a.d("email", s);
-        a.d("lang", this.c);
+    public final Object d(final orc orc) {
+        return ((orc)orc).T();
     }
 }

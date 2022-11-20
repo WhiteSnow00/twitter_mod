@@ -10,73 +10,81 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOneTapSubtask$$JsonObjectMapper extends JsonMapper<JsonOneTapSubtask>
 {
-    public static JsonOneTapSubtask _parse(final khe khe) throws IOException {
+    public static JsonOneTapSubtask _parse(final tge tge) throws IOException {
         final JsonOneTapSubtask jsonOneTapSubtask = new JsonOneTapSubtask();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonOneTapSubtask, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonOneTapSubtask, d, tge);
+            tge.l0();
         }
         return jsonOneTapSubtask;
     }
     
-    public static void _serialize(final JsonOneTapSubtask jsonOneTapSubtask, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOneTapSubtask jsonOneTapSubtask, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.e("auto_login_enabled", jsonOneTapSubtask.e);
-        tfe.u0("dismiss_callback", jsonOneTapSubtask.d);
-        tfe.e("filter_by_authorized_accounts", jsonOneTapSubtask.g);
+        afe.e("auto_login_enabled", jsonOneTapSubtask.e);
+        afe.t0("dismiss_callback", jsonOneTapSubtask.d);
+        afe.e("filter_by_authorized_accounts", jsonOneTapSubtask.g);
         if (jsonOneTapSubtask.a != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonOneTapSubtask.a, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOneTapSubtask.a, "next_link", true, afe);
         }
-        tfe.e("saved_passwords_enabled", jsonOneTapSubtask.f);
-        tfe.u0("state", jsonOneTapSubtask.c);
+        afe.e("saved_passwords_enabled", jsonOneTapSubtask.f);
+        afe.t0("state", jsonOneTapSubtask.c);
         if (jsonOneTapSubtask.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonOneTapSubtask.b, "success_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOneTapSubtask.b, "success_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonOneTapSubtask jsonOneTapSubtask, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonOneTapSubtask jsonOneTapSubtask, final String s, final tge tge) throws IOException {
         if ("auto_login_enabled".equals(s)) {
-            jsonOneTapSubtask.e = khe.k();
+            jsonOneTapSubtask.e = tge.k();
         }
         else if ("dismiss_callback".equals(s)) {
-            jsonOneTapSubtask.d = khe.T((String)null);
+            jsonOneTapSubtask.d = tge.T((String)null);
         }
         else if ("filter_by_authorized_accounts".equals(s)) {
-            jsonOneTapSubtask.g = khe.k();
+            jsonOneTapSubtask.g = tge.k();
         }
         else if ("next_link".equals(s)) {
-            jsonOneTapSubtask.a = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonOneTapSubtask.a = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("saved_passwords_enabled".equals(s)) {
-            jsonOneTapSubtask.f = khe.k();
+            jsonOneTapSubtask.f = tge.k();
         }
         else if ("state".equals(s)) {
-            jsonOneTapSubtask.c = khe.T((String)null);
+            jsonOneTapSubtask.c = tge.T((String)null);
         }
         else if ("success_link".equals(s)) {
-            jsonOneTapSubtask.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonOneTapSubtask.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonOneTapSubtask parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonOneTapSubtask parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonOneTapSubtask jsonOneTapSubtask, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonOneTapSubtask, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonOneTapSubtask jsonOneTapSubtask, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonOneTapSubtask, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonOneTapSubtask)o, afe, b);
     }
 }

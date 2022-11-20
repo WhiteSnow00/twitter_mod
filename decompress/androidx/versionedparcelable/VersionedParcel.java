@@ -10,11 +10,11 @@ import java.lang.reflect.Method;
 
 public abstract class VersionedParcel
 {
-    public final at0<String, Method> a;
-    public final at0<String, Method> b;
-    public final at0<String, Class> c;
+    public final ts0<String, Method> a;
+    public final ts0<String, Method> b;
+    public final ts0<String, Class> c;
     
-    public VersionedParcel(final at0<String, Method> a, final at0<String, Method> b, final at0<String, Class> c) {
+    public VersionedParcel(final ts0<String, Method> a, final ts0<String, Method> b, final ts0<String, Class> c) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -24,32 +24,32 @@ public abstract class VersionedParcel
     
     public abstract VersionedParcel b();
     
-    public final Class c(final Class<? extends xrw> clazz) throws ClassNotFoundException {
+    public final Class c(final Class<? extends qsw> clazz) throws ClassNotFoundException {
         Class<?> forName;
-        if ((forName = (Class)((l7q)this.c).getOrDefault((Object)clazz.getName(), (Object)null)) == null) {
+        if ((forName = ((d8q<K, Class>)this.c).getOrDefault(clazz.getName(), null)) == null) {
             forName = Class.forName(String.format("%s.%sParcelizer", clazz.getPackage().getName(), clazz.getSimpleName()), false, clazz.getClassLoader());
-            ((l7q)this.c).put((Object)clazz.getName(), (Object)forName);
+            ((d8q<String, Class<?>>)this.c).put(clazz.getName(), forName);
         }
         return forName;
     }
     
     public final Method d(final String s) throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException {
         Method declaredMethod;
-        if ((declaredMethod = (Method)((l7q)this.a).getOrDefault((Object)s, (Object)null)) == null) {
+        if ((declaredMethod = ((d8q<K, Method>)this.a).getOrDefault(s, null)) == null) {
             System.currentTimeMillis();
             declaredMethod = Class.forName(s, true, VersionedParcel.class.getClassLoader()).getDeclaredMethod("read", VersionedParcel.class);
-            ((l7q)this.a).put((Object)s, (Object)declaredMethod);
+            ((d8q<String, Method>)this.a).put(s, declaredMethod);
         }
         return declaredMethod;
     }
     
     public final Method e(final Class clazz) throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException {
         Method declaredMethod;
-        if ((declaredMethod = (Method)((l7q)this.b).getOrDefault((Object)clazz.getName(), (Object)null)) == null) {
+        if ((declaredMethod = ((d8q<K, Method>)this.b).getOrDefault(clazz.getName(), null)) == null) {
             final Class c = this.c(clazz);
             System.currentTimeMillis();
             declaredMethod = c.getDeclaredMethod("write", clazz, VersionedParcel.class);
-            ((l7q)this.b).put((Object)clazz.getName(), (Object)declaredMethod);
+            ((d8q<String, Method>)this.b).put(clazz.getName(), declaredMethod);
         }
         return declaredMethod;
     }
@@ -82,7 +82,7 @@ public abstract class VersionedParcel
     
     public abstract String n();
     
-    public final <T extends xrw> T o() {
+    public final <T extends qsw> T o() {
         final String n = this.n();
         if (n == null) {
             return null;
@@ -132,13 +132,13 @@ public abstract class VersionedParcel
     
     public abstract void x(final String p0);
     
-    public final void y(final xrw ex) {
+    public final void y(final qsw ex) {
         if (ex == null) {
             this.x(null);
             return;
         }
         try {
-            this.x(this.c((Class<? extends xrw>)ex.getClass()).getName());
+            this.x(this.c((Class<? extends qsw>)ex.getClass()).getName());
             final VersionedParcel b = this.b();
             try {
                 this.e(ex.getClass()).invoke(null, ex, b);

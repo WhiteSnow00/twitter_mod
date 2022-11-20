@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonVideoAnalyticsScribe extends aih<y00>
+public class JsonVideoAnalyticsScribe extends fih<z00>
 {
     @JsonField
     public long a;
@@ -18,10 +18,9 @@ public class JsonVideoAnalyticsScribe extends aih<y00>
     @JsonField
     public String c;
     
-    @Override
     public final Object s() {
-        final sm9 sm9 = new sm9(this.a, this.b);
-        final boolean valid = sm9.isValid();
+        final bm9 bm9 = new bm9(this.a, this.b);
+        final boolean valid = bm9.isValid();
         Object o2;
         final Object o = o2 = null;
         if (!valid) {
@@ -33,7 +32,7 @@ public class JsonVideoAnalyticsScribe extends aih<y00>
             return o2;
         }
         try {
-            o2 = new y00(c, sm9);
+            o2 = new z00(c, bm9);
             return o2;
         }
         catch (final NumberFormatException ex) {

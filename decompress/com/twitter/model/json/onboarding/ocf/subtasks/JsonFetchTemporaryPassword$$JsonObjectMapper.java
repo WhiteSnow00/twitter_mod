@@ -10,51 +10,59 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFetchTemporaryPassword$$JsonObjectMapper extends JsonMapper<JsonFetchTemporaryPassword>
 {
-    public static JsonFetchTemporaryPassword _parse(final khe khe) throws IOException {
+    public static JsonFetchTemporaryPassword _parse(final tge tge) throws IOException {
         final JsonFetchTemporaryPassword jsonFetchTemporaryPassword = new JsonFetchTemporaryPassword();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFetchTemporaryPassword, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFetchTemporaryPassword, d, tge);
+            tge.l0();
         }
         return jsonFetchTemporaryPassword;
     }
     
-    public static void _serialize(final JsonFetchTemporaryPassword jsonFetchTemporaryPassword, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFetchTemporaryPassword jsonFetchTemporaryPassword, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonFetchTemporaryPassword.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonFetchTemporaryPassword.b, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonFetchTemporaryPassword.b, "next_link", true, afe);
         }
-        tfe.e("should_generate", jsonFetchTemporaryPassword.a);
+        afe.e("should_generate", jsonFetchTemporaryPassword.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFetchTemporaryPassword jsonFetchTemporaryPassword, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFetchTemporaryPassword jsonFetchTemporaryPassword, final String s, final tge tge) throws IOException {
         if ("next_link".equals(s)) {
-            jsonFetchTemporaryPassword.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonFetchTemporaryPassword.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("should_generate".equals(s)) {
-            jsonFetchTemporaryPassword.a = khe.k();
+            jsonFetchTemporaryPassword.a = tge.k();
         }
     }
     
-    public JsonFetchTemporaryPassword parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFetchTemporaryPassword parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFetchTemporaryPassword jsonFetchTemporaryPassword, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFetchTemporaryPassword, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFetchTemporaryPassword jsonFetchTemporaryPassword, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFetchTemporaryPassword, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFetchTemporaryPassword)o, afe, b);
     }
 }

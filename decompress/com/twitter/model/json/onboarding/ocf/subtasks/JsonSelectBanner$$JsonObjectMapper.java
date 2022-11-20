@@ -12,80 +12,88 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSelectBanner$$JsonObjectMapper extends JsonMapper<JsonSelectBanner>
 {
-    public static JsonSelectBanner _parse(final khe khe) throws IOException {
+    public static JsonSelectBanner _parse(final tge tge) throws IOException {
         final JsonSelectBanner jsonSelectBanner = new JsonSelectBanner();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSelectBanner, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSelectBanner, d, tge);
+            tge.l0();
         }
         return jsonSelectBanner;
     }
     
-    public static void _serialize(final JsonSelectBanner jsonSelectBanner, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSelectBanner jsonSelectBanner, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonSelectBanner.e != null) {
-            LoganSquare.typeConverterFor((Class)dsr.class).serialize((Object)jsonSelectBanner.e, "avatar_image_reference", true, tfe);
+            LoganSquare.typeConverterFor((Class)vsr.class).serialize((Object)jsonSelectBanner.e, "avatar_image_reference", true, afe);
         }
         if (jsonSelectBanner.f != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonSelectBanner.f, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonSelectBanner.f, afe, true);
         }
         if (jsonSelectBanner.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSelectBanner.c, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSelectBanner.c, "next_link", true, afe);
         }
         if (jsonSelectBanner.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSelectBanner.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSelectBanner.a, afe, true);
         }
         if (jsonSelectBanner.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSelectBanner.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSelectBanner.b, afe, true);
         }
         if (jsonSelectBanner.d != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSelectBanner.d, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSelectBanner.d, "skip_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSelectBanner jsonSelectBanner, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSelectBanner jsonSelectBanner, final String s, final tge tge) throws IOException {
         if ("avatar_image_reference".equals(s)) {
-            jsonSelectBanner.e = (dsr)LoganSquare.typeConverterFor((Class)dsr.class).parse(khe);
+            jsonSelectBanner.e = (vsr)LoganSquare.typeConverterFor((Class)vsr.class).parse(tge);
         }
         else if ("component_collection".equals(s)) {
-            jsonSelectBanner.f = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonSelectBanner.f = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonSelectBanner.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSelectBanner.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonSelectBanner.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonSelectBanner.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("secondary_text".equals(s)) {
-            jsonSelectBanner.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonSelectBanner.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            jsonSelectBanner.d = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSelectBanner.d = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonSelectBanner parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSelectBanner parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSelectBanner jsonSelectBanner, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSelectBanner, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSelectBanner jsonSelectBanner, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSelectBanner, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSelectBanner)o, afe, b);
     }
 }

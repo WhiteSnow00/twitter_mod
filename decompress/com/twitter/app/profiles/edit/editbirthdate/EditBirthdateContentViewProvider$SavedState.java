@@ -8,8 +8,8 @@ import java.io.IOException;
 import android.os.Parcel;
 import android.os.Parcelable$Creator;
 
-@lpe
-public class EditBirthdateContentViewProvider$SavedState<OBJ extends EditBirthdateContentViewProvider> extends dq1<OBJ>
+@xoe
+public class EditBirthdateContentViewProvider$SavedState<OBJ extends EditBirthdateContentViewProvider> extends zp1<OBJ>
 {
     public static final Parcelable$Creator CREATOR;
     
@@ -33,16 +33,24 @@ public class EditBirthdateContentViewProvider$SavedState<OBJ extends EditBirthda
         super((Object)obj);
     }
     
-    public OBJ deserializeValue(final elp elp, final OBJ obj) throws IOException, ClassNotFoundException {
-        final EditBirthdateContentViewProvider editBirthdateContentViewProvider = (EditBirthdateContentViewProvider)super.deserializeValue(elp, (Object)obj);
-        editBirthdateContentViewProvider.W0 = elp.u();
-        editBirthdateContentViewProvider.X0 = elp.u();
+    public OBJ deserializeValue(final vlp vlp, final OBJ obj) throws IOException, ClassNotFoundException {
+        final EditBirthdateContentViewProvider editBirthdateContentViewProvider = (EditBirthdateContentViewProvider)super.deserializeValue(vlp, (Object)obj);
+        editBirthdateContentViewProvider.X0 = vlp.s();
+        editBirthdateContentViewProvider.Y0 = vlp.s();
         return (OBJ)editBirthdateContentViewProvider;
     }
     
-    public void serializeValue(final flp flp, final OBJ obj) throws IOException {
-        super.serializeValue(flp, (Object)obj);
-        flp.t(obj.W0);
-        flp.t(obj.X0);
+    public /* bridge */ Object deserializeValue(final vlp vlp, final Object o) throws IOException, ClassNotFoundException {
+        return this.deserializeValue(vlp, (EditBirthdateContentViewProvider)o);
+    }
+    
+    public void serializeValue(final wlp wlp, final OBJ obj) throws IOException {
+        super.serializeValue(wlp, (Object)obj);
+        wlp.r(obj.X0);
+        wlp.r(obj.Y0);
+    }
+    
+    public /* bridge */ void serializeValue(final wlp wlp, final Object o) throws IOException {
+        this.serializeValue(wlp, (EditBirthdateContentViewProvider)o);
     }
 }

@@ -516,6 +516,18 @@
         <item quantity="one">%s人の登録アカウント</item>
         <item quantity="other">%s人の登録アカウント</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">日</item>
+        <item quantity="other">%d日</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">ヶ月</item>
+        <item quantity="other">%dヶ月</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">年</item>
+        <item quantity="other">%d年</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d日</item>
         <item quantity="other">%d日</item>

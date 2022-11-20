@@ -1,35 +1,21 @@
-import java.util.List;
-import java.util.Collection;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cmz extends hmz
+public final class cmz implements Runnable
 {
-    public final void a(final Object o, final long n) {
-        ((dlz)uqz.j(o, n)).c();
+    public final long D0;
+    public final long E0;
+    public final i99 F0;
+    
+    public cmz(final i99 f0, final long d0, final long e0) {
+        this.F0 = f0;
+        this.D0 = d0;
+        this.E0 = e0;
     }
     
-    public final void b(final Object o, final Object o2, final long n) {
-        final dlz dlz = (dlz)uqz.j(o, n);
-        final dlz dlz2 = (dlz)uqz.j(o2, n);
-        final int size = ((List)dlz).size();
-        final int size2 = ((List)dlz2).size();
-        Object w = dlz;
-        if (size > 0) {
-            w = dlz;
-            if (size2 > 0) {
-                w = dlz;
-                if (!dlz.d()) {
-                    w = dlz.W(size2 + size);
-                }
-                ((List)w).addAll((Collection)dlz2);
-            }
-        }
-        if (size <= 0) {
-            w = dlz2;
-        }
-        uqz.r(o, n, w);
+    @Override
+    public final void run() {
+        ((pbz)this.F0.F0).D0.a().q((Runnable)new i3y((Object)this, 2));
     }
 }

@@ -1,18 +1,25 @@
+import com.airbnb.lottie.LottieAnimationView;
+import android.view.View;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zc2 extends gue implements rtb<sc2, sc2>
+public final class zc2 extends ste implements qsb<View, ilx<? super nc2, lc2, kc2>>
 {
-    public final /* synthetic */ String C0;
+    public static final zc2 D0;
     
-    public zc2(final String c0) {
-        this.C0 = c0;
+    static {
+        D0 = new zc2();
+    }
+    
+    public zc2() {
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        zzd.f((Object)o, "$this$setState");
-        return new sc2.c(this.C0);
+        final View view = (View)o;
+        czd.f((Object)view, "it");
+        return new wb0((LottieAnimationView)view);
     }
 }

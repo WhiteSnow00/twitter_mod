@@ -9,25 +9,24 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonVideoAd extends aih<cn9>
+public class JsonVideoAd extends fih<lm9>
 {
     @JsonField
     public long a;
     @JsonField
     public String b;
     @JsonField
-    public hil c;
+    public uil c;
     @JsonField
     public String d;
     @JsonField
     public int e;
     @JsonField
-    public gn9 f;
+    public pm9 f;
     
-    @Override
     public final Object s() {
-        final sm9 sm9 = new sm9(this.a, this.b);
-        final boolean valid = sm9.isValid();
+        final bm9 bm9 = new bm9(this.a, this.b);
+        final boolean valid = bm9.isValid();
         Object o2;
         final Object o = o2 = null;
         if (!valid) {
@@ -40,20 +39,20 @@ public class JsonVideoAd extends aih<cn9>
         }
         try {
             final int e = this.e;
-            final gn9 f = this.f;
-            final hil c = this.c;
-            hn9 hn9;
+            final pm9 f = this.f;
+            final uil c = this.c;
+            qm9 qm9;
             if (c == null) {
-                hn9 = null;
+                qm9 = null;
             }
             else {
-                final hn9$a hn9$a = new hn9$a();
-                hn9$a.a = c.b;
-                hn9$a.b = c.a;
-                hn9$a.c = c.c;
-                hn9 = (hn9)((h4j)hn9$a).e();
+                final qm9.a a = new qm9.a();
+                a.a = c.b;
+                a.b = c.a;
+                a.c = c.c;
+                qm9 = (qm9)a.e();
             }
-            o2 = new cn9(new gav(d, e, f, hn9), sm9);
+            o2 = new lm9(new bbv(d, e, f, qm9), bm9);
             return o2;
         }
         catch (final NumberFormatException ex) {

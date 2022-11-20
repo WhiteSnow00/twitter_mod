@@ -11,75 +11,83 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonCreateAccount$$JsonObjectMapper extends JsonMapper<JsonCreateAccount>
 {
-    public static final jy0 ATTRIBUTION_EVENT_CONVERTER;
+    public static final ey0 ATTRIBUTION_EVENT_CONVERTER;
     
     static {
-        ATTRIBUTION_EVENT_CONVERTER = new jy0();
+        ATTRIBUTION_EVENT_CONVERTER = new ey0();
     }
     
-    public static JsonCreateAccount _parse(final khe khe) throws IOException {
+    public static JsonCreateAccount _parse(final tge tge) throws IOException {
         final JsonCreateAccount jsonCreateAccount = new JsonCreateAccount();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonCreateAccount, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonCreateAccount, d, tge);
+            tge.l0();
         }
         return jsonCreateAccount;
     }
     
-    public static void _serialize(final JsonCreateAccount jsonCreateAccount, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonCreateAccount jsonCreateAccount, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        ((StringBasedTypeConverter)JsonCreateAccount$$JsonObjectMapper.ATTRIBUTION_EVENT_CONVERTER).serialize((Object)jsonCreateAccount.f, "attribution_event", true, tfe);
-        tfe.u0("known_device_token", jsonCreateAccount.d);
+        ((StringBasedTypeConverter)JsonCreateAccount$$JsonObjectMapper.ATTRIBUTION_EVENT_CONVERTER).serialize((Object)jsonCreateAccount.f, "attribution_event", true, afe);
+        afe.t0("known_device_token", jsonCreateAccount.d);
         if (jsonCreateAccount.e != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonCreateAccount.e, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonCreateAccount.e, "next_link", true, afe);
         }
-        tfe.u0("oauth_token", jsonCreateAccount.b);
-        tfe.u0("oauth_token_secret", jsonCreateAccount.c);
+        afe.t0("oauth_token", jsonCreateAccount.b);
+        afe.t0("oauth_token_secret", jsonCreateAccount.c);
         if (jsonCreateAccount.a != null) {
-            LoganSquare.typeConverterFor((Class)hfv.class).serialize((Object)jsonCreateAccount.a, "user", true, tfe);
+            LoganSquare.typeConverterFor((Class)cgv.class).serialize((Object)jsonCreateAccount.a, "user", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonCreateAccount jsonCreateAccount, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonCreateAccount jsonCreateAccount, final String s, final tge tge) throws IOException {
         if ("attribution_event".equals(s)) {
-            jsonCreateAccount.f = (int)((StringBasedTypeConverter)JsonCreateAccount$$JsonObjectMapper.ATTRIBUTION_EVENT_CONVERTER).parse(khe);
+            jsonCreateAccount.f = (int)((StringBasedTypeConverter)JsonCreateAccount$$JsonObjectMapper.ATTRIBUTION_EVENT_CONVERTER).parse(tge);
         }
         else if ("known_device_token".equals(s)) {
-            jsonCreateAccount.d = khe.T((String)null);
+            jsonCreateAccount.d = tge.T((String)null);
         }
         else if ("next_link".equals(s)) {
-            jsonCreateAccount.e = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonCreateAccount.e = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("oauth_token".equals(s)) {
-            jsonCreateAccount.b = khe.T((String)null);
+            jsonCreateAccount.b = tge.T((String)null);
         }
         else if ("oauth_token_secret".equals(s)) {
-            jsonCreateAccount.c = khe.T((String)null);
+            jsonCreateAccount.c = tge.T((String)null);
         }
         else if ("user".equals(s)) {
-            jsonCreateAccount.a = (hfv)LoganSquare.typeConverterFor((Class)hfv.class).parse(khe);
+            jsonCreateAccount.a = (cgv)LoganSquare.typeConverterFor((Class)cgv.class).parse(tge);
         }
     }
     
-    public JsonCreateAccount parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonCreateAccount parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonCreateAccount jsonCreateAccount, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonCreateAccount, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonCreateAccount jsonCreateAccount, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonCreateAccount, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonCreateAccount)o, afe, b);
     }
 }

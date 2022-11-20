@@ -11,68 +11,76 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonEnableCondition$$JsonObjectMapper extends JsonMapper<JsonEnableCondition>
 {
-    public static final if6 CONDITION_TYPE_CONVERTER;
+    public static final ne6 CONDITION_TYPE_CONVERTER;
     
     static {
-        CONDITION_TYPE_CONVERTER = new if6();
+        CONDITION_TYPE_CONVERTER = new ne6();
     }
     
-    public static JsonEnableCondition _parse(final khe khe) throws IOException {
+    public static JsonEnableCondition _parse(final tge tge) throws IOException {
         final JsonEnableCondition jsonEnableCondition = new JsonEnableCondition();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonEnableCondition, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonEnableCondition, d, tge);
+            tge.l0();
         }
         return jsonEnableCondition;
     }
     
-    public static void _serialize(final JsonEnableCondition jsonEnableCondition, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonEnableCondition jsonEnableCondition, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final hf6 a = jsonEnableCondition.a;
+        final me6 a = jsonEnableCondition.a;
         if (a != null) {
-            ((StringBasedTypeConverter)JsonEnableCondition$$JsonObjectMapper.CONDITION_TYPE_CONVERTER).serialize((Object)a, "condition_type", true, tfe);
+            ((StringBasedTypeConverter)JsonEnableCondition$$JsonObjectMapper.CONDITION_TYPE_CONVERTER).serialize((Object)a, "condition_type", true, afe);
         }
         if (jsonEnableCondition.c != null) {
-            tfe.i("data");
-            JsonEnableConditionData$$JsonObjectMapper._serialize(jsonEnableCondition.c, tfe, true);
+            afe.i("data");
+            JsonEnableConditionData$$JsonObjectMapper._serialize(jsonEnableCondition.c, afe, true);
         }
-        tfe.u0("identifier", jsonEnableCondition.b);
+        afe.t0("identifier", jsonEnableCondition.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonEnableCondition jsonEnableCondition, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonEnableCondition jsonEnableCondition, final String s, final tge tge) throws IOException {
         if ("condition_type".equals(s)) {
-            final hf6 a = (hf6)((StringBasedTypeConverter)JsonEnableCondition$$JsonObjectMapper.CONDITION_TYPE_CONVERTER).parse(khe);
+            final me6 a = (me6)((StringBasedTypeConverter)JsonEnableCondition$$JsonObjectMapper.CONDITION_TYPE_CONVERTER).parse(tge);
             Objects.requireNonNull(jsonEnableCondition);
-            zzd.f((Object)a, "<set-?>");
+            czd.f((Object)a, "<set-?>");
             jsonEnableCondition.a = a;
         }
         else if ("data".equals(s)) {
-            jsonEnableCondition.c = JsonEnableConditionData$$JsonObjectMapper._parse(khe);
+            jsonEnableCondition.c = JsonEnableConditionData$$JsonObjectMapper._parse(tge);
         }
         else if ("identifier".equals(s)) {
-            jsonEnableCondition.b = khe.T((String)null);
+            jsonEnableCondition.b = tge.T((String)null);
         }
     }
     
-    public JsonEnableCondition parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonEnableCondition parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonEnableCondition jsonEnableCondition, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonEnableCondition, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonEnableCondition jsonEnableCondition, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonEnableCondition, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonEnableCondition)o, afe, b);
     }
 }

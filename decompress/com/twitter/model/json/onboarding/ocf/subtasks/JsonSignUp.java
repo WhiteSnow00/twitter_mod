@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSignUp extends lhh<m6q>
+public class JsonSignUp extends qhh<e7q>
 {
     @JsonField
     public String a;
@@ -31,20 +31,19 @@ public class JsonSignUp extends lhh<m6q>
     @JsonField
     public String i;
     @JsonField
-    public xrv j;
+    public ssv j;
     @JsonField
     public boolean k;
     @JsonField
-    public xrv l;
+    public ssv l;
     @JsonField
-    public xrv m;
+    public ssv m;
     @JsonField
     public JsonJsInstrumentationConfig n;
     @JsonField
     public JsonOcfComponentCollection o;
     
-    @Override
-    public final h4j t() {
+    public final n4j t() {
         final JsonJsInstrumentationConfig n = this.n;
         String a;
         if (n != null) {
@@ -53,36 +52,36 @@ public class JsonSignUp extends lhh<m6q>
         else {
             a = "";
         }
-        final m6q.a a2 = new m6q.a();
-        a2.k = this.a;
-        a2.l = this.b;
-        a2.m = this.c;
-        a2.n = this.d;
-        a2.o = this.e;
-        a2.p = this.f;
-        a2.q = this.g;
-        a2.r = this.h;
-        a2.s = this.i;
-        a2.a = this.j;
-        final int a3 = w4j.a;
-        a2.w = this.k;
-        a2.t = a;
-        a2.u = this.l;
-        a2.v = this.m;
+        final e7q$a e7q$a = new e7q$a();
+        e7q$a.k = this.a;
+        e7q$a.l = this.b;
+        e7q$a.m = this.c;
+        e7q$a.n = this.d;
+        e7q$a.o = this.e;
+        e7q$a.p = this.f;
+        e7q$a.q = this.g;
+        e7q$a.r = this.h;
+        e7q$a.s = this.i;
+        ((dtr$a)e7q$a).a = this.j;
+        final int a2 = c5j.a;
+        e7q$a.w = this.k;
+        e7q$a.t = a;
+        e7q$a.u = this.l;
+        e7q$a.v = this.m;
         final JsonOcfComponentCollection o = this.o;
-        n16 t;
+        x06 t;
         if (o != null) {
             t = o.t();
         }
         else {
             t = null;
         }
-        a2.j = t;
-        return (h4j)a2;
+        ((dtr$a)e7q$a).j = t;
+        return (n4j)e7q$a;
     }
     
     @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-    public static class JsonJsInstrumentationConfig extends ige
+    public static class JsonJsInstrumentationConfig extends qfe
     {
         @JsonField
         public String a;

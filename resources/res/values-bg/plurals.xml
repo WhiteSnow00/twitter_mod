@@ -516,6 +516,18 @@
         <item quantity="one">%s абонат</item>
         <item quantity="other">%s абонати</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">ден</item>
+        <item quantity="other">%d дни</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">месец</item>
+        <item quantity="other">%d месеца</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">година</item>
+        <item quantity="other">%d години</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d д</item>
         <item quantity="other">%d д</item>

@@ -47,7 +47,7 @@ public class RemoteActionCompatParcelizer
         Objects.requireNonNull(versionedParcel);
         final IconCompat a = remoteActionCompat.a;
         versionedParcel.p(1);
-        versionedParcel.y((xrw)a);
+        versionedParcel.y((qsw)a);
         final CharSequence b = remoteActionCompat.b;
         versionedParcel.p(2);
         versionedParcel.s(b);

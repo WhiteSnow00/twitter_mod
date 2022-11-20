@@ -1,22 +1,38 @@
-import android.view.View;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class vqo implements c7x
+public final class vqo implements uqo
 {
-    public final View C0;
-    public final View D0;
+    public final mqo a;
+    public final xqo b;
+    public final bro c;
+    public final iqo d;
     
-    public vqo(View viewById) {
-        this.C0 = viewById;
-        viewById = viewById.findViewById(2131431170);
-        zzd.e((Object)viewById, "containerView.findViewBy\u2026r_root_constraint_layout)");
-        this.D0 = viewById;
+    public vqo(final mqo a, final xqo b, final bro c, final iqo d) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
     }
     
-    public final View getHeldView() {
-        return this.D0;
+    @Override
+    public final eaq<qqo> a() {
+        return (eaq<qqo>)((enm)this.a).R((Object)tmi.a);
+    }
+    
+    @Override
+    public final eaq<tmi> b() {
+        return (eaq<tmi>)((enm)this.d).R((Object)tmi.a);
+    }
+    
+    @Override
+    public final eaq<wqo> c() {
+        return (eaq<wqo>)((enm)this.b).R((Object)tmi.a);
+    }
+    
+    @Override
+    public final eaq<tmi> d(final wqo wqo) {
+        return (eaq<tmi>)((enm)this.c).R((Object)wqo);
     }
 }

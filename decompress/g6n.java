@@ -1,25 +1,20 @@
-import com.twitter.rooms.model.AudioSpaceTopicItem;
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface g6n
+public final class g6n extends kkl
 {
-    void a(final String p0, final String p1, final long p2, final List<AudioSpaceTopicItem> p3, final boolean p4);
+    public static final g6n D0;
     
-    b5j<String> b();
+    static {
+        D0 = new g6n();
+    }
     
-    void c(final String p0, final String p1);
+    public g6n() {
+        super((Class)vqn.class, "roomManagerType", "getRoomManagerType()Lcom/twitter/rooms/model/helpers/RoomManagerType;", 0);
+    }
     
-    b5j<String> d(final String p0);
-    
-    void e(final String p0);
-    
-    b5j<gvj<v21, x21>> f(final String p0);
-    
-    void g(final String p0, final boolean p1);
-    
-    n9q<gvj<v21, x21>> h(final String p0);
+    public final Object get(final Object o) {
+        return ((vqn)o).u;
+    }
 }

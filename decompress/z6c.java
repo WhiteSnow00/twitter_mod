@@ -1,116 +1,35 @@
+import com.twitter.util.user.UserIdentifier;
+import android.view.LayoutInflater;
+import android.content.res.Resources;
 import android.content.Intent;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class z6c extends dj1
+public final class z6c extends yjf
 {
-    public final f8c a;
-    public final CharSequence b;
-    public final String c;
-    public final String d;
-    public final String e;
-    public final w2a f;
-    public final z3t g;
-    public final boolean h;
-    public final boolean i;
-    public final boolean j;
+    public final l6t X0;
+    public final umd Y0;
     
-    public z6c(final Intent intent) {
-        super(intent);
-        final f8c a = (f8c)tkp.a(intent.getByteArrayExtra("arg_graphql_timeline_info"), (alp)f8c.e);
-        pf8.r(a);
-        this.a = a;
-        final CharSequence charSequenceExtra = intent.getCharSequenceExtra("arg_title");
-        this.b = charSequenceExtra;
-        final String stringExtra = intent.getStringExtra("arg_subtitle");
-        this.c = stringExtra;
-        this.d = intent.getStringExtra("arg_user_id");
-        final String stringExtra2 = intent.getStringExtra("arg_cache_id");
-        final t3s a2 = mq1.a;
-        final int i = w4j.i((Object)a, (Object)charSequenceExtra, (Object)stringExtra, (Object)System.currentTimeMillis());
-        String value = stringExtra2;
-        if (stringExtra2 == null) {
-            value = String.valueOf(i);
-        }
-        this.e = value;
-        this.h = intent.getBooleanExtra("arg_bottom_refreshable", false);
-        this.i = intent.getBooleanExtra("arg_pull_to_refresh", false);
-        this.j = intent.getBooleanExtra("arg_composer_enabled", true);
-        final z3t z3t = (z3t)tkp.a(intent.getByteArrayExtra("arg_scribe_config"), (alp)z3t.c);
-        final z3t.a a3 = new z3t.a();
-        String a4;
-        if (a.a.equals("edit_history_timeline")) {
-            a4 = "edit_history";
-        }
-        else {
-            a4 = "generic_timeline";
-        }
-        a3.a = a4;
-        a3.b = "";
-        final z3t z3t2 = (z3t)a3.e();
-        z3t g = z3t;
-        if (z3t == null) {
-            g = z3t2;
-        }
-        this.g = g;
-        this.f = (w2a)tkp.a(intent.getByteArrayExtra("arg_empty_list_config"), (alp)w2a.i);
+    public z6c(final Intent intent, final r8x r8x, final Resources resources, final kas kas, final pwe<bai> pwe, final jn jn, final cnb cnb, final faf faf, final hag hag, final LayoutInflater layoutInflater, final xba<q4h> xba, final UserIdentifier userIdentifier, final xbv xbv, final pwe<qoa> pwe2, final f6g f6g, final v8p v8p, final vam vam, final obi<?> obi, final i7p i7p, final l6t x0, final umd y0, final t8p t8p) {
+        super(intent, r8x, resources, kas, pwe, jn, cnb, faf, hag, layoutInflater, xba, userIdentifier, xbv, pwe2, f6g, v8p, vam, obi, i7p, t8p);
+        this.X0 = x0;
+        this.Y0 = y0;
     }
     
-    public static final class a extends dj1.a<z6c, a>
-    {
-        public final Object i() {
-            return new z6c(super.a);
-        }
-        
-        public final boolean l() {
-            return super.a.hasExtra("arg_graphql_timeline_info");
-        }
-        
-        public final a q(final String s) {
-            super.a.putExtra("arg_cache_id", s);
-            return this;
-        }
-        
-        public final a r() {
-            super.a.putExtra("arg_composer_enabled", false);
-            return this;
-        }
-        
-        public final a s(final w2a w2a) {
-            yvj.c(super.a, "arg_empty_list_config", (Object)w2a, (alp)w2a.i);
-            return this;
-        }
-        
-        public final a t(final f8c f8c) {
-            yvj.c(super.a, "arg_graphql_timeline_info", (Object)f8c, (alp)f8c.e);
-            return this;
-        }
-        
-        public final a u() {
-            super.a.putExtra("arg_bottom_refreshable", true);
-            return this;
-        }
-        
-        public final a v() {
-            super.a.putExtra("arg_pull_to_refresh", true);
-            return this;
-        }
-        
-        public final a w(final z3t z3t) {
-            yvj.c(super.a, "arg_scribe_config", (Object)z3t, (alp)z3t.c);
-            return this;
-        }
-        
-        public final a x(final CharSequence charSequence) {
-            super.a.putExtra("arg_title", charSequence);
-            return this;
-        }
-        
-        public final a y(final String s) {
-            super.a.putExtra("arg_user_id", s);
-            return this;
-        }
+    @Override
+    public final a W4(final Intent intent, final xbv xbv) {
+        return new a(this.Y0);
+    }
+    
+    @Override
+    public final CharSequence X4(final Intent intent) {
+        return this.X0.a();
+    }
+    
+    @Override
+    public final CharSequence Y4(final Intent intent) {
+        return this.X0.getTitle();
     }
 }

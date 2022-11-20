@@ -1,72 +1,83 @@
-import java.util.Iterator;
-import android.net.Uri$Builder;
-import java.io.IOException;
-import android.util.Log;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import android.net.Uri;
-import java.util.Map;
+import java.util.Objects;
+import com.google.android.play.core.install.InstallState;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class f9y extends Thread
+public final class f9y extends InstallState
 {
-    public final /* synthetic */ Map C0;
+    public final int a;
+    public final long b;
+    public final long c;
+    public final int d;
+    public final String e;
     
-    public f9y(final Map c0) {
-        this.C0 = c0;
+    public f9y(final int a, final long b, final long c, final int d, final String e) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        Objects.requireNonNull(e, "Null packageName");
+        this.e = e;
     }
     
-    @Override
-    public final void run() {
-        Object c0 = this.C0;
-        final Uri$Builder buildUpon = Uri.parse("https://pagead2.googlesyndication.com/pagead/gen_204?id=gmob-apps").buildUpon();
-        for (final String s : ((Map)c0).keySet()) {
-            buildUpon.appendQueryParameter(s, (String)((Map)c0).get(s));
+    public final long a() {
+        return this.b;
+    }
+    
+    public final int b() {
+        return this.d;
+    }
+    
+    public final int c() {
+        return this.a;
+    }
+    
+    public final String d() {
+        return this.e;
+    }
+    
+    public final long e() {
+        return this.c;
+    }
+    
+    public final boolean equals(final Object o) {
+        if (o == this) {
+            return true;
         }
-        final String string = buildUpon.build().toString();
-        Label_0200: {
-            try {
-                c0 = new URL(string);
-                c0 = ((URL)c0).openConnection();
-                try {
-                    final int responseCode = ((HttpURLConnection)c0).getResponseCode();
-                    if (responseCode < 200 || responseCode >= 300) {
-                        final StringBuilder sb = new StringBuilder(String.valueOf(string).length() + 65);
-                        sb.append("Received non-success response code ");
-                        sb.append(responseCode);
-                        sb.append(" from pinging URL: ");
-                        sb.append(string);
-                        Log.w("HttpUrlPinger", sb.toString());
-                    }
-                }
-                finally {
-                    ((HttpURLConnection)c0).disconnect();
-                }
-            }
-            catch (final RuntimeException ex) {
-                break Label_0200;
-            }
-            catch (final IOException ex2) {
-                final String message = ((Throwable)c0).getMessage();
-                final StringBuilder sb2 = new StringBuilder(String.valueOf(string).length() + 27 + String.valueOf(message).length());
-                sb2.append("Error while pinging URL: ");
-                sb2.append(string);
-                sb2.append(". ");
-                sb2.append(message);
-                Log.w("HttpUrlPinger", sb2.toString(), (Throwable)c0);
-            }
-            catch (final IndexOutOfBoundsException ex3) {
-                final String message2 = ex3.getMessage();
-                final StringBuilder sb3 = new StringBuilder(String.valueOf(string).length() + 32 + String.valueOf(message2).length());
-                sb3.append("Error while parsing ping URL: ");
-                sb3.append(string);
-                sb3.append(". ");
-                sb3.append(message2);
-                Log.w("HttpUrlPinger", sb3.toString(), (Throwable)ex3);
+        if (o instanceof InstallState) {
+            final InstallState installState = (InstallState)o;
+            if (this.a == installState.c() && this.b == installState.a() && this.c == installState.e() && this.d == installState.b() && this.e.equals(installState.d())) {
+                return true;
             }
         }
+        return false;
+    }
+    
+    public final int hashCode() {
+        final int a = this.a;
+        final long b = this.b;
+        final long c = this.c;
+        return ((((a ^ 0xF4243) * 1000003 ^ (int)(b ^ b >>> 32)) * 1000003 ^ (int)(c >>> 32 ^ c)) * 1000003 ^ this.d) * 1000003 ^ this.e.hashCode();
+    }
+    
+    public final String toString() {
+        final int a = this.a;
+        final long b = this.b;
+        final long c = this.c;
+        final int d = this.d;
+        final String e = this.e;
+        final StringBuilder sb = new StringBuilder(e.length() + 164);
+        sb.append("InstallState{installStatus=");
+        sb.append(a);
+        sb.append(", bytesDownloaded=");
+        sb.append(b);
+        e1.C(sb, ", totalBytesToDownload=", c, ", installErrorCode=");
+        sb.append(d);
+        sb.append(", packageName=");
+        sb.append(e);
+        sb.append("}");
+        return sb.toString();
     }
 }

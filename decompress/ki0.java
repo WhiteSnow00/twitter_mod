@@ -4,78 +4,36 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ki0 implements rg0
+public final class ki0 implements xq<fi0$c>
 {
-    public final qe0 a;
-    public final int b;
-    public final sf0 c;
-    public final List<i2h> d;
-    public final String e;
+    public static final ki0 a;
+    public static final List<String> b;
     
-    public ki0(final qe0 a, final int b, final sf0 c, final List<? extends i2h> d, final String e) {
-        zzd.f((Object)a, "aspectRatio");
-        zzd.f((Object)d, "variants");
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = (List<i2h>)d;
-        this.e = e;
+    static {
+        a = new ki0();
+        b = s9i.r("__typename");
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof ki0)) {
-            return false;
-        }
-        final ki0 ki0 = (ki0)o;
-        return zzd.a((Object)this.a, (Object)ki0.a) && this.b == ki0.b && zzd.a((Object)this.c, (Object)ki0.c) && zzd.a((Object)this.d, (Object)ki0.d) && zzd.a((Object)this.e, (Object)ki0.e);
+    public final void a(final ale ale, final fa7 fa7, final Object o) {
+        final fi0$c fi0$c = (fi0$c)o;
+        czd.f((Object)ale, "writer");
+        czd.f((Object)fa7, "customScalarAdapters");
+        czd.f((Object)fi0$c, "value");
+        ale.z1("__typename");
+        ar.a.a(ale, fa7, (Object)fi0$c.a);
+        v4x.a.d(ale, fa7, fi0$c.b);
     }
     
-    @Override
-    public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final int b = this.b;
-        final sf0 c = this.c;
-        final int n = 0;
-        int hashCode2;
-        if (c == null) {
-            hashCode2 = 0;
+    public final Object b(final ohe ohe, final fa7 fa7) {
+        czd.f((Object)ohe, "reader");
+        czd.f((Object)fa7, "customScalarAdapters");
+        Object o = null;
+        while (ohe.j3((List)ki0.b) == 0) {
+            o = ar.a.b(ohe, fa7);
         }
-        else {
-            hashCode2 = c.hashCode();
-        }
-        final int m = hy8.m((List)this.d, ((hashCode * 31 + b) * 31 + hashCode2) * 31, 31);
-        final String e = this.e;
-        int hashCode3;
-        if (e == null) {
-            hashCode3 = n;
-        }
-        else {
-            hashCode3 = e.hashCode();
-        }
-        return m + hashCode3;
-    }
-    
-    @Override
-    public final String toString() {
-        final qe0 a = this.a;
-        final int b = this.b;
-        final sf0 c = this.c;
-        final List<i2h> d = this.d;
-        final String e = this.e;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("ApiVideo(aspectRatio=");
-        sb.append(a);
-        sb.append(", durationMillis=");
-        sb.append(b);
-        sb.append(", previewImage=");
-        sb.append(c);
-        sb.append(", variants=");
-        sb.append(d);
-        sb.append(", viewCount=");
-        return hi.I(sb, e, ")");
+        ohe.G();
+        final u4x c = v4x.a.c(ohe, fa7);
+        czd.c(o);
+        return new fi0$c((String)o, c);
     }
 }

@@ -11,66 +11,74 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFetchPersistedData$$JsonObjectMapper extends JsonMapper<JsonFetchPersistedData>
 {
-    public static final rwa FETCH_PERSISTED_DATA_TYPE_CONVERTER;
+    public static final nva FETCH_PERSISTED_DATA_TYPE_CONVERTER;
     
     static {
-        FETCH_PERSISTED_DATA_TYPE_CONVERTER = new rwa();
+        FETCH_PERSISTED_DATA_TYPE_CONVERTER = new nva();
     }
     
-    public static JsonFetchPersistedData _parse(final khe khe) throws IOException {
+    public static JsonFetchPersistedData _parse(final tge tge) throws IOException {
         final JsonFetchPersistedData jsonFetchPersistedData = new JsonFetchPersistedData();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFetchPersistedData, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFetchPersistedData, d, tge);
+            tge.l0();
         }
         return jsonFetchPersistedData;
     }
     
-    public static void _serialize(final JsonFetchPersistedData jsonFetchPersistedData, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFetchPersistedData jsonFetchPersistedData, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final qwa.b a = jsonFetchPersistedData.a;
+        final mva$b a = jsonFetchPersistedData.a;
         if (a != null) {
-            ((StringBasedTypeConverter)JsonFetchPersistedData$$JsonObjectMapper.FETCH_PERSISTED_DATA_TYPE_CONVERTER).serialize((Object)a, "data_type", true, tfe);
+            ((StringBasedTypeConverter)JsonFetchPersistedData$$JsonObjectMapper.FETCH_PERSISTED_DATA_TYPE_CONVERTER).serialize((Object)a, "data_type", true, afe);
         }
         if (jsonFetchPersistedData.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonFetchPersistedData.c, "fail_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonFetchPersistedData.c, "fail_link", true, afe);
         }
         if (jsonFetchPersistedData.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonFetchPersistedData.b, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonFetchPersistedData.b, "next_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFetchPersistedData jsonFetchPersistedData, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFetchPersistedData jsonFetchPersistedData, final String s, final tge tge) throws IOException {
         if ("data_type".equals(s)) {
-            jsonFetchPersistedData.a = (qwa.b)((StringBasedTypeConverter)JsonFetchPersistedData$$JsonObjectMapper.FETCH_PERSISTED_DATA_TYPE_CONVERTER).parse(khe);
+            jsonFetchPersistedData.a = (mva$b)((StringBasedTypeConverter)JsonFetchPersistedData$$JsonObjectMapper.FETCH_PERSISTED_DATA_TYPE_CONVERTER).parse(tge);
         }
         else if ("fail_link".equals(s)) {
-            jsonFetchPersistedData.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonFetchPersistedData.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonFetchPersistedData.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonFetchPersistedData.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonFetchPersistedData parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFetchPersistedData parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFetchPersistedData jsonFetchPersistedData, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFetchPersistedData, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFetchPersistedData jsonFetchPersistedData, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFetchPersistedData, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFetchPersistedData)o, afe, b);
     }
 }

@@ -1,51 +1,35 @@
+import com.twitter.util.user.UserIdentifier;
+import com.twitter.nft.subsystem.model.Web3Wallet;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class m3i
+public final class m3i extends d2v<Web3Wallet>
 {
-    public final String a;
-    public final String b;
-    public final boolean c;
+    public static final a Companion;
+    public final String j1;
     
-    public m3i(final String a, final String b) {
-        zzd.f((Object)b, "info");
-        this.a = a;
-        this.b = b;
-        this.c = true;
+    static {
+        Companion = new a();
     }
     
-    public m3i(final String a, final String b, final boolean b2, final int n, final hg8 hg8) {
-        zzd.f((Object)b, "info");
-        this.a = a;
-        this.b = b;
-        this.c = false;
+    public m3i(final String j1) {
+        super(nb0.x(UserIdentifier.Companion, j1, "address", "owner"), 0);
+        this.j1 = j1;
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof m3i)) {
-            return false;
-        }
-        final m3i m3i = (m3i)o;
-        return zzd.a((Object)this.a, (Object)m3i.a) && zzd.a((Object)this.b, (Object)m3i.b) && this.c == m3i.c;
+    public final tqc f0() {
+        final p6c a = w1e.A("web3_wallet_by_address");
+        a.p("address", (Object)this.j1);
+        return (tqc)((n4j)a).e();
     }
     
-    @Override
-    public final int hashCode() {
-        final int a = l7k.a(this.b, this.a.hashCode() * 31, 31);
-        int c;
-        if ((c = (this.c ? 1 : 0)) != 0) {
-            c = 1;
-        }
-        return a + c;
+    public final asc<Web3Wallet, kbv> g0() {
+        return (asc<Web3Wallet, kbv>)e7c.Companion.b(Web3Wallet.class, "web3_wallet_by_address");
     }
     
-    @Override
-    public final String toString() {
-        return bd.y(mb0.y("NFTInfo(title=", this.a, ", info=", this.b, ", isLink="), this.c, ")");
+    public static final class a
+    {
     }
 }

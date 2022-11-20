@@ -1,34 +1,22 @@
-import com.twitter.rooms.subsystem.api.args.RoomHostKudosArgs;
+import java.util.List;
+import java.util.ArrayList;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dnn
+public final class dnn extends ste implements qsb<hnn, hnn>
 {
-    public final RoomHostKudosArgs a;
+    public final ArrayList<mkc$b> D0;
     
-    public dnn(final RoomHostKudosArgs a) {
-        this.a = a;
+    public dnn(final ArrayList<mkc$b> d0) {
+        this.D0 = d0;
+        super(1);
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || (o instanceof dnn && zzd.a((Object)this.a, (Object)((dnn)o).a));
-    }
-    
-    @Override
-    public final int hashCode() {
-        return this.a.hashCode();
-    }
-    
-    @Override
-    public final String toString() {
-        final RoomHostKudosArgs a = this.a;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("RoomHostKudosOpenEvent(args=");
-        sb.append(a);
-        sb.append(")");
-        return sb.toString();
+    public final Object invoke(final Object o) {
+        final hnn hnn = (hnn)o;
+        czd.f((Object)hnn, "$this$setState");
+        return hnn.l(hnn, this.D0, null, 11);
     }
 }

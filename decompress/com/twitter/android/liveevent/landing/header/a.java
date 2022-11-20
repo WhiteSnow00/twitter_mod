@@ -6,24 +6,24 @@ package com.twitter.android.liveevent.landing.header;
 
 public final class a
 {
-    public final quf a;
-    public final gkp b;
-    public final qvo c;
-    public final qvo d;
+    public final buf a;
+    public final xkp b;
+    public final gwo c;
+    public final gwo d;
     public a e;
     
-    public a(final quf a, final qvo c, final qvo d, final ibm ibm) {
-        this.b = new gkp();
+    public a(final buf a, final gwo c, final gwo d, final xbm xbm) {
+        this.b = new xkp();
         this.c = c;
         this.a = a;
         this.d = d;
-        ibm.i((rj)new aq1((Object)this, 3));
+        xbm.i((oj)new wp1((Object)this, 3));
     }
     
     public interface a
     {
-        public static final cc3 q0 = cc3.T0;
+        public static final soo r0 = soo.S0;
         
-        void e0(final ouf p0);
+        void e0(final ztf p0);
     }
 }

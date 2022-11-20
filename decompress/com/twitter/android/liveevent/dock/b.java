@@ -9,14 +9,14 @@ import com.twitter.model.liveevent.LiveEventConfiguration;
 
 public final class b
 {
-    public final ayw a;
-    public final z59 b;
-    public final o69 c;
+    public final tyw a;
+    public final h59 b;
+    public final w59 c;
     public final a d;
-    public final szf e;
-    public final cyw f;
+    public final dzf e;
+    public final vyw f;
     
-    public b(final ayw a, final z59 b, final o69 c, final a d, final szf e, final cyw f) {
+    public b(final tyw a, final h59 b, final w59 c, final a d, final dzf e, final vyw f) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -25,54 +25,54 @@ public final class b
         this.f = f;
     }
     
-    public final vxw a(final qzf qzf, final LiveEventConfiguration liveEventConfiguration, final wvf wvf, final a59 a59, final u4 u4) {
-        final gyw gyw = null;
-        Object b1;
-        if (u4 != null) {
-            b1 = u4.b.b1;
+    public final oyw a(final bzf bzf, final LiveEventConfiguration liveEventConfiguration, final hvf hvf, final i49 i49, final w4 w4) {
+        final zyw zyw = null;
+        Object c1;
+        if (w4 != null) {
+            c1 = w4.b.c1;
         }
         else {
-            b1 = null;
+            c1 = null;
         }
-        long d0;
-        if (b1 instanceof oof) {
-            d0 = ((oof)b1).D0;
-        }
-        else {
-            d0 = 0L;
-        }
-        gyw gyw2;
-        if (u4 == null) {
-            gyw2 = gyw;
+        long e0;
+        if (c1 instanceof aof) {
+            e0 = ((aof)c1).E0;
         }
         else {
-            gyw2 = new gyw(u4.b.l1, u4.c());
+            e0 = 0L;
         }
-        Objects.requireNonNull(gyw.Companion);
-        final gyw c = gyw.c;
-        gyw gyw3 = gyw2;
-        if (gyw2 == null) {
-            gyw3 = c;
+        zyw zyw2;
+        if (w4 == null) {
+            zyw2 = zyw;
         }
-        final szf e = this.e;
-        final tzf tzf = new tzf(gyw3, this.f.b, liveEventConfiguration);
-        Objects.requireNonNull(e);
-        ((vyo<vyo>)((qav)wvf).a).c("dock");
-        final vxw c2 = qzf.c(d0, wvf, liveEventConfiguration, (cyw)tzf);
-        ((z59)this.a.a.a.get()).a((x59)new gr((y49)c2, a59));
-        return c2;
+        else {
+            zyw2 = new zyw(w4.b.m1, w4.c());
+        }
+        Objects.requireNonNull(zyw.Companion);
+        final zyw c2 = zyw.c;
+        zyw zyw3 = zyw2;
+        if (zyw2 == null) {
+            zyw3 = c2;
+        }
+        final dzf e2 = this.e;
+        final ezf ezf = new ezf(zyw3, this.f.b, liveEventConfiguration);
+        Objects.requireNonNull(e2);
+        ((lzo)((lbv)hvf).a).c("dock");
+        final oyw c3 = bzf.c(e0, hvf, liveEventConfiguration, (vyw)ezf);
+        ((h59)this.a.a.a.get()).a((f59)new gr((g49)c3, i49));
+        return c3;
     }
     
-    public final vxw b(final String s) {
+    public final oyw b(final String s) {
         return this.a.a(s);
     }
     
     public final boolean c() {
-        final hlv b = dta.b();
+        final fmv b = asa.b();
         boolean b2 = false;
         if (b.b("live_event_docking_enabled", false)) {
             b2 = b2;
-            if (this.c.E0.a()) {
+            if (this.c.F0.a()) {
                 b2 = true;
             }
         }
@@ -80,12 +80,12 @@ public final class b
     }
     
     public final boolean d(final String s) {
-        final boolean e = pjr.e((CharSequence)s);
+        final boolean e = ikr.e((CharSequence)s);
         final boolean b = false;
         if (e) {
             return false;
         }
-        final vxw b2 = this.b(s);
+        final oyw b2 = this.b(s);
         boolean b3 = b;
         if (b2 != null) {
             b3 = b;
@@ -96,35 +96,35 @@ public final class b
         return b3;
     }
     
-    public final gyw e(final String s) {
+    public final zyw e(final String s) {
         return this.f(s, null);
     }
     
-    public final gyw f(final String s, final a59 a59) {
-        vxw b;
+    public final zyw f(final String s, final i49 i49) {
+        oyw b;
         if (this.d(s)) {
             b = this.b(s);
         }
         else {
             b = null;
         }
-        gyw gyw;
+        zyw zyw;
         if (b == null) {
-            Objects.requireNonNull(gyw.Companion);
-            gyw = gyw.c;
+            Objects.requireNonNull(zyw.Companion);
+            zyw = zyw.c;
         }
         else {
-            gyw = b.j();
+            zyw = b.j();
         }
-        this.a.d(s, a59);
-        return gyw;
+        this.a.d(s, i49);
+        return zyw;
     }
     
     public static final class a
     {
-        public final xau a;
+        public final qbu a;
         
-        public a(final xau a) {
+        public a(final qbu a) {
             this.a = a;
         }
     }

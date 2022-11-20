@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLiveEventAttribution$$JsonObjectMapper extends JsonMapper<JsonLiveEventAttribution>
 {
-    public static JsonLiveEventAttribution _parse(final khe khe) throws IOException {
+    public static JsonLiveEventAttribution _parse(final tge tge) throws IOException {
         final JsonLiveEventAttribution jsonLiveEventAttribution = new JsonLiveEventAttribution();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveEventAttribution, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonLiveEventAttribution, d, tge);
+            tge.l0();
         }
         return jsonLiveEventAttribution;
     }
     
-    public static void _serialize(final JsonLiveEventAttribution jsonLiveEventAttribution, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveEventAttribution jsonLiveEventAttribution, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("text", jsonLiveEventAttribution.a);
-        tfe.u0("url", jsonLiveEventAttribution.b);
+        afe.t0("text", jsonLiveEventAttribution.a);
+        afe.t0("url", jsonLiveEventAttribution.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveEventAttribution jsonLiveEventAttribution, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveEventAttribution jsonLiveEventAttribution, final String s, final tge tge) throws IOException {
         if ("text".equals(s)) {
-            jsonLiveEventAttribution.a = khe.T((String)null);
+            jsonLiveEventAttribution.a = tge.T((String)null);
         }
         else if ("url".equals(s)) {
-            jsonLiveEventAttribution.b = khe.T((String)null);
+            jsonLiveEventAttribution.b = tge.T((String)null);
         }
     }
     
-    public JsonLiveEventAttribution parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveEventAttribution parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveEventAttribution jsonLiveEventAttribution, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveEventAttribution, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveEventAttribution jsonLiveEventAttribution, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonLiveEventAttribution, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveEventAttribution)o, afe, b);
     }
 }

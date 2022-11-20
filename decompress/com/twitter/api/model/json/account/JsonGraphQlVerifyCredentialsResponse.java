@@ -8,23 +8,22 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonGraphQlVerifyCredentialsResponse extends aih<hfv>
+public class JsonGraphQlVerifyCredentialsResponse extends fih<cgv>
 {
     @JsonField
-    public rhw a;
+    public kiw a;
     @JsonField
-    public ffw b;
+    public sfw b;
     
-    @Override
     public final Object s() {
-        final hfv e = ffa.e(this.a);
-        hfv hfv;
-        if (e != null) {
-            hfv = (hfv)((h4j)new hfv$b(e)).e();
+        final cgv d = toe.d(this.a);
+        cgv cgv;
+        if (d != null) {
+            cgv = (cgv)((n4j)new cgv$b(d)).e();
         }
         else {
-            hfv = null;
+            cgv = null;
         }
-        return hfv;
+        return cgv;
     }
 }

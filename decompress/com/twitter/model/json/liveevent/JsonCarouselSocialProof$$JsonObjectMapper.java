@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonCarouselSocialProof$$JsonObjectMapper extends JsonMapper<JsonCarouselSocialProof>
 {
-    public static JsonCarouselSocialProof _parse(final khe khe) throws IOException {
+    public static JsonCarouselSocialProof _parse(final tge tge) throws IOException {
         final JsonCarouselSocialProof jsonCarouselSocialProof = new JsonCarouselSocialProof();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonCarouselSocialProof, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonCarouselSocialProof, d, tge);
+            tge.l0();
         }
         return jsonCarouselSocialProof;
     }
     
-    public static void _serialize(final JsonCarouselSocialProof jsonCarouselSocialProof, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonCarouselSocialProof jsonCarouselSocialProof, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.W("count", jsonCarouselSocialProof.b);
-        tfe.u0("type", jsonCarouselSocialProof.a);
+        afe.V("count", jsonCarouselSocialProof.b);
+        afe.t0("type", jsonCarouselSocialProof.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonCarouselSocialProof jsonCarouselSocialProof, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonCarouselSocialProof jsonCarouselSocialProof, final String s, final tge tge) throws IOException {
         if ("count".equals(s)) {
-            jsonCarouselSocialProof.b = khe.L();
+            jsonCarouselSocialProof.b = tge.K();
         }
         else if ("type".equals(s)) {
-            jsonCarouselSocialProof.a = khe.T((String)null);
+            jsonCarouselSocialProof.a = tge.T((String)null);
         }
     }
     
-    public JsonCarouselSocialProof parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonCarouselSocialProof parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonCarouselSocialProof jsonCarouselSocialProof, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonCarouselSocialProof, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonCarouselSocialProof jsonCarouselSocialProof, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonCarouselSocialProof, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonCarouselSocialProof)o, afe, b);
     }
 }

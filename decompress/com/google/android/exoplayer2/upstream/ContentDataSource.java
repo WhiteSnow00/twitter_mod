@@ -4,6 +4,8 @@
 
 package com.google.android.exoplayer2.upstream;
 
+import android.os.Parcelable;
+import android.media.ApplicationMediaCapabilities$Builder;
 import java.nio.channels.FileChannel;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -14,7 +16,7 @@ import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.content.ContentResolver;
 
-public final class ContentDataSource extends pk1
+public final class ContentDataSource extends jk1
 {
     public final ContentResolver e;
     public Uri f;
@@ -37,8 +39,8 @@ public final class ContentDataSource extends pk1
             AssetFileDescriptor g;
             if ("content".equals(b.a.getScheme())) {
                 final Bundle bundle = new Bundle();
-                if (imw.a >= 31) {
-                    ContentDataSource.ContentDataSource$a.a(bundle);
+                if (cnw.a >= 31) {
+                    ContentDataSource.a.a(bundle);
                 }
                 g = this.e.openTypedAssetFileDescriptor(a, "*/*", bundle);
             }
@@ -129,7 +131,7 @@ public final class ContentDataSource extends pk1
             try {
                 n = (int)Math.min(i, n2);
                 final FileInputStream h = this.h;
-                final int a = imw.a;
+                final int a = cnw.a;
                 read = h.read(array, read, n);
                 if (read == -1) {
                     return -1;
@@ -182,18 +184,18 @@ public final class ContentDataSource extends pk1
         //    49: iconst_0       
         //    50: putfield        com/google/android/exoplayer2/upstream/ContentDataSource.j:Z
         //    53: aload_0        
-        //    54: invokevirtual   pk1.q:()V
+        //    54: invokevirtual   jk1.q:()V
         //    57: return         
         //    58: astore_1       
         //    59: goto            77
-        //    62: astore_1       
+        //    62: astore_2       
         //    63: new             Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
-        //    66: astore_2       
-        //    67: aload_2        
-        //    68: aload_1        
+        //    66: astore_1       
+        //    67: aload_1        
+        //    68: aload_2        
         //    69: sipush          2000
         //    72: invokespecial   com/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException.<init>:(Ljava/io/IOException;I)V
-        //    75: aload_2        
+        //    75: aload_1        
         //    76: athrow         
         //    77: aload_0        
         //    78: aconst_null    
@@ -205,19 +207,19 @@ public final class ContentDataSource extends pk1
         //    90: iconst_0       
         //    91: putfield        com/google/android/exoplayer2/upstream/ContentDataSource.j:Z
         //    94: aload_0        
-        //    95: invokevirtual   pk1.q:()V
+        //    95: invokevirtual   jk1.q:()V
         //    98: aload_1        
         //    99: athrow         
         //   100: astore_1       
         //   101: goto            119
-        //   104: astore_2       
+        //   104: astore_1       
         //   105: new             Lcom/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException;
-        //   108: astore_1       
-        //   109: aload_1        
-        //   110: aload_2        
+        //   108: astore_2       
+        //   109: aload_2        
+        //   110: aload_1        
         //   111: sipush          2000
         //   114: invokespecial   com/google/android/exoplayer2/upstream/ContentDataSource$ContentDataSourceException.<init>:(Ljava/io/IOException;I)V
-        //   117: aload_1        
+        //   117: aload_2        
         //   118: athrow         
         //   119: aload_0        
         //   120: aconst_null    
@@ -239,7 +241,7 @@ public final class ContentDataSource extends pk1
         //   150: iconst_0       
         //   151: putfield        com/google/android/exoplayer2/upstream/ContentDataSource.j:Z
         //   154: aload_0        
-        //   155: invokevirtual   pk1.q:()V
+        //   155: invokevirtual   jk1.q:()V
         //   158: aload_1        
         //   159: athrow         
         //   160: astore_1       
@@ -263,7 +265,7 @@ public final class ContentDataSource extends pk1
         //   192: iconst_0       
         //   193: putfield        com/google/android/exoplayer2/upstream/ContentDataSource.j:Z
         //   196: aload_0        
-        //   197: invokevirtual   pk1.q:()V
+        //   197: invokevirtual   jk1.q:()V
         //   200: aload_1        
         //   201: athrow         
         //    Exceptions:
@@ -315,5 +317,12 @@ public final class ContentDataSource extends pk1
     
     public final Uri m() {
         return this.f;
+    }
+    
+    public static final class a
+    {
+        public static void a(final Bundle bundle) {
+            bundle.putParcelable("android.provider.extra.MEDIA_CAPABILITIES", (Parcelable)new ApplicationMediaCapabilities$Builder().addSupportedVideoMimeType("video/hevc").addSupportedHdrType("android.media.feature.hdr.dolby_vision").addSupportedHdrType("android.media.feature.hdr.hdr10").addSupportedHdrType("android.media.feature.hdr.hdr10_plus").addSupportedHdrType("android.media.feature.hdr.hlg").build());
+        }
     }
 }

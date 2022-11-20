@@ -2,37 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class oxq implements oax
+public final class oxq extends kkl
 {
-    public final String a;
-    public final String b;
+    public static final oxq D0;
     
-    public oxq(final String a, final String b) {
-        zzd.f((Object)a, "title");
-        zzd.f((Object)b, "subtitle");
-        this.a = a;
-        this.b = b;
+    static {
+        D0 = new oxq();
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof oxq)) {
-            return false;
-        }
-        final oxq oxq = (oxq)o;
-        return zzd.a((Object)this.a, (Object)oxq.a) && zzd.a((Object)this.b, (Object)oxq.b);
+    public oxq() {
+        super((Class)hwq.class, "host", "getHost()Lcom/twitter/rooms/model/AudioSpaceParticipant;", 0);
     }
     
-    @Override
-    public final int hashCode() {
-        return this.b.hashCode() + this.a.hashCode() * 31;
-    }
-    
-    @Override
-    public final String toString() {
-        return yqh.k("SpacesTabSectionHeaderViewState(title=", this.a, ", subtitle=", this.b, ")");
+    public final Object get(final Object o) {
+        return ((hwq)o).h;
     }
 }

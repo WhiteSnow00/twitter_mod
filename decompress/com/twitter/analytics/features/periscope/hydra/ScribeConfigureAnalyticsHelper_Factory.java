@@ -4,7 +4,7 @@
 
 package com.twitter.analytics.features.periscope.hydra;
 
-public final class ScribeConfigureAnalyticsHelper_Factory<T extends szo> implements wqa<fzo<T>>
+public final class ScribeConfigureAnalyticsHelper_Factory<T extends j0p> implements tpa<wzo<T>>
 {
     public final Object get() {
         throw null;

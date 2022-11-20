@@ -14,69 +14,69 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonMenuDialog$$JsonObjectMapper extends JsonMapper<JsonMenuDialog>
 {
-    public static JsonMenuDialog _parse(final khe khe) throws IOException {
+    public static JsonMenuDialog _parse(final tge tge) throws IOException {
         final JsonMenuDialog jsonMenuDialog = new JsonMenuDialog();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonMenuDialog, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonMenuDialog, d, tge);
+            tge.l0();
         }
         return jsonMenuDialog;
     }
     
-    public static void _serialize(final JsonMenuDialog jsonMenuDialog, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonMenuDialog jsonMenuDialog, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonMenuDialog.d != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonMenuDialog.d, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonMenuDialog.d, afe, true);
         }
         if (jsonMenuDialog.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonMenuDialog.c, "dismiss_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonMenuDialog.c, "dismiss_link", true, afe);
         }
         final ArrayList b2 = jsonMenuDialog.b;
         if (b2 != null) {
-            final Iterator g = q1a.g(tfe, "primary_action_links", b2);
-            while (g.hasNext()) {
-                final xrv xrv = g.next();
-                if (xrv != null) {
-                    LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)xrv, "lslocalprimary_action_linksElement", false, tfe);
+            final Iterator a = br.A(afe, "primary_action_links", b2);
+            while (a.hasNext()) {
+                final ssv ssv = a.next();
+                if (ssv != null) {
+                    LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)ssv, "lslocalprimary_action_linksElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (jsonMenuDialog.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonMenuDialog.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonMenuDialog.a, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonMenuDialog jsonMenuDialog, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonMenuDialog jsonMenuDialog, final String s, final tge tge) throws IOException {
         if ("component_collection".equals(s)) {
-            jsonMenuDialog.d = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonMenuDialog.d = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("dismiss_link".equals(s)) {
-            jsonMenuDialog.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonMenuDialog.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("primary_action_links".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList b = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final xrv xrv = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
-                    if (xrv != null) {
-                        b.add(xrv);
+                while (tge.h0() != vie.O0) {
+                    final ssv ssv = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
+                    if (ssv != null) {
+                        b.add(ssv);
                     }
                 }
                 jsonMenuDialog.b = b;
@@ -86,15 +86,23 @@ public final class JsonMenuDialog$$JsonObjectMapper extends JsonMapper<JsonMenuD
             }
         }
         else if ("primary_text".equals(s)) {
-            jsonMenuDialog.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonMenuDialog.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonMenuDialog parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonMenuDialog parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonMenuDialog jsonMenuDialog, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonMenuDialog, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonMenuDialog jsonMenuDialog, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonMenuDialog, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonMenuDialog)o, afe, b);
     }
 }

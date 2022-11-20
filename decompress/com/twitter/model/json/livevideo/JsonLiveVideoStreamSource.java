@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.FIELD_NAME)
-public class JsonLiveVideoStreamSource extends ige
+public class JsonLiveVideoStreamSource extends qfe
 {
     @JsonField
     public String a;

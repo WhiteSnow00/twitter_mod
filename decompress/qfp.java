@@ -2,54 +2,16 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class qfp
+public enum qfp
 {
-    public static final c Companion;
-    public static final s4j<qfp> c;
-    public final String a;
-    public final nca b;
+    public static final enum qfp.qfp$b D0;
+    public static final enum qfp.qfp$a E0;
+    public static final qfp[] F0;
     
     static {
-        Companion = new c();
-        qfp.c = new qfp$b();
+        F0 = new qfp[] { (qfp)(D0 = new qfp.qfp$b()), (qfp)(E0 = new qfp.qfp$a()) };
     }
     
-    public qfp(final String a) {
-        this.a = a;
-        this.b = nca.Companion.b((taa)taa.a, a, "send_self_reply");
-    }
-    
-    public static final class c
-    {
-        public final qfp a(final String s) {
-            Object o;
-            if (s != null) {
-                switch (s) {
-                    case "compose": {
-                        o = qfp$e.d;
-                        return (qfp)o;
-                    }
-                    case "reply": {
-                        o = qfp$f.d;
-                        return (qfp)o;
-                    }
-                    case "cta": {
-                        o = qfp$a.d;
-                        return (qfp)o;
-                    }
-                    case "thread": {
-                        o = qfp$d.d;
-                        return (qfp)o;
-                    }
-                    default:
-                        break;
-                }
-                o = qfp$g.d;
-            }
-            else {
-                o = null;
-            }
-            return (qfp)o;
-        }
+    public qfp(final String s, final int n, final rf8 rf8) {
     }
 }

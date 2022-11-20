@@ -8,8 +8,8 @@ import java.io.IOException;
 import android.os.Parcel;
 import android.os.Parcelable$Creator;
 
-@lpe
-public class URTCoverController$SavedState<OBJ extends URTCoverController> extends dq1<OBJ>
+@xoe
+public class URTCoverController$SavedState<OBJ extends URTCoverController> extends zp1<OBJ>
 {
     public static final Parcelable$Creator CREATOR;
     
@@ -25,20 +25,28 @@ public class URTCoverController$SavedState<OBJ extends URTCoverController> exten
         super((Object)obj);
     }
     
-    public OBJ deserializeValue(final elp elp, final OBJ obj) throws IOException, ClassNotFoundException {
-        final URTCoverController urtCoverController = (URTCoverController)super.deserializeValue(elp, (Object)obj);
-        elp.u();
-        urtCoverController.a = (hov)((s4j)hov.k).a(elp);
-        urtCoverController.b = (oov)((s4j)oov.j).a(elp);
-        urtCoverController.c = (qzo)((s4j)qzo.x).a(elp);
+    public OBJ deserializeValue(final vlp vlp, final OBJ obj) throws IOException, ClassNotFoundException {
+        final URTCoverController urtCoverController = (URTCoverController)super.deserializeValue(vlp, (Object)obj);
+        vlp.s();
+        urtCoverController.a = (gpv)((y4j)gpv.k).a(vlp);
+        urtCoverController.b = (npv)((y4j)npv.j).a(vlp);
+        urtCoverController.c = (h0p)((y4j)h0p.x).a(vlp);
         return (OBJ)urtCoverController;
     }
     
-    public void serializeValue(final flp flp, final OBJ obj) throws IOException {
-        super.serializeValue(flp, (Object)obj);
-        flp.t(true);
-        flp.C((Object)obj.a, (alp)hov.k);
-        flp.C((Object)obj.b, (alp)oov.j);
-        flp.C((Object)obj.c, (alp)qzo.x);
+    public /* bridge */ Object deserializeValue(final vlp vlp, final Object o) throws IOException, ClassNotFoundException {
+        return this.deserializeValue(vlp, (URTCoverController)o);
+    }
+    
+    public void serializeValue(final wlp wlp, final OBJ obj) throws IOException {
+        super.serializeValue(wlp, (Object)obj);
+        wlp.r(true);
+        wlp.A((Object)obj.a, (rlp)gpv.k);
+        wlp.A((Object)obj.b, (rlp)npv.j);
+        wlp.A((Object)obj.c, (rlp)h0p.x);
+    }
+    
+    public /* bridge */ void serializeValue(final wlp wlp, final Object o) throws IOException {
+        this.serializeValue(wlp, (URTCoverController)o);
     }
 }

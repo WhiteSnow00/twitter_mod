@@ -1,17 +1,21 @@
+import java.io.IOException;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lyy extends spe
+public final class lyy implements p4j<cuy>
 {
-    public final int E0;
-    public final int F0;
-    public final long G0;
+    public static final lyy a;
     
-    public lyy(final int n, final String s, final int e0, final int f0, final long g0) {
-        super(n, s);
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = g0;
+    static {
+        a = new lyy();
+        fu8.p(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, new dqy(1)), 2)), 3)));
+    }
+    
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final cuy cuy = (cuy)o;
+        final q4j q4j = (q4j)o2;
+        throw null;
     }
 }

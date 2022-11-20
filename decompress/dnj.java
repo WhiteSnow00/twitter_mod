@@ -4,42 +4,36 @@
 
 public final class dnj
 {
-    public final enj a;
-    public final vmj b;
-    public final xmj c;
-    public final tmj d;
-    public final cnj e;
+    public final long a;
+    public final long b;
+    public final long c;
+    public final long d;
+    public final long e;
+    public final long f;
+    public final long g;
+    public final long h;
+    public final boolean i;
+    public final boolean j;
     
     public dnj() {
-        this(null, null, null, null, 31);
+        this(0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, false, false, 1023, null);
     }
     
-    public dnj(enj a, vmj b, xmj c, tmj d, final int n) {
-        if ((n & 0x1) != 0x0) {
-            a = null;
-        }
-        if ((n & 0x2) != 0x0) {
-            b = null;
-        }
-        if ((n & 0x4) != 0x0) {
-            c = null;
-        }
-        if ((n & 0x8) != 0x0) {
-            d = null;
-        }
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = null;
-    }
-    
-    public dnj(final enj a, final vmj b, final xmj c, final tmj d, final cnj e) {
+    public dnj(final long a, final long b, final long c, final long d, final long e, final long f, final long g, final long h, final boolean i, final boolean j) {
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
         this.e = e;
+        this.f = f;
+        this.g = g;
+        this.h = h;
+        this.i = i;
+        this.j = j;
+    }
+    
+    public dnj(final long n, final long n2, final long n3, final long n4, final long n5, final long n6, final long n7, final long n8, final boolean b, final boolean b2, final int n9, final rf8 rf8) {
+        this(1L, 0L, 0L, 0L, 1L, 0L, 0L, 0L, true, true);
     }
     
     @Override
@@ -51,73 +45,63 @@ public final class dnj
             return false;
         }
         final dnj dnj = (dnj)o;
-        return zzd.a((Object)this.a, (Object)dnj.a) && zzd.a((Object)this.b, (Object)dnj.b) && zzd.a((Object)this.c, (Object)dnj.c) && zzd.a((Object)this.d, (Object)dnj.d) && zzd.a((Object)this.e, (Object)dnj.e);
+        return this.a == dnj.a && this.b == dnj.b && this.c == dnj.c && this.d == dnj.d && this.e == dnj.e && this.f == dnj.f && this.g == dnj.g && this.h == dnj.h && this.i == dnj.i && this.j == dnj.j;
     }
     
     @Override
     public final int hashCode() {
-        final enj a = this.a;
-        int n = 1;
-        int hashCode = 0;
-        int a2;
-        if (a == null) {
-            a2 = 0;
+        final long a = this.a;
+        final int n = (int)(a ^ a >>> 32);
+        final long b = this.b;
+        final int n2 = (int)(b ^ b >>> 32);
+        final long c = this.c;
+        final int n3 = (int)(c ^ c >>> 32);
+        final long d = this.d;
+        final int n4 = (int)(d ^ d >>> 32);
+        final long e = this.e;
+        final int n5 = (int)(e ^ e >>> 32);
+        final long f = this.f;
+        final int n6 = (int)(f ^ f >>> 32);
+        final long g = this.g;
+        final int n7 = (int)(g ^ g >>> 32);
+        final long h = this.h;
+        final int n8 = (int)(h ^ h >>> 32);
+        final int i = this.i ? 1 : 0;
+        int n9 = 1;
+        int n10 = i;
+        if (i != 0) {
+            n10 = 1;
         }
-        else if ((a2 = (a.a ? 1 : 0)) != 0) {
-            a2 = 1;
+        final int j = this.j ? 1 : 0;
+        if (j == 0) {
+            n9 = j;
         }
-        final vmj b = this.b;
-        int hashCode2;
-        if (b == null) {
-            hashCode2 = 0;
-        }
-        else {
-            hashCode2 = b.hashCode();
-        }
-        final xmj c = this.c;
-        int a3;
-        if (c == null) {
-            a3 = 0;
-        }
-        else if ((a3 = (c.a ? 1 : 0)) != 0) {
-            a3 = 1;
-        }
-        final tmj d = this.d;
-        if (d == null) {
-            n = 0;
-        }
-        else {
-            final int a4 = d.a ? 1 : 0;
-            if (a4 == 0) {
-                n = a4;
-            }
-        }
-        final cnj e = this.e;
-        if (e != null) {
-            hashCode = e.hashCode();
-        }
-        return (((a2 * 31 + hashCode2) * 31 + a3) * 31 + n) * 31 + hashCode;
+        return ((((((((n * 31 + n2) * 31 + n3) * 31 + n4) * 31 + n5) * 31 + n6) * 31 + n7) * 31 + n8) * 31 + n10) * 31 + n9;
     }
     
     @Override
     public final String toString() {
-        final enj a = this.a;
-        final vmj b = this.b;
-        final xmj c = this.c;
-        final tmj d = this.d;
-        final cnj e = this.e;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("OpenbackSignals(openbackUnlockSignal=");
-        sb.append(a);
-        sb.append(", openbackDeviceDecisionsSignal=");
-        sb.append(b);
-        sb.append(", openbackHeadphonesSignal=");
-        sb.append(c);
-        sb.append(", openbackBatteryChargingStatus=");
-        sb.append(d);
-        sb.append(", openbackRingerVolumeSignal=");
-        sb.append(e);
-        sb.append(")");
-        return sb.toString();
+        final long a = this.a;
+        final long b = this.b;
+        final long c = this.c;
+        final long d = this.d;
+        final long e = this.e;
+        final long f = this.f;
+        final long g = this.g;
+        final long h = this.h;
+        final boolean i = this.i;
+        final boolean j = this.j;
+        final StringBuilder x = pd.x("OpenbackLimits(displays=", a, ", displayInterval=");
+        x.append(b);
+        e1.C(x, ", clicks=", c, ", clickInterval=");
+        x.append(d);
+        e1.C(x, ", dismisses=", e, ", dismissInterval=");
+        x.append(f);
+        e1.C(x, ", interactions=", g, ", interactionInterval=");
+        pd.z(x, h, ", ignoreNightTime=", i);
+        x.append(", ignoreGlobalLimits=");
+        x.append(j);
+        x.append(")");
+        return x.toString();
     }
 }

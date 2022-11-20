@@ -6,8 +6,8 @@ package com.twitter.app.chrome.di.view;
 
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 
-@l4j
+@r4j
 public interface DynamicChromeFragmentViewObjectGraph extends ViewObjectGraph
 {
-    mo9 w();
+    tn9 w();
 }

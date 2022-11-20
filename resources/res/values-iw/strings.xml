@@ -210,8 +210,13 @@
     <string name="activity_tab_mentions_empty_state_description_no_mentions">‏אם מישהו בטוויטר יזכיר אותך בציוץ או בתשובה, האזכור יופיע כאן.</string>
     <string name="activity_tab_mentions_empty_state_description_no_mentions_from_people_you_follow">‏כשמישהו מרשימת המעקב שלך מאזכר אותך בציוץ, תראה זאת כאן.</string>
     <string name="activity_tab_super_follows_description">‏מסימוני \'אהבתי\' ואזכורים ועד לציוצים מחדש ועוד – אם זה מגיע מעוקבי-העל שלך, זה יופיע כאן.</string>
-    <string name="activity_tab_vit_description">‏הודעות על ציוצים חדשים, ציוצים מחדש, המלצות ועוד מחשבונות מאומתים אחרים יופיעו כאן.</string>
-    <string name="activity_tab_vit_title">‏התעדכן לפני כולם</string>
+    <string name="activity_tab_vit_button">‏מידע נוסף</string>
+    <string name="activity_tab_vit_description">‏מסימוני \'אהבתי\' ואזכורים ועד לציוצים מחדש ועוד – כל מה שמגיע מחשבון מאומת יופיע כאן. {{}}מידע נוסף{{}}</string>
+    <string name="activity_tab_vit_description_blue_available">‏מסימוני \'אהבתי\' ואזכורים ועד לציוצים מחדש ועוד – כל מה שמגיע חשבון מאומת יופיע כאן. {{}}מידע נוסף{{}}\10\10לא מאומת? הירשם עכשיו כדי לקבל חשבון מאומת ולהצטרף לאנשים אחרים בשיחות איכותיות.</string>
+    <string name="activity_tab_vit_subscribe_button">‏הרשמה</string>
+    <string name="activity_tab_vit_subscribe_with_price_month">‏%1$s לחודש</string>
+    <string name="activity_tab_vit_subscribe_with_price_year">‏%1$s לשנה</string>
+    <string name="activity_tab_vit_title">‏אין מה לראות כאן – בינתיים</string>
     <string name="activity_view_hidden_replies_empty_title">‏לא הוסתרו תשובות בשרשור הזה</string>
     <string name="activity_view_moderated_replies_empty_desc">‏לציוץ זה אין תשובות מוסתרות, אבל ייתכן שציוצים מוגנים הוסתרו בסינון. {{}}מידע נוסף{{}}</string>
     <string name="activity_view_moderated_replies_empty_title">‏אין כאן מה לראות</string>
@@ -545,8 +550,8 @@
     <string name="billing_error_modal_title">‏עדכן את אמצעי התשלום שלך</string>
     <string name="birdwatch_dialog_home_button">‏בית</string>
     <string name="birdwatch_dialog_my_notes_button">‏ההערות שלי</string>
-    <string name="birdwatch_home_page_title">‏Birdwatch</string>
-    <string name="birdwatch_pivot_header_title">‏Birdwatch</string>
+    <string name="birdwatch_home_page_title">‏\'הערות בקהילה\'</string>
+    <string name="birdwatch_pivot_header_title">‏\'הערות בקהילה\'</string>
     <string name="birthday_not_today_month_day">‏נולד ב-%s</string>
     <string name="birthday_not_today_month_day_year">‏נולד ב-%s</string>
     <string name="birthday_not_today_year_only">‏נולד ב-%d</string>
@@ -1900,7 +1905,7 @@
     <string name="drag_and_drop_reordering_tooltip_text">‏לחץ לחיצה ארוכה על תמונה כלשהי כדי להזיז אותה</string>
     <string name="drag_handle_label">‏לחץ וגרור כדי לשנות את הסדר</string>
     <string name="drawer_accounts_menu_header">‏חשבונות</string>
-    <string name="drawer_birdwatch_title">‏Birdwatch</string>
+    <string name="drawer_birdwatch_title">‏\'הערות בקהילה\'</string>
     <string name="drawer_branded_likes_preview_title">‏תצוגה מקדימה של סימוני \'אהבתי\' ממותגים</string>
     <string name="drawer_communities_title">‏קהילות</string>
     <string name="drawer_connect_title">‏התחבר</string>
@@ -2028,7 +2033,7 @@
     <string name="edit_profile_remove_header">‏הסרת תמונת כותרת</string>
     <string name="edit_profile_switch_to_professional">‏עבור למקצועי</string>
     <string name="edit_profile_take_photo">‏צילום תמונה</string>
-    <string name="edit_profile_verified_phone">‏תג של מספר טלפון מאומת</string>
+    <string name="edit_profile_verified_phone">‏סימול מספר טלפון מאושר</string>
     <string name="edit_profile_website">‏אתר אינטרנט</string>
     <string name="edit_room_button">‏ערוך</string>
     <string name="edit_rule">‏ערוך כלל</string>
@@ -2212,7 +2217,7 @@
     <string name="error_update_module_visibility">‏משהו השתבש. נסה שוב.</string>
     <string name="error_uploading_header">‏שגיאה בהעלאת תמונת כותרת.</string>
     <string name="except_blocked_accounts_desc">‏חשבונות שחסמת לא יוכלו להצטרף. עם זאת, ייתכן שאנשים שלא נכנסו לחשבון טוויטר יוכלו להאזין. {{}}מידע נוסף{{}}</string>
-    <string name="exclusive_focal_tweet_education_message">‏אתה יכול לראות ציוץ זה ולהשיב כי אתה עוקב-על של %s‎@</string>
+    <string name="exclusive_focal_tweet_education_message">‏תשובה זו גלויה לך מכיוון שאתה מנוי ל-‎@%s</string>
     <string name="exclusive_focal_tweet_education_title">‏אתה רואה תוכן של מעקבי-על</string>
     <string name="exclusive_space_access_info_sheet_message">‏אחת מההטבות של עוקבי-על היא גישה בלעדית למקומות כמו המקום הזה. רק אתה ועוקבי העל האחרים של ‎@%s יכולים להצטרף למקום זה.</string>
     <string name="exclusive_space_access_info_sheet_message_generic">‏אחת מההטבות של עוקבי-על היא גישה בלעדית למקומות כמו המקום הזה. רק אתה ועוקבי העל האחרים של היוצר הזה יכולים להצטרף למקום זה.</string>
@@ -2220,8 +2225,8 @@
     <string name="exclusive_space_non_sf_access_info_sheet_message">‏אחת מההטבות של עוקבי-על היא גישה בלעדית למקומות כמו המקום הזה. רק עוקבי העל האחרים של %s‎@ יכולים להצטרף למקום זה.</string>
     <string name="exclusive_space_non_sf_access_info_sheet_message_generic">‏אחת מההטבות של עוקבי-על היא גישה בלעדית למקומות כמו המקום הזה. רק עוקבי העל האחרים של היוצר הזה יכולים להצטרף למקום זה.</string>
     <string name="exclusive_timeline_self_tweet_education_message">‏אתה ועוקבי העל יכולים לראות את הציוץ הזה</string>
-    <string name="exclusive_timeline_tweet_education_message">‏אתה יכול לראות ציוץ זה כי אתה עוקב-על של ‎@%s</string>
-    <string name="exclusive_tweet_reply_education_message">‏%s‎@ ועוקבי העל שלו יכולים לראות את הציוץ שלך</string>
+    <string name="exclusive_timeline_tweet_education_message">‏ציוץ זה גלוי לך מכיוון שאתה מנוי ל-‎@%s</string>
+    <string name="exclusive_tweet_reply_education_message">‏‎@%s והמנויים שלו/ה יכולים לראות את הציוץ שלך</string>
     <string name="exclusive_tweet_reply_education_title">‏מי יכול לראות את הציוץ הזה?</string>
     <string name="existing_member">‏חבר קיים</string>
     <string name="existing_member_community">‏האדם הזה כבר שייך לקהילה.</string>
@@ -3106,6 +3111,9 @@
     <string name="manage_subscription_dialog_error_title">‏שגיאה</string>
     <string name="manage_subscription_pref_summary">‏הצג את פרטי המינוי שלך או בטל.</string>
     <string name="manage_subscription_stripe_description">‏נראה שרכשת את המינוי הזה ב-twitter.com. עליך לנהל או לבטל את המינוי מאותה הפלטפורמה.</string>
+    <string name="manage_subscription_upgrade_available">‏קיים שדרוג זמין</string>
+    <string name="manage_subscription_upgrade_new_perks">‏קבל חשבון מאומת.</string>
+    <string name="manage_subscription_upgrade_twitter_blue">‏שדרוג Twitter Blue</string>
     <string name="manage_your_experience_desc">‏אפשר לחסום אנשים במקום ולדווח עליהם.</string>
     <string name="manage_your_experience_title">‏נהל את החוויה שלך</string>
     <string name="map_price_free_subtitle">‏חינם %1$s</string>
@@ -4033,6 +4041,8 @@
     <string name="product_original_price_content_description">‏המחיר המקורי: %1$s</string>
     <string name="product_price_content_description">‏מחיר: %1$s</string>
     <string name="product_report_message">‏הדיווח נשלח\10הצוות שלנו יבדוק את הנושא בהקדם האפשרי.</string>
+    <string name="product_sign_up_button_text_with_period">‏הירשם כמנוי ל-%1$s/%2$s</string>
+    <string name="product_sign_up_button_text_without_period">‏הירשם כמנוי ל-%1$s</string>
     <string name="product_sign_up_with_price">‏הירשם כמנוי תמורת %1$s לחודש</string>
     <string name="product_unavailable_in_country">‏אנחנו פועלים כדי להפוך את Twitter Blue לזמין במדינה שלך בעתיד. כדאי לחזור לכאן מאוחר יותר כדי להתעדכן.</string>
     <string name="product_unavailable_in_country_dialog_title">‏אנו מודים לך על ההתעניינות!</string>
@@ -5927,6 +5937,7 @@
     <string name="settings_mute_block_item_title">‏השתקה וחסימה</string>
     <string name="settings_muted_notifications">‏הודעות שהושתקו</string>
     <string name="settings_news_subtitle">‏גלה חדשות רלוונטיות, קרא כתבות ללא מודעות ותמוך בעיתונות שאתה אוהב לקרוא.</string>
+    <string name="settings_news_subtitle_without_ads_free">‏גלה חדשות רלוונטיות ותיהנה מחוויית קריאה טובה יותר בשרשורים.</string>
     <string name="settings_news_title">‏חוויית קריאה טובה יותר של חדשות</string>
     <string name="settings_no_location_permission_message">‏הרשאות המיקום מושבתות עבור טוויטר. הפעל את הרשאות המיקום עבור טוויטר תחת {{}}פרטי יישום{{}}.</string>
     <string name="settings_notif_timeline_title">‏ציוצים</string>
@@ -6630,6 +6641,7 @@
     <string name="subscriptions_loading_error_title">‏אופס, משהו השתבש. נסה שוב מאוחר יותר.</string>
     <string name="subscriptions_subscriber_header_title">‏Twitter Blue</string>
     <string name="subscriptions_support_label">‏קבל תמיכה</string>
+    <string name="subscriptions_temporarily_disabled_message">‏בשלב זה, ניתן להירשם רק ביישום Twitter עבור iOS.</string>
     <string name="subscriptions_twitter_blue_profile_label">‏‎@twitterblue</string>
     <string name="subscriptions_welcome_okay_button_label">‏אישור</string>
     <string name="subscriptions_welcome_subtitle">‏התאם אישית את ההגדרות שלך והתחל להפיק את המרב ממינוי ה-Twitter Blue שלך.</string>
@@ -6644,12 +6656,12 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="sunday">‏ראשון</string>
     <string name="super_follow">‏מעקב-על</string>
-    <string name="super_follow_badge_description">‏אפשר לכל אחד לראות את תג עוקב-העל שלך כשאתה משיב לציוצים של ‎@%1$s</string>
-    <string name="super_follow_badge_explanation">‏כשתכבה את זה, ‎@%1$s ועוקבי-העל שלו עדיין יראו את התג שלך אם תשיב לציוצים לעוקבי-על של ‎@%1$s בלבד. ‎@%1$s תמיד יראה את התג שלך.\10\10{{}}למידע נוסף{{}}</string>
+    <string name="super_follow_badge_description">‏אפשר לכל אחד לראות את תג המנוי שלך כשאתה משיב לציוצים של ‎@%1$s</string>
+    <string name="super_follow_badge_explanation">‏כשתכבה את זה, ‎@%1$s והמנויים שלו/ה עדיין יראו את התג שלך רק כשתשיב לציוצים של מנויים של ‎@%1$s. ‎@%1$s תמיד יראה את התג שלך.\10\10{{}}למידע נוסף{{}}</string>
     <string name="super_follow_badge_subtitle">‏תג עוקב-על</string>
     <string name="super_follow_close">‏סגור</string>
     <string name="super_follow_content_desc">‏מעקב-על אחר %1$s.</string>
-    <string name="super_follow_creator">‏מעקב-על אחר ‎@%s</string>
+    <string name="super_follow_creator">‏מינוי ל-‎@%s</string>
     <string name="super_follow_manage_subscription">‏נהל מינוי</string>
     <string name="super_follow_manage_subscription_already_cancelled_description">‏אם כבר ביטלת את המינוי שלך, תוקף היתרונות שלך יפוג באופן אוטומטי בתום מחזור החיוב.</string>
     <string name="super_follow_manage_subscription_already_cancelled_subtitle">‏כבר ביטלת את המינוי שלך?</string>
@@ -7145,7 +7157,7 @@
     <string name="tweet_action_moderate">‏הסתר תשובה</string>
     <string name="tweet_action_thread_reader_cta">‏הצגת השרשור בקורא</string>
     <string name="tweet_action_unmoderate">‏בטל את הסתרת התשובה</string>
-    <string name="tweet_action_view_birdwatch_notes">‏הצג את Birdwatch Notes</string>
+    <string name="tweet_action_view_birdwatch_notes">‏הצגת \'הערות בקהילה\'</string>
     <string name="tweet_action_view_moderated_tweets">‏הצג תשובות מוסתרות</string>
     <string name="tweet_actions_disabled">‏חלק מהפעולות בציוץ הזה הושבתו על-ידי טוויטר.</string>
     <string name="tweet_added_to_your_bookmarks">‏הציוץ נוסף לסימניות שלך</string>
@@ -7394,6 +7406,7 @@
     <string name="upload_contacts_summary">‏אנשי קשר מפנקס הכתובות שלך יועלו לטוויטר באופן קבוע כדי לעזור לך ליצור קשר עם חברים וכדי להתאים אישית תוכן, למשל יצירת הצעות. השבתת הסנכרון לא תגרום להסרת אנשי קשר שהועלו קודם לכן. {{}}מידע נוסף{{}}</string>
     <string name="upsell_card_pill_text">‏חדש</string>
     <string name="upsell_card_title">‏גישה מוקדמת לעריכת הציוצים שלך. עכשיו תוכל לתקן שגיאות הקלדה.</string>
+    <string name="upsell_card_title_blue_verified">‏הולם אותך כחול! תתחיל ליהנות מהחשבון המאומת ומסימן האישור הכחול.</string>
     <string name="url_dm_abuse_interstitial_learn_more">‏https://help.twitter.com/safety-and-security/report-a-tweet</string>
     <string name="url_limit_tweet_error">‏יותר מידי קישורים בציוץ</string>
     <string name="use_a_temporary_password_message">‏יש צורך להפיק סיסמה זמנית ב־twitter.com כדי להמשיך.</string>
@@ -7479,8 +7492,9 @@
     <string name="users_unblock_title">‏לשחרר את ‎@%s?</string>
     <string name="v7_preference_off">כבוי</string>
     <string name="v7_preference_on">מופעל</string>
-    <string name="verification_education_desc">‏חשבון זה אומת כיוון שהוא נמצא בתפקיד בולט בממשלה, בחדשות או בתעשיית הבידור או בקטגוריה מוגדרת אחרת. {{}}למידע נוסף{{}}</string>
-    <string name="verification_education_title">‏פרטי חשבון</string>
+    <string name="verification_education_blue_desc">‏חשבון זה מאומת מכיוון שהוא רשום ל-Twitter Blue. {{}}למידע נוסף{{}}</string>
+    <string name="verification_education_desc">‏החשבון מאושר מכיוון שיש לו תפקיד בולט בגופי ממשל, בחדשות, בתעשיית הבידור או בקטגוריה מוגדרת אחרת. {{}}למידע נוסף{{}}</string>
+    <string name="verification_education_title">‏חשבון מאומת</string>
     <string name="verification_landing_active_card_text">‏החשבון שלך צריך להיות פעיל עם היסטוריה של ציות לכללים של טוויטר, כולל פרופיל מלא ושיטה מאומתת ליצירת קשר.</string>
     <string name="verification_landing_active_card_title">‏פעיל</string>
     <string name="verification_landing_authentic_card_text">‏כדי לשמור על האמון בין המשתמשים בפלטפורמה, עליך גם לאשר את זהותך מול טוויטר כדי לעבור אימות.</string>
@@ -7513,9 +7527,9 @@
     <string name="verified_phone_off">‏כבוי</string>
     <string name="verified_phone_on">‏מופעל</string>
     <string name="verified_phone_status_learn_more">‏מידע נוסף</string>
-    <string name="verified_phone_status_learn_more_title">‏הנראות מוגבלות ללקוחות המשתמשים ב-Twitter באופן פעיל באזור שלך.</string>
-    <string name="verified_phone_status_title">‏תג של מספר טלפון מאומת</string>
-    <string name="verified_phone_status_toggle_title">‏הצג קטגוריה בפרופיל</string>
+    <string name="verified_phone_status_learn_more_title">‏הוסף סימול מספר טלפון מאושר לפרופיל שלך כדי להראות שאישרת את מספר הטלפון שלך. סימול זה יוצג לאחרים באזורך בלבד.</string>
+    <string name="verified_phone_status_title">‏סימול מספר טלפון מאושר</string>
+    <string name="verified_phone_status_toggle_title">‏הצג סימול מספר טלפון מאושר</string>
     <string name="verify_phone_change_number">‏החלפת מספר הטלפון שלי</string>
     <string name="verify_phone_phone_already_verified">‏מספר הטלפון שלך כבר אומת</string>
     <string name="vertical_grid_module_show_more_btn">‏הצג עוד</string>

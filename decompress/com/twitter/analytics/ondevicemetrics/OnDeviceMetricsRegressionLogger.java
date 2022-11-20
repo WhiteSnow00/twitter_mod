@@ -4,44 +4,44 @@
 
 package com.twitter.analytics.ondevicemetrics;
 
-import androidx.work.c$a$c;
-import java.util.Map;
-import com.twitter.util.user.UserIdentifier;
 import androidx.work.c;
+import androidx.work.c$a$c;
+import com.twitter.util.user.UserIdentifier;
+import androidx.work.c$a;
 import androidx.work.WorkerParameters;
 import android.content.Context;
 import kotlin.Metadata;
 import androidx.work.Worker;
 
-@Metadata(bv = {}, d1 = { "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u0001B5\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n¢\u0006\u0004\b\r\u0010\u000eB\u0019\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\r\u0010\u000f¨\u0006\u0010" }, d2 = { "Lcom/twitter/analytics/ondevicemetrics/OnDeviceMetricsRegressionLogger;", "Landroidx/work/Worker;", "Landroid/content/Context;", "context", "Landroidx/work/WorkerParameters;", "workerParameters", "Lxhj;", "statisticsAggregator", "Lwhj;", "metricsRepository", "Lxca;", "Lokm;", "eventReporter", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;Lxhj;Lwhj;Lxca;)V", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "lib.core.analytics.ondevicemetrics.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
+@Metadata(bv = {}, d1 = { "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0007\u0018\u00002\u00020\u0001B5\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006\u0012\u0006\u0010\t\u001a\u00020\b\u0012\f\u0010\f\u001a\b\u0012\u0004\u0012\u00020\u000b0\n¢\u0006\u0004\b\r\u0010\u000eB\u0019\b\u0016\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004¢\u0006\u0004\b\r\u0010\u000f¨\u0006\u0010" }, d2 = { "Lcom/twitter/analytics/ondevicemetrics/OnDeviceMetricsRegressionLogger;", "Landroidx/work/Worker;", "Landroid/content/Context;", "context", "Landroidx/work/WorkerParameters;", "workerParameters", "Ldij;", "statisticsAggregator", "Lcij;", "metricsRepository", "Lfca;", "Lelm;", "eventReporter", "<init>", "(Landroid/content/Context;Landroidx/work/WorkerParameters;Ldij;Lcij;Lfca;)V", "(Landroid/content/Context;Landroidx/work/WorkerParameters;)V", "lib.core.analytics.ondevicemetrics.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
 public final class OnDeviceMetricsRegressionLogger extends Worker
 {
-    public final xhj H0;
-    public final whj I0;
-    public final xca<okm> J0;
+    public final dij I0;
+    public final cij J0;
+    public final fca<elm> K0;
     
     public OnDeviceMetricsRegressionLogger(final Context context, final WorkerParameters workerParameters) {
-        zzd.f((Object)context, "context");
-        zzd.f((Object)workerParameters, "workerParameters");
-        final thj$b companion = thj.Companion;
-        this(context, workerParameters, companion.a().k4(), companion.a().K4(), (xca<okm>)companion.a().r());
+        czd.f((Object)context, "context");
+        czd.f((Object)workerParameters, "workerParameters");
+        final zhj$b companion = zhj.Companion;
+        this(context, workerParameters, companion.a().k4(), companion.a().K4(), (fca<elm>)companion.a().r());
     }
     
-    public OnDeviceMetricsRegressionLogger(final Context context, final WorkerParameters workerParameters, final xhj h0, final whj i0, final xca<okm> j0) {
-        zzd.f((Object)context, "context");
-        zzd.f((Object)workerParameters, "workerParameters");
-        zzd.f((Object)h0, "statisticsAggregator");
-        zzd.f((Object)i0, "metricsRepository");
-        zzd.f((Object)j0, "eventReporter");
+    public OnDeviceMetricsRegressionLogger(final Context context, final WorkerParameters workerParameters, final dij i0, final cij j0, final fca<elm> k0) {
+        czd.f((Object)context, "context");
+        czd.f((Object)workerParameters, "workerParameters");
+        czd.f((Object)i0, "statisticsAggregator");
+        czd.f((Object)j0, "metricsRepository");
+        czd.f((Object)k0, "eventReporter");
         super(context, workerParameters);
-        this.H0 = h0;
         this.I0 = i0;
         this.J0 = j0;
+        this.K0 = k0;
     }
     
-    public final c.a g() {
-        cag.a("OnDeviceMetric", "Creating event logs for on device metrics.");
-        final String[] value = ((c)this).D0.b.a.get("ODMRegressedMetrics");
+    public final c$a g() {
+        s9g.a("OnDeviceMetric", "Creating event logs for on device metrics.");
+        final String[] value = ((c)this).E0.b.a.get("ODMRegressedMetrics");
         final boolean b = value instanceof String[];
         int[] array = null;
         String[] array2;
@@ -51,7 +51,7 @@ public final class OnDeviceMetricsRegressionLogger extends Worker
         else {
             array2 = null;
         }
-        final Integer[] value2 = ((c)this).D0.b.a.get("ODMRegressedAnomalies");
+        final Integer[] value2 = ((c)this).E0.b.a.get("ODMRegressedAnomalies");
         if (value2 instanceof Integer[]) {
             final Integer[] array3 = value2;
             final int[] array4 = new int[array3.length];
@@ -82,10 +82,10 @@ public final class OnDeviceMetricsRegressionLogger extends Worker
                 sb.append(" with ");
                 sb.append(n3);
                 sb.append(" anomalies");
-                cag.a("OnDeviceMetric", sb.toString());
-                this.J0.b(c, (okm)new uhj(s, n3, this.I0.a(s), (Map)this.H0.c(s), this.H0.d()));
+                s9g.a("OnDeviceMetric", sb.toString());
+                this.K0.b(c, (elm)new aij(s, n3, this.J0.a(s), this.I0.c(s), this.I0.d()));
             }
         }
-        return (c.a)new c$a$c();
+        return (c$a)new c$a$c();
     }
 }

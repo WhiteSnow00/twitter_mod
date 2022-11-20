@@ -1,43 +1,103 @@
+import android.content.res.Configuration;
+import android.os.Bundle;
+import android.app.Activity;
 import java.util.Iterator;
-import java.util.List;
+import android.content.ComponentCallbacks;
+import android.app.Application;
+import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+import android.content.ComponentCallbacks2;
+import android.app.Application$ActivityLifecycleCallbacks;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class yf1 implements uwo
+public final class yf1 implements Application$ActivityLifecycleCallbacks, ComponentCallbacks2
 {
-    public static void b(final List<d3j> list, final ijf<String> ijf) {
-        for (final d3j d3j : list) {
-            final StringBuilder g = w48.g("\u2022 ");
-            g.append(d3j.a);
-            ijf.p((Object)g.toString());
-            final List b = d3j.b;
-            if (b != null) {
-                for (final String s : b) {
-                    final StringBuilder sb = new StringBuilder();
-                    sb.append("\t\u25e6 ");
-                    sb.append(s);
-                    ijf.p((Object)sb.toString());
-                }
+    public static final yf1 H0;
+    public final AtomicBoolean D0;
+    public final AtomicBoolean E0;
+    public final ArrayList<a> F0;
+    public boolean G0;
+    
+    static {
+        H0 = new yf1();
+    }
+    
+    public yf1() {
+        this.D0 = new AtomicBoolean();
+        this.E0 = new AtomicBoolean();
+        this.F0 = new ArrayList<a>();
+        this.G0 = false;
+    }
+    
+    public static void a(final Application application) {
+        final yf1 h0 = yf1.H0;
+        synchronized (h0) {
+            if (!h0.G0) {
+                application.registerActivityLifecycleCallbacks((Application$ActivityLifecycleCallbacks)h0);
+                application.registerComponentCallbacks((ComponentCallbacks)h0);
+                h0.G0 = true;
             }
         }
     }
     
-    public final uwo$a a(final f3j f3j) {
-        final e3j g = f3j.g;
-        if (g != null) {
-            final ijf$a ijf$a = new ijf$a(g.b.size());
-            final ijf$a ijf$a2 = new ijf$a(g.a.size());
-            b(g.a, (ijf<String>)ijf$a2);
-            b(g.b, (ijf<String>)ijf$a);
-            final List list = (List)((h4j)ijf$a2).e();
-            final List list2 = (List)((h4j)ijf$a).e();
-            return new uwo$a(list);
+    public final void b(final boolean b) {
+        synchronized (yf1.H0) {
+            final Iterator<a> iterator = this.F0.iterator();
+            while (iterator.hasNext()) {
+                iterator.next().a(b);
+            }
         }
-        e9a.d(new Throwable("/oauth/request_token response did not return oAuth permission policy"));
-        final ced$b d0 = ced.D0;
-        final int a = w4j.a;
-        return new uwo$a((List)d0);
+    }
+    
+    public final void onActivityCreated(final Activity activity, final Bundle bundle) {
+        final boolean compareAndSet = this.D0.compareAndSet(true, false);
+        this.E0.set(true);
+        if (compareAndSet) {
+            this.b(false);
+        }
+    }
+    
+    public final void onActivityDestroyed(final Activity activity) {
+    }
+    
+    public final void onActivityPaused(final Activity activity) {
+    }
+    
+    public final void onActivityResumed(final Activity activity) {
+        final boolean compareAndSet = this.D0.compareAndSet(true, false);
+        this.E0.set(true);
+        if (compareAndSet) {
+            this.b(false);
+        }
+    }
+    
+    public final void onActivitySaveInstanceState(final Activity activity, final Bundle bundle) {
+    }
+    
+    public final void onActivityStarted(final Activity activity) {
+    }
+    
+    public final void onActivityStopped(final Activity activity) {
+    }
+    
+    public final void onConfigurationChanged(final Configuration configuration) {
+    }
+    
+    public final void onLowMemory() {
+    }
+    
+    public final void onTrimMemory(final int n) {
+        if (n == 20 && this.D0.compareAndSet(false, true)) {
+            this.E0.set(true);
+            this.b(true);
+        }
+    }
+    
+    public interface a
+    {
+        void a(final boolean p0);
     }
 }

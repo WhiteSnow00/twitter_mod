@@ -10,33 +10,33 @@ import java.util.Objects;
 
 public final class a
 {
-    public final fxe<b> a;
-    public final fxe<a> b;
-    public final dxf c;
+    public final pwe<b> a;
+    public final pwe<a> b;
+    public final pwf c;
     
-    public a(final fxe<b> a, final fxe<a> b) {
+    public a(final pwe<b> a, final pwe<a> b) {
         this.a = a;
         this.b = b;
-        this.c = new dxf((Object)this, 0);
+        this.c = new pwf(this, 0);
     }
     
     public final boolean a() {
         final b b = (b)this.a.get();
-        return b.c.a() && tnl.a(b.b).b();
+        return b.c.b() && hol.a(b.b).b();
     }
     
     public final void b() {
         final a a = (a)this.b.get();
-        final dxf c = this.c;
+        final pwf c = this.c;
         Objects.requireNonNull(a);
-        final xil$b xil$b = new xil$b(1);
-        ((xil$a)xil$b).H(2131954763);
-        ((xil$a)xil$b).A(2131954762);
-        ((xil$a)xil$b).F(2131957590);
-        ((xil$a)xil$b).C(2131955472);
-        final cl1 w = ((dl1$a)xil$b).w();
-        w.T1 = (mw8)c;
-        final int a2 = w4j.a;
+        final kjl$b kjl$b = new kjl$b(1);
+        ((kjl$a)kjl$b).H(2131954763);
+        ((kjl$a)kjl$b).A(2131954762);
+        ((kjl$a)kjl$b).F(2131957590);
+        ((kjl$a)kjl$b).C(2131955472);
+        final wk1 w = ((xk1$a)kjl$b).w();
+        w.U1 = (xv8)c;
+        final int a2 = c5j.a;
         w.l2(a.a);
     }
     
@@ -51,11 +51,11 @@ public final class a
     
     public static final class b
     {
-        public final mbi<?> a;
+        public final obi<?> a;
         public final UserIdentifier b;
-        public final cjk c;
+        public final hjk c;
         
-        public b(final mbi<?> a, final UserIdentifier b, final cjk c) {
+        public b(final obi<?> a, final UserIdentifier b, final hjk c) {
             this.a = a;
             this.b = b;
             this.c = c;

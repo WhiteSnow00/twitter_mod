@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTwitterError extends aih<mav>
+public class JsonTwitterError extends fih<hbv>
 {
     @JsonField
     public int a;
@@ -30,28 +30,27 @@ public class JsonTwitterError extends aih<mav>
     @JsonField
     public int i;
     @JsonField
-    public szi j;
+    public yzi j;
     
     public JsonTwitterError() {
         this.i = -1;
     }
     
-    @Override
     public final Object s() {
         final int a = this.a;
         Object o = null;
-        final y8v y8v = null;
+        final u9v u9v = null;
         if (a > 0) {
             final int b = this.b;
-            y8v y8v2 = null;
-            Label_0058: {
+            u9v u9v2 = null;
+            Label_0060: {
                 if (b <= 0 && this.f == null) {
-                    y8v2 = y8v;
+                    u9v2 = u9v;
                     if (this.g == null) {
-                        break Label_0058;
+                        break Label_0060;
                     }
                 }
-                y8v2 = new y8v(b, this.f, this.g);
+                u9v2 = new u9v(b, this.f, this.g);
             }
             String c = this.c;
             if (c == null) {
@@ -62,7 +61,7 @@ public class JsonTwitterError extends aih<mav>
             if (e == null) {
                 e = "";
             }
-            o = new mav(a, c, d, e, this.h, this.i, y8v2, this.j, null, null);
+            o = new hbv(a, c, d, e, this.h, this.i, u9v2, this.j, (String)null, (q6c)null);
         }
         return o;
     }

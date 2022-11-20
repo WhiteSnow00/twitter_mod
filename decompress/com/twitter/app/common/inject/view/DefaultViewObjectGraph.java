@@ -4,7 +4,7 @@
 
 package com.twitter.app.common.inject.view;
 
-@l4j
+@r4j
 public interface DefaultViewObjectGraph extends ViewObjectGraph
 {
 }

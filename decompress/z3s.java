@@ -1,36 +1,35 @@
+import com.twitter.util.user.UserIdentifier;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class z3s implements c4s<Object, Object>
+public final class z3s
 {
-    public final /* synthetic */ c4s<Object, snj<Object>> C0;
-    public final /* synthetic */ c4s<Object, Object> D0;
-    public final /* synthetic */ bx0<?, Object, ?> E0;
+    public final UserIdentifier a;
     
-    public z3s(final c4s<Object, snj<Object>> c0, final c4s<Object, Object> d0, final bx0<?, Object, ?> e0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
+    public z3s(final UserIdentifier a) {
+        czd.f((Object)a, "ownerId");
+        this.a = a;
     }
     
-    public final Object W2(Object o) {
-        final snj snj = (snj)this.C0.W2(o);
-        if (snj.f()) {
-            o = snj.c();
-        }
-        else {
-            o = this.D0.t2((bx0)this.E0).W2(o);
-        }
-        return o;
+    @Override
+    public final boolean equals(final Object o) {
+        return this == o || (o instanceof z3s && czd.a((Object)this.a, (Object)((z3s)o).a));
     }
     
-    public final c4s Z2(final w3s w3s) {
-        zzd.f((Object)w3s, "sink");
-        return this.a(w3s);
+    @Override
+    public final int hashCode() {
+        return this.a.hashCode();
     }
     
-    public final /* synthetic */ c4s a(final w3s w3s) {
-        return crf.w((c4s)this, w3s, true);
+    @Override
+    public final String toString() {
+        final UserIdentifier a = this.a;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("SwitchToPersonalAccountParams(ownerId=");
+        sb.append(a);
+        sb.append(")");
+        return sb.toString();
     }
 }

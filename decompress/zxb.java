@@ -1,23 +1,18 @@
 import android.view.View;
-import com.twitter.media.av.ui.control.VideoControlView;
-import android.widget.LinearLayout;
-import android.view.ViewGroup;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zxb
+public final class zxb extends hub implements qsb<View, vxb>
 {
-    public final ViewGroup a;
-    public final LinearLayout b;
-    public final VideoControlView c;
-    public ibm d;
+    public zxb(final Object o) {
+        super(1, o, (Class)vxb$a.class, "create", "create(Landroid/view/View;)Lcom/twitter/alttext/education/GeneratedAltTextBannerViewDelegate;", 0);
+    }
     
-    public zxb(final View view, final ViewGroup a, final LinearLayout b, final ibm d) {
-        this.a = a;
-        this.b = b;
-        this.c = (VideoControlView)view.findViewById(2131432552);
-        this.d = d;
+    public final Object invoke(final Object o) {
+        final View view = (View)o;
+        czd.f((Object)view, "p0");
+        return ((vxb$a)((m93)this).receiver).a(view);
     }
 }

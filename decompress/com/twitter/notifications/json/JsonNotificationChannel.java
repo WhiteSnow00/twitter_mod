@@ -1,0 +1,31 @@
+// 
+// Decompiled by Procyon v0.6.0
+// 
+
+package com.twitter.notifications.json;
+
+import com.bluelinelabs.logansquare.annotation.JsonField;
+import com.bluelinelabs.logansquare.annotation.JsonObject;
+
+@JsonObject
+public final class JsonNotificationChannel extends fih<upi>
+{
+    @JsonField
+    public String a;
+    @JsonField
+    public String b;
+    @JsonField(typeConverter = bge.class)
+    public int c;
+    @JsonField
+    public String d;
+    @JsonField
+    public boolean e;
+    @JsonField
+    public boolean f;
+    @JsonField(typeConverter = ege.class)
+    public xpi g;
+    
+    public final Object s() {
+        return new upi(this.a, this.b, this.c, this.d, this.e, this.f, this.g);
+    }
+}

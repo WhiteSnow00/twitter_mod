@@ -10,51 +10,59 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineUrlButton$$JsonObjectMapper extends JsonMapper<JsonTimelineUrlButton>
 {
-    public static JsonTimelineUrlButton _parse(final khe khe) throws IOException {
+    public static JsonTimelineUrlButton _parse(final tge tge) throws IOException {
         final JsonTimelineUrlButton jsonTimelineUrlButton = new JsonTimelineUrlButton();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineUrlButton, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineUrlButton, d, tge);
+            tge.l0();
         }
         return jsonTimelineUrlButton;
     }
     
-    public static void _serialize(final JsonTimelineUrlButton jsonTimelineUrlButton, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineUrlButton jsonTimelineUrlButton, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("text", jsonTimelineUrlButton.a);
+        afe.t0("text", jsonTimelineUrlButton.a);
         if (jsonTimelineUrlButton.b != null) {
-            LoganSquare.typeConverterFor((Class)q7t.class).serialize((Object)jsonTimelineUrlButton.b, "url", true, tfe);
+            LoganSquare.typeConverterFor((Class)i8t.class).serialize((Object)jsonTimelineUrlButton.b, "url", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineUrlButton jsonTimelineUrlButton, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineUrlButton jsonTimelineUrlButton, final String s, final tge tge) throws IOException {
         if ("text".equals(s)) {
-            jsonTimelineUrlButton.a = khe.T((String)null);
+            jsonTimelineUrlButton.a = tge.T((String)null);
         }
         else if ("url".equals(s)) {
-            jsonTimelineUrlButton.b = (q7t)LoganSquare.typeConverterFor((Class)q7t.class).parse(khe);
+            jsonTimelineUrlButton.b = (i8t)LoganSquare.typeConverterFor((Class)i8t.class).parse(tge);
         }
     }
     
-    public JsonTimelineUrlButton parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineUrlButton parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineUrlButton jsonTimelineUrlButton, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineUrlButton, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineUrlButton jsonTimelineUrlButton, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineUrlButton, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineUrlButton)o, afe, b);
     }
 }

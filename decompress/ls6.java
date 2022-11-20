@@ -1,43 +1,66 @@
+import java.util.List;
+import java.util.Collection;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface ls6<T>
+public final class ls6
 {
-    public static final a Companion = ls6.a.a;
-    public static final alp<ls6<?>> a = (jx6)hx6.b(new pkp[] { new pkp((Class)bs6.class, (alp)ds6.b), new pkp((Class)fbe.class, (alp)ibe.b), new pkp((Class)fyj.class, (alp)hyj.b), new pkp((Class)t1w.class, (alp)v1w.b), new pkp((Class)c2w.class, (alp)e2w.b), new pkp((Class)or7.class, (alp)qr7.b), new pkp((Class)t4g.class, (alp)v4g.b), new pkp((Class)uxj.class, (alp)wxj.b), new pkp((Class)yxj.class, (alp)ayj.b), new pkp((Class)g73.class, (alp)i73.b), new pkp((Class)d73.class, (alp)f73.b), new pkp((Class)p3u.class, (alp)r3u.b), new pkp((Class)uxl.class, (alp)xxl.b), new pkp((Class)fxl.class, (alp)hxl.b), new pkp((Class)i9t.class, (alp)k9t.b) });
-    public static final long b = -1L;
+    public final String a;
+    public final int b;
+    public final long c;
+    public final Collection<exj> d;
+    public final String e;
+    public final soj f;
+    public final boolean g;
+    public final long h;
+    public final long i;
+    public final long j;
+    public final long k;
+    public final long l;
+    public final boolean m;
+    public final boolean n;
+    public final boolean o;
+    public final boolean p;
+    public final boolean q;
+    public final boolean r;
+    public final int s;
+    public final List<kt6> t;
+    public final fq6 u;
     
-    boolean B(final long p0);
-    
-    boolean F();
-    
-    long a();
-    
-    String getConversationId();
-    
-    T getData();
-    
-    long getId();
-    
-    int getType();
-    
-    boolean isInline();
-    
-    long m();
-    
-    byte[] o();
-    
-    long t();
-    
-    alp<T> v();
-    
-    public static final class a
-    {
-        public static final /* synthetic */ a a;
-        
-        static {
-            a = new a();
+    public ls6(final ls6.ls6$a ls6$a) {
+        final String a = ls6$a.a;
+        jee.k(a);
+        this.a = a;
+        this.e = ls6$a.e;
+        this.b = ls6$a.b;
+        this.c = ls6$a.c;
+        this.g = ls6$a.g;
+        this.h = ls6$a.h;
+        this.i = ls6$a.i;
+        this.j = ls6$a.j;
+        this.k = ls6$a.k;
+        this.l = ls6$a.l;
+        this.m = ls6$a.m;
+        this.n = ls6$a.n;
+        this.f = ls6$a.f;
+        this.d = dnp.r((Iterable)ls6$a.d);
+        this.o = ls6$a.o;
+        this.p = ls6$a.p;
+        this.s = ls6$a.s;
+        Object t;
+        if ((t = ls6$a.t) == null) {
+            t = f2a.D0;
         }
+        this.t = (List<kt6>)t;
+        this.q = ls6$a.q;
+        this.r = ls6$a.r;
+        this.u = ls6$a.u;
+    }
+    
+    @Override
+    public final String toString() {
+        return this.a;
     }
 }

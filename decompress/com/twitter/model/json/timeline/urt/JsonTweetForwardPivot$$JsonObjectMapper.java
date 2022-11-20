@@ -10,87 +10,95 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTweetForwardPivot$$JsonObjectMapper extends JsonMapper<JsonTweetForwardPivot>
 {
-    public static JsonTweetForwardPivot _parse(final khe khe) throws IOException {
+    public static JsonTweetForwardPivot _parse(final tge tge) throws IOException {
         final JsonTweetForwardPivot jsonTweetForwardPivot = new JsonTweetForwardPivot();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTweetForwardPivot, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTweetForwardPivot, d, tge);
+            tge.l0();
         }
         return jsonTweetForwardPivot;
     }
     
-    public static void _serialize(final JsonTweetForwardPivot jsonTweetForwardPivot, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTweetForwardPivot jsonTweetForwardPivot, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTweetForwardPivot.e != null) {
-            LoganSquare.typeConverterFor((Class)glu.class).serialize((Object)jsonTweetForwardPivot.e, "displayType", true, tfe);
+            LoganSquare.typeConverterFor((Class)amu.class).serialize((Object)jsonTweetForwardPivot.e, "displayType", true, afe);
         }
-        tfe.e("engagement_nudge", jsonTweetForwardPivot.g);
+        afe.e("engagement_nudge", jsonTweetForwardPivot.g);
         if (jsonTweetForwardPivot.b != null) {
-            LoganSquare.typeConverterFor((Class)szg.class).serialize((Object)jsonTweetForwardPivot.b, "iconImageVariant", true, tfe);
+            LoganSquare.typeConverterFor((Class)tzg.class).serialize((Object)jsonTweetForwardPivot.b, "iconImageVariant", true, afe);
         }
         if (jsonTweetForwardPivot.c != null) {
-            LoganSquare.typeConverterFor((Class)q7t.class).serialize((Object)jsonTweetForwardPivot.c, "landingUrl", true, tfe);
+            LoganSquare.typeConverterFor((Class)i8t.class).serialize((Object)jsonTweetForwardPivot.c, "landingUrl", true, afe);
         }
         if (jsonTweetForwardPivot.f != null) {
-            LoganSquare.typeConverterFor((Class)ijq.class).serialize((Object)jsonTweetForwardPivot.f, "soft_intervention_display_type", true, tfe);
+            LoganSquare.typeConverterFor((Class)akq.class).serialize((Object)jsonTweetForwardPivot.f, "soft_intervention_display_type", true, afe);
         }
         if (jsonTweetForwardPivot.d != null) {
-            LoganSquare.typeConverterFor((Class)wg1.class).serialize((Object)jsonTweetForwardPivot.d, "stateBadge", true, tfe);
+            LoganSquare.typeConverterFor((Class)sg1.class).serialize((Object)jsonTweetForwardPivot.d, "stateBadge", true, afe);
         }
         if (jsonTweetForwardPivot.a != null) {
-            LoganSquare.typeConverterFor((Class)xwm.class).serialize((Object)jsonTweetForwardPivot.a, "text", true, tfe);
+            LoganSquare.typeConverterFor((Class)oxm.class).serialize((Object)jsonTweetForwardPivot.a, "text", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTweetForwardPivot jsonTweetForwardPivot, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTweetForwardPivot jsonTweetForwardPivot, final String s, final tge tge) throws IOException {
         if ("displayType".equals(s)) {
-            jsonTweetForwardPivot.e = (glu)LoganSquare.typeConverterFor((Class)glu.class).parse(khe);
+            jsonTweetForwardPivot.e = (amu)LoganSquare.typeConverterFor((Class)amu.class).parse(tge);
         }
         else if (!"engagement_nudge".equals(s) && !"engagementNudge".equals(s)) {
             if ("iconImageVariant".equals(s)) {
-                jsonTweetForwardPivot.b = (szg)LoganSquare.typeConverterFor((Class)szg.class).parse(khe);
+                jsonTweetForwardPivot.b = (tzg)LoganSquare.typeConverterFor((Class)tzg.class).parse(tge);
             }
             else if (!"landingUrl".equals(s) && !"landing_url".equals(s) && !"url".equals(s)) {
                 if (!"soft_intervention_display_type".equals(s) && !"softInterventionDisplayType".equals(s)) {
                     if ("stateBadge".equals(s)) {
-                        jsonTweetForwardPivot.d = (wg1)LoganSquare.typeConverterFor((Class)wg1.class).parse(khe);
+                        jsonTweetForwardPivot.d = (sg1)LoganSquare.typeConverterFor((Class)sg1.class).parse(tge);
                     }
                     else if ("text".equals(s)) {
-                        jsonTweetForwardPivot.a = (xwm)LoganSquare.typeConverterFor((Class)xwm.class).parse(khe);
+                        jsonTweetForwardPivot.a = (oxm)LoganSquare.typeConverterFor((Class)oxm.class).parse(tge);
                     }
                 }
                 else {
-                    jsonTweetForwardPivot.f = (ijq)LoganSquare.typeConverterFor((Class)ijq.class).parse(khe);
+                    jsonTweetForwardPivot.f = (akq)LoganSquare.typeConverterFor((Class)akq.class).parse(tge);
                 }
             }
             else {
-                jsonTweetForwardPivot.c = (q7t)LoganSquare.typeConverterFor((Class)q7t.class).parse(khe);
+                jsonTweetForwardPivot.c = (i8t)LoganSquare.typeConverterFor((Class)i8t.class).parse(tge);
             }
         }
         else {
-            jsonTweetForwardPivot.g = khe.k();
+            jsonTweetForwardPivot.g = tge.k();
         }
     }
     
-    public JsonTweetForwardPivot parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTweetForwardPivot parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTweetForwardPivot jsonTweetForwardPivot, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTweetForwardPivot, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTweetForwardPivot jsonTweetForwardPivot, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTweetForwardPivot, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTweetForwardPivot)o, afe, b);
     }
 }

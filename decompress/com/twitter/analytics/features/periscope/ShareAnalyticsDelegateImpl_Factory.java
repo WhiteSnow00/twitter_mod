@@ -4,7 +4,7 @@
 
 package com.twitter.analytics.features.periscope;
 
-public final class ShareAnalyticsDelegateImpl_Factory<T extends szo> implements wqa<rrp<T>>
+public final class ShareAnalyticsDelegateImpl_Factory<T extends j0p> implements tpa<isp<T>>
 {
     public final Object get() {
         throw null;

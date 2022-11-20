@@ -11,36 +11,35 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSelectAvatar extends lhh<fcp>
+public class JsonSelectAvatar extends qhh<wcp>
 {
     @JsonField
     public JsonOcfRichText a;
     @JsonField
     public JsonOcfRichText b;
     @JsonField
-    public xrv c;
+    public ssv c;
     @JsonField
-    public xrv d;
+    public ssv d;
     @JsonField
     public JsonOcfComponentCollection e;
     
-    @Override
-    public final h4j t() {
-        final fcp$a fcp$a = new fcp$a();
-        ((lsr$a)fcp$a).f = JsonOcfRichText.s(this.a);
-        final int a = w4j.a;
-        ((lsr$a)fcp$a).g = JsonOcfRichText.s(this.b);
-        ((lsr$a)fcp$a).a = this.c;
-        ((lsr$a)fcp$a).b = this.d;
+    public final n4j t() {
+        final wcp$a wcp$a = new wcp$a();
+        ((dtr$a)wcp$a).f = JsonOcfRichText.s(this.a);
+        final int a = c5j.a;
+        ((dtr$a)wcp$a).g = JsonOcfRichText.s(this.b);
+        ((dtr$a)wcp$a).a = this.c;
+        ((dtr$a)wcp$a).b = this.d;
         final JsonOcfComponentCollection e = this.e;
-        n16 t;
+        x06 t;
         if (e != null) {
             t = e.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)fcp$a).j = t;
-        return (h4j)fcp$a;
+        ((dtr$a)wcp$a).j = t;
+        return (n4j)wcp$a;
     }
 }

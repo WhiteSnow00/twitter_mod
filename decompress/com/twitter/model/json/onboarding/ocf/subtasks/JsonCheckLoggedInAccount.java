@@ -9,21 +9,20 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCheckLoggedInAccount extends lhh<b74>
+public class JsonCheckLoggedInAccount extends qhh<e64>
 {
     @JsonField
     public String a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
-    public xrv c;
+    public ssv c;
     
-    @Override
-    public final h4j t() {
-        final b74$a b74$a = new b74$a();
-        b74$a.m = this.a;
-        b74$a.l = this.c;
-        b74$a.k = this.b;
-        return (h4j)b74$a;
+    public final n4j t() {
+        final e64$a e64$a = new e64$a();
+        e64$a.m = this.a;
+        e64$a.l = this.c;
+        e64$a.k = this.b;
+        return (n4j)e64$a;
     }
 }

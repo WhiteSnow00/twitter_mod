@@ -11,10 +11,10 @@ import android.content.Context;
 public class QRCodeDeepLinks_GeneratedStaticProxyDeepLinkHandlers
 {
     public static Intent QRCodeDeepLinks_deepLinkToQrCodeFollow(final Context context, final Bundle bundle) {
-        zzd.f((Object)context, "context");
-        zzd.f((Object)bundle, "extras");
-        final Intent b = gd8.b(context, (vqa<Intent>)new krl(context, 0));
-        zzd.e((Object)b, "wrapLogInIfLoggedOutInte\u2026eate(context, args)\n    }");
+        czd.f((Object)context, "context");
+        czd.f((Object)bundle, "extras");
+        final Intent b = rc8.b(context, (spa)new zrl((Object)context, 0));
+        czd.e((Object)b, "wrapLogInIfLoggedOutInte\u2026eate(context, args)\n    }");
         return b;
     }
 }

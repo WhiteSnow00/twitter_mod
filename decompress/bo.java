@@ -25,7 +25,7 @@ public final class bo
             return false;
         }
         final bo bo = (bo)o;
-        return this.a == bo.a && this.b == bo.b && zzd.a((Object)this.c, (Object)bo.c);
+        return this.a == bo.a && this.b == bo.b && czd.a((Object)this.c, (Object)bo.c);
     }
     
     @Override
@@ -48,9 +48,9 @@ public final class bo
         final int a = this.a;
         final int b = this.b;
         final Intent c = this.c;
-        final StringBuilder j = sbl.j("ActivityResult(requestCode=", a, ", resultCode=", b, ", data=");
-        j.append(c);
-        j.append(")");
-        return j.toString();
+        final StringBuilder f = shc.f("ActivityResult(requestCode=", a, ", resultCode=", b, ", data=");
+        f.append(c);
+        f.append(")");
+        return f.toString();
     }
 }

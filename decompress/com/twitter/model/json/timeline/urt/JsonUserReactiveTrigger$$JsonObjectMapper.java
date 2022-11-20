@@ -10,47 +10,55 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonUserReactiveTrigger$$JsonObjectMapper extends JsonMapper<JsonUserReactiveTrigger>
 {
-    public static JsonUserReactiveTrigger _parse(final khe khe) throws IOException {
+    public static JsonUserReactiveTrigger _parse(final tge tge) throws IOException {
         final JsonUserReactiveTrigger jsonUserReactiveTrigger = new JsonUserReactiveTrigger();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonUserReactiveTrigger, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonUserReactiveTrigger, d, tge);
+            tge.l0();
         }
         return jsonUserReactiveTrigger;
     }
     
-    public static void _serialize(final JsonUserReactiveTrigger jsonUserReactiveTrigger, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonUserReactiveTrigger jsonUserReactiveTrigger, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonUserReactiveTrigger.a != null) {
-            LoganSquare.typeConverterFor((Class)j1t.class).serialize((Object)jsonUserReactiveTrigger.a, "onFollow", true, tfe);
+            LoganSquare.typeConverterFor((Class)z1t.class).serialize((Object)jsonUserReactiveTrigger.a, "onFollow", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonUserReactiveTrigger jsonUserReactiveTrigger, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonUserReactiveTrigger jsonUserReactiveTrigger, final String s, final tge tge) throws IOException {
         if ("onFollow".equals(s)) {
-            jsonUserReactiveTrigger.a = (j1t)LoganSquare.typeConverterFor((Class)j1t.class).parse(khe);
+            jsonUserReactiveTrigger.a = (z1t)LoganSquare.typeConverterFor((Class)z1t.class).parse(tge);
         }
     }
     
-    public JsonUserReactiveTrigger parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonUserReactiveTrigger parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonUserReactiveTrigger jsonUserReactiveTrigger, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonUserReactiveTrigger, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonUserReactiveTrigger jsonUserReactiveTrigger, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonUserReactiveTrigger, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonUserReactiveTrigger)o, afe, b);
     }
 }

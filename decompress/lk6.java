@@ -1,17 +1,45 @@
+import java.util.List;
+import java.util.HashMap;
+import java.nio.ByteBuffer;
+import java.util.Map;
+import com.twitter.util.user.UserIdentifier;
+import android.content.Context;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class lk6
 {
-    public final String a;
-    public final boolean b;
-    public final boolean c;
-    public final boolean d;
-    public final boolean e;
+    public static final int f;
+    public static final long g;
+    public final Context a;
+    public final UserIdentifier b;
+    public final i1g c;
+    public final ek6 d;
+    public final a e;
     
-    public lk6(final String a, final boolean b, final boolean c, final boolean d, final boolean e) {
-        zzd.f((Object)a, "broadcastId");
+    static {
+        final boolean b = asa.b().b("onboarding_legacy_addressbook_upload_behavior_enabled", false);
+        int f2;
+        if (b) {
+            f2 = 50;
+        }
+        else {
+            f2 = 100;
+        }
+        f = f2;
+        long g2;
+        if (b) {
+            g2 = 0L;
+        }
+        else {
+            g2 = f2 * 1000 / 500;
+        }
+        g = g2;
+    }
+    
+    public lk6(final Context a, final UserIdentifier b, final i1g c, final ek6 d, final a e) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -19,51 +47,22 @@ public final class lk6
         this.e = e;
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
+    public final void a(final Map<String, ByteBuffer> map, final nk6 nk6, final boolean b, final boolean b2) {
+        final int size = map.size();
+        if (size > 0) {
+            final int b3 = b2v.b(size, lk6.f);
+            final List u = rif.u((Iterable)map.keySet());
+            final HashMap hashMap = new HashMap();
+            for (int i = 0; i < b3; ++i) {
+                final int f = lk6.f;
+                final int n = i * f;
+                hashMap.put(i, u.subList(n, Math.min(u.size(), f + n)));
+            }
+            h5j.fromIterable((Iterable)hashMap.keySet()).flatMap((psb)new jk6(this, b, b2, hashMap, (Map)map, nk6)).takeUntil((ytk)a71.X0).subscribeOn(owo.c()).subscribe();
         }
-        if (!(o instanceof lk6)) {
-            return false;
-        }
-        final lk6 lk6 = (lk6)o;
-        return zzd.a((Object)this.a, (Object)lk6.a) && this.b == lk6.b && this.c == lk6.c && this.d == lk6.d && this.e == lk6.e;
     }
     
-    @Override
-    public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final int b = this.b ? 1 : 0;
-        int n = 1;
-        int n2 = b;
-        if (b != 0) {
-            n2 = 1;
-        }
-        int c;
-        if ((c = (this.c ? 1 : 0)) != 0) {
-            c = 1;
-        }
-        int d;
-        if ((d = (this.d ? 1 : 0)) != 0) {
-            d = 1;
-        }
-        final int e = this.e ? 1 : 0;
-        if (e == 0) {
-            n = e;
-        }
-        return (((hashCode * 31 + n2) * 31 + c) * 31 + d) * 31 + n;
-    }
-    
-    @Override
-    public final String toString() {
-        final String a = this.a;
-        final boolean b = this.b;
-        final boolean c = this.c;
-        final boolean d = this.d;
-        final boolean e = this.e;
-        final StringBuilder y = rb0.y("ConsumptionPreviewArgs(broadcastId=", a, ", bypassPreview=", b, ", fromSpacesTab=");
-        lo0.z(y, c, ", isEntity=", d, ", isCommunitySpace=");
-        return bd.y(y, e, ")");
+    public static final class a
+    {
     }
 }

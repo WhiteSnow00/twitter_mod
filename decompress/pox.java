@@ -1,25 +1,23 @@
-import android.view.View;
-import android.view.WindowId;
+import com.twitter.ui.user.UserView;
+import com.twitter.util.user.UserIdentifier;
+import androidx.fragment.app.p;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pox implements qox
+public final class pox extends a9t
 {
-    public final WindowId a;
-    
-    public pox(final View view) {
-        this.a = view.getWindowId();
+    public pox(final Context context, final p p10, final kc1 kc1, final trc trc, final UserIdentifier userIdentifier, final brb brb, final obi obi, final efv efv, final jkq jkq, final qkq qkq) {
+        super(context, p10, kc1, trc, userIdentifier, brb, obi, (t81)null, efv, true, false, jkq, qkq);
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        return o instanceof pox && ((pox)o).a.equals((Object)this.a);
+    public final void i(final UserView userView) {
+        this.h(userView, super.a, "user", "follow");
     }
     
-    @Override
-    public final int hashCode() {
-        return this.a.hashCode();
+    public final void j(final UserView userView) {
+        this.h(userView, super.a, "user", "unfollow");
     }
 }

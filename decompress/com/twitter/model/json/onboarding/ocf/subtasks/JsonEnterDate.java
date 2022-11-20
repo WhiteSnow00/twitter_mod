@@ -11,16 +11,16 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonEnterDate extends lhh<e5a>
+public class JsonEnterDate extends qhh<n4a>
 {
     @JsonField
-    public iej a;
+    public oej a;
     @JsonField
-    public kcj b;
+    public pcj b;
     @JsonField
-    public ga8 c;
+    public q98 c;
     @JsonField
-    public ga8 d;
+    public q98 d;
     @JsonField
     public JsonOcfRichText e;
     @JsonField
@@ -30,42 +30,41 @@ public class JsonEnterDate extends lhh<e5a>
     @JsonField
     public JsonOcfRichText h;
     @JsonField
-    public xrv i;
+    public ssv i;
     @JsonField
-    public xrv j;
+    public ssv j;
     @JsonField
     public JsonOcfComponentCollection k;
     
-    @Override
-    public final h4j t() {
-        final e5a$a e5a$a = new e5a$a();
-        final xrv i = this.i;
-        pf8.r(i);
-        ((lsr$a)e5a$a).a = i;
-        final int a = w4j.a;
-        ((lsr$a)e5a$a).b = this.j;
-        final iej a2 = this.a;
-        pf8.r(a2);
-        ((lsr$a)e5a$a).h = a2;
-        e5a$a.l = this.c;
-        e5a$a.m = this.d;
+    public final n4j t() {
+        final n4a$a n4a$a = new n4a$a();
+        final ssv i = this.i;
+        jee.l((Object)i);
+        ((dtr$a)n4a$a).a = i;
+        final int a = c5j.a;
+        ((dtr$a)n4a$a).b = this.j;
+        final oej a2 = this.a;
+        jee.l((Object)a2);
+        ((dtr$a)n4a$a).h = a2;
+        n4a$a.l = this.c;
+        n4a$a.m = this.d;
         final String g = this.g;
-        pf8.r(g);
-        zzd.f((Object)g, "hintText");
-        e5a$a.k = g;
-        e5a$a.n = JsonOcfRichText.s(this.h);
-        e5a$a.p = JsonOcfRichText.s(this.f);
-        e5a$a.o = JsonOcfRichText.s(this.e);
-        e5a$a.q = this.b;
+        jee.l((Object)g);
+        czd.f((Object)g, "hintText");
+        n4a$a.k = g;
+        n4a$a.n = JsonOcfRichText.s(this.h);
+        n4a$a.p = JsonOcfRichText.s(this.f);
+        n4a$a.o = JsonOcfRichText.s(this.e);
+        n4a$a.q = this.b;
         final JsonOcfComponentCollection k = this.k;
-        n16 t;
+        x06 t;
         if (k != null) {
             t = k.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)e5a$a).j = t;
-        return (h4j)e5a$a;
+        ((dtr$a)n4a$a).j = t;
+        return (n4j)n4a$a;
     }
 }

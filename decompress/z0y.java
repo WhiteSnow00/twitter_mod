@@ -1,53 +1,35 @@
-import java.util.Iterator;
-import java.util.Map;
-import com.google.android.gms.common.api.Scope;
-import java.util.Set;
-import java.util.Objects;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Collections;
-import com.google.android.gms.common.api.a;
-import java.util.ArrayList;
+import android.os.BaseBundle;
+import android.os.Parcelable;
+import android.os.Bundle;
+import com.google.android.gms.common.api.a$f;
+import com.google.android.gms.common.api.c$c;
+import com.google.android.gms.common.api.c$b;
+import android.os.Looper;
+import android.content.Context;
+import com.google.android.gms.common.api.a$a;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class z0y extends d1y
+public final class z0y extends a$a<i6q, l6q>
 {
-    public final ArrayList<a.f> D0;
-    public final /* synthetic */ e1y E0;
-    
-    public z0y(final e1y e0, final ArrayList<a.f> d0) {
-        this.E0 = e0;
-        super(e0);
-        this.D0 = d0;
-    }
-    
-    public final void a() {
-        final e1y e0 = this.E0;
-        final n1y m = e0.a.m;
-        final fh4 r = e0.r;
-        Set<Object> emptySet;
-        if (r == null) {
-            emptySet = Collections.emptySet();
+    public final a$f c(final Context context, final Looper looper, final gg4 gg4, final Object o, final c$b c$b, final c$c c$c) {
+        final l6q l6q = (l6q)o;
+        final Integer i = gg4.i;
+        final Bundle bundle = new Bundle();
+        bundle.putParcelable("com.google.android.gms.signin.internal.clientRequestedAccount", (Parcelable)gg4.a);
+        if (i != null) {
+            ((BaseBundle)bundle).putInt("com.google.android.gms.common.internal.ClientSettings.sessionId", (int)i);
         }
-        else {
-            emptySet = new HashSet<Object>(r.b);
-            final Map<a<?>, g1y> d = e0.r.d;
-            for (final a a : d.keySet()) {
-                if (!e0.a.g.containsKey(a.b)) {
-                    Objects.requireNonNull((Object)d.get(a));
-                    emptySet.addAll(null);
-                }
-            }
-        }
-        m.R0 = emptySet;
-        final ArrayList<a.f> d2 = this.D0;
-        for (int size = d2.size(), i = 0; i < size; ++i) {
-            final a.f f = (a.f)d2.get(i);
-            final e1y e2 = this.E0;
-            f.l(e2.o, e2.a.m.R0);
-        }
+        bundle.putBoolean("com.google.android.gms.signin.internal.offlineAccessRequested", false);
+        bundle.putBoolean("com.google.android.gms.signin.internal.idTokenRequested", false);
+        ((BaseBundle)bundle).putString("com.google.android.gms.signin.internal.serverClientId", (String)null);
+        bundle.putBoolean("com.google.android.gms.signin.internal.usePromptModeForAuthCode", true);
+        bundle.putBoolean("com.google.android.gms.signin.internal.forceCodeForRefreshToken", false);
+        ((BaseBundle)bundle).putString("com.google.android.gms.signin.internal.hostedDomain", (String)null);
+        ((BaseBundle)bundle).putString("com.google.android.gms.signin.internal.logSessionId", (String)null);
+        bundle.putBoolean("com.google.android.gms.signin.internal.waitForAccessTokenRefresh", false);
+        return (a$f)new i6q(context, looper, gg4, bundle, c$b, c$c);
     }
 }

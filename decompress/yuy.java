@@ -1,26 +1,24 @@
-import java.lang.annotation.Annotation;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
 import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class yuy implements j4j<a8z>
+public final class yuy implements p4j<x7z>
 {
     public static final yuy a;
     
     static {
-        final ozz c0 = ozz.C0;
         a = new yuy();
-        final rxz rxz = new rxz(1, c0);
+        final dyz dyz = new dyz(1, zzz.D0);
         final HashMap hashMap = new HashMap();
-        hashMap.put(((Annotation)rxz).annotationType(), rxz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final rxz rxz2 = new rxz(2, c0);
-        final HashMap hashMap2 = new HashMap();
-        sbl.m(rxz2, hashMap2, rxz2, hashMap2);
+        jg9.w(dyz, hashMap, dyz, hashMap);
+    }
+    
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final x7z x7z = (x7z)o;
+        final q4j q4j = (q4j)o2;
+        throw null;
     }
 }

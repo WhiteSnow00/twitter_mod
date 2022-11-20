@@ -10,47 +10,55 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonChoiceSelection$JsonPrimarySelection$$JsonObjectMapper extends JsonMapper<JsonChoiceSelection$JsonPrimarySelection>
 {
-    public static JsonChoiceSelection$JsonPrimarySelection _parse(final khe khe) throws IOException {
+    public static JsonChoiceSelection$JsonPrimarySelection _parse(final tge tge) throws IOException {
         final JsonChoiceSelection$JsonPrimarySelection jsonChoiceSelection$JsonPrimarySelection = new JsonChoiceSelection$JsonPrimarySelection();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonChoiceSelection$JsonPrimarySelection, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonChoiceSelection$JsonPrimarySelection, d, tge);
+            tge.l0();
         }
         return jsonChoiceSelection$JsonPrimarySelection;
     }
     
-    public static void _serialize(final JsonChoiceSelection$JsonPrimarySelection jsonChoiceSelection$JsonPrimarySelection, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonChoiceSelection$JsonPrimarySelection jsonChoiceSelection$JsonPrimarySelection, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonChoiceSelection$JsonPrimarySelection.a != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)jsonChoiceSelection$JsonPrimarySelection.a, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)jsonChoiceSelection$JsonPrimarySelection.a, "header", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonChoiceSelection$JsonPrimarySelection jsonChoiceSelection$JsonPrimarySelection, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonChoiceSelection$JsonPrimarySelection jsonChoiceSelection$JsonPrimarySelection, final String s, final tge tge) throws IOException {
         if ("header".equals(s)) {
-            jsonChoiceSelection$JsonPrimarySelection.a = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            jsonChoiceSelection$JsonPrimarySelection.a = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
     }
     
-    public JsonChoiceSelection$JsonPrimarySelection parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonChoiceSelection$JsonPrimarySelection parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonChoiceSelection$JsonPrimarySelection jsonChoiceSelection$JsonPrimarySelection, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonChoiceSelection$JsonPrimarySelection, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonChoiceSelection$JsonPrimarySelection jsonChoiceSelection$JsonPrimarySelection, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonChoiceSelection$JsonPrimarySelection, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonChoiceSelection$JsonPrimarySelection)o, afe, b);
     }
 }

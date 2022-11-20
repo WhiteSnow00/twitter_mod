@@ -210,8 +210,13 @@
     <string name="activity_tab_mentions_empty_state_description_no_mentions">जब Twitter पर कोई व्यक्ति किसी ट्वीट या जवाब में आपका उल्लेख करता है, तो वह आपको यहां मिलेगा.</string>
     <string name="activity_tab_mentions_empty_state_description_no_mentions_from_people_you_follow">जब कोई ऐसा व्यक्ति जिसे आप फ़ॉलो करते हैं किसी ट्वीट में आपका उल्लेख करता है, तो वह आपको यहाँ दिखाई देगा.</string>
     <string name="activity_tab_super_follows_description">पसंद, उल्लेख, रीट्वीट्स, साथ ही और बहुत कुछ — जब यह आपके सुपर फ़ॉलोअर्स से आता है, तो यह आपको, यहां मिलेगा.</string>
-    <string name="activity_tab_vit_description">अन्य सत्यापित खातों के नए ट्वीट्स, रीट्वीट, सुझाव, आदि के बारे में सूचनाएं यहां दिखाई देंगी.</string>
-    <string name="activity_tab_vit_title">सबसे पहले आप जानें</string>
+    <string name="activity_tab_vit_button">अधिक जानें</string>
+    <string name="activity_tab_vit_description">पसंद, उल्लेख, रीट्वीट्स, और बहुत सारी चीज़ें — जब ये सत्यापित खाते से आती हैं, तो ये आपको, यहाँ मिलेंगी. {{}}अधिक जानें{{}}</string>
+    <string name="activity_tab_vit_description_blue_available">पसंद, उल्लेख, रीट्वीट्स, और बहुत सारी चीज़ें — जब ये एक सत्यापित खाते से आती हैं, तो ये आपको, यहाँ मिलेंगी. {{}}अधिक जानें{{}}\10\10सत्यापित नहीं हैं? एक सत्यापित खाता प्राप्त करने के लिए अभी सब्सक्राइब करें और गुणवत्तापूर्ण बातचीत में अन्य लोगों से जुड़ें.</string>
+    <string name="activity_tab_vit_subscribe_button">सब्सक्राइब करें</string>
+    <string name="activity_tab_vit_subscribe_with_price_month">%1$s/माह</string>
+    <string name="activity_tab_vit_subscribe_with_price_year">%1$s/वर्ष</string>
+    <string name="activity_tab_vit_title">यहाँ अभी तक देखने के लिए कुछ नहीं है</string>
     <string name="activity_view_hidden_replies_empty_title">इस थ्रेड के लिए जवाब छिपाए नहीं गए हैं</string>
     <string name="activity_view_moderated_replies_empty_desc">इस ट्वीट के कोई छिपे हुए जवाब नहीं हैं, लेकिन सुरक्षित ट्वीट्स को फ़िल्टर किया जा सकता है. {{}}अधिक जानें{{}}</string>
     <string name="activity_view_moderated_replies_empty_title">यहां देखने के लिए कुछ नहीं है</string>
@@ -545,8 +550,8 @@
     <string name="billing_error_modal_title">कृपया अपनी भुगतान विधि अपडेट करें</string>
     <string name="birdwatch_dialog_home_button">होम</string>
     <string name="birdwatch_dialog_my_notes_button">मेरे नोट्स</string>
-    <string name="birdwatch_home_page_title">Birdwatch</string>
-    <string name="birdwatch_pivot_header_title">Birdwatch</string>
+    <string name="birdwatch_home_page_title">कम्यूनिटी नोट्स</string>
+    <string name="birdwatch_pivot_header_title">कम्यूनिटी नोट्स</string>
     <string name="birthday_not_today_month_day">जन्म %s</string>
     <string name="birthday_not_today_month_day_year">जन्मदिन %s</string>
     <string name="birthday_not_today_year_only">जन्म %d</string>
@@ -1900,7 +1905,7 @@
     <string name="drag_and_drop_reordering_tooltip_text">किसी फ़ोटो को कहीं ले जाने के लिए उसे दबाए रखें</string>
     <string name="drag_handle_label">क्रम बदलने के लिए क्लिक करें और खींचें</string>
     <string name="drawer_accounts_menu_header">खाते</string>
-    <string name="drawer_birdwatch_title">Birdwatch</string>
+    <string name="drawer_birdwatch_title">कम्यूनिटी नोट्स</string>
     <string name="drawer_branded_likes_preview_title">Branded Likes प्रीव्यू</string>
     <string name="drawer_communities_title">कम्यूनिटिज़</string>
     <string name="drawer_connect_title">कनेक्ट</string>
@@ -2028,7 +2033,7 @@
     <string name="edit_profile_remove_header">हैडर हटायें</string>
     <string name="edit_profile_switch_to_professional">प्रोफ़ेशनल पर स्विच करें</string>
     <string name="edit_profile_take_photo">तस्वीर खींचें</string>
-    <string name="edit_profile_verified_phone">सत्यापित फ़ोन नंबर बैज</string>
+    <string name="edit_profile_verified_phone">पुष्टि किया गया फ़ोन नंबर चिह्न</string>
     <string name="edit_profile_website">वेबसाइट</string>
     <string name="edit_room_button">संपादित करें</string>
     <string name="edit_rule">नियम संपादित करें</string>
@@ -2212,7 +2217,7 @@
     <string name="error_update_module_visibility">कुछ गलत हो गया. कृपया फिर से कोशिश करें.</string>
     <string name="error_uploading_header">हैडर फ़ोटो अपलोड करने में त्रुटि.</string>
     <string name="except_blocked_accounts_desc">जिन खातों को आपने अवरुद्ध किया है, वे शामिल नहीं हो पाएंगे. हालंकि, Twitter में लॉगिन नहीं किए हुए लोग सुन पाएंगे. {{}}अधिक जानें{{}}</string>
-    <string name="exclusive_focal_tweet_education_message">आप इसे देख सकते हैं और इसका जवाब दे सकते हैं, क्योंकि आप @%s को सुपर फ़ॉलो करते हैं</string>
+    <string name="exclusive_focal_tweet_education_message">आप इसे देख सकते हैं और इसका जवाब दे सकते हैं, क्योंकि आप @%s को सब्सक्राइब करते हैं</string>
     <string name="exclusive_focal_tweet_education_title">आप सुपर फ़ॉलोज़ सामग्री देख रहे हैं</string>
     <string name="exclusive_space_access_info_sheet_message">सुपर फ़ॉलोअर होने के लाभों में से एक लाभ इस तरह के Spaces की विशेष एक्सेस पाना है. केवल आप और @%s के अन्य सुपर फ़ॉलोअर्स ही इस स्पेस में शामिल हो सकते हैं.</string>
     <string name="exclusive_space_access_info_sheet_message_generic">सुपर फ़ॉलोअर होने के लाभों में से एक लाभ इस तरह के Spaces की विशेष एक्सेस पाना है. केवल आप और इस क्रिएटर के अन्य सुपर फ़ॉलोअर्स ही इस स्पेस में शामिल हो सकते हैं.</string>
@@ -2220,8 +2225,8 @@
     <string name="exclusive_space_non_sf_access_info_sheet_message">सुपर फ़ॉलोअर होने के लाभों में से एक लाभ इस तरह के Spaces की विशेष एक्सेस पाना है. केवल @%s के सुपर फ़ॉलोअर्स ही इस स्पेस में शामिल हो सकते हैं.</string>
     <string name="exclusive_space_non_sf_access_info_sheet_message_generic">सुपर फ़ॉलोअर होने के लाभों में से एक लाभ इस तरह के Spaces की विशेष एक्सेस पाना है. केवल इस क्रिएटर के सुपर फ़ॉलोअर्स ही इस स्पेस में शामिल हो सकते हैं.</string>
     <string name="exclusive_timeline_self_tweet_education_message">आप और आपके सुपर फ़ॉलोअर्स इस ट्वीट को देख सकते हैं</string>
-    <string name="exclusive_timeline_tweet_education_message">आप इस ट्वीट को देख सकते हैं, क्योंकि आप @%s को सुपर फ़ॉलो करते हैं</string>
-    <string name="exclusive_tweet_reply_education_message">@%s और उनके सुपर फ़ॉलोअर्स आपका ट्वीट देख सकते हैं</string>
+    <string name="exclusive_timeline_tweet_education_message">आप इसे ट्वीट को देख सकते हैं, क्योंकि आप @%s को सब्सक्राइब करते हैं</string>
+    <string name="exclusive_tweet_reply_education_message">@%s और उनके सब्सक्राइबर्स आपका ट्वीट देख सकते हैं</string>
     <string name="exclusive_tweet_reply_education_title">इस ट्वीट को कौन देख सकता है?</string>
     <string name="existing_member">मौजूदा सदस्य</string>
     <string name="existing_member_community">यह व्यक्ति पहले से कम्यूनिटी में मौजूद है.</string>
@@ -3106,6 +3111,9 @@
     <string name="manage_subscription_dialog_error_title">त्रुटि</string>
     <string name="manage_subscription_pref_summary">अपने सब्सक्रिप्शन विवरण देखें या रद्द करें.</string>
     <string name="manage_subscription_stripe_description">ऐसा लगता है कि आपने twitter.com पर यह सब्सक्रिप्शन खरीदा है. आपको उस प्लेटफ़ॉर्म से अपना सब्सक्रिप्शन प्रबंधित या रद्द करना होगा.</string>
+    <string name="manage_subscription_upgrade_available">अपग्रेड उपलब्ध है</string>
+    <string name="manage_subscription_upgrade_new_perks">एक सत्यापित खाता पाएं.</string>
+    <string name="manage_subscription_upgrade_twitter_blue">Twitter Blue अपग्रेड करें</string>
     <string name="manage_your_experience_desc">आप स्पेस में लोगों को अवरुद्ध और उनकी रिपोर्ट कर सकते हैं.</string>
     <string name="manage_your_experience_title">अपना अनुभव प्रबंधित करें</string>
     <string name="map_price_free_subtitle">मुफ़्त · %1$s</string>
@@ -4033,6 +4041,8 @@
     <string name="product_original_price_content_description">वास्तविक मूल्य: %1$s</string>
     <string name="product_price_content_description">मूल्य: %1$s</string>
     <string name="product_report_message">रिपोर्ट सबमिट की गई\10हमारी टीम जल्द से जल्द जांच करेगी.</string>
+    <string name="product_sign_up_button_text_with_period">%1$s/%2$s में सब्सक्राइब करें</string>
+    <string name="product_sign_up_button_text_without_period">%1$s में सब्सक्राइब करें</string>
     <string name="product_sign_up_with_price">%1$s/माह में सब्सक्राइब करें</string>
     <string name="product_unavailable_in_country">हम भविष्य में Twitter Blue को आपके देश में उपलब्ध बनाने पर काम कर रहे हैं. कृपया बाद में फिर से आ कर देखें.</string>
     <string name="product_unavailable_in_country_dialog_title">आपकी रुचि के लिए धन्यवाद!</string>
@@ -5927,6 +5937,7 @@
     <string name="settings_mute_block_item_title">म्यूट और अवरुद्ध करें</string>
     <string name="settings_muted_notifications">म्यूट की गई सूचनाएं</string>
     <string name="settings_news_subtitle">प्रासंगिक समाचार देखें, बिना विज्ञापन वाले लेखों का आनंद लें और उस पत्रकारिता का समर्थन करें, जिसे आप पढ़ना पसंद करते हैं.</string>
+    <string name="settings_news_subtitle_without_ads_free">प्रासंगिक समाचार खोजें और थ्रेड पढ़ने का एक बेहतर अनुभव प्राप्त करें.</string>
     <string name="settings_news_title">समाचार पढ़ने का एक बेहतर अनुभव</string>
     <string name="settings_no_location_permission_message">Twitter के लिए स्थान अनुमति अक्षम है. {{}}ऐप जानकारी{{}} में जाकर Twitter के लिए स्थान अनुमति सक्षम करें.</string>
     <string name="settings_notif_timeline_title">ट्वीट्स</string>
@@ -6630,6 +6641,7 @@
     <string name="subscriptions_loading_error_title">ओह, कुछ गलत हो गया. कृपया बाद में फिर से कोशिश करें.</string>
     <string name="subscriptions_subscriber_header_title">Twitter Blue</string>
     <string name="subscriptions_support_label">सहायता पाएं</string>
+    <string name="subscriptions_temporarily_disabled_message">आप केवल Twitter iOS ऐप पर सब्सक्राइब कर सकते हैं (अभी के लिए).</string>
     <string name="subscriptions_twitter_blue_profile_label">@twitterblue</string>
     <string name="subscriptions_welcome_okay_button_label">ठीक है</string>
     <string name="subscriptions_welcome_subtitle">अपनी सेटिंग्स अनुकूलित करें और अपने Twitter Blue सब्सक्रिप्शन का अधिक से अधिक लाभ उठाना शुरू करें.</string>
@@ -6644,12 +6656,12 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="sunday">रविवार</string>
     <string name="super_follow">सुपर फ़ॉलो</string>
-    <string name="super_follow_badge_description">जब आप @%1$s के ट्वीट्स का जवाब दें, तो अनुमति दें कि कोई भी आपका सुपर फ़ॉलोअर बैज देख सकता है</string>
-    <string name="super_follow_badge_explanation">अगर आप इसे बंद करते हैं, तो @%1$s और उनके सुपर फ़ॉलोअर्स अभी भी आपका बैज देख पाएंगे, बशर्ते आप @%1$s के सुपर फ़ॉलोअर के ट्वीट्स का जवाब देते हों. @%1$s को हमेशा आपका बैज दिखाई देगा.\10\10{{}}अधिक जानें{{}}</string>
+    <string name="super_follow_badge_description">जब आप @%1$s के ट्वीट्स का जवाब दें, तो अनुमति दें कि कोई भी आपका सब्सक्राइबर बैज देख सकता है</string>
+    <string name="super_follow_badge_explanation">अगर आप इसे बंद करते हैं, तो @%1$s और उनके सब्सक्राइबर अभी भी आपका बैज देख पाएंगे, बशर्ते आप @%1$s के केवल-सब्सक्राइबर के ट्वीट्स का जवाब देते हों. @%1$s को हमेशा आपका बैज दिखाई देगा.\10\10{{}}अधिक जानें{{}}</string>
     <string name="super_follow_badge_subtitle">सुपर फ़ॉलोअर बैज</string>
     <string name="super_follow_close">बंद करें</string>
     <string name="super_follow_content_desc">सुपर फ़ॉलो %1$s.</string>
-    <string name="super_follow_creator">सुपर फ़ॉलो @%s</string>
+    <string name="super_follow_creator">@%s की सदस्यता लें</string>
     <string name="super_follow_manage_subscription">सब्सक्रिप्शन प्रबंधित करें</string>
     <string name="super_follow_manage_subscription_already_cancelled_description">अगर आप पहले ही अपने सब्सक्रिप्शन को रद्द कर चुके हैं, तो आपके लाभ बिलिंग चक्र के अंत में अपने आप समाप्त हो जाएंगे.</string>
     <string name="super_follow_manage_subscription_already_cancelled_subtitle">पहले ही अपना सब्सक्रिप्शन रद्द कर चुके हैं?</string>
@@ -7145,7 +7157,7 @@
     <string name="tweet_action_moderate">जवाब छिपाएं</string>
     <string name="tweet_action_thread_reader_cta">रीडर में थ्रेड देखें</string>
     <string name="tweet_action_unmoderate">जवाब को छिपाना रद्द करें</string>
-    <string name="tweet_action_view_birdwatch_notes">Birdwatch नोट्स देखें</string>
+    <string name="tweet_action_view_birdwatch_notes">कम्यूनिटी नोट्स देखें</string>
     <string name="tweet_action_view_moderated_tweets">छिपे हुए जवाब देखें</string>
     <string name="tweet_actions_disabled">इस ट्वीट पर कुछ कार्रवाइयों को Twitter ने अक्षम कर दिया है.</string>
     <string name="tweet_added_to_your_bookmarks">ट्वीट को आपके बुकमार्क में जोड़ा गया</string>
@@ -7394,6 +7406,7 @@
     <string name="upload_contacts_summary">आपकी पता पुस्तिका से संपर्कों को नियमित रूप से Twitter पर अपलोड किया जाएगा ताकि आप अपने दोस्तों के साथ जुड़े रह सकें और सामग्री को वैयक्तिकृत किया जा सके, जैसे आपके और अन्य लोगों के लिए सुझाव देना. सिंक करना बंद करने से, पहले अपलोड किए गए संपर्कों को हटाया नहीं जाएगा. {{}}अधिक जानें{{}}</string>
     <string name="upsell_card_pill_text">नया</string>
     <string name="upsell_card_title">अपने ट्वीट्स संपादित करने का प्रारंभिक एक्सेस. अब आप उन लेखन गलतियों को ठीक कर सकते हैं.</string>
+    <string name="upsell_card_title_blue_verified">नीला चेकमार्क आप पर अच्छा लगता है. अपने सत्यापित खाते और नीले चेकमार्क का आनंद उठाएं.</string>
     <string name="url_dm_abuse_interstitial_learn_more">https://help.twitter.com/safety-and-security/report-a-tweet</string>
     <string name="url_limit_tweet_error">ट्वीट में बहुत सारे लिंक है</string>
     <string name="use_a_temporary_password_message">जारी रखने के लिए आपको twitter.com पर जा कर एक अस्थायी पासवर्ड बनाना होगा.</string>
@@ -7479,8 +7492,9 @@
     <string name="users_unblock_title">@%s से अवरोध हटाएं?</string>
     <string name="v7_preference_off">बंद</string>
     <string name="v7_preference_on">चालू</string>
-    <string name="verification_education_desc">इस खाते को सत्यापित किया गया है क्योंकि यह सरकार, समाचार, मनोरंजन या किसी अन्य नामित श्रेणी में उल्लेखनीय है. {{}}अधिक जानें{{}}</string>
-    <string name="verification_education_title">खाते की जानकारी</string>
+    <string name="verification_education_blue_desc">इस खाते को सत्यापित किया गया है, क्योंकि इसने Twitter Blue को सब्सक्राइब किया हुआ है. {{}}अधिक जानें{{}}</string>
+    <string name="verification_education_desc">इस खाते को सत्यापित किया गया है, क्योंकि यह सरकार, समाचार, मनोरंजन या किसी अन्य नामित श्रेणी में उल्लेखनीय है. {{}}अधिक जानें{{}}</string>
+    <string name="verification_education_title">सत्यापित खाता</string>
     <string name="verification_landing_active_card_text">आपका खाता पूर्ण प्रोफ़ाइल और पुष्टि हुई संपर्क विधि सहित Twitter के नियमों के अनुपालक रिकॉर्ड के साथ सक्रिय होना चाहिए.</string>
     <string name="verification_landing_active_card_title">सक्रिय</string>
     <string name="verification_landing_authentic_card_text">प्लेटफ़ॉर्म पर उपयोगकर्ताओं के बीच विश्वास बनाए रखने के लिए, आपको Twitter के साथ अपनी पहचान की पुष्टि करनी होगी, ताकि आपको सत्यापित किया जा सके.</string>
@@ -7513,9 +7527,9 @@
     <string name="verified_phone_off">बंद</string>
     <string name="verified_phone_on">चालू</string>
     <string name="verified_phone_status_learn_more">अधिक जानें</string>
-    <string name="verified_phone_status_learn_more_title">आपके क्षेत्र के सक्रिय रूप से Twitter का उपयोग करने वाले ग्राहकों के लिए दृश्यता प्रतिबंधित है.</string>
-    <string name="verified_phone_status_title">सत्यापित फ़ोन नंबर बैज</string>
-    <string name="verified_phone_status_toggle_title">प्रोफ़ाइल पर श्रेणी दिखाएँ</string>
+    <string name="verified_phone_status_learn_more_title">यह दिखाने के लिए कि आपने अपने फ़ोन नंबर की पुष्टि कर ली है, अपनी प्रोफ़ाइल में फ़ोन पुष्टिकरण चिह्न जोड़ें. यह चिह्न केवल आपके क्षेत्र के अन्य लोगों को दिखाया जाएगा.</string>
+    <string name="verified_phone_status_title">पुष्टि किया गया फ़ोन नंबर चिह्न</string>
+    <string name="verified_phone_status_toggle_title">पुष्टि किया गया फ़ोन नंबर चिह्न प्रदर्शित करें</string>
     <string name="verify_phone_change_number">मेरा फ़ोन बदलें</string>
     <string name="verify_phone_phone_already_verified">अपने फ़ोन पहले से ही सत्यापित है</string>
     <string name="vertical_grid_module_show_more_btn">और अधिक दिखाएं</string>

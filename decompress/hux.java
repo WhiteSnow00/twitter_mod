@@ -1,176 +1,57 @@
-import java.util.Arrays;
-import java.io.IOException;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParser;
-import java.util.List;
-import com.google.android.exoplayer2.ParserException;
-import java.io.Reader;
-import java.io.StringReader;
-import org.xmlpull.v1.XmlPullParserFactory;
+import com.twitter.util.user.UserIdentifier;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hux
+public final class hux extends zi1
 {
-    public static final String[] a;
-    public static final String[] b;
-    public static final String[] c;
+    public final Boolean k1;
+    public final Boolean l1;
+    public final Boolean m1;
+    public final Boolean n1;
+    public final Boolean o1;
+    public final Boolean p1;
     
-    static {
-        a = new String[] { "Camera:MotionPhoto", "GCamera:MotionPhoto", "Camera:MicroVideo", "GCamera:MicroVideo" };
-        b = new String[] { "Camera:MotionPhotoPresentationTimestampUs", "GCamera:MotionPhotoPresentationTimestampUs", "Camera:MicroVideoPresentationTimestampUs", "GCamera:MicroVideoPresentationTimestampUs" };
-        c = new String[] { "Camera:MicroVideoOffset", "GCamera:MicroVideoOffset" };
+    public hux(final UserIdentifier userIdentifier, final Boolean k1, final Boolean l1, final Boolean m1, final Boolean n1, final Boolean o1, final Boolean p7) {
+        super(userIdentifier);
+        this.k1 = k1;
+        this.l1 = l1;
+        this.m1 = m1;
+        this.n1 = n1;
+        this.o1 = o1;
+        this.p1 = p7;
     }
     
-    public static brh a(final String s) throws XmlPullParserException, IOException {
-        final XmlPullParser pullParser = XmlPullParserFactory.newInstance().newPullParser();
-        pullParser.setInput((Reader)new StringReader(s));
-        pullParser.next();
-        if (!ca7.t(pullParser, "x:xmpmeta")) {
-            throw ParserException.a("Couldn't find xmp metadata", (Throwable)null);
+    public final tqc f0() {
+        final mcv mcv = new mcv();
+        ((tqc$a)mcv).e = arc$b.G0;
+        final int a = c5j.a;
+        ((tqc$a)mcv).n("/1.1/mutes/advanced_filters.json", "/");
+        final Boolean k1 = this.k1;
+        if (k1 != null) {
+            ((tqc$a)mcv).f("filter_not_following", (boolean)k1);
         }
-        final aed$b d0 = aed.D0;
-        Object g0 = lam.G0;
-        long n = -9223372036854775807L;
-        Object o = null;
-        long n3 = 0L;
-        do {
-            pullParser.next();
-            Label_0330: {
-                if (ca7.t(pullParser, "rdf:Description")) {
-                    final String[] a = hux.a;
-                    int i = 0;
-                    while (true) {
-                        while (i < 4) {
-                            final String j = ca7.i(pullParser, a[i]);
-                            if (j != null) {
-                                if (Integer.parseInt(j) != 1) {
-                                    break;
-                                }
-                                final boolean b = true;
-                                if (!b) {
-                                    return null;
-                                }
-                                final String[] b2 = hux.b;
-                                int k = 0;
-                                while (true) {
-                                    while (k < 4) {
-                                        final String l = ca7.i(pullParser, b2[k]);
-                                        if (l != null) {
-                                            final long long1;
-                                            if ((long1 = Long.parseLong(l)) == -1L) {
-                                                break;
-                                            }
-                                            final String[] c = hux.c;
-                                            while (true) {
-                                                for (int n2 = 0; n2 < 2; ++n2) {
-                                                    final String m = ca7.i(pullParser, c[n2]);
-                                                    if (m != null) {
-                                                        final long long2 = Long.parseLong(m);
-                                                        final brh$a brh$a = new brh$a("image/jpeg", 0L, 0L);
-                                                        final brh$a brh$a2 = new brh$a("video/mp4", long2, 0L);
-                                                        final aed$b d2 = aed.D0;
-                                                        o = aed.p(new Object[] { brh$a, brh$a2 });
-                                                        n3 = long1;
-                                                        break Label_0330;
-                                                    }
-                                                }
-                                                final aed$b d3 = aed.D0;
-                                                o = lam.G0;
-                                                continue;
-                                            }
-                                        }
-                                        else {
-                                            ++k;
-                                        }
-                                    }
-                                    long long1 = -9223372036854775807L;
-                                    continue;
-                                }
-                            }
-                            else {
-                                ++i;
-                            }
-                        }
-                        final boolean b = false;
-                        continue;
-                    }
-                }
-                if (ca7.t(pullParser, "Container:Directory")) {
-                    o = b(pullParser, "Container", "Item");
-                    n3 = n;
-                }
-                else {
-                    o = g0;
-                    n3 = n;
-                    if (ca7.t(pullParser, "GContainer:Directory")) {
-                        o = b(pullParser, "GContainer", "GContainerItem");
-                        n3 = n;
-                    }
-                }
-            }
-            g0 = o;
-            n = n3;
-        } while (!ca7.s(pullParser, "x:xmpmeta"));
-        if (((List)o).isEmpty()) {
-            return null;
+        final Boolean l1 = this.l1;
+        if (l1 != null) {
+            ((tqc$a)mcv).f("filter_not_followed_by", (boolean)l1);
         }
-        return new brh(n3, (List)o);
-    }
-    
-    public static aed<brh$a> b(final XmlPullParser xmlPullParser, final String s, final String s2) throws XmlPullParserException, IOException {
-        final aed$b d0 = aed.D0;
-        wvz.i(4, "initialCapacity");
-        final Object[] array = new Object[4];
-        final String concat = s.concat(":Item");
-        final String concat2 = s.concat(":Directory");
-        int n = 0;
-        Object[] array2 = array;
-        Object[] copy;
-        int n2;
-        do {
-            xmlPullParser.next();
-            copy = array2;
-            n2 = n;
-            if (ca7.t(xmlPullParser, concat)) {
-                final String concat3 = s2.concat(":Mime");
-                final String concat4 = s2.concat(":Semantic");
-                final String concat5 = s2.concat(":Length");
-                final String concat6 = s2.concat(":Padding");
-                final String i = ca7.i(xmlPullParser, concat3);
-                final String j = ca7.i(xmlPullParser, concat4);
-                final String k = ca7.i(xmlPullParser, concat5);
-                final String l = ca7.i(xmlPullParser, concat6);
-                if (i == null || j == null) {
-                    return lam.G0;
-                }
-                long long1;
-                if (k != null) {
-                    long1 = Long.parseLong(k);
-                }
-                else {
-                    long1 = 0L;
-                }
-                long long2;
-                if (l != null) {
-                    long2 = Long.parseLong(l);
-                }
-                else {
-                    long2 = 0L;
-                }
-                final brh$a brh$a = new brh$a(i, long1, long2);
-                n2 = n + 1;
-                copy = array2;
-                if (array2.length < n2) {
-                    copy = Arrays.copyOf(array2, tdd.b.b(array2.length, n2));
-                }
-                copy[n] = brh$a;
-            }
-            array2 = copy;
-            n = n2;
-        } while (!ca7.s(xmlPullParser, concat2));
-        return (aed<brh$a>)aed.o(copy, n2);
+        final Boolean m1 = this.m1;
+        if (m1 != null) {
+            ((tqc$a)mcv).f("filter_new_users", (boolean)m1);
+        }
+        final Boolean n1 = this.n1;
+        if (n1 != null) {
+            ((tqc$a)mcv).f("filter_default_profile_image", (boolean)n1);
+        }
+        final Boolean o1 = this.o1;
+        if (o1 != null) {
+            ((tqc$a)mcv).f("filter_no_confirmed_email", (boolean)o1);
+        }
+        final Boolean p1 = this.p1;
+        if (p1 != null) {
+            ((tqc$a)mcv).f("filter_no_confirmed_phone", (boolean)p1);
+        }
+        return ((tqc$a)mcv).k();
     }
 }

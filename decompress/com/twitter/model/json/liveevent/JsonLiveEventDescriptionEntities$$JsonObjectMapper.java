@@ -12,61 +12,61 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLiveEventDescriptionEntities$$JsonObjectMapper extends JsonMapper<JsonLiveEventDescriptionEntities>
 {
-    public static JsonLiveEventDescriptionEntities _parse(final khe khe) throws IOException {
+    public static JsonLiveEventDescriptionEntities _parse(final tge tge) throws IOException {
         final JsonLiveEventDescriptionEntities jsonLiveEventDescriptionEntities = new JsonLiveEventDescriptionEntities();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveEventDescriptionEntities, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonLiveEventDescriptionEntities, d, tge);
+            tge.l0();
         }
         return jsonLiveEventDescriptionEntities;
     }
     
-    public static void _serialize(final JsonLiveEventDescriptionEntities jsonLiveEventDescriptionEntities, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveEventDescriptionEntities jsonLiveEventDescriptionEntities, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("display_url", jsonLiveEventDescriptionEntities.a);
-        tfe.u0("expanded_url", jsonLiveEventDescriptionEntities.b);
-        final List c = jsonLiveEventDescriptionEntities.c;
+        afe.t0("display_url", jsonLiveEventDescriptionEntities.a);
+        afe.t0("expanded_url", jsonLiveEventDescriptionEntities.b);
+        final List<Integer> c = jsonLiveEventDescriptionEntities.c;
         if (c != null) {
-            final Iterator f = x30.F(tfe, "indices", c);
-            while (f.hasNext()) {
-                tfe.p((int)f.next());
+            final Iterator g = hee.g(afe, "indices", (List)c);
+            while (g.hasNext()) {
+                afe.p((int)g.next());
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("url", jsonLiveEventDescriptionEntities.d);
+        afe.t0("url", jsonLiveEventDescriptionEntities.d);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveEventDescriptionEntities jsonLiveEventDescriptionEntities, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveEventDescriptionEntities jsonLiveEventDescriptionEntities, final String s, final tge tge) throws IOException {
         if ("display_url".equals(s)) {
-            jsonLiveEventDescriptionEntities.a = khe.T((String)null);
+            jsonLiveEventDescriptionEntities.a = tge.T((String)null);
         }
         else if ("expanded_url".equals(s)) {
-            jsonLiveEventDescriptionEntities.b = khe.T((String)null);
+            jsonLiveEventDescriptionEntities.b = tge.T((String)null);
         }
         else if ("indices".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList c = new ArrayList();
-                while (khe.i0() != lje.N0) {
+                while (tge.h0() != vie.O0) {
                     Integer value;
-                    if (khe.e() == lje.U0) {
+                    if (tge.e() == vie.V0) {
                         value = null;
                     }
                     else {
-                        value = khe.z();
+                        value = tge.y();
                     }
                     if (value != null) {
                         c.add(value);
@@ -79,15 +79,23 @@ public final class JsonLiveEventDescriptionEntities$$JsonObjectMapper extends Js
             }
         }
         else if ("url".equals(s)) {
-            jsonLiveEventDescriptionEntities.d = khe.T((String)null);
+            jsonLiveEventDescriptionEntities.d = tge.T((String)null);
         }
     }
     
-    public JsonLiveEventDescriptionEntities parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveEventDescriptionEntities parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveEventDescriptionEntities jsonLiveEventDescriptionEntities, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveEventDescriptionEntities, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveEventDescriptionEntities jsonLiveEventDescriptionEntities, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonLiveEventDescriptionEntities, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveEventDescriptionEntities)o, afe, b);
     }
 }

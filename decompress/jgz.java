@@ -1,119 +1,139 @@
+import java.io.InputStream;
+import java.util.List;
+import java.net.URLConnection;
 import java.io.IOException;
-import java.nio.charset.Charset;
+import java.io.ByteArrayOutputStream;
 import java.util.Objects;
+import java.net.HttpURLConnection;
+import java.util.Map;
+import java.net.URL;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class jgz extends ggz
+public final class jgz implements Runnable
 {
-    public final byte[] E0;
+    public final URL D0;
+    public final lgz E0;
+    public final pbz F0;
     
-    public jgz(final byte[] e0) {
-        Objects.requireNonNull(e0);
+    public jgz(final lgz e0, final String s, final URL d0, final pbz f0) {
         this.E0 = e0;
+        eli.n(s);
+        this.D0 = d0;
+        this.F0 = f0;
     }
     
-    public byte e(final int n) {
-        return this.E0[n];
+    public final void a(final int n, final Exception ex, final byte[] array, final Map map) {
+        ((pbz)this.E0).D0.a().q((Runnable)new ggz(this, n, ex, array, map));
     }
     
-    public final boolean equals(final Object o) {
-        final boolean b = true;
-        if (o == this) {
-            return true;
-        }
-        if (!(o instanceof bhz)) {
-            return false;
-        }
-        if (this.i() != ((bhz)o).i()) {
-            return false;
-        }
-        if (this.i() == 0) {
-            return true;
-        }
-        if (!(o instanceof jgz)) {
-            return o.equals(this);
-        }
-        final jgz jgz = (jgz)o;
-        final int c0 = ((bhz)this).C0;
-        final int c2 = ((bhz)jgz).C0;
-        if (c0 != 0 && c2 != 0 && c0 != c2) {
-            return false;
-        }
-        final int i = this.i();
-        if (i > jgz.i()) {
-            final int j = this.i();
-            final StringBuilder sb = new StringBuilder();
-            sb.append("Length too large: ");
-            sb.append(i);
-            sb.append(j);
-            throw new IllegalArgumentException(sb.toString());
-        }
-        if (i <= jgz.i()) {
-            final byte[] e0 = this.E0;
-            final byte[] e2 = jgz.E0;
-            jgz.r();
-            int n = 0;
-            int n2 = 0;
-            boolean b2;
-            while (true) {
-                b2 = b;
-                if (n >= i) {
-                    break;
+    @Override
+    public final void run() {
+        ((pbz)this.E0).f();
+        HttpURLConnection httpURLConnection3 = null;
+        Label_0267: {
+            try {
+                final lgz e0 = this.E0;
+                final URLConnection openConnection = this.D0.openConnection();
+                if (openConnection instanceof HttpURLConnection) {
+                    final HttpURLConnection httpURLConnection = (HttpURLConnection)openConnection;
+                    httpURLConnection.setDefaultUseCaches(false);
+                    Objects.requireNonNull(((pbz)e0).D0);
+                    httpURLConnection.setConnectTimeout(60000);
+                    Objects.requireNonNull(((pbz)e0).D0);
+                    httpURLConnection.setReadTimeout(61000);
+                    httpURLConnection.setInstanceFollowRedirects(false);
+                    httpURLConnection.setDoInput(true);
+                    try {
+                        final int responseCode = httpURLConnection.getResponseCode();
+                        try {
+                            final Map<String, List<String>> headerFields = httpURLConnection.getHeaderFields();
+                            InputStream inputStream;
+                            byte[] byteArray;
+                            try {
+                                final ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                                inputStream = httpURLConnection.getInputStream();
+                                try {
+                                    final byte[] array = new byte[1024];
+                                    while (true) {
+                                        final int read = inputStream.read(array);
+                                        if (read <= 0) {
+                                            break;
+                                        }
+                                        byteArrayOutputStream.write(array, 0, read);
+                                    }
+                                    byteArray = byteArrayOutputStream.toByteArray();
+                                    final InputStream inputStream2 = inputStream;
+                                    inputStream2.close();
+                                    final HttpURLConnection httpURLConnection2 = httpURLConnection;
+                                    httpURLConnection2.disconnect();
+                                    final jgz jgz = this;
+                                    final int n = responseCode;
+                                    final Exception ex = null;
+                                    final byte[] array2 = byteArray;
+                                    final Map<String, List<String>> map = headerFields;
+                                    jgz.a(n, ex, array2, map);
+                                    return;
+                                }
+                                finally {
+                                    final Object o2;
+                                    final Object o = o2;
+                                }
+                            }
+                            finally {
+                                final Object o3;
+                                final Object o = o3;
+                                inputStream = null;
+                            }
+                            try {
+                                final InputStream inputStream2 = inputStream;
+                                inputStream2.close();
+                                final HttpURLConnection httpURLConnection2 = httpURLConnection;
+                                httpURLConnection2.disconnect();
+                                final jgz jgz = this;
+                                final int n = responseCode;
+                                final Exception ex = null;
+                                final byte[] array2 = byteArray;
+                                final Map<String, List<String>> map = headerFields;
+                                jgz.a(n, ex, array2, map);
+                                return;
+                                iftrue(Label_0183:)(inputStream == null);
+                                Block_20: {
+                                    break Block_20;
+                                    Label_0183: {
+                                        throw;
+                                    }
+                                }
+                                inputStream.close();
+                            }
+                            catch (final IOException ex2) {}
+                        }
+                        catch (final IOException ex3) {}
+                    }
+                    catch (final IOException ex4) {
+                        break Label_0267;
+                    }
+                    finally {
+                        goto Label_0238;
+                    }
                 }
-                if (e0[n] != e2[n2]) {
-                    b2 = false;
-                    break;
-                }
-                ++n;
-                ++n2;
+                throw new IOException("Failed to obtain HTTP connection");
             }
-            return b2;
+            catch (final IOException ex5) {
+                httpURLConnection3 = null;
+            }
+            finally {
+                httpURLConnection3 = null;
+            }
         }
-        throw new IllegalArgumentException(hi.H("Ran off end of other: 0, ", i, ", ", jgz.i()));
-    }
-    
-    public byte g(final int n) {
-        return this.E0[n];
-    }
-    
-    public int i() {
-        return this.E0.length;
-    }
-    
-    public final int j(int i, final int n) {
-        final byte[] e0 = this.E0;
-        final Charset a = glz.a;
-        final int n2 = 0;
-        int n3 = i;
-        for (i = n2; i < n; ++i) {
-            n3 = n3 * 31 + e0[i];
+        final Map<String, List<String>> headerFields = null;
+        final int responseCode = 0;
+        if (httpURLConnection3 != null) {
+            httpURLConnection3.disconnect();
         }
-        return n3;
-    }
-    
-    public final bhz l() {
-        final int p = bhz.p(0, 47, this.i());
-        if (p == 0) {
-            return (bhz)bhz.D0;
-        }
-        return (bhz)new dgz(this.E0, p);
-    }
-    
-    public final String m(final Charset charset) {
-        return new String(this.E0, 0, this.i(), charset);
-    }
-    
-    public final void n(final fk7 fk7) throws IOException {
-        ((phz)fk7).g1(this.E0, this.i());
-    }
-    
-    public final boolean o() {
-        return prz.d(this.E0, 0, this.i());
-    }
-    
-    public void r() {
+        final IOException ex5;
+        this.a(responseCode, ex5, null, headerFields);
     }
 }

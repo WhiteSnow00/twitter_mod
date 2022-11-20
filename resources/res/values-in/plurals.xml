@@ -516,6 +516,18 @@
         <item quantity="one">%s Pelanggan</item>
         <item quantity="other">%s Pelanggan</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">hari</item>
+        <item quantity="other">%d hari</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">bulan</item>
+        <item quantity="other">%d bulan</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">tahun</item>
+        <item quantity="other">%d tahun</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d hari</item>
         <item quantity="other">%d hari</item>

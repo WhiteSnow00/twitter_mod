@@ -11,61 +11,69 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonActionListItem$JsonActionListTextData$$JsonObjectMapper extends JsonMapper<JsonActionListItem.JsonActionListTextData>
 {
-    public static JsonActionListItem.JsonActionListTextData _parse(final khe khe) throws IOException {
+    public static JsonActionListItem.JsonActionListTextData _parse(final tge tge) throws IOException {
         final JsonActionListItem.JsonActionListTextData jsonActionListTextData = new JsonActionListItem.JsonActionListTextData();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonActionListTextData, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonActionListTextData, d, tge);
+            tge.l0();
         }
         return jsonActionListTextData;
     }
     
-    public static void _serialize(final JsonActionListItem.JsonActionListTextData jsonActionListTextData, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonActionListItem.JsonActionListTextData jsonActionListTextData, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonActionListTextData.b != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonActionListTextData.b, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonActionListTextData.b, afe, true);
         }
         if (jsonActionListTextData.c != null) {
-            LoganSquare.typeConverterFor((Class)hdj.class).serialize((Object)jsonActionListTextData.c, "icon", true, tfe);
+            LoganSquare.typeConverterFor((Class)mdj.class).serialize((Object)jsonActionListTextData.c, "icon", true, afe);
         }
         if (jsonActionListTextData.a != null) {
-            tfe.i("text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonActionListTextData.a, tfe, true);
+            afe.i("text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonActionListTextData.a, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonActionListItem.JsonActionListTextData jsonActionListTextData, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonActionListItem.JsonActionListTextData jsonActionListTextData, final String s, final tge tge) throws IOException {
         if ("detail_text".equals(s)) {
-            jsonActionListTextData.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonActionListTextData.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("icon".equals(s)) {
-            jsonActionListTextData.c = (hdj)LoganSquare.typeConverterFor((Class)hdj.class).parse(khe);
+            jsonActionListTextData.c = (mdj)LoganSquare.typeConverterFor((Class)mdj.class).parse(tge);
         }
         else if ("text".equals(s)) {
-            jsonActionListTextData.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonActionListTextData.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonActionListItem.JsonActionListTextData parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonActionListItem.JsonActionListTextData parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonActionListItem.JsonActionListTextData jsonActionListTextData, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonActionListTextData, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonActionListItem.JsonActionListTextData jsonActionListTextData, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonActionListTextData, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonActionListItem.JsonActionListTextData)o, afe, b);
     }
 }

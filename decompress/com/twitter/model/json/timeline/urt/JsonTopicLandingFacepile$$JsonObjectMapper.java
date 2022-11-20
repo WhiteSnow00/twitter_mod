@@ -13,64 +13,64 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTopicLandingFacepile$$JsonObjectMapper extends JsonMapper<JsonTopicLandingFacepile>
 {
-    public static JsonTopicLandingFacepile _parse(final khe khe) throws IOException {
+    public static JsonTopicLandingFacepile _parse(final tge tge) throws IOException {
         final JsonTopicLandingFacepile jsonTopicLandingFacepile = new JsonTopicLandingFacepile();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTopicLandingFacepile, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTopicLandingFacepile, d, tge);
+            tge.l0();
         }
         return jsonTopicLandingFacepile;
     }
     
-    public static void _serialize(final JsonTopicLandingFacepile jsonTopicLandingFacepile, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTopicLandingFacepile jsonTopicLandingFacepile, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTopicLandingFacepile.a != null) {
-            LoganSquare.typeConverterFor((Class)q7t.class).serialize((Object)jsonTopicLandingFacepile.a, "facepileUrl", true, tfe);
+            LoganSquare.typeConverterFor((Class)i8t.class).serialize((Object)jsonTopicLandingFacepile.a, "facepileUrl", true, afe);
         }
-        final List<String> b2 = jsonTopicLandingFacepile.b;
+        final List b2 = jsonTopicLandingFacepile.b;
         if (b2 != null) {
-            final Iterator f = x30.F(tfe, "userIds", (List)b2);
-            while (f.hasNext()) {
-                tfe.s0((String)f.next());
+            final Iterator g = hee.g(afe, "userIds", b2);
+            while (g.hasNext()) {
+                afe.r0((String)g.next());
             }
-            tfe.f();
+            afe.f();
         }
         final ArrayList c = jsonTopicLandingFacepile.c;
         if (c != null) {
-            final Iterator g = q1a.g(tfe, "users", c);
-            while (g.hasNext()) {
-                final hfv hfv = g.next();
-                if (hfv != null) {
-                    LoganSquare.typeConverterFor((Class)hfv.class).serialize((Object)hfv, "lslocalusersElement", false, tfe);
+            final Iterator a = br.A(afe, "users", c);
+            while (a.hasNext()) {
+                final cgv cgv = a.next();
+                if (cgv != null) {
+                    LoganSquare.typeConverterFor((Class)cgv.class).serialize((Object)cgv, "lslocalusersElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTopicLandingFacepile jsonTopicLandingFacepile, String t, final khe khe) throws IOException {
+    public static void parseField(final JsonTopicLandingFacepile jsonTopicLandingFacepile, String t, final tge tge) throws IOException {
         if ("facepileUrl".equals(t)) {
-            jsonTopicLandingFacepile.a = (q7t)LoganSquare.typeConverterFor((Class)q7t.class).parse(khe);
+            jsonTopicLandingFacepile.a = (i8t)LoganSquare.typeConverterFor((Class)i8t.class).parse(tge);
         }
         else if ("userIds".equals(t)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList b = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    t = khe.T((String)null);
+                while (tge.h0() != vie.O0) {
+                    t = tge.T((String)null);
                     if (t != null) {
                         b.add(t);
                     }
@@ -82,12 +82,12 @@ public final class JsonTopicLandingFacepile$$JsonObjectMapper extends JsonMapper
             }
         }
         else if ("users".equals(t)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList c = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final hfv hfv = (hfv)LoganSquare.typeConverterFor((Class)hfv.class).parse(khe);
-                    if (hfv != null) {
-                        c.add(hfv);
+                while (tge.h0() != vie.O0) {
+                    final cgv cgv = (cgv)LoganSquare.typeConverterFor((Class)cgv.class).parse(tge);
+                    if (cgv != null) {
+                        c.add(cgv);
                     }
                 }
                 jsonTopicLandingFacepile.c = c;
@@ -98,11 +98,19 @@ public final class JsonTopicLandingFacepile$$JsonObjectMapper extends JsonMapper
         }
     }
     
-    public JsonTopicLandingFacepile parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTopicLandingFacepile parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTopicLandingFacepile jsonTopicLandingFacepile, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTopicLandingFacepile, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTopicLandingFacepile jsonTopicLandingFacepile, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTopicLandingFacepile, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTopicLandingFacepile)o, afe, b);
     }
 }

@@ -11,36 +11,35 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonActionList extends lhh<qk>
+public class JsonActionList extends qhh<nk>
 {
     @JsonField
-    public xrv a;
+    public ssv a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
-    public iej c;
+    public oej c;
     @JsonField
-    public List<hk> d;
-    @JsonField(typeConverter = ok.class)
-    public qk.c e;
+    public List<ek> d;
+    @JsonField(typeConverter = lk.class)
+    public nk$c e;
     
     public JsonActionList() {
-        this.e = qk.c.C0;
+        this.e = nk$c.D0;
     }
     
-    @Override
-    public final h4j t() {
-        final qk$a qk$a = new qk$a();
-        ((lsr$a)qk$a).h = this.c;
-        final int a = w4j.a;
-        ((lsr$a)qk$a).a = this.a;
-        ((lsr$a)qk$a).b = this.b;
+    public final n4j t() {
+        final nk$a nk$a = new nk$a();
+        ((dtr$a)nk$a).h = this.c;
+        final int a = c5j.a;
+        ((dtr$a)nk$a).a = this.a;
+        ((dtr$a)nk$a).b = this.b;
         final ArrayList d = this.d;
-        zzd.f((Object)d, "actionListItems");
-        qk$a.k = d;
-        final qk.c e = this.e;
-        zzd.f((Object)e, "style");
-        qk$a.l = e;
-        return (h4j)qk$a;
+        czd.f((Object)d, "actionListItems");
+        nk$a.k = d;
+        final nk$c e = this.e;
+        czd.f((Object)e, "style");
+        nk$a.l = e;
+        return (n4j)nk$a;
     }
 }

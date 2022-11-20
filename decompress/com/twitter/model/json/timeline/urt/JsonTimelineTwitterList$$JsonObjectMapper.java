@@ -11,63 +11,71 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineTwitterList$$JsonObjectMapper extends JsonMapper<JsonTimelineTwitterList>
 {
-    public static final ecv TWITTER_LIST_DISPLAY_TYPE_CONVERTER;
+    public static final ycv TWITTER_LIST_DISPLAY_TYPE_CONVERTER;
     
     static {
-        TWITTER_LIST_DISPLAY_TYPE_CONVERTER = new ecv();
+        TWITTER_LIST_DISPLAY_TYPE_CONVERTER = new ycv();
     }
     
-    public static JsonTimelineTwitterList _parse(final khe khe) throws IOException {
+    public static JsonTimelineTwitterList _parse(final tge tge) throws IOException {
         final JsonTimelineTwitterList list = new JsonTimelineTwitterList();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(list, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(list, d, tge);
+            tge.l0();
         }
         return list;
     }
     
-    public static void _serialize(final JsonTimelineTwitterList list, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineTwitterList list, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        ((StringBasedTypeConverter)JsonTimelineTwitterList$$JsonObjectMapper.TWITTER_LIST_DISPLAY_TYPE_CONVERTER).serialize((Object)list.c, "displayType", true, tfe);
+        ((StringBasedTypeConverter)JsonTimelineTwitterList$$JsonObjectMapper.TWITTER_LIST_DISPLAY_TYPE_CONVERTER).serialize((Object)list.c, "displayType", true, afe);
         if (list.b != null) {
-            LoganSquare.typeConverterFor((Class)k8c.class).serialize((Object)list.b, "list", true, tfe);
+            LoganSquare.typeConverterFor((Class)l7c.class).serialize((Object)list.b, "list", true, afe);
         }
-        tfe.u0("id", list.a);
+        afe.t0("id", list.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineTwitterList list, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineTwitterList list, final String s, final tge tge) throws IOException {
         if (!"displayType".equals(s) && !"listDisplayType".equals(s)) {
             if ("list".equals(s)) {
-                list.b = (k8c)LoganSquare.typeConverterFor((Class)k8c.class).parse(khe);
+                list.b = (l7c)LoganSquare.typeConverterFor((Class)l7c.class).parse(tge);
             }
             else if ("id".equals(s)) {
-                list.a = khe.T((String)null);
+                list.a = tge.T((String)null);
             }
         }
         else {
-            list.c = (int)((StringBasedTypeConverter)JsonTimelineTwitterList$$JsonObjectMapper.TWITTER_LIST_DISPLAY_TYPE_CONVERTER).parse(khe);
+            list.c = (int)((StringBasedTypeConverter)JsonTimelineTwitterList$$JsonObjectMapper.TWITTER_LIST_DISPLAY_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonTimelineTwitterList parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineTwitterList parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineTwitterList list, final tfe tfe, final boolean b) throws IOException {
-        _serialize(list, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineTwitterList list, final afe afe, final boolean b) throws IOException {
+        _serialize(list, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineTwitterList)o, afe, b);
     }
 }

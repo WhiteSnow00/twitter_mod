@@ -333,8 +333,8 @@
         <item quantity="other">%d others</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super Follower</item>
-        <item quantity="other">Super Followers</item>
+        <item quantity="one">Subscriber</item>
+        <item quantity="other">Subscribers</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s Like</item>
@@ -438,7 +438,7 @@
         <item quantity="other">Replying to ﻿%1$s and %2$d others﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Replying to ﻿%1$s and %2$d others﻿. Your reply will also be visible to other Super Followers.</item>
+        <item quantity="other">Replying to ﻿%1$s and %2$d others﻿. Your reply will also be visible to other Subscribers.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Replying to ﻿%1$s and %2$d others﻿ in ﻿%3$s﻿</item>
@@ -447,7 +447,7 @@
         <item quantity="other">Replying to ﻿%1$s %2$s and %3$d others﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Replying to ﻿%1$s %2$s and %3$d others﻿. Your reply will also be visible to other Super Followers.</item>
+        <item quantity="other">Replying to ﻿%1$s %2$s and %3$d others﻿. Your reply will also be visible to other Subscribers.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Replying to ﻿%1$s %2$s and %3$d others﻿ in ﻿%4$s﻿</item>

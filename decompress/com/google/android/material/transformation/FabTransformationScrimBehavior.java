@@ -5,7 +5,6 @@
 package com.google.android.material.transformation;
 
 import android.animation.Animator$AnimatorListener;
-import android.animation.AnimatorListenerAdapter;
 import java.util.List;
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
@@ -21,18 +20,18 @@ import android.content.Context;
 @Deprecated
 public class FabTransformationScrimBehavior extends ExpandableTransformationBehavior
 {
-    public final frh c;
-    public final frh d;
+    public final krh c;
+    public final krh d;
     
     public FabTransformationScrimBehavior() {
-        this.c = new frh(75L);
-        this.d = new frh(0L);
+        this.c = new krh(75L);
+        this.d = new krh(0L);
     }
     
     public FabTransformationScrimBehavior(final Context context, final AttributeSet set) {
         super(context, set);
-        this.c = new frh(75L);
-        this.d = new frh(0L);
+        this.c = new krh(75L);
+        this.d = new krh(0L);
     }
     
     public final boolean c(final CoordinatorLayout coordinatorLayout, final View view, final View view2) {
@@ -46,12 +45,12 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
     public final AnimatorSet u(final View view, final View view2, final boolean b, final boolean b2) {
         final ArrayList list = new ArrayList();
         new ArrayList();
-        frh frh;
+        krh krh;
         if (b) {
-            frh = this.c;
+            krh = this.c;
         }
         else {
-            frh = this.d;
+            krh = this.d;
         }
         ObjectAnimator objectAnimator;
         if (b) {
@@ -63,23 +62,11 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
         else {
             objectAnimator = ObjectAnimator.ofFloat((Object)view2, View.ALPHA, new float[] { 0.0f });
         }
-        frh.a((Animator)objectAnimator);
+        krh.a((Animator)objectAnimator);
         list.add(objectAnimator);
         final AnimatorSet set = new AnimatorSet();
-        m8y.w(set, list);
-        ((Animator)set).addListener((Animator$AnimatorListener)new AnimatorListenerAdapter() {
-            public final void onAnimationEnd(final Animator animator) {
-                if (!b) {
-                    view2.setVisibility(4);
-                }
-            }
-            
-            public final void onAnimationStart(final Animator animator) {
-                if (b) {
-                    view2.setVisibility(0);
-                }
-            }
-        });
+        af8.G(set, (List)list);
+        ((Animator)set).addListener((Animator$AnimatorListener)new FabTransformationScrimBehavior$a(b, view2));
         return set;
     }
 }

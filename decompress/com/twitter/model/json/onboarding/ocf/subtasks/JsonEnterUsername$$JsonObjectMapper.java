@@ -15,78 +15,78 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonEnterUsername$$JsonObjectMapper extends JsonMapper<JsonEnterUsername>
 {
-    public static JsonEnterUsername _parse(final khe khe) throws IOException {
+    public static JsonEnterUsername _parse(final tge tge) throws IOException {
         final JsonEnterUsername jsonEnterUsername = new JsonEnterUsername();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonEnterUsername, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonEnterUsername, d, tge);
+            tge.l0();
         }
         return jsonEnterUsername;
     }
     
-    public static void _serialize(final JsonEnterUsername jsonEnterUsername, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonEnterUsername jsonEnterUsername, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonEnterUsername.f != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEnterUsername.f, "cancel_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEnterUsername.f, "cancel_link", true, afe);
         }
         if (jsonEnterUsername.h != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEnterUsername.h, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEnterUsername.h, afe, true);
         }
         final ArrayList d = jsonEnterUsername.d;
         if (d != null) {
-            final Iterator g = q1a.g(tfe, "detail_texts", d);
-            while (g.hasNext()) {
-                final JsonOcfRichText jsonOcfRichText = g.next();
+            final Iterator a = br.A(afe, "detail_texts", d);
+            while (a.hasNext()) {
+                final JsonOcfRichText jsonOcfRichText = a.next();
                 if (jsonOcfRichText != null) {
-                    JsonOcfRichText$$JsonObjectMapper._serialize(jsonOcfRichText, tfe, true);
+                    JsonOcfRichText$$JsonObjectMapper._serialize(jsonOcfRichText, afe, true);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("hint", jsonEnterUsername.c);
+        afe.t0("hint", jsonEnterUsername.c);
         if (jsonEnterUsername.e != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEnterUsername.e, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEnterUsername.e, "next_link", true, afe);
         }
         if (jsonEnterUsername.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterUsername.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterUsername.a, afe, true);
         }
         if (jsonEnterUsername.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterUsername.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterUsername.b, afe, true);
         }
         if (jsonEnterUsername.g != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEnterUsername.g, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEnterUsername.g, "skip_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonEnterUsername jsonEnterUsername, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonEnterUsername jsonEnterUsername, final String s, final tge tge) throws IOException {
         if ("cancel_link".equals(s)) {
-            jsonEnterUsername.f = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEnterUsername.f = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("component_collection".equals(s)) {
-            jsonEnterUsername.h = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonEnterUsername.h = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_texts".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList d = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final JsonOcfRichText parse = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final JsonOcfRichText parse = JsonOcfRichText$$JsonObjectMapper._parse(tge);
                     if (parse != null) {
                         d.add(parse);
                     }
@@ -98,27 +98,35 @@ public final class JsonEnterUsername$$JsonObjectMapper extends JsonMapper<JsonEn
             }
         }
         else if ("hint".equals(s)) {
-            jsonEnterUsername.c = khe.T((String)null);
+            jsonEnterUsername.c = tge.T((String)null);
         }
         else if ("next_link".equals(s)) {
-            jsonEnterUsername.e = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEnterUsername.e = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonEnterUsername.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterUsername.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("secondary_text".equals(s)) {
-            jsonEnterUsername.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterUsername.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            jsonEnterUsername.g = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEnterUsername.g = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonEnterUsername parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonEnterUsername parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonEnterUsername jsonEnterUsername, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonEnterUsername, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonEnterUsername jsonEnterUsername, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonEnterUsername, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonEnterUsername)o, afe, b);
     }
 }

@@ -1,312 +1,214 @@
-import java.util.LinkedHashMap;
 import java.util.ArrayList;
-import java.util.Map;
-import java.util.List;
-import com.twitter.model.json.common.InvalidJsonFormatException;
+import java.util.Collection;
+import android.text.TextUtils;
+import androidx.work.WorkerParameters$a;
 import java.util.Objects;
+import android.os.Build$VERSION;
+import android.os.Handler;
+import java.util.Iterator;
+import java.util.List;
+import java.util.HashSet;
+import androidx.work.a;
+import java.util.Set;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class s7c extends twj<q7c>
+public final class s7c implements hwo, arx, yea
 {
-    public static final q7c$c a(final s7c s7c, final khe khe) {
-        Objects.requireNonNull(s7c);
-        final lje e = khe.e();
-        int n;
-        if (e == null) {
-            n = -1;
-        }
-        else {
-            n = s7c$a.a[((Enum)e).ordinal()];
-        }
-        Object o = null;
-        switch (n) {
-            default: {
-                final lje e2 = khe.e();
-                final StringBuilder sb = new StringBuilder();
-                sb.append("Invalid json token encountered: Expected Scalar or Container found ");
-                sb.append(e2);
-                throw new InvalidJsonFormatException(sb.toString());
-            }
-            case 11: {
-                o = new q7c$c$a(true);
-                break;
-            }
-            case 10: {
-                o = new q7c$c$a(false);
-                break;
-            }
-            case 9: {
-                o = new q7c$c$e(khe.f());
-                break;
-            }
-            case 8: {
-                o = new q7c$c$e(khe.f());
-                break;
-            }
-            case 7: {
-                final String j = khe.j();
-                zzd.e((Object)j, "jsonParser.text");
-                o = new q7c$c$f(j);
-                break;
-            }
-            case 6: {
-                o = new q7c$c$b((List)s7c.d(khe, (rtb<? super khe, ?>)new x7c(s7c)));
-                break;
-            }
-            case 4: {
-                o = new q7c$c$d();
-                break;
-            }
-            case 3: {
-                o = new q7c$c$c((Map)s7c.e(khe, (rtb<? super khe, ?>)new w7c(s7c)));
-                break;
-            }
-        }
-        return (q7c$c)o;
+    public static final String M0;
+    public final Context D0;
+    public final zrx E0;
+    public final brx F0;
+    public final Set<rsx> G0;
+    public xl8 H0;
+    public boolean I0;
+    public final Object J0;
+    public final a8r K0;
+    public Boolean L0;
+    
+    static {
+        M0 = o9g.g("GreedyScheduler");
     }
     
-    public final q7c b(final khe khe) {
-        zzd.f((Object)khe, "jsonParser");
-        final lje a = khe.a();
-        int n;
-        if (a == null) {
-            n = -1;
+    public s7c(final Context d0, final a a, final rwt rwt, final zrx e0) {
+        this.G0 = new HashSet();
+        this.K0 = new a8r(0);
+        this.D0 = d0;
+        this.E0 = e0;
+        this.F0 = new brx(rwt, (arx)this);
+        this.H0 = new xl8(this, a.e);
+        this.J0 = new Object();
+    }
+    
+    public final void a(final List<rsx> list) {
+        final Iterator<rsx> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            final prx p = rp9.P(iterator.next());
+            final o9g e = o9g.e();
+            final String m0 = s7c.M0;
+            final StringBuilder sb = new StringBuilder();
+            sb.append("Constraints not met: Cancelling work ID ");
+            sb.append(p);
+            e.a(m0, sb.toString());
+            final z7r d = this.K0.d(p);
+            if (d != null) {
+                this.E0.m(d);
+            }
         }
-        else {
-            n = s7c.s7c$a.a[((Enum)a).ordinal()];
+    }
+    
+    public final void b(final prx prx, final boolean b) {
+        this.K0.d(prx);
+        synchronized (this.J0) {
+            for (final rsx rsx : this.G0) {
+                if (rp9.P(rsx).equals((Object)prx)) {
+                    final o9g e = o9g.e();
+                    final String m0 = s7c.M0;
+                    final StringBuilder sb = new StringBuilder();
+                    sb.append("Stopping tracking for ");
+                    sb.append(prx);
+                    e.a(m0, sb.toString());
+                    this.G0.remove(rsx);
+                    this.F0.d(this.G0);
+                    break;
+                }
+            }
         }
-        String j = null;
-        if (n == 3) {
-            Object o = null;
-            Object o2;
-            List list = (List)(o2 = o);
-            while (khe.i0() != null) {
-                final lje a2 = khe.a();
-                int n2;
-                if (a2 == null) {
-                    n2 = -1;
-                }
-                else {
-                    n2 = s7c.s7c$a.a[((Enum)a2).ordinal()];
-                }
-                if (n2 != 1) {
-                    if (n2 != 2) {
-                        final lje e = khe.e();
-                        final StringBuilder sb = new StringBuilder();
-                        sb.append("Invalid json token encountered: ");
-                        sb.append(e);
-                        throw new InvalidJsonFormatException(sb.toString());
-                    }
-                    if (j != null) {
-                        return new q7c(j, (List)o, list, (Map)o2);
-                    }
-                    throw new InvalidJsonFormatException("Invalid json token encountered: expected FIELD with name \"message\" and found none.");
-                }
-                else {
-                    final String d = khe.d();
-                    if (d != null) {
-                        switch (d) {
-                            case "message": {
-                                khe.i0();
-                                final lje a3 = khe.a();
-                                int n3;
-                                if (a3 == null) {
-                                    n3 = -1;
-                                }
-                                else {
-                                    n3 = s7c.s7c$a.a[((Enum)a3).ordinal()];
-                                }
-                                if (n3 == 7) {
-                                    j = khe.j();
-                                    zzd.e((Object)j, "jsonParser.text");
-                                    continue;
-                                }
-                                final lje e2 = khe.e();
-                                final StringBuilder sb2 = new StringBuilder();
-                                sb2.append("Invalid json token encountered: Expected STRING found ");
-                                sb2.append(e2);
-                                throw new InvalidJsonFormatException(sb2.toString());
-                            }
-                            case "path": {
-                                khe.i0();
-                                list = this.f(khe, (rtb<? super khe, ? extends List>)new rtb<khe, List<? extends q7c$b>>() {
-                                    public final /* synthetic */ s7c C0;
-                                    
-                                    public final Object invoke(final Object o) {
-                                        final khe khe = (khe)o;
-                                        zzd.f((Object)khe, "parser");
-                                        final s7c c0 = this.C0;
-                                        return c0.d(khe, (rtb<? super khe, ?>)new u7c(c0));
-                                    }
-                                });
-                                continue;
-                            }
-                            case "locations": {
-                                khe.i0();
-                                o = this.f(khe, (rtb<? super khe, ? extends List>)new rtb<khe, List<? extends q7c$a>>() {
-                                    public final /* synthetic */ s7c C0;
-                                    
-                                    public final Object invoke(final Object o) {
-                                        final khe khe = (khe)o;
-                                        zzd.f((Object)khe, "parser");
-                                        final s7c c0 = this.C0;
-                                        return c0.d(khe, (rtb<? super khe, ?>)new t7c(c0));
-                                    }
-                                });
-                                continue;
-                            }
-                            case "extensions": {
-                                khe.i0();
-                                o2 = this.f(khe, (rtb<? super khe, ? extends Map>)new rtb<khe, Map<String, ? extends q7c$c>>() {
-                                    public final /* synthetic */ s7c C0;
-                                    
-                                    public final Object invoke(final Object o) {
-                                        final khe khe = (khe)o;
-                                        zzd.f((Object)khe, "parser");
-                                        final s7c c0 = this.C0;
-                                        return c0.e(khe, (rtb<? super khe, ?>)new v7c(c0));
-                                    }
-                                });
-                                continue;
-                            }
-                            default:
-                                break;
+    }
+    
+    public final void c(final String s) {
+        if (this.L0 == null) {
+            this.L0 = r0l.a(this.D0, this.E0.b);
+        }
+        if (!this.L0) {
+            o9g.e().f(s7c.M0, "Ignoring schedule request in non-main process");
+            return;
+        }
+        if (!this.I0) {
+            this.E0.f.a((yea)this);
+            this.I0 = true;
+        }
+        final o9g e = o9g.e();
+        final String m0 = s7c.M0;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("Cancelling work ID ");
+        sb.append(s);
+        e.a(m0, sb.toString());
+        final xl8 h0 = this.H0;
+        if (h0 != null) {
+            final Runnable runnable = h0.c.remove(s);
+            if (runnable != null) {
+                ((Handler)h0.b.D0).removeCallbacks(runnable);
+            }
+        }
+        final Iterator iterator = this.K0.e(s).iterator();
+        while (iterator.hasNext()) {
+            this.E0.m((z7r)iterator.next());
+        }
+    }
+    
+    public final void d(final rsx... array) {
+        if (this.L0 == null) {
+            this.L0 = r0l.a(this.D0, this.E0.b);
+        }
+        if (!this.L0) {
+            o9g.e().f(s7c.M0, "Ignoring schedule request in a secondary process");
+            return;
+        }
+        if (!this.I0) {
+            this.E0.f.a((yea)this);
+            this.I0 = true;
+        }
+        final HashSet<rsx> set = new HashSet<rsx>();
+        final HashSet<String> set2 = new HashSet<String>();
+        for (final rsx rsx : array) {
+            final long a = rsx.a();
+            final long currentTimeMillis = System.currentTimeMillis();
+            if (rsx.b == qrx$a.D0) {
+                if (currentTimeMillis < a) {
+                    final xl8 h0 = this.H0;
+                    if (h0 != null) {
+                        final Runnable runnable = h0.c.remove(rsx.a);
+                        if (runnable != null) {
+                            ((Handler)h0.b.D0).removeCallbacks(runnable);
                         }
+                        final wl8 wl8 = new wl8(h0, rsx);
+                        h0.c.put(rsx.a, wl8);
+                        ((Handler)h0.b.D0).postDelayed((Runnable)wl8, rsx.a() - System.currentTimeMillis());
                     }
-                    if (!khe.i0().G0) {
-                        continue;
-                    }
-                    khe.m0();
                 }
-            }
-            throw new InvalidJsonFormatException("Invalid json unexpected EOF");
-        }
-        if (n == 4) {
-            return null;
-        }
-        final lje e3 = khe.e();
-        final StringBuilder sb3 = new StringBuilder();
-        sb3.append("Invalid json token encountered: ");
-        sb3.append(e3);
-        throw new InvalidJsonFormatException(sb3.toString());
-    }
-    
-    public final int c(final khe khe) {
-        final lje a = khe.a();
-        int n;
-        if (a == null) {
-            n = -1;
-        }
-        else {
-            n = s7c.s7c$a.a[((Enum)a).ordinal()];
-        }
-        int n2;
-        if (n != 8) {
-            if (n != 9) {
-                final lje e = khe.e();
-                final StringBuilder sb = new StringBuilder();
-                sb.append("Invalid json token encountered: Expected NUMBER found ");
-                sb.append(e);
-                throw new InvalidJsonFormatException(sb.toString());
-            }
-            n2 = (int)khe.i();
-        }
-        else {
-            n2 = (int)khe.f();
-        }
-        return n2;
-    }
-    
-    public final <T> List<T> d(final khe khe, final rtb<? super khe, ? extends T> rtb) {
-        final lje e = khe.e();
-        int n;
-        if (e == null) {
-            n = -1;
-        }
-        else {
-            n = s7c.s7c$a.a[((Enum)e).ordinal()];
-        }
-        if (n == 6) {
-            final ArrayList<T> list = new ArrayList<T>();
-            while (khe.i0() != null) {
-                final lje e2 = khe.e();
-                int n2;
-                if (e2 == null) {
-                    n2 = -1;
+                else if (rsx.c()) {
+                    final int sdk_INT = Build$VERSION.SDK_INT;
+                    if (sdk_INT >= 23 && rsx.j.c) {
+                        final o9g e = o9g.e();
+                        final String m0 = s7c.M0;
+                        final StringBuilder sb = new StringBuilder();
+                        sb.append("Ignoring ");
+                        sb.append(rsx);
+                        sb.append(". Requires device idle.");
+                        e.a(m0, sb.toString());
+                    }
+                    else if (sdk_INT >= 24 && rsx.j.a()) {
+                        final o9g e2 = o9g.e();
+                        final String m2 = s7c.M0;
+                        final StringBuilder sb2 = new StringBuilder();
+                        sb2.append("Ignoring ");
+                        sb2.append(rsx);
+                        sb2.append(". Requires ContentUri triggers.");
+                        e2.a(m2, sb2.toString());
+                    }
+                    else {
+                        set.add(rsx);
+                        set2.add(rsx.a);
+                    }
                 }
                 else {
-                    n2 = s7c.s7c$a.a[((Enum)e2).ordinal()];
+                    final o9g e3 = o9g.e();
+                    final String m3 = s7c.M0;
+                    final StringBuilder j = fu8.j("Starting work for ");
+                    j.append(rsx.a);
+                    e3.a(m3, j.toString());
+                    final zrx e4 = this.E0;
+                    final a8r k0 = this.K0;
+                    Objects.requireNonNull(k0);
+                    ((bsx)e4.d).a((Runnable)new b8r(e4, k0.g(rp9.P(rsx)), (WorkerParameters$a)null));
                 }
-                if (n2 == 5) {
-                    return list;
-                }
-                list.add((T)rtb.invoke((Object)khe));
             }
-            throw new InvalidJsonFormatException("Invalid json unexpected EOF");
         }
-        final lje e3 = khe.e();
-        final StringBuilder sb = new StringBuilder();
-        sb.append("Invalid json token encountered: Expected ARRAY found");
-        sb.append(e3);
-        throw new RuntimeException(sb.toString());
+        synchronized (this.J0) {
+            if (!set.isEmpty()) {
+                final String join = TextUtils.join((CharSequence)",", (Iterable)set2);
+                final o9g e5 = o9g.e();
+                final String m4 = s7c.M0;
+                final StringBuilder sb3 = new StringBuilder();
+                sb3.append("Starting tracking for ");
+                sb3.append(join);
+                e5.a(m4, sb3.toString());
+                this.G0.addAll(set);
+                this.F0.d(this.G0);
+            }
+        }
     }
     
-    public final <T> Map<String, T> e(final khe khe, final rtb<? super khe, ? extends T> rtb) {
-        final lje e = khe.e();
-        int n;
-        if (e == null) {
-            n = -1;
-        }
-        else {
-            n = s7c.s7c$a.a[((Enum)e).ordinal()];
-        }
-        if (n == 3) {
-            final LinkedHashMap<String, T> linkedHashMap = new LinkedHashMap<String, T>();
-            while (khe.i0() != null) {
-                final lje e2 = khe.e();
-                int n2;
-                if (e2 == null) {
-                    n2 = -1;
-                }
-                else {
-                    n2 = s7c.s7c$a.a[((Enum)e2).ordinal()];
-                }
-                if (n2 == 2) {
-                    return linkedHashMap;
-                }
-                khe.i0();
-                final String d = khe.d();
-                zzd.e((Object)d, "jsonParser.currentName");
-                linkedHashMap.put(d, (T)rtb.invoke((Object)khe));
-            }
-            throw new InvalidJsonFormatException("Invalid json unexpected EOF");
-        }
-        final lje e3 = khe.e();
-        final StringBuilder sb = new StringBuilder();
-        sb.append("Invalid json token encountered: Expected OBJECT found ");
-        sb.append(e3);
-        throw new RuntimeException(sb.toString());
+    public final boolean e() {
+        return false;
     }
     
-    public final <T> T f(final khe khe, final rtb<? super khe, ? extends T> rtb) {
-        final lje a = khe.a();
-        int n;
-        if (a == null) {
-            n = -1;
+    public final void f(final List<rsx> list) {
+        final Iterator iterator = ((ArrayList)list).iterator();
+        while (iterator.hasNext()) {
+            final prx p = rp9.P((rsx)iterator.next());
+            final o9g e = o9g.e();
+            final String m0 = s7c.M0;
+            final StringBuilder sb = new StringBuilder();
+            sb.append("Constraints met: Scheduling work ID ");
+            sb.append(p);
+            e.a(m0, sb.toString());
+            final zrx e2 = this.E0;
+            ((bsx)e2.d).a((Runnable)new b8r(e2, this.K0.g(p), (WorkerParameters$a)null));
         }
-        else {
-            n = s7c.s7c$a.a[((Enum)a).ordinal()];
-        }
-        Object invoke;
-        if (n == 4) {
-            invoke = null;
-        }
-        else {
-            invoke = rtb.invoke((Object)khe);
-        }
-        return (T)invoke;
     }
 }

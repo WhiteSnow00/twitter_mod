@@ -16,98 +16,98 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonServerFeatureSwitchesConfiguration$$JsonObjectMapper extends JsonMapper<JsonServerFeatureSwitchesConfiguration>
 {
-    public static JsonServerFeatureSwitchesConfiguration _parse(final khe khe) throws IOException {
+    public static JsonServerFeatureSwitchesConfiguration _parse(final tge tge) throws IOException {
         final JsonServerFeatureSwitchesConfiguration jsonServerFeatureSwitchesConfiguration = new JsonServerFeatureSwitchesConfiguration();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonServerFeatureSwitchesConfiguration, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonServerFeatureSwitchesConfiguration, d, tge);
+            tge.l0();
         }
         return jsonServerFeatureSwitchesConfiguration;
     }
     
-    public static void _serialize(final JsonServerFeatureSwitchesConfiguration jsonServerFeatureSwitchesConfiguration, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonServerFeatureSwitchesConfiguration jsonServerFeatureSwitchesConfiguration, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("ceol_allowlist", jsonServerFeatureSwitchesConfiguration.b);
+        afe.t0("ceol_allowlist", jsonServerFeatureSwitchesConfiguration.b);
         if (jsonServerFeatureSwitchesConfiguration.a != null) {
-            LoganSquare.typeConverterFor((Class)hua.class).serialize((Object)jsonServerFeatureSwitchesConfiguration.a, "config", true, tfe);
+            LoganSquare.typeConverterFor((Class)dta.class).serialize((Object)jsonServerFeatureSwitchesConfiguration.a, "config", true, afe);
         }
         final HashSet d = jsonServerFeatureSwitchesConfiguration.d;
         if (d != null) {
-            tfe.i("embedded_darkmoded");
-            tfe.q0();
+            afe.i("embedded_darkmoded");
+            afe.p0();
             final Iterator iterator = d.iterator();
             while (iterator.hasNext()) {
-                tfe.s0((String)iterator.next());
+                afe.r0((String)iterator.next());
             }
-            tfe.f();
+            afe.f();
         }
         final HashMap f = jsonServerFeatureSwitchesConfiguration.f;
         if (f != null) {
-            final Iterator h = q1a.h(tfe, "impression_pointers", f);
-            while (h.hasNext()) {
-                final Map.Entry entry = h.next();
-                if (o1a.g((String)entry.getKey(), tfe, (Map.Entry)entry) == null) {
-                    tfe.j();
+            final Iterator z = mw.z(afe, "impression_pointers", f);
+            while (z.hasNext()) {
+                final Map.Entry entry = z.next();
+                if (sde.e((String)entry.getKey(), afe, (Map.Entry)entry) == null) {
+                    afe.j();
                 }
                 else {
                     final List list = (List)entry.getValue();
                     if (list == null) {
                         continue;
                     }
-                    tfe.q0();
+                    afe.p0();
                     final Iterator iterator2 = list.iterator();
                     while (iterator2.hasNext()) {
-                        tfe.s0((String)iterator2.next());
+                        afe.r0((String)iterator2.next());
                     }
-                    tfe.f();
+                    afe.f();
                 }
             }
-            tfe.h();
+            afe.h();
         }
         final HashSet c = jsonServerFeatureSwitchesConfiguration.c;
         if (c != null) {
-            tfe.i("impressions");
-            tfe.q0();
-            for (final cua cua : c) {
-                if (cua != null) {
-                    LoganSquare.typeConverterFor((Class)cua.class).serialize((Object)cua, "lslocalimpressionsElement", false, tfe);
+            afe.i("impressions");
+            afe.p0();
+            for (final ysa ysa : c) {
+                if (ysa != null) {
+                    LoganSquare.typeConverterFor((Class)ysa.class).serialize((Object)ysa, "lslocalimpressionsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (jsonServerFeatureSwitchesConfiguration.e != null) {
-            LoganSquare.typeConverterFor((Class)fnp.class).serialize((Object)jsonServerFeatureSwitchesConfiguration.e, "versions", true, tfe);
+            LoganSquare.typeConverterFor((Class)vnp.class).serialize((Object)jsonServerFeatureSwitchesConfiguration.e, "versions", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonServerFeatureSwitchesConfiguration jsonServerFeatureSwitchesConfiguration, final String s, final khe khe) throws IOException {
-        if ("ceol_allowlist".equals(s)) {
-            jsonServerFeatureSwitchesConfiguration.b = khe.T((String)null);
+    public static void parseField(final JsonServerFeatureSwitchesConfiguration jsonServerFeatureSwitchesConfiguration, String t, final tge tge) throws IOException {
+        if ("ceol_allowlist".equals(t)) {
+            jsonServerFeatureSwitchesConfiguration.b = tge.T((String)null);
         }
-        else if ("config".equals(s)) {
-            jsonServerFeatureSwitchesConfiguration.a = (hua)LoganSquare.typeConverterFor((Class)hua.class).parse(khe);
+        else if ("config".equals(t)) {
+            jsonServerFeatureSwitchesConfiguration.a = (dta)LoganSquare.typeConverterFor((Class)dta.class).parse(tge);
         }
-        else if ("embedded_darkmoded".equals(s)) {
-            if (khe.e() == lje.M0) {
+        else if ("embedded_darkmoded".equals(t)) {
+            if (tge.e() == vie.N0) {
                 final HashSet d = new HashSet();
-                while (khe.i0() != lje.N0) {
-                    final String t = khe.T((String)null);
-                    if (t != null) {
-                        d.add(t);
+                while (tge.h0() != vie.O0) {
+                    final String t2 = tge.T((String)null);
+                    if (t2 != null) {
+                        d.add(t2);
                     }
                 }
                 jsonServerFeatureSwitchesConfiguration.d = d;
@@ -116,21 +116,21 @@ public final class JsonServerFeatureSwitchesConfiguration$$JsonObjectMapper exte
                 jsonServerFeatureSwitchesConfiguration.d = null;
             }
         }
-        else if ("impression_pointers".equals(s)) {
-            if (khe.e() == lje.K0) {
+        else if ("impression_pointers".equals(t)) {
+            if (tge.e() == vie.L0) {
                 final HashMap f = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    final String j = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
+                while (tge.h0() != vie.M0) {
+                    final String j = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
                         f.put(j, null);
                     }
-                    else if (khe.e() == lje.M0) {
+                    else if (tge.e() == vie.N0) {
                         final ArrayList<String> list = new ArrayList<String>();
-                        while (khe.i0() != lje.N0) {
-                            final String t2 = khe.T((String)null);
-                            if (t2 != null) {
-                                list.add(t2);
+                        while (tge.h0() != vie.O0) {
+                            t = tge.T((String)null);
+                            if (t != null) {
+                                list.add(t);
                             }
                         }
                         f.put(j, list);
@@ -145,13 +145,13 @@ public final class JsonServerFeatureSwitchesConfiguration$$JsonObjectMapper exte
                 jsonServerFeatureSwitchesConfiguration.f = null;
             }
         }
-        else if ("impressions".equals(s)) {
-            if (khe.e() == lje.M0) {
+        else if ("impressions".equals(t)) {
+            if (tge.e() == vie.N0) {
                 final HashSet c = new HashSet();
-                while (khe.i0() != lje.N0) {
-                    final cua cua = (cua)LoganSquare.typeConverterFor((Class)cua.class).parse(khe);
-                    if (cua != null) {
-                        c.add(cua);
+                while (tge.h0() != vie.O0) {
+                    final ysa ysa = (ysa)LoganSquare.typeConverterFor((Class)ysa.class).parse(tge);
+                    if (ysa != null) {
+                        c.add(ysa);
                     }
                 }
                 jsonServerFeatureSwitchesConfiguration.c = c;
@@ -160,16 +160,24 @@ public final class JsonServerFeatureSwitchesConfiguration$$JsonObjectMapper exte
                 jsonServerFeatureSwitchesConfiguration.c = null;
             }
         }
-        else if ("versions".equals(s)) {
-            jsonServerFeatureSwitchesConfiguration.e = (fnp)LoganSquare.typeConverterFor((Class)fnp.class).parse(khe);
+        else if ("versions".equals(t)) {
+            jsonServerFeatureSwitchesConfiguration.e = (vnp)LoganSquare.typeConverterFor((Class)vnp.class).parse(tge);
         }
     }
     
-    public JsonServerFeatureSwitchesConfiguration parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonServerFeatureSwitchesConfiguration parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonServerFeatureSwitchesConfiguration jsonServerFeatureSwitchesConfiguration, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonServerFeatureSwitchesConfiguration, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonServerFeatureSwitchesConfiguration jsonServerFeatureSwitchesConfiguration, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonServerFeatureSwitchesConfiguration, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonServerFeatureSwitchesConfiguration)o, afe, b);
     }
 }

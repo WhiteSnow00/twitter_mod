@@ -1,61 +1,62 @@
-import com.twitter.rooms.model.AudioSpaceTopicItem;
 import java.util.Set;
-import com.twitter.rooms.subsystem.api.args.RoomHostKudosArgs;
-import com.twitter.rooms.subsystem.api.models.StationTrack$TrackData;
-import com.twitter.rooms.subsystem.api.models.StationFeed;
+import com.twitter.rooms.cards.view.clips.SpacesClipCardViewModel;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface grq
+public final class grq extends ste implements qsb<vrq, fzv>
 {
-    boolean B();
+    public final SpacesClipCardViewModel D0;
+    public final vba E0;
     
-    void a(final String p0, final boolean p1);
+    public grq(final SpacesClipCardViewModel d0, final vba e0) {
+        this.D0 = d0;
+        this.E0 = e0;
+        super(1);
+    }
     
-    void b(final StationFeed p0, final hvt p1, final StationTrack$TrackData p2);
-    
-    void c(final String p0);
-    
-    void d(final String p0);
-    
-    void e(final String p0, final String p1, final String p2, final String p3);
-    
-    void f(final boolean p0);
-    
-    void g(final RoomHostKudosArgs p0);
-    
-    boolean h();
-    
-    void i();
-    
-    void j();
-    
-    void k(final String p0);
-    
-    void l(final String p0, final x21 p1, final sba p2, final boolean p3, final boolean p4);
-    
-    void m();
-    
-    boolean n();
-    
-    void o(final String p0, final String p1, final Long p2, final boolean p3, final Set<AudioSpaceTopicItem> p4, final boolean p5, final boolean p6, final boolean p7);
-    
-    void p(final String p0, final boolean p1, final sba p2, final boolean p3, final boolean p4);
-    
-    boolean q();
-    
-    void r(final String p0);
-    
-    String s();
-    
-    void t(final String p0, final boolean p1, final sba p2);
-    
-    void u(final String p0);
-    
-    public interface a
-    {
-        grq a(final yl1 p0, final ibm p1);
+    public final Object invoke(final Object o) {
+        final vrq vrq = (vrq)o;
+        czd.f((Object)vrq, "it");
+        final int s = vrq.s;
+        if (s != 0) {
+            if (vrq.a == bk3.F0) {
+                if (s != 4 && (s != 1 || !vrq.w)) {
+                    if (s == 1) {
+                        final SpacesClipCardViewModel d0 = this.D0;
+                        final asq x0 = d0.X0;
+                        final String r0 = d0.R0;
+                        final t21 e = vrq.e;
+                        czd.c((Object)e);
+                        w1e.F(x0, r0, e, (bba)null, false, false, 28, (Object)null);
+                        if (vrq.f) {
+                            final String b = vrq.b;
+                            if (b != null) {
+                                this.D0.Y0.a.onNext((Object)new z6n$a$g(b));
+                            }
+                        }
+                    }
+                    else if (s != 2 && s != 3) {
+                        if (s == 5) {
+                            final SpacesClipCardViewModel d2 = this.D0;
+                            final asq x2 = d2.X0;
+                            final String r2 = d2.R0;
+                            final bba.a companion = bba.Companion;
+                            final vba e2 = this.E0;
+                            x2.t(r2, true, companion.b(e2.a, e2.b, e2.c, e2.d));
+                        }
+                    }
+                    else {
+                        this.D0.b1.a.onNext((Object)o1o$a$j.a);
+                    }
+                }
+                else {
+                    final SpacesClipCardViewModel d3 = this.D0;
+                    d3.X0.o(d3.R0, vrq.d, vrq.x, vrq.w, (Set)vrq.y, false, s == 1, true);
+                }
+            }
+        }
+        return fzv.a;
     }
 }

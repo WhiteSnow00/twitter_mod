@@ -8,12 +8,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.List;
 
-public final class b extends gue implements rtb<ipn, ipn>
+public final class b extends ste implements qsb<wpn, wpn>
 {
-    public static final b C0;
+    public static final b D0;
     
     static {
-        C0 = new b();
+        D0 = new b();
     }
     
     public b() {
@@ -21,8 +21,8 @@ public final class b extends gue implements rtb<ipn, ipn>
     }
     
     public final Object invoke(final Object o) {
-        final ipn ipn = (ipn)o;
-        zzd.f((Object)ipn, "$this$setState");
-        return ipn.l(ipn, (ton)null, (List)v2a.C0, (Integer)null, false, (Set)f3a.C0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
+        final wpn wpn = (wpn)o;
+        czd.f((Object)wpn, "$this$setState");
+        return wpn.l(wpn, (gpn)null, (List)f2a.D0, (Integer)null, false, (Set)p2a.D0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
     }
 }

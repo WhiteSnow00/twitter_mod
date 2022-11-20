@@ -2,7 +2,16 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface fbm
+public final class fbm
 {
-    void release();
+    public static final rlp<fbm> b;
+    public final jbm a;
+    
+    static {
+        fbm.b = new fbm.fbm$a();
+    }
+    
+    public fbm(final jbm a) {
+        this.a = a;
+    }
 }

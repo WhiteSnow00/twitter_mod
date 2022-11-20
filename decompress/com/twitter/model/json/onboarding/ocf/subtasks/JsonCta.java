@@ -12,10 +12,10 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCta extends lhh<c87>
+public class JsonCta extends qhh<g77>
 {
     @JsonField
-    public iej a;
+    public oej a;
     @JsonField
     public JsonOcfRichText b;
     @JsonField
@@ -23,55 +23,54 @@ public class JsonCta extends lhh<c87>
     @JsonField
     public JsonOcfRichText d;
     @JsonField
-    public xrv e;
+    public ssv e;
     @JsonField
-    public xrv f;
-    @JsonField(typeConverter = q53.class)
+    public ssv f;
+    @JsonField(typeConverter = h53.class)
     public int g;
-    @JsonField(typeConverter = q53.class)
+    @JsonField(typeConverter = h53.class)
     public int h;
-    @JsonField(typeConverter = tds.class)
+    @JsonField(typeConverter = oes.class)
     public int i;
-    @JsonField(typeConverter = e53.class)
+    @JsonField(typeConverter = v43.class)
     public int j;
-    @JsonField(typeConverter = a87.class)
+    @JsonField(typeConverter = e77.class)
     public int k;
     @JsonField
-    public kdj l;
+    public pdj l;
     @JsonField
-    public List<ecj> m;
+    public List<jcj> m;
     @JsonField
     public JsonOcfRichText n;
     @JsonField
     public JsonOcfComponentCollection o;
     
-    @Override
-    public final h4j t() {
-        final c87$a c87$a = new c87$a();
-        ((lsr$a)c87$a).h = this.a;
-        final int a = w4j.a;
-        ((lsr$a)c87$a).f = JsonOcfRichText.s(this.b);
-        ((lsr$a)c87$a).g = JsonOcfRichText.s(this.c);
-        c87$a.k = JsonOcfRichText.s(this.d);
-        ((lsr$a)c87$a).a = this.e;
-        ((lsr$a)c87$a).b = this.f;
-        c87$a.l = this.g;
-        c87$a.m = this.h;
-        c87$a.n = this.i;
-        c87$a.o = this.j;
-        c87$a.p = this.k;
-        c87$a.q = this.l;
-        c87$a.r = this.m;
-        c87$a.s = JsonOcfRichText.s(this.n);
+    public final n4j t() {
+        final g77.a a = new g77.a();
+        a.h = this.a;
+        final int a2 = c5j.a;
+        a.f = JsonOcfRichText.s(this.b);
+        a.g = JsonOcfRichText.s(this.c);
+        a.k = JsonOcfRichText.s(this.d);
+        a.a = this.e;
+        a.b = this.f;
+        a.l = this.g;
+        a.m = this.h;
+        a.n = this.i;
+        a.o = this.j;
+        a.p = this.k;
+        a.q = this.l;
+        a.r = this.m;
+        a.s = JsonOcfRichText.s(this.n);
         final JsonOcfComponentCollection o = this.o;
-        n16 t;
+        x06 t;
         if (o != null) {
             t = o.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)c87$a).j = t;
-        return (h4j)c87$a;
+        a.j = t;
+        return (n4j)a;
     }
 }

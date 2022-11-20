@@ -1,57 +1,41 @@
-import com.twitter.model.timeline.IllegalTileStateException;
+import com.twitter.util.user.UserIdentifier;
+import java.util.Set;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fps extends bps
+public final class fps extends d2v<tmi>
 {
-    public final String b;
-    public final String c;
-    public final wg1 d;
+    public static final a Companion;
+    public final String j1;
+    public final Set<Long> k1;
     
-    public fps(final a a) {
-        this.b = a.a;
-        this.c = a.b;
-        this.d = a.c;
+    static {
+        Companion = new a();
     }
     
-    public final boolean equals(final Object o) {
-        boolean b = true;
-        if (this == o) {
-            return true;
-        }
-        if (o != null && fps.class == o.getClass()) {
-            final int a = w4j.a;
-            final fps fps = (fps)o;
-            if (!w4j.a((Object)this.b, (Object)fps.b) || !w4j.a((Object)this.c, (Object)fps.c) || !w4j.a((Object)this.d, (Object)fps.d)) {
-                b = false;
-            }
-            return b;
-        }
-        return false;
+    public fps(final UserIdentifier userIdentifier, final String j1, final Set<Long> k1) {
+        czd.f((Object)userIdentifier, "owner");
+        czd.f((Object)j1, "spaceId");
+        czd.f((Object)k1, "recipients");
+        super(userIdentifier, 0);
+        this.j1 = j1;
+        this.k1 = k1;
     }
     
-    public final int hashCode() {
-        return w4j.h((Object)this.b, (Object)this.c, (Object)this.d);
+    public final tqc f0() {
+        final p6c a = w1e.A("audiospace_giveaway_tickets");
+        a.p("audio_space_id", (Object)this.j1);
+        a.p("ticket_receivers", (Object)this.k1);
+        return (tqc)((n4j)a).e();
     }
     
-    public static final class a extends h4j<fps>
+    public final asc<tmi, kbv> g0() {
+        return (asc<tmi, kbv>)v8g.d();
+    }
+    
+    public static final class a
     {
-        public String a;
-        public String b;
-        public wg1 c;
-        
-        public final Object i() {
-            return new fps(this);
-        }
-        
-        public final boolean l() {
-            final boolean g = pjr.g((CharSequence)this.a);
-            if (!g) {
-                e9a.d((Throwable)new IllegalTileStateException("Illegal Tile state: TileContentStandard missing a title"));
-            }
-            return g;
-        }
     }
 }

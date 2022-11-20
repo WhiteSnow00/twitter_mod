@@ -12,77 +12,85 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonContactsLiveSyncPermissionPrompt$$JsonObjectMapper extends JsonMapper<JsonContactsLiveSyncPermissionPrompt>
 {
-    public static JsonContactsLiveSyncPermissionPrompt _parse(final khe khe) throws IOException {
+    public static JsonContactsLiveSyncPermissionPrompt _parse(final tge tge) throws IOException {
         final JsonContactsLiveSyncPermissionPrompt jsonContactsLiveSyncPermissionPrompt = new JsonContactsLiveSyncPermissionPrompt();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonContactsLiveSyncPermissionPrompt, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonContactsLiveSyncPermissionPrompt, d, tge);
+            tge.l0();
         }
         return jsonContactsLiveSyncPermissionPrompt;
     }
     
-    public static void _serialize(final JsonContactsLiveSyncPermissionPrompt jsonContactsLiveSyncPermissionPrompt, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonContactsLiveSyncPermissionPrompt jsonContactsLiveSyncPermissionPrompt, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonContactsLiveSyncPermissionPrompt.f != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonContactsLiveSyncPermissionPrompt.f, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonContactsLiveSyncPermissionPrompt.f, afe, true);
         }
         if (jsonContactsLiveSyncPermissionPrompt.b != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonContactsLiveSyncPermissionPrompt.b, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonContactsLiveSyncPermissionPrompt.b, afe, true);
         }
         if (jsonContactsLiveSyncPermissionPrompt.e != null) {
-            LoganSquare.typeConverterFor((Class)kdj.class).serialize((Object)jsonContactsLiveSyncPermissionPrompt.e, "header_image", true, tfe);
+            LoganSquare.typeConverterFor((Class)pdj.class).serialize((Object)jsonContactsLiveSyncPermissionPrompt.e, "header_image", true, afe);
         }
         if (jsonContactsLiveSyncPermissionPrompt.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonContactsLiveSyncPermissionPrompt.c, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonContactsLiveSyncPermissionPrompt.c, "next_link", true, afe);
         }
-        tfe.u0("primary_text", jsonContactsLiveSyncPermissionPrompt.a);
+        afe.t0("primary_text", jsonContactsLiveSyncPermissionPrompt.a);
         if (jsonContactsLiveSyncPermissionPrompt.d != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonContactsLiveSyncPermissionPrompt.d, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonContactsLiveSyncPermissionPrompt.d, "skip_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonContactsLiveSyncPermissionPrompt jsonContactsLiveSyncPermissionPrompt, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonContactsLiveSyncPermissionPrompt jsonContactsLiveSyncPermissionPrompt, final String s, final tge tge) throws IOException {
         if ("component_collection".equals(s)) {
-            jsonContactsLiveSyncPermissionPrompt.f = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonContactsLiveSyncPermissionPrompt.f = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            jsonContactsLiveSyncPermissionPrompt.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonContactsLiveSyncPermissionPrompt.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("header_image".equals(s)) {
-            jsonContactsLiveSyncPermissionPrompt.e = (kdj)LoganSquare.typeConverterFor((Class)kdj.class).parse(khe);
+            jsonContactsLiveSyncPermissionPrompt.e = (pdj)LoganSquare.typeConverterFor((Class)pdj.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonContactsLiveSyncPermissionPrompt.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonContactsLiveSyncPermissionPrompt.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonContactsLiveSyncPermissionPrompt.a = khe.T((String)null);
+            jsonContactsLiveSyncPermissionPrompt.a = tge.T((String)null);
         }
         else if ("skip_link".equals(s)) {
-            jsonContactsLiveSyncPermissionPrompt.d = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonContactsLiveSyncPermissionPrompt.d = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonContactsLiveSyncPermissionPrompt parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonContactsLiveSyncPermissionPrompt parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonContactsLiveSyncPermissionPrompt jsonContactsLiveSyncPermissionPrompt, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonContactsLiveSyncPermissionPrompt, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonContactsLiveSyncPermissionPrompt jsonContactsLiveSyncPermissionPrompt, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonContactsLiveSyncPermissionPrompt, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonContactsLiveSyncPermissionPrompt)o, afe, b);
     }
 }

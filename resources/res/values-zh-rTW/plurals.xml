@@ -516,6 +516,18 @@
         <item quantity="one">%s 個訂閱者</item>
         <item quantity="other">%s 個訂閱者</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">天</item>
+        <item quantity="other">%d 天</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">個月</item>
+        <item quantity="other">%d 個月</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">年</item>
+        <item quantity="other">%d 年</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d 天</item>
         <item quantity="other">%d 天</item>

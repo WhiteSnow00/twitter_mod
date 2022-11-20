@@ -2,26 +2,52 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fis implements xes
+public final class fis
 {
-    public static final alp<fis> D0;
-    public final String C0;
+    public static final a Companion;
+    public static final fis c;
+    public final long a;
+    public final long b;
     
     static {
-        fis.D0 = new fis.fis$a();
+        Companion = new a();
+        c = new fis(fli.b0(0), fli.b0(0));
     }
     
-    public fis(final String c0) {
-        this.C0 = c0;
+    public fis(final long a, final long b) {
+        this.a = a;
+        this.b = b;
     }
     
     @Override
     public final boolean equals(final Object o) {
-        return this == o || (o != null && fis.class == o.getClass() && w4j.a((Object)this.C0, (Object)((fis)o).C0));
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof fis)) {
+            return false;
+        }
+        final long a = this.a;
+        final fis fis = (fis)o;
+        return xjs.a(a, fis.a) && xjs.a(this.b, fis.b);
     }
     
     @Override
     public final int hashCode() {
-        return w4j.f((Object)this.C0);
+        return xjs.e(this.b) + xjs.e(this.a) * 31;
+    }
+    
+    @Override
+    public final String toString() {
+        final StringBuilder j = fu8.j("TextIndent(firstLine=");
+        j.append((Object)xjs.f(this.a));
+        j.append(", restLine=");
+        j.append((Object)xjs.f(this.b));
+        j.append(')');
+        return j.toString();
+    }
+    
+    public static final class a
+    {
     }
 }

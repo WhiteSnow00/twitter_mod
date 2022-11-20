@@ -9,57 +9,65 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFocusRects$$JsonObjectMapper extends JsonMapper<JsonFocusRects>
 {
-    public static JsonFocusRects _parse(final khe khe) throws IOException {
+    public static JsonFocusRects _parse(final tge tge) throws IOException {
         final JsonFocusRects jsonFocusRects = new JsonFocusRects();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFocusRects, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFocusRects, d, tge);
+            tge.l0();
         }
         return jsonFocusRects;
     }
     
-    public static void _serialize(final JsonFocusRects jsonFocusRects, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFocusRects jsonFocusRects, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.T("h", jsonFocusRects.d);
-        tfe.T("w", jsonFocusRects.c);
-        tfe.T("x", jsonFocusRects.a);
-        tfe.T("y", jsonFocusRects.b);
+        afe.T("h", jsonFocusRects.d);
+        afe.T("w", jsonFocusRects.c);
+        afe.T("x", jsonFocusRects.a);
+        afe.T("y", jsonFocusRects.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFocusRects jsonFocusRects, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFocusRects jsonFocusRects, final String s, final tge tge) throws IOException {
         if ("h".equals(s)) {
-            jsonFocusRects.d = khe.z();
+            jsonFocusRects.d = tge.y();
         }
         else if ("w".equals(s)) {
-            jsonFocusRects.c = khe.z();
+            jsonFocusRects.c = tge.y();
         }
         else if ("x".equals(s)) {
-            jsonFocusRects.a = khe.z();
+            jsonFocusRects.a = tge.y();
         }
         else if ("y".equals(s)) {
-            jsonFocusRects.b = khe.z();
+            jsonFocusRects.b = tge.y();
         }
     }
     
-    public JsonFocusRects parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFocusRects parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFocusRects jsonFocusRects, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFocusRects, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFocusRects jsonFocusRects, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFocusRects, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFocusRects)o, afe, b);
     }
 }

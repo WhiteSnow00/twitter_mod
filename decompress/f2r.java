@@ -1,42 +1,139 @@
-import android.view.View;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import java.util.Objects;
-import android.view.View$OnClickListener;
+import java.util.Collections;
+import java.util.ArrayList;
+import android.os.Parcel;
+import java.util.List;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class f2r extends v3e<g2r, i2r>
+public final class f2r extends b2r
 {
-    public final l2r d;
-    public final w7t e;
+    public static final Parcelable$Creator<f2r> CREATOR;
+    public final List<c> D0;
     
-    public f2r(final l2r d, final w7t e) {
-        super((Class)g2r.class);
-        this.d = d;
-        this.e = e;
+    static {
+        CREATOR = (Parcelable$Creator)new Parcelable$Creator<f2r>() {
+            public final Object createFromParcel(final Parcel parcel) {
+                return new f2r(parcel);
+            }
+            
+            public final Object[] newArray(final int n) {
+                return new f2r[n];
+            }
+        };
     }
     
-    public final void k(final c7x c7x, final Object o, final ibm ibm) {
-        final i2r i2r = (i2r)c7x;
-        final dqv a = ((g2r)o).k.a;
-        i2r.D0.a((d2r)a);
-        ((el8)i2r).C0.setOnClickListener((View$OnClickListener)new ggk((Object)this, (Object)a, 1));
-        final pxo d0 = i2r.D0;
-        Objects.requireNonNull(d0);
-        ibm.i((rj)new ht1((Object)d0, 7));
+    public f2r(final Parcel parcel) {
+        final int int1 = parcel.readInt();
+        final ArrayList list = new ArrayList<c>(int1);
+        for (int i = 0; i < int1; ++i) {
+            list.add(new c(parcel));
+        }
+        this.D0 = Collections.unmodifiableList((List<? extends c>)list);
     }
     
-    public final c7x l(final ViewGroup viewGroup) {
-        return (c7x)new i2r(pxo.b(LayoutInflater.from(((View)viewGroup).getContext()).inflate(2131625712, viewGroup, false), this.d));
+    public f2r(final List<c> list) {
+        this.D0 = Collections.unmodifiableList((List<? extends c>)list);
     }
     
-    public static final class a extends v3e$a<g2r>
+    public final void writeToParcel(final Parcel parcel, int i) {
+        final int size = this.D0.size();
+        parcel.writeInt(size);
+        c c;
+        int size2;
+        int j;
+        b b;
+        for (i = 0; i < size; ++i) {
+            c = this.D0.get(i);
+            parcel.writeLong(c.a);
+            parcel.writeByte((byte)(byte)(c.b ? 1 : 0));
+            parcel.writeByte((byte)(byte)(c.c ? 1 : 0));
+            parcel.writeByte((byte)(byte)(c.d ? 1 : 0));
+            size2 = c.f.size();
+            parcel.writeInt(size2);
+            for (j = 0; j < size2; ++j) {
+                b = (b)c.f.get(j);
+                parcel.writeInt(b.a);
+                parcel.writeLong(b.b);
+            }
+            parcel.writeLong(c.e);
+            parcel.writeByte((byte)(byte)(c.g ? 1 : 0));
+            parcel.writeLong(c.h);
+            parcel.writeInt(c.i);
+            parcel.writeInt(c.j);
+            parcel.writeInt(c.k);
+        }
+    }
+    
+    public static final class b
     {
-        public a(final fxe<f2r> fxe) {
-            super((Class)g2r.class, (fxe)fxe);
+        public final int a;
+        public final long b;
+        
+        public b(final int a, final long b) {
+            this.a = a;
+            this.b = b;
+        }
+        
+        public b(final int a, final long b, final f2r$a parcelable$Creator) {
+            this.a = a;
+            this.b = b;
+        }
+    }
+    
+    public static final class c
+    {
+        public final long a;
+        public final boolean b;
+        public final boolean c;
+        public final boolean d;
+        public final long e;
+        public final List<b> f;
+        public final boolean g;
+        public final long h;
+        public final int i;
+        public final int j;
+        public final int k;
+        
+        public c(final long a, final boolean b, final boolean c, final boolean d, final List<b> list, final long e, final boolean g, final long h, final int i, final int j, final int k) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+            this.f = Collections.unmodifiableList((List<? extends b>)list);
+            this.e = e;
+            this.g = g;
+            this.h = h;
+            this.i = i;
+            this.j = j;
+            this.k = k;
+        }
+        
+        public c(final Parcel parcel) {
+            this.a = parcel.readLong();
+            final byte byte1 = parcel.readByte();
+            final boolean b = false;
+            this.b = (byte1 == 1);
+            this.c = (parcel.readByte() == 1);
+            this.d = (parcel.readByte() == 1);
+            final int int1 = parcel.readInt();
+            final ArrayList list = new ArrayList<Object>(int1);
+            for (int i = 0; i < int1; ++i) {
+                list.add(new b(parcel.readInt(), parcel.readLong()));
+            }
+            this.f = Collections.unmodifiableList((List<? extends b>)list);
+            this.e = parcel.readLong();
+            boolean g = b;
+            if (parcel.readByte() == 1) {
+                g = true;
+            }
+            this.g = g;
+            this.h = parcel.readLong();
+            this.i = parcel.readInt();
+            this.j = parcel.readInt();
+            this.k = parcel.readInt();
         }
     }
 }

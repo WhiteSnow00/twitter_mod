@@ -10,57 +10,65 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOpenExternalLink$$JsonObjectMapper extends JsonMapper<JsonOpenExternalLink>
 {
-    public static JsonOpenExternalLink _parse(final khe khe) throws IOException {
+    public static JsonOpenExternalLink _parse(final tge tge) throws IOException {
         final JsonOpenExternalLink jsonOpenExternalLink = new JsonOpenExternalLink();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonOpenExternalLink, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonOpenExternalLink, d, tge);
+            tge.l0();
         }
         return jsonOpenExternalLink;
     }
     
-    public static void _serialize(final JsonOpenExternalLink jsonOpenExternalLink, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOpenExternalLink jsonOpenExternalLink, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("external_link_url", jsonOpenExternalLink.a);
+        afe.t0("external_link_url", jsonOpenExternalLink.a);
         if (jsonOpenExternalLink.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonOpenExternalLink.c, "fail_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOpenExternalLink.c, "fail_link", true, afe);
         }
         if (jsonOpenExternalLink.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonOpenExternalLink.b, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOpenExternalLink.b, "next_link", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonOpenExternalLink jsonOpenExternalLink, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonOpenExternalLink jsonOpenExternalLink, final String s, final tge tge) throws IOException {
         if ("external_link_url".equals(s)) {
-            jsonOpenExternalLink.a = khe.T((String)null);
+            jsonOpenExternalLink.a = tge.T((String)null);
         }
         else if ("fail_link".equals(s)) {
-            jsonOpenExternalLink.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonOpenExternalLink.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonOpenExternalLink.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonOpenExternalLink.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
     }
     
-    public JsonOpenExternalLink parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonOpenExternalLink parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonOpenExternalLink jsonOpenExternalLink, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonOpenExternalLink, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonOpenExternalLink jsonOpenExternalLink, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonOpenExternalLink, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonOpenExternalLink)o, afe, b);
     }
 }

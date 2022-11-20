@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOauthRequestTokenResponse extends aih<f3j>
+public class JsonOauthRequestTokenResponse extends fih<l3j>
 {
     @JsonField
     public String a;
@@ -54,24 +54,23 @@ public class JsonOauthRequestTokenResponse extends aih<f3j>
     @JsonField
     public String u;
     @JsonField
-    public e3j v;
+    public k3j v;
     
-    @Override
     public final Object s() {
-        final f3j.a a = new f3j.a();
-        a.b = this.m;
-        a.d = this.l;
-        a.c = this.h;
-        a.e = this.o;
-        a.f = this.c;
-        a.g = this.q;
-        a.i = Boolean.parseBoolean(this.a);
-        a.j = Boolean.parseBoolean(this.g);
-        a.k = Boolean.parseBoolean(this.t);
-        a.l = Boolean.parseBoolean(this.n);
-        a.m = Boolean.parseBoolean(this.d);
-        a.h = this.v;
-        a.a = this.u;
-        return a.e();
+        final l3j$a l3j$a = new l3j$a();
+        l3j$a.b = this.m;
+        l3j$a.d = this.l;
+        l3j$a.c = this.h;
+        l3j$a.e = this.o;
+        l3j$a.f = this.c;
+        l3j$a.g = this.q;
+        l3j$a.i = Boolean.parseBoolean(this.a);
+        l3j$a.j = Boolean.parseBoolean(this.g);
+        l3j$a.k = Boolean.parseBoolean(this.t);
+        l3j$a.l = Boolean.parseBoolean(this.n);
+        l3j$a.m = Boolean.parseBoolean(this.d);
+        l3j$a.h = this.v;
+        l3j$a.a = this.u;
+        return ((n4j)l3j$a).e();
     }
 }

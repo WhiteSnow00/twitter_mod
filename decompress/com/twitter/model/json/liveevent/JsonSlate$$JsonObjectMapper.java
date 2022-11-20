@@ -13,76 +13,76 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSlate$$JsonObjectMapper extends JsonMapper<JsonSlate>
 {
-    public static JsonSlate _parse(final khe khe) throws IOException {
+    public static JsonSlate _parse(final tge tge) throws IOException {
         final JsonSlate jsonSlate = new JsonSlate();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSlate, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSlate, d, tge);
+            tge.l0();
         }
         return jsonSlate;
     }
     
-    public static void _serialize(final JsonSlate jsonSlate, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSlate jsonSlate, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonSlate.h != null) {
-            tfe.i("attribution");
-            JsonLiveEventAttribution$$JsonObjectMapper._serialize(jsonSlate.h, tfe, true);
+            afe.i("attribution");
+            JsonLiveEventAttribution$$JsonObjectMapper._serialize(jsonSlate.h, afe, true);
         }
-        tfe.u0("display_name", jsonSlate.d);
+        afe.t0("display_name", jsonSlate.d);
         final ArrayList g = jsonSlate.g;
         if (g != null) {
-            final Iterator g2 = q1a.g(tfe, "focus_rects", g);
-            while (g2.hasNext()) {
-                final JsonFocusRects jsonFocusRects = g2.next();
+            final Iterator a = br.A(afe, "focus_rects", g);
+            while (a.hasNext()) {
+                final JsonFocusRects jsonFocusRects = a.next();
                 if (jsonFocusRects != null) {
-                    JsonFocusRects$$JsonObjectMapper._serialize(jsonFocusRects, tfe, true);
+                    JsonFocusRects$$JsonObjectMapper._serialize(jsonFocusRects, afe, true);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("id", jsonSlate.a);
-        tfe.u0("label", jsonSlate.b);
-        tfe.u0("title", jsonSlate.c);
-        tfe.u0("tweet_id", jsonSlate.f);
+        afe.t0("id", jsonSlate.a);
+        afe.t0("label", jsonSlate.b);
+        afe.t0("title", jsonSlate.c);
+        afe.t0("tweet_id", jsonSlate.f);
         final ArrayList e = jsonSlate.e;
         if (e != null) {
-            final Iterator g3 = q1a.g(tfe, "variants", e);
-            while (g3.hasNext()) {
-                final JsonImageModel jsonImageModel = g3.next();
+            final Iterator a2 = br.A(afe, "variants", e);
+            while (a2.hasNext()) {
+                final JsonImageModel jsonImageModel = a2.next();
                 if (jsonImageModel != null) {
-                    JsonImageModel$$JsonObjectMapper._serialize(jsonImageModel, tfe, true);
+                    JsonImageModel$$JsonObjectMapper._serialize(jsonImageModel, afe, true);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSlate jsonSlate, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSlate jsonSlate, final String s, final tge tge) throws IOException {
         if ("attribution".equals(s)) {
-            jsonSlate.h = JsonLiveEventAttribution$$JsonObjectMapper._parse(khe);
+            jsonSlate.h = JsonLiveEventAttribution$$JsonObjectMapper._parse(tge);
         }
         else if ("display_name".equals(s)) {
-            jsonSlate.d = khe.T((String)null);
+            jsonSlate.d = tge.T((String)null);
         }
         else if ("focus_rects".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList g = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final JsonFocusRects parse = JsonFocusRects$$JsonObjectMapper._parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final JsonFocusRects parse = JsonFocusRects$$JsonObjectMapper._parse(tge);
                     if (parse != null) {
                         g.add(parse);
                     }
@@ -94,22 +94,22 @@ public final class JsonSlate$$JsonObjectMapper extends JsonMapper<JsonSlate>
             }
         }
         else if ("id".equals(s)) {
-            jsonSlate.a = khe.T((String)null);
+            jsonSlate.a = tge.T((String)null);
         }
         else if ("label".equals(s)) {
-            jsonSlate.b = khe.T((String)null);
+            jsonSlate.b = tge.T((String)null);
         }
         else if ("title".equals(s)) {
-            jsonSlate.c = khe.T((String)null);
+            jsonSlate.c = tge.T((String)null);
         }
         else if ("tweet_id".equals(s)) {
-            jsonSlate.f = khe.T((String)null);
+            jsonSlate.f = tge.T((String)null);
         }
         else if ("variants".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList e = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final JsonImageModel parse2 = JsonImageModel$$JsonObjectMapper._parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final JsonImageModel parse2 = JsonImageModel$$JsonObjectMapper._parse(tge);
                     if (parse2 != null) {
                         e.add(parse2);
                     }
@@ -122,11 +122,19 @@ public final class JsonSlate$$JsonObjectMapper extends JsonMapper<JsonSlate>
         }
     }
     
-    public JsonSlate parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSlate parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSlate jsonSlate, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSlate, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSlate jsonSlate, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSlate, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSlate)o, afe, b);
     }
 }

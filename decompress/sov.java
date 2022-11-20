@@ -2,14 +2,18 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class sov extends yp1<v1t>
+public final class sov extends hfe<rov$a>
 {
-    public final void b(final Object o) {
-        final v1t v1t = (v1t)o;
-        if (w1t.a()) {
-            synchronized ("w1t") {
-                ((ag8)w1t.d).add((Object)v1t);
-            }
-        }
+    public static final m7c<rov$a> b;
+    
+    static {
+        final m7c$a m7c$a = new m7c$a();
+        m7c$a.o("navigate", "TimelineCoverBehaviorNavigate", (jtb)wq9.y);
+        m7c$a.o("dismiss", "TimelineCoverBehaviorDismiss", (jtb)vq9.A);
+        b = (m7c)((n4j)m7c$a).e();
+    }
+    
+    public sov() {
+        super(sov.b);
     }
 }

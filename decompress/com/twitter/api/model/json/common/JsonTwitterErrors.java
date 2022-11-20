@@ -10,13 +10,12 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTwitterErrors extends aih<pav>
+public class JsonTwitterErrors extends fih<kbv>
 {
     @JsonField
-    public List<mav> a;
+    public List<hbv> a;
     
-    @Override
     public final Object s() {
-        return new pav(ced.g((List)this.a));
+        return new kbv(gdd.g((List)this.a));
     }
 }

@@ -9,23 +9,23 @@ import tv.periscope.model.b;
 import com.twitter.rooms.di.room.RoomObjectGraph;
 import java.util.Set;
 
-public final class a extends gue implements rtb<gqn, gqn>
+public final class a extends ste implements qsb<vqn, vqn>
 {
-    public final /* synthetic */ Set<hon> C0;
-    public final /* synthetic */ String D0;
+    public final Set<uon> D0;
+    public final String E0;
     
-    public a(final Set<hon> c0, final String d0) {
-        this.C0 = c0;
+    public a(final Set<uon> d0, final String e0) {
         this.D0 = d0;
+        this.E0 = e0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final gqn gqn = (gqn)o;
-        zzd.f((Object)gqn, "$this$setState");
-        final Set<hon> c0 = this.C0;
-        final String d0 = this.D0;
-        zzd.e((Object)d0, "twitterUserId");
-        return gqn.l(gqn, null, null, false, null, null, null, null, null, null, null, ymp.b0((Set)c0, (Object)new hon(d0, 30)), null, null, null, null, null, null, null, 0, 0, null, null, null, false, null, null, null, false, null, 0, null, null, null, null, null, false, null, false, false, false, null, null, false, -1025, 2047);
+        final vqn vqn = (vqn)o;
+        czd.f((Object)vqn, "$this$setState");
+        final Set<uon> d0 = this.D0;
+        final String e0 = this.E0;
+        czd.e((Object)e0, "twitterUserId");
+        return vqn.l(vqn, null, null, false, null, null, null, null, null, null, null, onp.b1((Set)d0, (Object)new uon(e0, 30)), null, null, null, null, null, null, null, 0, 0, null, null, null, false, null, null, null, false, null, 0, null, null, null, null, null, false, null, false, false, false, null, null, false, -1025, 2047);
     }
 }

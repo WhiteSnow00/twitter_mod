@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineQuery$$JsonObjectMapper extends JsonMapper<JsonTimelineQuery>
 {
-    public static JsonTimelineQuery _parse(final khe khe) throws IOException {
+    public static JsonTimelineQuery _parse(final tge tge) throws IOException {
         final JsonTimelineQuery jsonTimelineQuery = new JsonTimelineQuery();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineQuery, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineQuery, d, tge);
+            tge.l0();
         }
         return jsonTimelineQuery;
     }
     
-    public static void _serialize(final JsonTimelineQuery jsonTimelineQuery, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineQuery jsonTimelineQuery, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("timeline_context", jsonTimelineQuery.b);
-        tfe.u0("timeline_key", jsonTimelineQuery.a);
+        afe.t0("timeline_context", jsonTimelineQuery.b);
+        afe.t0("timeline_key", jsonTimelineQuery.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineQuery jsonTimelineQuery, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineQuery jsonTimelineQuery, final String s, final tge tge) throws IOException {
         if ("timeline_context".equals(s)) {
-            jsonTimelineQuery.b = khe.T((String)null);
+            jsonTimelineQuery.b = tge.T((String)null);
         }
         else if ("timeline_key".equals(s)) {
-            jsonTimelineQuery.a = khe.T((String)null);
+            jsonTimelineQuery.a = tge.T((String)null);
         }
     }
     
-    public JsonTimelineQuery parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineQuery parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineQuery jsonTimelineQuery, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineQuery, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineQuery jsonTimelineQuery, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineQuery, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineQuery)o, afe, b);
     }
 }

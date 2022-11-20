@@ -1,15 +1,16 @@
-import android.app.job.JobParameters;
-import android.content.Intent;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface flz
+public final class flz
 {
-    boolean a(final int p0);
+    public final vfz a;
+    public final kfz b;
+    public final nlz c;
     
-    void b(final Intent p0);
-    
-    void c(final JobParameters p0);
+    public flz(final pzz pzz) {
+        this.a = (vfz)pzz.D0;
+        this.b = (kfz)pzz.E0;
+        this.c = (nlz)pzz.F0;
+    }
 }

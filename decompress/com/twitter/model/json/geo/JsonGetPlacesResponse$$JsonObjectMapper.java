@@ -12,65 +12,65 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonGetPlacesResponse$$JsonObjectMapper extends JsonMapper<JsonGetPlacesResponse>
 {
-    public static JsonGetPlacesResponse _parse(final khe khe) throws IOException {
+    public static JsonGetPlacesResponse _parse(final tge tge) throws IOException {
         final JsonGetPlacesResponse jsonGetPlacesResponse = new JsonGetPlacesResponse();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonGetPlacesResponse, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonGetPlacesResponse, d, tge);
+            tge.l0();
         }
         return jsonGetPlacesResponse;
     }
     
-    public static void _serialize(final JsonGetPlacesResponse jsonGetPlacesResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonGetPlacesResponse jsonGetPlacesResponse, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList c = jsonGetPlacesResponse.c;
         if (c != null) {
-            final Iterator g = q1a.g(tfe, "attributions", c);
-            while (g.hasNext()) {
-                final tfk tfk = g.next();
-                if (tfk != null) {
-                    LoganSquare.typeConverterFor((Class)tfk.class).serialize((Object)tfk, "lslocalattributionsElement", false, tfe);
+            final Iterator a = br.A(afe, "attributions", c);
+            while (a.hasNext()) {
+                final zfk zfk = a.next();
+                if (zfk != null) {
+                    LoganSquare.typeConverterFor((Class)zfk.class).serialize((Object)zfk, "lslocalattributionsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("autotag_place_id", jsonGetPlacesResponse.a);
+        afe.t0("autotag_place_id", jsonGetPlacesResponse.a);
         final ArrayList d = jsonGetPlacesResponse.d;
         if (d != null) {
-            final Iterator g2 = q1a.g(tfe, "places", d);
-            while (g2.hasNext()) {
-                final JsonGetPlacesResponse.JsonTwitterPlaceWrapper jsonTwitterPlaceWrapper = g2.next();
+            final Iterator a2 = br.A(afe, "places", d);
+            while (a2.hasNext()) {
+                final JsonGetPlacesResponse.JsonTwitterPlaceWrapper jsonTwitterPlaceWrapper = a2.next();
                 if (jsonTwitterPlaceWrapper != null) {
-                    JsonGetPlacesResponse$JsonTwitterPlaceWrapper$$JsonObjectMapper._serialize(jsonTwitterPlaceWrapper, tfe, true);
+                    JsonGetPlacesResponse$JsonTwitterPlaceWrapper$$JsonObjectMapper._serialize(jsonTwitterPlaceWrapper, afe, true);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("geo_search_request_id", jsonGetPlacesResponse.b);
+        afe.t0("geo_search_request_id", jsonGetPlacesResponse.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonGetPlacesResponse jsonGetPlacesResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonGetPlacesResponse jsonGetPlacesResponse, final String s, final tge tge) throws IOException {
         if ("attributions".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList c = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final tfk tfk = (tfk)LoganSquare.typeConverterFor((Class)tfk.class).parse(khe);
-                    if (tfk != null) {
-                        c.add(tfk);
+                while (tge.h0() != vie.O0) {
+                    final zfk zfk = (zfk)LoganSquare.typeConverterFor((Class)zfk.class).parse(tge);
+                    if (zfk != null) {
+                        c.add(zfk);
                     }
                 }
                 jsonGetPlacesResponse.c = c;
@@ -80,13 +80,13 @@ public final class JsonGetPlacesResponse$$JsonObjectMapper extends JsonMapper<Js
             }
         }
         else if ("autotag_place_id".equals(s)) {
-            jsonGetPlacesResponse.a = khe.T((String)null);
+            jsonGetPlacesResponse.a = tge.T((String)null);
         }
         else if ("places".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList d = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final JsonGetPlacesResponse.JsonTwitterPlaceWrapper parse = JsonGetPlacesResponse$JsonTwitterPlaceWrapper$$JsonObjectMapper._parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final JsonGetPlacesResponse.JsonTwitterPlaceWrapper parse = JsonGetPlacesResponse$JsonTwitterPlaceWrapper$$JsonObjectMapper._parse(tge);
                     if (parse != null) {
                         d.add(parse);
                     }
@@ -98,15 +98,23 @@ public final class JsonGetPlacesResponse$$JsonObjectMapper extends JsonMapper<Js
             }
         }
         else if ("geo_search_request_id".equals(s)) {
-            jsonGetPlacesResponse.b = khe.T((String)null);
+            jsonGetPlacesResponse.b = tge.T((String)null);
         }
     }
     
-    public JsonGetPlacesResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonGetPlacesResponse parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonGetPlacesResponse jsonGetPlacesResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonGetPlacesResponse, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonGetPlacesResponse jsonGetPlacesResponse, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonGetPlacesResponse, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonGetPlacesResponse)o, afe, b);
     }
 }

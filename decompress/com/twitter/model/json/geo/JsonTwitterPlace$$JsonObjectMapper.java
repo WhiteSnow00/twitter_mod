@@ -12,84 +12,84 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTwitterPlace$$JsonObjectMapper extends JsonMapper<JsonTwitterPlace>
 {
-    public static JsonTwitterPlace _parse(final khe khe) throws IOException {
+    public static JsonTwitterPlace _parse(final tge tge) throws IOException {
         final JsonTwitterPlace jsonTwitterPlace = new JsonTwitterPlace();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTwitterPlace, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTwitterPlace, d, tge);
+            tge.l0();
         }
         return jsonTwitterPlace;
     }
     
-    public static void _serialize(final JsonTwitterPlace jsonTwitterPlace, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTwitterPlace jsonTwitterPlace, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTwitterPlace.j != null) {
-            tfe.i("attributes");
-            JsonTwitterPlace$JsonPlaceAttributes$$JsonObjectMapper._serialize(jsonTwitterPlace.j, tfe, true);
+            afe.i("attributes");
+            JsonTwitterPlace$JsonPlaceAttributes$$JsonObjectMapper._serialize(jsonTwitterPlace.j, afe, true);
         }
         if (jsonTwitterPlace.i != null) {
-            tfe.i("bounding_box");
-            JsonTwitterPlace$CoordinateArray$$JsonObjectMapper._serialize(jsonTwitterPlace.i, tfe, true);
+            afe.i("bounding_box");
+            JsonTwitterPlace$CoordinateArray$$JsonObjectMapper._serialize(jsonTwitterPlace.i, afe, true);
         }
         final double[] h = jsonTwitterPlace.h;
         if (h != null) {
-            tfe.i("centroid");
-            tfe.q0();
+            afe.i("centroid");
+            afe.p0();
             for (int length = h.length, i = 0; i < length; ++i) {
-                tfe.k(h[i]);
+                afe.k(h[i]);
             }
-            tfe.f();
+            afe.f();
         }
-        final vdv[] g = jsonTwitterPlace.g;
+        final qev[] g = jsonTwitterPlace.g;
         if (g != null) {
-            tfe.i("contained_within");
-            tfe.q0();
-            for (final vdv vdv : g) {
-                if (vdv != null) {
-                    LoganSquare.typeConverterFor((Class)vdv.class).serialize((Object)vdv, "lslocalcontained_withinElement", false, tfe);
+            afe.i("contained_within");
+            afe.p0();
+            for (final qev qev : g) {
+                if (qev != null) {
+                    LoganSquare.typeConverterFor((Class)qev.class).serialize((Object)qev, "lslocalcontained_withinElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("country", jsonTwitterPlace.e);
-        tfe.u0("country_code", jsonTwitterPlace.f);
-        tfe.u0("full_name", jsonTwitterPlace.a);
-        tfe.u0("id", jsonTwitterPlace.d);
-        tfe.u0("name", jsonTwitterPlace.b);
+        afe.t0("country", jsonTwitterPlace.e);
+        afe.t0("country_code", jsonTwitterPlace.f);
+        afe.t0("full_name", jsonTwitterPlace.a);
+        afe.t0("id", jsonTwitterPlace.d);
+        afe.t0("name", jsonTwitterPlace.b);
         if (jsonTwitterPlace.c != null) {
-            LoganSquare.typeConverterFor((Class)vdv$b.class).serialize((Object)jsonTwitterPlace.c, "place_type", true, tfe);
+            LoganSquare.typeConverterFor((Class)qev.b.class).serialize((Object)jsonTwitterPlace.c, "place_type", true, afe);
         }
         if (jsonTwitterPlace.k != null) {
-            LoganSquare.typeConverterFor((Class)vpw.class).serialize((Object)jsonTwitterPlace.k, "vendor_info", true, tfe);
+            LoganSquare.typeConverterFor((Class)pqw.class).serialize((Object)jsonTwitterPlace.k, "vendor_info", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTwitterPlace jsonTwitterPlace, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTwitterPlace jsonTwitterPlace, final String s, final tge tge) throws IOException {
         if ("attributes".equals(s)) {
-            jsonTwitterPlace.j = JsonTwitterPlace$JsonPlaceAttributes$$JsonObjectMapper._parse(khe);
+            jsonTwitterPlace.j = JsonTwitterPlace$JsonPlaceAttributes$$JsonObjectMapper._parse(tge);
         }
         else if ("bounding_box".equals(s)) {
-            jsonTwitterPlace.i = JsonTwitterPlace$CoordinateArray$$JsonObjectMapper._parse(khe);
+            jsonTwitterPlace.i = JsonTwitterPlace$CoordinateArray$$JsonObjectMapper._parse(tge);
         }
         else if ("centroid".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList list = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    list.add(khe.p());
+                while (tge.h0() != vie.O0) {
+                    list.add(tge.p());
                 }
                 final double[] h = new double[list.size()];
                 int n = 0;
@@ -105,48 +105,56 @@ public final class JsonTwitterPlace$$JsonObjectMapper extends JsonMapper<JsonTwi
             }
         }
         else if ("contained_within".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList list2 = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final vdv vdv = (vdv)LoganSquare.typeConverterFor((Class)vdv.class).parse(khe);
-                    if (vdv != null) {
-                        list2.add(vdv);
+                while (tge.h0() != vie.O0) {
+                    final qev qev = (qev)LoganSquare.typeConverterFor((Class)qev.class).parse(tge);
+                    if (qev != null) {
+                        list2.add(qev);
                     }
                 }
-                jsonTwitterPlace.g = list2.toArray(new vdv[list2.size()]);
+                jsonTwitterPlace.g = list2.toArray(new qev[list2.size()]);
             }
             else {
                 jsonTwitterPlace.g = null;
             }
         }
         else if ("country".equals(s)) {
-            jsonTwitterPlace.e = khe.T((String)null);
+            jsonTwitterPlace.e = tge.T((String)null);
         }
         else if ("country_code".equals(s)) {
-            jsonTwitterPlace.f = khe.T((String)null);
+            jsonTwitterPlace.f = tge.T((String)null);
         }
         else if ("full_name".equals(s)) {
-            jsonTwitterPlace.a = khe.T((String)null);
+            jsonTwitterPlace.a = tge.T((String)null);
         }
         else if ("id".equals(s)) {
-            jsonTwitterPlace.d = khe.T((String)null);
+            jsonTwitterPlace.d = tge.T((String)null);
         }
         else if ("name".equals(s)) {
-            jsonTwitterPlace.b = khe.T((String)null);
+            jsonTwitterPlace.b = tge.T((String)null);
         }
         else if ("place_type".equals(s)) {
-            jsonTwitterPlace.c = (vdv$b)LoganSquare.typeConverterFor((Class)vdv$b.class).parse(khe);
+            jsonTwitterPlace.c = (qev.b)LoganSquare.typeConverterFor((Class)qev.b.class).parse(tge);
         }
         else if ("vendor_info".equals(s)) {
-            jsonTwitterPlace.k = (vpw)LoganSquare.typeConverterFor((Class)vpw.class).parse(khe);
+            jsonTwitterPlace.k = (pqw)LoganSquare.typeConverterFor((Class)pqw.class).parse(tge);
         }
     }
     
-    public JsonTwitterPlace parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTwitterPlace parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTwitterPlace jsonTwitterPlace, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTwitterPlace, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTwitterPlace jsonTwitterPlace, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTwitterPlace, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTwitterPlace)o, afe, b);
     }
 }

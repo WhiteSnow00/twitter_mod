@@ -4,5 +4,5 @@
 
 public interface fsm
 {
-    void a();
+    void d();
 }

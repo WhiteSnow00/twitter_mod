@@ -7,51 +7,59 @@ package com.twitter.model.json.timeline.urt;
 import java.io.IOException;
 import com.bluelinelabs.logansquare.JsonMapper;
 
-public final class JsonTweetHighlights$JsonTweetHighlight$$JsonObjectMapper extends JsonMapper<JsonTweetHighlights.JsonTweetHighlight>
+public final class JsonTweetHighlights$JsonTweetHighlight$$JsonObjectMapper extends JsonMapper<JsonTweetHighlights$JsonTweetHighlight>
 {
-    public static JsonTweetHighlights.JsonTweetHighlight _parse(final khe khe) throws IOException {
-        final JsonTweetHighlights.JsonTweetHighlight jsonTweetHighlight = new JsonTweetHighlights.JsonTweetHighlight();
-        if (khe.e() == null) {
-            khe.i0();
+    public static JsonTweetHighlights$JsonTweetHighlight _parse(final tge tge) throws IOException {
+        final JsonTweetHighlights$JsonTweetHighlight jsonTweetHighlights$JsonTweetHighlight = new JsonTweetHighlights$JsonTweetHighlight();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTweetHighlight, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTweetHighlights$JsonTweetHighlight, d, tge);
+            tge.l0();
         }
-        return jsonTweetHighlight;
+        return jsonTweetHighlights$JsonTweetHighlight;
     }
     
-    public static void _serialize(final JsonTweetHighlights.JsonTweetHighlight jsonTweetHighlight, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTweetHighlights$JsonTweetHighlight jsonTweetHighlights$JsonTweetHighlight, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.T("endIndex", jsonTweetHighlight.b);
-        tfe.T("startIndex", jsonTweetHighlight.a);
+        afe.T("endIndex", jsonTweetHighlights$JsonTweetHighlight.b);
+        afe.T("startIndex", jsonTweetHighlights$JsonTweetHighlight.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTweetHighlights.JsonTweetHighlight jsonTweetHighlight, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTweetHighlights$JsonTweetHighlight jsonTweetHighlights$JsonTweetHighlight, final String s, final tge tge) throws IOException {
         if ("endIndex".equals(s)) {
-            jsonTweetHighlight.b = khe.z();
+            jsonTweetHighlights$JsonTweetHighlight.b = tge.y();
         }
         else if ("startIndex".equals(s)) {
-            jsonTweetHighlight.a = khe.z();
+            jsonTweetHighlights$JsonTweetHighlight.a = tge.y();
         }
     }
     
-    public JsonTweetHighlights.JsonTweetHighlight parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTweetHighlights$JsonTweetHighlight parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTweetHighlights.JsonTweetHighlight jsonTweetHighlight, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTweetHighlight, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTweetHighlights$JsonTweetHighlight jsonTweetHighlights$JsonTweetHighlight, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTweetHighlights$JsonTweetHighlight, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTweetHighlights$JsonTweetHighlight)o, afe, b);
     }
 }

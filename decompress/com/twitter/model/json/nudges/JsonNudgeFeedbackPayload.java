@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNudgeFeedbackPayload extends lhh<zzi>
+public class JsonNudgeFeedbackPayload extends qhh<f0j>
 {
     @JsonField
     public String a;
@@ -28,17 +28,16 @@ public class JsonNudgeFeedbackPayload extends lhh<zzi>
     @JsonField
     public String h;
     
-    @Override
-    public final h4j t() {
-        final zzi$a zzi$a = new zzi$a();
-        zzi$a.a = this.a;
-        zzi$a.b = this.b;
-        zzi$a.c = this.c;
-        zzi$a.d = this.d;
-        zzi$a.e = this.e;
-        zzi$a.f = this.f;
-        zzi$a.g = this.g;
-        zzi$a.h = this.h;
-        return (h4j)zzi$a;
+    public final n4j t() {
+        final f0j$a f0j$a = new f0j$a();
+        f0j$a.a = this.a;
+        f0j$a.b = this.b;
+        f0j$a.c = this.c;
+        f0j$a.d = this.d;
+        f0j$a.e = this.e;
+        f0j$a.f = this.f;
+        f0j$a.g = this.g;
+        f0j$a.h = this.h;
+        return (n4j)f0j$a;
     }
 }

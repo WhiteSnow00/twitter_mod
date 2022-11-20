@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNotificationMentionEntity extends lhh<h4h>
+public class JsonNotificationMentionEntity extends qhh<i4h>
 {
     @JsonField
     public int[] a;
@@ -24,16 +24,15 @@ public class JsonNotificationMentionEntity extends lhh<h4h>
         this.a = new int[] { -1, -1 };
     }
     
-    @Override
-    public final h4j t() {
-        final h4h$a h4h$a = new h4h$a();
-        final int[] a = this.a;
-        ((d7a.a)h4h$a).b = a[0];
-        final int a2 = w4j.a;
-        ((d7a.a)h4h$a).c = a[1];
-        h4h$a.e = this.b;
-        h4h$a.d = this.c;
-        h4h$a.f = this.d;
-        return (h4j)h4h$a;
+    public final n4j t() {
+        final i4h.a a = new i4h.a();
+        final int[] a2 = this.a;
+        a.b = a2[0];
+        final int a3 = c5j.a;
+        a.c = a2[1];
+        a.e = this.b;
+        a.d = this.c;
+        a.f = this.d;
+        return (n4j)a;
     }
 }

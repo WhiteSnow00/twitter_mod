@@ -15,108 +15,108 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonChoiceSelection$$JsonObjectMapper extends JsonMapper<JsonChoiceSelection>
 {
-    public static final j94 CHOICE_SELECTION_STYLE_TYPE_CONVERTER;
+    public static final m84 CHOICE_SELECTION_STYLE_TYPE_CONVERTER;
     
     static {
-        CHOICE_SELECTION_STYLE_TYPE_CONVERTER = new j94();
+        CHOICE_SELECTION_STYLE_TYPE_CONVERTER = new m84();
     }
     
-    public static JsonChoiceSelection _parse(final khe khe) throws IOException {
+    public static JsonChoiceSelection _parse(final tge tge) throws IOException {
         final JsonChoiceSelection jsonChoiceSelection = new JsonChoiceSelection();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonChoiceSelection, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonChoiceSelection, d, tge);
+            tge.l0();
         }
         return jsonChoiceSelection;
     }
     
-    public static void _serialize(final JsonChoiceSelection jsonChoiceSelection, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonChoiceSelection jsonChoiceSelection, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList a = jsonChoiceSelection.a;
         if (a != null) {
-            final Iterator g = q1a.g(tfe, "choices", a);
-            while (g.hasNext()) {
-                final t94 t94 = g.next();
-                if (t94 != null) {
-                    LoganSquare.typeConverterFor((Class)t94.class).serialize((Object)t94, "lslocalchoicesElement", false, tfe);
+            final Iterator a2 = br.A(afe, "choices", a);
+            while (a2.hasNext()) {
+                final v84 v84 = a2.next();
+                if (v84 != null) {
+                    LoganSquare.typeConverterFor((Class)v84.class).serialize((Object)v84, "lslocalchoicesElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (jsonChoiceSelection.o != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonChoiceSelection.o, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonChoiceSelection.o, afe, true);
         }
         if (jsonChoiceSelection.i != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceSelection.i, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceSelection.i, afe, true);
         }
         if (jsonChoiceSelection.n != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)jsonChoiceSelection.n, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)jsonChoiceSelection.n, "header", true, afe);
         }
         if (jsonChoiceSelection.e != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonChoiceSelection.e, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonChoiceSelection.e, "next_link", true, afe);
         }
         if (jsonChoiceSelection.g != null) {
-            LoganSquare.typeConverterFor((Class)abi.class).serialize((Object)jsonChoiceSelection.g, "next_link_options", true, tfe);
+            LoganSquare.typeConverterFor((Class)cbi.class).serialize((Object)jsonChoiceSelection.g, "next_link_options", true, afe);
         }
         if (jsonChoiceSelection.m != null) {
-            LoganSquare.typeConverterFor((Class)tdj.class).serialize((Object)jsonChoiceSelection.m, "primary_selection", true, tfe);
+            LoganSquare.typeConverterFor((Class)ydj.class).serialize((Object)jsonChoiceSelection.m, "primary_selection", true, afe);
         }
         if (jsonChoiceSelection.c != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceSelection.c, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceSelection.c, afe, true);
         }
         if (jsonChoiceSelection.k != null) {
-            LoganSquare.typeConverterFor((Class)h94.class).serialize((Object)jsonChoiceSelection.k, "search", true, tfe);
+            LoganSquare.typeConverterFor((Class)k84.class).serialize((Object)jsonChoiceSelection.k, "search", true, afe);
         }
         if (jsonChoiceSelection.d != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceSelection.d, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonChoiceSelection.d, afe, true);
         }
         final ArrayList h = jsonChoiceSelection.h;
         if (h != null) {
-            final Iterator g2 = q1a.g(tfe, "selected_choices", h);
-            while (g2.hasNext()) {
-                tfe.s0((String)g2.next());
+            final Iterator a3 = br.A(afe, "selected_choices", h);
+            while (a3.hasNext()) {
+                afe.r0((String)a3.next());
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("selection_type", jsonChoiceSelection.b);
+        afe.t0("selection_type", jsonChoiceSelection.b);
         if (jsonChoiceSelection.l != null) {
-            LoganSquare.typeConverterFor((Class)ioh.class).serialize((Object)jsonChoiceSelection.l, "show_more", true, tfe);
+            LoganSquare.typeConverterFor((Class)noh.class).serialize((Object)jsonChoiceSelection.l, "show_more", true, afe);
         }
         if (jsonChoiceSelection.f != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonChoiceSelection.f, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonChoiceSelection.f, "skip_link", true, afe);
         }
-        final i94 j = jsonChoiceSelection.j;
+        final l84 j = jsonChoiceSelection.j;
         if (j != null) {
-            ((StringBasedTypeConverter)JsonChoiceSelection$$JsonObjectMapper.CHOICE_SELECTION_STYLE_TYPE_CONVERTER).serialize((Object)j, "style", true, tfe);
+            ((StringBasedTypeConverter)JsonChoiceSelection$$JsonObjectMapper.CHOICE_SELECTION_STYLE_TYPE_CONVERTER).serialize((Object)j, "style", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonChoiceSelection jsonChoiceSelection, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonChoiceSelection jsonChoiceSelection, final String s, final tge tge) throws IOException {
         if ("choices".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final t94 t94 = (t94)LoganSquare.typeConverterFor((Class)t94.class).parse(khe);
-                    if (t94 != null) {
-                        a.add(t94);
+                while (tge.h0() != vie.O0) {
+                    final v84 v84 = (v84)LoganSquare.typeConverterFor((Class)v84.class).parse(tge);
+                    if (v84 != null) {
+                        a.add(v84);
                     }
                 }
                 jsonChoiceSelection.a = a;
@@ -126,39 +126,39 @@ public final class JsonChoiceSelection$$JsonObjectMapper extends JsonMapper<Json
             }
         }
         else if ("component_collection".equals(s)) {
-            jsonChoiceSelection.o = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonChoiceSelection.o = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            jsonChoiceSelection.i = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonChoiceSelection.i = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("header".equals(s)) {
-            jsonChoiceSelection.n = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            jsonChoiceSelection.n = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonChoiceSelection.e = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonChoiceSelection.e = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link_options".equals(s)) {
-            jsonChoiceSelection.g = (abi)LoganSquare.typeConverterFor((Class)abi.class).parse(khe);
+            jsonChoiceSelection.g = (cbi)LoganSquare.typeConverterFor((Class)cbi.class).parse(tge);
         }
         else if ("primary_selection".equals(s)) {
-            jsonChoiceSelection.m = (tdj)LoganSquare.typeConverterFor((Class)tdj.class).parse(khe);
+            jsonChoiceSelection.m = (ydj)LoganSquare.typeConverterFor((Class)ydj.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonChoiceSelection.c = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonChoiceSelection.c = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("search".equals(s)) {
-            jsonChoiceSelection.k = (h94)LoganSquare.typeConverterFor((Class)h94.class).parse(khe);
+            jsonChoiceSelection.k = (k84)LoganSquare.typeConverterFor((Class)k84.class).parse(tge);
         }
         else if ("secondary_text".equals(s)) {
-            jsonChoiceSelection.d = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonChoiceSelection.d = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("selected_choices".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList h = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final String t95 = khe.T((String)null);
-                    if (t95 != null) {
-                        h.add(t95);
+                while (tge.h0() != vie.O0) {
+                    final String t = tge.T((String)null);
+                    if (t != null) {
+                        h.add(t);
                     }
                 }
                 jsonChoiceSelection.h = h;
@@ -168,24 +168,32 @@ public final class JsonChoiceSelection$$JsonObjectMapper extends JsonMapper<Json
             }
         }
         else if ("selection_type".equals(s)) {
-            jsonChoiceSelection.b = khe.T((String)null);
+            jsonChoiceSelection.b = tge.T((String)null);
         }
         else if ("show_more".equals(s)) {
-            jsonChoiceSelection.l = (ioh)LoganSquare.typeConverterFor((Class)ioh.class).parse(khe);
+            jsonChoiceSelection.l = (noh)LoganSquare.typeConverterFor((Class)noh.class).parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            jsonChoiceSelection.f = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonChoiceSelection.f = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("style".equals(s)) {
-            jsonChoiceSelection.j = (i94)((StringBasedTypeConverter)JsonChoiceSelection$$JsonObjectMapper.CHOICE_SELECTION_STYLE_TYPE_CONVERTER).parse(khe);
+            jsonChoiceSelection.j = (l84)((StringBasedTypeConverter)JsonChoiceSelection$$JsonObjectMapper.CHOICE_SELECTION_STYLE_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonChoiceSelection parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonChoiceSelection parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonChoiceSelection jsonChoiceSelection, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonChoiceSelection, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonChoiceSelection jsonChoiceSelection, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonChoiceSelection, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonChoiceSelection)o, afe, b);
     }
 }

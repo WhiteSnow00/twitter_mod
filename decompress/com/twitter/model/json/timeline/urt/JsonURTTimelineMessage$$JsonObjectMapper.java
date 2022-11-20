@@ -12,64 +12,64 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonURTTimelineMessage$$JsonObjectMapper extends JsonMapper<JsonURTTimelineMessage>
 {
-    public static final fzs TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER;
+    public static final vzs TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER;
     
     static {
-        TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER = new fzs();
+        TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER = new vzs();
     }
     
-    public static JsonURTTimelineMessage _parse(final khe khe) throws IOException {
+    public static JsonURTTimelineMessage _parse(final tge tge) throws IOException {
         final JsonURTTimelineMessage jsonURTTimelineMessage = new JsonURTTimelineMessage();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonURTTimelineMessage, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonURTTimelineMessage, d, tge);
+            tge.l0();
         }
         return jsonURTTimelineMessage;
     }
     
-    public static void _serialize(final JsonURTTimelineMessage jsonURTTimelineMessage, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonURTTimelineMessage jsonURTTimelineMessage, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList b2 = jsonURTTimelineMessage.b;
         if (b2 != null) {
-            final Iterator g = q1a.g(tfe, "impressionCallbacks", b2);
-            while (g.hasNext()) {
-                final lnv lnv = g.next();
-                if (lnv != null) {
-                    LoganSquare.typeConverterFor((Class)lnv.class).serialize((Object)lnv, "lslocalimpressionCallbacksElement", false, tfe);
+            final Iterator a = br.A(afe, "impressionCallbacks", b2);
+            while (a.hasNext()) {
+                final jov jov = a.next();
+                if (jov != null) {
+                    LoganSquare.typeConverterFor((Class)jov.class).serialize((Object)jov, "lslocalimpressionCallbacksElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        final tqv a = jsonURTTimelineMessage.a;
-        if (a == null) {
+        final orv a2 = jsonURTTimelineMessage.a;
+        if (a2 == null) {
             if (b) {
-                tfe.h();
+                afe.h();
             }
             return;
         }
-        ((twj<tqv>)JsonURTTimelineMessage$$JsonObjectMapper.TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER).serialize(a, "content", true, tfe);
+        ((ywj<orv>)JsonURTTimelineMessage$$JsonObjectMapper.TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER).serialize(a2, "content", true, afe);
         throw null;
     }
     
-    public static void parseField(final JsonURTTimelineMessage jsonURTTimelineMessage, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonURTTimelineMessage jsonURTTimelineMessage, final String s, final tge tge) throws IOException {
         if ("impressionCallbacks".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList b = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final lnv lnv = (lnv)LoganSquare.typeConverterFor((Class)lnv.class).parse(khe);
-                    if (lnv != null) {
-                        b.add(lnv);
+                while (tge.h0() != vie.O0) {
+                    final jov jov = (jov)LoganSquare.typeConverterFor((Class)jov.class).parse(tge);
+                    if (jov != null) {
+                        b.add(jov);
                     }
                 }
                 jsonURTTimelineMessage.b = b;
@@ -79,15 +79,23 @@ public final class JsonURTTimelineMessage$$JsonObjectMapper extends JsonMapper<J
             }
         }
         else if ("content".equals(s)) {
-            jsonURTTimelineMessage.a = (tqv)((age)JsonURTTimelineMessage$$JsonObjectMapper.TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER).parse(khe);
+            jsonURTTimelineMessage.a = ((hfe<orv>)JsonURTTimelineMessage$$JsonObjectMapper.TIMELINE_MESSAGE_PROMPT_UNION_CONVERTER).parse(tge);
         }
     }
     
-    public JsonURTTimelineMessage parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonURTTimelineMessage parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonURTTimelineMessage jsonURTTimelineMessage, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonURTTimelineMessage, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonURTTimelineMessage jsonURTTimelineMessage, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonURTTimelineMessage, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonURTTimelineMessage)o, afe, b);
     }
 }

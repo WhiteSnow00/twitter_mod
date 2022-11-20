@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonConfigEventBuilder extends lhh<nf6>
+public class JsonConfigEventBuilder extends qhh<se6>
 {
     @JsonField
     public String a;
@@ -18,12 +18,11 @@ public class JsonConfigEventBuilder extends lhh<nf6>
     @JsonField
     public long c;
     
-    @Override
-    public final h4j t() {
-        final nf6$a nf6$a = new nf6$a();
-        nf6$a.c = this.a;
-        nf6$a.d = this.b;
-        nf6$a.e = this.c;
-        return (h4j)nf6$a;
+    public final n4j t() {
+        final se6$a se6$a = new se6$a();
+        se6$a.c = this.a;
+        se6$a.d = this.b;
+        se6$a.e = this.c;
+        return (n4j)se6$a;
     }
 }

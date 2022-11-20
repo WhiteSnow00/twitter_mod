@@ -516,6 +516,18 @@
         <item quantity="one">%s Suscriptor</item>
         <item quantity="other">%s Suscriptores</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">día</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">mes</item>
+        <item quantity="other">%d meses</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">año</item>
+        <item quantity="other">%d años</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dd</item>
         <item quantity="other">%dd</item>

@@ -1,29 +1,20 @@
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kkn implements oax
+public final class kkn extends ste implements qsb<xkn, fzv>
 {
-    public final List<min> a;
+    public final ikn D0;
     
-    public kkn(final List<min> a) {
-        this.a = a;
+    public kkn(final ikn d0) {
+        this.D0 = d0;
+        super(1);
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || (o instanceof kkn && zzd.a((Object)this.a, (Object)((kkn)o).a));
-    }
-    
-    @Override
-    public final int hashCode() {
-        return this.a.hashCode();
-    }
-    
-    @Override
-    public final String toString() {
-        return du1.x("RoomFollowPodcastWrapperViewState(listItems=", (List)this.a, ")");
+    public final Object invoke(final Object o) {
+        final xkn xkn = (xkn)o;
+        czd.f((Object)xkn, "$this$distinct");
+        ((ai8)this.D0.D0).d((n3e)new ckf((Iterable)xkn.a));
+        return fzv.a;
     }
 }

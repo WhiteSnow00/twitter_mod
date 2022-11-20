@@ -1,21 +1,22 @@
-import java.util.List;
+import android.widget.TextView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ghn extends gue implements rtb<ihn, ihn>
+public final class ghn extends ste implements qsb<whn, fzv>
 {
-    public final /* synthetic */ List<c0r> C0;
+    public final lgn D0;
     
-    public ghn(final List<? extends c0r> c0) {
-        this.C0 = (List<c0r>)c0;
+    public ghn(final lgn d0) {
+        this.D0 = d0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final ihn ihn = (ihn)o;
-        zzd.f((Object)ihn, "$this$setState");
-        return ihn.l(ihn, (List)this.C0, (String)null, (x21)null, false, (lh5)null, 8159);
+        final whn whn = (whn)o;
+        czd.f((Object)whn, "$this$distinct");
+        ((TextView)this.D0.T0).setText((CharSequence)whn.h);
+        return fzv.a;
     }
 }

@@ -455,6 +455,18 @@
         <item quantity="one">%s ಚಂದಾದಾರ</item>
         <item quantity="other">%s ಚಂದಾದಾರರು</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">ದಿನ</item>
+        <item quantity="other">%d ದಿನಗಳು</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">ತಿಂಗಳು</item>
+        <item quantity="other">%d ತಿಂಗಳುಗಳು</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">ವರ್ಷ</item>
+        <item quantity="other">%d ವರ್ಷಗಳು</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dದಿ</item>
         <item quantity="other">%dದಿ</item>

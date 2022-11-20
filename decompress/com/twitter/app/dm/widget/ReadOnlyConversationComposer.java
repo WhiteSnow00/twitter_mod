@@ -21,10 +21,10 @@ public class ReadOnlyConversationComposer extends RelativeLayout
         text.append((CharSequence)" ");
         final int length = text.length();
         text.append((CharSequence)context.getString(2131954538));
-        final int j = goz.J(context, 2130968591);
-        text.setSpan((Object)new yzl(j, j, context), length, text.length(), 33);
+        final int i = d4j.i(context, 2130968591);
+        text.setSpan((Object)new n0m(i, i, context), length, text.length(), 33);
         final TextView textView = (TextView)((View)this).findViewById(2131428978);
-        lzq.c(textView);
+        f0r.c(textView);
         textView.setText((CharSequence)text);
     }
 }

@@ -1,72 +1,28 @@
-import android.content.Context;
+import com.twitter.model.json.onboarding.ocf.subtasks.input.JsonFetchTopicsRequestInput;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ktt extends a1c
+public final class ktt extends ste implements qsb<String, pnl<? extends msm<awa, kbv>>>
 {
-    public final gst t1;
-    public final String u1;
+    public final mtt D0;
     
-    public ktt(final ybv ybv, final fxe<e1c> fxe, final aws aws, final qrs qrs, final zh7<vo6> zh7, final udf<nws> udf, final dsb dsb, final rpd rpd, final zoi<nws> zoi, final Context context, final uc uc, final exs exs, final g0t g0t, final x3e<nws> x3e, final pca<bo> pca, final adx adx, final alj alj, final jev jev, final gst t1) {
-        zzd.f((Object)ybv, "dependencies");
-        zzd.f((Object)fxe, "genericTimelinePresenter");
-        zzd.f((Object)aws, "timelineIdentifier");
-        zzd.f((Object)qrs, "args");
-        zzd.f((Object)zh7, "dmComposeHandler");
-        zzd.f((Object)udf, "lingerImpressionHelper");
-        zzd.f((Object)dsb, "friendshipCache");
-        zzd.f((Object)rpd, "inlineDismissController");
-        zzd.f((Object)zoi, "itemCollectionProvider");
-        zzd.f((Object)context, "applicationContext");
-        zzd.f((Object)uc, "mediaPrefetcher");
-        zzd.f((Object)exs, "timelineItemScribeReporter");
-        zzd.f((Object)g0t, "timelinePinnedHeaderAdapter");
-        zzd.f((Object)x3e, "itemBinderDirectory");
-        zzd.f((Object)pca, "results");
-        zzd.f((Object)adx, "viewportController");
-        zzd.f((Object)alj, "oneOffTimelineCleanUpJob");
-        zzd.f((Object)jev, "scribeAssociation");
-        zzd.f((Object)t1, "topicsPctTracker");
-        super(ybv, fxe, aws, qrs, zh7, udf, dsb, rpd, zoi, context, uc, exs, g0t, x3e, pca, adx, alj, jev);
-        this.t1 = t1;
-        this.u1 = ((zl1)qrs).g("page_title");
+    public ktt(final mtt d0) {
+        this.D0 = d0;
+        super(1);
     }
     
-    @Override
-    public final void M0() {
-        if (this.F0()) {
-            final gst t1 = this.t1;
-            final String u1 = this.u1;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("topic-management-page-tab-load-");
-            sb.append(u1);
-            t1.b(sb.toString());
-        }
-        super.M0();
-    }
-    
-    @Override
-    public final void O0(final i4e<nws> i4e) {
-        zzd.f((Object)i4e, "items");
-        super.O0(i4e);
-        final gst t1 = this.t1;
-        final String u1 = this.u1;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("topic-management-page-tab-load-");
-        sb.append(u1);
-        t1.b(sb.toString());
-    }
-    
-    @Override
-    public final void S0() {
-        final gst t1 = this.t1;
-        final String u1 = this.u1;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("topic-management-page-tab-load-");
-        sb.append(u1);
-        t1.a(sb.toString());
-        super.S0();
+    public final Object invoke(final Object o) {
+        final String d = (String)o;
+        czd.f((Object)d, "searchQuery");
+        final uaq a = this.D0.a;
+        final JsonFetchTopicsRequestInput jsonFetchTopicsRequestInput = new JsonFetchTopicsRequestInput();
+        final acs b = this.D0.b;
+        jsonFetchTopicsRequestInput.a = b.b;
+        jsonFetchTopicsRequestInput.b = b.a.a;
+        jsonFetchTopicsRequestInput.d = d;
+        jsonFetchTopicsRequestInput.e = false;
+        return a.R((Object)jsonFetchTopicsRequestInput).N();
     }
 }

@@ -516,6 +516,18 @@
         <item quantity="one">%s জন সাবস্ক্রাইবার</item>
         <item quantity="other">%s জন সাবস্ক্রাইবার</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">দিন</item>
+        <item quantity="other">%d দিন</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">মাস</item>
+        <item quantity="other">%d মাস</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">বছর</item>
+        <item quantity="other">%d বছর</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d দিঃ</item>
         <item quantity="other">%d দিঃ</item>

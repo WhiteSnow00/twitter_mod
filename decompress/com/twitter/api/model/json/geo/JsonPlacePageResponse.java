@@ -11,55 +11,52 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonPlacePageResponse extends aih<xdv>
+public class JsonPlacePageResponse extends fih<sev>
 {
     @JsonField
-    public xdv$a a;
+    public sev$a a;
     @JsonField
-    public xdv$b b;
+    public sev$b b;
     @JsonField
-    public xdv$b c;
+    public sev$b c;
     
-    @Override
     public final Object s() {
-        return new xdv(this.a, this.c);
+        return new sev(this.a, this.c);
     }
     
     @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-    public static class JsonPlacePageHeader extends aih<xdv$a>
+    public static class JsonPlacePageHeader extends fih<sev$a>
     {
         @JsonField
-        public vdv a;
+        public qev a;
         
-        @Override
         public final Object s() {
-            final vdv a = this.a;
+            final qev a = this.a;
             Object o;
             if (a == null) {
                 o = null;
             }
             else {
-                o = new xdv$a(a);
+                o = new sev$a(a);
             }
             return o;
         }
     }
     
     @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-    public static class JsonPlacePageTimeline extends aih<xdv$b>
+    public static class JsonPlacePageTimeline extends fih<sev$b>
     {
         @JsonField
         public String a;
         @JsonField
-        public List<rh0> b;
+        public List<nh0> b;
         
-        @Override
         public final Object s() {
             final String a = this.a;
             if (a != null) {
                 final ArrayList b = this.b;
                 if (b != null) {
-                    return new xdv$b(a, (List)b);
+                    return new sev$b(a, (List)b);
                 }
             }
             return null;

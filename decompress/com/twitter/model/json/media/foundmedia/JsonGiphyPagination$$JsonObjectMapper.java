@@ -9,53 +9,61 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonGiphyPagination$$JsonObjectMapper extends JsonMapper<JsonGiphyPagination>
 {
-    public static JsonGiphyPagination _parse(final khe khe) throws IOException {
+    public static JsonGiphyPagination _parse(final tge tge) throws IOException {
         final JsonGiphyPagination jsonGiphyPagination = new JsonGiphyPagination();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonGiphyPagination, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonGiphyPagination, d, tge);
+            tge.l0();
         }
         return jsonGiphyPagination;
     }
     
-    public static void _serialize(final JsonGiphyPagination jsonGiphyPagination, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonGiphyPagination jsonGiphyPagination, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.T("count", jsonGiphyPagination.b);
-        tfe.T("offset", jsonGiphyPagination.c);
-        tfe.T("total_count", jsonGiphyPagination.a);
+        afe.T("count", jsonGiphyPagination.b);
+        afe.T("offset", jsonGiphyPagination.c);
+        afe.T("total_count", jsonGiphyPagination.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonGiphyPagination jsonGiphyPagination, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonGiphyPagination jsonGiphyPagination, final String s, final tge tge) throws IOException {
         if ("count".equals(s)) {
-            jsonGiphyPagination.b = khe.z();
+            jsonGiphyPagination.b = tge.y();
         }
         else if ("offset".equals(s)) {
-            jsonGiphyPagination.c = khe.z();
+            jsonGiphyPagination.c = tge.y();
         }
         else if ("total_count".equals(s)) {
-            jsonGiphyPagination.a = khe.z();
+            jsonGiphyPagination.a = tge.y();
         }
     }
     
-    public JsonGiphyPagination parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonGiphyPagination parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonGiphyPagination jsonGiphyPagination, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonGiphyPagination, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonGiphyPagination jsonGiphyPagination, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonGiphyPagination, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonGiphyPagination)o, afe, b);
     }
 }

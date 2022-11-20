@@ -6,7 +6,7 @@ package com.twitter.app.legacy.di;
 
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 
-@l4j
+@r4j
 public interface AbsPreferenceViewObjectGraph extends ViewObjectGraph
 {
 }

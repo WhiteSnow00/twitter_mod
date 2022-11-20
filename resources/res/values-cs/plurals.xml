@@ -522,6 +522,18 @@
         <item quantity="one">%s předplatitel</item>
         <item quantity="other">Počet předplatitelů: %s</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">den</item>
+        <item quantity="other">%d d.</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">měsíc</item>
+        <item quantity="other">%d měs.</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">rok</item>
+        <item quantity="other">%d r.</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d d</item>
         <item quantity="other">%d d</item>

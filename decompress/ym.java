@@ -1,7 +1,13 @@
+import android.content.Intent;
+import android.app.Activity;
+import android.content.Context;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ym extends ggm<snj<qzf>>
+@Deprecated
+public interface ym
 {
+    Intent toIntent(final Context p0, final Class<? extends Activity> p1);
 }

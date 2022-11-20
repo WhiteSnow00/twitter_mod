@@ -6,4 +6,5 @@ import android.content.BroadcastReceiver;
 
 public final class jrg extends BroadcastReceiver
 {
+    public static final int a = 0;
 }

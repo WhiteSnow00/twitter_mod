@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTwitterPlace$JsonPlaceAttributes$$JsonObjectMapper extends JsonMapper<JsonTwitterPlace.JsonPlaceAttributes>
 {
-    public static JsonTwitterPlace.JsonPlaceAttributes _parse(final khe khe) throws IOException {
+    public static JsonTwitterPlace.JsonPlaceAttributes _parse(final tge tge) throws IOException {
         final JsonTwitterPlace.JsonPlaceAttributes jsonPlaceAttributes = new JsonTwitterPlace.JsonPlaceAttributes();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonPlaceAttributes, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonPlaceAttributes, d, tge);
+            tge.l0();
         }
         return jsonPlaceAttributes;
     }
     
-    public static void _serialize(final JsonTwitterPlace.JsonPlaceAttributes jsonPlaceAttributes, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTwitterPlace.JsonPlaceAttributes jsonPlaceAttributes, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("twitter", jsonPlaceAttributes.b);
-        tfe.u0("street_address", jsonPlaceAttributes.a);
+        afe.t0("twitter", jsonPlaceAttributes.b);
+        afe.t0("street_address", jsonPlaceAttributes.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTwitterPlace.JsonPlaceAttributes jsonPlaceAttributes, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTwitterPlace.JsonPlaceAttributes jsonPlaceAttributes, final String s, final tge tge) throws IOException {
         if ("twitter".equals(s)) {
-            jsonPlaceAttributes.b = khe.T((String)null);
+            jsonPlaceAttributes.b = tge.T((String)null);
         }
         else if ("street_address".equals(s)) {
-            jsonPlaceAttributes.a = khe.T((String)null);
+            jsonPlaceAttributes.a = tge.T((String)null);
         }
     }
     
-    public JsonTwitterPlace.JsonPlaceAttributes parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTwitterPlace.JsonPlaceAttributes parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTwitterPlace.JsonPlaceAttributes jsonPlaceAttributes, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonPlaceAttributes, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTwitterPlace.JsonPlaceAttributes jsonPlaceAttributes, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonPlaceAttributes, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTwitterPlace.JsonPlaceAttributes)o, afe, b);
     }
 }

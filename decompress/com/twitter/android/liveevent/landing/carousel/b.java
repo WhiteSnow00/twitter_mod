@@ -8,30 +8,22 @@ import java.util.List;
 
 public final class b
 {
-    public final evf a;
-    public final rzf b;
+    public final puf a;
+    public final czf b;
     public a c;
     
-    public b(final evf a, final rzf b) {
-        this.c = com.twitter.android.liveevent.landing.carousel.b.a.o0;
+    public b(final puf a, final czf b) {
+        this.c = (a)com.twitter.android.liveevent.landing.carousel.b.a.p0;
         this.a = a;
         this.b = b;
     }
     
     public interface a
     {
-        public static final b$a$a o0 = new a() {
-            @Override
-            public final void D() {
-            }
-            
-            @Override
-            public final void O(final List<dm3> list) {
-            }
-        };
+        public static final b$a$a p0 = new b$a$a();
         
-        void D();
+        void F();
         
-        void O(final List<dm3> p0);
+        void P(final List<ll3> p0);
     }
 }

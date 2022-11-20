@@ -1,19 +1,14 @@
+import java.util.AbstractMap;
+import java.util.Map;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public enum acm
+public final class acm extends akr<Integer>
 {
-    C0;
-    
-    public static final a Companion;
-    
-    static {
-        Companion = new a();
-        final hx6$h a = hx6.a;
-    }
-    
-    public static final class a
-    {
+    public acm() {
+        final Integer value = 2;
+        super((Object)value, new Map.Entry[] { (Map.Entry)new AbstractMap.SimpleImmutableEntry("Normal", 1), (Map.Entry)new AbstractMap.SimpleImmutableEntry("Compact", value), (Map.Entry)new AbstractMap.SimpleImmutableEntry("Large", 3), (Map.Entry)new AbstractMap.SimpleImmutableEntry("ThumbsUpAndDown", 4) });
     }
 }

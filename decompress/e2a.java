@@ -1,33 +1,36 @@
+import java.util.List;
 import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e2a implements is2
+public final class e2a implements f1f
 {
-    public static final e2a C0;
-    public static final long D0;
-    public static final tve E0;
-    public static final ep8 F0;
+    public static final e2a a;
     
     static {
-        C0 = new e2a();
-        Objects.requireNonNull(mcq.Companion);
-        D0 = mcq.c;
-        E0 = tve.C0;
-        F0 = new ep8(1.0f, 1.0f);
+        a = new e2a();
+        Objects.requireNonNull(ltd.Companion);
     }
     
-    public final long c() {
-        return e2a.D0;
+    @Override
+    public final int a() {
+        return 0;
     }
     
-    public final dp8 getDensity() {
-        return (dp8)e2a.F0;
+    @Override
+    public final List<o0f> b() {
+        return (List<o0f>)f2a.D0;
     }
     
-    public final tve getLayoutDirection() {
-        return e2a.E0;
+    @Override
+    public final int e() {
+        return 0;
+    }
+    
+    @Override
+    public final int f() {
+        return 0;
     }
 }

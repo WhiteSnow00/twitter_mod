@@ -13,71 +13,71 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonActionList$$JsonObjectMapper extends JsonMapper<JsonActionList>
 {
-    public static final ok ACTION_LIST_STYLE_TYPE_CONVERTER;
+    public static final lk ACTION_LIST_STYLE_TYPE_CONVERTER;
     
     static {
-        ACTION_LIST_STYLE_TYPE_CONVERTER = new ok();
+        ACTION_LIST_STYLE_TYPE_CONVERTER = new lk();
     }
     
-    public static JsonActionList _parse(final khe khe) throws IOException {
+    public static JsonActionList _parse(final tge tge) throws IOException {
         final JsonActionList list = new JsonActionList();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(list, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(list, d, tge);
+            tge.l0();
         }
         return list;
     }
     
-    public static void _serialize(final JsonActionList list, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonActionList list, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList d = list.d;
         if (d != null) {
-            final Iterator g = q1a.g(tfe, "action_items", d);
-            while (g.hasNext()) {
-                final hk hk = g.next();
-                if (hk != null) {
-                    LoganSquare.typeConverterFor((Class)hk.class).serialize((Object)hk, "lslocalaction_itemsElement", false, tfe);
+            final Iterator a = br.A(afe, "action_items", d);
+            while (a.hasNext()) {
+                final ek ek = a.next();
+                if (ek != null) {
+                    LoganSquare.typeConverterFor((Class)ek.class).serialize((Object)ek, "lslocalaction_itemsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (list.c != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)list.c, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)list.c, "header", true, afe);
         }
         if (list.a != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)list.a, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)list.a, "next_link", true, afe);
         }
         if (list.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)list.b, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)list.b, "skip_link", true, afe);
         }
-        final qk.c e = list.e;
+        final nk$c e = list.e;
         if (e != null) {
-            ((StringBasedTypeConverter)JsonActionList$$JsonObjectMapper.ACTION_LIST_STYLE_TYPE_CONVERTER).serialize((Object)e, "style", true, tfe);
+            ((StringBasedTypeConverter)JsonActionList$$JsonObjectMapper.ACTION_LIST_STYLE_TYPE_CONVERTER).serialize((Object)e, "style", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonActionList list, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonActionList list, final String s, final tge tge) throws IOException {
         if ("action_items".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList d = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final hk hk = (hk)LoganSquare.typeConverterFor((Class)hk.class).parse(khe);
-                    if (hk != null) {
-                        d.add(hk);
+                while (tge.h0() != vie.O0) {
+                    final ek ek = (ek)LoganSquare.typeConverterFor((Class)ek.class).parse(tge);
+                    if (ek != null) {
+                        d.add(ek);
                     }
                 }
                 list.d = d;
@@ -87,24 +87,32 @@ public final class JsonActionList$$JsonObjectMapper extends JsonMapper<JsonActio
             }
         }
         else if ("header".equals(s)) {
-            list.c = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            list.c = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            list.a = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            list.a = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            list.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            list.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("style".equals(s)) {
-            list.e = (qk.c)((StringBasedTypeConverter)JsonActionList$$JsonObjectMapper.ACTION_LIST_STYLE_TYPE_CONVERTER).parse(khe);
+            list.e = (nk$c)((StringBasedTypeConverter)JsonActionList$$JsonObjectMapper.ACTION_LIST_STYLE_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonActionList parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonActionList parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonActionList list, final tfe tfe, final boolean b) throws IOException {
-        _serialize(list, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonActionList list, final afe afe, final boolean b) throws IOException {
+        _serialize(list, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonActionList)o, afe, b);
     }
 }

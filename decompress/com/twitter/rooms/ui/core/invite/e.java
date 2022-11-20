@@ -8,20 +8,20 @@ import java.util.Map;
 import java.util.Set;
 import java.util.List;
 
-public final class e extends gue implements rtb<ipn, ipn>
+public final class e extends ste implements qsb<wpn, wpn>
 {
-    public final /* synthetic */ List<mon> C0;
-    public final /* synthetic */ Set<hon> D0;
+    public final List<zon> D0;
+    public final Set<uon> E0;
     
-    public e(final List<mon> c0, final Set<hon> d0) {
-        this.C0 = c0;
+    public e(final List<zon> d0, final Set<uon> e0) {
         this.D0 = d0;
+        this.E0 = e0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final ipn ipn = (ipn)o;
-        zzd.f((Object)ipn, "$this$setState");
-        return ipn.l(ipn, (ton)null, (List)this.C0, (Integer)null, false, (Set)this.D0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
+        final wpn wpn = (wpn)o;
+        czd.f((Object)wpn, "$this$setState");
+        return wpn.l(wpn, (gpn)null, (List)this.D0, (Integer)null, false, (Set)this.E0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
     }
 }

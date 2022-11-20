@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonSmsVerifyCompleteResponse extends ige
+public class JsonSmsVerifyCompleteResponse extends qfe
 {
     @JsonField(name = { "is_valid" })
     public boolean a;

@@ -11,64 +11,72 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonScribeCallback$$JsonObjectMapper extends JsonMapper<JsonScribeCallback>
 {
-    public static final y93 CALLBACK_TRIGGER_TYPE_CONVERTER;
+    public static final r93 CALLBACK_TRIGGER_TYPE_CONVERTER;
     
     static {
-        CALLBACK_TRIGGER_TYPE_CONVERTER = new y93();
+        CALLBACK_TRIGGER_TYPE_CONVERTER = new r93();
     }
     
-    public static JsonScribeCallback _parse(final khe khe) throws IOException {
+    public static JsonScribeCallback _parse(final tge tge) throws IOException {
         final JsonScribeCallback jsonScribeCallback = new JsonScribeCallback();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonScribeCallback, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonScribeCallback, d, tge);
+            tge.l0();
         }
         return jsonScribeCallback;
     }
     
-    public static void _serialize(final JsonScribeCallback jsonScribeCallback, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonScribeCallback jsonScribeCallback, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("endpoint", jsonScribeCallback.b);
+        afe.t0("endpoint", jsonScribeCallback.b);
         if (jsonScribeCallback.c != null) {
-            LoganSquare.typeConverterFor((Class)bej.class).serialize((Object)jsonScribeCallback.c, "scribe_config", true, tfe);
+            LoganSquare.typeConverterFor((Class)gej.class).serialize((Object)jsonScribeCallback.c, "scribe_config", true, afe);
         }
-        final x93 a = jsonScribeCallback.a;
+        final q93 a = jsonScribeCallback.a;
         if (a != null) {
-            ((StringBasedTypeConverter)JsonScribeCallback$$JsonObjectMapper.CALLBACK_TRIGGER_TYPE_CONVERTER).serialize((Object)a, "trigger", true, tfe);
+            ((StringBasedTypeConverter)JsonScribeCallback$$JsonObjectMapper.CALLBACK_TRIGGER_TYPE_CONVERTER).serialize((Object)a, "trigger", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonScribeCallback jsonScribeCallback, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonScribeCallback jsonScribeCallback, final String s, final tge tge) throws IOException {
         if ("endpoint".equals(s)) {
-            jsonScribeCallback.b = khe.T((String)null);
+            jsonScribeCallback.b = tge.T((String)null);
         }
         else if ("scribe_config".equals(s)) {
-            jsonScribeCallback.c = (bej)LoganSquare.typeConverterFor((Class)bej.class).parse(khe);
+            jsonScribeCallback.c = (gej)LoganSquare.typeConverterFor((Class)gej.class).parse(tge);
         }
         else if ("trigger".equals(s)) {
-            jsonScribeCallback.a = (x93)((StringBasedTypeConverter)JsonScribeCallback$$JsonObjectMapper.CALLBACK_TRIGGER_TYPE_CONVERTER).parse(khe);
+            jsonScribeCallback.a = (q93)((StringBasedTypeConverter)JsonScribeCallback$$JsonObjectMapper.CALLBACK_TRIGGER_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonScribeCallback parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonScribeCallback parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonScribeCallback jsonScribeCallback, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonScribeCallback, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonScribeCallback jsonScribeCallback, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonScribeCallback, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonScribeCallback)o, afe, b);
     }
 }

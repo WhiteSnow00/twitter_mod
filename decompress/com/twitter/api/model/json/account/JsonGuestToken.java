@@ -9,21 +9,20 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonGuestToken extends aih<lac>
+public class JsonGuestToken extends fih<l9c>
 {
     @JsonField
     public String a;
     
-    @Override
     public final Object s() {
         final String a = this.a;
-        lac lac;
+        l9c l9c;
         if (a != null) {
-            lac = new lac(a);
+            l9c = new l9c(a);
         }
         else {
-            lac = null;
+            l9c = null;
         }
-        return lac;
+        return l9c;
     }
 }

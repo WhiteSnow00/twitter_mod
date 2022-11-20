@@ -11,7 +11,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonPhoneVerification extends lhh<cck>
+public class JsonPhoneVerification extends qhh<hck>
 {
     @JsonField
     public JsonOcfRichText a;
@@ -22,49 +22,48 @@ public class JsonPhoneVerification extends lhh<cck>
     @JsonField
     public String d;
     @JsonField
-    public kcj e;
+    public pcj e;
     @JsonField
-    public xrv f;
+    public ssv f;
     @JsonField
-    public xrv g;
+    public ssv g;
     @JsonField
-    public xrv h;
+    public ssv h;
     @JsonField
     public String i;
     @JsonField
     public boolean j;
     @JsonField
-    public kcj k;
+    public pcj k;
     @JsonField
     public Integer l;
     @JsonField
     public JsonOcfComponentCollection m;
     
-    @Override
-    public final h4j t() {
-        final cck$a cck$a = new cck$a();
-        ((lsr$a)cck$a).f = JsonOcfRichText.s(this.a);
-        final int a = w4j.a;
-        ((lsr$a)cck$a).g = JsonOcfRichText.s(this.b);
-        ((kdk$a)cck$a).k = JsonOcfRichText.s(this.c);
-        ((kdk$a)cck$a).l = this.d;
-        cck$a.n = this.i;
-        cck$a.o = this.e;
-        cck$a.p = this.j;
-        cck$a.q = this.k;
-        ((lsr$a)cck$a).a = this.f;
-        ((lsr$a)cck$a).c = this.g;
-        ((kdk$a)cck$a).m = this.h;
-        cck$a.r = this.l;
+    public final n4j t() {
+        final hck$a hck$a = new hck$a();
+        ((dtr$a)hck$a).f = JsonOcfRichText.s(this.a);
+        final int a = c5j.a;
+        ((dtr$a)hck$a).g = JsonOcfRichText.s(this.b);
+        ((qdk.a)hck$a).k = JsonOcfRichText.s(this.c);
+        ((qdk.a)hck$a).l = this.d;
+        hck$a.n = this.i;
+        hck$a.o = this.e;
+        hck$a.p = this.j;
+        hck$a.q = this.k;
+        ((dtr$a)hck$a).a = this.f;
+        ((dtr$a)hck$a).c = this.g;
+        ((qdk.a)hck$a).m = this.h;
+        hck$a.r = this.l;
         final JsonOcfComponentCollection m = this.m;
-        n16 t;
+        x06 t;
         if (m != null) {
             t = m.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)cck$a).j = t;
-        return (h4j)cck$a;
+        ((dtr$a)hck$a).j = t;
+        return (n4j)hck$a;
     }
 }

@@ -522,6 +522,18 @@
         <item quantity="one">%s odberateľ</item>
         <item quantity="other">Odberatelia: %s</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">deň</item>
+        <item quantity="other">%d d.</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">mesiac</item>
+        <item quantity="other">%d mes.</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">rok</item>
+        <item quantity="other">%d r.</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d d.</item>
         <item quantity="other">%d d.</item>

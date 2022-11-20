@@ -1,15 +1,16 @@
-import com.google.android.exoplayer2.ExoPlaybackException;
-import com.google.android.exoplayer2.n;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface ffm
+public final class ffm
 {
-    int e(final n p0) throws ExoPlaybackException;
+    public static final a Companion;
     
-    String getName();
+    static {
+        Companion = new a();
+    }
     
-    int u() throws ExoPlaybackException;
+    public static final class a
+    {
+    }
 }

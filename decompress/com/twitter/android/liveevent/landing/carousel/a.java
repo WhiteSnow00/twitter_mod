@@ -14,10 +14,10 @@ public final class a
 {
     public static final e Companion;
     public final com.twitter.android.liveevent.landing.scribe.a a;
-    public final zau b;
-    public final x5d c;
+    public final sbu b;
+    public final c5d c;
     public final Rect d;
-    public final ConcurrentHashMap<c7x, d> e;
+    public final ConcurrentHashMap<v7x, d> e;
     public final ConcurrentHashMap<String, c> f;
     public final ConcurrentSkipListSet<String> g;
     
@@ -25,34 +25,34 @@ public final class a
         Companion = new e();
     }
     
-    public a(final com.twitter.android.liveevent.landing.scribe.a a, final zau b, final x5d c, final f f, final ibm ibm) {
-        zzd.f((Object)a, "scribeClient");
-        zzd.f((Object)b, "clock");
-        zzd.f((Object)c, "visibilityCalculator");
-        zzd.f((Object)f, "periodicImpressionEmitter");
-        zzd.f((Object)ibm, "releaseCompletable");
+    public a(final com.twitter.android.liveevent.landing.scribe.a a, final sbu b, final c5d c, final f f, final xbm xbm) {
+        czd.f((Object)a, "scribeClient");
+        czd.f((Object)b, "clock");
+        czd.f((Object)c, "visibilityCalculator");
+        czd.f((Object)f, "periodicImpressionEmitter");
+        czd.f((Object)xbm, "releaseCompletable");
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = new Rect();
-        final m29 m29 = new m29();
-        this.e = (ConcurrentHashMap<c7x, d>)new ConcurrentHashMap();
+        final w19 w19 = new w19();
+        this.e = (ConcurrentHashMap<v7x, d>)new ConcurrentHashMap();
         this.f = (ConcurrentHashMap<String, c>)new ConcurrentHashMap();
         this.g = new ConcurrentSkipListSet<String>();
-        final l7j a2 = f.a;
-        zzd.e((Object)a2, "emitter");
-        m29.c(((b5j)a2).subscribe((fk6)new tna((rtb)new a$a(this), 4), (fk6)new sna((rtb)a$b.C0, 4)));
-        ibm.i((rj)new fsf(m29, 0));
+        final r7j a2 = f.a;
+        czd.e((Object)a2, "emitter");
+        w19.c(((h5j)a2).subscribe((lj6)new sma((qsb)new a$a(this), 4), (lj6)new tma((qsb)a$b.D0, 4)));
+        xbm.i((oj)new srf(w19, 0));
     }
     
     public final void a(final c c) {
         final com.twitter.android.liveevent.landing.scribe.a a = this.a;
         final int c2 = c.c;
         Objects.requireNonNull(a);
-        final nca g = nca.g("live_event_timeline", "", "", "", "tile_impression");
-        final txf l = a.l(a.i);
+        final vba g = vba.g("live_event_timeline", "", "", "", "tile_impression");
+        final fxf l = a.l(a.i);
         l.l = c2;
-        a.o(g, (szo)l.a());
+        a.o(g, (j0p)l.a());
         this.g.add(c.a);
         this.f.remove((Object)c.a);
     }
@@ -64,7 +64,7 @@ public final class a
         public final int c;
         
         public c(final String a, final long b, final int c) {
-            zzd.f((Object)a, "carouselItemId");
+            czd.f((Object)a, "carouselItemId");
             this.a = a;
             this.b = b;
             this.c = c;
@@ -79,7 +79,7 @@ public final class a
                 return false;
             }
             final c c = (c)o;
-            return zzd.a((Object)this.a, (Object)c.a) && this.b == c.b && this.c == c.c;
+            return czd.a((Object)this.a, (Object)c.a) && this.b == c.b && this.c == c.c;
         }
         
         @Override
@@ -94,11 +94,11 @@ public final class a
             final String a = this.a;
             final long b = this.b;
             final int c = this.c;
-            final StringBuilder i = hfe.i("CarouselImpressionCandidate(carouselItemId=", a, ", startTime=", b);
-            i.append(", position=");
-            i.append(c);
-            i.append(")");
-            return i.toString();
+            final StringBuilder l = fu8.l("CarouselImpressionCandidate(carouselItemId=", a, ", startTime=", b);
+            l.append(", position=");
+            l.append(c);
+            l.append(")");
+            return l.toString();
         }
     }
     
@@ -121,7 +121,7 @@ public final class a
                 return false;
             }
             final d d = (d)o;
-            return zzd.a((Object)this.a, (Object)d.a) && this.b == d.b;
+            return czd.a((Object)this.a, (Object)d.a) && this.b == d.b;
         }
         
         @Override
@@ -149,11 +149,11 @@ public final class a
     
     public static final class f
     {
-        public final b5j<Long> a;
+        public final h5j<Long> a;
         
         public f() {
             final TimeUnit milliseconds = TimeUnit.MILLISECONDS;
-            this.a = new l7j((bnl)new ibb(hab.c()));
+            this.a = new r7j((pnl)new fab(e9b.c()));
         }
     }
 }

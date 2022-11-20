@@ -516,6 +516,18 @@
         <item quantity="one">สมาชิก %s คน</item>
         <item quantity="other">สมาชิก %s คน</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">วัน</item>
+        <item quantity="other">%d วัน</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">เดือน</item>
+        <item quantity="other">%d เดือน</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">ปี</item>
+        <item quantity="other">%d ปี</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dd</item>
         <item quantity="other">%dd</item>

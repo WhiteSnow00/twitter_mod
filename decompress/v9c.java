@@ -1,97 +1,74 @@
-import com.google.gson.internal.bind.TypeAdapters;
-import com.google.gson.internal.bind.TreeTypeAdapter;
-import com.google.gson.TypeAdapter;
-import com.google.gson.internal.bind.DefaultDateTypeAdapter$b;
-import com.google.gson.internal.sql.a;
-import java.util.Collections;
-import java.util.Collection;
-import com.google.gson.Gson;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.lang.reflect.Type;
-import java.util.Map;
-import com.google.gson.internal.Excluder;
+import android.graphics.drawable.Drawable;
+import android.widget.ImageView;
+import android.graphics.Rect;
+import android.graphics.Matrix;
+import android.view.View;
+import android.graphics.Bitmap;
+import com.twitter.media.ui.image.MediaImageView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class v9c
+public final class v9c implements mrm$b
 {
-    public Excluder a;
-    public lcg.lcg$a b;
-    public pxa$a c;
-    public final Map<Type, jtd<?>> d;
-    public final List<ghv> e;
-    public final List<ghv> f;
-    public int g;
-    public int h;
-    public boolean i;
-    public boolean j;
-    public boolean k;
-    public xet$a l;
-    public xet$b m;
+    public final j67 D0;
+    public final edq E0;
+    public final MediaImageView F0;
     
-    public v9c() {
-        this.a = Excluder.H0;
-        this.b = lcg.C0;
-        this.c = pxa.C0;
-        this.d = new HashMap();
-        this.e = new ArrayList();
-        this.f = new ArrayList();
-        final ekv n = Gson.n;
-        this.g = 2;
-        this.h = 2;
-        this.i = false;
-        this.j = true;
-        this.k = true;
-        this.l = xet.C0;
-        this.m = xet.D0;
+    public v9c(final j67 d0, final edq e0, final MediaImageView f0) {
+        this.D0 = d0;
+        this.E0 = e0;
+        this.F0 = f0;
     }
     
-    public final Gson a() {
-        final ArrayList list = new ArrayList(this.f.size() + this.e.size() + 3);
-        list.addAll(this.e);
-        Collections.reverse(list);
-        final ArrayList list2 = new ArrayList(this.f);
-        Collections.reverse(list2);
-        list.addAll(list2);
-        final int g = this.g;
-        final int h = this.h;
-        final boolean a = com.google.gson.internal.sql.a.a;
-        if (g != 2 && h != 2) {
-            final ghv a2 = ((DefaultDateTypeAdapter$b)DefaultDateTypeAdapter$b.b).a(g, h);
-            ghv a3 = null;
-            ghv a4;
-            if (a) {
-                a3 = ((DefaultDateTypeAdapter$b)com.google.gson.internal.sql.a.c).a(g, h);
-                a4 = ((DefaultDateTypeAdapter$b)com.google.gson.internal.sql.a.b).a(g, h);
+    public final void f(final nrm nrm) {
+        final j67 d0 = this.D0;
+        final edq e0 = this.E0;
+        final MediaImageView f0 = this.F0;
+        final b8d b8d = (b8d)nrm;
+        if (((nrm)b8d).b != null) {
+            edq a = e0;
+            if (e0.i()) {
+                a = q60.a((Bitmap)((nrm)b8d).b);
+            }
+            final edq b = q60.b((View)f0, true);
+            final m53 a2 = n67.a;
+            Rect rect;
+            if (d0 != null) {
+                rect = n67.a(d0.e, b, d0.a());
             }
             else {
-                a4 = null;
+                rect = wng.l(a, b, false);
             }
-            list.add(a2);
-            if (a) {
-                list.add(a3);
-                list.add(a4);
+            final ImageView imageView = f0.getImageView();
+            Matrix transformationMatrix;
+            if (imageView.getDrawable() != null) {
+                final Drawable drawable = imageView.getDrawable();
+                final m53 a3 = n67.a;
+                final int width = ((View)imageView).getWidth();
+                final int height = ((View)imageView).getHeight();
+                final int intrinsicWidth = drawable.getIntrinsicWidth();
+                final int intrinsicHeight = drawable.getIntrinsicHeight();
+                ((Matrix)a3.E0).getValues((float[])a3.F0);
+                final float n = (float)intrinsicWidth;
+                final float n2 = (float)intrinsicHeight;
+                final float n3 = n / n2;
+                final int n4 = (int)(width / n3);
+                final float n5 = (float)(int)xm1.f((float)n4, (float)rect.height());
+                final float n6 = (int)(n3 * n5) / n;
+                final float n7 = n5 / n2;
+                final int n8 = (height - n4) / 2;
+                final float f2 = xm1.f(0.0f, (float)rect.left);
+                final float f3 = xm1.f((float)n8, (float)rect.top);
+                ((Matrix)a3.E0).setScale(n6, n7);
+                ((Matrix)a3.E0).postTranslate(f2, f3);
+                transformationMatrix = (Matrix)a3.E0;
             }
+            else {
+                transformationMatrix = null;
+            }
+            f0.setTransformationMatrix(transformationMatrix);
         }
-        return new Gson(this.a, (qxa)this.c, (Map)this.d, this.j, this.i, this.k, (lcg)this.b, (List)this.e, (List)this.f, (List)list, (yet)this.l, (yet)this.m);
-    }
-    
-    public final v9c b(final Type type, final Object o) {
-        final boolean b = o instanceof nie;
-        q0b.e(b || o instanceof vee || o instanceof jtd || o instanceof TypeAdapter);
-        if (o instanceof jtd) {
-            this.d.put(type, o);
-        }
-        if (b || o instanceof vee) {
-            this.e.add(TreeTypeAdapter.a(new ekv(type), o));
-        }
-        if (o instanceof TypeAdapter) {
-            this.e.add(TypeAdapters.a(new ekv(type), (TypeAdapter)o));
-        }
-        return this;
     }
 }

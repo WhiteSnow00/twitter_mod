@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFoundMediaOrigin$$JsonObjectMapper extends JsonMapper<JsonFoundMediaOrigin>
 {
-    public static JsonFoundMediaOrigin _parse(final khe khe) throws IOException {
+    public static JsonFoundMediaOrigin _parse(final tge tge) throws IOException {
         final JsonFoundMediaOrigin jsonFoundMediaOrigin = new JsonFoundMediaOrigin();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFoundMediaOrigin, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFoundMediaOrigin, d, tge);
+            tge.l0();
         }
         return jsonFoundMediaOrigin;
     }
     
-    public static void _serialize(final JsonFoundMediaOrigin jsonFoundMediaOrigin, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFoundMediaOrigin jsonFoundMediaOrigin, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("id", jsonFoundMediaOrigin.a);
-        tfe.u0("provider", jsonFoundMediaOrigin.b);
+        afe.t0("id", jsonFoundMediaOrigin.a);
+        afe.t0("provider", jsonFoundMediaOrigin.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFoundMediaOrigin jsonFoundMediaOrigin, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFoundMediaOrigin jsonFoundMediaOrigin, final String s, final tge tge) throws IOException {
         if ("id".equals(s)) {
-            jsonFoundMediaOrigin.a = khe.T((String)null);
+            jsonFoundMediaOrigin.a = tge.T((String)null);
         }
         else if ("provider".equals(s)) {
-            jsonFoundMediaOrigin.b = khe.T((String)null);
+            jsonFoundMediaOrigin.b = tge.T((String)null);
         }
     }
     
-    public JsonFoundMediaOrigin parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFoundMediaOrigin parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFoundMediaOrigin jsonFoundMediaOrigin, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFoundMediaOrigin, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFoundMediaOrigin jsonFoundMediaOrigin, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFoundMediaOrigin, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFoundMediaOrigin)o, afe, b);
     }
 }

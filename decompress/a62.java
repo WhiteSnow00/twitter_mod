@@ -2,19 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class a62 extends gue implements rtb<b62, b62>
+public final class a62 extends kkl
 {
-    public final /* synthetic */ int C0;
+    public static final a62 D0;
     
-    public a62(final int c0) {
-        this.C0 = c0;
-        super(1);
+    static {
+        D0 = new a62();
     }
     
-    public final Object invoke(final Object o) {
-        zzd.f((Object)o, "$this$setState");
-        final int c0 = this.C0;
-        k1b.i(c0, "shownView");
-        return new b62(c0);
+    public a62() {
+        super((Class)c62.class, "shownView", "getShownView()Lcom/twitter/app/bookmarks/folders/navigation/BookmarkNavigation$Screen;", 0);
+    }
+    
+    public final Object get(final Object o) {
+        return ((c62)o).a;
     }
 }

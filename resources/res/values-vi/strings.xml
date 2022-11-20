@@ -210,8 +210,13 @@
     <string name="activity_tab_mentions_empty_state_description_no_mentions">Khi ai đó trên Twitter đề cập đến bạn trong một Tweet hoặc trả lời, bạn sẽ tìm thấy ở đây.</string>
     <string name="activity_tab_mentions_empty_state_description_no_mentions_from_people_you_follow">Khi ai đó bạn đang theo dõi đề cập đến bạn trong một Tweet, bạn sẽ thấy tại đây.</string>
     <string name="activity_tab_super_follows_description">Những lượt thích, đề cập, Tweet lại, và nhiều hơn nữa — khi đến từ Người siêu theo dõi của bạn, bạn sẽ tìm thấy ở đây.</string>
-    <string name="activity_tab_vit_description">Thông báo về các Tweet mới, Tweet lại, đề xuất, và nhiều loại khác từ những tài khoản đã xác nhận sẽ xuất hiện ở đây.</string>
-    <string name="activity_tab_vit_title">Hãy là người đầu tiên biết</string>
+    <string name="activity_tab_vit_button">Tìm hiểu thêm</string>
+    <string name="activity_tab_vit_description">Các lượt thích, đề cập, Tweet lại, và nhiều hơn nữa — đến từ tài khoản đã xác nhận sẽ hiển thị ở đây.{{}}Tìm hiểu thêm{{}}</string>
+    <string name="activity_tab_vit_description_blue_available">Các lượt thích, đề cập, Tweet lại, và nhiều hơn nữa — đến từ tài khoản đã xác nhận khác sẽ hiển thị ở đây.{{}}Tìm hiểu thêm{{}}\10\10Vẫn chưa được xác nhận tài khoản? Hãy đăng ký ngay để được xác nhận tài khoản và tham gia các cuộc trò chuyện chất lượng với nhiều người khác.</string>
+    <string name="activity_tab_vit_subscribe_button">Đăng ký</string>
+    <string name="activity_tab_vit_subscribe_with_price_month">%1$s/tháng</string>
+    <string name="activity_tab_vit_subscribe_with_price_year">%1$s/năm</string>
+    <string name="activity_tab_vit_title">Chưa có nội dung gì để xem ở đây</string>
     <string name="activity_view_hidden_replies_empty_title">Trả lời chưa được ẩn cho chuỗi hội thoại này</string>
     <string name="activity_view_moderated_replies_empty_desc">Tweet này không có trả lời ẩn nào, nhưng các Tweet được bảo vệ có thể bị lọc bỏ. {{}}Tìm hiểu thêm{{}}</string>
     <string name="activity_view_moderated_replies_empty_title">Không có gì để xem ở đây</string>
@@ -545,8 +550,8 @@
     <string name="billing_error_modal_title">Hãy cập nhật phương thức thanh toán của bạn</string>
     <string name="birdwatch_dialog_home_button">Trang chủ</string>
     <string name="birdwatch_dialog_my_notes_button">Ghi chú của tôi</string>
-    <string name="birdwatch_home_page_title">Birdwatch</string>
-    <string name="birdwatch_pivot_header_title">Birdwatch</string>
+    <string name="birdwatch_home_page_title">Ghi chép cho cộng đồng</string>
+    <string name="birdwatch_pivot_header_title">Ghi chép cho cộng đồng</string>
     <string name="birthday_not_today_month_day">Sinh vào %s</string>
     <string name="birthday_not_today_month_day_year">Sinh ngày %s</string>
     <string name="birthday_not_today_year_only">Sinh năm %d</string>
@@ -1900,7 +1905,7 @@
     <string name="drag_and_drop_reordering_tooltip_text">Nhấn giữ bất kỳ ảnh nào để di chuyển</string>
     <string name="drag_handle_label">Nhấp và kéo để sắp xếp lại</string>
     <string name="drawer_accounts_menu_header">Tài khoản</string>
-    <string name="drawer_birdwatch_title">Birdwatch</string>
+    <string name="drawer_birdwatch_title">Ghi chép cho cộng đồng</string>
     <string name="drawer_branded_likes_preview_title">Bản xem trước nút lượt thích gắn thương hiệu</string>
     <string name="drawer_communities_title">Cộng đồng</string>
     <string name="drawer_connect_title">Kết nối</string>
@@ -2028,7 +2033,7 @@
     <string name="edit_profile_remove_header">Xóa tiêu đề</string>
     <string name="edit_profile_switch_to_professional">Chuyển sang Chuyên nghiệp</string>
     <string name="edit_profile_take_photo">Chụp ảnh</string>
-    <string name="edit_profile_verified_phone">Đã xác nhận huy hiệu số điện thoại</string>
+    <string name="edit_profile_verified_phone">Dấu số điện thoại đã xác nhận</string>
     <string name="edit_profile_website">Trang web</string>
     <string name="edit_room_button">Chỉnh sửa</string>
     <string name="edit_rule">Sửa quy tắc</string>
@@ -2212,7 +2217,7 @@
     <string name="error_update_module_visibility">Đã xảy ra lỗi. Hãy thử lại.</string>
     <string name="error_uploading_header">Lỗi tải lên ảnh tiêu đề.</string>
     <string name="except_blocked_accounts_desc">Các tài khoản bạn đã chặn sẽ không thể tham gia. Tuy nhiên, những người chưa đăng nhập Twitter có thể nghe. {{}}Tìm hiểu thêm{{}}</string>
-    <string name="exclusive_focal_tweet_education_message">Bạn có thể nhìn thấy Tweet này và trả lời vì bạn Siêu theo dõi @%s</string>
+    <string name="exclusive_focal_tweet_education_message">Bạn có thể xem và trả lời Tweet này vì bạn đã Đăng ký theo dõi @%s</string>
     <string name="exclusive_focal_tweet_education_title">Bạn đang thấy nội dung của Super Follows</string>
     <string name="exclusive_space_access_info_sheet_message">Một trong những lợi ích của việc trở thành Người siêu theo dõi là được truy cập độc quyền vào các Phòng như thế này. Chỉ bạn và Người siêu theo dõi khác của @%s mới có thể tham gia Phòng này.</string>
     <string name="exclusive_space_access_info_sheet_message_generic">Một trong những lợi ích của việc trở thành Người siêu theo dõi là được truy cập độc quyền vào các Phòng như thế này. Chỉ bạn và Người siêu theo dõi khác của người sáng tạo nội dung này mới có thể tham gia Phòng này.</string>
@@ -2220,8 +2225,8 @@
     <string name="exclusive_space_non_sf_access_info_sheet_message">Một trong những lợi ích của việc trở thành Người siêu theo dõi là được truy cập độc quyền vào Spaces như thế này. Chỉ Người siêu theo dõi của @%s mới có thể tham gia Phòng này.</string>
     <string name="exclusive_space_non_sf_access_info_sheet_message_generic">Một trong những lợi ích của việc trở thành Người siêu theo dõi là được truy cập độc quyền vào Spaces như thế này. Chỉ Người siêu theo dõi của Người sáng tạo nội dung này mới có thể tham gia Phòng này.</string>
     <string name="exclusive_timeline_self_tweet_education_message">Bạn và những Người siêu theo dõi của bạn có thể nhìn thấy Tweet này</string>
-    <string name="exclusive_timeline_tweet_education_message">Bạn có thể nhìn thấy Tweet này vì bạn Siêu theo dõi @%s</string>
-    <string name="exclusive_tweet_reply_education_message">@%s và những Người siêu theo dõi của họ có thể nhìn thấy Tweet của bạn</string>
+    <string name="exclusive_timeline_tweet_education_message">Bạn có thể xem Tweet này vì bạn đã Đăng ký theo dõi @%s</string>
+    <string name="exclusive_tweet_reply_education_message">@%s và Người đăng ký theo dõi họ có thể xem Tweet của bạn</string>
     <string name="exclusive_tweet_reply_education_title">Ai có thể nhìn thấy Tweet này?</string>
     <string name="existing_member">Thành viên hiện tại</string>
     <string name="existing_member_community">Người này đã ở trong Cộng đồng.</string>
@@ -3106,6 +3111,9 @@
     <string name="manage_subscription_dialog_error_title">Lỗi</string>
     <string name="manage_subscription_pref_summary">Xem chi tiết thuê bao của bạn hoặc hủy bỏ.</string>
     <string name="manage_subscription_stripe_description">Có vẻ như bạn đã mua thuê bao này trên twitter.com. Bạn sẽ cần quản lý hoặc hủy thuê bao của mình khỏi nền tảng đó.</string>
+    <string name="manage_subscription_upgrade_available">Có sẵn bản nâng cấp</string>
+    <string name="manage_subscription_upgrade_new_perks">Được xác nhận tài khoản.</string>
+    <string name="manage_subscription_upgrade_twitter_blue">Nâng cấp Twitter Blue</string>
     <string name="manage_your_experience_desc">Bạn có thể chặn và báo cáo mọi người trong Phòng.</string>
     <string name="manage_your_experience_title">Quản lý trải nghiệm của bạn</string>
     <string name="map_price_free_subtitle">Miễn phí · %1$s</string>
@@ -4033,6 +4041,8 @@
     <string name="product_original_price_content_description">Giá gốc: %1$s</string>
     <string name="product_price_content_description">Giá: %1$s</string>
     <string name="product_report_message">Báo cáo đã được gửi\10Đội ngũ của chúng tôi sẽ xem xét ngay khi có thể.</string>
+    <string name="product_sign_up_button_text_with_period">Đăng ký với %1$s/%2$s</string>
+    <string name="product_sign_up_button_text_without_period">Đăng ký với %1$s</string>
     <string name="product_sign_up_with_price">Đăng ký với %1$s/tháng</string>
     <string name="product_unavailable_in_country">Cám ơn bạn đã quan tâm! Twitter Blue sẽ có tại nước bạn trong thời gian tới. Vui lòng kiểm tra lại sau.</string>
     <string name="product_unavailable_in_country_dialog_title">Cảm ơn bạn đã quan tâm!</string>
@@ -5927,6 +5937,7 @@
     <string name="settings_mute_block_item_title">Tắt tiếng và chặn</string>
     <string name="settings_muted_notifications">Thông báo bị tắt tiếng</string>
     <string name="settings_news_subtitle">Khám phá các tin tức phù hợp, đọc bài viết không chèn quảng cáo và ủng hộ trang báo mà bạn thích đọc.</string>
+    <string name="settings_news_subtitle_without_ads_free">Khám phá tin tức liên quan và trải nghiệm đọc chuỗi hội thoại mượt mà hơn.</string>
     <string name="settings_news_title">Trải nghiệm đọc tin tốt hơn</string>
     <string name="settings_no_location_permission_message">Cho phép định vị đối với Twitter bị tắt. Bật Cho phép định vị đối với Twitter trong {{}}Thông tin Ứng dụng{{}}.</string>
     <string name="settings_notif_timeline_title">Tweet</string>
@@ -6630,6 +6641,7 @@
     <string name="subscriptions_loading_error_title">Ồ, đã xảy ra lỗi. Vui lòng thử lại sau.</string>
     <string name="subscriptions_subscriber_header_title">Twitter Blue</string>
     <string name="subscriptions_support_label">Nhận hỗ trợ</string>
+    <string name="subscriptions_temporarily_disabled_message">Bạn chỉ có thể đăng ký trên ứng dụng Twitter iOS (hiện tại).</string>
     <string name="subscriptions_twitter_blue_profile_label">@twitterblue</string>
     <string name="subscriptions_welcome_okay_button_label">Ok</string>
     <string name="subscriptions_welcome_subtitle">Tùy chỉnh cài đặt và bắt đầu tận dụng tối đa thuê bao Twitter Blue của bạn.</string>
@@ -6644,12 +6656,12 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="sunday">Chủ Nhật</string>
     <string name="super_follow">Siêu theo dõi</string>
-    <string name="super_follow_badge_description">Cho phép ai cũng có thể nhìn thấy huy hiệu của Người siêu theo dõi khi bạn trả lời Tweet của @%1$s</string>
-    <string name="super_follow_badge_explanation">Khi bạn tắt tùy chọn này, @%1$s và Người siêu theo dõi họ sẽ vẫn thấy huy hiệu của bạn nếu bạn trả lời bất cứ Tweet nào chỉ dành cho Người siêu theo dõi của @%1$s. @%1$s sẽ luôn thấy huy hiệu của bạn.\10\10{{}}Tìm hiểu thêm{{}}</string>
+    <string name="super_follow_badge_description">Cho phép mọi người nhìn thấy huy hiệu Người đăng ký của bạn khi bạn trả lời Tweet của @%1$s</string>
+    <string name="super_follow_badge_explanation">Khi bạn tắt tùy chọn này, @%1$s và những Người đăng ký theo dõi họ sẽ vẫn thấy huy hiệu của bạn nếu bạn trả lời Tweet chỉ dành cho Người đăng ký của @%1$s. @%1$s sẽ luôn thấy huy hiệu của bạn.\10\10{{}}Tìm hiểu thêm{{}}</string>
     <string name="super_follow_badge_subtitle">Huy hiệu Người siêu theo dõi</string>
     <string name="super_follow_close">Đóng</string>
     <string name="super_follow_content_desc">Siêu theo dõi %1$s.</string>
-    <string name="super_follow_creator">Siêu theo dõi @%s</string>
+    <string name="super_follow_creator">Đăng ký theo dõi @%s</string>
     <string name="super_follow_manage_subscription">Quản lý thuê bao</string>
     <string name="super_follow_manage_subscription_already_cancelled_description">Nếu bạn đã hủy thuê bao, lợi ích của bạn sẽ tự động hết hạn vào cuối chu kỳ thanh toán.</string>
     <string name="super_follow_manage_subscription_already_cancelled_subtitle">Đã hủy thuê bao của bạn?</string>
@@ -7144,7 +7156,7 @@
     <string name="tweet_action_moderate">Ẩn trả lời</string>
     <string name="tweet_action_thread_reader_cta">Xem chuỗi hội thoại trong Trình đọc</string>
     <string name="tweet_action_unmoderate">Bỏ ẩn trả lời</string>
-    <string name="tweet_action_view_birdwatch_notes">Xem ghi chú của Birdwatch</string>
+    <string name="tweet_action_view_birdwatch_notes">Xem Ghi chép cho cộng đồng</string>
     <string name="tweet_action_view_moderated_tweets">Xem các câu trả lời ẩn</string>
     <string name="tweet_actions_disabled">Một số thao tác trên Tweet này đã bị Twitter vô hiệu hóa.</string>
     <string name="tweet_added_to_your_bookmarks">Tweet đã được thêm vào Dấu trang</string>
@@ -7393,6 +7405,7 @@
     <string name="upload_contacts_summary">Các liên hệ từ danh bạ của bạn sẽ được tải lên Twitter liên tục để giúp kết nối bạn với bạn bè và cá nhân hóa nội dung như việc đưa ra gợi ý cho bạn và người khác. Việc tắt đồng bộ hóa sẽ không xóa những liên hệ đã tải lên trước đó trong cài đặt của bạn. {{}}Tìm hiểu thêm{{}}</string>
     <string name="upsell_card_pill_text">Mới</string>
     <string name="upsell_card_title">Truy cập sớm để chỉnh sửa các Tweet của bạn. Giờ bạn có thể sửa các lỗi đánh máy kia.</string>
+    <string name="upsell_card_title_blue_verified">Bạn sẽ sớm hợp cạ với Blue ngay thôi. Hãy tận hưởng tài khoản đã xác nhận kèm dấu tích xanh hiển thị của mình nhé.</string>
     <string name="url_dm_abuse_interstitial_learn_more">https://help.twitter.com/safety-and-security/report-a-tweet</string>
     <string name="url_limit_tweet_error">Quá nhiều liên kết trong Tweet</string>
     <string name="use_a_temporary_password_message">Bạn sẽ cần tạo một mật khẩu tạm thời trên twitter.com để tiếp tục.</string>
@@ -7478,8 +7491,9 @@
     <string name="users_unblock_title">Bỏ chặn @%s?</string>
     <string name="v7_preference_off">TẮT</string>
     <string name="v7_preference_on">BẬT</string>
-    <string name="verification_education_desc">Tài khoản này đã được xác minh vì là tài khoản nổi bật trong danh mục chính phủ, tin tức, giải trí hoặc một danh mục được chỉ định khác.{{}}Tìm hiểu thêm{{}}</string>
-    <string name="verification_education_title">Thông tin tài khoản</string>
+    <string name="verification_education_blue_desc">Tài khoản này được xác nhận vì đã được đăng ký với Twitter Blue. {{}}Tìm hiểu thêm{{}}</string>
+    <string name="verification_education_desc">Tài khoản này đã được xác nhận vì là tài khoản nổi bật trong danh mục chính phủ, tin tức, giải trí hoặc một danh mục được chỉ định khác. {{}}Tìm hiểu thêm{{}}</string>
+    <string name="verification_education_title">Tài khoản đã xác nhận</string>
     <string name="verification_landing_active_card_text">Tài khoản của bạn phải hoạt động cùng với hồ sơ tuân thủ các quy tắc của Twitter, bao gồm hồ sơ hoàn chỉnh và phương thức liên hệ đã được xác nhận.</string>
     <string name="verification_landing_active_card_title">Đang diễn ra</string>
     <string name="verification_landing_authentic_card_text">Để duy trì lòng tin giữa những người dùng trên nền tảng, bạn cũng sẽ cần xác nhận danh tính của mình với Twitter để được Xác nhận.</string>
@@ -7512,9 +7526,9 @@
     <string name="verified_phone_off">Tắt</string>
     <string name="verified_phone_on">Bật</string>
     <string name="verified_phone_status_learn_more">Tìm hiểu thêm</string>
-    <string name="verified_phone_status_learn_more_title">Giới hạn khả năng hiển thị đối với những khách hàng tích cực sử dụng Twitter từ khu vực của bạn.</string>
-    <string name="verified_phone_status_title">Đã xác nhận huy hiệu số điện thoại</string>
-    <string name="verified_phone_status_toggle_title">Hiển thị danh mục trên hồ sơ</string>
+    <string name="verified_phone_status_learn_more_title">Thêm dấu xác nhận số điện thoại vào hồ sơ của bạn để cho thấy bạn đã xác nhận số điện thoại của bạn. Dấu này sẽ chỉ được hiển thị cho những người khác trong khu vực của bạn.</string>
+    <string name="verified_phone_status_title">Dấu số điện thoại đã xác nhận</string>
+    <string name="verified_phone_status_toggle_title">Hiển thị dấu số điện thoại đã xác nhận</string>
     <string name="verify_phone_change_number">Thay điện thoại của tôi</string>
     <string name="verify_phone_phone_already_verified">Điện thoại của bạn đã được xác nhận</string>
     <string name="vertical_grid_module_show_more_btn">Hiện thêm</string>

@@ -11,47 +11,46 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonGenericUrt extends lhh<l1c>
+public class JsonGenericUrt extends qhh<o0c>
 {
     @JsonField
-    public iej a;
+    public oej a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
     public JsonTimelineQuery c;
     @JsonField
     public String d;
     @JsonField
-    public bej e;
+    public gej e;
     @JsonField
-    public abi f;
+    public cbi f;
     @JsonField
-    public pcj g;
+    public ucj g;
     @JsonField
     public JsonOcfComponentCollection h;
     
-    @Override
-    public final h4j t() {
-        final l1c.a a = new l1c.a();
-        ((lsr$a)a).h = this.a;
-        final int a2 = w4j.a;
-        final xrv b = this.b;
-        pf8.r(b);
-        ((lsr$a)a).a = b;
-        a.k = JsonTimelineQuery.s(this.c);
-        a.l = this.d;
-        a.m = this.e;
-        a.n = this.f;
-        a.o = this.g;
+    public final n4j t() {
+        final o0c$a o0c$a = new o0c$a();
+        ((dtr$a)o0c$a).h = this.a;
+        final int a = c5j.a;
+        final ssv b = this.b;
+        jee.l((Object)b);
+        ((dtr$a)o0c$a).a = b;
+        ((am1$a)o0c$a).k = JsonTimelineQuery.s(this.c);
+        ((am1$a)o0c$a).l = this.d;
+        ((am1$a)o0c$a).m = this.e;
+        ((am1$a)o0c$a).n = this.f;
+        ((am1$a)o0c$a).o = this.g;
         final JsonOcfComponentCollection h = this.h;
-        n16 t;
+        x06 t;
         if (h != null) {
             t = h.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)a).j = t;
-        return (h4j)a;
+        ((dtr$a)o0c$a).j = t;
+        return (n4j)o0c$a;
     }
 }

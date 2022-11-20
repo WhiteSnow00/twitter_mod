@@ -13,18 +13,26 @@ import android.os.Parcelable;
 public class ParcelImpl implements Parcelable
 {
     public static final Parcelable$Creator<ParcelImpl> CREATOR;
-    public final xrw C0;
+    public final qsw D0;
     
     static {
-        CREATOR = (Parcelable$Creator)new ParcelImpl$a();
+        CREATOR = (Parcelable$Creator)new Parcelable$Creator<ParcelImpl>() {
+            public final Object createFromParcel(final Parcel parcel) {
+                return new ParcelImpl(parcel);
+            }
+            
+            public final Object[] newArray(final int n) {
+                return new ParcelImpl[n];
+            }
+        };
     }
     
     public ParcelImpl(final Parcel parcel) {
-        this.C0 = new wrw(parcel).o();
+        this.D0 = ((VersionedParcel)new psw(parcel)).o();
     }
     
-    public ParcelImpl(final xrw c0) {
-        this.C0 = c0;
+    public ParcelImpl(final qsw d0) {
+        this.D0 = d0;
     }
     
     public final int describeContents() {
@@ -32,6 +40,6 @@ public class ParcelImpl implements Parcelable
     }
     
     public final void writeToParcel(final Parcel parcel, final int n) {
-        new wrw(parcel).y(this.C0);
+        ((VersionedParcel)new psw(parcel)).y(this.D0);
     }
 }

@@ -12,7 +12,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonInterestPicker extends lhh<fwd>
+public class JsonInterestPicker extends qhh<ivd>
 {
     @JsonField
     public JsonOcfRichText a;
@@ -21,48 +21,47 @@ public class JsonInterestPicker extends lhh<fwd>
     @JsonField
     public JsonOcfRichText c;
     @JsonField
-    public List<rvd> d;
+    public List<uud> d;
     @JsonField
     public List<String> e;
     @JsonField
     public String f;
     @JsonField
     public String g;
-    @JsonField(typeConverter = wwd.class)
+    @JsonField(typeConverter = zvd.class)
     public String h;
     @JsonField
-    public xrv i;
+    public ssv i;
     @JsonField
-    public xrv j;
+    public ssv j;
     @JsonField
     public boolean k;
     @JsonField
     public JsonOcfComponentCollection l;
     
-    @Override
-    public final h4j t() {
-        final fwd$a fwd$a = new fwd$a();
-        ((lsr$a)fwd$a).f = JsonOcfRichText.s(this.a);
-        final int a = w4j.a;
-        ((lsr$a)fwd$a).g = JsonOcfRichText.s(this.b);
-        fwd$a.l = this.d;
-        fwd$a.m = this.e;
-        fwd$a.n = this.f;
-        fwd$a.o = this.g;
-        ((lsr$a)fwd$a).a = this.i;
-        ((lsr$a)fwd$a).b = this.j;
-        fwd$a.k = JsonOcfRichText.s(this.c);
-        fwd$a.q = this.k;
-        fwd$a.p = this.h;
+    public final n4j t() {
+        final ivd$a ivd$a = new ivd$a();
+        ((dtr$a)ivd$a).f = JsonOcfRichText.s(this.a);
+        final int a = c5j.a;
+        ((dtr$a)ivd$a).g = JsonOcfRichText.s(this.b);
+        ivd$a.l = this.d;
+        ivd$a.m = this.e;
+        ivd$a.n = this.f;
+        ivd$a.o = this.g;
+        ((dtr$a)ivd$a).a = this.i;
+        ((dtr$a)ivd$a).b = this.j;
+        ivd$a.k = JsonOcfRichText.s(this.c);
+        ivd$a.q = this.k;
+        ivd$a.p = this.h;
         final JsonOcfComponentCollection l = this.l;
-        n16 t;
+        x06 t;
         if (l != null) {
             t = l.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)fwd$a).j = t;
-        return (h4j)fwd$a;
+        ((dtr$a)ivd$a).j = t;
+        return (n4j)ivd$a;
     }
 }

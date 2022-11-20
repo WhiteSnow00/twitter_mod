@@ -6,21 +6,21 @@ package com.twitter.rooms.manager;
 
 import com.twitter.rooms.di.room.RoomObjectGraph;
 
-public final class j0 extends gue implements rtb<gqn, oyv>
+public final class j0 extends ste implements qsb<vqn, fzv>
 {
-    public final /* synthetic */ gub<RoomObjectGraph, gqn, oyv> C0;
-    public final /* synthetic */ RoomObjectGraph D0;
+    public final ftb<RoomObjectGraph, vqn, fzv> D0;
+    public final RoomObjectGraph E0;
     
-    public j0(final gub<? super RoomObjectGraph, ? super gqn, oyv> c0, final RoomObjectGraph d0) {
-        this.C0 = (gub<RoomObjectGraph, gqn, oyv>)c0;
-        this.D0 = d0;
+    public j0(final ftb<? super RoomObjectGraph, ? super vqn, fzv> d0, final RoomObjectGraph e0) {
+        this.D0 = (ftb<RoomObjectGraph, vqn, fzv>)d0;
+        this.E0 = e0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final gqn gqn = (gqn)o;
-        zzd.f((Object)gqn, "state");
-        this.C0.invoke((Object)this.D0, (Object)gqn);
-        return oyv.a;
+        final vqn vqn = (vqn)o;
+        czd.f((Object)vqn, "state");
+        this.D0.invoke((Object)this.E0, (Object)vqn);
+        return fzv.a;
     }
 }

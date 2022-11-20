@@ -2,9 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface lin extends dfw
+public final class lin extends kkl
 {
-    public static final lin.lin$a Companion = lin.lin$a.a;
+    public static final lin D0;
     
-    kin m1();
+    static {
+        D0 = new lin();
+    }
+    
+    public lin() {
+        super((Class)vqn.class, "hasActiveRoom", "getHasActiveRoom()Z", 0);
+    }
+    
+    public final Object get(final Object o) {
+        return ((vqn)o).m();
+    }
 }

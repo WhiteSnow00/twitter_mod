@@ -1,24 +1,40 @@
+import java.io.File;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class drc implements o29
+public final class drc
 {
-    public final /* synthetic */ luh a;
-    public final /* synthetic */ oth b;
+    public static int f = 20000;
+    public static int g = 90000;
+    public final nrc a;
+    public final int b;
+    public final int c;
+    public final int d;
+    public final File e;
     
-    public drc(final luh a, final oth b) {
-        this.a = a;
-        this.b = b;
+    public drc() {
+        final int g = drc.g;
+        final int f = drc.f;
+        this.a = null;
+        this.b = f;
+        this.c = g;
+        this.d = 2097152;
+        this.e = null;
     }
     
-    public final void dispose() {
-        final luh a = this.a;
-        final oth b = this.b;
-        final arc arc = (arc)((q7r)a).getValue();
-        if (arc != null) {
-            b.c(new brc(arc));
-            a.setValue(null);
-        }
+    public drc(final nrc a, final File e) {
+        final int g = drc.g;
+        final int f = drc.f;
+        this.a = a;
+        this.b = f;
+        this.c = g;
+        this.d = 2097152;
+        this.e = e;
+    }
+    
+    public static drc a() {
+        return udu.c().Z5();
     }
 }

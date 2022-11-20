@@ -2,15 +2,18 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class tcc
+public interface tcc
 {
-    public static final a Companion;
+    public static final a Companion = a.a;
     
-    static {
-        Companion = new a();
-    }
+    String d();
     
     public static final class a
     {
+        public static final a a;
+        
+        static {
+            a = new a();
+        }
     }
 }

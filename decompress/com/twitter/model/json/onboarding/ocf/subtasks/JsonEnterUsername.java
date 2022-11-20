@@ -13,7 +13,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonEnterUsername extends lhh<z6a>
+public class JsonEnterUsername extends qhh<i6a>
 {
     @JsonField
     public JsonOcfRichText a;
@@ -24,36 +24,35 @@ public class JsonEnterUsername extends lhh<z6a>
     @JsonField
     public List<JsonOcfRichText> d;
     @JsonField
-    public xrv e;
+    public ssv e;
     @JsonField
-    public xrv f;
+    public ssv f;
     @JsonField
-    public xrv g;
+    public ssv g;
     @JsonField
     public JsonOcfComponentCollection h;
     
-    @Override
-    public final h4j t() {
-        final ijf h = ijf.H();
+    public final n4j t() {
+        final rif h = rif.H();
         Object o;
         if ((o = this.d) == null) {
-            o = v2a.C0;
+            o = f2a.D0;
         }
         final Iterator iterator = ((List)o).iterator();
         while (iterator.hasNext()) {
             h.p((Object)JsonOcfRichText.s((JsonOcfRichText)iterator.next()));
         }
-        final z6a.a a = new z6a.a();
+        final i6a.a a = new i6a.a();
         a.f = JsonOcfRichText.s(this.a);
-        final int a2 = w4j.a;
+        final int a2 = c5j.a;
         a.g = JsonOcfRichText.s(this.b);
         a.k = this.c;
-        a.l = (List)((h4j)h).e();
+        a.l = (List)((n4j)h).e();
         a.a = this.e;
         a.c = this.f;
         a.b = this.g;
         final JsonOcfComponentCollection h2 = this.h;
-        n16 t;
+        x06 t;
         if (h2 != null) {
             t = h2.t();
         }
@@ -61,6 +60,6 @@ public class JsonEnterUsername extends lhh<z6a>
             t = null;
         }
         a.j = t;
-        return (h4j)a;
+        return (n4j)a;
     }
 }

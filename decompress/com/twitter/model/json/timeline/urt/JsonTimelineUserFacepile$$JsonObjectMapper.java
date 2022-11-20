@@ -14,103 +14,103 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineUserFacepile$$JsonObjectMapper extends JsonMapper<JsonTimelineUserFacepile>
 {
-    public static final fqa FACEPILE_ACTION_TYPE_CONVERTER;
-    public static final mqa FACEPILE_DISPLAY_TYPE_CONVERTER;
+    public static final cpa FACEPILE_ACTION_TYPE_CONVERTER;
+    public static final jpa FACEPILE_DISPLAY_TYPE_CONVERTER;
     
     static {
-        FACEPILE_DISPLAY_TYPE_CONVERTER = new mqa();
-        FACEPILE_ACTION_TYPE_CONVERTER = new fqa();
+        FACEPILE_DISPLAY_TYPE_CONVERTER = new jpa();
+        FACEPILE_ACTION_TYPE_CONVERTER = new cpa();
     }
     
-    public static JsonTimelineUserFacepile _parse(final khe khe) throws IOException {
+    public static JsonTimelineUserFacepile _parse(final tge tge) throws IOException {
         final JsonTimelineUserFacepile jsonTimelineUserFacepile = new JsonTimelineUserFacepile();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineUserFacepile, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineUserFacepile, d, tge);
+            tge.l0();
         }
         return jsonTimelineUserFacepile;
     }
     
-    public static void _serialize(final JsonTimelineUserFacepile jsonTimelineUserFacepile, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineUserFacepile jsonTimelineUserFacepile, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTimelineUserFacepile.e != null) {
-            LoganSquare.typeConverterFor((Class)fpv.class).serialize((Object)jsonTimelineUserFacepile.e, "action", true, tfe);
+            LoganSquare.typeConverterFor((Class)cqv.class).serialize((Object)jsonTimelineUserFacepile.e, "action", true, afe);
         }
-        final eqa f = jsonTimelineUserFacepile.f;
+        final bpa f = jsonTimelineUserFacepile.f;
         if (f != null) {
-            ((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_ACTION_TYPE_CONVERTER).serialize((Object)f, "actionType", true, tfe);
+            ((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_ACTION_TYPE_CONVERTER).serialize((Object)f, "actionType", true, afe);
         }
-        final lqa h = jsonTimelineUserFacepile.h;
+        final ipa h = jsonTimelineUserFacepile.h;
         if (h != null) {
-            ((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_DISPLAY_TYPE_CONVERTER).serialize((Object)h, "displayType", true, tfe);
+            ((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_DISPLAY_TYPE_CONVERTER).serialize((Object)h, "displayType", true, afe);
         }
-        tfe.e("displaysFeaturingText", jsonTimelineUserFacepile.g);
-        final List<String> c = jsonTimelineUserFacepile.c;
+        afe.e("displaysFeaturingText", jsonTimelineUserFacepile.g);
+        final List c = jsonTimelineUserFacepile.c;
         if (c != null) {
-            final Iterator f2 = x30.F(tfe, "featuredUserIds", (List)c);
-            while (f2.hasNext()) {
-                tfe.s0((String)f2.next());
+            final Iterator g = hee.g(afe, "featuredUserIds", c);
+            while (g.hasNext()) {
+                afe.r0((String)g.next());
             }
-            tfe.f();
+            afe.f();
         }
         final ArrayList d = jsonTimelineUserFacepile.d;
         if (d != null) {
-            final Iterator g = q1a.g(tfe, "featuredUsersResults", d);
-            while (g.hasNext()) {
-                final rhw rhw = g.next();
-                if (rhw != null) {
-                    LoganSquare.typeConverterFor((Class)rhw.class).serialize((Object)rhw, "lslocalfeaturedUsersResultsElement", false, tfe);
+            final Iterator a = br.A(afe, "featuredUsersResults", d);
+            while (a.hasNext()) {
+                final kiw kiw = a.next();
+                if (kiw != null) {
+                    LoganSquare.typeConverterFor((Class)kiw.class).serialize((Object)kiw, "lslocalfeaturedUsersResultsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        final List<String> a = jsonTimelineUserFacepile.a;
-        if (a != null) {
-            final Iterator f3 = x30.F(tfe, "userIds", (List)a);
-            while (f3.hasNext()) {
-                tfe.s0((String)f3.next());
+        final List a2 = jsonTimelineUserFacepile.a;
+        if (a2 != null) {
+            final Iterator g2 = hee.g(afe, "userIds", a2);
+            while (g2.hasNext()) {
+                afe.r0((String)g2.next());
             }
-            tfe.f();
+            afe.f();
         }
         final ArrayList b2 = jsonTimelineUserFacepile.b;
         if (b2 != null) {
-            final Iterator g2 = q1a.g(tfe, "usersResults", b2);
-            while (g2.hasNext()) {
-                final rhw rhw2 = g2.next();
-                if (rhw2 != null) {
-                    LoganSquare.typeConverterFor((Class)rhw.class).serialize((Object)rhw2, "lslocalusersResultsElement", false, tfe);
+            final Iterator a3 = br.A(afe, "usersResults", b2);
+            while (a3.hasNext()) {
+                final kiw kiw2 = a3.next();
+                if (kiw2 != null) {
+                    LoganSquare.typeConverterFor((Class)kiw.class).serialize((Object)kiw2, "lslocalusersResultsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineUserFacepile jsonTimelineUserFacepile, String s, final khe khe) throws IOException {
-        if (!"action".equals(s) && !"facepileButtonAction".equals(s)) {
-            if (!"actionType".equals(s) && !"facepileActionType".equals(s)) {
-                if (!"displayType".equals(s) && !"facepileDisplayType".equals(s)) {
-                    if (!"displaysFeaturingText".equals(s) && !"facepileDisplaysFeaturingText".equals(s)) {
-                        if ("featuredUserIds".equals(s)) {
-                            if (khe.e() == lje.M0) {
+    public static void parseField(final JsonTimelineUserFacepile jsonTimelineUserFacepile, String t, final tge tge) throws IOException {
+        if (!"action".equals(t) && !"facepileButtonAction".equals(t)) {
+            if (!"actionType".equals(t) && !"facepileActionType".equals(t)) {
+                if (!"displayType".equals(t) && !"facepileDisplayType".equals(t)) {
+                    if (!"displaysFeaturingText".equals(t) && !"facepileDisplaysFeaturingText".equals(t)) {
+                        if ("featuredUserIds".equals(t)) {
+                            if (tge.e() == vie.N0) {
                                 final ArrayList c = new ArrayList();
-                                while (khe.i0() != lje.N0) {
-                                    s = khe.T((String)null);
-                                    if (s != null) {
-                                        c.add(s);
+                                while (tge.h0() != vie.O0) {
+                                    final String t2 = tge.T((String)null);
+                                    if (t2 != null) {
+                                        c.add(t2);
                                     }
                                 }
                                 jsonTimelineUserFacepile.c = c;
@@ -119,14 +119,14 @@ public final class JsonTimelineUserFacepile$$JsonObjectMapper extends JsonMapper
                                 jsonTimelineUserFacepile.c = null;
                             }
                         }
-                        else if (!"featuredUsersResults".equals(s) && !"facepileFeaturedUserResults".equals(s)) {
-                            if ("userIds".equals(s)) {
-                                if (khe.e() == lje.M0) {
+                        else if (!"featuredUsersResults".equals(t) && !"facepileFeaturedUserResults".equals(t)) {
+                            if ("userIds".equals(t)) {
+                                if (tge.e() == vie.N0) {
                                     final ArrayList a = new ArrayList();
-                                    while (khe.i0() != lje.N0) {
-                                        s = khe.T((String)null);
-                                        if (s != null) {
-                                            a.add(s);
+                                    while (tge.h0() != vie.O0) {
+                                        t = tge.T((String)null);
+                                        if (t != null) {
+                                            a.add(t);
                                         }
                                     }
                                     jsonTimelineUserFacepile.a = a;
@@ -135,13 +135,13 @@ public final class JsonTimelineUserFacepile$$JsonObjectMapper extends JsonMapper
                                     jsonTimelineUserFacepile.a = null;
                                 }
                             }
-                            else if ("usersResults".equals(s) || "facepileUserResults".equals(s)) {
-                                if (khe.e() == lje.M0) {
+                            else if ("usersResults".equals(t) || "facepileUserResults".equals(t)) {
+                                if (tge.e() == vie.N0) {
                                     final ArrayList b = new ArrayList();
-                                    while (khe.i0() != lje.N0) {
-                                        final rhw rhw = (rhw)LoganSquare.typeConverterFor((Class)rhw.class).parse(khe);
-                                        if (rhw != null) {
-                                            b.add(rhw);
+                                    while (tge.h0() != vie.O0) {
+                                        final kiw kiw = (kiw)LoganSquare.typeConverterFor((Class)kiw.class).parse(tge);
+                                        if (kiw != null) {
+                                            b.add(kiw);
                                         }
                                     }
                                     jsonTimelineUserFacepile.b = b;
@@ -151,12 +151,12 @@ public final class JsonTimelineUserFacepile$$JsonObjectMapper extends JsonMapper
                                 }
                             }
                         }
-                        else if (khe.e() == lje.M0) {
+                        else if (tge.e() == vie.N0) {
                             final ArrayList d = new ArrayList();
-                            while (khe.i0() != lje.N0) {
-                                final rhw rhw2 = (rhw)LoganSquare.typeConverterFor((Class)rhw.class).parse(khe);
-                                if (rhw2 != null) {
-                                    d.add(rhw2);
+                            while (tge.h0() != vie.O0) {
+                                final kiw kiw2 = (kiw)LoganSquare.typeConverterFor((Class)kiw.class).parse(tge);
+                                if (kiw2 != null) {
+                                    d.add(kiw2);
                                 }
                             }
                             jsonTimelineUserFacepile.d = d;
@@ -166,27 +166,35 @@ public final class JsonTimelineUserFacepile$$JsonObjectMapper extends JsonMapper
                         }
                     }
                     else {
-                        jsonTimelineUserFacepile.g = khe.k();
+                        jsonTimelineUserFacepile.g = tge.k();
                     }
                 }
                 else {
-                    jsonTimelineUserFacepile.h = (lqa)((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_DISPLAY_TYPE_CONVERTER).parse(khe);
+                    jsonTimelineUserFacepile.h = (ipa)((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_DISPLAY_TYPE_CONVERTER).parse(tge);
                 }
             }
             else {
-                jsonTimelineUserFacepile.f = (eqa)((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_ACTION_TYPE_CONVERTER).parse(khe);
+                jsonTimelineUserFacepile.f = (bpa)((StringBasedTypeConverter)JsonTimelineUserFacepile$$JsonObjectMapper.FACEPILE_ACTION_TYPE_CONVERTER).parse(tge);
             }
         }
         else {
-            jsonTimelineUserFacepile.e = (fpv)LoganSquare.typeConverterFor((Class)fpv.class).parse(khe);
+            jsonTimelineUserFacepile.e = (cqv)LoganSquare.typeConverterFor((Class)cqv.class).parse(tge);
         }
     }
     
-    public JsonTimelineUserFacepile parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineUserFacepile parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineUserFacepile jsonTimelineUserFacepile, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineUserFacepile, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineUserFacepile jsonTimelineUserFacepile, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineUserFacepile, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineUserFacepile)o, afe, b);
     }
 }

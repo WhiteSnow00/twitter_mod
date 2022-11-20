@@ -10,61 +10,69 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTopicLandingHeader$$JsonObjectMapper extends JsonMapper<JsonTopicLandingHeader>
 {
-    public static JsonTopicLandingHeader _parse(final khe khe) throws IOException {
+    public static JsonTopicLandingHeader _parse(final tge tge) throws IOException {
         final JsonTopicLandingHeader jsonTopicLandingHeader = new JsonTopicLandingHeader();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTopicLandingHeader, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTopicLandingHeader, d, tge);
+            tge.l0();
         }
         return jsonTopicLandingHeader;
     }
     
-    public static void _serialize(final JsonTopicLandingHeader jsonTopicLandingHeader, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTopicLandingHeader jsonTopicLandingHeader, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTopicLandingHeader.b != null) {
-            LoganSquare.typeConverterFor((Class)gxd.class).serialize((Object)jsonTopicLandingHeader.b, "interestTopic", true, tfe);
+            LoganSquare.typeConverterFor((Class)jwd.class).serialize((Object)jsonTopicLandingHeader.b, "interestTopic", true, afe);
         }
-        tfe.u0("topicId", jsonTopicLandingHeader.a);
-        tfe.u0("topicLandingContext", jsonTopicLandingHeader.c);
+        afe.t0("topicId", jsonTopicLandingHeader.a);
+        afe.t0("topicLandingContext", jsonTopicLandingHeader.c);
         if (jsonTopicLandingHeader.d != null) {
-            LoganSquare.typeConverterFor((Class)jvv.class).serialize((Object)jsonTopicLandingHeader.d, "facepile", true, tfe);
+            LoganSquare.typeConverterFor((Class)cwv.class).serialize((Object)jsonTopicLandingHeader.d, "facepile", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTopicLandingHeader jsonTopicLandingHeader, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTopicLandingHeader jsonTopicLandingHeader, final String s, final tge tge) throws IOException {
         if ("interestTopic".equals(s)) {
-            jsonTopicLandingHeader.b = (gxd)LoganSquare.typeConverterFor((Class)gxd.class).parse(khe);
+            jsonTopicLandingHeader.b = (jwd)LoganSquare.typeConverterFor((Class)jwd.class).parse(tge);
         }
         else if ("topicId".equals(s)) {
-            jsonTopicLandingHeader.a = khe.T((String)null);
+            jsonTopicLandingHeader.a = tge.T((String)null);
         }
         else if ("topicLandingContext".equals(s)) {
-            jsonTopicLandingHeader.c = khe.T((String)null);
+            jsonTopicLandingHeader.c = tge.T((String)null);
         }
         else if ("facepile".equals(s)) {
-            jsonTopicLandingHeader.d = (jvv)LoganSquare.typeConverterFor((Class)jvv.class).parse(khe);
+            jsonTopicLandingHeader.d = (cwv)LoganSquare.typeConverterFor((Class)cwv.class).parse(tge);
         }
     }
     
-    public JsonTopicLandingHeader parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTopicLandingHeader parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTopicLandingHeader jsonTopicLandingHeader, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTopicLandingHeader, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTopicLandingHeader jsonTopicLandingHeader, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTopicLandingHeader, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTopicLandingHeader)o, afe, b);
     }
 }

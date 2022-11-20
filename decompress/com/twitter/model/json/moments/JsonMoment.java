@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonMoment extends lhh<moh>
+public class JsonMoment extends qhh<roh>
 {
     @JsonField
     public long a;
@@ -37,17 +37,17 @@ public class JsonMoment extends lhh<moh>
     @JsonField
     public String l;
     @JsonField
-    public z51 m;
+    public t51 m;
     @JsonField
-    public hil n;
+    public uil n;
     @JsonField
-    public aca o;
+    public iba o;
     @JsonField
     public long p;
     @JsonField
-    public Map<String, hfv> q;
+    public Map<String, cgv> q;
     @JsonField
-    public w87 r;
+    public a87 r;
     @JsonField
     public boolean s;
     @JsonField
@@ -55,55 +55,54 @@ public class JsonMoment extends lhh<moh>
     @JsonField
     public JsonMomentCoverMedia u;
     @JsonField
-    public l73 v;
+    public c73 v;
     @JsonField
-    public hph w;
+    public mph w;
     @JsonField(name = { "moment_access" })
-    public noh x;
+    public soh x;
     @JsonField
-    public nph y;
+    public sph y;
     
-    @Override
-    public final h4j t() {
-        final moh$a moh$a = new moh$a();
-        moh$a.a = this.a;
-        moh$a.b = this.b;
-        moh$a.j = this.c;
-        moh$a.d = this.d;
-        moh$a.e = this.e;
-        moh$a.f = this.f;
-        moh$a.g = this.g;
-        moh$a.h = this.h;
-        moh$a.c = this.i;
-        moh$a.i = this.j;
-        moh$a.k = this.k;
-        moh$a.l = this.l;
-        moh$a.m = this.m;
-        moh$a.n = this.n;
-        moh$a.o = this.o;
-        moh$a.p = this.p;
-        moh$a.q = this.r;
-        moh$a.r = this.s;
-        moh$a.s = this.t;
+    public final n4j t() {
+        final roh$a roh$a = new roh$a();
+        roh$a.a = this.a;
+        roh$a.b = this.b;
+        roh$a.j = this.c;
+        roh$a.d = this.d;
+        roh$a.e = this.e;
+        roh$a.f = this.f;
+        roh$a.g = this.g;
+        roh$a.h = this.h;
+        roh$a.c = this.i;
+        roh$a.i = this.j;
+        roh$a.k = this.k;
+        roh$a.l = this.l;
+        roh$a.m = this.m;
+        roh$a.n = this.n;
+        roh$a.o = this.o;
+        roh$a.p = this.p;
+        roh$a.q = this.r;
+        roh$a.r = this.s;
+        roh$a.s = this.t;
         final JsonMomentCoverMedia u = this.u;
-        voh t;
+        aph t;
         if (u != null && u.b != null) {
             t = u.t();
         }
         else {
             t = null;
         }
-        moh$a.t = t;
-        moh$a.u = this.v;
-        moh$a.v = this.w;
-        moh$a.w = this.x;
-        final nph y = this.y;
-        final nph c0 = nph.C0;
-        nph x = y;
+        roh$a.t = t;
+        roh$a.u = this.v;
+        roh$a.v = this.w;
+        roh$a.w = this.x;
+        final sph y = this.y;
+        final sph d0 = sph.D0;
+        sph x = y;
         if (y == null) {
-            x = c0;
+            x = d0;
         }
-        moh$a.x = x;
-        return (h4j)moh$a;
+        roh$a.x = x;
+        return (n4j)roh$a;
     }
 }

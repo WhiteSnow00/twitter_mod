@@ -11,40 +11,40 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSignUpReview extends lhh<z5q>
+public class JsonSignUpReview extends qhh<r6q>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     @JsonField
-    public kcj c;
+    public pcj c;
     @JsonField
-    public kcj d;
+    public pcj d;
     @JsonField
-    public kcj e;
+    public pcj e;
     @JsonField
-    public kcj f;
+    public pcj f;
     @JsonField
-    public ea8 g;
+    public o98 g;
     @JsonField
     public JsonOcfRichText h;
     @JsonField
     public JsonOcfRichText i;
     @JsonField
-    public xrv j;
+    public ssv j;
     @JsonField
-    public xrv k;
+    public ssv k;
     @JsonField
-    public xrv l;
+    public ssv l;
     @JsonField
-    public xrv m;
+    public ssv m;
     @JsonField
-    public xrv n;
+    public ssv n;
     @JsonField
-    public xrv o;
+    public ssv o;
     @JsonField
-    public xrv p;
+    public ssv p;
     @JsonField
     public boolean q;
     @JsonField
@@ -58,40 +58,39 @@ public class JsonSignUpReview extends lhh<z5q>
     @JsonField
     public JsonOcfComponentCollection v;
     
-    @Override
-    public final h4j t() {
-        final z5q.a a = new z5q.a();
-        a.k = this.a;
-        a.l = this.b;
-        a.m = this.c;
-        a.n = this.d;
-        a.o = this.e;
-        a.p = this.f;
-        a.q = this.g;
-        a.r = JsonOcfRichText.s(this.h);
-        a.s = JsonOcfRichText.s(this.i);
-        a.t = this.j;
-        a.u = this.k;
-        a.v = this.l;
-        a.w = this.m;
-        a.x = this.n;
-        a.y = this.o;
-        a.z = this.p;
-        a.A = this.q;
-        a.B = this.r;
-        a.C = this.s;
-        a.D = this.t;
-        a.E = this.u;
+    public final n4j t() {
+        final r6q$a r6q$a = new r6q$a();
+        r6q$a.k = this.a;
+        r6q$a.l = this.b;
+        r6q$a.m = this.c;
+        r6q$a.n = this.d;
+        r6q$a.o = this.e;
+        r6q$a.p = this.f;
+        r6q$a.q = this.g;
+        r6q$a.r = JsonOcfRichText.s(this.h);
+        r6q$a.s = JsonOcfRichText.s(this.i);
+        r6q$a.t = this.j;
+        r6q$a.u = this.k;
+        r6q$a.v = this.l;
+        r6q$a.w = this.m;
+        r6q$a.x = this.n;
+        r6q$a.y = this.o;
+        r6q$a.z = this.p;
+        r6q$a.A = this.q;
+        r6q$a.B = this.r;
+        r6q$a.C = this.s;
+        r6q$a.D = this.t;
+        r6q$a.E = this.u;
         final JsonOcfComponentCollection v = this.v;
-        n16 t;
+        x06 t;
         if (v != null) {
             t = v.t();
         }
         else {
             t = null;
         }
-        a.j = t;
-        final int a2 = w4j.a;
-        return (h4j)a;
+        ((dtr$a)r6q$a).j = t;
+        final int a = c5j.a;
+        return (n4j)r6q$a;
     }
 }

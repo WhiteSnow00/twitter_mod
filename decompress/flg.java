@@ -1,68 +1,63 @@
-import java.util.List;
+import android.content.ContentValues;
+import java.lang.ref.WeakReference;
+import android.content.ContextWrapper;
+import com.twitter.util.user.UserIdentifier;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class flg implements rs6
+public final class flg extends vza
 {
-    public final long a;
-    public final String b;
-    public final long c;
-    public final List<Long> d;
+    public final int K0;
+    public final long L0;
+    public final Object M0;
     
-    public flg(final long a, final String b, final long c, final List<Long> d) {
-        zzd.f((Object)b, "conversationId");
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        if (zi8.I((rs6)this)) {
-            return;
+    public flg(final Context context, final long l0, final mws m0, final UserIdentifier userIdentifier) {
+        this.K0 = 0;
+        super(context, userIdentifier);
+        this.L0 = l0;
+        this.M0 = m0;
+    }
+    
+    public flg(final ContextWrapper contextWrapper, final UserIdentifier userIdentifier, final long l0) {
+        this.K0 = 1;
+        super((Context)contextWrapper, userIdentifier);
+        this.M0 = new WeakReference(contextWrapper);
+        this.L0 = l0;
+    }
+    
+    public final void m() {
+        switch (this.K0) {
+            default: {
+                final ContextWrapper contextWrapper = (ContextWrapper)((WeakReference)this.M0).get();
+                if (contextWrapper != null) {
+                    final nm6 nm6 = new nm6(contextWrapper.getContentResolver());
+                    h28.a(((dj1)this).D0).v2().A(this.L0, nm6);
+                    nm6.b();
+                }
+                return;
+            }
+            case 0: {
+                final nm6 h = this.h();
+                final dml i2 = vav.I2(((dj1)this).D0);
+                new nus(i2);
+                final long l0 = this.L0;
+                final mws mws = (mws)this.M0;
+                final String a = itl.a(new String[] { mws.b(), itl.l("sort_index", (Object)l0) });
+                final lzr p = ((ok1)((ycq)i2).D0).p();
+                final ContentValues contentValues = new ContentValues();
+                contentValues.put("should_highlight", Integer.valueOf(0));
+                p.G0();
+                final int y2 = p.y2("timeline", 0, contentValues, a, (Object[])null);
+                p.z();
+                p.A();
+                if (y2 > 0) {
+                    r0t.c(h, mws);
+                }
+                h.b();
+            }
         }
-        throw new IllegalArgumentException("Failed requirement.".toString());
-    }
-    
-    public final long a() {
-        return this.c;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof flg)) {
-            return false;
-        }
-        final flg flg = (flg)o;
-        return this.a == flg.a && zzd.a((Object)this.b, (Object)flg.b) && this.c == flg.c && zzd.a((Object)this.d, (Object)flg.d);
-    }
-    
-    public final String getConversationId() {
-        return this.b;
-    }
-    
-    public final long getId() {
-        return this.a;
-    }
-    
-    @Override
-    public final int hashCode() {
-        final long a = this.a;
-        final int a2 = l7k.a(this.b, (int)(a ^ a >>> 32) * 31, 31);
-        final long c = this.c;
-        return this.d.hashCode() + (a2 + (int)(c >>> 32 ^ c)) * 31;
-    }
-    
-    @Override
-    public final String toString() {
-        final long a = this.a;
-        final String b = this.b;
-        final long c = this.c;
-        final List<Long> d = this.d;
-        final StringBuilder h = w48.h("MarkMessagesAsAbuseEvent(id=", a, ", conversationId=", b);
-        c0.G(h, ", date=", c, ", messageCreateEventIds=");
-        return gp.A(h, (List)d, ")");
     }
 }

@@ -8,21 +8,31 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonMomentSportsParticipant extends lhh<jph>
+public class JsonMomentSportsParticipant extends qhh<oph>
 {
     @JsonField
-    public jph$b a;
+    public oph$b a;
     @JsonField
     public String b;
     @JsonField
     public long c;
     
-    @Override
-    public final h4j t() {
-        final jph$a jph$a = new jph$a();
-        jph$a.c = this.a;
-        jph$a.b = this.b;
-        jph$a.a = this.c;
-        return (h4j)jph$a;
+    public final n4j t() {
+        final oph$a oph$a = new oph$a();
+        oph$a.c = this.a;
+        oph$a.b = this.b;
+        oph$a.a = this.c;
+        return (n4j)oph$a;
+    }
+    
+    @JsonObject
+    public static class JsonParticipantMedia extends fih<oph$b>
+    {
+        @JsonField
+        public String a;
+        
+        public final Object s() {
+            return new oph$b(this.a);
+        }
     }
 }

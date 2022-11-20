@@ -11,58 +11,58 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTaskResponse$$JsonObjectMapper extends JsonMapper<JsonTaskResponse>
 {
-    public static JsonTaskResponse _parse(final khe khe) throws IOException {
+    public static JsonTaskResponse _parse(final tge tge) throws IOException {
         final JsonTaskResponse jsonTaskResponse = new JsonTaskResponse();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTaskResponse, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTaskResponse, d, tge);
+            tge.l0();
         }
         return jsonTaskResponse;
     }
     
-    public static void _serialize(final JsonTaskResponse jsonTaskResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTaskResponse jsonTaskResponse, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("flow_token", jsonTaskResponse.b);
-        tfe.u0("status", jsonTaskResponse.a);
+        afe.t0("flow_token", jsonTaskResponse.b);
+        afe.t0("status", jsonTaskResponse.a);
         final ArrayList c = jsonTaskResponse.c;
         if (c != null) {
-            final Iterator g = q1a.g(tfe, "subtasks", c);
-            while (g.hasNext()) {
-                final JsonSubtask jsonSubtask = g.next();
+            final Iterator a = br.A(afe, "subtasks", c);
+            while (a.hasNext()) {
+                final JsonSubtask jsonSubtask = a.next();
                 if (jsonSubtask != null) {
-                    JsonSubtask$$JsonObjectMapper._serialize(jsonSubtask, tfe, true);
+                    JsonSubtask$$JsonObjectMapper._serialize(jsonSubtask, afe, true);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTaskResponse jsonTaskResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTaskResponse jsonTaskResponse, final String s, final tge tge) throws IOException {
         if ("flow_token".equals(s)) {
-            jsonTaskResponse.b = khe.T((String)null);
+            jsonTaskResponse.b = tge.T((String)null);
         }
         else if ("status".equals(s)) {
-            jsonTaskResponse.a = khe.T((String)null);
+            jsonTaskResponse.a = tge.T((String)null);
         }
         else if ("subtasks".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList c = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final JsonSubtask parse = JsonSubtask$$JsonObjectMapper._parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final JsonSubtask parse = JsonSubtask$$JsonObjectMapper._parse(tge);
                     if (parse != null) {
                         c.add(parse);
                     }
@@ -75,11 +75,19 @@ public final class JsonTaskResponse$$JsonObjectMapper extends JsonMapper<JsonTas
         }
     }
     
-    public JsonTaskResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTaskResponse parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTaskResponse jsonTaskResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTaskResponse, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTaskResponse jsonTaskResponse, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTaskResponse, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTaskResponse)o, afe, b);
     }
 }

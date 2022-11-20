@@ -10,22 +10,21 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonInAppNotificationSubtask extends lhh<tgd>
+public class JsonInAppNotificationSubtask extends qhh<xfd>
 {
     @JsonField
     public JsonOcfRichText a;
     @JsonField
     public int b;
     @JsonField
-    public xrv c;
+    public ssv c;
     
-    @Override
-    public final h4j t() {
-        final tgd$a tgd$a = new tgd$a();
-        tgd$a.k = JsonOcfRichText.s(this.a);
-        tgd$a.l = this.b;
-        ((lsr$a)tgd$a).a = this.c;
-        final int a = w4j.a;
-        return (h4j)tgd$a;
+    public final n4j t() {
+        final xfd$a xfd$a = new xfd$a();
+        xfd$a.k = JsonOcfRichText.s(this.a);
+        xfd$a.l = this.b;
+        ((dtr$a)xfd$a).a = this.c;
+        final int a = c5j.a;
+        return (n4j)xfd$a;
     }
 }

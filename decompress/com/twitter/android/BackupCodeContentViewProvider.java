@@ -8,89 +8,88 @@ import android.os.BaseBundle;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.app.Dialog;
 import android.content.DialogInterface;
+import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.view.View;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.Fragment$InstantiationException;
 import android.os.Bundle;
 import android.content.Context;
 import android.text.TextUtils;
 import com.twitter.permissions.PermissionContentViewResult;
 import android.app.ProgressDialog;
 
-@a91
-public class BackupCodeContentViewProvider extends acv<String> implements mw8, jw8
+@v81
+public class BackupCodeContentViewProvider extends ucv<String> implements xv8, uv8
 {
-    public static final String[] k1;
-    public boolean b1;
-    public String c1;
-    public ProgressDialog d1;
-    public final m29 e1;
-    public final b f1;
-    public final t9j<og1> g1;
-    public final t9j<og1> h1;
-    public final xn6<p6k, PermissionContentViewResult> i1;
-    public final kn j1;
+    public static final String[] l1;
+    public boolean c1;
+    public String d1;
+    public ProgressDialog e1;
+    public final w19 f1;
+    public final b g1;
+    public final z9j<kg1> h1;
+    public final z9j<kg1> i1;
+    public final dn6<x6k, PermissionContentViewResult> j1;
+    public final jn k1;
     
     static {
-        k1 = uxg.a;
+        l1 = uxg.a;
     }
     
-    public BackupCodeContentViewProvider(final ybv ybv, final sso sso, final p9s p9s, final mbi<?> mbi, final kn j1, final llb llb) {
-        super(ybv);
-        this.e1 = new m29();
-        if (ybv.q == null) {
-            final zf4 zf4 = new zf4();
-            zf4.q(new String[] { "backup_code::::impression" });
-            saw.b((okm)zf4);
+    public BackupCodeContentViewProvider(final tcv tcv, final jto jto, final kas kas, final obi<?> obi, final jn k1, final jkb jkb) {
+        super(tcv);
+        this.f1 = new w19();
+        if (tcv.q == null) {
+            final af4 af4 = new af4();
+            ((u0p)af4).q(new String[] { "backup_code::::impression" });
+            cbw.b((elm)af4);
         }
-        if (ybv.q == null && ((wl1)super.D0).Z1().b("show_welcome")) {
+        if (tcv.q == null && ((sl1)super.E0).Z1().b("show_welcome")) {
             this.h1();
         }
-        sso.b((Object)this);
-        this.j1 = j1;
-        final Context r0 = this.r0();
-        final b f1 = new b(r0, new a(r0), (dz5<Object>)new cg8((Object)this, 5), llb);
-        this.f1 = f1;
-        super.X0.S1(f1);
-        if (!TextUtils.isEmpty((CharSequence)this.c1)) {
-            this.g1(this.c1);
+        jto.b((Object)this);
+        this.k1 = k1;
+        final Context q0 = this.q0();
+        final b g1 = new b(q0, new a(q0), (ny5<Object>)new eu4((Object)this, 5), jkb);
+        this.g1 = g1;
+        super.Y0.S1((my5)g1);
+        if (!TextUtils.isEmpty((CharSequence)this.d1)) {
+            this.g1(this.d1);
         }
         else {
             this.f1("");
         }
-        final t9j b = p9s.b((Class)og1.class, "Create");
-        this.g1 = (t9j<og1>)b;
-        f.j(b.a(), (u93)new lg1((Object)this, 0), (raa)super.O0);
-        final t9j b2 = p9s.b((Class)og1.class, "Get");
-        this.h1 = (t9j<og1>)b2;
-        f.j(b2.a(), (u93)new ril((Object)this, 1), (raa)super.O0);
-        final xn6<zm, PermissionContentViewResult> h = mbi.h(PermissionContentViewResult.class, asm.a((Class)PermissionContentViewResult.class));
-        this.i1 = (xn6<p6k, PermissionContentViewResult>)h;
-        f.i(h.c().filter((ptk)p71.J0), (u93)new kg1((Object)this, 0));
+        final z9j<kg1> b = kas.b(kg1.class, "Create");
+        this.h1 = b;
+        f.j((h5j)b.a(), (n93)new hg1((Object)this, 0), (z9a)super.P0);
+        final z9j<kg1> b2 = kas.b(kg1.class, "Get");
+        this.i1 = b2;
+        f.j((h5j)b2.a(), (n93)new ejl((Object)this, 1), (z9a)super.P0);
+        final dn6 h = obi.h((Class)PermissionContentViewResult.class, ssm.a((Class)PermissionContentViewResult.class));
+        this.j1 = (dn6<x6k, PermissionContentViewResult>)h;
+        f.i(h.c().filter((ytk)i71.K0), (n93)new gg1((Object)this, 0));
     }
     
-    @Override
     public final void L0() {
-        this.e1.a();
+        this.f1.a();
         super.L0();
     }
     
-    @Override
     public final void M0() {
         super.M0();
-        if (pjr.e((CharSequence)this.c1) && !this.b1) {
-            this.h1.d((kmm)new og1(super.F0, true));
-            this.b1 = true;
+        if (ikr.e((CharSequence)this.d1) && !this.c1) {
+            this.i1.d(new kg1(super.G0, true));
+            this.c1 = true;
         }
     }
     
     public final void d1(final String s, final boolean b) {
-        if (pjr.e((CharSequence)s)) {
-            p88.f().e((CharSequence)this.z0().getString(2131954870), 1);
+        if (ikr.e((CharSequence)s)) {
+            m1f.e().a((CharSequence)this.z0().getString(2131954870), 1);
             if (this.D0()) {
-                this.j1.a();
+                this.k1.a();
             }
             return;
         }
@@ -101,118 +100,116 @@ public class BackupCodeContentViewProvider extends acv<String> implements mw8, j
     }
     
     public final void e1() {
-        final zf4 zf4 = new zf4();
-        zf4.q(new String[] { "backup_code::take_screenshot::failure" });
-        saw.b((okm)zf4);
+        final af4 af4 = new af4();
+        ((u0p)af4).q(new String[] { "backup_code::take_screenshot::failure" });
+        cbw.b((elm)af4);
         final Bundle bundle = new Bundle();
         ((BaseBundle)bundle).putInt("twitter:id", 2);
-        ((BaseBundle)bundle).putInt("title", 2131959306);
-        final int a = w4j.a;
-        ((BaseBundle)bundle).putInt("message", 2131959307);
-        final int a2 = w4j.a;
+        ((BaseBundle)bundle).putInt("title", 2131959308);
+        final int a = c5j.a;
+        ((BaseBundle)bundle).putInt("message", 2131959309);
+        final int a2 = c5j.a;
         ((BaseBundle)bundle).putInt("positive_button", 17039370);
-        final int a3 = w4j.a;
+        final int a3 = c5j.a;
         if (((BaseBundle)bundle).containsKey("twitter:id")) {
-            final wil i = yqh.i(bundle);
-            final int a4 = w4j.a;
-            ((cl1)i).l2(this.w0());
+            final jjl h = go0.h(bundle);
+            final int a4 = c5j.a;
+            ((wk1)h).l2(this.w0());
             return;
         }
-        throw new Fragment.InstantiationException("Missing fragment id", null);
+        throw new Fragment$InstantiationException("Missing fragment id", (Exception)null);
     }
     
-    public final void f1(final String c1) {
-        if (!c1.equals(this.c1)) {
-            this.g1(c1);
-            this.c1 = c1;
+    public final void f1(final String d1) {
+        if (!d1.equals(this.d1)) {
+            this.g1(d1);
+            this.d1 = d1;
         }
     }
     
     public final void g1(final String s) {
         Object j;
-        if (pjr.g((CharSequence)s)) {
-            j = new skf((Iterable)ijf.v((Object)s));
+        if (ikr.g((CharSequence)s)) {
+            j = new ckf((Iterable)rif.v((Object)s));
         }
         else {
-            j = i4e.j();
+            j = n3e.j();
         }
-        this.Z0((i4e<String>)j);
+        this.Z0((n3e)j);
     }
     
     public final void h1() {
-        final zf4 zf4 = new zf4();
-        zf4.q(new String[] { "backup_code::take_screenshot::impression" });
-        saw.b((okm)zf4);
-        final xil$b xil$b = new xil$b(1);
-        ((xil$a)xil$b).H(2131954863);
-        ((xil$a)xil$b).A(2131954882);
-        ((xil$a)xil$b).F(17039379);
-        ((xil$a)xil$b).C(17039369);
-        final cl1 w = ((dl1$a)xil$b).w();
-        w.Q1 = (jw8)this;
-        final int a = w4j.a;
-        w.k2((Fragment)super.D0);
+        final af4 af4 = new af4();
+        ((u0p)af4).q(new String[] { "backup_code::take_screenshot::impression" });
+        cbw.b((elm)af4);
+        final kjl$b kjl$b = new kjl$b(1);
+        ((kjl$a)kjl$b).H(2131954863);
+        ((kjl$a)kjl$b).A(2131954882);
+        ((kjl$a)kjl$b).F(17039379);
+        ((kjl$a)kjl$b).C(17039369);
+        final wk1 w = ((xk1$a)kjl$b).w();
+        w.R1 = (uv8)this;
+        final int a = c5j.a;
+        w.k2((Fragment)super.E0);
         w.l2(this.w0());
     }
     
     public final void i1() {
         final View rootView = this.c().getView().getRootView();
         rootView.setDrawingCacheEnabled(true);
-        final Bitmap e = h12.e(rootView.getDrawingCache());
+        final Bitmap e = b12.e(rootView.getDrawingCache());
         rootView.setDrawingCacheEnabled(false);
         if (this.D0() && e != null) {
-            (this.d1 = new ProgressDialog(this.r0())).setProgressStyle(0);
-            this.d1.setMessage((CharSequence)this.z0().getString(2131957388));
-            this.d1.setIndeterminate(true);
-            ((Dialog)this.d1).setCancelable(false);
-            ((Dialog)this.d1).show();
-            this.e1.c(asg.a().W3().b(new awg(l1h.G0)).a((rtb)new mg1((Object)e, 0)).G((fk6)new pcs((Object)this, 2), (fk6)new ocs((Object)this, 2)));
+            (this.e1 = new ProgressDialog(this.q0())).setProgressStyle(0);
+            this.e1.setMessage((CharSequence)this.z0().getString(2131957388));
+            this.e1.setIndeterminate(true);
+            ((Dialog)this.e1).setCancelable(false);
+            ((Dialog)this.e1).show();
+            this.f1.c(asg.a().W3().b(new awg(m1h.H0)).a((qsb)new ig1((Object)e, 0)).G((lj6)new kds((Object)this, 2), (lj6)new jds((Object)this, 2)));
             return;
         }
         this.e1();
     }
     
-    public final void k(final DialogInterface dialogInterface, final int n) {
-        final zf4 zf4 = new zf4();
-        zf4.q(new String[] { "backup_code::take_screenshot:cancel:click" });
-        saw.b((okm)zf4);
-    }
-    
-    @Override
-    public final void l0(final Dialog dialog, final int n, final int n2) {
+    public final void k0(final Dialog dialog, final int n, final int n2) {
         if (n == 1) {
             if (n2 == -1) {
-                final zf4 zf4 = new zf4();
-                zf4.q(new String[] { "backup_code::take_screenshot:ok:click" });
-                saw.b((okm)zf4);
-                final y6k d = y6k.d();
-                final Context r0 = this.r0();
-                final String[] k1 = BackupCodeContentViewProvider.k1;
-                if (d.a(r0, k1)) {
+                final af4 af4 = new af4();
+                ((u0p)af4).q(new String[] { "backup_code::take_screenshot:ok:click" });
+                cbw.b((elm)af4);
+                final g7k d = g7k.d();
+                final Context q0 = this.q0();
+                final String[] l1 = BackupCodeContentViewProvider.l1;
+                if (d.a(q0, l1)) {
                     this.i1();
                 }
                 else {
-                    final p6k$a a = p6k.a(this.z0().getString(2131957381), this.r0(), k1);
-                    a.s(rba.c("backup_code", "", "take_screenshot", ""));
-                    this.i1.d((p6k)((h4j)a).e());
+                    final x6k$a a = x6k.a(this.z0().getString(2131957381), this.q0(), l1);
+                    a.s(aba.c("backup_code", "", "take_screenshot", ""));
+                    this.j1.d((Object)((n4j)a).e());
                 }
             }
             else {
-                final zf4 zf5 = new zf4();
-                zf5.q(new String[] { "backup_code::take_screenshot:cancel:click" });
-                saw.b((okm)zf5);
+                final af4 af5 = new af4();
+                ((u0p)af5).q(new String[] { "backup_code::take_screenshot:cancel:click" });
+                cbw.b((elm)af5);
             }
         }
     }
     
-    @Override
-    public final lcv$b m0(final lcv$b lcv$b) {
-        lcv$b.a = "backup_code";
-        lcv$b.c = 2131624088;
-        return lcv$b;
+    public final gdv$b l0(final gdv$b gdv$b) {
+        gdv$b.a = "backup_code";
+        gdv$b.c = 2131624088;
+        return gdv$b;
     }
     
-    public static final class a extends t3e<String>
+    public final void s0(final DialogInterface dialogInterface, final int n) {
+        final af4 af4 = new af4();
+        ((u0p)af4).q(new String[] { "backup_code::take_screenshot:cancel:click" });
+        cbw.b((elm)af4);
+    }
+    
+    public static final class a extends y2e<String>
     {
         public a(final Context context) {
             super(context);
@@ -221,7 +218,7 @@ public class BackupCodeContentViewProvider extends acv<String> implements mw8, j
         public final void a(final View view, final Context context, final Object o) {
             final String s = (String)o;
             final TextView textView = (TextView)view.findViewById(2131427760);
-            final String[] k1 = BackupCodeContentViewProvider.k1;
+            final String[] l1 = BackupCodeContentViewProvider.l1;
             String string;
             if (s != null && s.length() == 12) {
                 final StringBuilder sb = new StringBuilder();
@@ -243,33 +240,33 @@ public class BackupCodeContentViewProvider extends acv<String> implements mw8, j
         }
     }
     
-    public static final class b extends gic<String, a>
+    public static final class b extends fhc<String, a>
     {
-        public final h8q I0;
-        public final h8q J0;
-        public final llb K0;
+        public final y8q J0;
+        public final y8q K0;
+        public final jkb L0;
         
-        public b(final Context context, final a a, final dz5<Object> dz5, final llb k0) {
-            super((cz5)a, 3, (dz5)dz5);
-            this.I0 = new h8q(context.getString(2131952889));
-            this.J0 = new h8q(context.getString(2131954197));
-            this.K0 = k0;
+        public b(final Context context, final a a, final ny5<Object> ny5, final jkb l0) {
+            super((my5)a, 3, (ny5)ny5);
+            this.J0 = new y8q(context.getString(2131952889));
+            this.K0 = new y8q(context.getString(2131954197));
+            this.L0 = l0;
         }
         
         public final Object d() {
-            return this.J0;
+            return this.K0;
         }
         
         public final View e(final ViewGroup viewGroup) {
-            return j9q.a(viewGroup, this.J0, this.K0.c);
+            return aaq.a(viewGroup, this.K0, this.L0.c);
         }
         
         public final Object g() {
-            return this.I0;
+            return this.J0;
         }
         
         public final View h(final ViewGroup viewGroup) {
-            return j9q.a(viewGroup, this.I0, this.K0.c);
+            return aaq.a(viewGroup, this.J0, this.L0.c);
         }
     }
 }

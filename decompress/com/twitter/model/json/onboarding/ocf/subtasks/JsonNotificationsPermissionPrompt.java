@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNotificationsPermissionPrompt extends lhh<jxi>
+public class JsonNotificationsPermissionPrompt extends qhh<mxi>
 {
     @JsonField
     public JsonOcfRichText a;
@@ -19,31 +19,30 @@ public class JsonNotificationsPermissionPrompt extends lhh<jxi>
     @JsonField
     public JsonOcfRichText c;
     @JsonField
-    public xrv d;
+    public ssv d;
     @JsonField
-    public xrv e;
+    public ssv e;
     @JsonField
-    public xrv f;
+    public ssv f;
     @JsonField
-    public xrv g;
-    @JsonField(typeConverter = bjl.class)
-    public ajl h;
-    @JsonField(typeConverter = o6k.class)
+    public ssv g;
+    @JsonField(typeConverter = ojl.class)
+    public njl h;
+    @JsonField(typeConverter = w6k.class)
     public int i;
     
-    @Override
-    public final h4j t() {
-        final jxi$a jxi$a = new jxi$a();
-        ((lsr$a)jxi$a).f = JsonOcfRichText.s(this.a);
-        final int a = w4j.a;
-        ((lsr$a)jxi$a).g = JsonOcfRichText.s(this.b);
-        jxi$a.k = JsonOcfRichText.s(this.c);
-        jxi$a.l = this.d;
-        jxi$a.m = this.e;
-        jxi$a.n = this.f;
-        jxi$a.o = this.g;
-        jxi$a.q = this.i;
-        jxi$a.p = this.h;
-        return (h4j)jxi$a;
+    public final n4j t() {
+        final mxi$a mxi$a = new mxi$a();
+        ((dtr$a)mxi$a).f = JsonOcfRichText.s(this.a);
+        final int a = c5j.a;
+        ((dtr$a)mxi$a).g = JsonOcfRichText.s(this.b);
+        mxi$a.k = JsonOcfRichText.s(this.c);
+        mxi$a.l = this.d;
+        mxi$a.m = this.e;
+        mxi$a.n = this.f;
+        mxi$a.o = this.g;
+        mxi$a.q = this.i;
+        mxi$a.p = this.h;
+        return (n4j)mxi$a;
     }
 }

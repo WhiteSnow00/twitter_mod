@@ -1,22 +1,33 @@
-import android.util.DisplayMetrics;
-import android.graphics.Path;
-import android.graphics.Canvas;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class idf extends kdf
+public final class idf implements jtb
 {
-    public idf(final cu3 cu3, final t9x t9x) {
-        super(cu3, t9x);
+    public static final idf b;
+    public static final idf c;
+    public final int a;
+    
+    static {
+        b = new idf(0);
+        c = new idf(1);
     }
     
-    public final void r(final Canvas canvas, final Path path, final int n, final int n2) {
-        final DisplayMetrics a = nmw.a;
-        final int save = canvas.save();
-        canvas.clipPath(path);
-        canvas.drawColor((n & 0xFFFFFF) | n2 << 24);
-        canvas.restoreToCount(save);
+    public idf(final int a) {
+        this.a = a;
+    }
+    
+    public final Object apply(final Object o) {
+        switch (this.a) {
+            default: {
+                final tge tge = (tge)o;
+                final q6u$a companion = q6u.Companion;
+                czd.f((Object)tge, "input");
+                return gih.c(tge, (Class)p6u$b.class, false);
+            }
+            case 0: {
+                return Long.valueOf((String)o);
+            }
+        }
     }
 }

@@ -1,17 +1,27 @@
-import android.view.ViewGroup$LayoutParams;
-import android.view.WindowManager;
-import android.graphics.Rect;
-import android.view.View;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface grk
+public final class grk<T> extends erk<T>
 {
-    void g(final View p0, final Rect p1);
+    public final Object c;
     
-    void k(final WindowManager p0, final View p1, final ViewGroup$LayoutParams p2);
+    public grk(final int n) {
+        super(n);
+        this.c = new Object();
+    }
     
-    void l(final View p0, final int p1, final int p2);
+    @Override
+    public final T a() {
+        synchronized (this.c) {
+            return super.a();
+        }
+    }
+    
+    @Override
+    public final boolean b(final T t) {
+        synchronized (this.c) {
+            return super.b(t);
+        }
+    }
 }

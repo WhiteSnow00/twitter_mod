@@ -12,95 +12,103 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTweetSelectionUrt$$JsonObjectMapper extends JsonMapper<JsonTweetSelectionUrt>
 {
-    public static JsonTweetSelectionUrt _parse(final khe khe) throws IOException {
+    public static JsonTweetSelectionUrt _parse(final tge tge) throws IOException {
         final JsonTweetSelectionUrt jsonTweetSelectionUrt = new JsonTweetSelectionUrt();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTweetSelectionUrt, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTweetSelectionUrt, d, tge);
+            tge.l0();
         }
         return jsonTweetSelectionUrt;
     }
     
-    public static void _serialize(final JsonTweetSelectionUrt jsonTweetSelectionUrt, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTweetSelectionUrt jsonTweetSelectionUrt, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTweetSelectionUrt.i != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonTweetSelectionUrt.i, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonTweetSelectionUrt.i, afe, true);
         }
         if (jsonTweetSelectionUrt.h != null) {
-            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonTweetSelectionUrt.h, "detail_rich_text_options", true, tfe);
+            LoganSquare.typeConverterFor((Class)ucj.class).serialize((Object)jsonTweetSelectionUrt.h, "detail_rich_text_options", true, afe);
         }
         if (jsonTweetSelectionUrt.d != null) {
-            tfe.i("graphql_timeline_query");
-            JsonTimelineQuery$$JsonObjectMapper._serialize(jsonTweetSelectionUrt.d, tfe, true);
+            afe.i("graphql_timeline_query");
+            JsonTimelineQuery$$JsonObjectMapper._serialize(jsonTweetSelectionUrt.d, afe, true);
         }
         if (jsonTweetSelectionUrt.a != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)jsonTweetSelectionUrt.a, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)jsonTweetSelectionUrt.a, "header", true, afe);
         }
         if (jsonTweetSelectionUrt.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonTweetSelectionUrt.b, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonTweetSelectionUrt.b, "next_link", true, afe);
         }
         if (jsonTweetSelectionUrt.g != null) {
-            LoganSquare.typeConverterFor((Class)abi.class).serialize((Object)jsonTweetSelectionUrt.g, "next_link_options", true, tfe);
+            LoganSquare.typeConverterFor((Class)cbi.class).serialize((Object)jsonTweetSelectionUrt.g, "next_link_options", true, afe);
         }
         if (jsonTweetSelectionUrt.f != null) {
-            LoganSquare.typeConverterFor((Class)bej.class).serialize((Object)jsonTweetSelectionUrt.f, "scribe_config", true, tfe);
+            LoganSquare.typeConverterFor((Class)gej.class).serialize((Object)jsonTweetSelectionUrt.f, "scribe_config", true, afe);
         }
         if (jsonTweetSelectionUrt.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonTweetSelectionUrt.c, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonTweetSelectionUrt.c, "skip_link", true, afe);
         }
-        tfe.u0("timeline_source", jsonTweetSelectionUrt.e);
+        afe.t0("timeline_source", jsonTweetSelectionUrt.e);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTweetSelectionUrt jsonTweetSelectionUrt, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTweetSelectionUrt jsonTweetSelectionUrt, final String s, final tge tge) throws IOException {
         if ("component_collection".equals(s)) {
-            jsonTweetSelectionUrt.i = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonTweetSelectionUrt.i = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_rich_text_options".equals(s)) {
-            jsonTweetSelectionUrt.h = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(khe);
+            jsonTweetSelectionUrt.h = (ucj)LoganSquare.typeConverterFor((Class)ucj.class).parse(tge);
         }
         else if ("graphql_timeline_query".equals(s)) {
-            jsonTweetSelectionUrt.d = JsonTimelineQuery$$JsonObjectMapper._parse(khe);
+            jsonTweetSelectionUrt.d = JsonTimelineQuery$$JsonObjectMapper._parse(tge);
         }
         else if ("header".equals(s)) {
-            jsonTweetSelectionUrt.a = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            jsonTweetSelectionUrt.a = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonTweetSelectionUrt.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonTweetSelectionUrt.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link_options".equals(s)) {
-            jsonTweetSelectionUrt.g = (abi)LoganSquare.typeConverterFor((Class)abi.class).parse(khe);
+            jsonTweetSelectionUrt.g = (cbi)LoganSquare.typeConverterFor((Class)cbi.class).parse(tge);
         }
         else if ("scribe_config".equals(s)) {
-            jsonTweetSelectionUrt.f = (bej)LoganSquare.typeConverterFor((Class)bej.class).parse(khe);
+            jsonTweetSelectionUrt.f = (gej)LoganSquare.typeConverterFor((Class)gej.class).parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            jsonTweetSelectionUrt.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonTweetSelectionUrt.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("timeline_source".equals(s)) {
-            jsonTweetSelectionUrt.e = khe.T((String)null);
+            jsonTweetSelectionUrt.e = tge.T((String)null);
         }
     }
     
-    public JsonTweetSelectionUrt parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTweetSelectionUrt parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTweetSelectionUrt jsonTweetSelectionUrt, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTweetSelectionUrt, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTweetSelectionUrt jsonTweetSelectionUrt, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTweetSelectionUrt, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTweetSelectionUrt)o, afe, b);
     }
 }

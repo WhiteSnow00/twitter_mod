@@ -10,91 +10,99 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonCarouselItem$$JsonObjectMapper extends JsonMapper<JsonCarouselItem>
 {
-    public static JsonCarouselItem _parse(final khe khe) throws IOException {
+    public static JsonCarouselItem _parse(final tge tge) throws IOException {
         final JsonCarouselItem jsonCarouselItem = new JsonCarouselItem();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonCarouselItem, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonCarouselItem, d, tge);
+            tge.l0();
         }
         return jsonCarouselItem;
     }
     
-    public static void _serialize(final JsonCarouselItem jsonCarouselItem, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonCarouselItem jsonCarouselItem, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonCarouselItem.d != null) {
-            LoganSquare.typeConverterFor((Class)fpf.class).serialize((Object)jsonCarouselItem.d, "audiospace", true, tfe);
+            LoganSquare.typeConverterFor((Class)rof.class).serialize((Object)jsonCarouselItem.d, "audiospace", true, afe);
         }
         if (jsonCarouselItem.c != null) {
-            LoganSquare.typeConverterFor((Class)zl3.class).serialize((Object)jsonCarouselItem.c, "broadcast", true, tfe);
+            LoganSquare.typeConverterFor((Class)hl3.class).serialize((Object)jsonCarouselItem.c, "broadcast", true, afe);
         }
         if (jsonCarouselItem.f != null) {
-            LoganSquare.typeConverterFor((Class)mdq.class).serialize((Object)jsonCarouselItem.f, "fallback_slate", true, tfe);
+            LoganSquare.typeConverterFor((Class)deq.class).serialize((Object)jsonCarouselItem.f, "fallback_slate", true, afe);
         }
-        tfe.u0("entry_id", jsonCarouselItem.a);
+        afe.t0("entry_id", jsonCarouselItem.a);
         if (jsonCarouselItem.h != null) {
-            LoganSquare.typeConverterFor((Class)moh.class).serialize((Object)jsonCarouselItem.h, "moment", true, tfe);
+            LoganSquare.typeConverterFor((Class)roh.class).serialize((Object)jsonCarouselItem.h, "moment", true, afe);
         }
-        tfe.e("selected", jsonCarouselItem.b);
+        afe.e("selected", jsonCarouselItem.b);
         if (jsonCarouselItem.g != null) {
-            LoganSquare.typeConverterFor((Class)mdq.class).serialize((Object)jsonCarouselItem.g, "slate", true, tfe);
+            LoganSquare.typeConverterFor((Class)deq.class).serialize((Object)jsonCarouselItem.g, "slate", true, afe);
         }
         if (jsonCarouselItem.i != null) {
-            LoganSquare.typeConverterFor((Class)um3.class).serialize((Object)jsonCarouselItem.i, "social_proof", true, tfe);
+            LoganSquare.typeConverterFor((Class)dm3.class).serialize((Object)jsonCarouselItem.i, "social_proof", true, afe);
         }
         if (jsonCarouselItem.e != null) {
-            LoganSquare.typeConverterFor((Class)rmu.class).serialize((Object)jsonCarouselItem.e, "tweet_media", true, tfe);
+            LoganSquare.typeConverterFor((Class)lnu.class).serialize((Object)jsonCarouselItem.e, "tweet_media", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonCarouselItem jsonCarouselItem, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonCarouselItem jsonCarouselItem, final String s, final tge tge) throws IOException {
         if ("audiospace".equals(s)) {
-            jsonCarouselItem.d = (fpf)LoganSquare.typeConverterFor((Class)fpf.class).parse(khe);
+            jsonCarouselItem.d = (rof)LoganSquare.typeConverterFor((Class)rof.class).parse(tge);
         }
         else if ("broadcast".equals(s)) {
-            jsonCarouselItem.c = (zl3)LoganSquare.typeConverterFor((Class)zl3.class).parse(khe);
+            jsonCarouselItem.c = (hl3)LoganSquare.typeConverterFor((Class)hl3.class).parse(tge);
         }
         else if ("fallback_slate".equals(s)) {
-            jsonCarouselItem.f = (mdq)LoganSquare.typeConverterFor((Class)mdq.class).parse(khe);
+            jsonCarouselItem.f = (deq)LoganSquare.typeConverterFor((Class)deq.class).parse(tge);
         }
         else if ("entry_id".equals(s)) {
-            jsonCarouselItem.a = khe.T((String)null);
+            jsonCarouselItem.a = tge.T((String)null);
         }
         else if ("moment".equals(s)) {
-            jsonCarouselItem.h = (moh)LoganSquare.typeConverterFor((Class)moh.class).parse(khe);
+            jsonCarouselItem.h = (roh)LoganSquare.typeConverterFor((Class)roh.class).parse(tge);
         }
         else if ("selected".equals(s)) {
-            jsonCarouselItem.b = khe.k();
+            jsonCarouselItem.b = tge.k();
         }
         else if ("slate".equals(s)) {
-            jsonCarouselItem.g = (mdq)LoganSquare.typeConverterFor((Class)mdq.class).parse(khe);
+            jsonCarouselItem.g = (deq)LoganSquare.typeConverterFor((Class)deq.class).parse(tge);
         }
         else if ("social_proof".equals(s)) {
-            jsonCarouselItem.i = (um3)LoganSquare.typeConverterFor((Class)um3.class).parse(khe);
+            jsonCarouselItem.i = (dm3)LoganSquare.typeConverterFor((Class)dm3.class).parse(tge);
         }
         else if ("tweet_media".equals(s)) {
-            jsonCarouselItem.e = (rmu)LoganSquare.typeConverterFor((Class)rmu.class).parse(khe);
+            jsonCarouselItem.e = (lnu)LoganSquare.typeConverterFor((Class)lnu.class).parse(tge);
         }
     }
     
-    public JsonCarouselItem parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonCarouselItem parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonCarouselItem jsonCarouselItem, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonCarouselItem, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonCarouselItem jsonCarouselItem, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonCarouselItem, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonCarouselItem)o, afe, b);
     }
 }

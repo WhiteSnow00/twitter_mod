@@ -2,24 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gnq
+public final class gnq extends kkl
 {
-    public static final a Companion;
-    public final saw a;
-    public final w5b b;
+    public static final gnq D0;
     
     static {
-        Companion = new a();
+        D0 = new gnq();
     }
     
-    public gnq(final saw a, final w5b b) {
-        zzd.f((Object)a, "userEventReporter");
-        zzd.f((Object)b, "sessionIdManager");
-        this.a = a;
-        this.b = b;
+    public gnq() {
+        super((Class)xmq.class, "isExpanded", "isExpanded()Z", 0);
     }
     
-    public static final class a
-    {
+    public final Object get(final Object o) {
+        return ((xmq)o).a;
     }
 }

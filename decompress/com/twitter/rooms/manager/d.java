@@ -9,30 +9,30 @@ import java.util.Set;
 import tv.periscope.model.b;
 import com.twitter.rooms.di.room.RoomObjectGraph;
 
-public final class d extends gue implements rtb<gqn, gqn>
+public final class d extends ste implements qsb<vqn, vqn>
 {
-    public final /* synthetic */ gqn C0;
+    public final vqn D0;
     
-    public d(final gqn c0) {
-        this.C0 = c0;
+    public d(final vqn d0) {
+        this.D0 = d0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final gqn gqn = (gqn)o;
-        zzd.f((Object)gqn, "$this$setState");
-        final llq g = this.C0.G;
-        zzd.f((Object)g, "<this>");
-        llq llq;
-        if (!poa.x(g)) {
-            llq = llq.E0;
+        final vqn vqn = (vqn)o;
+        czd.f((Object)vqn, "$this$setState");
+        final fmq g = this.D0.G;
+        czd.f((Object)g, "<this>");
+        fmq fmq;
+        if (!xli.z(g)) {
+            fmq = fmq.F0;
         }
         else {
-            llq = llq.C0;
-            if (g == llq) {
-                llq = llq.D0;
+            fmq = fmq.D0;
+            if (g == fmq) {
+                fmq = fmq.E0;
             }
         }
-        return gqn.l(gqn, null, null, false, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0, null, null, null, false, null, null, null, false, null, 0, null, null, llq, null, null, false, null, false, false, false, null, null, false, -1, 2046);
+        return vqn.l(vqn, null, null, false, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0, null, null, null, false, null, null, null, false, null, 0, null, null, fmq, null, null, false, null, false, false, false, null, null, false, -1, 2046);
     }
 }

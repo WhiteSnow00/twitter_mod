@@ -6,7 +6,7 @@ package com.twitter.app.common.timeline.cover.halfcover.di;
 
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 
-@l4j
+@r4j
 public interface HalfCoverViewObjectGraph extends ViewObjectGraph
 {
 }

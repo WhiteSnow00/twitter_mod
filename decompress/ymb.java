@@ -1,56 +1,33 @@
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
-import com.google.android.exoplayer2.upstream.e;
-import java.util.Map;
+import android.content.Intent;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class ymb<K, V> extends zmb implements Map<K, V>
+public final class ymb implements nj6
 {
-    public final void clear() {
-        ((e.b)this).C0.clear();
+    public final int a;
+    public final Object b;
+    
+    public ymb(final Object b, final int a) {
+        this.a = a;
+        this.b = b;
     }
     
-    public boolean containsKey(final Object o) {
-        return ((e.b)this).C0.containsKey(o);
-    }
-    
-    public Set<Entry<K, V>> entrySet() {
-        return (Set<Entry<K, V>>)((e.b)this).C0.entrySet();
-    }
-    
-    public V get(final Object o) {
-        return (V)((e.b)this).C0.get(o);
-    }
-    
-    public boolean isEmpty() {
-        return ((e.b)this).C0.isEmpty();
-    }
-    
-    public Set<K> keySet() {
-        return (Set<K>)((e.b)this).C0.keySet();
-    }
-    
-    public final V put(final K k, final V v) {
-        return (V)((e.b)this).C0.put((String)k, (List<String>)v);
-    }
-    
-    public final void putAll(final Map<? extends K, ? extends V> map) {
-        ((e.b)this).C0.putAll((Map<? extends String, ? extends List<String>>)map);
-    }
-    
-    public final V remove(final Object o) {
-        return (V)((e.b)this).C0.remove(o);
-    }
-    
-    public int size() {
-        return ((e.b)this).C0.size();
-    }
-    
-    public final Collection<V> values() {
-        return (Collection<V>)((e.b)this).C0.values();
+    public final void accept(final Object o) {
+        switch (this.a) {
+            default: {
+                final mn2$a mn2$a = (mn2$a)this.b;
+                final String s = (String)o;
+                final int f = ff8.f;
+                ((nn2)mn2$a).a(s);
+                return;
+            }
+            case 0: {
+                final cnb cnb = (cnb)this.b;
+                final Intent intent = (Intent)o;
+                cnb.Q0.a();
+            }
+        }
     }
 }

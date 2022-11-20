@@ -12,7 +12,7 @@ public final class b
 {
     public interface a
     {
-        void o(final e94 p0);
+        void k(final h84 p0);
     }
     
     public static final class b
@@ -24,7 +24,7 @@ public final class b
         public b(final View a) {
             this.a = a;
             final View viewById = a.findViewById(2131428235);
-            final int a2 = w4j.a;
+            final int a2 = c5j.a;
             this.b = (TextView)viewById;
             this.c = (RadioButton)a.findViewById(2131428234);
         }

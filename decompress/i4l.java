@@ -1,20 +1,26 @@
+import androidx.appcompat.app.f;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class i4l extends gue implements otb<Boolean>
+public final class i4l
 {
-    public static final i4l C0;
+    public static final a Companion;
+    public final f a;
+    public final n9l b;
     
     static {
-        C0 = new i4l();
+        Companion = new a();
     }
     
-    public i4l() {
-        super(0);
+    public i4l(final f a, final n9l b) {
+        czd.f((Object)a, "activity");
+        this.a = a;
+        this.b = b;
     }
     
-    public final Object invoke() {
-        return !e4l.Companion.d() || !ncw.d().getUser().j();
+    public static final class a
+    {
     }
 }

@@ -516,6 +516,18 @@
         <item quantity="one">%s tilaaja</item>
         <item quantity="other">%s tilaajaa</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">päivä</item>
+        <item quantity="other">%d päivää</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">kuukausi</item>
+        <item quantity="other">%d kuukautta</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">vuosi</item>
+        <item quantity="other">%d vuotta</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d pv</item>
         <item quantity="other">%d pv</item>

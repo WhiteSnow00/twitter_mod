@@ -8,13 +8,21 @@ import java.io.IOException;
 import android.os.Parcel;
 import android.os.Parcelable$Creator;
 
-@lpe
-public class BackupCodeContentViewProvider$SavedState<OBJ extends BackupCodeContentViewProvider> extends dq1<OBJ>
+@xoe
+public class BackupCodeContentViewProvider$SavedState<OBJ extends BackupCodeContentViewProvider> extends zp1<OBJ>
 {
     public static final Parcelable$Creator CREATOR;
     
     static {
-        CREATOR = (Parcelable$Creator)new BackupCodeContentViewProvider$SavedState$a();
+        CREATOR = (Parcelable$Creator)new Parcelable$Creator<BackupCodeContentViewProvider$SavedState>() {
+            public final Object createFromParcel(final Parcel parcel) {
+                return new BackupCodeContentViewProvider$SavedState(parcel);
+            }
+            
+            public final Object[] newArray(final int n) {
+                return new BackupCodeContentViewProvider$SavedState[n];
+            }
+        };
     }
     
     public BackupCodeContentViewProvider$SavedState(final Parcel parcel) {
@@ -25,14 +33,22 @@ public class BackupCodeContentViewProvider$SavedState<OBJ extends BackupCodeCont
         super((Object)obj);
     }
     
-    public OBJ deserializeValue(final elp elp, final OBJ obj) throws IOException, ClassNotFoundException {
-        final BackupCodeContentViewProvider backupCodeContentViewProvider = (BackupCodeContentViewProvider)super.deserializeValue(elp, (Object)obj);
-        backupCodeContentViewProvider.b1 = elp.u();
+    public OBJ deserializeValue(final vlp vlp, final OBJ obj) throws IOException, ClassNotFoundException {
+        final BackupCodeContentViewProvider backupCodeContentViewProvider = (BackupCodeContentViewProvider)super.deserializeValue(vlp, (Object)obj);
+        backupCodeContentViewProvider.c1 = vlp.s();
         return (OBJ)backupCodeContentViewProvider;
     }
     
-    public void serializeValue(final flp flp, final OBJ obj) throws IOException {
-        super.serializeValue(flp, (Object)obj);
-        flp.t(obj.b1);
+    public /* bridge */ Object deserializeValue(final vlp vlp, final Object o) throws IOException, ClassNotFoundException {
+        return this.deserializeValue(vlp, (BackupCodeContentViewProvider)o);
+    }
+    
+    public void serializeValue(final wlp wlp, final OBJ obj) throws IOException {
+        super.serializeValue(wlp, (Object)obj);
+        wlp.r(obj.c1);
+    }
+    
+    public /* bridge */ void serializeValue(final wlp wlp, final Object o) throws IOException {
+        this.serializeValue(wlp, (BackupCodeContentViewProvider)o);
     }
 }

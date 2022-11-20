@@ -1,100 +1,139 @@
-import java.io.Writer;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.net.UnknownHostException;
-import java.util.Locale;
-import java.net.URI;
+import java.util.concurrent.atomic.AtomicLong;
+import java.util.Date;
+import java.text.ParseException;
+import java.util.concurrent.TimeUnit;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Arrays;
+import java.util.Set;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class csc implements sfa
+public abstract class csc<OBJECT, ERROR> extends qtm<xrc<OBJECT, ERROR>>
 {
-    public static void e(final xrc xrc, final String s) {
-        final String f = f(xrc);
-        final StringBuilder sb = new StringBuilder();
-        sb.append(f);
-        sb.append(s);
-        cag.a("TwitterNetwork", sb.toString());
+    public static final Set<arc$b> c;
+    public final Set<Integer> a;
+    public final Set<arc$b> b;
+    
+    static {
+        csc.c = new HashSet((Collection<? extends E>)Arrays.asList(arc$b.values()));
     }
     
-    public static String f(final xrc xrc) {
-        final URI c = xrc.c;
-        final StringBuilder y = mb0.y("[", c.getScheme(), "://", c.getHost(), c.getPath());
-        y.append("] ");
-        return y.toString();
+    public csc(final Collection<Integer> collection) {
+        this.a = new HashSet((Collection<? extends E>)collection);
+        this.b = csc.c;
     }
     
-    public final void a(final xrc xrc) {
-        final xsc n = xrc.n;
-        final Locale english = Locale.ENGLISH;
-        e(xrc, String.format(english, "protocol: %s %s status: %d/%s, content: %s (%s), content-length: %,d", n.t, n.u, n.a, n.b, n.r, n.s, n.q));
-        e(xrc, String.format(english, "open: %dms, read: %dms, duration: %dms", n.g, n.f, n.e));
-        final int[] z = n.z;
-        final int n2 = z[1] + z[2] + z[3] + z[4];
-        final int n3 = z[5];
-        final int n4 = z[6];
-        final long j = n.j;
-        final int n5 = z[0];
-        final int n6 = z[1];
-        final int n7 = z[2];
-        final int n8 = z[3];
-        final int n9 = z[4];
-        final int n10 = z[5];
-        final int n11 = z[6];
-        final long g = n.g;
-        final long f = n.f;
-        final long h = n.h;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("EXECUTE_TIME\tbytes:");
-        sb.append(j);
-        sb.append("\tCREATE:");
-        sb.append(n5);
-        sb.append("\tINIT:");
-        sb.append(n6);
-        sb.append("\tSEND:");
-        sb.append(n7);
-        sb.append("\tWAIT:");
-        sb.append(n8);
-        sb.append("\tREAD:");
-        sb.append(n9);
-        sb.append("\tREAD_TAIL:");
-        sb.append(n10);
-        sb.append("\tCLOSE:");
-        sb.append(n11);
-        c0.G(sb, "\toldOpen:", g, "\toldRead:");
-        sb.append(f);
-        c0.G(sb, "\toldClose:", h, "\toldDuration:");
-        sb.append(g + f + h);
-        sb.append("\tnewDuration");
-        sb.append(n2);
-        sb.append("\tnewExecute");
-        sb.append(n3 + n2 + n4);
-        cag.a("HttpTimings", sb.toString());
+    public csc(final Collection<arc$b> collection, final Collection<Integer> collection2) {
+        this.b = new HashSet((Collection<? extends E>)collection);
+        this.a = new HashSet((Collection<? extends E>)collection2);
     }
     
-    public final void b(final xrc xrc, final Exception ex) {
-        if (ex instanceof UnknownHostException) {
-            e(xrc, ex.getMessage());
-        }
-        else {
-            final StringWriter stringWriter = new StringWriter();
-            final PrintWriter printWriter = new PrintWriter(stringWriter);
-            stringWriter.append(f(xrc)).append("\n");
-            ex.printStackTrace(printWriter);
-            printWriter.flush();
-            cag.a("TwitterNetwork", stringWriter.toString());
-        }
-    }
-    
-    public final void d(final xrc xrc) {
-        final src f = xrc.f();
-        final boolean b = f != null;
-        final Locale english = Locale.ENGLISH;
-        e(xrc, String.format(english, "%s, has entity: %s", xrc.b, b));
-        if (b) {
-            e(xrc, String.format(english, "sending content-length: %,d", f.a()));
+    public static long e(arc j) {
+        j = (arc)j.j("Retry-After");
+        while (true) {
+            if (ikr.g((CharSequence)j)) {
+                long millis;
+                try {
+                    millis = TimeUnit.SECONDS.toMillis(Integer.parseInt((String)j));
+                    return millis;
+                }
+                catch (final NumberFormatException ex) {
+                    final m4s m4s = hq1.a;
+                    final arc arc = j;
+                    final Date date = m4s.parse((String)arc);
+                    final Date date3;
+                    final Date date2 = date3 = date;
+                    if (date3 != null) {
+                        final sbu sbu = sbu.d();
+                        final long n = sbu.a();
+                        final AtomicLong atomicLong = arc.F;
+                        final long n2 = atomicLong.get();
+                        final Date date4 = date2;
+                        final long time = date4.getTime();
+                        final long time2 = time;
+                        final long n3 = n;
+                        final long n4 = n2;
+                        final long n5 = n3 + n4;
+                        millis = time2 - n5;
+                        return millis;
+                    }
+                    break Label_0073;
+                }
+                return millis;
+            }
+            break Label_0073;
+            try {
+                final m4s m4s = hq1.a;
+                final arc arc = j;
+                final Date date = m4s.parse((String)arc);
+                final Date date3;
+                final Date date2 = date3 = date;
+                long millis;
+                if (date3 != null) {
+                    final sbu sbu = sbu.d();
+                    final long n = sbu.a();
+                    final AtomicLong atomicLong = arc.F;
+                    final long n2 = atomicLong.get();
+                    final Date date4 = date2;
+                    final long time2;
+                    final long time = time2 = date4.getTime();
+                    final long n3 = n;
+                    final long n4 = n2;
+                    final long n5 = n3 + n4;
+                    millis = time2 - n5;
+                }
+                else {
+                    millis = 0L;
+                }
+                return millis;
+            }
+            catch (final ParseException ex2) {
+                continue;
+            }
+            break;
         }
     }
+    
+    public long a(final atm<xrc<OBJECT, ERROR>> atm) {
+        return 0L;
+    }
+    
+    public String b() {
+        return this.getClass().getSimpleName();
+    }
+    
+    public final boolean c(final atm<xrc<OBJECT, ERROR>> atm) {
+        final xrc<OBJECT, ERROR> e = atm.e();
+        final boolean b = false;
+        if (e == null) {
+            return false;
+        }
+        final arc f = atm.e().f;
+        if (f == null) {
+            return false;
+        }
+        final bsc n = f.n;
+        final HashSet b2 = this.b;
+        final HashSet a = this.a;
+        boolean b3 = b;
+        if (b2.contains(f.b)) {
+            b3 = b;
+            if (a.contains(n.a)) {
+                b3 = b;
+                if (this.f(f, n)) {
+                    b3 = true;
+                }
+            }
+        }
+        return b3;
+    }
+    
+    public final boolean d(final lci lci, final atm<xrc<OBJECT, ERROR>> atm) {
+        return false;
+    }
+    
+    public abstract boolean f(final arc p0, final bsc p1);
 }

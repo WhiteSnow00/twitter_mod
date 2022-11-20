@@ -12,62 +12,62 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonUnhydratedEventsSummaryCoverMedia$$JsonObjectMapper extends JsonMapper<JsonUnhydratedEventsSummaryCoverMedia>
 {
-    public static JsonUnhydratedEventsSummaryCoverMedia _parse(final khe khe) throws IOException {
+    public static JsonUnhydratedEventsSummaryCoverMedia _parse(final tge tge) throws IOException {
         final JsonUnhydratedEventsSummaryCoverMedia jsonUnhydratedEventsSummaryCoverMedia = new JsonUnhydratedEventsSummaryCoverMedia();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonUnhydratedEventsSummaryCoverMedia, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonUnhydratedEventsSummaryCoverMedia, d, tge);
+            tge.l0();
         }
         return jsonUnhydratedEventsSummaryCoverMedia;
     }
     
-    public static void _serialize(final JsonUnhydratedEventsSummaryCoverMedia jsonUnhydratedEventsSummaryCoverMedia, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonUnhydratedEventsSummaryCoverMedia jsonUnhydratedEventsSummaryCoverMedia, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonUnhydratedEventsSummaryCoverMedia.a != null) {
-            tfe.i("mediaEntity");
-            JsonUnhydratedEventsSummaryCoverMedia$JsonEventSummaryMediaEntity$$JsonObjectMapper._serialize(jsonUnhydratedEventsSummaryCoverMedia.a, tfe, true);
+            afe.i("mediaEntity");
+            JsonUnhydratedEventsSummaryCoverMedia$JsonEventSummaryMediaEntity$$JsonObjectMapper._serialize(jsonUnhydratedEventsSummaryCoverMedia.a, afe, true);
         }
         final ArrayList c = jsonUnhydratedEventsSummaryCoverMedia.c;
         if (c != null) {
-            final Iterator g = q1a.g(tfe, "imagePossibleCropping", c);
-            while (g.hasNext()) {
-                final r6d r6d = g.next();
-                if (r6d != null) {
-                    LoganSquare.typeConverterFor((Class)r6d.class).serialize((Object)r6d, "lslocalimagePossibleCroppingElement", false, tfe);
+            final Iterator a = br.A(afe, "imagePossibleCropping", c);
+            while (a.hasNext()) {
+                final v5d v5d = a.next();
+                if (v5d != null) {
+                    LoganSquare.typeConverterFor((Class)v5d.class).serialize((Object)v5d, "lslocalimagePossibleCroppingElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (jsonUnhydratedEventsSummaryCoverMedia.b != null) {
-            LoganSquare.typeConverterFor((Class)fwg.class).serialize((Object)jsonUnhydratedEventsSummaryCoverMedia.b, "mediaKey", true, tfe);
+            LoganSquare.typeConverterFor((Class)fwg.class).serialize((Object)jsonUnhydratedEventsSummaryCoverMedia.b, "mediaKey", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonUnhydratedEventsSummaryCoverMedia jsonUnhydratedEventsSummaryCoverMedia, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonUnhydratedEventsSummaryCoverMedia jsonUnhydratedEventsSummaryCoverMedia, final String s, final tge tge) throws IOException {
         if ("mediaEntity".equals(s)) {
-            jsonUnhydratedEventsSummaryCoverMedia.a = JsonUnhydratedEventsSummaryCoverMedia$JsonEventSummaryMediaEntity$$JsonObjectMapper._parse(khe);
+            jsonUnhydratedEventsSummaryCoverMedia.a = JsonUnhydratedEventsSummaryCoverMedia$JsonEventSummaryMediaEntity$$JsonObjectMapper._parse(tge);
         }
         else if ("imagePossibleCropping".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList c = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final r6d r6d = (r6d)LoganSquare.typeConverterFor((Class)r6d.class).parse(khe);
-                    if (r6d != null) {
-                        c.add(r6d);
+                while (tge.h0() != vie.O0) {
+                    final v5d v5d = (v5d)LoganSquare.typeConverterFor((Class)v5d.class).parse(tge);
+                    if (v5d != null) {
+                        c.add(v5d);
                     }
                 }
                 jsonUnhydratedEventsSummaryCoverMedia.c = c;
@@ -77,15 +77,23 @@ public final class JsonUnhydratedEventsSummaryCoverMedia$$JsonObjectMapper exten
             }
         }
         else if ("mediaKey".equals(s)) {
-            jsonUnhydratedEventsSummaryCoverMedia.b = (fwg)LoganSquare.typeConverterFor((Class)fwg.class).parse(khe);
+            jsonUnhydratedEventsSummaryCoverMedia.b = (fwg)LoganSquare.typeConverterFor((Class)fwg.class).parse(tge);
         }
     }
     
-    public JsonUnhydratedEventsSummaryCoverMedia parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonUnhydratedEventsSummaryCoverMedia parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonUnhydratedEventsSummaryCoverMedia jsonUnhydratedEventsSummaryCoverMedia, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonUnhydratedEventsSummaryCoverMedia, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonUnhydratedEventsSummaryCoverMedia jsonUnhydratedEventsSummaryCoverMedia, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonUnhydratedEventsSummaryCoverMedia, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonUnhydratedEventsSummaryCoverMedia)o, afe, b);
     }
 }

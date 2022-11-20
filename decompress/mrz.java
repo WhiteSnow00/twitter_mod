@@ -1,17 +1,19 @@
-import java.util.List;
+import android.os.Parcel;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class mrz extends vby
+public final class mrz extends rd
 {
-    public mrz(final gzm gzm) {
-        super("internal.remoteConfig");
-        super.D0.put("getValue", new xpz(gzm));
+    public static final Parcelable$Creator<mrz> CREATOR;
+    
+    static {
+        CREATOR = (Parcelable$Creator)new ptz();
     }
     
-    public final aey a(final k6z k6z, final List list) {
-        return (aey)aey.u0;
+    public final void writeToParcel(final Parcel parcel, final int n) {
+        fli.g1(parcel, fli.d1(parcel, 20293));
     }
 }

@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonEngagementCount extends lhh<r4a>
+public class JsonEngagementCount extends qhh<b4a>
 {
     @JsonField
     public long a;
@@ -18,12 +18,11 @@ public class JsonEngagementCount extends lhh<r4a>
     @JsonField
     public long c;
     
-    @Override
-    public final h4j t() {
-        final r4a$a r4a$a = new r4a$a();
-        r4a$a.a = this.a;
-        r4a$a.b = this.b;
-        r4a$a.c = this.c;
-        return (h4j)r4a$a;
+    public final n4j t() {
+        final b4a.a a = new b4a.a();
+        a.a = this.a;
+        a.b = this.b;
+        a.c = this.c;
+        return a;
     }
 }

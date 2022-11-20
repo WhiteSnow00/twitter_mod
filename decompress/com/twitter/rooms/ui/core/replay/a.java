@@ -12,113 +12,113 @@ import java.util.ArrayList;
 import tv.periscope.model.NarrowcastSpaceType;
 import com.twitter.rooms.model.helpers.RoomUserItem;
 
-public final class a extends gue implements rtb<qzn, qzn>
+public final class a extends ste implements qsb<d0o, d0o>
 {
-    public final /* synthetic */ qzn C0;
-    public final /* synthetic */ RoomUserItem D0;
-    public final /* synthetic */ RoomReplayConsumptionViewModel E0;
-    public final /* synthetic */ RoomUserItem F0;
-    public final /* synthetic */ gqn G0;
-    public final /* synthetic */ boolean H0;
-    public final /* synthetic */ NarrowcastSpaceType I0;
+    public final d0o D0;
+    public final RoomUserItem E0;
+    public final RoomReplayConsumptionViewModel F0;
+    public final RoomUserItem G0;
+    public final vqn H0;
+    public final boolean I0;
+    public final NarrowcastSpaceType J0;
     
-    public a(final qzn c0, final RoomUserItem d0, final RoomReplayConsumptionViewModel e0, final RoomUserItem f0, final gqn g0, final boolean h0, final NarrowcastSpaceType i0) {
-        this.C0 = c0;
+    public a(final d0o d0, final RoomUserItem e0, final RoomReplayConsumptionViewModel f0, final RoomUserItem g0, final vqn h0, final boolean i0, final NarrowcastSpaceType j0) {
         this.D0 = d0;
         this.E0 = e0;
         this.F0 = f0;
         this.G0 = g0;
         this.H0 = h0;
         this.I0 = i0;
+        this.J0 = j0;
         super(1);
     }
     
     public final Object invoke(Object o) {
-        final qzn qzn = (qzn)o;
-        zzd.f((Object)qzn, "$this$setState");
-        final qzn c0 = this.C0;
-        final String j = c0.j;
+        final d0o d0o = (d0o)o;
+        czd.f((Object)d0o, "$this$setState");
+        final d0o d0 = this.D0;
+        final String j = d0.j;
         boolean b = true;
-        if (j == null && this.D0 != null) {
-            final long id = this.E0.P0.getId();
-            final RoomUserItem d0 = this.D0;
-            zzd.c((Object)d0);
-            if (id != d0.getTwitterUserIdLong()) {
+        if (j == null && this.E0 != null) {
+            final long id = this.F0.Q0.getId();
+            final RoomUserItem e0 = this.E0;
+            czd.c((Object)e0);
+            if (id != e0.getTwitterUserIdLong()) {
                 b = false;
             }
-            o = new i3u((Object)b, (Object)this.D0.getName(), (Object)this.D0.getTwitterUserId());
+            o = new x3u((Object)b, (Object)this.E0.getName(), (Object)this.E0.getTwitterUserId());
         }
         else {
-            final boolean c2 = c0.c;
-            final qzn c3 = this.C0;
-            o = new i3u((Object)c2, (Object)c3.h, (Object)c3.j);
+            final boolean c = d0.c;
+            final d0o d2 = this.D0;
+            o = new x3u((Object)c, (Object)d2.h, (Object)d2.j);
         }
-        final boolean booleanValue = (boolean)((i3u)o).C0;
-        final String s = (String)((i3u)o).D0;
-        final String s2 = (String)((i3u)o).E0;
-        final RoomUserItem f0 = this.F0;
+        final boolean booleanValue = (boolean)((x3u)o).D0;
+        final String s = (String)((x3u)o).E0;
+        final String s2 = (String)((x3u)o).F0;
+        final RoomUserItem g0 = this.G0;
         String name = null;
         Label_0208: {
-            if (f0 != null) {
-                name = f0.getName();
+            if (g0 != null) {
+                name = g0.getName();
                 if (name != null) {
                     break Label_0208;
                 }
             }
             name = s;
         }
-        final RoomUserItem f2 = this.F0;
+        final RoomUserItem g2 = this.G0;
         String s3;
-        if (f2 == null || (s3 = f2.getImageUrl()) == null) {
-            s3 = this.C0.i;
+        if (g2 == null || (s3 = g2.getImageUrl()) == null) {
+            s3 = this.D0.i;
         }
-        final RoomReplayConsumptionViewModel e0 = this.E0;
+        final RoomReplayConsumptionViewModel f0 = this.F0;
         RoomUserItem roomUserItem;
-        if ((roomUserItem = this.F0) == null) {
-            roomUserItem = this.D0;
+        if ((roomUserItem = this.G0) == null) {
+            roomUserItem = this.E0;
         }
-        final String w = RoomReplayConsumptionViewModel.W(e0, roomUserItem);
-        final gqn g0 = this.G0;
-        final v21 f3 = g0.f;
+        final String w = RoomReplayConsumptionViewModel.W(f0, roomUserItem);
+        final vqn h0 = this.H0;
+        final r21 f2 = h0.f;
         String s4;
-        if ((f3 == null || (s4 = f3.j) == null) && (s4 = this.C0.l) == null) {
+        if ((f2 == null || (s4 = f2.j) == null) && (s4 = this.D0.l) == null) {
             s4 = "";
         }
-        final boolean l = g0.L;
+        final boolean l = h0.L;
         Long r = null;
-        String h;
-        if (f3 != null) {
-            h = f3.h;
+        String h2;
+        if (f2 != null) {
+            h2 = f2.h;
         }
         else {
-            h = null;
+            h2 = null;
         }
         Long n;
-        if ((n = this.C0.m) == null) {
-            if (f3 != null) {
-                n = f3.l;
+        if ((n = this.D0.m) == null) {
+            if (f2 != null) {
+                n = f2.l;
             }
             else {
                 n = null;
             }
         }
-        if (f3 != null) {
-            r = f3.R;
+        if (f2 != null) {
+            r = f2.R;
         }
-        final boolean n2 = g0.N;
-        if (f3 != null) {
-            final List h2 = f3.H;
-            if (h2 != null) {
-                final ArrayList list = new ArrayList<String>(kr4.h1((Iterable)h2, 10));
-                final Iterator iterator = h2.iterator();
+        final boolean n2 = h0.N;
+        if (f2 != null) {
+            final List h3 = f2.H;
+            if (h3 != null) {
+                final ArrayList list = new ArrayList<String>(iq4.H((Iterable)h3, 10));
+                final Iterator iterator = h3.iterator();
                 while (iterator.hasNext()) {
                     list.add(((AudioSpaceTopicItem)iterator.next()).getTopicId());
                 }
-                final Object o2 = or4.r2((Iterable)list);
-                return qzn.l(qzn, l, booleanValue, this.H0, w, name, s3, s, s2, s4, n, h, (hmk)null, 0L, 0L, 0L, false, false, this.D0, this.F0, false, r, n2, false, false, false, false, false, (Set)o2, (String)null, this.I0, -1102068479, 3);
+                final Object o2 = mq4.R0((Iterable)list);
+                return d0o.l(d0o, l, booleanValue, this.I0, w, name, s3, s, s2, s4, n, h2, (nmk)null, 0L, 0L, 0L, false, false, this.E0, this.G0, false, r, n2, false, false, false, false, false, (Set)o2, (String)null, this.J0, -1102068479, 3);
             }
         }
-        final Object o2 = f3a.C0;
-        return qzn.l(qzn, l, booleanValue, this.H0, w, name, s3, s, s2, s4, n, h, (hmk)null, 0L, 0L, 0L, false, false, this.D0, this.F0, false, r, n2, false, false, false, false, false, (Set)o2, (String)null, this.I0, -1102068479, 3);
+        final Object o2 = p2a.D0;
+        return d0o.l(d0o, l, booleanValue, this.I0, w, name, s3, s, s2, s4, n, h2, (nmk)null, 0L, 0L, 0L, false, false, this.E0, this.G0, false, r, n2, false, false, false, false, false, (Set)o2, (String)null, this.J0, -1102068479, 3);
     }
 }

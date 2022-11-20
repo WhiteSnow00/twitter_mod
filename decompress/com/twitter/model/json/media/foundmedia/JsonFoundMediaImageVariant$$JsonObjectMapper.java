@@ -9,61 +9,69 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFoundMediaImageVariant$$JsonObjectMapper extends JsonMapper<JsonFoundMediaImageVariant>
 {
-    public static JsonFoundMediaImageVariant _parse(final khe khe) throws IOException {
+    public static JsonFoundMediaImageVariant _parse(final tge tge) throws IOException {
         final JsonFoundMediaImageVariant jsonFoundMediaImageVariant = new JsonFoundMediaImageVariant();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFoundMediaImageVariant, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFoundMediaImageVariant, d, tge);
+            tge.l0();
         }
         return jsonFoundMediaImageVariant;
     }
     
-    public static void _serialize(final JsonFoundMediaImageVariant jsonFoundMediaImageVariant, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFoundMediaImageVariant jsonFoundMediaImageVariant, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.T("byte_count", jsonFoundMediaImageVariant.e);
-        tfe.T("height", jsonFoundMediaImageVariant.d);
-        tfe.u0("still_image_url", jsonFoundMediaImageVariant.b);
-        tfe.u0("url", jsonFoundMediaImageVariant.a);
-        tfe.T("width", jsonFoundMediaImageVariant.c);
+        afe.T("byte_count", jsonFoundMediaImageVariant.e);
+        afe.T("height", jsonFoundMediaImageVariant.d);
+        afe.t0("still_image_url", jsonFoundMediaImageVariant.b);
+        afe.t0("url", jsonFoundMediaImageVariant.a);
+        afe.T("width", jsonFoundMediaImageVariant.c);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFoundMediaImageVariant jsonFoundMediaImageVariant, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFoundMediaImageVariant jsonFoundMediaImageVariant, final String s, final tge tge) throws IOException {
         if ("byte_count".equals(s)) {
-            jsonFoundMediaImageVariant.e = khe.z();
+            jsonFoundMediaImageVariant.e = tge.y();
         }
         else if ("height".equals(s)) {
-            jsonFoundMediaImageVariant.d = khe.z();
+            jsonFoundMediaImageVariant.d = tge.y();
         }
         else if ("still_image_url".equals(s)) {
-            jsonFoundMediaImageVariant.b = khe.T((String)null);
+            jsonFoundMediaImageVariant.b = tge.T((String)null);
         }
         else if ("url".equals(s)) {
-            jsonFoundMediaImageVariant.a = khe.T((String)null);
+            jsonFoundMediaImageVariant.a = tge.T((String)null);
         }
         else if ("width".equals(s)) {
-            jsonFoundMediaImageVariant.c = khe.z();
+            jsonFoundMediaImageVariant.c = tge.y();
         }
     }
     
-    public JsonFoundMediaImageVariant parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFoundMediaImageVariant parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFoundMediaImageVariant jsonFoundMediaImageVariant, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFoundMediaImageVariant, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFoundMediaImageVariant jsonFoundMediaImageVariant, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFoundMediaImageVariant, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFoundMediaImageVariant)o, afe, b);
     }
 }

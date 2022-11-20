@@ -8551,7 +8551,6 @@
         <item name="android:textSize">@dimen/font_size_title_2</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:maxLines">1</item>
     </style>
     <style name="SwitchPreferenceCompatStyle" parent="@style/Preference.SwitchPreferenceCompat.Material">
         <item name="iconSpaceReserved">false</item>

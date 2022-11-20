@@ -12,19 +12,19 @@ import android.app.Service;
 
 public class TwitterAuthenticationService extends Service
 {
-    public z0v C0;
+    public u1v D0;
     
     public final IBinder onBind(final Intent intent) {
-        return ((AbstractAccountAuthenticator)this.C0).getIBinder();
+        return ((AbstractAccountAuthenticator)this.D0).getIBinder();
     }
     
     public final void onCreate() {
         super.onCreate();
-        this.C0 = new z0v((Context)this);
+        this.D0 = new u1v((Context)this);
     }
     
     public final void onDestroy() {
         super.onDestroy();
-        this.C0 = null;
+        this.D0 = null;
     }
 }

@@ -8,52 +8,52 @@ import java.util.concurrent.Callable;
 import java.util.Objects;
 import com.twitter.rooms.di.room.RoomObjectGraph;
 
-public final class n extends gue implements rtb<t01, ubq<? extends gvj<? extends t01, ? extends snj<iu3>>>>
+public final class n extends ste implements qsb<p01, lcq<? extends lvj<? extends p01, ? extends ynj<qt3>>>>
 {
-    public final /* synthetic */ RoomStateManager C0;
-    public final /* synthetic */ String D0;
-    public final /* synthetic */ gqn E0;
-    public final /* synthetic */ RoomObjectGraph F0;
+    public final RoomStateManager D0;
+    public final String E0;
+    public final vqn F0;
+    public final RoomObjectGraph G0;
     
-    public n(final RoomStateManager c0, final String d0, final gqn e0, final RoomObjectGraph f0) {
-        this.C0 = c0;
+    public n(final RoomStateManager d0, final String e0, final vqn f0, final RoomObjectGraph g0) {
         this.D0 = d0;
         this.E0 = e0;
         this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final t01 t01 = (t01)o;
-        zzd.f((Object)t01, "audioSpace");
-        if (oio.u()) {
-            final RoomStateManager c0 = this.C0;
-            final String d0 = this.D0;
-            final x21 b = t01.b;
-            zzd.c((Object)b);
-            c0.n0(d0, b);
+        final p01 p = (p01)o;
+        czd.f((Object)p, "audioSpace");
+        if (djo.u()) {
+            final RoomStateManager d0 = this.D0;
+            final String e0 = this.E0;
+            final t21 b = p.b;
+            czd.c((Object)b);
+            d0.n0(e0, b);
         }
-        final gqn e0 = this.E0;
-        final iu3 i = e0.i;
-        final String j = e0.j;
-        n9q n9q;
+        final vqn f0 = this.F0;
+        final qt3 i = f0.i;
+        final String j = f0.j;
+        eaq eaq;
         if (i != null && j != null) {
-            n9q = n9q.v((Object)new snj((Object)i));
+            eaq = eaq.v((Object)new ynj((Object)i));
         }
         else {
-            final RoomStateManager c2 = this.C0;
-            final RoomObjectGraph f0 = this.F0;
-            final String d2 = this.D0;
-            final String e2 = t01.c.e;
-            final boolean n0 = tdy.n0(e0);
-            Objects.requireNonNull(c2);
-            zzd.f((Object)f0, "withCurrentRoom");
-            zzd.f((Object)d2, "roomId");
-            zzd.f((Object)e2, "mediaKey");
-            final j7n r3 = f0.r3();
+            final RoomStateManager d2 = this.D0;
+            final RoomObjectGraph g0 = this.G0;
+            final String e2 = this.E0;
+            final String e3 = p.c.e;
+            final boolean n = blz.N(f0);
+            Objects.requireNonNull(d2);
+            czd.f((Object)g0, "withCurrentRoom");
+            czd.f((Object)e2, "roomId");
+            czd.f((Object)e3, "mediaKey");
+            final y7n r3 = g0.r3();
             Objects.requireNonNull(r3);
-            n9q = n9q.t((Callable)new f7n(d2, e2, n0, r3)).I(yvo.c()).p((qtb)new jhb((rtb)new g9o(c2, f0, d2), 14));
+            eaq = eaq.t((Callable)new u7n(e2, e3, n, r3)).I(owo.c()).p((psb)new hvl((qsb)new v9o(d2, g0, e2), 14));
         }
-        return n9q.w((qtb)new i5i((rtb)new m(this.C0, t01), 16));
+        return eaq.w((psb)new vt1((qsb)new m(this.D0, p), 11));
     }
 }

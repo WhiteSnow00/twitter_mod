@@ -9,53 +9,61 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSettingVersionDetails$$JsonObjectMapper extends JsonMapper<JsonSettingVersionDetails>
 {
-    public static JsonSettingVersionDetails _parse(final khe khe) throws IOException {
+    public static JsonSettingVersionDetails _parse(final tge tge) throws IOException {
         final JsonSettingVersionDetails jsonSettingVersionDetails = new JsonSettingVersionDetails();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSettingVersionDetails, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSettingVersionDetails, d, tge);
+            tge.l0();
         }
         return jsonSettingVersionDetails;
     }
     
-    public static void _serialize(final JsonSettingVersionDetails jsonSettingVersionDetails, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSettingVersionDetails jsonSettingVersionDetails, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("experiments", jsonSettingVersionDetails.a);
-        tfe.u0("feature_switches", jsonSettingVersionDetails.b);
-        tfe.u0("settings", jsonSettingVersionDetails.c);
+        afe.t0("experiments", jsonSettingVersionDetails.a);
+        afe.t0("feature_switches", jsonSettingVersionDetails.b);
+        afe.t0("settings", jsonSettingVersionDetails.c);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSettingVersionDetails jsonSettingVersionDetails, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSettingVersionDetails jsonSettingVersionDetails, final String s, final tge tge) throws IOException {
         if ("experiments".equals(s)) {
-            jsonSettingVersionDetails.a = khe.T((String)null);
+            jsonSettingVersionDetails.a = tge.T((String)null);
         }
         else if ("feature_switches".equals(s)) {
-            jsonSettingVersionDetails.b = khe.T((String)null);
+            jsonSettingVersionDetails.b = tge.T((String)null);
         }
         else if ("settings".equals(s)) {
-            jsonSettingVersionDetails.c = khe.T((String)null);
+            jsonSettingVersionDetails.c = tge.T((String)null);
         }
     }
     
-    public JsonSettingVersionDetails parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSettingVersionDetails parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSettingVersionDetails jsonSettingVersionDetails, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSettingVersionDetails, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSettingVersionDetails jsonSettingVersionDetails, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSettingVersionDetails, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSettingVersionDetails)o, afe, b);
     }
 }

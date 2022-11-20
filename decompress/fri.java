@@ -1,22 +1,22 @@
+import android.widget.RemoteViews;
+import android.app.PendingIntent;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class fri
 {
-    public static final a Companion;
-    public final boolean a;
-    public final nti b;
-    public final xti c;
+    public final int a;
+    public final PendingIntent b;
+    public final RemoteViews c;
+    public final RemoteViews d;
     
-    static {
-        Companion = new a();
-    }
-    
-    public fri(final boolean a, final nti b, final xti c) {
+    public fri(final int a, final PendingIntent b, final RemoteViews c, final RemoteViews d) {
         this.a = a;
         this.b = b;
         this.c = c;
+        this.d = d;
     }
     
     @Override
@@ -28,56 +28,30 @@ public final class fri
             return false;
         }
         final fri fri = (fri)o;
-        return this.a == fri.a && zzd.a((Object)this.b, (Object)fri.b) && zzd.a((Object)this.c, (Object)fri.c);
+        return this.a == fri.a && czd.a((Object)this.b, (Object)fri.b) && czd.a((Object)this.c, (Object)fri.c) && czd.a((Object)this.d, (Object)fri.d);
     }
     
     @Override
     public final int hashCode() {
-        final int a = this.a ? 1 : 0;
-        int n = 1;
-        int n2 = a;
-        if (a != 0) {
-            n2 = 1;
-        }
-        final nti b = this.b;
-        final int n3 = 0;
-        int hashCode;
-        if (b == null) {
-            hashCode = 0;
-        }
-        else {
-            hashCode = b.hashCode();
-        }
-        final xti c = this.c;
-        if (c == null) {
-            n = n3;
-        }
-        else {
-            final int a2 = c.a ? 1 : 0;
-            if (a2 == 0) {
-                n = a2;
-            }
-        }
-        return (n2 * 31 + hashCode) * 31 + n;
+        return this.d.hashCode() + (this.c.hashCode() + (this.b.hashCode() + this.a * 31) * 31) * 31;
     }
     
     @Override
     public final String toString() {
-        final boolean a = this.a;
-        final nti b = this.b;
-        final xti c = this.c;
+        final int a = this.a;
+        final PendingIntent b = this.b;
+        final RemoteViews c = this.c;
+        final RemoteViews d = this.d;
         final StringBuilder sb = new StringBuilder();
-        sb.append("NotificationDisplayOptions(inlineActions=");
+        sb.append("NotificationData(flags=");
         sb.append(a);
-        sb.append(", mediaPreview=");
+        sb.append(", pendingIntent=");
         sb.append(b);
-        sb.append(", quoteTweet=");
+        sb.append(", notificationLayout=");
         sb.append(c);
+        sb.append(", notificationCompactLayout=");
+        sb.append(d);
         sb.append(")");
         return sb.toString();
-    }
-    
-    public static final class a
-    {
     }
 }

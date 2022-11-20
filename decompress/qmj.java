@@ -2,6 +2,7 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class qmj
+public interface qmj
 {
+    void a(final long p0, final gxi p1);
 }

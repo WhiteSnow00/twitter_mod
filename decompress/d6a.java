@@ -1,21 +1,13 @@
+import java.util.AbstractMap;
+import java.util.Map;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class d6a extends gue implements rtb<iud, iud>
+public final class d6a extends akr<Integer>
 {
-    public static final d6a C0;
-    
-    static {
-        C0 = new d6a();
-    }
-    
     public d6a() {
-        super(1);
-    }
-    
-    public final Object invoke(final Object o) {
-        final long a = ((iud)o).a;
-        return new iud(lr0.b(0, 0));
+        super((Object)0, new Map.Entry[] { (Map.Entry)new AbstractMap.SimpleImmutableEntry("location", 1), (Map.Entry)new AbstractMap.SimpleImmutableEntry("country", 2), (Map.Entry)new AbstractMap.SimpleImmutableEntry("interests", 3) });
     }
 }

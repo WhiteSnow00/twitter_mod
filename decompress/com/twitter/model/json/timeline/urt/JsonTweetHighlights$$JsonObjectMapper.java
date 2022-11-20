@@ -13,52 +13,52 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTweetHighlights$$JsonObjectMapper extends JsonMapper<JsonTweetHighlights>
 {
-    public static JsonTweetHighlights _parse(final khe khe) throws IOException {
+    public static JsonTweetHighlights _parse(final tge tge) throws IOException {
         final JsonTweetHighlights jsonTweetHighlights = new JsonTweetHighlights();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTweetHighlights, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTweetHighlights, d, tge);
+            tge.l0();
         }
         return jsonTweetHighlights;
     }
     
-    public static void _serialize(final JsonTweetHighlights jsonTweetHighlights, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTweetHighlights jsonTweetHighlights, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final AbstractCollection a = jsonTweetHighlights.a;
         if (a != null) {
-            tfe.i("textHighlights");
-            tfe.q0();
-            for (final olc olc : a) {
-                if (olc != null) {
-                    LoganSquare.typeConverterFor((Class)olc.class).serialize((Object)olc, "lslocaltextHighlightsElement", false, tfe);
+            afe.i("textHighlights");
+            afe.p0();
+            for (final okc okc : a) {
+                if (okc != null) {
+                    LoganSquare.typeConverterFor((Class)okc.class).serialize((Object)okc, "lslocaltextHighlightsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTweetHighlights jsonTweetHighlights, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTweetHighlights jsonTweetHighlights, final String s, final tge tge) throws IOException {
         if ("textHighlights".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final olc olc = (olc)LoganSquare.typeConverterFor((Class)olc.class).parse(khe);
-                    if (olc != null) {
-                        a.add(olc);
+                while (tge.h0() != vie.O0) {
+                    final okc okc = (okc)LoganSquare.typeConverterFor((Class)okc.class).parse(tge);
+                    if (okc != null) {
+                        a.add(okc);
                     }
                 }
                 jsonTweetHighlights.a = a;
@@ -69,11 +69,19 @@ public final class JsonTweetHighlights$$JsonObjectMapper extends JsonMapper<Json
         }
     }
     
-    public JsonTweetHighlights parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTweetHighlights parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTweetHighlights jsonTweetHighlights, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTweetHighlights, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTweetHighlights jsonTweetHighlights, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTweetHighlights, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTweetHighlights)o, afe, b);
     }
 }

@@ -13,69 +13,69 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTopicList$$JsonObjectMapper extends JsonMapper<JsonTopicList>
 {
-    public static JsonTopicList _parse(final khe khe) throws IOException {
+    public static JsonTopicList _parse(final tge tge) throws IOException {
         final JsonTopicList list = new JsonTopicList();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(list, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(list, d, tge);
+            tge.l0();
         }
         return list;
     }
     
-    public static void _serialize(final JsonTopicList list, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTopicList list, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.T("data_version", list.a);
+        afe.T("data_version", list.a);
         final long[] b2 = list.b;
         if (b2 != null) {
-            tfe.i("root_ids");
-            tfe.q0();
+            afe.i("root_ids");
+            afe.p0();
             for (int length = b2.length, i = 0; i < length; ++i) {
-                tfe.q(b2[i]);
+                afe.q(b2[i]);
             }
-            tfe.f();
+            afe.f();
         }
         final HashMap c = list.c;
         if (c != null) {
-            final Iterator h = q1a.h(tfe, "topics", c);
-            while (h.hasNext()) {
-                final Map.Entry<String, JsonTopicList.JsonTopic> entry = h.next();
-                if (o1a.g((String)entry.getKey(), tfe, (Map.Entry)entry) == null) {
-                    tfe.j();
+            final Iterator z = mw.z(afe, "topics", c);
+            while (z.hasNext()) {
+                final Map.Entry<String, JsonTopicList.JsonTopic> entry = z.next();
+                if (sde.e((String)entry.getKey(), afe, (Map.Entry)entry) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry.getValue() == null) {
                         continue;
                     }
-                    JsonTopicList$JsonTopic$$JsonObjectMapper._serialize(entry.getValue(), tfe, true);
+                    JsonTopicList$JsonTopic$$JsonObjectMapper._serialize(entry.getValue(), afe, true);
                 }
             }
-            tfe.h();
+            afe.h();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTopicList list, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTopicList list, final String s, final tge tge) throws IOException {
         if ("data_version".equals(s)) {
-            list.a = khe.z();
+            list.a = tge.y();
         }
         else if ("root_ids".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList list2 = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    list2.add(khe.L());
+                while (tge.h0() != vie.O0) {
+                    list2.add(tge.K());
                 }
                 final long[] b = new long[list2.size()];
                 int n = 0;
@@ -91,16 +91,16 @@ public final class JsonTopicList$$JsonObjectMapper extends JsonMapper<JsonTopicL
             }
         }
         else if ("topics".equals(s)) {
-            if (khe.e() == lje.K0) {
+            if (tge.e() == vie.L0) {
                 final HashMap c = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    final String j = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
+                while (tge.h0() != vie.M0) {
+                    final String j = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
                         c.put(j, null);
                     }
                     else {
-                        c.put(j, JsonTopicList$JsonTopic$$JsonObjectMapper._parse(khe));
+                        c.put(j, JsonTopicList$JsonTopic$$JsonObjectMapper._parse(tge));
                     }
                 }
                 list.c = c;
@@ -111,11 +111,19 @@ public final class JsonTopicList$$JsonObjectMapper extends JsonMapper<JsonTopicL
         }
     }
     
-    public JsonTopicList parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTopicList parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTopicList list, final tfe tfe, final boolean b) throws IOException {
-        _serialize(list, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTopicList list, final afe afe, final boolean b) throws IOException {
+        _serialize(list, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTopicList)o, afe, b);
     }
 }

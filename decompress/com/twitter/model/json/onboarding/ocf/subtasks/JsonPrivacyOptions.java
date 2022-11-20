@@ -11,7 +11,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonPrivacyOptions extends lhh<b0l>
+public class JsonPrivacyOptions extends qhh<k0l>
 {
     @JsonField
     public String a;
@@ -30,40 +30,39 @@ public class JsonPrivacyOptions extends lhh<b0l>
     @JsonField
     public JsonOcfRichText h;
     @JsonField
-    public xrv i;
+    public ssv i;
     @JsonField
     public JsonOcfComponentCollection j;
     
-    @Override
-    public final h4j t() {
-        final b0l$a b0l$a = new b0l$a();
+    public final n4j t() {
+        final k0l$a k0l$a = new k0l$a();
         final String a = this.a;
-        pf8.r(a);
-        b0l$a.k = a;
-        b0l$a.l = this.b;
-        b0l$a.n = this.d;
-        b0l$a.o = JsonOcfRichText.s(this.e);
-        b0l$a.q = this.g;
-        b0l$a.r = JsonOcfRichText.s(this.h);
-        ((lsr$a)b0l$a).a = this.i;
-        final int a2 = w4j.a;
+        jee.l((Object)a);
+        k0l$a.k = a;
+        k0l$a.l = this.b;
+        k0l$a.n = this.d;
+        k0l$a.o = JsonOcfRichText.s(this.e);
+        k0l$a.q = this.g;
+        k0l$a.r = JsonOcfRichText.s(this.h);
+        ((dtr$a)k0l$a).a = this.i;
+        final int a2 = c5j.a;
         final JsonOcfComponentCollection j = this.j;
-        n16 t;
+        x06 t;
         if (j != null) {
             t = j.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)b0l$a).j = t;
+        ((dtr$a)k0l$a).j = t;
         final Boolean c = this.c;
         if (c != null) {
-            b0l$a.m = c;
+            k0l$a.m = c;
         }
         final Boolean f = this.f;
         if (f != null) {
-            b0l$a.p = f;
+            k0l$a.p = f;
         }
-        return (h4j)b0l$a;
+        return (n4j)k0l$a;
     }
 }

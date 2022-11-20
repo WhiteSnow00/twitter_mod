@@ -1,47 +1,22 @@
-import android.view.View;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fam extends zu1
+public final class fam extends ste implements qsb<Class<?>, xjp<? extends Class<?>>>
 {
-    public final View a;
-    public final tu1 b;
+    public static final fam D0;
     
-    public fam(final View a, final tu1 b) {
-        zzd.f((Object)a, "view");
-        this.a = a;
-        this.b = b;
+    static {
+        D0 = new fam();
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof fam)) {
-            return false;
-        }
-        final fam fam = (fam)o;
-        return zzd.a((Object)this.a, (Object)fam.a) && zzd.a((Object)this.b, (Object)fam.b);
+    public fam() {
+        super(1);
     }
     
-    @Override
-    public final int hashCode() {
-        return this.b.hashCode() + this.a.hashCode() * 31;
-    }
-    
-    @Override
-    public final String toString() {
-        final View a = this.a;
-        final tu1 b = this.b;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("RegisterBceMetadataEvent(view=");
-        sb.append(a);
-        sb.append(", metadata=");
-        sb.append(b);
-        sb.append(")");
-        return sb.toString();
+    public final Object invoke(final Object o) {
+        final Class clazz = (Class)o;
+        czd.e((Object)clazz, "it");
+        return chw.q(clazz);
     }
 }

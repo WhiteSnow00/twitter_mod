@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOriginalInfo extends lhh<moj>
+public class JsonOriginalInfo extends qhh<soj>
 {
     @JsonField
     public String a;
@@ -23,16 +23,20 @@ public class JsonOriginalInfo extends lhh<moj>
     @JsonField
     public JsonRect e;
     
-    public final moj$a u() {
-        final moj$a moj$a = new moj$a();
+    public final /* bridge */ n4j t() {
+        return (n4j)this.u();
+    }
+    
+    public final soj$a u() {
+        final soj$a soj$a = new soj$a();
         String a;
         if ((a = this.a) == null) {
             a = "";
         }
-        moj$a.a = a;
-        moj$a.b = ncq.g(this.b, this.c);
+        soj$a.a = a;
+        soj$a.b = edq.g(this.b, this.c);
         if (this.b > 0 && this.c > 0 && this.d != null) {
-            final ijf h = ijf.H();
+            final rif h = rif.H();
             final float n = 1.0f / this.b;
             final float n2 = 1.0f / this.c;
             for (final JsonRect jsonRect : this.d) {
@@ -43,12 +47,12 @@ public class JsonOriginalInfo extends lhh<moj>
                     final float min3 = Math.min((jsonRect.a + jsonRect.c) * n, 1.0f);
                     final float min4 = Math.min((jsonRect.b + jsonRect.d) * n2, 1.0f);
                     if (min < min3 && min2 < min4) {
-                        h.p((Object)new abm(min, min2, min3, min4));
+                        h.p((Object)new pbm(min, min2, min3, min4));
                     }
                 }
             }
-            moj$a.c = (List)((h4j)h).e();
+            soj$a.c = (List)((n4j)h).e();
         }
-        return moj$a;
+        return soj$a;
     }
 }

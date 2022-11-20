@@ -1,129 +1,162 @@
-import java.io.IOException;
+import com.google.android.exoplayer2.n$a;
+import com.google.android.exoplayer2.n;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ef implements joa
+public final class ef implements ay9
 {
-    public final ff a;
-    public final mwj b;
-    public boolean c;
+    public final nhx a;
+    public final rwj b;
+    public final String c;
+    public String d;
+    public ewt e;
+    public int f;
+    public int g;
+    public boolean h;
+    public boolean i;
+    public long j;
+    public n k;
+    public int l;
+    public long m;
     
-    static {
-        final cc3 m0 = cc3.M0;
+    public ef(final String c) {
+        final nhx a = new nhx(new byte[16], 1, (da8)null);
+        this.a = a;
+        this.b = new rwj(a.b);
+        this.f = 0;
+        this.g = 0;
+        this.h = false;
+        this.i = false;
+        this.m = -9223372036854775807L;
+        this.c = c;
     }
     
-    public ef() {
-        this.a = new ff((String)null);
-        this.b = new mwj(16384);
-    }
-    
-    @Override
-    public final int a(final koa koa, final rrk rrk) throws IOException {
-        final int b = koa.b(this.b.a, 0, 16384);
-        if (b == -1) {
-            return -1;
-        }
-        this.b.D(0);
-        this.b.C(b);
-        if (!this.c) {
-            this.a.f(0L, 4);
-            this.c = true;
-        }
-        this.a.a(this.b);
-        return 0;
-    }
-    
-    @Override
-    public final boolean b(final koa koa) throws IOException {
-        final mwj mwj = new mwj(10);
-        int n = 0;
+    public final void a(final rwj rwj) {
+        omy.m((Object)this.e);
         while (true) {
-            ((gh8)koa).c(mwj.a, 0, 10, false);
-            mwj.D(0);
-            if (mwj.v() != 4801587) {
+            final int n = rwj.c - rwj.b;
+            if (n <= 0) {
                 break;
             }
-            mwj.E(3);
-            final int s = mwj.s();
-            n += s + 10;
-            ((gh8)koa).l(s, false);
-        }
-        final gh8 gh8 = (gh8)koa;
-        gh8.f = 0;
-        gh8.l(n, false);
-        int n2 = n;
-        while (true) {
-            int n3 = 0;
-            while (true) {
-                final byte[] a = mwj.a;
-                final int n4 = 7;
-                gh8.c(a, 0, 7, false);
-                mwj.D(0);
-                final int y = mwj.y();
-                if (y != 44096 && y != 44097) {
-                    gh8.f = 0;
-                    if (++n2 - n >= 8192) {
-                        return false;
+            final int f = this.f;
+            boolean b = true;
+            if (f != 0) {
+                if (f != 1) {
+                    if (f != 2) {
+                        continue;
                     }
-                    gh8.l(n2, false);
-                    break;
+                    final int min = Math.min(n, this.l - this.g);
+                    this.e.d(rwj, min);
+                    final int g = this.g + min;
+                    this.g = g;
+                    final int l = this.l;
+                    if (g != l) {
+                        continue;
+                    }
+                    final long m = this.m;
+                    if (m != -9223372036854775807L) {
+                        this.e.b(m, 1, l, 0, null);
+                        this.m += this.j;
+                    }
+                    this.f = 0;
                 }
                 else {
-                    final int n5 = n3 + 1;
-                    if (n5 >= 4) {
-                        return true;
+                    final byte[] a = this.b.a;
+                    final int min2 = Math.min(n, 16 - this.g);
+                    rwj.d(a, this.g, min2);
+                    if ((this.g += min2) != 16) {
+                        b = false;
                     }
-                    final byte[] a2 = mwj.a;
-                    int n6;
-                    if (a2.length < 7) {
-                        n6 = -1;
+                    if (!b) {
+                        continue;
+                    }
+                    this.a.k(0);
+                    final ff.a b2 = ff.b(this.a);
+                    final n k = this.k;
+                    if (k == null || 2 != k.b1 || b2.a != k.c1 || !"audio/ac4".equals(k.O0)) {
+                        final n$a n$a = new n$a();
+                        n$a.a = this.d;
+                        n$a.k = "audio/ac4";
+                        n$a.x = 2;
+                        n$a.y = b2.a;
+                        n$a.c = this.c;
+                        final n i = new n(n$a);
+                        this.k = i;
+                        this.e.e(i);
+                    }
+                    this.l = b2.b;
+                    this.j = b2.c * 1000000L / this.k.c1;
+                    this.b.D(0);
+                    this.e.d(this.b, 16);
+                    this.f = 2;
+                }
+            }
+            else {
+                int n2;
+                boolean b4;
+                while (true) {
+                    final int c = rwj.c;
+                    final int b3 = rwj.b;
+                    n2 = 65;
+                    if (c - b3 <= 0) {
+                        b4 = false;
+                        break;
+                    }
+                    if (!this.h) {
+                        this.h = (rwj.t() == 172);
                     }
                     else {
-                        final int n7 = (a2[2] & 0xFF) << 8 | (a2[3] & 0xFF);
-                        int n9;
-                        int n10;
-                        if (n7 == 65535) {
-                            final int n8 = (a2[4] & 0xFF) << 16 | (a2[5] & 0xFF) << 8 | (a2[6] & 0xFF);
-                            n9 = n4;
-                            n10 = n8;
+                        final int t = rwj.t();
+                        this.h = (t == 172);
+                        if (t == 64 || t == 65) {
+                            this.i = (t == 65);
+                            b4 = true;
+                            break;
                         }
-                        else {
-                            final int n11 = 4;
-                            n10 = n7;
-                            n9 = n11;
-                        }
-                        int n12 = n9;
-                        if (y == 44097) {
-                            n12 = n9 + 2;
-                        }
-                        n6 = n10 + n12;
+                        continue;
                     }
-                    if (n6 == -1) {
-                        return false;
-                    }
-                    gh8.l(n6 - 7, false);
-                    n3 = n5;
                 }
+                if (!b4) {
+                    continue;
+                }
+                this.f = 1;
+                final byte[] a2 = this.b.a;
+                a2[0] = -84;
+                int n3;
+                if (this.i) {
+                    n3 = n2;
+                }
+                else {
+                    n3 = 64;
+                }
+                a2[1] = (byte)n3;
+                this.g = 2;
             }
         }
     }
     
-    @Override
-    public final void c(final long n, final long n2) {
-        this.c = false;
-        this.a.c();
+    public final void c() {
+        this.f = 0;
+        this.g = 0;
+        this.h = false;
+        this.i = false;
+        this.m = -9223372036854775807L;
     }
     
-    @Override
-    public final void i(final ooa ooa) {
-        this.a.d(ooa, new bau$d(0, 1));
-        ooa.q();
-        ooa.n((ebp)new ebp.b(-9223372036854775807L));
+    public final void d(final nna nna, final uau.d d) {
+        d.a();
+        this.d = d.b();
+        this.e = nna.n(d.c(), 1);
     }
     
-    @Override
-    public final void release() {
+    public final void e() {
+    }
+    
+    public final void f(final long m, final int n) {
+        if (m != -9223372036854775807L) {
+            this.m = m;
+        }
     }
 }

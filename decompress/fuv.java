@@ -1,20 +1,17 @@
+import java.util.List;
+import com.twitter.util.user.UserIdentifier;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public interface fuv
 {
-    p8v<Boolean> a();
+    long a(final long p0);
     
-    p8v<Boolean> b();
+    void b(final long p0);
     
-    p8v<Boolean> c();
+    void c(final UserIdentifier p0, final List<Long> p1);
     
-    p8v<Boolean> d();
-    
-    p8v<Boolean> e();
-    
-    p8v<Integer> f();
-    
-    p8v<Boolean> g();
+    long d(final long p0);
 }

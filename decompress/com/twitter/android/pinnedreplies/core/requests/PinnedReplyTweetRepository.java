@@ -8,10 +8,10 @@ import kotlin.Metadata;
 
 public final class PinnedReplyTweetRepository
 {
-    public final psc a;
+    public final trc a;
     
-    public PinnedReplyTweetRepository(final psc a) {
-        zzd.f((Object)a, "requestController");
+    public PinnedReplyTweetRepository(final trc a) {
+        czd.f((Object)a, "requestController");
         this.a = a;
     }
     

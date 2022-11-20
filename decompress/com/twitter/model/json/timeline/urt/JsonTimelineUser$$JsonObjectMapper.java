@@ -19,90 +19,98 @@ public final class JsonTimelineUser$$JsonObjectMapper extends JsonMapper<JsonTim
         JSON_USER_DISPLAY_TYPE_CONVERTER = new JsonTimelineUser$a();
     }
     
-    public static JsonTimelineUser _parse(final khe khe) throws IOException {
+    public static JsonTimelineUser _parse(final tge tge) throws IOException {
         final JsonTimelineUser jsonTimelineUser = new JsonTimelineUser();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineUser, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineUser, d, tge);
+            tge.l0();
         }
         return jsonTimelineUser;
     }
     
-    public static void _serialize(final JsonTimelineUser jsonTimelineUser, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineUser jsonTimelineUser, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final String c = jsonTimelineUser.c;
         if (c != null) {
-            ((StringBasedTypeConverter)JsonTimelineUser$$JsonObjectMapper.JSON_USER_DISPLAY_TYPE_CONVERTER).serialize((Object)c, "displayType", true, tfe);
+            ((StringBasedTypeConverter)JsonTimelineUser$$JsonObjectMapper.JSON_USER_DISPLAY_TYPE_CONVERTER).serialize((Object)c, "displayType", true, afe);
         }
-        tfe.e("enableReactiveBlending", jsonTimelineUser.f);
-        tfe.u0("id", jsonTimelineUser.a);
-        final d4t e = jsonTimelineUser.e;
+        afe.e("enableReactiveBlending", jsonTimelineUser.f);
+        afe.t0("id", jsonTimelineUser.a);
+        final u4t e = jsonTimelineUser.e;
         if (e == null) {
             if (jsonTimelineUser.d != null) {
-                tfe.i("promotedMetadata");
-                JsonPromotedContentUrt$$JsonObjectMapper._serialize(jsonTimelineUser.d, tfe, true);
+                afe.i("promotedMetadata");
+                JsonPromotedContentUrt$$JsonObjectMapper._serialize(jsonTimelineUser.d, afe, true);
             }
             if (jsonTimelineUser.g != null) {
-                LoganSquare.typeConverterFor((Class)ozl.c.class).serialize((Object)jsonTimelineUser.g, "reactiveTriggers", true, tfe);
+                LoganSquare.typeConverterFor((Class)d0m$c.class).serialize((Object)jsonTimelineUser.g, "reactiveTriggers", true, afe);
             }
             if (jsonTimelineUser.b != null) {
-                LoganSquare.typeConverterFor((Class)rhw.class).serialize((Object)jsonTimelineUser.b, "userResult", true, tfe);
+                LoganSquare.typeConverterFor((Class)kiw.class).serialize((Object)jsonTimelineUser.b, "userResult", true, afe);
             }
             if (b) {
-                tfe.h();
+                afe.h();
             }
             return;
         }
-        ((twj<d4t>)JsonTimelineUser$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).serialize(e, "socialContext", true, tfe);
+        ((ywj<u4t>)JsonTimelineUser$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).serialize(e, "socialContext", true, afe);
         throw null;
     }
     
-    public static void parseField(final JsonTimelineUser jsonTimelineUser, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineUser jsonTimelineUser, final String s, final tge tge) throws IOException {
         if (!"displayType".equals(s) && !"userDisplayType".equals(s)) {
             if ("enableReactiveBlending".equals(s)) {
-                jsonTimelineUser.f = khe.k();
+                jsonTimelineUser.f = tge.k();
             }
             else if ("id".equals(s)) {
-                jsonTimelineUser.a = khe.T((String)null);
+                jsonTimelineUser.a = tge.T((String)null);
             }
             else if ("socialContext".equals(s)) {
-                jsonTimelineUser.e = (d4t)((age)JsonTimelineUser$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).parse(khe);
+                jsonTimelineUser.e = ((hfe<u4t>)JsonTimelineUser$$JsonObjectMapper.TIMELINE_SOCIAL_CONTEXT_UNION_CONVERTER).parse(tge);
             }
             else if (!"promotedMetadata".equals(s) && !"userPromotedMetadata".equals(s)) {
                 if (!"reactiveTriggers".equals(s) && !"userReactiveTriggers".equals(s)) {
                     if ("userResult".equals(s)) {
-                        jsonTimelineUser.b = (rhw)LoganSquare.typeConverterFor((Class)rhw.class).parse(khe);
+                        jsonTimelineUser.b = (kiw)LoganSquare.typeConverterFor((Class)kiw.class).parse(tge);
                     }
                 }
                 else {
-                    jsonTimelineUser.g = (ozl.c)LoganSquare.typeConverterFor((Class)ozl.c.class).parse(khe);
+                    jsonTimelineUser.g = (d0m$c)LoganSquare.typeConverterFor((Class)d0m$c.class).parse(tge);
                 }
             }
             else {
-                jsonTimelineUser.d = JsonPromotedContentUrt$$JsonObjectMapper._parse(khe);
+                jsonTimelineUser.d = JsonPromotedContentUrt$$JsonObjectMapper._parse(tge);
             }
         }
         else {
-            jsonTimelineUser.c = (String)((StringBasedTypeConverter)JsonTimelineUser$$JsonObjectMapper.JSON_USER_DISPLAY_TYPE_CONVERTER).parse(khe);
+            jsonTimelineUser.c = (String)((StringBasedTypeConverter)JsonTimelineUser$$JsonObjectMapper.JSON_USER_DISPLAY_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonTimelineUser parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineUser parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineUser jsonTimelineUser, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineUser, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineUser jsonTimelineUser, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineUser, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineUser)o, afe, b);
     }
 }

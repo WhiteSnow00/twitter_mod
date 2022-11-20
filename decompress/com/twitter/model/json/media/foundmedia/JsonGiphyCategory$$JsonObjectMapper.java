@@ -10,55 +10,63 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonGiphyCategory$$JsonObjectMapper extends JsonMapper<JsonGiphyCategory>
 {
-    public static JsonGiphyCategory _parse(final khe khe) throws IOException {
+    public static JsonGiphyCategory _parse(final tge tge) throws IOException {
         final JsonGiphyCategory jsonGiphyCategory = new JsonGiphyCategory();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonGiphyCategory, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonGiphyCategory, d, tge);
+            tge.l0();
         }
         return jsonGiphyCategory;
     }
     
-    public static void _serialize(final JsonGiphyCategory jsonGiphyCategory, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonGiphyCategory jsonGiphyCategory, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("name_encoded", jsonGiphyCategory.b);
+        afe.t0("name_encoded", jsonGiphyCategory.b);
         if (jsonGiphyCategory.c != null) {
-            LoganSquare.typeConverterFor((Class)v3c.class).serialize((Object)jsonGiphyCategory.c, "gif", true, tfe);
+            LoganSquare.typeConverterFor((Class)x2c.class).serialize((Object)jsonGiphyCategory.c, "gif", true, afe);
         }
-        tfe.u0("name", jsonGiphyCategory.a);
+        afe.t0("name", jsonGiphyCategory.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonGiphyCategory jsonGiphyCategory, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonGiphyCategory jsonGiphyCategory, final String s, final tge tge) throws IOException {
         if ("name_encoded".equals(s)) {
-            jsonGiphyCategory.b = khe.T((String)null);
+            jsonGiphyCategory.b = tge.T((String)null);
         }
         else if ("gif".equals(s)) {
-            jsonGiphyCategory.c = (v3c)LoganSquare.typeConverterFor((Class)v3c.class).parse(khe);
+            jsonGiphyCategory.c = (x2c)LoganSquare.typeConverterFor((Class)x2c.class).parse(tge);
         }
         else if ("name".equals(s)) {
-            jsonGiphyCategory.a = khe.T((String)null);
+            jsonGiphyCategory.a = tge.T((String)null);
         }
     }
     
-    public JsonGiphyCategory parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonGiphyCategory parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonGiphyCategory jsonGiphyCategory, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonGiphyCategory, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonGiphyCategory jsonGiphyCategory, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonGiphyCategory, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonGiphyCategory)o, afe, b);
     }
 }

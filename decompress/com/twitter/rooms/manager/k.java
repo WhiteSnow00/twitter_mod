@@ -6,21 +6,21 @@ package com.twitter.rooms.manager;
 
 import java.util.List;
 
-public final class k extends gue implements rtb<lh5, ubq<? extends t01>>
+public final class k extends ste implements qsb<tg5, lcq<? extends p01>>
 {
-    public final /* synthetic */ t01 C0;
+    public final p01 D0;
     
-    public k(final t01 c0) {
-        this.C0 = c0;
+    public k(final p01 d0) {
+        this.D0 = d0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final lh5 lh5 = (lh5)o;
-        zzd.f((Object)lh5, "it");
-        final v21 a = v21.a(this.C0.c, (String)null, (Long)null, false, (String)null, (List)null, false, us5.Companion.a(lh5), -1, 786431);
-        final t01 c0 = this.C0;
-        zzd.e((Object)c0, "audioSpace");
-        return n9q.v((Object)t01.a(c0, a));
+        final tg5 tg5 = (tg5)o;
+        czd.f((Object)tg5, "it");
+        final r21 a = r21.a(this.D0.c, (String)null, (Long)null, false, (String)null, (List)null, false, ds5.Companion.a(tg5), -1, 786431);
+        final p01 d0 = this.D0;
+        czd.e((Object)d0, "audioSpace");
+        return eaq.v((Object)p01.a(d0, a));
     }
 }

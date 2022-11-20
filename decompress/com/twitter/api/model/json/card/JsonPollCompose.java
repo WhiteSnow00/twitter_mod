@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonPollCompose extends aih<opk>
+public class JsonPollCompose extends fih<wpk>
 {
     @JsonField(name = { "card_uri" })
     public String a;
@@ -19,8 +19,7 @@ public class JsonPollCompose extends aih<opk>
     @JsonField(name = { "message" })
     public String d;
     
-    @Override
     public final Object s() {
-        return new opk(this.a);
+        return new wpk(this.a);
     }
 }

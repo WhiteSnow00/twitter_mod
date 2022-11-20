@@ -455,6 +455,18 @@
         <item quantity="one">%s சப்ஸ்கிரைபர்</item>
         <item quantity="other">%s சப்ஸ்கிரைபர்கள்</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">நாள்</item>
+        <item quantity="other">%d நாட்கள்</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">மாதம்</item>
+        <item quantity="other">%d மாதங்கள்</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">ஆண்டு</item>
+        <item quantity="other">%d ஆண்டுகள்</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dநா</item>
         <item quantity="other">%dநா</item>

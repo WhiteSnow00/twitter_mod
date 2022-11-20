@@ -1,17 +1,17 @@
-import android.graphics.PointF;
+import android.graphics.Path;
 import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class n80 extends r7b
+public final class n80 extends p6b
 {
-    public n80(final List<rre<PointF>> list) {
+    public n80(final List<dre<jrp>> list) {
         super((Object)list, 1);
     }
     
-    public final wm1<PointF, PointF> g() {
-        return (wm1<PointF, PointF>)new pok((List)super.b);
+    public final rm1<jrp, Path> V() {
+        return (rm1<jrp, Path>)new prp((List)super.E0);
     }
 }

@@ -13,145 +13,153 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonEnterText$$JsonObjectMapper extends JsonMapper<JsonEnterText>
 {
-    public static final b71 AUTO_CAPITALIZATION_TYPE_CONVERTER;
-    public static final u6a ENTER_TEXT_SUGGESTION_TYPE_CONVERTER;
-    public static final trd INPUT_KEYBOARD_TYPE_CONVERTER;
-    public static final ooj OS_TEXT_CONTENT_TYPE_CONVERTER;
+    public static final v61 AUTO_CAPITALIZATION_TYPE_CONVERTER;
+    public static final d6a ENTER_TEXT_SUGGESTION_TYPE_CONVERTER;
+    public static final xqd INPUT_KEYBOARD_TYPE_CONVERTER;
+    public static final uoj OS_TEXT_CONTENT_TYPE_CONVERTER;
     
     static {
-        OS_TEXT_CONTENT_TYPE_CONVERTER = new ooj();
-        INPUT_KEYBOARD_TYPE_CONVERTER = new trd();
-        AUTO_CAPITALIZATION_TYPE_CONVERTER = new b71();
-        ENTER_TEXT_SUGGESTION_TYPE_CONVERTER = new u6a();
+        OS_TEXT_CONTENT_TYPE_CONVERTER = new uoj();
+        INPUT_KEYBOARD_TYPE_CONVERTER = new xqd();
+        AUTO_CAPITALIZATION_TYPE_CONVERTER = new v61();
+        ENTER_TEXT_SUGGESTION_TYPE_CONVERTER = new d6a();
     }
     
-    public static JsonEnterText _parse(final khe khe) throws IOException {
+    public static JsonEnterText _parse(final tge tge) throws IOException {
         final JsonEnterText jsonEnterText = new JsonEnterText();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonEnterText, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonEnterText, d, tge);
+            tge.l0();
         }
         return jsonEnterText;
     }
     
-    public static void _serialize(final JsonEnterText jsonEnterText, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonEnterText jsonEnterText, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final a71 i = jsonEnterText.i;
+        final u61 i = jsonEnterText.i;
         if (i != null) {
-            ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.AUTO_CAPITALIZATION_TYPE_CONVERTER).serialize((Object)i, "auto_capitalization_type", true, tfe);
+            ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.AUTO_CAPITALIZATION_TYPE_CONVERTER).serialize((Object)i, "auto_capitalization_type", true, afe);
         }
-        tfe.e("auto_correction_enabled", jsonEnterText.j);
+        afe.e("auto_correction_enabled", jsonEnterText.j);
         if (jsonEnterText.q != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEnterText.q, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEnterText.q, afe, true);
         }
-        tfe.u0("default_suggestion_id", jsonEnterText.n);
-        tfe.u0("default_text", jsonEnterText.d);
+        afe.t0("default_suggestion_id", jsonEnterText.n);
+        afe.t0("default_text", jsonEnterText.d);
         if (jsonEnterText.e != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterText.e, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterText.e, afe, true);
         }
         if (jsonEnterText.f != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)jsonEnterText.f, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)jsonEnterText.f, "header", true, afe);
         }
-        tfe.u0("hint_text", jsonEnterText.c);
-        ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.INPUT_KEYBOARD_TYPE_CONVERTER).serialize((Object)jsonEnterText.l, "keyboard_type", true, tfe);
-        tfe.T("max_length", jsonEnterText.g);
-        tfe.e("multiline", jsonEnterText.h);
+        afe.t0("hint_text", jsonEnterText.c);
+        ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.INPUT_KEYBOARD_TYPE_CONVERTER).serialize((Object)jsonEnterText.l, "keyboard_type", true, afe);
+        afe.T("max_length", jsonEnterText.g);
+        afe.e("multiline", jsonEnterText.h);
         if (jsonEnterText.o != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEnterText.o, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEnterText.o, "next_link", true, afe);
         }
-        final noj k = jsonEnterText.k;
+        final toj k = jsonEnterText.k;
         if (k != null) {
-            ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.OS_TEXT_CONTENT_TYPE_CONVERTER).serialize((Object)k, "os_content_type", true, tfe);
+            ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.OS_TEXT_CONTENT_TYPE_CONVERTER).serialize((Object)k, "os_content_type", true, afe);
         }
         if (jsonEnterText.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterText.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterText.a, afe, true);
         }
         if (jsonEnterText.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterText.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterText.b, afe, true);
         }
         if (jsonEnterText.p != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEnterText.p, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEnterText.p, "skip_link", true, afe);
         }
-        ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.ENTER_TEXT_SUGGESTION_TYPE_CONVERTER).serialize((Object)jsonEnterText.m, "suggestion_type", true, tfe);
+        ((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.ENTER_TEXT_SUGGESTION_TYPE_CONVERTER).serialize((Object)jsonEnterText.m, "suggestion_type", true, afe);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonEnterText jsonEnterText, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonEnterText jsonEnterText, final String s, final tge tge) throws IOException {
         if ("auto_capitalization_type".equals(s)) {
-            jsonEnterText.i = (a71)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.AUTO_CAPITALIZATION_TYPE_CONVERTER).parse(khe);
+            jsonEnterText.i = (u61)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.AUTO_CAPITALIZATION_TYPE_CONVERTER).parse(tge);
         }
         else if ("auto_correction_enabled".equals(s)) {
-            jsonEnterText.j = khe.k();
+            jsonEnterText.j = tge.k();
         }
         else if ("component_collection".equals(s)) {
-            jsonEnterText.q = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonEnterText.q = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("default_suggestion_id".equals(s)) {
-            jsonEnterText.n = khe.T((String)null);
+            jsonEnterText.n = tge.T((String)null);
         }
         else if ("default_text".equals(s)) {
-            jsonEnterText.d = khe.T((String)null);
+            jsonEnterText.d = tge.T((String)null);
         }
         else if ("detail_text".equals(s)) {
-            jsonEnterText.e = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterText.e = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("header".equals(s)) {
-            jsonEnterText.f = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            jsonEnterText.f = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("hint_text".equals(s)) {
-            jsonEnterText.c = khe.T((String)null);
+            jsonEnterText.c = tge.T((String)null);
         }
         else if ("keyboard_type".equals(s)) {
-            jsonEnterText.l = (int)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.INPUT_KEYBOARD_TYPE_CONVERTER).parse(khe);
+            jsonEnterText.l = (int)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.INPUT_KEYBOARD_TYPE_CONVERTER).parse(tge);
         }
         else if ("max_length".equals(s)) {
-            jsonEnterText.g = khe.z();
+            jsonEnterText.g = tge.y();
         }
         else if ("multiline".equals(s)) {
-            jsonEnterText.h = khe.k();
+            jsonEnterText.h = tge.k();
         }
         else if ("next_link".equals(s)) {
-            jsonEnterText.o = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEnterText.o = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("os_content_type".equals(s)) {
-            jsonEnterText.k = (noj)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.OS_TEXT_CONTENT_TYPE_CONVERTER).parse(khe);
+            jsonEnterText.k = (toj)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.OS_TEXT_CONTENT_TYPE_CONVERTER).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonEnterText.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterText.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("secondary_text".equals(s)) {
-            jsonEnterText.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterText.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            jsonEnterText.p = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEnterText.p = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("suggestion_type".equals(s)) {
-            jsonEnterText.m = (int)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.ENTER_TEXT_SUGGESTION_TYPE_CONVERTER).parse(khe);
+            jsonEnterText.m = (int)((StringBasedTypeConverter)JsonEnterText$$JsonObjectMapper.ENTER_TEXT_SUGGESTION_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonEnterText parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonEnterText parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonEnterText jsonEnterText, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonEnterText, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonEnterText jsonEnterText, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonEnterText, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonEnterText)o, afe, b);
     }
 }

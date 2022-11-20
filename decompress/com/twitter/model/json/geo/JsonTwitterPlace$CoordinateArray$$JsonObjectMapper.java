@@ -12,82 +12,82 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTwitterPlace$CoordinateArray$$JsonObjectMapper extends JsonMapper<JsonTwitterPlace.CoordinateArray>
 {
-    public static JsonTwitterPlace.CoordinateArray _parse(final khe khe) throws IOException {
+    public static JsonTwitterPlace.CoordinateArray _parse(final tge tge) throws IOException {
         final JsonTwitterPlace.CoordinateArray coordinateArray = new JsonTwitterPlace.CoordinateArray();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(coordinateArray, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(coordinateArray, d, tge);
+            tge.l0();
         }
         return coordinateArray;
     }
     
-    public static void _serialize(final JsonTwitterPlace.CoordinateArray coordinateArray, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTwitterPlace.CoordinateArray coordinateArray, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList a = coordinateArray.a;
         if (a != null) {
-            final Iterator g = q1a.g(tfe, "coordinates", a);
-            while (g.hasNext()) {
-                final List list = g.next();
+            final Iterator a2 = br.A(afe, "coordinates", a);
+            while (a2.hasNext()) {
+                final List list = a2.next();
                 if (list != null) {
-                    tfe.q0();
+                    afe.p0();
                     for (final List list2 : list) {
                         if (list2 != null) {
-                            tfe.q0();
+                            afe.p0();
                             final Iterator iterator2 = list2.iterator();
                             while (iterator2.hasNext()) {
-                                tfe.k((double)iterator2.next());
+                                afe.k((double)iterator2.next());
                             }
-                            tfe.f();
+                            afe.f();
                         }
                     }
-                    tfe.f();
+                    afe.f();
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTwitterPlace.CoordinateArray coordinateArray, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTwitterPlace.CoordinateArray coordinateArray, final String s, final tge tge) throws IOException {
         if ("coordinates".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
+                while (tge.h0() != vie.O0) {
                     Object o;
-                    if (khe.e() == lje.M0) {
+                    if (tge.e() == vie.N0) {
                         final ArrayList<Object> list = new ArrayList<Object>();
                         while (true) {
                             o = list;
-                            if (khe.i0() == lje.N0) {
+                            if (tge.h0() == vie.O0) {
                                 break;
                             }
                             Object o2;
-                            if (khe.e() == lje.M0) {
+                            if (tge.e() == vie.N0) {
                                 final ArrayList<Double> list2 = new ArrayList<Double>();
                                 while (true) {
                                     o2 = list2;
-                                    if (khe.i0() == lje.N0) {
+                                    if (tge.h0() == vie.O0) {
                                         break;
                                     }
                                     Double value;
-                                    if (khe.e() == lje.U0) {
+                                    if (tge.e() == vie.V0) {
                                         value = null;
                                     }
                                     else {
-                                        value = khe.p();
+                                        value = tge.p();
                                     }
                                     if (value == null) {
                                         continue;
@@ -119,11 +119,19 @@ public final class JsonTwitterPlace$CoordinateArray$$JsonObjectMapper extends Js
         }
     }
     
-    public JsonTwitterPlace.CoordinateArray parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTwitterPlace.CoordinateArray parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTwitterPlace.CoordinateArray coordinateArray, final tfe tfe, final boolean b) throws IOException {
-        _serialize(coordinateArray, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTwitterPlace.CoordinateArray coordinateArray, final afe afe, final boolean b) throws IOException {
+        _serialize(coordinateArray, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTwitterPlace.CoordinateArray)o, afe, b);
     }
 }

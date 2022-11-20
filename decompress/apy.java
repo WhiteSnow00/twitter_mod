@@ -1,61 +1,35 @@
-import android.content.pm.Signature;
-import android.content.pm.PackageManager$NameNotFoundException;
-import android.os.Build;
-import java.security.NoSuchAlgorithmException;
-import android.util.Base64;
-import java.security.MessageDigest;
-import java.util.Arrays;
-import android.os.Binder;
-import android.content.Context;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class apy
+public final class apy implements p4j<a1z>
 {
-    public static final v3a a;
+    public static final apy a;
     
     static {
-        a = new v3a("PhoneskyVerificationUtils");
+        final zzz d0 = zzz.D0;
+        a = new apy();
+        final dyz dyz = new dyz(1, d0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(dyz.annotationType(), dyz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final dyz dyz2 = new dyz(2, d0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(dyz2.annotationType(), dyz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final dyz dyz3 = new dyz(3, d0);
+        final HashMap hashMap3 = new HashMap();
+        jg9.w(dyz3, hashMap3, dyz3, hashMap3);
     }
     
-    public static boolean a(final Context context) {
-        final String[] packagesForUid = context.getPackageManager().getPackagesForUid(Binder.getCallingUid());
-        return packagesForUid != null && Arrays.asList(packagesForUid).contains("com.android.vending");
-    }
-    
-    public static boolean b(final Context context) {
-        try {
-            if (context.getPackageManager().getApplicationInfo("com.android.vending", 0).enabled) {
-                final Signature[] signatures = context.getPackageManager().getPackageInfo("com.android.vending", 64).signatures;
-                if (signatures != null) {
-                    final int length = signatures.length;
-                    if (length != 0) {
-                        for (int i = 0; i < length; ++i) {
-                            final byte[] byteArray = signatures[i].toByteArray();
-                            String encodeToString;
-                            try {
-                                final MessageDigest instance = MessageDigest.getInstance("SHA-256");
-                                instance.update(byteArray);
-                                encodeToString = Base64.encodeToString(instance.digest(), 11);
-                            }
-                            catch (final NoSuchAlgorithmException ex) {
-                                encodeToString = "";
-                            }
-                            if ("8P1sW0EPJcslw7UzRsiXL64w-O50Ed-RBICtay1g24M".equals(encodeToString) || ((Build.TAGS.contains("dev-keys") || Build.TAGS.contains("test-keys")) && "GXWy8XF3vIml3_MfnmSmyuKBpT3B0dWbHRR_4cgq-gA".equals(encodeToString))) {
-                                return true;
-                            }
-                        }
-                        return false;
-                    }
-                }
-                apy.a.o("Phonesky package is not signed -- possibly self-built package. Could not verify.", new Object[0]);
-            }
-            return false;
-        }
-        catch (final PackageManager$NameNotFoundException ex2) {
-            return false;
-        }
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final a1z a1z = (a1z)o;
+        final q4j q4j = (q4j)o2;
+        throw null;
     }
 }

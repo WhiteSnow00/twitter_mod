@@ -210,8 +210,13 @@
     <string name="activity_tab_mentions_empty_state_description_no_mentions">Kapag may nagbanggit sa iyo sa Twitter sa isang Tweet o sagot, makikita mo iyon dito.</string>
     <string name="activity_tab_mentions_empty_state_description_no_mentions_from_people_you_follow">Kapag mayroon kang sinusundan na nagbanggit sa iyo sa isang Tweet, makikita mo iyon dito.</string>
     <string name="activity_tab_super_follows_description">Mga pag-like, pagbanggit, Retweet, at marami pang iba — kapag nagmula iyon sa Mga Super Follower mo, makikita mo iyon dito.</string>
-    <string name="activity_tab_vit_description">Lalabas dito ang mga abiso tungkol sa mga bagong Tweet, Retweet, rekomendasyon, at higit pa mula sa iba pang beripikadong account.</string>
-    <string name="activity_tab_vit_title">Maging una sa impormasyon</string>
+    <string name="activity_tab_vit_button">Matuto pa</string>
+    <string name="activity_tab_vit_description">Mga like, pagbanggit, Retweet, at marami pang iba - kapag nagmula iyon sa beripikadong account, makikita mo ito dito. {{}}Alamin pa{{}}</string>
+    <string name="activity_tab_vit_description_blue_available">Mga like, pagbanggit, Retweet, at marami pang iba - kapag nagmula iyon sa beripikadong account, makikita mo ito dito. {{}}Alamin pa{{}}\10\10Hindi beripikado? Mag-subscribe na para magkaroon ng beripikadong account at samahan ang ibang tao sa mga de-kalidad na usapan.</string>
+    <string name="activity_tab_vit_subscribe_button">Mag-subscribe</string>
+    <string name="activity_tab_vit_subscribe_with_price_month">%1$s/buwan</string>
+    <string name="activity_tab_vit_subscribe_with_price_year">%1$s/taon</string>
+    <string name="activity_tab_vit_title">Wala pang makikita rito — sa ngayon</string>
     <string name="activity_view_hidden_replies_empty_title">Hindi itinago ang mga sagot sa thread na ito</string>
     <string name="activity_view_moderated_replies_empty_desc">Walang anumang nakatagong sagot ang Tweet na ito, pero puwedeng naka-filter ang mga Protektadong Tweet. {{}}Matuto pa{{}}</string>
     <string name="activity_view_moderated_replies_empty_title">Walang makikita rito</string>
@@ -271,8 +276,8 @@
     <string name="admin_tools_entry_reported_tweets">Mga Iniulat na Tweet</string>
     <string name="admin_tools_entry_rules">Mga Patakaran</string>
     <string name="admin_tools_entry_settings">Mga Setting</string>
-    <string name="admin_tools_entry_spotlight">I-spotlight ang Iyong Komunidad</string>
-    <string name="admin_tools_entry_spotlight_ad">I-spotlight ang Iyong Komunidad sa iyong profile</string>
+    <string name="admin_tools_entry_spotlight">I-spotlight ang iyong Komunidad</string>
+    <string name="admin_tools_entry_spotlight_ad">I-spotlight ang iyong Komunidad sa iyong profile</string>
     <string name="admin_tools_entry_subtitle_spotlight">Ipakita ang Komunidad na ito sa iyong profile</string>
     <string name="admin_tools_entry_subtitle_spotlight_ad">Nagbibigay-daan ang propesyonal na account sa pagpapakita ng Komunidad sa iyong profile at higit pa.</string>
     <string name="admin_tools_entry_support">Suporta at mga resource</string>
@@ -545,8 +550,8 @@
     <string name="billing_error_modal_title">Paki-update ang iyong paraan ng pagbabayad</string>
     <string name="birdwatch_dialog_home_button">Home</string>
     <string name="birdwatch_dialog_my_notes_button">Aking mga note</string>
-    <string name="birdwatch_home_page_title">Birdwatch</string>
-    <string name="birdwatch_pivot_header_title">Birdwatch</string>
+    <string name="birdwatch_home_page_title">Mga Note ng Komunidad</string>
+    <string name="birdwatch_pivot_header_title">Mga Note ng Komunidad</string>
     <string name="birthday_not_today_month_day">Ipinanganak noong %s</string>
     <string name="birthday_not_today_month_day_year">Ipinanganak noong %s</string>
     <string name="birthday_not_today_year_only">Ipinanganak noong %d</string>
@@ -1906,7 +1911,7 @@
     <string name="drag_and_drop_reordering_tooltip_text">Pindutin nang matagal ang anumang larawan para ilipat ito</string>
     <string name="drag_handle_label">Mag-click at mag-drag para baguhin ang ayos</string>
     <string name="drawer_accounts_menu_header">Mga Account</string>
-    <string name="drawer_birdwatch_title">Birdwatch</string>
+    <string name="drawer_birdwatch_title">Mga Note ng Komunidad</string>
     <string name="drawer_branded_likes_preview_title">Preview ng Mga Branded na Pag-like</string>
     <string name="drawer_communities_title">Mga Komunidad</string>
     <string name="drawer_connect_title">Kumonekta</string>
@@ -2034,7 +2039,7 @@
     <string name="edit_profile_remove_header">Tanggalin ang header</string>
     <string name="edit_profile_switch_to_professional">Lumipat sa Propesyonal</string>
     <string name="edit_profile_take_photo">Kumuha ng larawan</string>
-    <string name="edit_profile_verified_phone">Badge ng beripikadong numero ng telepono</string>
+    <string name="edit_profile_verified_phone">Marka ng kumpirmadong numero ng telepono</string>
     <string name="edit_profile_website">Website</string>
     <string name="edit_room_button">I-edit</string>
     <string name="edit_rule">I-edit ang patakaran</string>
@@ -2218,7 +2223,7 @@
     <string name="error_update_module_visibility">Nagkaproblema. Pakisubukan ulit.</string>
     <string name="error_uploading_header">Error sa pag-upload ng larawan sa header.</string>
     <string name="except_blocked_accounts_desc">Hindi makakasali ang mga account na na-block mo. Gayunpaman, posibleng makapakinig ang mga taong hindi naka-log in sa Twitter. {{}}Matuto pa{{}}</string>
-    <string name="exclusive_focal_tweet_education_message">Nakikita at nasasagot mo ito dahil sinu-super Follow mo si @%s</string>
+    <string name="exclusive_focal_tweet_education_message">Nakikita mo ito at nakakasagot ka rito dahil Naka-subscribe ka kay @%s</string>
     <string name="exclusive_focal_tweet_education_title">Nakakakita ka ng content ng Mga Super Follow</string>
     <string name="exclusive_space_access_info_sheet_message">Ang isa sa perks ng pagiging Super Follower ay ang eksklusibong access sa mga Space na gaya nito. Ikaw lang at ang iba pang Super Follower ni @%s ang makakasali sa Space na ito.</string>
     <string name="exclusive_space_access_info_sheet_message_generic">Ang isa sa perks ng pagiging Super Follower ay ang eksklusibong access sa mga Space na gaya nito. Ikaw lang at ang iba pang Super Follower ng creator na ito ang makakasali sa Space na ito.</string>
@@ -2226,8 +2231,8 @@
     <string name="exclusive_space_non_sf_access_info_sheet_message">Ang isa sa perks ng pagiging Super Follower ay ang eksklusibong access sa mga Space na gaya nito. Ang Mga Super Follower lang ni @%s ang makakasali sa Space na ito.</string>
     <string name="exclusive_space_non_sf_access_info_sheet_message_generic">Ang isa sa perks ng pagiging Super Follower ay ang eksklusibong access sa mga Space na gaya nito. Ang Mga Super Follower lang ng creator na ito ang makakasali sa Space na ito.</string>
     <string name="exclusive_timeline_self_tweet_education_message">Makikita mo at ng iyong Mga Super Follower ang Tweet na ito</string>
-    <string name="exclusive_timeline_tweet_education_message">Nakikita mo ang Tweet na ito dahil sinu-Super Follow mo si %s.</string>
-    <string name="exclusive_tweet_reply_education_message">Makikita ni @%s at ng kanyang Mga Super Follower ang iyong Tweet</string>
+    <string name="exclusive_timeline_tweet_education_message">Nakikita mo ang Tweet na ito dahil naka-Subscribe ka kay @%s</string>
+    <string name="exclusive_tweet_reply_education_message">Makikita ni @%s at ng kanyang mga Subscriber ang Tweet mo</string>
     <string name="exclusive_tweet_reply_education_title">Sino ang makakakita sa Tweet na ito?</string>
     <string name="existing_member">Kasalukuyang miyembro</string>
     <string name="existing_member_community">Nasa Komunidad na ang taong ito.</string>
@@ -3112,6 +3117,9 @@
     <string name="manage_subscription_dialog_error_title">Error</string>
     <string name="manage_subscription_pref_summary">Tingnan ang mga detalye ng iyong subscription o magkansela.</string>
     <string name="manage_subscription_stripe_description">Mukhang binili mo ang subscription na ito sa twitter.com. Kakailanganin mong pamahalaan o kanselahin ang iyong subscription mula sa platform na iyon.</string>
+    <string name="manage_subscription_upgrade_available">Available ang upgrade</string>
+    <string name="manage_subscription_upgrade_new_perks">Kumuha ng beripikadong account</string>
+    <string name="manage_subscription_upgrade_twitter_blue">I-upgrade sa Twitter Blue</string>
     <string name="manage_your_experience_desc">Puwede kang mag-block at mag-ulat ng mga tao sa isang Space.</string>
     <string name="manage_your_experience_title">Pamahalaan ang iyong karanasan</string>
     <string name="map_price_free_subtitle">Libre · %1$s</string>
@@ -4039,6 +4047,8 @@
     <string name="product_original_price_content_description">Orihinal na presyo: %1$s</string>
     <string name="product_price_content_description">Presyo: %1$s</string>
     <string name="product_report_message">Naisumite na ang ulat\10Titingnan ito ng aming team sa lalong madaling panahon.</string>
+    <string name="product_sign_up_button_text_with_period">Mag-subscribe sa halagang %1$s/%2$s</string>
+    <string name="product_sign_up_button_text_without_period">Mag-subscribe sa halagang %1$s</string>
     <string name="product_sign_up_with_price">Mag-subscribe sa halagang %1$s/buwan</string>
     <string name="product_unavailable_in_country">Nagsisikap kaming gawing available ang Twitter Blue sa iyong bansa sa hinaharap. Mangyaring bumalik sa ibang pagkakataon.</string>
     <string name="product_unavailable_in_country_dialog_title">Salamat sa iyong interes!</string>
@@ -5933,6 +5943,7 @@
     <string name="settings_mute_block_item_title">I-mute at i-block</string>
     <string name="settings_muted_notifications">Mga naka-mute na abiso</string>
     <string name="settings_news_subtitle">Tumuklas ng mga nauugnay na balita, i-enjoy ang mga artikulong walang ad, at suportahan ang pamamahayag na gusto mong basahin.</string>
+    <string name="settings_news_subtitle_without_ads_free">Tumuklas ng mga may kaugnayang balita at magkaroon ng mas magandang karanasan sa pagbabasa ng thread.</string>
     <string name="settings_news_title">Isang mas magandang karanasan sa pagbabasa ng balita</string>
     <string name="settings_no_location_permission_message">Naka-disable ang Pahintulot sa lokasyon para sa Twitter. I-enable ang Pahintulot sa lokasyon para sa Twitter sa {{}}Impormasyon ng App{{}}.</string>
     <string name="settings_notif_timeline_title">Mga Tweet</string>
@@ -6636,6 +6647,7 @@
     <string name="subscriptions_loading_error_title">Oops, nagkaproblema. Pakisubukan ulit sa ibang pagkakataon.</string>
     <string name="subscriptions_subscriber_header_title">Twitter Blue</string>
     <string name="subscriptions_support_label">Humingi ng suporta</string>
+    <string name="subscriptions_temporarily_disabled_message">Sa Twitter iOS app ka lang puwedeng mag-subscribe (sa ngayon).</string>
     <string name="subscriptions_twitter_blue_profile_label">@twitterblue</string>
     <string name="subscriptions_welcome_okay_button_label">Okay</string>
     <string name="subscriptions_welcome_subtitle">I-customize ang iyong mga setting at simulang sulitin ang iyong subscription sa Twitter Blue.</string>
@@ -6650,12 +6662,12 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="sunday">Linggo</string>
     <string name="super_follow">I-super Follow</string>
-    <string name="super_follow_badge_description">Payagan ang sinuman na makita ang iyong badge ng Super Follower kapag sumagot ka sa mga Tweet ni @%1$s</string>
-    <string name="super_follow_badge_explanation">Kapag na-off mo ito, makikita pa rin ni @%1$s at ng kanyang Mga Super Follower ang iyong badge kung sasagot ka sa mga Tweet ni @%1$s na para lang sa Super Follower. Palaging makikita ni @%1$s ang badge mo.\10\10{{}}Matuto pa{{}}</string>
+    <string name="super_follow_badge_description">Pahintulutan ang sinuman na makita ang iyong Subscriber badge sa tuwing sasagot ka sa mga Tweet ni @%1$s</string>
+    <string name="super_follow_badge_explanation">Kapag na-off mo ito, makikita pa rin ni @%1$s at ng kanyang mga Subscriber ang badge mo kapag sumagot ka sa mga Tweet ni @%1$s na para lang sa mga Subscriber. Makikita palagi ni @%1$s ang badge mo.\10\10{{}}Matuto pa{{}}</string>
     <string name="super_follow_badge_subtitle">Badge ng Super Follower</string>
     <string name="super_follow_close">Isara</string>
     <string name="super_follow_content_desc">I-super follow si %1$s.</string>
-    <string name="super_follow_creator">I-super Follow si @%s</string>
+    <string name="super_follow_creator">Mag-subscribe kay @%s</string>
     <string name="super_follow_manage_subscription">Pamahalaan ang Subscription</string>
     <string name="super_follow_manage_subscription_already_cancelled_description">Kung kinansela mo na ang iyong subscription, awtomatikong mag-e-expire ang iyong mga benepisyo sa katapusan ng cycle ng pagsingil.</string>
     <string name="super_follow_manage_subscription_already_cancelled_subtitle">Kinansela mo na ba ang subscription mo?</string>
@@ -7151,7 +7163,7 @@
     <string name="tweet_action_moderate">Itago ang Sagot</string>
     <string name="tweet_action_thread_reader_cta">Basahin ang thread sa Reader</string>
     <string name="tweet_action_unmoderate">I-unhide ang Sagot</string>
-    <string name="tweet_action_view_birdwatch_notes">Tingnan ang Mga Birdwatch Note</string>
+    <string name="tweet_action_view_birdwatch_notes">Tingnan ang Mga Note ng Komunidad</string>
     <string name="tweet_action_view_moderated_tweets">Tingnan ang Mga Nakatagong Sagot</string>
     <string name="tweet_actions_disabled">Na-disable ng Twitter ang ilang pagkilos sa Tweet na ito.</string>
     <string name="tweet_added_to_your_bookmarks">Idinagdag ang Tweet sa Mga Bookmark mo</string>
@@ -7400,6 +7412,7 @@
     <string name="upload_contacts_summary">Patuloy na maa-upload sa Twitter ang mga contact mula sa iyong address book para tumulong na maikonekta ka sa iyong mga kaibigan at makapag-personalize ng content, gaya ng paggawa ng mga suhestyon para sa iyo at sa iba. Hindi aalisin ng pag-off sa pag-sync ang mga dating na-upload na contact. {{}}Matuto pa{{}}</string>
     <string name="upsell_card_pill_text">Bago</string>
     <string name="upsell_card_title">Maagang access para i-edit ang mga Tweet mo. Maaayos mo na ngayon ang mga typo.</string>
+    <string name="upsell_card_title_blue_verified">Maganda ang Blue sa iyo. Mag-enjoy sa beripikadong account mo at blue na checkmark.</string>
     <string name="url_dm_abuse_interstitial_learn_more">https://help.twitter.com/safety-and-security/report-a-tweet</string>
     <string name="url_limit_tweet_error">Masyadong maraming link sa Tweet</string>
     <string name="use_a_temporary_password_message">Kailangan mong gumawa ng isang pansamantalang password sa twitter.com upang magpatuloy.</string>
@@ -7485,8 +7498,9 @@
     <string name="users_unblock_title">I-unblock si @%s?</string>
     <string name="v7_preference_off">NAKA-OFF</string>
     <string name="v7_preference_on">NAKA-ON</string>
+    <string name="verification_education_blue_desc">Beripikado ang account na ito dahil naka-subscribe ito sa Twitter Blue. {{}}Matuto pa{{}}</string>
     <string name="verification_education_desc">Beripikado ang account na ito dahil kilala ito sa pamahalaan, balita, entertainment, o iba pang itinalagang kategorya. {{}}Matuto pa{{}}</string>
-    <string name="verification_education_title">Impormasyon ng Account</string>
+    <string name="verification_education_title">Beripikadong account</string>
     <string name="verification_landing_active_card_text">Aktibo dapat ang iyong account at may record ng pagsunod sa mga patakaran sa Twitter, at may kumpleto dapat itong profile at kumpirmadong paraan ng pakikipag-ugnayan.</string>
     <string name="verification_landing_active_card_title">Aktibo</string>
     <string name="verification_landing_authentic_card_text">Para mapanatili ang tiwala ng mga user sa isa\'t isa sa platform, kakailanganin mo ring kumpirmahin ang iyong pagkakakilanlan sa Twitter para maging Beripikado.</string>
@@ -7519,9 +7533,9 @@
     <string name="verified_phone_off">Naka-off</string>
     <string name="verified_phone_on">Naka-on</string>
     <string name="verified_phone_status_learn_more">Matuto pa</string>
-    <string name="verified_phone_status_learn_more_title">Ang visibility ay para lang sa mga customer na aktibong gumagamit ng Twitter mula sa rehiyon mo.</string>
-    <string name="verified_phone_status_title">Badge ng beripikadong numero ng telepono</string>
-    <string name="verified_phone_status_toggle_title">Ipakita ang kategorya sa profile</string>
+    <string name="verified_phone_status_learn_more_title">Maglagay ng marka ng kumpirmasyon ng telepono para ipakitang nakumpirma mo na ang numero ng telepono mo. Ang markang ito ay ipapakita lang sa iba pang nasa rehiyon mo.</string>
+    <string name="verified_phone_status_title">Marka ng kumpirmadong numero ng telepono</string>
+    <string name="verified_phone_status_toggle_title">Ipakita ang marka ng kumpirmadong numero ng telepono</string>
     <string name="verify_phone_change_number">Ibahin ang telepono ko</string>
     <string name="verify_phone_phone_already_verified">Naberipika na ang Telepono mo</string>
     <string name="vertical_grid_module_show_more_btn">Magpakita Pa</string>

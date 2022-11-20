@@ -9,15 +9,14 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTweetReactionTimelineEntry extends aih<dou>
+public class JsonTweetReactionTimelineEntry extends fih<xou>
 {
     @JsonField
-    public rhw a;
+    public kiw a;
     @JsonField
     public String b;
     
-    @Override
     public final Object s() {
-        return new dou(ffa.e(this.a), zyl.Companion.a(this.b));
+        return new xou(toe.d(this.a), ozl.Companion.a(this.b));
     }
 }

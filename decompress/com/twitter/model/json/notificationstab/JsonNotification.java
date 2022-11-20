@@ -12,135 +12,134 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonNotification extends lhh<api>
+public class JsonNotification extends qhh<fpi>
 {
     @JsonField
     public String a;
     @JsonField
     public JsonNotification.JsonNotification$Template b;
     @JsonField
-    public xri c;
+    public zri c;
     @JsonField
-    public xwm d;
+    public oxm d;
     
-    @Override
-    public final h4j t() {
-        final api.a a = new api.a();
-        a.a = this.a;
-        a.d = this.c;
-        a.e = this.d;
+    public final n4j t() {
+        final fpi$a fpi$a = new fpi$a();
+        fpi$a.a = this.a;
+        fpi$a.d = this.c;
+        fpi$a.e = this.d;
         final JsonNotification.JsonNotification$Template b = this.b;
-        final fri fri = null;
-        xti xti = null;
-        xwm a3 = null;
-        Label_0082: {
+        final hri hri = null;
+        yti yti = null;
+        oxm a2 = null;
+        Label_0090: {
             if (b != null) {
-                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a2 = b.a;
-                if (a2 != null) {
-                    final JsonNotification.JsonNotification$AdditionalContext c = a2.c;
+                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a = b.a;
+                if (a != null) {
+                    final JsonNotification.JsonNotification$AdditionalContext c = a.c;
                     if (c != null) {
-                        a3 = c.a;
-                        break Label_0082;
+                        a2 = c.a;
+                        break Label_0090;
                     }
                 }
             }
-            a3 = null;
+            a2 = null;
         }
-        a.f = a3;
+        fpi$a.f = a2;
         String d = null;
-        Label_0116: {
+        Label_0127: {
             if (b != null) {
-                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a4 = b.a;
-                if (a4 != null) {
-                    d = a4.d;
-                    break Label_0116;
+                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a3 = b.a;
+                if (a3 != null) {
+                    d = a3.d;
+                    break Label_0127;
                 }
             }
             d = null;
         }
-        a.g = d;
+        fpi$a.g = d;
         Object o = null;
-        Label_0162: {
+        Label_0175: {
             if (b != null) {
-                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a5 = b.a;
-                if (a5 != null) {
-                    o = a5.a;
+                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a4 = b.a;
+                if (a4 != null) {
+                    o = a4.a;
                     if (o != null) {
-                        break Label_0162;
+                        break Label_0175;
                     }
                 }
             }
-            o = ced.D0;
-            final int a6 = w4j.a;
+            o = gdd.E0;
+            final int a5 = c5j.a;
         }
-        a.b = hr4.c((List)o, (kub)tp3.u);
-        final HashMap<UserIdentifier, zyl> c2 = new HashMap<UserIdentifier, zyl>();
+        fpi$a.b = fq4.c((List)o, (jtb)vq9.r);
+        final HashMap<UserIdentifier, ozl> c2 = new HashMap<UserIdentifier, ozl>();
         final JsonNotification.JsonNotification$Template b2 = this.b;
         Object o2 = null;
-        Label_0230: {
+        Label_0244: {
             if (b2 != null) {
-                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a7 = b2.a;
-                if (a7 != null) {
-                    o2 = a7.a;
+                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a6 = b2.a;
+                if (a6 != null) {
+                    o2 = a6.a;
                     if (o2 != null) {
-                        break Label_0230;
+                        break Label_0244;
                     }
                 }
             }
-            o2 = ced.D0;
-            final int a8 = w4j.a;
+            o2 = gdd.E0;
+            final int a7 = c5j.a;
         }
         final Iterator iterator = ((List)o2).iterator();
         while (iterator.hasNext()) {
             final a t = ((JsonNotification.JsonNotification$UserContainer)iterator.next()).a.t();
             if (t.a.isRegularUser()) {
-                final zyl b3 = t.b;
-                if (b3 == zyl.I0) {
+                final ozl b3 = t.b;
+                if (b3 == ozl.J0) {
                     continue;
                 }
                 c2.put(t.a, b3);
             }
         }
-        a.c = c2;
+        fpi$a.c = c2;
         final JsonNotification.JsonNotification$Template b4 = this.b;
-        long a9;
-        final long n = a9 = -1L;
+        long a8;
+        final long n = a8 = -1L;
         if (b4 != null) {
-            final JsonNotification.JsonNotification$AggregatesUserActionsV1 a10 = b4.a;
-            if (a10 == null) {
-                a9 = n;
+            final JsonNotification.JsonNotification$AggregatesUserActionsV1 a9 = b4.a;
+            if (a9 == null) {
+                a8 = n;
             }
             else {
-                final JsonNotification.JsonNotification$TargetObject jsonNotification$TargetObject = (JsonNotification.JsonNotification$TargetObject)hr4.q((List)a10.b);
-                JsonNotification.JsonNotification$TargetObjectTweet a11;
+                final JsonNotification.JsonNotification$TargetObject jsonNotification$TargetObject = (JsonNotification.JsonNotification$TargetObject)fq4.q((List)a9.b);
+                JsonNotification.JsonNotification$TargetObjectTweet a10;
                 if (jsonNotification$TargetObject == null) {
-                    a11 = null;
+                    a10 = null;
                 }
                 else {
-                    a11 = jsonNotification$TargetObject.a;
+                    a10 = jsonNotification$TargetObject.a;
                 }
-                if (a11 == null) {
-                    a9 = n;
+                if (a10 == null) {
+                    a8 = n;
                 }
                 else {
-                    a9 = a11.a;
+                    a8 = a10.a;
                 }
             }
         }
-        a.k = a9;
+        fpi$a.k = a8;
         final JsonNotification.JsonNotification$Template b5 = this.b;
         String b6 = null;
-        Label_0483: {
+        Label_0496: {
             if (b5 != null) {
-                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a12 = b5.a;
-                if (a12 != null) {
-                    final JsonNotification.JsonNotification$TargetObject jsonNotification$TargetObject2 = (JsonNotification.JsonNotification$TargetObject)hr4.q((List)a12.b);
+                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a11 = b5.a;
+                if (a11 != null) {
+                    final JsonNotification.JsonNotification$TargetObject jsonNotification$TargetObject2 = (JsonNotification.JsonNotification$TargetObject)fq4.q((List)a11.b);
                     if (jsonNotification$TargetObject2 != null) {
-                        final JsonNotification.JsonNotification$TargetObjectTweet a13 = jsonNotification$TargetObject2.a;
-                        if (a13 != null) {
-                            b6 = a13.b;
+                        final JsonNotification.JsonNotification$TargetObjectTweet a12 = jsonNotification$TargetObject2.a;
+                        if (a12 != null) {
+                            b6 = a12.b;
                             if (b6 != null) {
-                                break Label_0483;
+                                break Label_0496;
                             }
                         }
                     }
@@ -148,62 +147,62 @@ public class JsonNotification extends lhh<api>
             }
             b6 = "None";
         }
-        a.l = b6;
+        fpi$a.l = b6;
         final JsonNotification.JsonNotification$Template b7 = this.b;
-        ovv e = null;
-        Label_0522: {
+        hwv e = null;
+        Label_0539: {
             if (b7 != null) {
-                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a14 = b7.a;
-                if (a14 != null) {
-                    e = a14.e;
-                    break Label_0522;
+                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a13 = b7.a;
+                if (a13 != null) {
+                    e = a13.e;
+                    break Label_0539;
                 }
             }
             e = null;
         }
-        a.h = e;
-        nsi i = null;
-        Label_0612: {
+        fpi$a.h = e;
+        psi i = null;
+        Label_0632: {
             if (b7 != null) {
-                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a15 = b7.a;
-                if (a15 != null) {
-                    final JsonNotification.JsonNotification$InlineFeedback f = a15.f;
+                final JsonNotification.JsonNotification$AggregatesUserActionsV1 a14 = b7.a;
+                if (a14 != null) {
+                    final JsonNotification.JsonNotification$InlineFeedback f = a14.f;
                     if (f != null) {
-                        i = new nsi(f.a, f.b, f.c.a, f.d.a, f.e.a, f.f.a);
-                        break Label_0612;
+                        i = new psi(f.a, f.b, f.c.a, f.d.a, f.e.a, f.f.a);
+                        break Label_0632;
                     }
                 }
             }
             i = null;
         }
-        a.i = i;
+        fpi$a.i = i;
         final JsonNotification.JsonNotification$Template b8 = this.b;
-        fri j = fri;
+        hri j = hri;
         if (b8 != null) {
-            final JsonNotification.JsonNotification$AggregatesUserActionsV1 a16 = b8.a;
-            j = fri;
-            if (a16 != null) {
-                final JsonNotification.JsonNotification$DisplayOptions g = a16.g;
-                j = fri;
+            final JsonNotification.JsonNotification$AggregatesUserActionsV1 a15 = b8.a;
+            j = hri;
+            if (a15 != null) {
+                final JsonNotification.JsonNotification$DisplayOptions g = a15.g;
+                j = hri;
                 if (g != null) {
                     final boolean b9 = g.a != null;
                     final JsonNotification.JsonNotification$MediaPreview b10 = g.b;
-                    nti nti;
+                    pti pti;
                     if (b10 != null) {
-                        nti = new nti(b10.a);
+                        pti = new pti(b10.a);
                     }
                     else {
-                        nti = null;
+                        pti = null;
                     }
                     final JsonNotification.JsonNotification$QuoteTweet c3 = this.b.a.g.c;
                     if (c3 != null) {
-                        xti = new xti(c3.a);
+                        yti = new yti(c3.a);
                     }
-                    j = new fri(b9, nti, xti);
+                    j = new hri(b9, pti, yti);
                 }
             }
         }
-        a.j = j;
-        return a;
+        fpi$a.j = j;
+        return (n4j)fpi$a;
     }
 }

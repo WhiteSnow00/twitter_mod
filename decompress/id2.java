@@ -4,17 +4,21 @@ import android.view.View;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class id2 extends gue implements rtb<View, okx<? super sc2, qc2, pc2>>
+public final class id2 extends ste implements qsb<View, ilx<? super nc2, lc2, kc2>>
 {
-    public final /* synthetic */ oya C0;
+    public static final id2 D0;
     
-    public id2(final oya c0) {
-        this.C0 = c0;
+    static {
+        D0 = new id2();
+    }
+    
+    public id2() {
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        zzd.f((Object)o, "it");
-        return this.C0;
+        final View view = (View)o;
+        czd.f((Object)view, "it");
+        return new i7m(view);
     }
 }

@@ -6,7 +6,7 @@ package com.twitter.app.chrome.di.retained;
 
 import com.twitter.app.common.inject.retained.RetainedObjectGraph;
 
-@l4j
+@r4j
 public interface DynamicChromeFragmentRetainedObjectGraph extends RetainedObjectGraph
 {
 }

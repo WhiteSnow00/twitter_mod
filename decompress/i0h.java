@@ -2,26 +2,32 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class i0h
+public final class i0h implements xv1
 {
-    public static final alp<i0h> b;
-    public final long a;
+    public static final i0h b;
+    public static final i0h c;
+    public final int a;
     
     static {
-        i0h.b = new i0h.i0h$a();
+        b = new i0h(0);
+        c = new i0h(1);
     }
     
-    public i0h(final long a) {
+    public i0h(final int a) {
         this.a = a;
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        return o instanceof i0h && ((i0h)o).a == this.a;
-    }
-    
-    @Override
-    public final int hashCode() {
-        return w4j.d(this.a);
+    public final void accept(final Object o, final Object o2) {
+        switch (this.a) {
+            default: {
+                final tmi tmi = (tmi)o;
+                final tmi tmi2 = (tmi)o2;
+                return;
+            }
+            case 0: {
+                final lmk lmk = (lmk)o;
+                final j6 j6 = (j6)o2;
+            }
+        }
     }
 }

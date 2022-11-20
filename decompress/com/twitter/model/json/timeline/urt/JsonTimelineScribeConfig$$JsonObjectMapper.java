@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineScribeConfig$$JsonObjectMapper extends JsonMapper<JsonTimelineScribeConfig>
 {
-    public static JsonTimelineScribeConfig _parse(final khe khe) throws IOException {
+    public static JsonTimelineScribeConfig _parse(final tge tge) throws IOException {
         final JsonTimelineScribeConfig jsonTimelineScribeConfig = new JsonTimelineScribeConfig();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineScribeConfig, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineScribeConfig, d, tge);
+            tge.l0();
         }
         return jsonTimelineScribeConfig;
     }
     
-    public static void _serialize(final JsonTimelineScribeConfig jsonTimelineScribeConfig, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineScribeConfig jsonTimelineScribeConfig, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("page", jsonTimelineScribeConfig.a);
-        tfe.u0("section", jsonTimelineScribeConfig.b);
+        afe.t0("page", jsonTimelineScribeConfig.a);
+        afe.t0("section", jsonTimelineScribeConfig.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineScribeConfig jsonTimelineScribeConfig, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineScribeConfig jsonTimelineScribeConfig, final String s, final tge tge) throws IOException {
         if ("page".equals(s)) {
-            jsonTimelineScribeConfig.a = khe.T((String)null);
+            jsonTimelineScribeConfig.a = tge.T((String)null);
         }
         else if ("section".equals(s)) {
-            jsonTimelineScribeConfig.b = khe.T((String)null);
+            jsonTimelineScribeConfig.b = tge.T((String)null);
         }
     }
     
-    public JsonTimelineScribeConfig parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineScribeConfig parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineScribeConfig jsonTimelineScribeConfig, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineScribeConfig, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineScribeConfig jsonTimelineScribeConfig, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineScribeConfig, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineScribeConfig)o, afe, b);
     }
 }

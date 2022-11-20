@@ -1,55 +1,119 @@
+import java.util.Objects;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class jhs
 {
-    public static final a Companion;
-    public static final jhs c;
-    public final float a;
-    public final float b;
+    public static final c Companion;
+    public static final uto<jhs, Object> f;
+    public final hwj a;
+    public final hwj b;
+    public c6m c;
+    public long d;
+    public final hwj e;
     
     static {
-        Companion = new a();
-        c = new jhs(1.0f, 0.0f);
+        Companion = new c();
+        jhs.f = (vto.vto$c)plf.a((ftb)jhs$a.D0, (qsb)jhs$b.D0);
     }
     
     public jhs() {
-        this(1.0f, 0.0f);
+        this(ooj.D0, 0.0f);
     }
     
-    public jhs(final float a, final float b) {
-        this.a = a;
-        this.b = b;
+    public jhs(final ooj ooj, final float n) {
+        czd.f((Object)ooj, "initialOrientation");
+        this.a = (hwj)blz.Q(n);
+        this.b = (hwj)blz.Q(0.0f);
+        Objects.requireNonNull(c6m.Companion);
+        this.c = c6m.e;
+        Objects.requireNonNull(hjs.Companion);
+        this.d = hjs.b;
+        this.e = (hwj)blz.P(ooj, (hiq)mlr.a);
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
+    public final float a() {
+        return ((Number)this.b.getValue()).floatValue();
+    }
+    
+    public final float b() {
+        return ((Number)this.a.getValue()).floatValue();
+    }
+    
+    public final ooj c() {
+        return (ooj)this.e.getValue();
+    }
+    
+    public final void d(final float n) {
+        this.a.setValue((Object)n);
+    }
+    
+    public final void e(final ooj ooj, final c6m c, int n, int n2) {
+        final float n3 = (float)(n2 - n);
+        this.b.setValue((Object)n3);
+        float n4 = c.a;
+        final c6m c2 = this.c;
+        final float a = c2.a;
+        final int n5 = 0;
+        if (n4 == a) {
+            n2 = 1;
         }
-        if (!(o instanceof jhs)) {
-            return false;
+        else {
+            n2 = 0;
         }
-        final float a = this.a;
-        final jhs jhs = (jhs)o;
-        return a == jhs.a && this.b == jhs.b;
+        Label_0238: {
+            if (n2 != 0) {
+                if (c.b == c2.b) {
+                    n2 = 1;
+                }
+                else {
+                    n2 = 0;
+                }
+                if (n2 != 0) {
+                    break Label_0238;
+                }
+            }
+            n2 = n5;
+            if (ooj == ooj.D0) {
+                n2 = 1;
+            }
+            if (n2 != 0) {
+                n4 = c.b;
+            }
+            float n6;
+            if (n2 != 0) {
+                n6 = c.d;
+            }
+            else {
+                n6 = c.c;
+            }
+            final float b = this.b();
+            final float n7 = (float)n;
+            final float n8 = b + n7;
+            float n9 = 0.0f;
+            Label_0222: {
+                if (n6 <= n8) {
+                    n = fcmpg(n4, b);
+                    if (n >= 0 || n6 - n4 <= n7) {
+                        if (n < 0 && n6 - n4 <= n7) {
+                            n9 = n4 - b;
+                            break Label_0222;
+                        }
+                        n9 = 0.0f;
+                        break Label_0222;
+                    }
+                }
+                n9 = n6 - n8;
+            }
+            this.d(this.b() + n9);
+            this.c = c;
+        }
+        this.d(rrz.o(this.b(), 0.0f, n3));
     }
     
-    @Override
-    public final int hashCode() {
-        return Float.floatToIntBits(this.b) + Float.floatToIntBits(this.a) * 31;
-    }
-    
-    @Override
-    public final String toString() {
-        final StringBuilder g = w48.g("TextGeometricTransform(scaleX=");
-        g.append(this.a);
-        g.append(", skewX=");
-        return x30.E(g, this.b, ')');
-    }
-    
-    public static final class a
+    public static final class c
     {
     }
 }

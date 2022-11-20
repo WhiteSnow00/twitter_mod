@@ -10,89 +10,97 @@ import com.bluelinelabs.logansquare.LoganSquare;
 import java.io.IOException;
 import com.bluelinelabs.logansquare.JsonMapper;
 
-public final class JsonLiveEventMetadataResponse$JsonResponse$$JsonObjectMapper extends JsonMapper<JsonLiveEventMetadataResponse$JsonResponse>
+public final class JsonLiveEventMetadataResponse$JsonResponse$$JsonObjectMapper extends JsonMapper<JsonLiveEventMetadataResponse.JsonResponse>
 {
-    public static JsonLiveEventMetadataResponse$JsonResponse _parse(final khe khe) throws IOException {
-        final JsonLiveEventMetadataResponse$JsonResponse jsonLiveEventMetadataResponse$JsonResponse = new JsonLiveEventMetadataResponse$JsonResponse();
-        if (khe.e() == null) {
-            khe.i0();
+    public static JsonLiveEventMetadataResponse.JsonResponse _parse(final tge tge) throws IOException {
+        final JsonLiveEventMetadataResponse.JsonResponse jsonResponse = new JsonLiveEventMetadataResponse.JsonResponse();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveEventMetadataResponse$JsonResponse, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonResponse, d, tge);
+            tge.l0();
         }
-        return jsonLiveEventMetadataResponse$JsonResponse;
+        return jsonResponse;
     }
     
-    public static void _serialize(final JsonLiveEventMetadataResponse$JsonResponse jsonLiveEventMetadataResponse$JsonResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveEventMetadataResponse.JsonResponse jsonResponse, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final ArrayList a = jsonLiveEventMetadataResponse$JsonResponse.a;
+        final ArrayList a = jsonResponse.a;
         if (a != null) {
-            final Iterator g = q1a.g(tfe, "carousel", a);
-            while (g.hasNext()) {
-                final dm3 dm3 = g.next();
-                if (dm3 != null) {
-                    LoganSquare.typeConverterFor((Class)dm3.class).serialize((Object)dm3, "lslocalcarouselElement", false, tfe);
+            final Iterator a2 = br.A(afe, "carousel", a);
+            while (a2.hasNext()) {
+                final ll3 ll3 = a2.next();
+                if (ll3 != null) {
+                    LoganSquare.typeConverterFor((Class)ll3.class).serialize((Object)ll3, "lslocalcarouselElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        if (jsonLiveEventMetadataResponse$JsonResponse.b != null) {
-            LoganSquare.typeConverterFor((Class)qof.class).serialize((Object)jsonLiveEventMetadataResponse$JsonResponse.b, "live_event", true, tfe);
+        if (jsonResponse.b != null) {
+            LoganSquare.typeConverterFor((Class)cof.class).serialize((Object)jsonResponse.b, "live_event", true, afe);
         }
-        tfe.T("polling_interval_seconds", jsonLiveEventMetadataResponse$JsonResponse.d);
-        if (jsonLiveEventMetadataResponse$JsonResponse.c != null) {
-            LoganSquare.typeConverterFor((Class)o1g.class).serialize((Object)jsonLiveEventMetadataResponse$JsonResponse.c, "score", true, tfe);
+        afe.T("polling_interval_seconds", jsonResponse.d);
+        if (jsonResponse.c != null) {
+            LoganSquare.typeConverterFor((Class)z0g.class).serialize((Object)jsonResponse.c, "score", true, afe);
         }
-        tfe.u0("timeline_id", jsonLiveEventMetadataResponse$JsonResponse.e);
+        afe.t0("timeline_id", jsonResponse.e);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveEventMetadataResponse$JsonResponse jsonLiveEventMetadataResponse$JsonResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveEventMetadataResponse.JsonResponse jsonResponse, final String s, final tge tge) throws IOException {
         if ("carousel".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final dm3 dm3 = (dm3)LoganSquare.typeConverterFor((Class)dm3.class).parse(khe);
-                    if (dm3 != null) {
-                        a.add(dm3);
+                while (tge.h0() != vie.O0) {
+                    final ll3 ll3 = (ll3)LoganSquare.typeConverterFor((Class)ll3.class).parse(tge);
+                    if (ll3 != null) {
+                        a.add(ll3);
                     }
                 }
-                jsonLiveEventMetadataResponse$JsonResponse.a = a;
+                jsonResponse.a = a;
             }
             else {
-                jsonLiveEventMetadataResponse$JsonResponse.a = null;
+                jsonResponse.a = null;
             }
         }
         else if ("live_event".equals(s)) {
-            jsonLiveEventMetadataResponse$JsonResponse.b = (qof)LoganSquare.typeConverterFor((Class)qof.class).parse(khe);
+            jsonResponse.b = (cof)LoganSquare.typeConverterFor((Class)cof.class).parse(tge);
         }
         else if ("polling_interval_seconds".equals(s)) {
-            jsonLiveEventMetadataResponse$JsonResponse.d = khe.z();
+            jsonResponse.d = tge.y();
         }
         else if ("score".equals(s)) {
-            jsonLiveEventMetadataResponse$JsonResponse.c = (o1g)LoganSquare.typeConverterFor((Class)o1g.class).parse(khe);
+            jsonResponse.c = (z0g)LoganSquare.typeConverterFor((Class)z0g.class).parse(tge);
         }
         else if ("timeline_id".equals(s)) {
-            jsonLiveEventMetadataResponse$JsonResponse.e = khe.T((String)null);
+            jsonResponse.e = tge.T((String)null);
         }
     }
     
-    public JsonLiveEventMetadataResponse$JsonResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveEventMetadataResponse.JsonResponse parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveEventMetadataResponse$JsonResponse jsonLiveEventMetadataResponse$JsonResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveEventMetadataResponse$JsonResponse, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveEventMetadataResponse.JsonResponse jsonResponse, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonResponse, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveEventMetadataResponse.JsonResponse)o, afe, b);
     }
 }

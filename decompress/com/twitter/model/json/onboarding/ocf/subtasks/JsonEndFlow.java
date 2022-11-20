@@ -9,18 +9,17 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonEndFlow extends lhh<o4a>
+public class JsonEndFlow extends qhh<y3a>
 {
-    @JsonField(typeConverter = kfr.class)
+    @JsonField(typeConverter = egr.class)
     public int a;
-    @JsonField(typeConverter = bbi.class)
+    @JsonField(typeConverter = dbi.class)
     public int b;
     
-    @Override
-    public final h4j t() {
-        final o4a$a o4a$a = new o4a$a();
-        o4a$a.k = this.a;
-        o4a$a.l = this.b;
-        return (h4j)o4a$a;
+    public final n4j t() {
+        final y3a$a y3a$a = new y3a$a();
+        y3a$a.k = this.a;
+        y3a$a.l = this.b;
+        return (n4j)y3a$a;
     }
 }

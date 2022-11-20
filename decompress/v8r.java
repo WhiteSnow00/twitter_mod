@@ -1,90 +1,130 @@
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicInteger;
+import android.util.StateSet;
+import android.graphics.drawable.Drawable;
+import android.content.res.Resources$Theme;
+import android.content.res.Resources;
+import android.annotation.SuppressLint;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class v8r<T> implements Runnable
+@SuppressLint({ "RestrictedAPI" })
+public class v8r extends yc9
 {
-    public final AtomicInteger C0;
-    public final dk6<T> D0;
-    public final u0l E0;
-    public final String F0;
-    public final q0l G0;
+    public a Q0;
+    public boolean R0;
     
-    public v8r(final dk6<T> d0, final u0l e0, final q0l g0, final String f0) {
-        this.C0 = new AtomicInteger(0);
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = f0;
-        e0.k(this.G0 = g0, f0);
+    public v8r() {
     }
     
-    public final void a() {
-        if (this.C0.compareAndSet(0, 2)) {
-            this.e();
-        }
-    }
-    
-    public abstract void b(final Object p0);
-    
-    public Map<String, String> c(final T t) {
-        return null;
-    }
-    
-    public abstract Object d() throws Exception;
-    
-    public void e() {
-        final u0l e0 = this.E0;
-        final q0l g0 = this.G0;
-        final String f0 = this.F0;
-        e0.j(g0, f0);
-        e0.g(g0, f0);
-        this.D0.a();
-    }
-    
-    public void f(final Exception ex) {
-        final u0l e0 = this.E0;
-        final q0l g0 = this.G0;
-        final String f0 = this.F0;
-        e0.j(g0, f0);
-        e0.h(g0, f0, (Throwable)ex, (Map)null);
-        this.D0.d((Throwable)ex);
-    }
-    
-    public void g(final T t) {
-        final u0l e0 = this.E0;
-        final q0l g0 = this.G0;
-        final String f0 = this.F0;
-        Map<String, String> c;
-        if (e0.j(g0, f0)) {
-            c = this.c(t);
-        }
-        else {
-            c = null;
-        }
-        e0.a(g0, f0, (Map)c);
-        this.D0.c((Object)t, 1);
+    public v8r(final a a, final Resources resources) {
+        this.e(new a(a, this, resources));
+        this.onStateChange(this.getState());
     }
     
     @Override
-    public final void run() {
-        if (this.C0.compareAndSet(0, 1)) {
-            try {
-                final Object d = this.d();
-                this.C0.set(3);
-                try {
-                    this.g((T)d);
+    public final void applyTheme(final Resources$Theme resources$Theme) {
+        super.applyTheme(resources$Theme);
+        this.onStateChange(this.getState());
+    }
+    
+    @Override
+    public /* bridge */ c b() {
+        return this.f();
+    }
+    
+    @Override
+    public void e(final c d0) {
+        super.D0 = d0;
+        final int j0 = super.J0;
+        if (j0 >= 0) {
+            final Drawable d2 = d0.d(j0);
+            if ((super.F0 = d2) != null) {
+                this.c(d2);
+            }
+        }
+        super.G0 = null;
+        if (d0 instanceof a) {
+            this.Q0 = (a)d0;
+        }
+    }
+    
+    public a f() {
+        return new a(this.Q0, this, null);
+    }
+    
+    public boolean isStateful() {
+        return true;
+    }
+    
+    @Override
+    public Drawable mutate() {
+        if (!this.R0) {
+            super.mutate();
+            this.Q0.e();
+            this.R0 = true;
+        }
+        return this;
+    }
+    
+    @Override
+    public boolean onStateChange(final int[] array) {
+        final boolean onStateChange = super.onStateChange(array);
+        int n;
+        if ((n = this.Q0.h(array)) < 0) {
+            n = this.Q0.h(StateSet.WILD_CARD);
+        }
+        return this.d(n) || onStateChange;
+    }
+    
+    public static class a extends c
+    {
+        public int[][] H;
+        
+        public a(final a a, final v8r v8r, final Resources resources) {
+            super((c)a, v8r, resources);
+            if (a != null) {
+                this.H = a.H;
+            }
+            else {
+                this.H = new int[super.g.length][];
+            }
+        }
+        
+        @Override
+        public void e() {
+            final int[][] h = this.H;
+            final int[][] h2 = new int[h.length][];
+            for (int i = h.length - 1; i >= 0; --i) {
+                final int[][] h3 = this.H;
+                int[] array;
+                if (h3[i] != null) {
+                    array = h3[i].clone();
                 }
-                finally {
-                    this.b(d);
+                else {
+                    array = null;
+                }
+                h2[i] = array;
+            }
+            this.H = h2;
+        }
+        
+        public final int h(final int[] array) {
+            final int[][] h = this.H;
+            for (int h2 = super.h, i = 0; i < h2; ++i) {
+                if (StateSet.stateSetMatches(h[i], array)) {
+                    return i;
                 }
             }
-            catch (final Exception ex) {
-                this.C0.set(4);
-                this.f(ex);
-            }
+            return -1;
+        }
+        
+        public Drawable newDrawable() {
+            return new v8r(this, null);
+        }
+        
+        public Drawable newDrawable(final Resources resources) {
+            return new v8r(this, resources);
         }
     }
 }

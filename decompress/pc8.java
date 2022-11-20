@@ -2,13 +2,9 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class pc8 extends vq2
+public final class pc8 extends y9
 {
-    public long D0;
-    
-    public abstract void q();
-    
-    public interface a<S extends pc8>
-    {
+    public pc8(final String s) {
+        super(s);
     }
 }

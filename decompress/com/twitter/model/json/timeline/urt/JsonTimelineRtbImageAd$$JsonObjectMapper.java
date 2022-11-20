@@ -10,76 +10,84 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineRtbImageAd$$JsonObjectMapper extends JsonMapper<JsonTimelineRtbImageAd>
 {
-    public static JsonTimelineRtbImageAd _parse(final khe khe) throws IOException {
+    public static JsonTimelineRtbImageAd _parse(final tge tge) throws IOException {
         final JsonTimelineRtbImageAd jsonTimelineRtbImageAd = new JsonTimelineRtbImageAd();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineRtbImageAd, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineRtbImageAd, d, tge);
+            tge.l0();
         }
         return jsonTimelineRtbImageAd;
     }
     
-    public static void _serialize(final JsonTimelineRtbImageAd jsonTimelineRtbImageAd, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineRtbImageAd jsonTimelineRtbImageAd, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("creativeId", jsonTimelineRtbImageAd.a);
+        afe.t0("creativeId", jsonTimelineRtbImageAd.a);
         if (jsonTimelineRtbImageAd.f != null) {
-            LoganSquare.typeConverterFor((Class)v7d.class).serialize((Object)jsonTimelineRtbImageAd.f, "image", true, tfe);
+            LoganSquare.typeConverterFor((Class)z6d.class).serialize((Object)jsonTimelineRtbImageAd.f, "image", true, afe);
         }
         if (jsonTimelineRtbImageAd.d != null) {
-            LoganSquare.typeConverterFor((Class)q7t.class).serialize((Object)jsonTimelineRtbImageAd.d, "landingUrl", true, tfe);
+            LoganSquare.typeConverterFor((Class)i8t.class).serialize((Object)jsonTimelineRtbImageAd.d, "landingUrl", true, afe);
         }
         if (jsonTimelineRtbImageAd.g != null) {
-            tfe.i("promotedMetadata");
-            JsonPromotedContentUrt$$JsonObjectMapper._serialize(jsonTimelineRtbImageAd.g, tfe, true);
+            afe.i("promotedMetadata");
+            JsonPromotedContentUrt$$JsonObjectMapper._serialize(jsonTimelineRtbImageAd.g, afe, true);
         }
-        tfe.u0("text", jsonTimelineRtbImageAd.c);
-        tfe.u0("title", jsonTimelineRtbImageAd.b);
-        tfe.u0("vanityUrl", jsonTimelineRtbImageAd.e);
+        afe.t0("text", jsonTimelineRtbImageAd.c);
+        afe.t0("title", jsonTimelineRtbImageAd.b);
+        afe.t0("vanityUrl", jsonTimelineRtbImageAd.e);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineRtbImageAd jsonTimelineRtbImageAd, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineRtbImageAd jsonTimelineRtbImageAd, final String s, final tge tge) throws IOException {
         if ("creativeId".equals(s)) {
-            jsonTimelineRtbImageAd.a = khe.T((String)null);
+            jsonTimelineRtbImageAd.a = tge.T((String)null);
         }
         else if ("image".equals(s)) {
-            jsonTimelineRtbImageAd.f = (v7d)LoganSquare.typeConverterFor((Class)v7d.class).parse(khe);
+            jsonTimelineRtbImageAd.f = (z6d)LoganSquare.typeConverterFor((Class)z6d.class).parse(tge);
         }
         else if ("landingUrl".equals(s)) {
-            jsonTimelineRtbImageAd.d = (q7t)LoganSquare.typeConverterFor((Class)q7t.class).parse(khe);
+            jsonTimelineRtbImageAd.d = (i8t)LoganSquare.typeConverterFor((Class)i8t.class).parse(tge);
         }
         else if ("promotedMetadata".equals(s)) {
-            jsonTimelineRtbImageAd.g = JsonPromotedContentUrt$$JsonObjectMapper._parse(khe);
+            jsonTimelineRtbImageAd.g = JsonPromotedContentUrt$$JsonObjectMapper._parse(tge);
         }
         else if ("text".equals(s)) {
-            jsonTimelineRtbImageAd.c = khe.T((String)null);
+            jsonTimelineRtbImageAd.c = tge.T((String)null);
         }
         else if ("title".equals(s)) {
-            jsonTimelineRtbImageAd.b = khe.T((String)null);
+            jsonTimelineRtbImageAd.b = tge.T((String)null);
         }
         else if ("vanityUrl".equals(s)) {
-            jsonTimelineRtbImageAd.e = khe.T((String)null);
+            jsonTimelineRtbImageAd.e = tge.T((String)null);
         }
     }
     
-    public JsonTimelineRtbImageAd parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineRtbImageAd parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineRtbImageAd jsonTimelineRtbImageAd, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineRtbImageAd, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineRtbImageAd jsonTimelineRtbImageAd, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineRtbImageAd, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineRtbImageAd)o, afe, b);
     }
 }

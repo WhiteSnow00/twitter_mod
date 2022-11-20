@@ -14,18 +14,18 @@ import android.widget.RelativeLayout;
 
 public class LiveEventPlayerRetryView extends RelativeLayout
 {
-    public final TextView C0;
+    public final TextView D0;
     
     public LiveEventPlayerRetryView(final Context context, final AttributeSet set) {
         super(context, set, 0);
         View.inflate(context, 2131624743, (ViewGroup)this);
-        this.C0 = (TextView)((View)this).findViewById(2131429826);
+        this.D0 = (TextView)((View)this).findViewById(2131429826);
         final ImageView imageView = (ImageView)((View)this).findViewById(2131429824);
         ((View)this).getContext();
-        bl0.a().t();
+        wk0.b().t();
     }
     
     public void setError(final String text) {
-        this.C0.setText((CharSequence)text);
+        this.D0.setText((CharSequence)text);
     }
 }

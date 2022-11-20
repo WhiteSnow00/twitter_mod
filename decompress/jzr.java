@@ -1,522 +1,470 @@
-import java.util.Objects;
+import android.os.Build$VERSION;
+import android.view.View;
+import androidx.appcompat.view.menu.g;
+import java.lang.reflect.Constructor;
+import android.view.SubMenu;
+import android.graphics.PorterDuff$Mode;
+import android.content.res.ColorStateList;
+import android.view.InflateException;
+import android.view.MenuItem;
+import java.lang.reflect.Method;
+import android.view.MenuItem$OnMenuItemClickListener;
+import android.content.res.XmlResourceParser;
+import android.util.Xml;
+import java.io.IOException;
+import org.xmlpull.v1.XmlPullParserException;
+import android.content.res.TypedArray;
+import android.util.Log;
+import android.view.Menu;
+import android.util.AttributeSet;
+import org.xmlpull.v1.XmlPullParser;
+import android.content.ContextWrapper;
+import android.app.Activity;
+import android.content.Context;
+import android.view.MenuInflater;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jzr
+public final class jzr extends MenuInflater
 {
-    public static final void a(jkh companion, oqp a, long l, long b, a82 a2, float n, final gub<? super m76, ? super Integer, oyv> gub, final m76 m76, final int n2, final int n3) {
-        zzd.f((Object)gub, "content");
-        final m76 h = m76.h(1412203386);
-        final int n4 = n3 & 0x1;
-        int n5;
-        if (n4 != 0) {
-            n5 = (n2 | 0x6);
+    public static final Class<?>[] e;
+    public static final Class<?>[] f;
+    public final Object[] a;
+    public final Object[] b;
+    public Context c;
+    public Object d;
+    
+    static {
+        f = (e = new Class[] { Context.class });
+    }
+    
+    public jzr(final Context c) {
+        super(c);
+        this.c = c;
+        final Object[] array = { c };
+        this.a = array;
+        this.b = array;
+    }
+    
+    public final Object a(final Object o) {
+        if (o instanceof Activity) {
+            return o;
         }
-        else if ((n2 & 0xE) == 0x0) {
-            int n6;
-            if (h.P((Object)companion)) {
-                n6 = 4;
-            }
-            else {
-                n6 = 2;
-            }
-            n5 = (n6 | n2);
+        Object a = o;
+        if (o instanceof ContextWrapper) {
+            a = this.a(((ContextWrapper)o).getBaseContext());
         }
-        else {
-            n5 = n2;
-        }
-        final int n7 = n3 & 0x2;
-        int n10 = 0;
-        Label_0150: {
-            int n8;
-            if (n7 != 0) {
-                n8 = (n5 | 0x30);
-            }
-            else {
-                n8 = n5;
-                if ((n2 & 0x70) == 0x0) {
-                    int n9;
-                    if (h.P((Object)a)) {
-                        n9 = 32;
-                    }
-                    else {
-                        n9 = 16;
-                    }
-                    n10 = (n5 | n9);
-                    break Label_0150;
-                }
-            }
-            n10 = n8;
-        }
-        if ((n2 & 0x380) == 0x0) {
-            int n11;
-            if ((n3 & 0x4) == 0x0 && h.e(l)) {
-                n11 = 256;
-            }
-            else {
-                n11 = 128;
-            }
-            n10 |= n11;
-        }
-        if ((n2 & 0x1C00) == 0x0) {
-            int n12;
-            if ((n3 & 0x8) == 0x0 && h.e(b)) {
-                n12 = 2048;
-            }
-            else {
-                n12 = 1024;
-            }
-            n10 |= n12;
-        }
-        final int n13 = n3 & 0x10;
-        int n14;
-        if (n13 != 0) {
-            n14 = (n10 | 0x6000);
-        }
-        else {
-            n14 = n10;
-            if ((0xE000 & n2) == 0x0) {
-                int n15;
-                if (h.P((Object)a2)) {
-                    n15 = 16384;
-                }
-                else {
-                    n15 = 8192;
-                }
-                n14 = (n10 | n15);
-            }
-        }
-        final int n16 = n3 & 0x20;
-        int n17;
-        if (n16 != 0) {
-            n17 = (n14 | 0x30000);
-        }
-        else {
-            n17 = n14;
-            if ((n2 & 0x70000) == 0x0) {
-                int n18;
-                if (h.b(n)) {
-                    n18 = 131072;
-                }
-                else {
-                    n18 = 65536;
-                }
-                n17 = (n14 | n18);
-            }
-        }
-        int n20 = 0;
-        Label_0443: {
-            int n19;
-            if ((n3 & 0x40) != 0x0) {
-                n19 = 1572864;
-            }
-            else {
-                n20 = n17;
-                if ((n2 & 0x380000) != 0x0) {
-                    break Label_0443;
-                }
-                if (h.P((Object)gub)) {
-                    n19 = 1048576;
-                }
-                else {
-                    n19 = 524288;
-                }
-            }
-            n20 = (n17 | n19);
-        }
-        jkh jkh2 = null;
-        oqp oqp2 = null;
-        Label_0856: {
-            if ((n20 & 0x2DB6DB) != 0x92492 || !h.i()) {
-                h.C();
-                while (true) {
-                    a82 a3 = null;
-                    long n22 = 0L;
-                    long n23 = 0L;
-                    oqp oqp = null;
-                    int n24 = 0;
-                    jkh jkh = null;
-                    Label_0574: {
-                        int n25;
-                        if ((n2 & 0x1) != 0x0 && !h.K()) {
-                            h.H();
-                            int n21 = n20;
-                            if ((n3 & 0x4) != 0x0) {
-                                n21 = (n20 & 0xFFFFFC7F);
-                            }
-                            if ((n3 & 0x8) == 0x0) {
-                                a3 = a2;
-                                n22 = b;
-                                n23 = l;
-                                oqp = a;
-                                n24 = n21;
-                                jkh = companion;
-                                break Label_0574;
-                            }
-                            n25 = (n21 & 0xFFFFE3FF);
+        return a;
+    }
+    
+    public final void b(final XmlPullParser xmlPullParser, final AttributeSet set, final Menu menu) throws XmlPullParserException, IOException {
+        final b b = new b(menu);
+        int i = xmlPullParser.getEventType();
+        String name3;
+        while (true) {
+            while (i != 2) {
+                i = xmlPullParser.next();
+                if (i == 1) {
+                    int j = 0;
+                    int n = 0;
+                    Object o = null;
+                    int next = i;
+                    while (j == 0) {
+                        if (next == 1) {
+                            throw new RuntimeException("Unexpected end of document");
                         }
-                        else {
-                            if (n4 != 0) {
-                                companion = jkh.Companion;
+                        int n2 = 0;
+                        Label_1012: {
+                            if (next != 2) {
+                                if (next == 3) {
+                                    final String name = xmlPullParser.getName();
+                                    if (n != 0 && name.equals(o)) {
+                                        o = null;
+                                        n2 = 0;
+                                        break Label_1012;
+                                    }
+                                    if (name.equals("group")) {
+                                        b.b = 0;
+                                        b.c = 0;
+                                        b.d = 0;
+                                        b.e = 0;
+                                        b.f = true;
+                                        b.g = true;
+                                    }
+                                    else if (name.equals("item")) {
+                                        if (!b.h) {
+                                            final xk z = b.z;
+                                            if (z != null && z.a()) {
+                                                b.a();
+                                            }
+                                            else {
+                                                b.h = true;
+                                                b.c(b.a.add(b.b, b.i, b.j, b.k));
+                                            }
+                                        }
+                                    }
+                                    else if (name.equals("menu")) {
+                                        j = 1;
+                                        n2 = n;
+                                        break Label_1012;
+                                    }
+                                }
                             }
-                            if (n7 != 0) {
-                                a = (oqp)v5m.a;
+                            else if (n == 0) {
+                                final String name2 = xmlPullParser.getName();
+                                if (name2.equals("group")) {
+                                    final TypedArray obtainStyledAttributes = b.E.c.obtainStyledAttributes(set, jee.X0);
+                                    b.b = obtainStyledAttributes.getResourceId(1, 0);
+                                    b.c = obtainStyledAttributes.getInt(3, 0);
+                                    b.d = obtainStyledAttributes.getInt(4, 0);
+                                    b.e = obtainStyledAttributes.getInt(5, 0);
+                                    b.f = obtainStyledAttributes.getBoolean(2, true);
+                                    b.g = obtainStyledAttributes.getBoolean(0, true);
+                                    obtainStyledAttributes.recycle();
+                                }
+                                else if (name2.equals("item")) {
+                                    final kat p3 = kat.p(b.E.c, set, jee.Y0);
+                                    b.i = p3.l(2, 0);
+                                    b.j = ((p3.j(5, b.c) & 0xFFFF0000) | (p3.j(6, b.d) & 0xFFFF));
+                                    b.k = p3.n(7);
+                                    b.l = p3.n(8);
+                                    b.m = p3.l(0, 0);
+                                    final String m = p3.m(9);
+                                    char char1;
+                                    if (m == null) {
+                                        char1 = '\0';
+                                    }
+                                    else {
+                                        char1 = m.charAt(0);
+                                    }
+                                    b.n = char1;
+                                    b.o = p3.j(16, 4096);
+                                    final String k = p3.m(10);
+                                    char char2;
+                                    if (k == null) {
+                                        char2 = '\0';
+                                    }
+                                    else {
+                                        char2 = k.charAt(0);
+                                    }
+                                    b.p = char2;
+                                    b.q = p3.j(20, 4096);
+                                    if (p3.o(11)) {
+                                        b.r = (p3.a(11, false) ? 1 : 0);
+                                    }
+                                    else {
+                                        b.r = b.e;
+                                    }
+                                    b.s = p3.a(3, false);
+                                    b.t = p3.a(4, b.f);
+                                    b.u = p3.a(1, b.g);
+                                    b.v = p3.j(21, -1);
+                                    b.y = p3.m(12);
+                                    b.w = p3.l(13, 0);
+                                    b.x = p3.m(15);
+                                    final String l = p3.m(14);
+                                    final boolean b2 = l != null;
+                                    if (b2 && b.w == 0 && b.x == null) {
+                                        b.z = (xk)b.b(l, jzr.f, b.E.b);
+                                    }
+                                    else {
+                                        if (b2) {
+                                            Log.w("SupportMenuInflater", "Ignoring attribute 'actionProviderClass'. Action view already specified.");
+                                        }
+                                        b.z = null;
+                                    }
+                                    b.A = p3.n(17);
+                                    b.B = p3.n(22);
+                                    if (p3.o(19)) {
+                                        b.D = gd9.d(p3.j(19, -1), b.D);
+                                    }
+                                    else {
+                                        b.D = null;
+                                    }
+                                    if (p3.o(18)) {
+                                        b.C = p3.c(18);
+                                    }
+                                    else {
+                                        b.C = null;
+                                    }
+                                    p3.r();
+                                    b.h = false;
+                                }
+                                else {
+                                    if (name2.equals("menu")) {
+                                        this.b(xmlPullParser, set, (Menu)b.a());
+                                        n2 = n;
+                                        break Label_1012;
+                                    }
+                                    n2 = 1;
+                                    o = name2;
+                                    break Label_1012;
+                                }
                             }
-                            int n26 = n20;
-                            if ((n3 & 0x4) != 0x0) {
-                                final ea6$b a4 = ea6.a;
-                                l = ((ks4)h.m((re6)ls4.a)).l();
-                                n26 = (n20 & 0xFFFFFC7F);
-                            }
-                            n25 = n26;
-                            if ((n3 & 0x8) != 0x0) {
-                                b = ls4.b(l, h);
-                                n25 = (n26 & 0xFFFFE3FF);
-                            }
-                            if (n13 != 0) {
-                                a2 = null;
-                            }
-                            jkh = companion;
-                            n24 = n25;
-                            oqp = a;
-                            n23 = l;
-                            n22 = b;
-                            a3 = a2;
-                            if (n16 == 0) {
-                                break Label_0574;
-                            }
-                            n = 0;
+                            n2 = n;
                         }
-                        h.s();
-                        final ea6$b a5 = ea6.a;
-                        final xo9 b2 = ry9.b;
-                        final float n27 = ((e99)h.m((re6)b2)).C0 + n;
-                        se6.a(new oll[] { ((mll)ll6.a).b((Object)new pr4(b)), ((mll)b2).b((Object)new e99(n27)) }, (gub)m8y.j(h, -1822160838, new jzr$a(companion, a, l, n27, n25, a2, n, (gub)gub)), h, 56);
-                        jkh2 = companion;
-                        oqp2 = a;
-                        break Label_0856;
+                        next = xmlPullParser.next();
+                        n = n2;
                     }
-                    companion = jkh;
-                    int n25 = n24;
-                    a = oqp;
-                    l = n23;
-                    b = n22;
-                    a2 = a3;
-                    continue;
+                    return;
                 }
             }
-            h.H();
-            jkh2 = companion;
-            oqp2 = a;
+            name3 = xmlPullParser.getName();
+            if (name3.equals("menu")) {
+                i = xmlPullParser.next();
+                continue;
+            }
+            break;
         }
-        final vwo k = h.k();
-        if (k != null) {
-            k.a((gub)new jzr$b(jkh2, oqp2, l, b, a2, n, (gub)gub, n2, n3));
+        throw new RuntimeException(hmg.h("Expecting menu, got ", name3));
+    }
+    
+    public final void inflate(final int n, final Menu menu) {
+        if (!(menu instanceof izr)) {
+            super.inflate(n, menu);
+            return;
+        }
+        XmlResourceParser layout = null;
+        try {
+            try {
+                final XmlResourceParser xmlResourceParser = layout = this.c.getResources().getLayout(n);
+                this.b((XmlPullParser)xmlResourceParser, Xml.asAttributeSet((XmlPullParser)xmlResourceParser), menu);
+                xmlResourceParser.close();
+            }
+            finally {
+                if (layout != null) {
+                    layout.close();
+                }
+            }
+        }
+        catch (final IOException ex) {}
+        catch (final XmlPullParserException ex2) {}
+    }
+    
+    public static final class a implements MenuItem$OnMenuItemClickListener
+    {
+        public static final Class<?>[] c;
+        public Object a;
+        public Method b;
+        
+        static {
+            c = new Class[] { MenuItem.class };
+        }
+        
+        public a(final Object a, final String s) {
+            this.a = a;
+            final Class<?> class1 = a.getClass();
+            try {
+                this.b = class1.getMethod(s, a.c);
+            }
+            catch (final Exception ex) {
+                final StringBuilder y = pd.y("Couldn't resolve menu item onClick handler ", s, " in class ");
+                y.append(class1.getName());
+                final InflateException ex2 = new InflateException(y.toString());
+                ((Throwable)ex2).initCause(ex);
+                throw ex2;
+            }
+        }
+        
+        public final boolean onMenuItemClick(final MenuItem menuItem) {
+            try {
+                if (this.b.getReturnType() == Boolean.TYPE) {
+                    return (boolean)this.b.invoke(this.a, menuItem);
+                }
+                this.b.invoke(this.a, menuItem);
+                return true;
+            }
+            catch (final Exception ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
     
-    public static final void b(final otb<oyv> otb, jkh companion, boolean b, oqp a, long l, long b2, a82 a2, float n, oth oth, final gub<? super m76, ? super Integer, oyv> gub, m76 m76, final int n2, final int n3) {
-        zzd.f((Object)otb, "onClick");
-        zzd.f((Object)gub, "content");
-        final m76 h = m76.h(1560876237);
-        int n4;
-        if ((n3 & 0x1) != 0x0) {
-            n4 = (n2 | 0x6);
+    public final class b
+    {
+        public CharSequence A;
+        public CharSequence B;
+        public ColorStateList C;
+        public PorterDuff$Mode D;
+        public final jzr E;
+        public Menu a;
+        public int b;
+        public int c;
+        public int d;
+        public int e;
+        public boolean f;
+        public boolean g;
+        public boolean h;
+        public int i;
+        public int j;
+        public CharSequence k;
+        public CharSequence l;
+        public int m;
+        public char n;
+        public int o;
+        public char p;
+        public int q;
+        public int r;
+        public boolean s;
+        public boolean t;
+        public boolean u;
+        public int v;
+        public int w;
+        public String x;
+        public String y;
+        public xk z;
+        
+        public b(final jzr e, final Menu a) {
+            this.E = e;
+            this.C = null;
+            this.D = null;
+            this.a = a;
+            this.b = 0;
+            this.c = 0;
+            this.d = 0;
+            this.e = 0;
+            this.f = true;
+            this.g = true;
         }
-        else if ((n2 & 0xE) == 0x0) {
-            int n5;
-            if (h.P((Object)otb)) {
-                n5 = 4;
-            }
-            else {
-                n5 = 2;
-            }
-            n4 = (n5 | n2);
+        
+        public final SubMenu a() {
+            this.h = true;
+            final SubMenu addSubMenu = this.a.addSubMenu(this.b, this.i, this.j, this.k);
+            this.c(addSubMenu.getItem());
+            return addSubMenu;
         }
-        else {
-            n4 = n2;
-        }
-        final int n6 = n3 & 0x2;
-        int n9 = 0;
-        Label_0152: {
-            int n7;
-            if (n6 != 0) {
-                n7 = (n4 | 0x30);
+        
+        public final <T> T b(final String s, final Class<?>[] array, final Object[] array2) {
+            try {
+                final Constructor<?> constructor = Class.forName(s, false, this.E.c.getClassLoader()).getConstructor(array);
+                constructor.setAccessible(true);
+                return (T)constructor.newInstance(array2);
             }
-            else {
-                n7 = n4;
-                if ((n2 & 0x70) == 0x0) {
-                    int n8;
-                    if (h.P((Object)companion)) {
-                        n8 = 32;
+            catch (final Exception ex) {
+                final StringBuilder sb = new StringBuilder();
+                sb.append("Cannot instantiate class: ");
+                sb.append(s);
+                Log.w("SupportMenuInflater", sb.toString(), (Throwable)ex);
+                return null;
+            }
+        }
+        
+        public final void c(final MenuItem menuItem) {
+            final MenuItem setEnabled = menuItem.setChecked(this.s).setVisible(this.t).setEnabled(this.u);
+            final int r = this.r;
+            boolean b = false;
+            setEnabled.setCheckable(r >= 1).setTitleCondensed(this.l).setIcon(this.m);
+            final int v = this.v;
+            if (v >= 0) {
+                menuItem.setShowAsAction(v);
+            }
+            if (this.y != null) {
+                if (this.E.c.isRestricted()) {
+                    throw new IllegalStateException("The android:onClick attribute cannot be used within a restricted context");
+                }
+                final jzr e = this.E;
+                if (e.d == null) {
+                    final Context c = e.c;
+                    Object a;
+                    if (c instanceof Activity) {
+                        a = c;
                     }
                     else {
-                        n8 = 16;
+                        a = c;
+                        if (c instanceof ContextWrapper) {
+                            a = e.a(((ContextWrapper)c).getBaseContext());
+                        }
                     }
-                    n9 = (n4 | n8);
-                    break Label_0152;
+                    e.d = a;
                 }
+                menuItem.setOnMenuItemClickListener((MenuItem$OnMenuItemClickListener)new a(e.d, this.y));
             }
-            n9 = n7;
-        }
-        final int n10 = n3 & 0x4;
-        int n13 = 0;
-        Label_0225: {
-            int n11;
-            if (n10 != 0) {
-                n11 = (n9 | 0x180);
-            }
-            else {
-                n11 = n9;
-                if ((n2 & 0x380) == 0x0) {
-                    int n12;
-                    if (h.a(b)) {
-                        n12 = 256;
+            if (this.r >= 2) {
+                if (menuItem instanceof g) {
+                    final g g = (g)menuItem;
+                    g.x = ((g.x & 0xFFFFFFFB) | 0x4);
+                }
+                else if (menuItem instanceof b5h) {
+                    final b5h b5h = (b5h)menuItem;
+                    try {
+                        if (b5h.e == null) {
+                            b5h.e = b5h.d.getClass().getDeclaredMethod("setExclusiveCheckable", Boolean.TYPE);
+                        }
+                        b5h.e.invoke(b5h.d, Boolean.TRUE);
                     }
-                    else {
-                        n12 = 128;
+                    catch (final Exception ex) {
+                        Log.w("MenuItemWrapper", "Error while calling setExclusiveCheckable", (Throwable)ex);
                     }
-                    n13 = (n9 | n12);
-                    break Label_0225;
                 }
             }
-            n13 = n11;
-        }
-        final int n14 = n3 & 0x8;
-        int n15;
-        if (n14 != 0) {
-            n15 = (n13 | 0xC00);
-        }
-        else {
-            n15 = n13;
-            if ((n2 & 0x1C00) == 0x0) {
-                int n16;
-                if (h.P((Object)a)) {
-                    n16 = 2048;
+            final String x = this.x;
+            if (x != null) {
+                menuItem.setActionView((View)this.b(x, jzr.e, this.E.a));
+                b = true;
+            }
+            final int w = this.w;
+            if (w > 0) {
+                if (!b) {
+                    menuItem.setActionView(w);
                 }
                 else {
-                    n16 = 1024;
+                    Log.w("SupportMenuInflater", "Ignoring attribute 'itemActionViewLayout'. Action view already specified.");
                 }
-                n15 = (n13 | n16);
             }
-        }
-        if ((0xE000 & n2) == 0x0) {
-            int n17;
-            if ((n3 & 0x10) == 0x0 && h.e(l)) {
-                n17 = 16384;
-            }
-            else {
-                n17 = 8192;
-            }
-            n15 |= n17;
-        }
-        if ((0x70000 & n2) == 0x0) {
-            int n18;
-            if ((n3 & 0x20) == 0x0 && h.e(b2)) {
-                n18 = 131072;
-            }
-            else {
-                n18 = 65536;
-            }
-            n15 |= n18;
-        }
-        final int n19 = n3 & 0x40;
-        int n20;
-        if (n19 != 0) {
-            n20 = (n15 | 0x180000);
-        }
-        else {
-            n20 = n15;
-            if ((n2 & 0x380000) == 0x0) {
-                int n21;
-                if (h.P((Object)a2)) {
-                    n21 = 1048576;
+            final xk z = this.z;
+            if (z != null) {
+                if (menuItem instanceof kzr) {
+                    ((kzr)menuItem).a(z);
                 }
                 else {
-                    n21 = 524288;
-                }
-                n20 = (n15 | n21);
-            }
-        }
-        final int n22 = n3 & 0x80;
-        int n23;
-        if (n22 != 0) {
-            n23 = (n20 | 0xC00000);
-        }
-        else {
-            n23 = n20;
-            if ((n2 & 0x1C00000) == 0x0) {
-                int n24;
-                if (h.b(n)) {
-                    n24 = 8388608;
-                }
-                else {
-                    n24 = 4194304;
-                }
-                n23 = (n20 | n24);
-            }
-        }
-        final int n25 = n3 & 0x100;
-        int n26;
-        if (n25 != 0) {
-            n26 = (n23 | 0x6000000);
-        }
-        else {
-            n26 = n23;
-            if ((n2 & 0xE000000) == 0x0) {
-                int n27;
-                if (h.P((Object)oth)) {
-                    n27 = 67108864;
-                }
-                else {
-                    n27 = 33554432;
-                }
-                n26 = (n23 | n27);
-            }
-        }
-        int n29 = 0;
-        Label_0647: {
-            int n28;
-            if ((n3 & 0x200) != 0x0) {
-                n28 = 805306368;
-            }
-            else {
-                n29 = n26;
-                if ((0x70000000 & n2) != 0x0) {
-                    break Label_0647;
-                }
-                if (h.P((Object)gub)) {
-                    n28 = 536870912;
-                }
-                else {
-                    n28 = 268435456;
+                    Log.w("MenuItemCompat", "setActionProvider: item does not implement SupportMenuItem; ignoring");
                 }
             }
-            n29 = (n26 | n28);
-        }
-        a82 a3;
-        oth oth2;
-        jkh jkh2;
-        oqp oqp2;
-        if ((0x5B6DB6DB & n29) == 0x12492492 && h.i()) {
-            h.H();
-            final jkh jkh = companion;
-            final oqp oqp = a;
-            a3 = a2;
-            oth2 = oth;
-            jkh2 = jkh;
-            oqp2 = oqp;
-        }
-        else {
-            h.C();
-            oth oth3;
-            int n32;
-            a82 a5;
-            if ((n2 & 0x1) != 0x0 && !h.K()) {
-                h.H();
-                int n30 = n29;
-                if ((n3 & 0x10) != 0x0) {
-                    n30 = (n29 & 0xFFFF1FFF);
-                }
-                int n31 = n30;
-                if ((n3 & 0x20) != 0x0) {
-                    n31 = (n30 & 0xFFF8FFFF);
-                }
-                final jkh jkh3 = companion;
-                final a82 a4 = a2;
-                oth3 = oth;
-                n32 = n31;
-                jkh2 = jkh3;
-                oqp2 = a;
-                a5 = a4;
+            y4h.a(menuItem, this.A);
+            final CharSequence b2 = this.B;
+            final boolean b3 = menuItem instanceof kzr;
+            if (b3) {
+                ((kzr)menuItem).setTooltipText(b2);
             }
-            else {
-                if (n6 != 0) {
-                    companion = jkh.Companion;
-                }
-                if (n10 != 0) {
-                    b = true;
-                }
-                if (n14 != 0) {
-                    a = (oqp)v5m.a;
-                }
-                if ((n3 & 0x10) != 0x0) {
-                    final ea6$b a6 = ea6.a;
-                    l = ((ks4)h.m((re6)ls4.a)).l();
-                    n29 &= 0xFFFF1FFF;
-                }
-                n32 = n29;
-                if ((n3 & 0x20) != 0x0) {
-                    b2 = ls4.b(l, h);
-                    n32 = (n29 & 0xFFF8FFFF);
-                }
-                if (n19 != 0) {
-                    a2 = null;
-                }
-                if (n22 != 0) {
-                    n = 0;
-                }
-                if (n25 != 0) {
-                    h.x(-492369756);
-                    final Object y = h.y();
-                    Objects.requireNonNull(m76.Companion);
-                    Object c;
-                    if ((c = y) == m76$a.b) {
-                        c = bl0.c(h);
-                    }
-                    h.O();
-                    oth = (oth)c;
-                }
-                final oth oth4 = oth;
-                final oqp oqp3 = a;
-                a5 = a2;
-                final jkh jkh4 = companion;
-                oth3 = oth4;
-                oqp2 = oqp3;
-                jkh2 = jkh4;
+            else if (Build$VERSION.SDK_INT >= 26) {
+                y4h.a.m(menuItem, b2);
             }
-            h.s();
-            final ea6$b a7 = ea6.a;
-            final xo9 b3 = ry9.b;
-            final float n33 = ((e99)h.m((re6)b3)).C0 + n;
-            final oll b4 = ((mll)ll6.a).b((Object)new pr4(b2));
-            final oll b5 = ((mll)b3).b((Object)new e99(n33));
-            m76 = h;
-            se6.a(new oll[] { b4, b5 }, (gub)m8y.j(m76, 2031491085, new jzr$c(jkh2, oqp2, l, n33, n32, a5, n, oth3, b, (otb)otb, (gub)gub)), m76, 56);
-            final a82 a8 = a5;
-            oth2 = oth3;
-            a3 = a8;
-        }
-        final vwo k = h.k();
-        if (k != null) {
-            k.a((gub)new jzr$d((otb)otb, jkh2, b, oqp2, l, b2, a3, n, oth2, (gub)gub, n2, n3));
-        }
-    }
-    
-    public static final jkh c(jkh jkh, final oqp oqp, final long n, final a82 a82, final float n2) {
-        final jkh b0 = oyz.b0(jkh, n2, oqp, 0L, 0L, 24);
-        if (a82 != null) {
-            jkh = t72.a(jkh.Companion, a82, oqp);
-        }
-        else {
-            jkh = jkh.Companion;
-        }
-        return rp2.A(h6q.i(b0.E(jkh), n, oqp), oqp);
-    }
-    
-    public static final long d(final long n, final qy9 qy9, final float n2, final m76 m76, final int n3) {
-        m76.x(1561611256);
-        final ea6$b a = ea6.a;
-        long a2 = n;
-        if (pr4.c(n, ((ks4)m76.m((re6)ls4.a)).l())) {
-            a2 = n;
-            if (qy9 != null) {
-                a2 = qy9.a(n, n2, m76, (n3 & 0xE) | (n3 >> 3 & 0x70) | (n3 << 3 & 0x380));
+            final char n = this.n;
+            final int o = this.o;
+            if (b3) {
+                ((kzr)menuItem).setAlphabeticShortcut(n, o);
+            }
+            else if (Build$VERSION.SDK_INT >= 26) {
+                y4h.a.g(menuItem, n, o);
+            }
+            final char p = this.p;
+            final int q = this.q;
+            if (b3) {
+                ((kzr)menuItem).setNumericShortcut(p, q);
+            }
+            else if (Build$VERSION.SDK_INT >= 26) {
+                y4h.a.k(menuItem, p, q);
+            }
+            final PorterDuff$Mode d = this.D;
+            if (d != null) {
+                if (b3) {
+                    ((kzr)menuItem).setIconTintMode(d);
+                }
+                else if (Build$VERSION.SDK_INT >= 26) {
+                    y4h.a.j(menuItem, d);
+                }
+            }
+            final ColorStateList c2 = this.C;
+            if (c2 != null) {
+                if (b3) {
+                    ((kzr)menuItem).setIconTintList(c2);
+                }
+                else if (Build$VERSION.SDK_INT >= 26) {
+                    y4h.a.i(menuItem, c2);
+                }
             }
         }
-        m76.O();
-        return a2;
     }
 }

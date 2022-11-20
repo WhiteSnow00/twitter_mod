@@ -1,38 +1,19 @@
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class qo4
+public final class qo4 extends ste implements qsb<xo4, xo4>
 {
-    public static final b Companion;
-    public final List<oo4> a;
+    public final String D0;
     
-    static {
-        Companion = new b();
+    public qo4(final String d0) {
+        this.D0 = d0;
+        super(1);
     }
     
-    public qo4(final List<oo4> a) {
-        this.a = a;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || (o instanceof qo4 && zzd.a((Object)this.a, (Object)((qo4)o).a));
-    }
-    
-    @Override
-    public final int hashCode() {
-        return this.a.hashCode();
-    }
-    
-    @Override
-    public final String toString() {
-        return du1.x("Collaborators(result=", (List)this.a, ")");
-    }
-    
-    public static final class b
-    {
+    public final Object invoke(final Object o) {
+        final xo4 xo4 = (xo4)o;
+        czd.f((Object)xo4, "$this$setState");
+        return xo4.l(xo4, this.D0, (l7p)null, 2);
     }
 }

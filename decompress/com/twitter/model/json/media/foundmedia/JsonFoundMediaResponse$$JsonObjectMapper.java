@@ -10,53 +10,61 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFoundMediaResponse$$JsonObjectMapper extends JsonMapper<JsonFoundMediaResponse>
 {
-    public static JsonFoundMediaResponse _parse(final khe khe) throws IOException {
+    public static JsonFoundMediaResponse _parse(final tge tge) throws IOException {
         final JsonFoundMediaResponse jsonFoundMediaResponse = new JsonFoundMediaResponse();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFoundMediaResponse, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFoundMediaResponse, d, tge);
+            tge.l0();
         }
         return jsonFoundMediaResponse;
     }
     
-    public static void _serialize(final JsonFoundMediaResponse jsonFoundMediaResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFoundMediaResponse jsonFoundMediaResponse, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonFoundMediaResponse.b != null) {
-            LoganSquare.typeConverterFor((Class)jnb.class).serialize((Object)jsonFoundMediaResponse.b, "cursor", true, tfe);
+            LoganSquare.typeConverterFor((Class)gmb.class).serialize((Object)jsonFoundMediaResponse.b, "cursor", true, afe);
         }
         if (jsonFoundMediaResponse.a != null) {
-            LoganSquare.typeConverterFor((Class)knb.class).serialize((Object)jsonFoundMediaResponse.a, "data", true, tfe);
+            LoganSquare.typeConverterFor((Class)hmb.class).serialize((Object)jsonFoundMediaResponse.a, "data", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFoundMediaResponse jsonFoundMediaResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFoundMediaResponse jsonFoundMediaResponse, final String s, final tge tge) throws IOException {
         if ("cursor".equals(s)) {
-            jsonFoundMediaResponse.b = (jnb)LoganSquare.typeConverterFor((Class)jnb.class).parse(khe);
+            jsonFoundMediaResponse.b = (gmb)LoganSquare.typeConverterFor((Class)gmb.class).parse(tge);
         }
         else if ("data".equals(s)) {
-            jsonFoundMediaResponse.a = (knb)LoganSquare.typeConverterFor((Class)knb.class).parse(khe);
+            jsonFoundMediaResponse.a = (hmb)LoganSquare.typeConverterFor((Class)hmb.class).parse(tge);
         }
     }
     
-    public JsonFoundMediaResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFoundMediaResponse parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFoundMediaResponse jsonFoundMediaResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFoundMediaResponse, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFoundMediaResponse jsonFoundMediaResponse, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFoundMediaResponse, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFoundMediaResponse)o, afe, b);
     }
 }

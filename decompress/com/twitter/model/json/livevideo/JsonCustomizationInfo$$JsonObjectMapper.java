@@ -10,51 +10,59 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonCustomizationInfo$$JsonObjectMapper extends JsonMapper<JsonCustomizationInfo>
 {
-    public static JsonCustomizationInfo _parse(final khe khe) throws IOException {
+    public static JsonCustomizationInfo _parse(final tge tge) throws IOException {
         final JsonCustomizationInfo jsonCustomizationInfo = new JsonCustomizationInfo();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonCustomizationInfo, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonCustomizationInfo, d, tge);
+            tge.l0();
         }
         return jsonCustomizationInfo;
     }
     
-    public static void _serialize(final JsonCustomizationInfo jsonCustomizationInfo, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonCustomizationInfo jsonCustomizationInfo, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonCustomizationInfo.a != null) {
-            LoganSquare.typeConverterFor((Class)v7d.class).serialize((Object)jsonCustomizationInfo.a, "badge_media", true, tfe);
+            LoganSquare.typeConverterFor((Class)z6d.class).serialize((Object)jsonCustomizationInfo.a, "badge_media", true, afe);
         }
-        tfe.u0("title_color", jsonCustomizationInfo.b);
+        afe.t0("title_color", jsonCustomizationInfo.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonCustomizationInfo jsonCustomizationInfo, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonCustomizationInfo jsonCustomizationInfo, final String s, final tge tge) throws IOException {
         if ("badge_media".equals(s)) {
-            jsonCustomizationInfo.a = (v7d)LoganSquare.typeConverterFor((Class)v7d.class).parse(khe);
+            jsonCustomizationInfo.a = (z6d)LoganSquare.typeConverterFor((Class)z6d.class).parse(tge);
         }
         else if ("title_color".equals(s)) {
-            jsonCustomizationInfo.b = khe.T((String)null);
+            jsonCustomizationInfo.b = tge.T((String)null);
         }
     }
     
-    public JsonCustomizationInfo parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonCustomizationInfo parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonCustomizationInfo jsonCustomizationInfo, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonCustomizationInfo, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonCustomizationInfo jsonCustomizationInfo, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonCustomizationInfo, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonCustomizationInfo)o, afe, b);
     }
 }

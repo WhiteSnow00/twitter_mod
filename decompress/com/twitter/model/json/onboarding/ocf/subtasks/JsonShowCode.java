@@ -11,47 +11,46 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonShowCode extends lhh<j3q>
+public class JsonShowCode extends qhh<a4q>
 {
     @JsonField
-    public iej a;
-    @JsonField(typeConverter = h3q.class)
-    public g3q b;
+    public oej a;
+    @JsonField(typeConverter = y3q.class)
+    public x3q b;
     @JsonField
     public String c;
     @JsonField
     public JsonOcfRichText d;
     @JsonField
-    public xrv e;
+    public ssv e;
     @JsonField
-    public xrv f;
+    public ssv f;
     @JsonField
     public JsonOcfComponentCollection g;
     
-    @Override
-    public final h4j t() {
-        final j3q$a j3q$a = new j3q$a();
-        ((lsr$a)j3q$a).h = this.a;
-        final int a = w4j.a;
-        final g3q b = this.b;
-        pf8.r(b);
-        zzd.f((Object)b, "style");
-        j3q$a.k = b;
+    public final n4j t() {
+        final a4q$a a4q$a = new a4q$a();
+        ((dtr$a)a4q$a).h = this.a;
+        final int a = c5j.a;
+        final x3q b = this.b;
+        jee.l((Object)b);
+        czd.f((Object)b, "style");
+        a4q$a.k = b;
         final String c = this.c;
-        pf8.q(c);
-        j3q$a.l = c;
-        j3q$a.m = JsonOcfRichText.s(this.d);
-        ((lsr$a)j3q$a).a = this.e;
-        ((lsr$a)j3q$a).b = this.f;
+        jee.k(c);
+        a4q$a.l = c;
+        a4q$a.m = JsonOcfRichText.s(this.d);
+        ((dtr$a)a4q$a).a = this.e;
+        ((dtr$a)a4q$a).b = this.f;
         final JsonOcfComponentCollection g = this.g;
-        n16 t;
+        x06 t;
         if (g != null) {
             t = g.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)j3q$a).j = t;
-        return (h4j)j3q$a;
+        ((dtr$a)a4q$a).j = t;
+        return (n4j)a4q$a;
     }
 }

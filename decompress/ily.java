@@ -1,34 +1,36 @@
-import java.lang.annotation.Annotation;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
-import java.util.HashMap;
+import android.os.RemoteException;
+import android.os.Parcel;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Binder;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ily implements j4j<yfy>
+public class ily extends Binder implements IInterface
 {
-    public static final ily a;
+    public ily(final String s) {
+        this.attachInterface((IInterface)this, s);
+    }
     
-    static {
-        final ozz c0 = ozz.C0;
-        a = new ily();
-        final rxz rxz = new rxz(1, c0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(((Annotation)rxz).annotationType(), rxz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final rxz rxz2 = new rxz(2, c0);
-        final HashMap hashMap2 = new HashMap();
-        hashMap2.put(((Annotation)rxz2).annotationType(), rxz2);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final rxz rxz3 = new rxz(3, c0);
-        final HashMap hashMap3 = new HashMap();
-        hashMap3.put(((Annotation)rxz3).annotationType(), rxz3);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
-        final rxz rxz4 = new rxz(4, c0);
-        final HashMap hashMap4 = new HashMap();
-        sbl.m(rxz4, hashMap4, rxz4, hashMap4);
+    public IBinder asBinder() {
+        return (IBinder)this;
+    }
+    
+    public boolean onTransact(final int n, final Parcel parcel, final Parcel parcel2, final int n2) throws RemoteException {
+        if (n > 16777215) {
+            if (super.onTransact(n, parcel, parcel2, n2)) {
+                return true;
+            }
+        }
+        else {
+            parcel.enforceInterface(this.getInterfaceDescriptor());
+        }
+        return this.s(n, parcel, parcel2);
+    }
+    
+    public boolean s(final int n, final Parcel parcel, final Parcel parcel2) throws RemoteException {
+        throw null;
     }
 }

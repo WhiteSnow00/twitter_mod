@@ -2,32 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class odn implements qcw
+public final class odn extends kkl
 {
-    public final ypp a;
+    public static final odn D0;
     
-    public odn(final ypp a) {
-        zzd.f((Object)a, "settingsType");
-        this.a = a;
+    static {
+        D0 = new odn();
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || (o instanceof odn && zzd.a((Object)this.a, (Object)((odn)o).a));
+    public odn() {
+        super((Class)vdn.class, "searchList", "getSearchList()Ljava/util/List;", 0);
     }
     
-    @Override
-    public final int hashCode() {
-        return this.a.hashCode();
-    }
-    
-    @Override
-    public final String toString() {
-        final ypp a = this.a;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("SettingsButtonClicked(settingsType=");
-        sb.append(a);
-        sb.append(")");
-        return sb.toString();
+    public final Object get(final Object o) {
+        return ((vdn)o).c;
     }
 }

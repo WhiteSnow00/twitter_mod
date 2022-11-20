@@ -1,48 +1,56 @@
+import com.twitter.app.common.inject.retained.RetainedObjectGraph;
+import com.twitter.app.common.inject.view.ViewObjectGraph;
+import android.os.Bundle;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class bnd
+public abstract class bnd extends ro1 implements x1e
 {
-    public final long a;
-    public final String b;
+    public final inb<bnd> X1;
     
-    public bnd(final long a, final String b) {
-        this.a = a;
-        this.b = b;
+    public bnd() {
+        this.X1 = new inb<bnd>((cpo)new and(this));
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof bnd)) {
-            return false;
-        }
-        final bnd bnd = (bnd)o;
-        return this.a == bnd.a && zzd.a((Object)this.b, (Object)bnd.b);
+    public final dnd b1() {
+        return (dnd)this.X1;
     }
     
-    @Override
-    public final int hashCode() {
-        final long a = this.a;
-        final int n = (int)(a ^ a >>> 32);
-        final String b = this.b;
-        int hashCode;
-        if (b == null) {
-            hashCode = 0;
-        }
-        else {
-            hashCode = b.hashCode();
-        }
-        return n * 31 + hashCode;
+    public void e2() {
     }
     
-    @Override
-    public final String toString() {
-        final StringBuilder h = w48.h("InitialUserArguments(userId=", this.a, ", username=", this.b);
-        h.append(")");
-        return h.toString();
+    public final r8x i() {
+        return this.v0().i();
+    }
+    
+    public void k1(final Bundle bundle) {
+        super.k1(bundle);
+        this.X1.e(this, (jtm)this, bundle);
+    }
+    
+    public final boolean l() {
+        return ((x9)this.b1()).l();
+    }
+    
+    public final ViewObjectGraph n() {
+        return ((x9)this.b1()).n();
+    }
+    
+    public final RetainedObjectGraph o() {
+        return ((x9)this.b1()).o();
+    }
+    
+    public final z4j t0(final Class clazz) {
+        return ((co1)this.o()).B(clazz);
+    }
+    
+    public final qk8 v0() {
+        return (qk8)this.z0(qk8.class);
+    }
+    
+    public final z4j z0(final Class clazz) {
+        return ((co1)this.n()).B(clazz);
     }
 }

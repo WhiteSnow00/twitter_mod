@@ -12,162 +12,170 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSignUpReview$$JsonObjectMapper extends JsonMapper<JsonSignUpReview>
 {
-    public static JsonSignUpReview _parse(final khe khe) throws IOException {
+    public static JsonSignUpReview _parse(final tge tge) throws IOException {
         final JsonSignUpReview jsonSignUpReview = new JsonSignUpReview();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSignUpReview, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSignUpReview, d, tge);
+            tge.l0();
         }
         return jsonSignUpReview;
     }
     
-    public static void _serialize(final JsonSignUpReview jsonSignUpReview, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSignUpReview jsonSignUpReview, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonSignUpReview.f != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonSignUpReview.f, "birthday", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonSignUpReview.f, "birthday", true, afe);
         }
         if (jsonSignUpReview.o != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSignUpReview.o, "birthday_edit_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSignUpReview.o, "birthday_edit_link", true, afe);
         }
-        tfe.u0("birthday_hint", jsonSignUpReview.u);
+        afe.t0("birthday_hint", jsonSignUpReview.u);
         if (jsonSignUpReview.g != null) {
-            LoganSquare.typeConverterFor((Class)ea8.class).serialize((Object)jsonSignUpReview.g, "birthday_requirement", true, tfe);
+            LoganSquare.typeConverterFor((Class)o98.class).serialize((Object)jsonSignUpReview.g, "birthday_requirement", true, afe);
         }
         if (jsonSignUpReview.v != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonSignUpReview.v, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonSignUpReview.v, afe, true);
         }
         if (jsonSignUpReview.i != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSignUpReview.i, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSignUpReview.i, afe, true);
         }
         if (jsonSignUpReview.e != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonSignUpReview.e, "email", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonSignUpReview.e, "email", true, afe);
         }
         if (jsonSignUpReview.n != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSignUpReview.n, "email_edit_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSignUpReview.n, "email_edit_link", true, afe);
         }
-        tfe.u0("email_hint", jsonSignUpReview.t);
+        afe.t0("email_hint", jsonSignUpReview.t);
         if (jsonSignUpReview.k != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSignUpReview.k, "email_next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSignUpReview.k, "email_next_link", true, afe);
         }
-        tfe.e("ignore_birthday", jsonSignUpReview.q);
+        afe.e("ignore_birthday", jsonSignUpReview.q);
         if (jsonSignUpReview.p != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSignUpReview.p, "invalid_birthday_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSignUpReview.p, "invalid_birthday_link", true, afe);
         }
         if (jsonSignUpReview.c != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonSignUpReview.c, "name", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonSignUpReview.c, "name", true, afe);
         }
         if (jsonSignUpReview.l != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSignUpReview.l, "name_edit_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSignUpReview.l, "name_edit_link", true, afe);
         }
-        tfe.u0("name_hint", jsonSignUpReview.r);
+        afe.t0("name_hint", jsonSignUpReview.r);
         if (jsonSignUpReview.m != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSignUpReview.m, "phone_edit_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSignUpReview.m, "phone_edit_link", true, afe);
         }
-        tfe.u0("phone_hint", jsonSignUpReview.s);
+        afe.t0("phone_hint", jsonSignUpReview.s);
         if (jsonSignUpReview.j != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonSignUpReview.j, "phone_next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonSignUpReview.j, "phone_next_link", true, afe);
         }
         if (jsonSignUpReview.d != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonSignUpReview.d, "phone_number", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonSignUpReview.d, "phone_number", true, afe);
         }
-        tfe.u0("primary_text", jsonSignUpReview.a);
-        tfe.u0("secondary_text", jsonSignUpReview.b);
+        afe.t0("primary_text", jsonSignUpReview.a);
+        afe.t0("secondary_text", jsonSignUpReview.b);
         if (jsonSignUpReview.h != null) {
-            tfe.i("sign_in_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSignUpReview.h, tfe, true);
+            afe.i("sign_in_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonSignUpReview.h, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSignUpReview jsonSignUpReview, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSignUpReview jsonSignUpReview, final String s, final tge tge) throws IOException {
         if ("birthday".equals(s)) {
-            jsonSignUpReview.f = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+            jsonSignUpReview.f = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
         }
         else if ("birthday_edit_link".equals(s)) {
-            jsonSignUpReview.o = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSignUpReview.o = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("birthday_hint".equals(s)) {
-            jsonSignUpReview.u = khe.T((String)null);
+            jsonSignUpReview.u = tge.T((String)null);
         }
         else if ("birthday_requirement".equals(s)) {
-            jsonSignUpReview.g = (ea8)LoganSquare.typeConverterFor((Class)ea8.class).parse(khe);
+            jsonSignUpReview.g = (o98)LoganSquare.typeConverterFor((Class)o98.class).parse(tge);
         }
         else if ("component_collection".equals(s)) {
-            jsonSignUpReview.v = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonSignUpReview.v = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            jsonSignUpReview.i = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonSignUpReview.i = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("email".equals(s)) {
-            jsonSignUpReview.e = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+            jsonSignUpReview.e = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
         }
         else if ("email_edit_link".equals(s)) {
-            jsonSignUpReview.n = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSignUpReview.n = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("email_hint".equals(s)) {
-            jsonSignUpReview.t = khe.T((String)null);
+            jsonSignUpReview.t = tge.T((String)null);
         }
         else if ("email_next_link".equals(s)) {
-            jsonSignUpReview.k = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSignUpReview.k = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("ignore_birthday".equals(s)) {
-            jsonSignUpReview.q = khe.k();
+            jsonSignUpReview.q = tge.k();
         }
         else if ("invalid_birthday_link".equals(s)) {
-            jsonSignUpReview.p = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSignUpReview.p = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("name".equals(s)) {
-            jsonSignUpReview.c = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+            jsonSignUpReview.c = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
         }
         else if ("name_edit_link".equals(s)) {
-            jsonSignUpReview.l = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSignUpReview.l = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("name_hint".equals(s)) {
-            jsonSignUpReview.r = khe.T((String)null);
+            jsonSignUpReview.r = tge.T((String)null);
         }
         else if ("phone_edit_link".equals(s)) {
-            jsonSignUpReview.m = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSignUpReview.m = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("phone_hint".equals(s)) {
-            jsonSignUpReview.s = khe.T((String)null);
+            jsonSignUpReview.s = tge.T((String)null);
         }
         else if ("phone_next_link".equals(s)) {
-            jsonSignUpReview.j = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonSignUpReview.j = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("phone_number".equals(s)) {
-            jsonSignUpReview.d = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+            jsonSignUpReview.d = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonSignUpReview.a = khe.T((String)null);
+            jsonSignUpReview.a = tge.T((String)null);
         }
         else if ("secondary_text".equals(s)) {
-            jsonSignUpReview.b = khe.T((String)null);
+            jsonSignUpReview.b = tge.T((String)null);
         }
         else if ("sign_in_text".equals(s)) {
-            jsonSignUpReview.h = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonSignUpReview.h = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonSignUpReview parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSignUpReview parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSignUpReview jsonSignUpReview, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSignUpReview, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSignUpReview jsonSignUpReview, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSignUpReview, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSignUpReview)o, afe, b);
     }
 }

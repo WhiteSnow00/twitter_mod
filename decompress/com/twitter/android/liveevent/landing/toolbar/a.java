@@ -6,26 +6,22 @@ package com.twitter.android.liveevent.landing.toolbar;
 
 public final class a
 {
-    public final cwf a;
-    public final o5t b;
-    public final bzf c;
-    public a d;
-    public final m29 e;
+    public final nvf a;
+    public final f6t b;
+    public final myf c;
+    public a.a$a d;
+    public final w19 e;
     
-    public a(final cwf a, final o5t b, final bzf c, final ibm ibm) {
-        zzd.f((Object)a, "metadataDispatcher");
-        zzd.f((Object)b, "tabCustomizationHelper");
-        zzd.f((Object)c, "coordinatorHelper");
-        zzd.f((Object)ibm, "releaseCompletable");
+    public a(final nvf a, final f6t b, final myf c, final xbm xbm) {
+        czd.f((Object)a, "metadataDispatcher");
+        czd.f((Object)b, "tabCustomizationHelper");
+        czd.f((Object)c, "coordinatorHelper");
+        czd.f((Object)xbm, "releaseCompletable");
         this.a = a;
         this.b = b;
         this.c = c;
-        this.e = new m29();
+        this.e = new w19();
         c.f();
-        ibm.i((rj)new igc((Object)this, 2));
-    }
-    
-    public interface a extends bzf.a
-    {
+        xbm.i((oj)new ifc(this, 2));
     }
 }

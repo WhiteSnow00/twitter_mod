@@ -1,115 +1,83 @@
-import android.preference.PreferenceActivity;
-import android.app.Activity;
-import android.view.ViewGroup$LayoutParams;
-import android.view.Menu;
-import android.os.Bundle;
-import android.view.View;
-import androidx.appcompat.app.g;
-import androidx.appcompat.widget.Toolbar;
-import android.preference.Preference;
-import android.preference.PreferenceGroup;
-import com.twitter.util.user.UserIdentifier;
+import android.os.Parcel;
+import android.os.Parcelable$ClassLoaderCreator;
+import android.os.Parcelable$Creator;
+import android.annotation.SuppressLint;
+import android.os.Parcelable;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class da extends wnd
+@SuppressLint({ "BanParcelableUsage" })
+public abstract class da implements Parcelable
 {
-    public p9s T0;
-    public UserIdentifier U0;
-    public rj0 V0;
-    public boolean W0;
+    public static final Parcelable$Creator<da> CREATOR;
+    public static final da EMPTY_STATE;
+    private final Parcelable mSuperState;
     
-    public da() {
-        this.U0 = UserIdentifier.LOGGED_OUT;
-    }
-    
-    public static boolean h(final String s, final PreferenceGroup preferenceGroup) {
-        final int preferenceCount = preferenceGroup.getPreferenceCount();
-        for (int i = 0; i < preferenceCount; ++i) {
-            final Preference preference = preferenceGroup.getPreference(i);
-            if (s.equals(preference.getKey())) {
-                preferenceGroup.removePreference(preference);
-                return true;
+    static {
+        EMPTY_STATE = (da)new da$a();
+        CREATOR = (Parcelable$Creator)new Parcelable$ClassLoaderCreator<da>() {
+            public final Object createFromParcel(final Parcel parcel) {
+                if (parcel.readParcelable((ClassLoader)null) == null) {
+                    return da.EMPTY_STATE;
+                }
+                throw new IllegalStateException("superState must be null");
             }
-        }
-        for (int j = 0; j < preferenceCount; ++j) {
-            final Preference preference2 = preferenceGroup.getPreference(j);
-            if (preference2 instanceof PreferenceGroup && h(s, (PreferenceGroup)preference2)) {
-                return true;
+            
+            public final Object createFromParcel(final Parcel parcel, final ClassLoader classLoader) {
+                if (parcel.readParcelable(classLoader) == null) {
+                    return da.EMPTY_STATE;
+                }
+                throw new IllegalStateException("superState must be null");
             }
+            
+            public final Object[] newArray(final int n) {
+                return new da[n];
+            }
+        };
+    }
+    
+    private da() {
+        this.mSuperState = null;
+    }
+    
+    public da(final Parcel parcel) {
+        this(parcel, null);
+    }
+    
+    public da(final Parcel parcel, final ClassLoader classLoader) {
+        Object mSuperState = parcel.readParcelable(classLoader);
+        if (mSuperState == null) {
+            mSuperState = da.EMPTY_STATE;
         }
-        return false;
+        this.mSuperState = (Parcelable)mSuperState;
     }
     
-    public final void e() {
-        final g b = ((ok0)this).b();
-        final View viewById = ((Activity)this).findViewById(2131432111);
-        rj0 d;
-        if (!(viewById instanceof Toolbar)) {
-            d = null;
+    public da(Parcelable mSuperState) {
+        if (mSuperState != null) {
+            if (mSuperState == da.EMPTY_STATE) {
+                mSuperState = null;
+            }
+            this.mSuperState = mSuperState;
+            return;
         }
-        else {
-            d = rj0.d(b, (Toolbar)viewById);
-        }
-        this.V0 = d;
-        if (d != null) {
-            d.C(14);
-        }
+        throw new IllegalArgumentException("superState must not be null");
     }
     
-    public final boolean f(final String s) {
-        return h(s, (PreferenceGroup)((PreferenceActivity)this).getPreferenceScreen());
+    public da(final da$a da$a) {
+        this();
     }
     
-    public final void j(final CharSequence subtitle) {
-        this.V0.c.setSubtitle(subtitle);
+    public int describeContents() {
+        return 0;
     }
     
-    public void onCreate(final Bundle bundle) {
-        this.U0 = UserIdentifier.getCurrent();
-        super.onCreate(bundle);
-        if (bundle != null) {
-            this.W0 = bundle.getBoolean("screen_checked");
-        }
-        this.T0 = ((y5f)p88.b((mec)this, (Class)y5f.class)).c5();
-        this.setContentView(2131625196);
+    public final Parcelable getSuperState() {
+        return this.mSuperState;
     }
     
-    public final boolean onCreateOptionsMenu(final Menu menu) {
-        this.V0.L((cbi)new ca(this));
-        ((View)this.V0.c).setVisibility(0);
-        return super.onCreateOptionsMenu(menu);
-    }
-    
-    public final void onSaveInstanceState(final Bundle bundle) {
-        super.onSaveInstanceState(bundle);
-        bundle.putBoolean("screen_checked", this.W0);
-    }
-    
-    public final void onTitleChanged(final CharSequence title, final int n) {
-        final rj0 v0 = this.V0;
-        if (v0 != null) {
-            v0.c.setTitle(title);
-        }
-        else {
-            super.onTitleChanged(title, n);
-        }
-    }
-    
-    public final void setContentView(final int contentView) {
-        super.setContentView(contentView);
-        this.e();
-    }
-    
-    public final void setContentView(final View contentView) {
-        super.setContentView(contentView);
-        this.e();
-    }
-    
-    public final void setContentView(final View view, final ViewGroup$LayoutParams viewGroup$LayoutParams) {
-        super.setContentView(view, viewGroup$LayoutParams);
-        this.e();
+    public void writeToParcel(final Parcel parcel, final int n) {
+        parcel.writeParcelable(this.mSuperState, n);
     }
 }

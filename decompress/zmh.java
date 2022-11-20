@@ -1,15 +1,15 @@
-import com.twitter.commerce.api.merchantconfiguration.ShopSpotlightConfigContentViewResult;
+import com.twitter.business.api.BusinessInfoContentViewResult;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zmh extends gue implements rtb<ShopSpotlightConfigContentViewResult, Boolean>
+public final class zmh extends ste implements qsb<BusinessInfoContentViewResult, Boolean>
 {
-    public static final zmh C0;
+    public static final zmh D0;
     
     static {
-        C0 = new zmh();
+        D0 = new zmh();
     }
     
     public zmh() {
@@ -17,8 +17,8 @@ public final class zmh extends gue implements rtb<ShopSpotlightConfigContentView
     }
     
     public final Object invoke(final Object o) {
-        final ShopSpotlightConfigContentViewResult shopSpotlightConfigContentViewResult = (ShopSpotlightConfigContentViewResult)o;
-        zzd.f((Object)shopSpotlightConfigContentViewResult, "result");
-        return shopSpotlightConfigContentViewResult.getModulesWereUpdated();
+        final BusinessInfoContentViewResult businessInfoContentViewResult = (BusinessInfoContentViewResult)o;
+        czd.f((Object)businessInfoContentViewResult, "result");
+        return businessInfoContentViewResult.isFeatured();
     }
 }

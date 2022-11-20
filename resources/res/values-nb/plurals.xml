@@ -516,6 +516,18 @@
         <item quantity="one">%s abonnent</item>
         <item quantity="other">%s abonnenter</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">dag</item>
+        <item quantity="other">%d dager</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">måned</item>
+        <item quantity="other">%d måneder</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">år</item>
+        <item quantity="other">%d år</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dd</item>
         <item quantity="other">%dd</item>

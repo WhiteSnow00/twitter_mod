@@ -4,36 +4,38 @@
 
 public final class hx9
 {
-    public static final a Companion;
-    public static final hx9.hx9$b b;
-    public final long a;
+    public final String a;
+    public final long b;
     
-    static {
-        Companion = new a();
-        b = new hx9.hx9$b();
-    }
-    
-    public hx9(final long a) {
+    public hx9(final String a, final long b) {
+        czd.f((Object)a, "flag");
         this.a = a;
+        this.b = b;
     }
     
     @Override
     public final boolean equals(final Object o) {
-        return this == o || (o instanceof hx9 && this.a == ((hx9)o).a);
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof hx9)) {
+            return false;
+        }
+        final hx9 hx9 = (hx9)o;
+        return czd.a((Object)this.a, (Object)hx9.a) && this.b == hx9.b;
     }
     
     @Override
     public final int hashCode() {
-        final long a = this.a;
-        return (int)(a ^ a >>> 32);
+        final int hashCode = this.a.hashCode();
+        final long b = this.b;
+        return hashCode * 31 + (int)(b ^ b >>> 32);
     }
     
     @Override
     public final String toString() {
-        return tok.g("EditedTweetInformation(initialTweetId=", this.a, ")");
-    }
-    
-    public static final class a
-    {
+        final StringBuilder l = fu8.l("EducationFlag(flag=", this.a, ", timestamp=", this.b);
+        l.append(")");
+        return l.toString();
     }
 }

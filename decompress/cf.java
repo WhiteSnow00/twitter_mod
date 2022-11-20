@@ -1,360 +1,44 @@
-import com.google.android.exoplayer2.n$a;
-import com.google.android.exoplayer2.n;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cf implements oy9
+public final class cf
 {
-    public final rgx a;
-    public final mwj b;
-    public final String c;
-    public String d;
-    public ovt e;
-    public int f;
-    public int g;
-    public boolean h;
-    public long i;
-    public n j;
-    public int k;
-    public long l;
+    public static final int[] a;
+    public static final int[] b;
+    public static final int[] c;
+    public static final int[] d;
+    public static final int[] e;
+    public static final int[] f;
     
-    public cf(final String c) {
-        final rgx a = new rgx(new byte[128], 1, (w48)null);
-        this.a = a;
-        this.b = new mwj(a.b);
-        this.f = 0;
-        this.l = -9223372036854775807L;
-        this.c = c;
+    static {
+        a = new int[] { 1, 2, 3, 6 };
+        b = new int[] { 48000, 44100, 32000 };
+        c = new int[] { 24000, 22050, 16000 };
+        d = new int[] { 2, 1, 2, 3, 3, 4, 4, 5 };
+        e = new int[] { 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 384, 448, 512, 576, 640 };
+        f = new int[] { 69, 87, 104, 121, 139, 174, 208, 243, 278, 348, 417, 487, 557, 696, 835, 975, 1114, 1253, 1393 };
     }
     
-    public final void a(final mwj mwj) {
-        ri4.y((Object)this.e);
-    Label_0008:
-        while (true) {
-            final int n = mwj.c - mwj.b;
-            if (n <= 0) {
-                break;
-            }
-            final int f = this.f;
-            if (f == 0) {
-                while (true) {
-                    while (mwj.c - mwj.b > 0) {
-                        if (!this.h) {
-                            this.h = (mwj.t() == 11);
-                        }
-                        else {
-                            final int t = mwj.t();
-                            if (t == 119) {
-                                this.h = false;
-                                final boolean b = true;
-                                if (b) {
-                                    this.f = 1;
-                                    final byte[] a = this.b.a;
-                                    a[0] = 11;
-                                    a[1] = 119;
-                                    this.g = 2;
-                                    continue Label_0008;
-                                }
-                                continue Label_0008;
-                            }
-                            else {
-                                this.h = (t == 11);
-                            }
-                        }
+    public static int a(int n, int n2) {
+        final int n3 = n2 / 2;
+        if (n >= 0) {
+            final int[] b = cf.b;
+            if (n < 3 && n2 >= 0) {
+                final int[] f = cf.f;
+                if (n3 < 19) {
+                    n = b[n];
+                    if (n == 44100) {
+                        return (n2 % 2 + f[n3]) * 2;
                     }
-                    final boolean b = false;
-                    continue;
+                    n2 = cf.e[n3];
+                    if (n == 32000) {
+                        return n2 * 6;
+                    }
+                    return n2 * 4;
                 }
-            }
-            if (f != 1) {
-                if (f != 2) {
-                    continue;
-                }
-                final int min = Math.min(n, this.k - this.g);
-                this.e.d(mwj, min);
-                final int g = this.g + min;
-                this.g = g;
-                final int k = this.k;
-                if (g != k) {
-                    continue;
-                }
-                final long l = this.l;
-                if (l != -9223372036854775807L) {
-                    this.e.b(l, 1, k, 0, (ovt$a)null);
-                    this.l += this.i;
-                }
-                this.f = 0;
-            }
-            else {
-                final byte[] a2 = this.b.a;
-                final int min2 = Math.min(n, 128 - this.g);
-                mwj.d(a2, this.g, min2);
-                if ((this.g += min2) != 128) {
-                    continue;
-                }
-                this.a.k(0);
-                final rgx a3 = this.a;
-                final int e = a3.e();
-                a3.m(40);
-                final boolean b2 = a3.g(5) > 10;
-                a3.k(e);
-                int y = -1;
-                String j;
-                int a4;
-                int n7;
-                int x;
-                if (b2) {
-                    a3.m(16);
-                    final int g2 = a3.g(2);
-                    if (g2 != 0) {
-                        if (g2 != 1) {
-                            if (g2 == 2) {
-                                y = 2;
-                            }
-                        }
-                        else {
-                            y = 1;
-                        }
-                    }
-                    else {
-                        y = 0;
-                    }
-                    a3.m(3);
-                    final int n2 = (a3.g(11) + 1) * 2;
-                    final int g3 = a3.g(2);
-                    int n3;
-                    int n4;
-                    int g4;
-                    if (g3 == 3) {
-                        n3 = df.c[a3.g(2)];
-                        n4 = 6;
-                        g4 = 3;
-                    }
-                    else {
-                        g4 = a3.g(2);
-                        n4 = df.a[g4];
-                        n3 = df.b[g3];
-                    }
-                    final int n5 = n4 * 256;
-                    final int g5 = a3.g(3);
-                    final int f2 = a3.f() ? 1 : 0;
-                    final int n6 = df.d[g5] + f2;
-                    a3.m(10);
-                    if (a3.f()) {
-                        a3.m(8);
-                    }
-                    if (g5 == 0) {
-                        a3.m(5);
-                        if (a3.f()) {
-                            a3.m(8);
-                        }
-                    }
-                    if (y == 1 && a3.f()) {
-                        a3.m(16);
-                    }
-                    if (a3.f()) {
-                        if (g5 > 2) {
-                            a3.m(2);
-                        }
-                        if ((g5 & 0x1) != 0x0 && g5 > 2) {
-                            a3.m(6);
-                        }
-                        if ((g5 & 0x4) != 0x0) {
-                            a3.m(6);
-                        }
-                        if (f2 != 0 && a3.f()) {
-                            a3.m(5);
-                        }
-                        if (y == 0) {
-                            if (a3.f()) {
-                                a3.m(6);
-                            }
-                            if (g5 == 0 && a3.f()) {
-                                a3.m(6);
-                            }
-                            if (a3.f()) {
-                                a3.m(6);
-                            }
-                            final int g6 = a3.g(2);
-                            if (g6 == 1) {
-                                a3.m(5);
-                            }
-                            else if (g6 == 2) {
-                                a3.m(12);
-                            }
-                            else if (g6 == 3) {
-                                final int g7 = a3.g(5);
-                                if (a3.f()) {
-                                    a3.m(5);
-                                    if (a3.f()) {
-                                        a3.m(4);
-                                    }
-                                    if (a3.f()) {
-                                        a3.m(4);
-                                    }
-                                    if (a3.f()) {
-                                        a3.m(4);
-                                    }
-                                    if (a3.f()) {
-                                        a3.m(4);
-                                    }
-                                    if (a3.f()) {
-                                        a3.m(4);
-                                    }
-                                    if (a3.f()) {
-                                        a3.m(4);
-                                    }
-                                    if (a3.f()) {
-                                        a3.m(4);
-                                    }
-                                    if (a3.f()) {
-                                        if (a3.f()) {
-                                            a3.m(4);
-                                        }
-                                        if (a3.f()) {
-                                            a3.m(4);
-                                        }
-                                    }
-                                }
-                                if (a3.f()) {
-                                    a3.m(5);
-                                    if (a3.f()) {
-                                        a3.m(7);
-                                        if (a3.f()) {
-                                            a3.m(8);
-                                        }
-                                    }
-                                }
-                                a3.m((g7 + 2) * 8);
-                                a3.c();
-                            }
-                            if (g5 < 2) {
-                                if (a3.f()) {
-                                    a3.m(14);
-                                }
-                                if (g5 == 0 && a3.f()) {
-                                    a3.m(14);
-                                }
-                            }
-                            if (a3.f()) {
-                                if (g4 == 0) {
-                                    a3.m(5);
-                                }
-                                else {
-                                    for (int i = 0; i < n4; ++i) {
-                                        if (a3.f()) {
-                                            a3.m(5);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    if (a3.f()) {
-                        a3.m(5);
-                        if (g5 == 2) {
-                            a3.m(4);
-                        }
-                        if (g5 >= 6) {
-                            a3.m(2);
-                        }
-                        if (a3.f()) {
-                            a3.m(8);
-                        }
-                        if (g5 == 0 && a3.f()) {
-                            a3.m(8);
-                        }
-                        if (g3 < 3) {
-                            a3.l();
-                        }
-                    }
-                    if (y == 0 && g4 != 3) {
-                        a3.l();
-                    }
-                    if (y == 2 && (g4 == 3 || a3.f())) {
-                        a3.m(6);
-                    }
-                    if (a3.f() && a3.g(6) == 1 && a3.g(8) == 1) {
-                        j = "audio/eac3-joc";
-                    }
-                    else {
-                        j = "audio/eac3";
-                    }
-                    y = n3;
-                    a4 = n2;
-                    n7 = n5;
-                    x = n6;
-                }
-                else {
-                    a3.m(32);
-                    final int g8 = a3.g(2);
-                    if (g8 == 3) {
-                        j = null;
-                    }
-                    else {
-                        j = "audio/ac3";
-                    }
-                    a4 = df.a(g8, a3.g(6));
-                    a3.m(8);
-                    final int g9 = a3.g(3);
-                    if ((g9 & 0x1) != 0x0 && g9 != 1) {
-                        a3.m(2);
-                    }
-                    if ((g9 & 0x4) != 0x0) {
-                        a3.m(2);
-                    }
-                    if (g9 == 2) {
-                        a3.m(2);
-                    }
-                    final int[] b3 = df.b;
-                    if (g8 < 3) {
-                        y = b3[g8];
-                    }
-                    x = df.d[g9] + (a3.f() ? 1 : 0);
-                    n7 = 1536;
-                }
-                final n m = this.j;
-                if (m == null || x != m.a1 || y != m.b1 || !imw.a((Object)j, (Object)m.N0)) {
-                    final n$a n$a = new n$a();
-                    n$a.a = this.d;
-                    n$a.k = j;
-                    n$a.x = x;
-                    n$a.y = y;
-                    n$a.c = this.c;
-                    final n j2 = new n(n$a);
-                    this.j = j2;
-                    this.e.e(j2);
-                }
-                this.k = a4;
-                this.i = n7 * 1000000L / this.j.b1;
-                this.b.D(0);
-                this.e.d(this.b, 128);
-                this.f = 2;
             }
         }
-    }
-    
-    public final void c() {
-        this.f = 0;
-        this.g = 0;
-        this.h = false;
-        this.l = -9223372036854775807L;
-    }
-    
-    public final void d(final ooa ooa, final bau$d bau$d) {
-        bau$d.a();
-        this.d = bau$d.b();
-        this.e = ooa.s(bau$d.c(), 1);
-    }
-    
-    public final void e() {
-    }
-    
-    public final void f(final long l, final int n) {
-        if (l != -9223372036854775807L) {
-            this.l = l;
-        }
+        return -1;
     }
 }

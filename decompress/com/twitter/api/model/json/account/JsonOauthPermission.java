@@ -9,15 +9,14 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonOauthPermission extends aih<d3j>
+public class JsonOauthPermission extends fih<j3j>
 {
     @JsonField
     public String a;
     @JsonField
     public List<String> b;
     
-    @Override
     public final Object s() {
-        return new d3j(this.a, (List)this.b);
+        return new j3j(this.a, (List)this.b);
     }
 }

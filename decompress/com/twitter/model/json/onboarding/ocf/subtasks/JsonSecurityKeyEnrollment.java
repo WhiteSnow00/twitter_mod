@@ -9,30 +9,29 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSecurityKeyEnrollment extends lhh<xap>
+public class JsonSecurityKeyEnrollment extends qhh<obp>
 {
     @JsonField
     public String a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
-    public xrv c;
+    public ssv c;
     @JsonField
-    public xrv d;
+    public ssv d;
     
-    @Override
-    public final h4j t() {
-        final xap$a xap$a = new xap$a();
+    public final n4j t() {
+        final obp$a obp$a = new obp$a();
         final String a = this.a;
-        zzd.f((Object)a, "challenge");
-        xap$a.k = a;
-        final xrv b = this.b;
-        zzd.f((Object)b, "nextLink");
-        xap$a.l = b;
-        final xrv c = this.c;
-        zzd.f((Object)c, "failLink");
-        xap$a.m = c;
-        zzd.f((Object)this.d, "unsupportedLink");
-        return (h4j)xap$a;
+        czd.f((Object)a, "challenge");
+        obp$a.k = a;
+        final ssv b = this.b;
+        czd.f((Object)b, "nextLink");
+        obp$a.l = b;
+        final ssv c = this.c;
+        czd.f((Object)c, "failLink");
+        obp$a.m = c;
+        czd.f((Object)this.d, "unsupportedLink");
+        return (n4j)obp$a;
     }
 }

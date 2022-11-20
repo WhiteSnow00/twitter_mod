@@ -1,41 +1,40 @@
-import android.view.View;
+import com.twitter.util.user.UserIdentifier;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class q8p
+public final class q8p extends enm<q8p.q8p$a, s8p, r8p>
 {
-    public final at3 a;
-    public final fsl b;
-    public final ykv c;
+    public final UserIdentifier E0;
     
-    public q8p(final at3 a, final fsl b, final ykv c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public q8p(final UserIdentifier e0) {
+        czd.f((Object)e0, "userIdentifier");
+        super((trc)null, 1, (rf8)null);
+        this.E0 = e0;
     }
     
-    public final d9p a(final View view, final int n, final int n2) {
-        final at3 a = this.a;
-        String s;
-        if (n == 5) {
-            s = a.a.getString(2131957474);
-            zzd.e((Object)s, "{\n            resources.\u2026intTextResId())\n        }");
+    public final orc c(final Object o) {
+        final q8p.q8p$a q8p$a = (q8p.q8p$a)o;
+        czd.f((Object)q8p$a, "args");
+        return (orc)new r8p(this.E0, q8p$a.a);
+    }
+    
+    public final Object d(final orc orc) {
+        final r8p r8p = (r8p)orc;
+        czd.f((Object)r8p, "request");
+        ((orc)r8p).T();
+        final xrc t = ((orc)r8p).T();
+        czd.e((Object)t, "request.result");
+        if (t.b) {
+            final Object g = t.g;
+            czd.c(g);
+            return g;
         }
-        else {
-            s = a.a.getString(n2);
-            zzd.e((Object)s, "{\n            resources.\u2026ingResourceSRP)\n        }");
+        kbv kbv;
+        if ((kbv = (kbv)t.h) == null) {
+            kbv = new kbv(new hbv[] { new hbv(t.c) });
         }
-        final fsl b = this.b;
-        final ykv c = this.c;
-        d9p d9p;
-        if (view != null && view.findViewById(2131431282) != null) {
-            d9p = new d9p((wax<r8p>)new wax(view, 2131431282, 2131431282, (bra)new y4f((Object)s, 3)), b, c);
-        }
-        else {
-            d9p = null;
-        }
-        return d9p;
+        throw new IllegalStateException(kbv.toString());
     }
 }

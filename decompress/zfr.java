@@ -1,24 +1,18 @@
-import com.twitter.android.media.imageeditor.stickers.b;
-import androidx.recyclerview.widget.GridLayoutManager$c;
+import com.google.android.gms.common.api.c;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.internal.BasePendingResult;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zfr extends GridLayoutManager$c
+public final class zfr extends BasePendingResult<Status>
 {
-    public final /* synthetic */ b c;
-    public final /* synthetic */ int d;
-    
-    public zfr(final b c, final int d) {
-        this.c = c;
-        this.d = d;
+    public zfr(final c c) {
+        super(c);
     }
     
-    public final int c(final int n) {
-        if (this.c.e(n) == 1) {
-            return this.d;
-        }
-        return 1;
+    public final /* bridge */ psm d(final Status status) {
+        return (psm)status;
     }
 }

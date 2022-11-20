@@ -1,104 +1,111 @@
-import java.io.IOException;
 import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class vpw
+public final class vpw extends hvj
 {
-    public static final alp<vpw> c;
-    public static final vpw d;
-    public final vpw$a a;
-    public final c b;
+    public final hwj I0;
+    public final hwj J0;
+    public final kpw K0;
+    public pd6 L0;
+    public final hwj M0;
+    public float N0;
+    public qq4 O0;
     
-    static {
-        vpw.c = new b();
-        d = new vpw(null, null);
+    public vpw() {
+        Objects.requireNonNull(ddq.Companion);
+        this.I0 = (hwj)blz.Q(new ddq(ddq.b));
+        this.J0 = (hwj)blz.Q(Boolean.FALSE);
+        final kpw k0 = new kpw();
+        k0.e = (nsb)new vpw$c(this);
+        this.K0 = k0;
+        this.M0 = (hwj)blz.Q(Boolean.TRUE);
+        this.N0 = 1.0f;
     }
     
-    public vpw(final vpw$a a, final c b) {
-        if (a != null && b != null) {
-            throw new IllegalArgumentException("Cannot have vendor info from 2 vendors");
-        }
-        this.a = a;
-        this.b = b;
+    public final boolean b(final float n0) {
+        this.N0 = n0;
+        return true;
     }
     
-    public static final class b extends s4j<vpw>
-    {
-        public final Object d(final elp elp, final int n) throws IOException, ClassNotFoundException {
-            final vpw$a.a b = vpw$a.b;
-            Objects.requireNonNull(elp);
-            return new vpw((vpw$a)b.a(elp), (c)vpw.c.f.a(elp));
+    public final boolean e(final qq4 o0) {
+        this.O0 = o0;
+        return true;
+    }
+    
+    public final long h() {
+        return ((ddq)this.I0.getValue()).a;
+    }
+    
+    public final void j(final tc9 tc9) {
+        czd.f((Object)tc9, "<this>");
+        final kpw k0 = this.K0;
+        qq4 o0;
+        if ((o0 = this.O0) == null) {
+            o0 = (qq4)k0.f.getValue();
         }
-        
-        public final void f(final flp flp, final Object o) throws IOException {
-            final vpw vpw = (vpw)o;
-            final vpw$a a = vpw.a;
-            final vpw$a.a b = vpw$a.b;
-            Objects.requireNonNull(flp);
-            b.c(flp, (Object)a);
-            final int a2 = w4j.a;
-            vpw.c.f.c(flp, (Object)vpw.b);
+        if ((boolean)this.J0.getValue() && tc9.getLayoutDirection() == fve.E0) {
+            final long b0 = tc9.B0();
+            final mc9 u0 = tc9.u0();
+            final long c = u0.c();
+            u0.b().p();
+            u0.a().e(-1.0f, 1.0f, b0);
+            k0.f(tc9, this.N0, o0);
+            u0.b().c();
+            u0.d(c);
+        }
+        else {
+            k0.f(tc9, this.N0, o0);
+        }
+        if (this.M0.getValue()) {
+            this.M0.setValue((Object)Boolean.FALSE);
         }
     }
     
-    public static final class c
-    {
-        public static final alp<c> f;
-        public final String a;
-        public final String b;
-        public final String c;
-        public final vpw$c$b d;
-        public final int e;
-        
-        static {
-            c.f = new a();
+    public final void k(final String i, final float g, final float h, final ktb<? super Float, ? super Float, ? super x66, ? super Integer, fzv> ktb, final x66 x66, final int n) {
+        czd.f((Object)i, "name");
+        czd.f((Object)ktb, "content");
+        final x66 h2 = x66.h(1264894527);
+        final n96$b a = n96.a;
+        final kpw k0 = this.K0;
+        Objects.requireNonNull(k0);
+        final y7c b = k0.b;
+        Objects.requireNonNull(b);
+        b.i = i;
+        ((qnw)b).c();
+        final float g2 = k0.g;
+        final int n2 = 0;
+        if (g2 != g) {
+            k0.g = g;
+            k0.e();
         }
-        
-        public c(final String a, final String b, final String c, final vpw$c$b d, final int e) {
-            this.a = a;
-            this.b = b;
-            this.c = c;
-            this.d = d;
-            this.e = e;
+        int n3 = n2;
+        if (k0.h == h) {
+            n3 = 1;
         }
-        
-        public static final class a extends s4j<c>
-        {
-            public final Object d(final elp elp, int z) throws IOException, ClassNotFoundException {
-                final String i = elp.I();
-                String j = elp.I();
-                final String k = elp.I();
-                final hx6$h a = hx6.a;
-                Object o = ((s4j)new ix6((Class)vpw$c$b.class)).a(elp);
-                z = elp.z();
-                String s = i;
-                if (i == null) {
-                    s = "";
+        if (n3 == 0) {
+            k0.h = h;
+            k0.e();
+        }
+        final qd6 w = wd.w(h2);
+        final pd6 l0 = this.L0;
+        pd6 a2 = null;
+        Label_0193: {
+            if (l0 != null) {
+                a2 = l0;
+                if (!l0.isDisposed()) {
+                    break Label_0193;
                 }
-                if (j == null) {
-                    j = "";
-                }
-                final vpw$c$b d0 = vpw$c$b.D0;
-                if (o == null) {
-                    o = d0;
-                }
-                return new c(s, j, k, (vpw$c$b)o, z);
             }
-            
-            public final void f(final flp flp, final Object o) throws IOException {
-                final c c = (c)o;
-                final flp g = flp.G(c.a).G(c.b).G(c.c);
-                final vpw$c$b d = c.d;
-                final hx6$h a = hx6.a;
-                final ix6 ix6 = new ix6((Class)vpw$c$b.class);
-                Objects.requireNonNull(g);
-                ((s4j)ix6).c(g, (Object)d);
-                final int a2 = w4j.a;
-                g.z(c.e);
-            }
+            a2 = ud6.a((qr0<?>)new jpw((qnw)this.K0.b), w);
+        }
+        (this.L0 = a2).g((ftb)io7.h(-1916507005, true, (Object)new wpw((ktb)ktb, this)));
+        npe.c((Object)a2, (qsb)new vpw$a(a2), h2);
+        final lxo j = h2.k();
+        if (j != null) {
+            j.a((ftb)new vpw$b(this, i, g, h, (ktb)ktb, n));
         }
     }
 }

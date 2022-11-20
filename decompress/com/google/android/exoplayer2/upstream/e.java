@@ -4,7 +4,6 @@
 
 package com.google.android.exoplayer2.upstream;
 
-import java.util.Set;
 import java.io.InterruptedIOException;
 import java.io.OutputStream;
 import java.util.Iterator;
@@ -26,17 +25,17 @@ import java.util.Objects;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 
-public final class e extends pk1 implements HttpDataSource
+public final class e extends jk1 implements HttpDataSource
 {
     public final boolean e;
     public final int f;
     public final int g;
     public final String h;
-    public final HttpDataSource$c i;
-    public final HttpDataSource$c j;
+    public final HttpDataSource.c i;
+    public final HttpDataSource.c j;
     public final boolean k;
-    public ntk<String> l;
-    public com.google.android.exoplayer2.upstream.b m;
+    public wtk<String> l;
+    public b m;
     public HttpURLConnection n;
     public InputStream o;
     public boolean p;
@@ -44,7 +43,7 @@ public final class e extends pk1 implements HttpDataSource
     public long r;
     public long s;
     
-    public e(final String h, final int f, final int g, final HttpDataSource$c i) {
+    public e(final String h, final int f, final int g, final HttpDataSource.c i) {
         super(true);
         this.h = h;
         this.f = f;
@@ -52,7 +51,7 @@ public final class e extends pk1 implements HttpDataSource
         this.e = false;
         this.i = i;
         this.l = null;
-        this.j = new HttpDataSource$c();
+        this.j = new HttpDataSource.c();
         this.k = false;
     }
     
@@ -60,7 +59,7 @@ public final class e extends pk1 implements HttpDataSource
         if (httpURLConnection == null) {
             return;
         }
-        final int a = imw.a;
+        final int a = cnw.a;
         if (a < 19) {
             return;
         }
@@ -89,7 +88,7 @@ public final class e extends pk1 implements HttpDataSource
         catch (final Exception ex) {}
     }
     
-    public final long a(final com.google.android.exoplayer2.upstream.b m) throws HttpDataSource$HttpDataSourceException {
+    public final long a(final b m) throws HttpDataSource$HttpDataSourceException {
         this.m = m;
         long n = 0L;
         this.s = 0L;
@@ -104,10 +103,10 @@ public final class e extends pk1 implements HttpDataSource
             if (q >= 200) {
                 if (q <= 299) {
                     final String contentType = v.getContentType();
-                    final ntk<String> l = this.l;
+                    final wtk<String> l = this.l;
                     if (l != null && !l.apply((Object)contentType)) {
                         this.t();
-                        throw new InvalidContentTypeException(contentType, m);
+                        throw new HttpDataSource$InvalidContentTypeException(contentType, m);
                     }
                     long n2 = n;
                     if (this.q == 200) {
@@ -126,16 +125,16 @@ public final class e extends pk1 implements HttpDataSource
                         else {
                             final String headerField = v.getHeaderField("Content-Length");
                             final String headerField2 = v.getHeaderField("Content-Range");
-                            final Pattern a = ctc.a;
+                            final Pattern a = gsc.a;
                             long long1 = 0L;
-                            Label_0293: {
+                            Label_0298: {
                                 if (!TextUtils.isEmpty((CharSequence)headerField)) {
                                     try {
                                         long1 = Long.parseLong(headerField);
-                                        break Label_0293;
+                                        break Label_0298;
                                     }
                                     catch (final NumberFormatException ex) {
-                                        final StringBuilder sb = new StringBuilder(dia.o(headerField, 28));
+                                        final StringBuilder sb = new StringBuilder(wnj.f(headerField, 28));
                                         sb.append("Unexpected Content-Length [");
                                         sb.append(headerField);
                                         sb.append("]");
@@ -146,7 +145,7 @@ public final class e extends pk1 implements HttpDataSource
                             }
                             long max = long1;
                             if (!TextUtils.isEmpty((CharSequence)headerField2)) {
-                                final Matcher matcher = ctc.a.matcher(headerField2);
+                                final Matcher matcher = gsc.a.matcher(headerField2);
                                 max = long1;
                                 if (matcher.matches()) {
                                     try {
@@ -174,7 +173,7 @@ public final class e extends pk1 implements HttpDataSource
                                         }
                                     }
                                     catch (final NumberFormatException ex2) {
-                                        final StringBuilder sb3 = new StringBuilder(dia.o(headerField2, 27));
+                                        final StringBuilder sb3 = new StringBuilder(wnj.f(headerField2, 27));
                                         sb3.append("Unexpected Content-Range [");
                                         sb3.append(headerField2);
                                         sb3.append("]");
@@ -222,7 +221,7 @@ public final class e extends pk1 implements HttpDataSource
                 }
             }
             final Map<String, List<String>> headerFields = v.getHeaderFields();
-            if (this.q == 416 && m.f == ctc.b(v.getHeaderField("Content-Range"))) {
+            if (this.q == 416 && m.f == gsc.b(v.getHeaderField("Content-Range"))) {
                 this.p = true;
                 this.s(m);
                 final long g2 = m.g;
@@ -235,32 +234,32 @@ public final class e extends pk1 implements HttpDataSource
             while (true) {
                 if (errorStream != null) {
                     byte[] array = null;
-                    Label_0813: {
+                    Label_0826: {
                         try {
-                            array = imw.R(errorStream);
-                            break Label_0813;
-                            array = imw.f;
+                            array = cnw.R(errorStream);
+                            break Label_0826;
+                            array = cnw.f;
                         }
                         catch (final IOException ex5) {
-                            array = imw.f;
+                            array = cnw.f;
                         }
                     }
                     this.t();
-                    Object o;
+                    IOException ex6;
                     if (this.q == 416) {
-                        o = new DataSourceException(2008);
+                        ex6 = new DataSourceException(2008);
                     }
                     else {
-                        o = null;
+                        ex6 = null;
                     }
-                    throw new InvalidResponseCodeException(this.q, (IOException)o, (Map)headerFields, m, array);
+                    throw new HttpDataSource$InvalidResponseCodeException(this.q, ex6, (Map)headerFields, m, array);
                 }
                 continue;
             }
         }
-        catch (final IOException ex6) {
+        catch (final IOException ex7) {
             this.t();
-            throw HttpDataSource$HttpDataSourceException.b(ex6, m, 1);
+            throw HttpDataSource$HttpDataSourceException.b(ex7, m, 1);
         }
     }
     
@@ -282,7 +281,7 @@ public final class e extends pk1 implements HttpDataSource
                 n3 = (int)Math.min(a, n4);
             }
             final InputStream o = this.o;
-            a = imw.a;
+            a = cnw.a;
             n = o.read(array, n, n3);
             if (n == -1) {
                 n = n2;
@@ -294,8 +293,8 @@ public final class e extends pk1 implements HttpDataSource
             return n;
         }
         catch (final IOException ex) {
-            final com.google.android.exoplayer2.upstream.b m = this.m;
-            n = imw.a;
+            final b m = this.m;
+            n = cnw.a;
             throw HttpDataSource$HttpDataSourceException.b(ex, m, 2);
         }
     }
@@ -314,8 +313,8 @@ public final class e extends pk1 implements HttpDataSource
                     o.close();
                 }
                 catch (final IOException ex) {
-                    final com.google.android.exoplayer2.upstream.b m = this.m;
-                    final int a = imw.a;
+                    final b m = this.m;
+                    final int a = cnw.a;
                     throw new HttpDataSource$HttpDataSourceException(ex, m, 2000, 3);
                 }
             }
@@ -333,9 +332,9 @@ public final class e extends pk1 implements HttpDataSource
     public final Map<String, List<String>> d() {
         final HttpURLConnection n = this.n;
         if (n == null) {
-            return mam.I0;
+            return (Map<String, List<String>>)bbm.J0;
         }
-        return new b(n.getHeaderFields());
+        return (Map<String, List<String>>)new e.e$b((Map)n.getHeaderFields());
     }
     
     public final Uri m() {
@@ -357,13 +356,13 @@ public final class e extends pk1 implements HttpDataSource
                 n.disconnect();
             }
             catch (final Exception ex) {
-                dml.s("DefaultHttpDataSource", "Unexpected error while disconnecting", (Throwable)ex);
+                g63.s("DefaultHttpDataSource", "Unexpected error while disconnecting", (Throwable)ex);
             }
             this.n = null;
         }
     }
     
-    public final URL u(final URL url, String protocol, final com.google.android.exoplayer2.upstream.b b) throws HttpDataSource$HttpDataSourceException {
+    public final URL u(final URL url, String protocol, final b b) throws HttpDataSource$HttpDataSourceException {
         if (protocol != null) {
             try {
                 final URL url2 = new URL(url, protocol);
@@ -381,9 +380,9 @@ public final class e extends pk1 implements HttpDataSource
                 }
                 if (!this.e && !protocol.equals(url.getProtocol())) {
                     final String protocol2 = url.getProtocol();
-                    final StringBuilder n = xpa.n(protocol.length() + dia.o(protocol2, 41), "Disallowed cross-protocol redirect (", protocol2, " to ", protocol);
-                    n.append(")");
-                    throw new HttpDataSource$HttpDataSourceException(n.toString(), b, 2001);
+                    final StringBuilder d = x70.D(protocol.length() + wnj.f(protocol2, 41), "Disallowed cross-protocol redirect (", protocol2, " to ", protocol);
+                    d.append(")");
+                    throw new HttpDataSource$HttpDataSourceException(d.toString(), b, 2001);
                 }
                 return url2;
             }
@@ -394,7 +393,7 @@ public final class e extends pk1 implements HttpDataSource
         throw new HttpDataSource$HttpDataSourceException("Null location redirect", b, 2001);
     }
     
-    public final HttpURLConnection v(final com.google.android.exoplayer2.upstream.b b) throws IOException {
+    public final HttpURLConnection v(final b b) throws IOException {
         URL url = new URL(b.a.toString());
         int c = b.c;
         byte[] d = b.d;
@@ -408,7 +407,7 @@ public final class e extends pk1 implements HttpDataSource
         while (true) {
             final int n2 = n + 1;
             if (n > 20) {
-                throw new HttpDataSource$HttpDataSourceException((IOException)new NoRouteToHostException(q1a.f(31, "Too many redirects: ", n2)), b, 2001, 1);
+                throw new HttpDataSource$HttpDataSourceException((IOException)new NoRouteToHostException(jxa.p(31, "Too many redirects: ", n2)), b, 2001, 1);
             }
             final HttpURLConnection w = this.w(url, c, d, f, g, c2, false, b.e);
             final int responseCode = w.getResponseCode();
@@ -437,7 +436,7 @@ public final class e extends pk1 implements HttpDataSource
         httpURLConnection.setConnectTimeout(this.f);
         httpURLConnection.setReadTimeout(this.g);
         final HashMap hashMap = new HashMap();
-        final HttpDataSource$c i = this.i;
+        final HttpDataSource.c i = this.i;
         if (i != null) {
             hashMap.putAll(i.a());
         }
@@ -446,7 +445,7 @@ public final class e extends pk1 implements HttpDataSource
         for (final Map.Entry<String, V> entry : hashMap.entrySet()) {
             httpURLConnection.setRequestProperty(entry.getKey(), (String)entry.getValue());
         }
-        final String a = ctc.a(n2, n3);
+        final String a = gsc.a(n2, n3);
         if (a != null) {
             httpURLConnection.setRequestProperty("Range", a);
         }
@@ -478,7 +477,7 @@ public final class e extends pk1 implements HttpDataSource
         return httpURLConnection;
     }
     
-    public final void y(long n, final com.google.android.exoplayer2.upstream.b b) throws IOException {
+    public final void y(long n, final b b) throws IOException {
         if (n == 0L) {
             return;
         }
@@ -486,7 +485,7 @@ public final class e extends pk1 implements HttpDataSource
         while (n > 0L) {
             final int n2 = (int)Math.min(n, 4096);
             final InputStream o = this.o;
-            final int a = imw.a;
+            final int a = cnw.a;
             final int read = o.read(array, 0, n2);
             if (Thread.currentThread().isInterrupted()) {
                 throw new HttpDataSource$HttpDataSourceException((IOException)new InterruptedIOException(), b, 2000, 1);
@@ -496,108 +495,6 @@ public final class e extends pk1 implements HttpDataSource
             }
             n -= read;
             this.p(read);
-        }
-    }
-    
-    public static final class a implements HttpDataSource$b
-    {
-        public final HttpDataSource$c C0;
-        public String D0;
-        public int E0;
-        public int F0;
-        
-        public a() {
-            this.C0 = new HttpDataSource$c();
-            this.E0 = 8000;
-            this.F0 = 8000;
-        }
-        
-        public final HttpDataSource b() {
-            return new e(this.D0, this.E0, this.F0, this.C0);
-        }
-        
-        public final com.google.android.exoplayer2.upstream.a b() {
-            return (com.google.android.exoplayer2.upstream.a)new e(this.D0, this.E0, this.F0, this.C0);
-        }
-    }
-    
-    public static final class b extends ymb<String, List<String>>
-    {
-        public final Map<String, List<String>> C0;
-        
-        public b(final Map<String, List<String>> c0) {
-            this.C0 = c0;
-        }
-        
-        @Override
-        public final boolean containsKey(final Object o) {
-            return o != null && super.containsKey(o);
-        }
-        
-        public final boolean containsValue(final Object o) {
-            final skg skg = new skg(((jr4)this.entrySet()).iterator());
-            boolean b = true;
-            if (o == null) {
-                while (skg.hasNext()) {
-                    if (skg.next() == null) {
-                        return b;
-                    }
-                }
-            }
-            else {
-                while (skg.hasNext()) {
-                    if (o.equals(skg.next())) {
-                        return b;
-                    }
-                }
-            }
-            b = false;
-            return b;
-        }
-        
-        @Override
-        public final Set<Entry<String, List<String>>> entrySet() {
-            return xmp.b(super.entrySet(), (ntk<? super Entry<String, List<String>>>)vsr.D0);
-        }
-        
-        public final boolean equals(final Object o) {
-            return o != null && tkg.a(this, o);
-        }
-        
-        @Override
-        public final Object get(final Object o) {
-            Object o2;
-            if (o == null) {
-                o2 = null;
-            }
-            else {
-                o2 = super.get(o);
-            }
-            return o2;
-        }
-        
-        public final int hashCode() {
-            return xmp.c(this.entrySet());
-        }
-        
-        @Override
-        public final boolean isEmpty() {
-            final boolean empty = super.isEmpty();
-            boolean b = true;
-            if (!empty) {
-                b = (super.size() == 1 && super.containsKey(null) && b);
-            }
-            return b;
-        }
-        
-        @Override
-        public final Set<String> keySet() {
-            return xmp.b(super.keySet(), (ntk<? super String>)ai8.C0);
-        }
-        
-        @Override
-        public final int size() {
-            return super.size() - (super.containsKey(null) ? 1 : 0);
         }
     }
 }

@@ -9,45 +9,53 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonURTCallback$$JsonObjectMapper extends JsonMapper<JsonURTCallback>
 {
-    public static JsonURTCallback _parse(final khe khe) throws IOException {
+    public static JsonURTCallback _parse(final tge tge) throws IOException {
         final JsonURTCallback jsonURTCallback = new JsonURTCallback();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonURTCallback, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonURTCallback, d, tge);
+            tge.l0();
         }
         return jsonURTCallback;
     }
     
-    public static void _serialize(final JsonURTCallback jsonURTCallback, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonURTCallback jsonURTCallback, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("endpoint", jsonURTCallback.a);
+        afe.t0("endpoint", jsonURTCallback.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonURTCallback jsonURTCallback, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonURTCallback jsonURTCallback, final String s, final tge tge) throws IOException {
         if ("endpoint".equals(s)) {
-            jsonURTCallback.a = khe.T((String)null);
+            jsonURTCallback.a = tge.T((String)null);
         }
     }
     
-    public JsonURTCallback parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonURTCallback parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonURTCallback jsonURTCallback, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonURTCallback, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonURTCallback jsonURTCallback, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonURTCallback, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonURTCallback)o, afe, b);
     }
 }

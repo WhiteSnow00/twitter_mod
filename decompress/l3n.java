@@ -1,35 +1,38 @@
-import android.widget.ImageView;
 import android.view.View;
+import com.twitter.common.ui.settings.MoreSettingsView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class l3n extends gue implements rtb<f6n, oyv>
+public final class l3n extends ste implements qsb<t6n, fzv>
 {
-    public final /* synthetic */ x0n C0;
+    public final l1n D0;
     
-    public l3n(final x0n c0) {
-        this.C0 = c0;
+    public l3n(final l1n d0) {
+        this.D0 = d0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final f6n f6n = (f6n)o;
-        zzd.f((Object)f6n, "$this$distinct");
-        final ImageView p = this.C0.P1;
-        int visibility;
-        if (f6n.I) {
-            visibility = 0;
+        final t6n t6n = (t6n)o;
+        czd.f((Object)t6n, "$this$distinct");
+        if (t6n.k) {
+            final MoreSettingsView moreSettingsView = (MoreSettingsView)this.D0.y1.b;
+            final a6o j0 = moreSettingsView.J0;
+            if (j0 != null) {
+                ((View)j0).setVisibility(0);
+            }
+            moreSettingsView.I0 = true;
         }
         else {
-            visibility = 8;
+            final MoreSettingsView moreSettingsView2 = (MoreSettingsView)this.D0.y1.b;
+            final a6o j2 = moreSettingsView2.J0;
+            if (j2 != null) {
+                ((View)j2).setVisibility(8);
+            }
+            moreSettingsView2.I0 = false;
         }
-        ((View)p).setVisibility(visibility);
-        if (!f6n.I) {
-            final x0n c0 = this.C0;
-            c0.X1.o((View)c0.P1);
-        }
-        return oyv.a;
+        return fzv.a;
     }
 }

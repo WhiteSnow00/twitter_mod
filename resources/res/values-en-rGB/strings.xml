@@ -210,8 +210,13 @@
     <string name="activity_tab_mentions_empty_state_description_no_mentions">When someone on Twitter mentions you in a Tweet or reply, you’ll find it here.</string>
     <string name="activity_tab_mentions_empty_state_description_no_mentions_from_people_you_follow">When someone you’re following mentions you in a Tweet, you’ll see it here.</string>
     <string name="activity_tab_super_follows_description">Likes, mentions, Retweets and a whole lot more – when it comes from your Super Followers, you’ll find it here.</string>
-    <string name="activity_tab_vit_description">Notifications about new Tweets, Retweets, recommendations and more from other verified accounts will show up here.</string>
-    <string name="activity_tab_vit_title">Be the first to know</string>
+    <string name="activity_tab_vit_button">Learn more</string>
+    <string name="activity_tab_vit_description">Likes, mentions, Retweets and a whole lot more — when it comes from a verified account, you’ll find it here. {{}}Learn more{{}}</string>
+    <string name="activity_tab_vit_description_blue_available">Likes, mentions, Retweets and a whole lot more — when it comes from a verified account, you’ll find it here. {{}}Learn more{{}}\10\10Not verified? Subscribe now to get a verified account and join other people in quality conversations.</string>
+    <string name="activity_tab_vit_subscribe_button">Subscribe</string>
+    <string name="activity_tab_vit_subscribe_with_price_month">%1$s/month</string>
+    <string name="activity_tab_vit_subscribe_with_price_year">%1$s/year</string>
+    <string name="activity_tab_vit_title">Nothing to see here – yet</string>
     <string name="activity_view_hidden_replies_empty_title">Replies have not been hidden for this thread</string>
     <string name="activity_view_moderated_replies_empty_desc">This Tweet doesn’t have any hidden replies, but Protected Tweets might be filtered out. {{}}Learn more{{}}</string>
     <string name="activity_view_moderated_replies_empty_title">Nothing to see here</string>
@@ -545,8 +550,8 @@
     <string name="billing_error_modal_title">Please update your payment method</string>
     <string name="birdwatch_dialog_home_button">Home</string>
     <string name="birdwatch_dialog_my_notes_button">My notes</string>
-    <string name="birdwatch_home_page_title">Birdwatch</string>
-    <string name="birdwatch_pivot_header_title">Birdwatch</string>
+    <string name="birdwatch_home_page_title">Community Notes</string>
+    <string name="birdwatch_pivot_header_title">Community Notes</string>
     <string name="birthday_not_today_month_day">Born %s</string>
     <string name="birthday_not_today_month_day_year">Born %s</string>
     <string name="birthday_not_today_year_only">Born %d</string>
@@ -1140,7 +1145,7 @@
     <string name="const_quantity_fmt_billion_plus">%.1fb+</string>
     <string name="const_quantity_fmt_million_plus">%.1fm+</string>
     <string name="const_quantity_fmt_plus_billion">+%.1fb</string>
-    <string name="const_quantity_fmt_plus_million">+%.1fm</string>
+    <string name="const_quantity_fmt_plus_million">+%.1fM</string>
     <string name="const_quantity_fmt_plus_thousand">+%.1fk</string>
     <string name="const_quantity_fmt_thousand_plus">%.1fk+</string>
     <string name="consumer_poll_card_final_results">Final results</string>
@@ -1908,7 +1913,7 @@
     <string name="drag_and_drop_reordering_tooltip_text">Hold down any photo to move it</string>
     <string name="drag_handle_label">Click and drag to reorder</string>
     <string name="drawer_accounts_menu_header">Accounts</string>
-    <string name="drawer_birdwatch_title">Birdwatch</string>
+    <string name="drawer_birdwatch_title">Community Notes</string>
     <string name="drawer_branded_likes_preview_title">Branded Likes Preview</string>
     <string name="drawer_communities_title">Communities</string>
     <string name="drawer_connect_title">Connect</string>
@@ -2036,7 +2041,7 @@
     <string name="edit_profile_remove_header">Remove header</string>
     <string name="edit_profile_switch_to_professional">Switch to Professional</string>
     <string name="edit_profile_take_photo">Take photo</string>
-    <string name="edit_profile_verified_phone">Verified phone number badge</string>
+    <string name="edit_profile_verified_phone">Confirmed phone number mark</string>
     <string name="edit_profile_website">Website</string>
     <string name="edit_room_button">Edit</string>
     <string name="edit_rule">Edit rule</string>
@@ -2220,7 +2225,7 @@
     <string name="error_update_module_visibility">Something went wrong. Please try again.</string>
     <string name="error_uploading_header">Error uploading header photo.</string>
     <string name="except_blocked_accounts_desc">Accounts you’ve blocked won’t be able to join. However, people not logged in to Twitter may be able to listen. {{}}Learn more{{}}</string>
-    <string name="exclusive_focal_tweet_education_message">You can see this and reply because you Super Follow @%s</string>
+    <string name="exclusive_focal_tweet_education_message">You can see this and reply because you Subscribe to @%s</string>
     <string name="exclusive_focal_tweet_education_title">You\'re seeing Super Follows content</string>
     <string name="exclusive_space_access_info_sheet_message">One of the perks of being a Super Follower is exclusive access to Spaces like this one. Only you and @%s’s other Super Followers can join this Space.</string>
     <string name="exclusive_space_access_info_sheet_message_generic">One of the perks of being a Super Follower is exclusive access to Spaces like this one. Only you and this creator’s other Super Followers can join this Space.</string>
@@ -2228,8 +2233,8 @@
     <string name="exclusive_space_non_sf_access_info_sheet_message">One of the perks of being a Super Follower is exclusive access to Spaces like this one. Only @%s’s Super Followers can join this Space.</string>
     <string name="exclusive_space_non_sf_access_info_sheet_message_generic">One of the perks of being a Super Follower is exclusive access to Spaces like this one. Only this creator’s Super Followers can join this Space.</string>
     <string name="exclusive_timeline_self_tweet_education_message">You and your Super Followers can see this Tweet</string>
-    <string name="exclusive_timeline_tweet_education_message">You can see this Tweet because you Super Follow @%s</string>
-    <string name="exclusive_tweet_reply_education_message">@%s and their Super Followers can see your Tweet</string>
+    <string name="exclusive_timeline_tweet_education_message">You can see this Tweet because you Subscribe to @%s</string>
+    <string name="exclusive_tweet_reply_education_message">@%s and their Subscribers can see your Tweet</string>
     <string name="exclusive_tweet_reply_education_title">Who can see this Tweet?</string>
     <string name="existing_member">Existing member</string>
     <string name="existing_member_community">This person is already in the Community.</string>
@@ -3114,6 +3119,9 @@
     <string name="manage_subscription_dialog_error_title">Error</string>
     <string name="manage_subscription_pref_summary">View your subscription details or cancel.</string>
     <string name="manage_subscription_stripe_description">Looks like you bought this subscription on twitter.com. You\'ll need to manage or cancel your subscription from that platform.</string>
+    <string name="manage_subscription_upgrade_available">Upgrade available</string>
+    <string name="manage_subscription_upgrade_new_perks">Get a verified account.</string>
+    <string name="manage_subscription_upgrade_twitter_blue">Upgrade Twitter Blue</string>
     <string name="manage_your_experience_desc">You can block and report people in a Space.</string>
     <string name="manage_your_experience_title">Manage your experience</string>
     <string name="map_price_free_subtitle">Free · %1$s</string>
@@ -4041,6 +4049,8 @@
     <string name="product_original_price_content_description">Original price: %1$s</string>
     <string name="product_price_content_description">Price: %1$s</string>
     <string name="product_report_message">Report submitted\10Our team will take a look as soon as possible.</string>
+    <string name="product_sign_up_button_text_with_period">Subscribe for %1$s/%2$s</string>
+    <string name="product_sign_up_button_text_without_period">Subscribe for %1$s</string>
     <string name="product_sign_up_with_price">Subscribe for %1$s/month</string>
     <string name="product_unavailable_in_country">We\'re working to make Twitter Blue available in your country in the future. Please check back later.</string>
     <string name="product_unavailable_in_country_dialog_title">Thanks for your interest!</string>
@@ -5935,6 +5945,7 @@
     <string name="settings_mute_block_item_title">Mute and block</string>
     <string name="settings_muted_notifications">Muted notifications</string>
     <string name="settings_news_subtitle">Discover relevant news, enjoy articles without ads and support the journalism you like to read.</string>
+    <string name="settings_news_subtitle_without_ads_free">Discover relevant news and get a better thread-reading experience.</string>
     <string name="settings_news_title">A better news reading experience</string>
     <string name="settings_no_location_permission_message">Location permission for Twitter is disabled. Enable Location permission for Twitter in {{}}App Info{{}}.</string>
     <string name="settings_notif_timeline_title">Tweets</string>
@@ -6638,6 +6649,7 @@
     <string name="subscriptions_loading_error_title">Oops, something went wrong. Please try again later.</string>
     <string name="subscriptions_subscriber_header_title">Twitter Blue</string>
     <string name="subscriptions_support_label">Get support</string>
+    <string name="subscriptions_temporarily_disabled_message">You can only subscribe on the Twitter iOS app (for now).</string>
     <string name="subscriptions_twitter_blue_profile_label">@twitterblue</string>
     <string name="subscriptions_welcome_okay_button_label">Okay</string>
     <string name="subscriptions_welcome_subtitle">Customise your settings and start getting the most out of your Twitter Blue subscription.</string>
@@ -6652,12 +6664,12 @@
     <string name="summary_collapsed_preference_list">%1$s, %2$s</string>
     <string name="sunday">Sunday</string>
     <string name="super_follow">Super Follow</string>
-    <string name="super_follow_badge_description">Allow anyone to see your Super Follower badge when you reply to @%1$s’s Tweets</string>
-    <string name="super_follow_badge_explanation">When you turn this off, @%1$s and their Super Followers will still see your badge when you reply to @%1$s’s Super Follower-only Tweets. @%1$s will always see your badge.\10\10{{}}Learn more{{}}</string>
+    <string name="super_follow_badge_description">Allow anyone to see your Subscriber badge when you reply to @%1$s’s Tweets</string>
+    <string name="super_follow_badge_explanation">When you turn this off, @%1$s and their Subscribers will still see your badge when you reply to @%1$s’s Subscribers-only Tweets. @%1$s will always see your badge.\10\10{{}}Learn more{{}}</string>
     <string name="super_follow_badge_subtitle">Super Follower badge</string>
     <string name="super_follow_close">Close</string>
     <string name="super_follow_content_desc">Super follow %1$s.</string>
-    <string name="super_follow_creator">Super Follow @%s</string>
+    <string name="super_follow_creator">Subscribe to @%s</string>
     <string name="super_follow_manage_subscription">Manage Subscription</string>
     <string name="super_follow_manage_subscription_already_cancelled_description">If you have already cancelled your subscription, your benefits will automatically expire at the end of the billing cycle.</string>
     <string name="super_follow_manage_subscription_already_cancelled_subtitle">Already cancelled your subscription?</string>
@@ -7153,7 +7165,7 @@
     <string name="tweet_action_moderate">Hide Reply</string>
     <string name="tweet_action_thread_reader_cta">View thread in Reader</string>
     <string name="tweet_action_unmoderate">Unhide Reply</string>
-    <string name="tweet_action_view_birdwatch_notes">View Birdwatch Notes</string>
+    <string name="tweet_action_view_birdwatch_notes">View Community Notes</string>
     <string name="tweet_action_view_moderated_tweets">View Hidden Replies</string>
     <string name="tweet_actions_disabled">Some actions on this Tweet have been disabled by Twitter.</string>
     <string name="tweet_added_to_your_bookmarks">Tweet added to your Bookmarks</string>
@@ -7402,6 +7414,7 @@
     <string name="upload_contacts_summary">Contacts from your address book will be uploaded to Twitter on an ongoing basis to help connect you with your friends and personalise the content you see, such as making suggestions for you and others. Turning off syncing will not remove previously uploaded contacts. {{}}Learn more{{}}</string>
     <string name="upsell_card_pill_text">New</string>
     <string name="upsell_card_title">Early access to edit your Tweets. Now you can fix those typos.</string>
+    <string name="upsell_card_title_blue_verified">Blue looks good on you. Enjoy your verified account and blue checkmark.</string>
     <string name="url_dm_abuse_interstitial_learn_more">https://help.twitter.com/safety-and-security/report-a-tweet</string>
     <string name="url_limit_tweet_error">Too many links in Tweet</string>
     <string name="use_a_temporary_password_message">You will need to generate a temporary password on twitter.com to continue.</string>
@@ -7487,8 +7500,9 @@
     <string name="users_unblock_title">Unblock @%s?</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
-    <string name="verification_education_desc">This account is verified because it\'s notable in government, news, entertainment or another designated category. {{}}Learn more{{}}</string>
-    <string name="verification_education_title">Account Information</string>
+    <string name="verification_education_blue_desc">This account is verified because it’s subscribed to Twitter Blue. {{}}Learn more{{}}</string>
+    <string name="verification_education_desc">This account is verified because it’s notable in government, news, entertainment or another designated category. {{}}Learn more{{}}</string>
+    <string name="verification_education_title">Verified account</string>
     <string name="verification_landing_active_card_text">Your account must be active with a record of adherence to the Twitter rules, including a complete profile and a confirmed contact method.</string>
     <string name="verification_landing_active_card_title">Active</string>
     <string name="verification_landing_authentic_card_text">To maintain trust between users on the platform, you will also need to confirm your identity with Twitter in order to be Verified.</string>
@@ -7521,9 +7535,9 @@
     <string name="verified_phone_off">Off</string>
     <string name="verified_phone_on">On</string>
     <string name="verified_phone_status_learn_more">Learn more</string>
-    <string name="verified_phone_status_learn_more_title">Visibility restricted to customers actively using Twitter from your region.</string>
-    <string name="verified_phone_status_title">Verified phone number badge</string>
-    <string name="verified_phone_status_toggle_title">Show category on profile</string>
+    <string name="verified_phone_status_learn_more_title">Add a phone confirmation mark to your profile to show you’ve confirmed your phone number. This mark will only be shown to others in your region.</string>
+    <string name="verified_phone_status_title">Confirmed phone number mark</string>
+    <string name="verified_phone_status_toggle_title">Display confirmed phone number mark</string>
     <string name="verify_phone_change_number">Change my phone</string>
     <string name="verify_phone_phone_already_verified">Your Phone is already verified</string>
     <string name="vertical_grid_module_show_more_btn">Show More</string>

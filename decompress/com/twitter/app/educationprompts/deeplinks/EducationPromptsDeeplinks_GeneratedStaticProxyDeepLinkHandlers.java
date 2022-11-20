@@ -12,23 +12,23 @@ import android.content.Context;
 public class EducationPromptsDeeplinks_GeneratedStaticProxyDeepLinkHandlers
 {
     public static Intent EducationPromptsDeeplinks_openSafetyEducationPrompt(final Context context, final Bundle bundle) {
-        zzd.f((Object)context, "context");
-        zzd.f((Object)bundle, "extras");
+        czd.f((Object)context, "context");
+        czd.f((Object)bundle, "extras");
         final byte[] byteArray = bundle.getByteArray("ref_event_namespace");
-        Objects.requireNonNull(nca.Companion);
-        final nca nca = (nca)tkp.a(byteArray, (alp)nca.b.b);
+        Objects.requireNonNull(vba.Companion);
+        final vba vba = (vba)klp.a(byteArray, (rlp)vba$b.b);
         String a = null;
         Label_0056: {
-            if (nca != null) {
-                a = nca.a;
+            if (vba != null) {
+                a = vba.a;
                 if (a != null) {
                     break Label_0056;
                 }
             }
             a = "";
         }
-        final Intent c = gd8.c(context, (vqa<Intent>)new xx9(context, a, bundle));
-        zzd.e((Object)c, "wrapLoggedInOnlyIntent(c\u2026)\n            }\n        }");
+        final Intent c = rc8.c(context, (spa)new kx9(context, a, (Object)bundle, 0));
+        czd.e((Object)c, "wrapLoggedInOnlyIntent(c\u2026)\n            }\n        }");
         return c;
     }
 }

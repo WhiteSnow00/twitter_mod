@@ -9,57 +9,65 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonImageCrop$$JsonObjectMapper extends JsonMapper<JsonImageCrop>
 {
-    public static JsonImageCrop _parse(final khe khe) throws IOException {
+    public static JsonImageCrop _parse(final tge tge) throws IOException {
         final JsonImageCrop jsonImageCrop = new JsonImageCrop();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonImageCrop, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonImageCrop, d, tge);
+            tge.l0();
         }
         return jsonImageCrop;
     }
     
-    public static void _serialize(final JsonImageCrop jsonImageCrop, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonImageCrop jsonImageCrop, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.T("height", jsonImageCrop.d);
-        tfe.T("left", jsonImageCrop.a);
-        tfe.T("top", jsonImageCrop.b);
-        tfe.T("width", jsonImageCrop.c);
+        afe.T("height", jsonImageCrop.d);
+        afe.T("left", jsonImageCrop.a);
+        afe.T("top", jsonImageCrop.b);
+        afe.T("width", jsonImageCrop.c);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonImageCrop jsonImageCrop, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonImageCrop jsonImageCrop, final String s, final tge tge) throws IOException {
         if ("height".equals(s)) {
-            jsonImageCrop.d = khe.z();
+            jsonImageCrop.d = tge.y();
         }
         else if ("left".equals(s)) {
-            jsonImageCrop.a = khe.z();
+            jsonImageCrop.a = tge.y();
         }
         else if ("top".equals(s)) {
-            jsonImageCrop.b = khe.z();
+            jsonImageCrop.b = tge.y();
         }
         else if ("width".equals(s)) {
-            jsonImageCrop.c = khe.z();
+            jsonImageCrop.c = tge.y();
         }
     }
     
-    public JsonImageCrop parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonImageCrop parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonImageCrop jsonImageCrop, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonImageCrop, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonImageCrop jsonImageCrop, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonImageCrop, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonImageCrop)o, afe, b);
     }
 }

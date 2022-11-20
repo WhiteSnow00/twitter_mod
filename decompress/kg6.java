@@ -1,16 +1,25 @@
-import com.twitter.commerce.api.merchantconfiguration.ShopSpotlightConfigContentViewResult;
-import com.twitter.commerce.api.merchantconfiguration.ShopSpotlightConfigContentViewArgs;
+import com.twitter.onboarding.ocf.OcfContentViewResult;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kg6
+public final class kg6 extends ste implements qsb<Throwable, taj<? extends OcfContentViewResult>>
 {
-    public final xn6<ShopSpotlightConfigContentViewArgs, ShopSpotlightConfigContentViewResult> a;
+    public static final kg6 D0;
     
-    public kg6(final mbi<?> mbi) {
-        zzd.f((Object)mbi, "navigator");
-        this.a = mbi.a(ShopSpotlightConfigContentViewResult.class);
+    static {
+        D0 = new kg6();
+    }
+    
+    public kg6() {
+        super(1);
+    }
+    
+    public final Object invoke(final Object o) {
+        final Throwable t = (Throwable)o;
+        czd.f((Object)t, "error");
+        m8a.d(t);
+        return h5j.just((Object)new OcfContentViewResult(new zdj(2)));
     }
 }

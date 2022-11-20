@@ -11,39 +11,38 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonAlertDialog extends lhh<tw>
+public class JsonAlertDialog extends qhh<uw>
 {
     @JsonField
     public JsonOcfRichText a;
     @JsonField
     public JsonOcfRichText b;
     @JsonField
-    public xrv c;
+    public ssv c;
     @JsonField
-    public xrv d;
+    public ssv d;
     @JsonField
-    public xrv e;
+    public ssv e;
     @JsonField
     public JsonOcfComponentCollection f;
     
-    @Override
-    public final h4j t() {
-        final tw.b b = new tw.b();
-        b.f = JsonOcfRichText.s(this.a);
-        final int a = w4j.a;
-        b.g = JsonOcfRichText.s(this.b);
-        b.a = this.c;
-        b.c = this.d;
-        b.k = this.e;
+    public final n4j t() {
+        final uw$b uw$b = new uw$b();
+        ((dtr$a)uw$b).f = JsonOcfRichText.s(this.a);
+        final int a = c5j.a;
+        ((dtr$a)uw$b).g = JsonOcfRichText.s(this.b);
+        ((dtr$a)uw$b).a = this.c;
+        ((dtr$a)uw$b).c = this.d;
+        uw$b.k = this.e;
         final JsonOcfComponentCollection f = this.f;
-        n16 t;
+        x06 t;
         if (f != null) {
             t = f.t();
         }
         else {
             t = null;
         }
-        b.j = t;
-        return (h4j)b;
+        ((dtr$a)uw$b).j = t;
+        return (n4j)uw$b;
     }
 }

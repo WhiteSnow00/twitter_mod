@@ -1,17 +1,20 @@
-import android.view.ViewGroup$MarginLayoutParams;
-import android.widget.FrameLayout$LayoutParams;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gvq
+public final class gvq extends kkl
 {
-    public static final FrameLayout$LayoutParams a;
+    public static final gvq D0;
     
     static {
-        final FrameLayout$LayoutParams a2 = new FrameLayout$LayoutParams(-5, -5);
-        ((ViewGroup$MarginLayoutParams)a2).setMarginStart(-16);
-        a = a2;
+        D0 = new gvq();
+    }
+    
+    public gvq() {
+        super((Class)vvq.class, "stations", "getStations()Ljava/util/List;", 0);
+    }
+    
+    public final Object get(final Object o) {
+        return ((vvq)o).d;
     }
 }

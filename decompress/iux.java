@@ -1,45 +1,29 @@
-import java.util.Objects;
+import com.twitter.util.user.UserIdentifier;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class iux extends as4
+public final class iux extends enm<z7p, Boolean, jux>
 {
-    public iux() {
-        Objects.requireNonNull(vr4.Companion);
-        final vr4$a companion = vr4.Companion;
-        super("Generic XYZ", vr4.b, 14);
+    public final UserIdentifier E0;
+    
+    public iux(final UserIdentifier e0) {
+        this.E0 = e0;
     }
     
-    @Override
-    public final float[] a(final float[] array) {
-        zzd.f((Object)array, "v");
-        array[0] = this.f(array[0]);
-        array[1] = this.f(array[1]);
-        array[2] = this.f(array[2]);
-        return array;
+    public final orc c(final Object o) {
+        final z7p z7p = (z7p)o;
+        final UserIdentifier e0 = this.E0;
+        final z7p d = z7p.d;
+        z7p z7p2 = z7p;
+        if (z7p == null) {
+            z7p2 = d;
+        }
+        return (orc)new jux(e0, z7p2);
     }
     
-    @Override
-    public final float b(final int n) {
-        return 2.0f;
-    }
-    
-    @Override
-    public final float c(final int n) {
-        return -2.0f;
-    }
-    
-    @Override
-    public final float[] e(final float[] array) {
-        array[0] = this.f(array[0]);
-        array[1] = this.f(array[1]);
-        array[2] = this.f(array[2]);
-        return array;
-    }
-    
-    public final float f(final float n) {
-        return pf8.u(n, -2.0f, 2.0f);
+    public final Object d(final orc orc) {
+        return ((orc)orc).T().b;
     }
 }

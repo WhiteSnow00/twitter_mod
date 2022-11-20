@@ -12,124 +12,132 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonPhoneVerification$$JsonObjectMapper extends JsonMapper<JsonPhoneVerification>
 {
-    public static JsonPhoneVerification _parse(final khe khe) throws IOException {
+    public static JsonPhoneVerification _parse(final tge tge) throws IOException {
         final JsonPhoneVerification jsonPhoneVerification = new JsonPhoneVerification();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonPhoneVerification, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonPhoneVerification, d, tge);
+            tge.l0();
         }
         return jsonPhoneVerification;
     }
     
-    public static void _serialize(final JsonPhoneVerification jsonPhoneVerification, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonPhoneVerification jsonPhoneVerification, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("auto_verify_hint_text", jsonPhoneVerification.i);
+        afe.t0("auto_verify_hint_text", jsonPhoneVerification.i);
         if (jsonPhoneVerification.g != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonPhoneVerification.g, "cancel_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonPhoneVerification.g, "cancel_link", true, afe);
         }
-        tfe.T("code_length", jsonPhoneVerification.l);
+        afe.T("code_length", (int)jsonPhoneVerification.l);
         if (jsonPhoneVerification.m != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonPhoneVerification.m, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonPhoneVerification.m, afe, true);
         }
         if (jsonPhoneVerification.c != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonPhoneVerification.c, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonPhoneVerification.c, afe, true);
         }
         if (jsonPhoneVerification.h != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonPhoneVerification.h, "fail_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonPhoneVerification.h, "fail_link", true, afe);
         }
-        tfe.u0("hint_text", jsonPhoneVerification.d);
+        afe.t0("hint_text", jsonPhoneVerification.d);
         if (jsonPhoneVerification.f != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonPhoneVerification.f, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonPhoneVerification.f, "next_link", true, afe);
         }
         if (jsonPhoneVerification.k != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonPhoneVerification.k, "phone_country_code", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonPhoneVerification.k, "phone_country_code", true, afe);
         }
         if (jsonPhoneVerification.e != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonPhoneVerification.e, "phone_number", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonPhoneVerification.e, "phone_number", true, afe);
         }
         if (jsonPhoneVerification.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonPhoneVerification.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonPhoneVerification.a, afe, true);
         }
         if (jsonPhoneVerification.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonPhoneVerification.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonPhoneVerification.b, afe, true);
         }
-        tfe.e("send_via_voice", jsonPhoneVerification.j);
+        afe.e("send_via_voice", jsonPhoneVerification.j);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonPhoneVerification jsonPhoneVerification, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonPhoneVerification jsonPhoneVerification, final String s, final tge tge) throws IOException {
         final boolean equals = "auto_verify_hint_text".equals(s);
         final Integer n = null;
         if (equals) {
-            jsonPhoneVerification.i = khe.T((String)null);
+            jsonPhoneVerification.i = tge.T((String)null);
         }
         else if ("cancel_link".equals(s)) {
-            jsonPhoneVerification.g = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonPhoneVerification.g = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("code_length".equals(s)) {
             Integer value;
-            if (khe.e() == lje.U0) {
+            if (tge.e() == vie.V0) {
                 value = n;
             }
             else {
-                value = khe.z();
+                value = tge.y();
             }
             jsonPhoneVerification.l = value;
         }
         else if ("component_collection".equals(s)) {
-            jsonPhoneVerification.m = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonPhoneVerification.m = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            jsonPhoneVerification.c = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonPhoneVerification.c = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("fail_link".equals(s)) {
-            jsonPhoneVerification.h = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonPhoneVerification.h = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("hint_text".equals(s)) {
-            jsonPhoneVerification.d = khe.T((String)null);
+            jsonPhoneVerification.d = tge.T((String)null);
         }
         else if ("next_link".equals(s)) {
-            jsonPhoneVerification.f = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonPhoneVerification.f = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("phone_country_code".equals(s)) {
-            jsonPhoneVerification.k = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+            jsonPhoneVerification.k = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
         }
         else if ("phone_number".equals(s)) {
-            jsonPhoneVerification.e = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+            jsonPhoneVerification.e = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonPhoneVerification.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonPhoneVerification.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("secondary_text".equals(s)) {
-            jsonPhoneVerification.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonPhoneVerification.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("send_via_voice".equals(s)) {
-            jsonPhoneVerification.j = khe.k();
+            jsonPhoneVerification.j = tge.k();
         }
     }
     
-    public JsonPhoneVerification parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonPhoneVerification parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonPhoneVerification jsonPhoneVerification, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonPhoneVerification, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonPhoneVerification jsonPhoneVerification, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonPhoneVerification, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonPhoneVerification)o, afe, b);
     }
 }

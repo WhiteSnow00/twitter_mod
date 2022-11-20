@@ -13,90 +13,98 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonShowCode$$JsonObjectMapper extends JsonMapper<JsonShowCode>
 {
-    public static final h3q SHOW_CODE_STYLE_TYPE_CONVERTER;
+    public static final y3q SHOW_CODE_STYLE_TYPE_CONVERTER;
     
     static {
-        SHOW_CODE_STYLE_TYPE_CONVERTER = new h3q();
+        SHOW_CODE_STYLE_TYPE_CONVERTER = new y3q();
     }
     
-    public static JsonShowCode _parse(final khe khe) throws IOException {
+    public static JsonShowCode _parse(final tge tge) throws IOException {
         final JsonShowCode jsonShowCode = new JsonShowCode();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonShowCode, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonShowCode, d, tge);
+            tge.l0();
         }
         return jsonShowCode;
     }
     
-    public static void _serialize(final JsonShowCode jsonShowCode, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonShowCode jsonShowCode, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("code", jsonShowCode.c);
+        afe.t0("code", jsonShowCode.c);
         if (jsonShowCode.g != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonShowCode.g, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonShowCode.g, afe, true);
         }
         if (jsonShowCode.d != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonShowCode.d, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonShowCode.d, afe, true);
         }
         if (jsonShowCode.a != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)jsonShowCode.a, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)jsonShowCode.a, "header", true, afe);
         }
         if (jsonShowCode.e != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonShowCode.e, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonShowCode.e, "next_link", true, afe);
         }
         if (jsonShowCode.f != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonShowCode.f, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonShowCode.f, "skip_link", true, afe);
         }
-        final g3q b2 = jsonShowCode.b;
+        final x3q b2 = jsonShowCode.b;
         if (b2 != null) {
-            ((StringBasedTypeConverter)JsonShowCode$$JsonObjectMapper.SHOW_CODE_STYLE_TYPE_CONVERTER).serialize((Object)b2, "style", true, tfe);
+            ((StringBasedTypeConverter)JsonShowCode$$JsonObjectMapper.SHOW_CODE_STYLE_TYPE_CONVERTER).serialize((Object)b2, "style", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonShowCode jsonShowCode, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonShowCode jsonShowCode, final String s, final tge tge) throws IOException {
         if ("code".equals(s)) {
-            jsonShowCode.c = khe.T((String)null);
+            jsonShowCode.c = tge.T((String)null);
         }
         else if ("component_collection".equals(s)) {
-            jsonShowCode.g = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonShowCode.g = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            jsonShowCode.d = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonShowCode.d = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("header".equals(s)) {
-            jsonShowCode.a = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            jsonShowCode.a = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonShowCode.e = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonShowCode.e = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            jsonShowCode.f = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonShowCode.f = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("style".equals(s)) {
-            jsonShowCode.b = (g3q)((StringBasedTypeConverter)JsonShowCode$$JsonObjectMapper.SHOW_CODE_STYLE_TYPE_CONVERTER).parse(khe);
+            jsonShowCode.b = (x3q)((StringBasedTypeConverter)JsonShowCode$$JsonObjectMapper.SHOW_CODE_STYLE_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonShowCode parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonShowCode parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonShowCode jsonShowCode, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonShowCode, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonShowCode jsonShowCode, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonShowCode, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonShowCode)o, afe, b);
     }
 }

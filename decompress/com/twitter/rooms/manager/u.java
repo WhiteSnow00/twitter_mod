@@ -11,24 +11,24 @@ import com.twitter.rooms.di.room.RoomObjectGraph;
 import com.twitter.rooms.model.helpers.RoomUserItem;
 import java.util.List;
 
-public final class u extends gue implements rtb<gqn, gqn>
+public final class u extends ste implements qsb<vqn, vqn>
 {
-    public final /* synthetic */ boolean C0;
-    public final /* synthetic */ gqn D0;
-    public final /* synthetic */ List<RoomUserItem> E0;
-    public final /* synthetic */ List<RoomUserItem> F0;
+    public final boolean D0;
+    public final vqn E0;
+    public final List<RoomUserItem> F0;
+    public final List<RoomUserItem> G0;
     
-    public u(final boolean c0, final gqn d0, final List<RoomUserItem> e0, final List<RoomUserItem> f0) {
-        this.C0 = c0;
+    public u(final boolean d0, final vqn e0, final List<RoomUserItem> f0, final List<RoomUserItem> g0) {
         this.D0 = d0;
         this.E0 = e0;
         this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final gqn gqn = (gqn)o;
-        zzd.f((Object)gqn, "$this$setState");
-        return gqn.l(gqn, null, null, this.C0 || (zzd.a((Object)gqn.A, (Object)Boolean.TRUE) && !tdy.V(this.D0)), null, null, null, null, null, null, null, null, null, or4.r2((Iterable)this.E0), or4.r2((Iterable)this.F0), null, null, null, null, 0, 0, null, null, null, false, null, null, null, false, null, 0, null, null, null, null, null, false, null, false, false, false, null, null, false, -12293, 2047);
+        final vqn vqn = (vqn)o;
+        czd.f((Object)vqn, "$this$setState");
+        return vqn.l(vqn, null, null, this.D0 || (czd.a((Object)vqn.A, (Object)Boolean.TRUE) && !blz.I(this.E0)), null, null, null, null, null, null, null, null, null, mq4.R0((Iterable)this.F0), mq4.R0((Iterable)this.G0), null, null, null, null, 0, 0, null, null, null, false, null, null, null, false, null, 0, null, null, null, null, null, false, null, false, false, false, null, null, false, -12293, 2047);
     }
 }

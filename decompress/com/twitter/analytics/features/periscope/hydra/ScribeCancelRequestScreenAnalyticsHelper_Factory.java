@@ -4,7 +4,7 @@
 
 package com.twitter.analytics.features.periscope.hydra;
 
-public final class ScribeCancelRequestScreenAnalyticsHelper_Factory<T extends szo> implements wqa<yyo<T>>
+public final class ScribeCancelRequestScreenAnalyticsHelper_Factory<T extends j0p> implements tpa<ozo<T>>
 {
     public final Object get() {
         throw null;

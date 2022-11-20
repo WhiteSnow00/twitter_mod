@@ -11,55 +11,55 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSubscriptionEventBuilder$$JsonObjectMapper extends JsonMapper<JsonSubscriptionEventBuilder>
 {
-    public static JsonSubscriptionEventBuilder _parse(final khe khe) throws IOException {
+    public static JsonSubscriptionEventBuilder _parse(final tge tge) throws IOException {
         final JsonSubscriptionEventBuilder jsonSubscriptionEventBuilder = new JsonSubscriptionEventBuilder();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSubscriptionEventBuilder, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSubscriptionEventBuilder, d, tge);
+            tge.l0();
         }
         return jsonSubscriptionEventBuilder;
     }
     
-    public static void _serialize(final JsonSubscriptionEventBuilder jsonSubscriptionEventBuilder, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSubscriptionEventBuilder jsonSubscriptionEventBuilder, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final tmr[] a = jsonSubscriptionEventBuilder.a;
+        final mnr[] a = jsonSubscriptionEventBuilder.a;
         if (a != null) {
-            tfe.i("errors");
-            tfe.q0();
-            for (final tmr tmr : a) {
-                if (tmr != null) {
-                    LoganSquare.typeConverterFor((Class)tmr.class).serialize((Object)tmr, "lslocalerrorsElement", false, tfe);
+            afe.i("errors");
+            afe.p0();
+            for (final mnr mnr : a) {
+                if (mnr != null) {
+                    LoganSquare.typeConverterFor((Class)mnr.class).serialize((Object)mnr, "lslocalerrorsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSubscriptionEventBuilder jsonSubscriptionEventBuilder, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSubscriptionEventBuilder jsonSubscriptionEventBuilder, final String s, final tge tge) throws IOException {
         if ("errors".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList list = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final tmr tmr = (tmr)LoganSquare.typeConverterFor((Class)tmr.class).parse(khe);
-                    if (tmr != null) {
-                        list.add(tmr);
+                while (tge.h0() != vie.O0) {
+                    final mnr mnr = (mnr)LoganSquare.typeConverterFor((Class)mnr.class).parse(tge);
+                    if (mnr != null) {
+                        list.add(mnr);
                     }
                 }
-                jsonSubscriptionEventBuilder.a = list.toArray(new tmr[list.size()]);
+                jsonSubscriptionEventBuilder.a = list.toArray(new mnr[list.size()]);
             }
             else {
                 jsonSubscriptionEventBuilder.a = null;
@@ -67,11 +67,19 @@ public final class JsonSubscriptionEventBuilder$$JsonObjectMapper extends JsonMa
         }
     }
     
-    public JsonSubscriptionEventBuilder parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSubscriptionEventBuilder parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSubscriptionEventBuilder jsonSubscriptionEventBuilder, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSubscriptionEventBuilder, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSubscriptionEventBuilder jsonSubscriptionEventBuilder, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSubscriptionEventBuilder, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSubscriptionEventBuilder)o, afe, b);
     }
 }

@@ -9,26 +9,25 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonJsInstrumentation extends lhh<wce>
+public class JsonJsInstrumentation extends qhh<bce>
 {
     @JsonField
     public String a;
     @JsonField
     public int b;
     @JsonField
-    public xrv c;
+    public ssv c;
     
-    @Override
-    public final h4j t() {
-        final wce$a wce$a = new wce$a();
-        final xrv c = this.c;
-        pf8.r(c);
-        ((lsr$a)wce$a).a = c;
-        final int a = w4j.a;
+    public final n4j t() {
+        final bce$a bce$a = new bce$a();
+        final ssv c = this.c;
+        jee.l((Object)c);
+        ((dtr$a)bce$a).a = c;
+        final int a = c5j.a;
         final String a2 = this.a;
-        pf8.q(a2);
-        wce$a.k = a2;
-        wce$a.l = this.b;
-        return (h4j)wce$a;
+        jee.k(a2);
+        bce$a.k = a2;
+        bce$a.l = this.b;
+        return (n4j)bce$a;
     }
 }

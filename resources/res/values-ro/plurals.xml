@@ -519,6 +519,18 @@
         <item quantity="one">%s abonat</item>
         <item quantity="other">%s abonați</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">zi</item>
+        <item quantity="other">%d zile</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">lună</item>
+        <item quantity="other">%d luni</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">an</item>
+        <item quantity="other">%d ani</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d zi</item>
         <item quantity="other">%d de zile</item>

@@ -2,16 +2,13 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gye extends gue implements otb<Integer>
+public final class gye
 {
-    public final /* synthetic */ cze C0;
+    public final wgk a;
+    public final Object b;
     
-    public gye(final cze c0) {
-        this.C0 = c0;
-        super(0);
-    }
-    
-    public final Object invoke() {
-        return this.C0.d();
+    public gye(final wgk a, final Object b) {
+        this.a = a;
+        this.b = b;
     }
 }

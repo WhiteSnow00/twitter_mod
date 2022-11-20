@@ -9,52 +9,60 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLiveSportsScore$$JsonObjectMapper extends JsonMapper<JsonLiveSportsScore>
 {
-    public static JsonLiveSportsScore _parse(final khe khe) throws IOException {
+    public static JsonLiveSportsScore _parse(final tge tge) throws IOException {
         final JsonLiveSportsScore jsonLiveSportsScore = new JsonLiveSportsScore();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveSportsScore, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonLiveSportsScore, d, tge);
+            tge.l0();
         }
         return jsonLiveSportsScore;
     }
     
-    public static void _serialize(final JsonLiveSportsScore jsonLiveSportsScore, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveSportsScore jsonLiveSportsScore, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonLiveSportsScore.b != null) {
-            tfe.i("data");
-            JsonLiveSportsScore$JsonLiveSportsScoreData$$JsonObjectMapper._serialize(jsonLiveSportsScore.b, tfe, true);
+            afe.i("data");
+            JsonLiveSportsScore$JsonLiveSportsScoreData$$JsonObjectMapper._serialize(jsonLiveSportsScore.b, afe, true);
         }
-        tfe.u0("status", jsonLiveSportsScore.a);
+        afe.t0("status", jsonLiveSportsScore.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveSportsScore jsonLiveSportsScore, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveSportsScore jsonLiveSportsScore, final String s, final tge tge) throws IOException {
         if ("data".equals(s)) {
-            jsonLiveSportsScore.b = JsonLiveSportsScore$JsonLiveSportsScoreData$$JsonObjectMapper._parse(khe);
+            jsonLiveSportsScore.b = JsonLiveSportsScore$JsonLiveSportsScoreData$$JsonObjectMapper._parse(tge);
         }
         else if ("status".equals(s)) {
-            jsonLiveSportsScore.a = khe.T((String)null);
+            jsonLiveSportsScore.a = tge.T((String)null);
         }
     }
     
-    public JsonLiveSportsScore parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveSportsScore parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveSportsScore jsonLiveSportsScore, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveSportsScore, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveSportsScore jsonLiveSportsScore, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonLiveSportsScore, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveSportsScore)o, afe, b);
     }
 }

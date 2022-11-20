@@ -1,32 +1,22 @@
-import androidx.recyclerview.widget.RecyclerView$m;
-import java.util.Set;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.RecyclerView$r;
+import android.widget.TextView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fuq extends RecyclerView$r
+public final class fuq extends ste implements qsb<luq, fzv>
 {
-    public final /* synthetic */ euq a;
-    public final /* synthetic */ c4e<wdr> b;
+    public final vtq D0;
     
-    public fuq(final euq a, final c4e<wdr> b) {
-        this.a = a;
-        this.b = b;
+    public fuq(final vtq d0) {
+        this.D0 = d0;
+        super(1);
     }
     
-    public final void a(final RecyclerView recyclerView, final int n) {
-        zzd.f((Object)recyclerView, "recyclerView");
-        if (n == 0 && this.a.Z0.get()) {
-            final udr i0 = this.a.I0;
-            final y4e f0 = this.b.F0;
-            zzd.e((Object)f0, "adapter.itemProvider");
-            final RecyclerView$m layoutManager = ((RecyclerView)this.a.O0).getLayoutManager();
-            zzd.d((Object)layoutManager, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
-            i0.a(f0, (LinearLayoutManager)layoutManager, (Set)this.a.Y0);
-        }
+    public final Object invoke(final Object o) {
+        final luq luq = (luq)o;
+        czd.f((Object)luq, "$this$distinct");
+        ((TextView)this.D0.K0).setText((CharSequence)luq.b);
+        return fzv.a;
     }
 }

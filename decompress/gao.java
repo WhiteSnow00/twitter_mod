@@ -1,101 +1,53 @@
 import com.twitter.weaver.mvi.MviViewModel;
-import tv.periscope.model.b;
-import java.util.Map;
-import java.util.Set;
-import com.twitter.rooms.model.AudioSpaceCommunityRoleType;
-import com.twitter.rooms.model.RaisedHand;
-import com.twitter.rooms.model.helpers.RoomUserItem;
-import java.util.List;
-import java.util.Objects;
-import com.twitter.rooms.manager.RoomStateManager;
+import java.util.Iterator;
 import com.twitter.rooms.di.room.RoomObjectGraph;
+import com.twitter.rooms.model.helpers.RoomUserItem;
+import java.util.ArrayList;
+import java.util.Set;
+import com.twitter.rooms.manager.RoomStateManager;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gao extends gue implements gub<RoomObjectGraph, gqn, oyv>
+public final class gao extends ste implements nsb<fzv>
 {
-    public final /* synthetic */ r57 C0;
-    public final /* synthetic */ String D0;
-    public final /* synthetic */ RoomStateManager E0;
-    public final /* synthetic */ boolean F0;
-    public final /* synthetic */ boolean G0;
-    public final /* synthetic */ boolean H0;
+    public final RoomStateManager D0;
+    public final Set<s21> E0;
+    public final String F0;
+    public final String G0;
+    public final boolean H0;
+    public final boolean I0;
+    public final boolean J0;
     
-    public gao(final r57 c0, final String d0, final RoomStateManager e0, final boolean f0, final boolean g0, final boolean h0) {
-        this.C0 = c0;
+    public gao(final RoomStateManager d0, final Set<s21> e0, final String f0, final String g0, final boolean h0, final boolean i0, final boolean j0) {
         this.D0 = d0;
         this.E0 = e0;
         this.F0 = f0;
         this.G0 = g0;
         this.H0 = h0;
-        super(2);
+        this.I0 = i0;
+        this.J0 = j0;
+        super(0);
     }
     
-    public final Object invoke(Object o, final Object o2) {
-        final RoomObjectGraph roomObjectGraph = (RoomObjectGraph)o;
-        final gqn gqn = (gqn)o2;
-        zzd.f((Object)roomObjectGraph, "$this$withCurrentRoomAndState");
-        zzd.f((Object)gqn, "state");
-        roomObjectGraph.h0().u(this.C0, gqn.c, this.D0);
-        final b b = this.C0.b();
-        final iu3 d = this.C0.d();
-        zzd.e((Object)d, "createdBroadcast.chatAccess()");
-        this.E0.a1.d = b.w();
-        final RoomStateManager e0 = this.E0;
-        final gjo a1 = e0.a1;
-        final String stringId = e0.m0().getStringId();
-        final String n = this.E0.T0.n();
-        a1.e = stringId;
-        a1.f = n;
-        this.E0.a1.g0(this.F0);
-        this.E0.a1.d0(this.G0);
-        final gjo a2 = this.E0.a1;
-        final String w = this.C0.b().w();
-        zzd.e((Object)w, "createdBroadcast.broadcast().id()");
-        Objects.requireNonNull(a2);
-        final oio a3 = oio.a;
-        gjo.H(a2, "audiospace", "event", "creation", "", "success", w, null, null, null, null, null, null, dta.b().b("spaces_2022_h2_entity_enabled", false), null, null, null, null, null, null, 520128);
-        gjo.G(this.E0.a1, "creation", "", "create", "click", null, 48);
-        final String stringId2 = this.E0.S0.k().getStringId();
-        String j0 = b.j0();
-        if (j0 == null) {
-            j0 = "";
+    public final Object invoke() {
+        final RoomStateManager d0 = this.D0;
+        final RoomObjectGraph a = d0.P0.a((vin$a)d0);
+        a.E2().b((t5k.b)this.D0);
+        this.D0.b1.h = "replay";
+        final Set<s21> e0 = this.E0;
+        final String f0 = this.F0;
+        final String g0 = this.G0;
+        final ArrayList list = new ArrayList<RoomUserItem>(iq4.H((Iterable)e0, 10));
+        for (final s21 s21 : e0) {
+            list.add(fli.I0(s21, wio.D0, (Set)p2a.D0, f0, czd.a((Object)s21.a, (Object)g0)));
         }
-        String c = this.E0.S0.getUser().c();
-        if (c == null) {
-            c = "";
-        }
-        String d2 = this.E0.S0.getUser().D0;
-        if (d2 == null) {
-            d2 = "";
-        }
-        final hio c2 = hio.C0;
-        final boolean m0 = this.E0.S0.getUser().M0;
-        Boolean b2;
-        if ((b2 = this.E0.S0.getUser().h()) == null) {
-            b2 = Boolean.FALSE;
-        }
-        final boolean booleanValue = b2;
-        String j2 = this.E0.S0.getUser().J0;
-        if (j2 == null) {
-            j2 = "";
-        }
-        final String w2 = this.C0.b().w();
-        zzd.e((Object)w2, "createdBroadcast.broadcast().id()");
-        o = new RoomUserItem(stringId2, j0, c, false, d2, c2, false, m0, booleanValue, j2, w2, (Boolean)null, Boolean.valueOf(gqn.c), true, (RaisedHand)null, false, false, false, false, (Integer)null, (AudioSpaceCommunityRoleType)null, 2082816, (hg8)null);
-        final String w3 = b.w();
-        Set<RoomUserItem> set;
-        if (this.H0 && (gqn.n.isEmpty() ^ true)) {
-            set = gqn.n;
-        }
-        else {
-            set = rqu.K(o);
-        }
-        final gqn l = gqn.l(gqn, null, w3, false, null, b, null, null, null, d, null, null, null, null, set, null, null, null, null, 0, 0, null, null, null, false, this.D0, null, null, false, null, 0, null, null, null, null, null, false, null, false, false, false, null, null, false, -16785683, 2047);
-        this.E0.Q0.a(l, (String)null, false);
-        ((MviViewModel)this.E0).Q((rtb)new fao(l));
-        return oyv.a;
+        ((MviViewModel)this.D0).Q((qsb)new cao(a, mq4.R0((Iterable)list), this.G0, this.H0, this.I0));
+        this.D0.s0("joinReplay request started");
+        final RoomStateManager d2 = this.D0;
+        final String f2 = this.F0;
+        ((MviViewModel)d2).C((eaq)a.h0().h(false, f2, false, null), (qsb)new fao(d2, (Set)this.E0, f2, a, a, this.J0, this.I0));
+        return fzv.a;
     }
 }

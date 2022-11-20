@@ -1,38 +1,21 @@
-import com.twitter.weaver.mvi.MviViewModel;
-import com.twitter.business.moduleconfiguration.businessinfo.BusinessInfoViewModel;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-@gb8(c = "com.twitter.business.moduleconfiguration.businessinfo.BusinessInfoViewModel$clearAllData$1$2$1", f = "BusinessInfoViewModel.kt", l = {}, m = "invokeSuspend")
-public final class dz2 extends xzr implements gub<oyv, ap6<? super oyv>, Object>
+public final class dz2 extends ste implements qsb<kz2, kz2>
 {
-    public final /* synthetic */ BusinessInfoViewModel C0;
+    public static final dz2 D0;
     
-    public dz2(final BusinessInfoViewModel c0, final ap6<? super dz2> ap6) {
-        this.C0 = c0;
-        super(2, (ap6)ap6);
+    static {
+        D0 = new dz2();
     }
     
-    public final ap6<oyv> create(final Object o, final ap6<?> ap6) {
-        return (ap6<oyv>)new dz2(this.C0, (ap6<? super dz2>)ap6);
+    public dz2() {
+        super(1);
     }
     
-    public final Object invoke(final Object o, final Object o2) {
-        final dz2 dz2 = (dz2)this.create(o, (ap6<?>)o2);
-        final oyv a = oyv.a;
-        dz2.invokeSuspend(a);
-        return a;
-    }
-    
-    public final Object invokeSuspend(final Object o) {
-        kq9.b1(o);
-        this.C0.R0.f();
-        final BusinessInfoViewModel c0 = this.C0;
-        c0.a1.clearAllData();
-        ((MviViewModel)c0).Q((rtb)lz2.C0);
-        ((MviViewModel)this.C0).V((Object)new ax2$a(true, 2));
-        return oyv.a;
+    public final Object invoke(final Object o) {
+        czd.f((Object)o, "$this$setState");
+        return new kz2((String)null, (String)null, (String)null, (String)null, (String)null, false, false, false, false, 4095);
     }
 }

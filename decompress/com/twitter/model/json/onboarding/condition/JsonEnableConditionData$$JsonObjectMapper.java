@@ -9,48 +9,56 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonEnableConditionData$$JsonObjectMapper extends JsonMapper<JsonEnableConditionData>
 {
-    public static JsonEnableConditionData _parse(final khe khe) throws IOException {
+    public static JsonEnableConditionData _parse(final tge tge) throws IOException {
         final JsonEnableConditionData jsonEnableConditionData = new JsonEnableConditionData();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonEnableConditionData, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonEnableConditionData, d, tge);
+            tge.l0();
         }
         return jsonEnableConditionData;
     }
     
-    public static void _serialize(final JsonEnableConditionData jsonEnableConditionData, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonEnableConditionData jsonEnableConditionData, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonEnableConditionData.a != null) {
-            tfe.i("boolean_all_true_data");
-            JsonBooleanAllTrueData$$JsonObjectMapper._serialize(jsonEnableConditionData.a, tfe, true);
+            afe.i("boolean_all_true_data");
+            JsonBooleanAllTrueData$$JsonObjectMapper._serialize(jsonEnableConditionData.a, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonEnableConditionData jsonEnableConditionData, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonEnableConditionData jsonEnableConditionData, final String s, final tge tge) throws IOException {
         if ("boolean_all_true_data".equals(s)) {
-            jsonEnableConditionData.a = JsonBooleanAllTrueData$$JsonObjectMapper._parse(khe);
+            jsonEnableConditionData.a = JsonBooleanAllTrueData$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonEnableConditionData parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonEnableConditionData parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonEnableConditionData jsonEnableConditionData, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonEnableConditionData, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonEnableConditionData jsonEnableConditionData, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonEnableConditionData, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonEnableConditionData)o, afe, b);
     }
 }

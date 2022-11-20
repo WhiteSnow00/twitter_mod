@@ -14,68 +14,68 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonToggleWrapperContent$$JsonObjectMapper extends JsonMapper<JsonToggleWrapperContent>
 {
-    public static JsonToggleWrapperContent _parse(final khe khe) throws IOException {
+    public static JsonToggleWrapperContent _parse(final tge tge) throws IOException {
         final JsonToggleWrapperContent jsonToggleWrapperContent = new JsonToggleWrapperContent();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonToggleWrapperContent, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonToggleWrapperContent, d, tge);
+            tge.l0();
         }
         return jsonToggleWrapperContent;
     }
     
-    public static void _serialize(final JsonToggleWrapperContent jsonToggleWrapperContent, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonToggleWrapperContent jsonToggleWrapperContent, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         jsonToggleWrapperContent.t();
-        tfe.i("action_text");
-        JsonOcfRichText$$JsonObjectMapper._serialize(jsonToggleWrapperContent.t(), tfe, true);
+        afe.i("action_text");
+        JsonOcfRichText$$JsonObjectMapper._serialize(jsonToggleWrapperContent.t(), afe, true);
         final List b2 = jsonToggleWrapperContent.b;
         if (b2 != null) {
-            final Iterator f = x30.F(tfe, "components", b2);
-            while (f.hasNext()) {
-                final fqp fqp = f.next();
-                if (fqp != null) {
-                    LoganSquare.typeConverterFor((Class)fqp.class).serialize((Object)fqp, "lslocalcomponentsElement", false, tfe);
+            final Iterator g = hee.g(afe, "components", b2);
+            while (g.hasNext()) {
+                final wqp wqp = g.next();
+                if (wqp != null) {
+                    LoganSquare.typeConverterFor((Class)wqp.class).serialize((Object)wqp, "lslocalcomponentsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
             if (b) {
-                tfe.h();
+                afe.h();
             }
             return;
         }
-        zzd.m("components");
+        czd.m("components");
         throw null;
     }
     
-    public static void parseField(final JsonToggleWrapperContent jsonToggleWrapperContent, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonToggleWrapperContent jsonToggleWrapperContent, final String s, final tge tge) throws IOException {
         if ("action_text".equals(s)) {
-            final JsonOcfRichText parse = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            final JsonOcfRichText parse = JsonOcfRichText$$JsonObjectMapper._parse(tge);
             Objects.requireNonNull(jsonToggleWrapperContent);
-            zzd.f((Object)parse, "<set-?>");
+            czd.f((Object)parse, "<set-?>");
             jsonToggleWrapperContent.a = parse;
         }
         else if ("components".equals(s)) {
-            if (khe.e() != lje.M0) {
+            if (tge.e() != vie.N0) {
                 Objects.requireNonNull(jsonToggleWrapperContent);
-                zzd.f((Object)null, "<set-?>");
+                czd.f((Object)null, "<set-?>");
                 throw null;
             }
             final ArrayList b = new ArrayList();
-            while (khe.i0() != lje.N0) {
-                final fqp fqp = (fqp)LoganSquare.typeConverterFor((Class)fqp.class).parse(khe);
-                if (fqp != null) {
-                    b.add(fqp);
+            while (tge.h0() != vie.O0) {
+                final wqp wqp = (wqp)LoganSquare.typeConverterFor((Class)wqp.class).parse(tge);
+                if (wqp != null) {
+                    b.add(wqp);
                 }
             }
             Objects.requireNonNull(jsonToggleWrapperContent);
@@ -83,11 +83,19 @@ public final class JsonToggleWrapperContent$$JsonObjectMapper extends JsonMapper
         }
     }
     
-    public JsonToggleWrapperContent parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonToggleWrapperContent parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonToggleWrapperContent jsonToggleWrapperContent, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonToggleWrapperContent, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonToggleWrapperContent jsonToggleWrapperContent, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonToggleWrapperContent, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonToggleWrapperContent)o, afe, b);
     }
 }

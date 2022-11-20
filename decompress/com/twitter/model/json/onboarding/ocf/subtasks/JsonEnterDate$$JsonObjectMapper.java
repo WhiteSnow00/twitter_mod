@@ -12,109 +12,117 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonEnterDate$$JsonObjectMapper extends JsonMapper<JsonEnterDate>
 {
-    public static JsonEnterDate _parse(final khe khe) throws IOException {
+    public static JsonEnterDate _parse(final tge tge) throws IOException {
         final JsonEnterDate jsonEnterDate = new JsonEnterDate();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonEnterDate, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonEnterDate, d, tge);
+            tge.l0();
         }
         return jsonEnterDate;
     }
     
-    public static void _serialize(final JsonEnterDate jsonEnterDate, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonEnterDate jsonEnterDate, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonEnterDate.k != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEnterDate.k, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEnterDate.k, afe, true);
         }
         if (jsonEnterDate.b != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonEnterDate.b, "date", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonEnterDate.b, "date", true, afe);
         }
         if (jsonEnterDate.h != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterDate.h, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterDate.h, afe, true);
         }
         if (jsonEnterDate.a != null) {
-            LoganSquare.typeConverterFor((Class)iej.class).serialize((Object)jsonEnterDate.a, "header", true, tfe);
+            LoganSquare.typeConverterFor((Class)oej.class).serialize((Object)jsonEnterDate.a, "header", true, afe);
         }
-        tfe.u0("hint_text", jsonEnterDate.g);
+        afe.t0("hint_text", jsonEnterDate.g);
         if (jsonEnterDate.f != null) {
-            tfe.i("max_date_error");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterDate.f, tfe, true);
+            afe.i("max_date_error");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterDate.f, afe, true);
         }
         if (jsonEnterDate.e != null) {
-            tfe.i("min_date_error");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterDate.e, tfe, true);
+            afe.i("min_date_error");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEnterDate.e, afe, true);
         }
         if (jsonEnterDate.i != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEnterDate.i, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEnterDate.i, "next_link", true, afe);
         }
         if (jsonEnterDate.c != null) {
-            LoganSquare.typeConverterFor((Class)ga8.class).serialize((Object)jsonEnterDate.c, "selectable_interval", true, tfe);
+            LoganSquare.typeConverterFor((Class)q98.class).serialize((Object)jsonEnterDate.c, "selectable_interval", true, afe);
         }
         if (jsonEnterDate.j != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEnterDate.j, "skip_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEnterDate.j, "skip_link", true, afe);
         }
         if (jsonEnterDate.d != null) {
-            LoganSquare.typeConverterFor((Class)ga8.class).serialize((Object)jsonEnterDate.d, "valid_interval", true, tfe);
+            LoganSquare.typeConverterFor((Class)q98.class).serialize((Object)jsonEnterDate.d, "valid_interval", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonEnterDate jsonEnterDate, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonEnterDate jsonEnterDate, final String s, final tge tge) throws IOException {
         if ("component_collection".equals(s)) {
-            jsonEnterDate.k = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonEnterDate.k = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("date".equals(s)) {
-            jsonEnterDate.b = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+            jsonEnterDate.b = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
         }
         else if ("detail_text".equals(s)) {
-            jsonEnterDate.h = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterDate.h = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("header".equals(s)) {
-            jsonEnterDate.a = (iej)LoganSquare.typeConverterFor((Class)iej.class).parse(khe);
+            jsonEnterDate.a = (oej)LoganSquare.typeConverterFor((Class)oej.class).parse(tge);
         }
         else if ("hint_text".equals(s)) {
-            jsonEnterDate.g = khe.T((String)null);
+            jsonEnterDate.g = tge.T((String)null);
         }
         else if ("max_date_error".equals(s)) {
-            jsonEnterDate.f = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterDate.f = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("min_date_error".equals(s)) {
-            jsonEnterDate.e = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonEnterDate.e = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonEnterDate.i = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEnterDate.i = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("selectable_interval".equals(s)) {
-            jsonEnterDate.c = (ga8)LoganSquare.typeConverterFor((Class)ga8.class).parse(khe);
+            jsonEnterDate.c = (q98)LoganSquare.typeConverterFor((Class)q98.class).parse(tge);
         }
         else if ("skip_link".equals(s)) {
-            jsonEnterDate.j = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEnterDate.j = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("valid_interval".equals(s)) {
-            jsonEnterDate.d = (ga8)LoganSquare.typeConverterFor((Class)ga8.class).parse(khe);
+            jsonEnterDate.d = (q98)LoganSquare.typeConverterFor((Class)q98.class).parse(tge);
         }
     }
     
-    public JsonEnterDate parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonEnterDate parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonEnterDate jsonEnterDate, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonEnterDate, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonEnterDate jsonEnterDate, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonEnterDate, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonEnterDate)o, afe, b);
     }
 }

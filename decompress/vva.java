@@ -2,26 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class vva
+public final class vva extends ste implements qsb<Object, Boolean>
 {
-    public static final alp<vva> b;
-    public final String a;
+    public static final vva D0;
     
     static {
-        vva.b = new vva.vva$a();
+        D0 = new vva();
     }
     
-    public vva(final String a) {
-        this.a = a;
+    public vva() {
+        super(1);
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || (o != null && vva.class == o.getClass() && w4j.a((Object)this.a, (Object)((vva)o).a));
-    }
-    
-    @Override
-    public final int hashCode() {
-        return w4j.f((Object)this.a);
+    public final Object invoke(final Object o) {
+        return o instanceof xva;
     }
 }

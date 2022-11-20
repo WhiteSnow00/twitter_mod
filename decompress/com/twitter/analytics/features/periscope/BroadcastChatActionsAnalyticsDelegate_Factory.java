@@ -4,7 +4,7 @@
 
 package com.twitter.analytics.features.periscope;
 
-public final class BroadcastChatActionsAnalyticsDelegate_Factory<T extends szo> implements wqa<sg2<T>>
+public final class BroadcastChatActionsAnalyticsDelegate_Factory<T extends j0p> implements tpa<mg2<T>>
 {
     public final Object get() {
         throw null;

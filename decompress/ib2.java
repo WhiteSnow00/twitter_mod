@@ -1,148 +1,69 @@
-import java.util.Objects;
+import android.widget.CompoundButton;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+import android.view.View$OnClickListener;
+import android.view.LayoutInflater;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ib2
+public final class ib2 extends a3e<w84, jb2>
 {
-    public static final jb2 a;
-    public static final ib2$b b;
+    public final u84 d;
+    public final LayoutInflater e;
     
-    static {
-        Objects.requireNonNull(dx.Companion);
-        a = new jb2(false, (dx)dx$a.b);
-        b = ib2$b.a;
+    public ib2(final u84 d, final LayoutInflater e) {
+        czd.f((Object)d, "viewModel");
+        czd.f((Object)e, "layoutInflater");
+        super((Class)w84.class);
+        this.d = d;
+        this.e = e;
     }
     
-    public static final void a(final jkh jkh, m76 h, final int n) {
-        zzd.f((Object)jkh, "modifier");
-        h = h.h(-211209833);
-        int n3;
-        if ((n & 0xE) == 0x0) {
-            int n2;
-            if (h.P((Object)jkh)) {
-                n2 = 4;
-            }
-            else {
-                n2 = 2;
-            }
-            n3 = (n2 | n);
+    public final void k(final v7x v7x, final Object o, final xbm xbm) {
+        final jb2 jb2 = (jb2)v7x;
+        final w84 w84 = (w84)o;
+        czd.f((Object)jb2, "viewHolder");
+        czd.f((Object)w84, "item");
+        final String d0 = ((oxm)w84.a.b).D0;
+        czd.e((Object)d0, "item.choiceValue.text.text");
+        jb2.E0.setText((CharSequence)d0);
+        final cej c = w84.a.c;
+        String d2;
+        if (c != null) {
+            d2 = ((oxm)c).D0;
         }
         else {
+            d2 = null;
+        }
+        final TextView f0 = jb2.F0;
+        final int n = 1;
+        final int n2 = 0;
+        int n3;
+        if (d2 != null && d2.length() > 0) {
             n3 = n;
         }
-        if ((n3 & 0xB) == 0x2 && h.i()) {
-            h.H();
+        else {
+            n3 = 0;
+        }
+        int visibility;
+        if (n3 != 0) {
+            visibility = n2;
         }
         else {
-            final ea6$b a = ea6.a;
-            final ib2$b b = ib2.b;
-            h.x(-1323940314);
-            final dp8 dp8 = (dp8)h.m((re6)te6.e);
-            final tve tve = (tve)h.m((re6)te6.k);
-            final z5x z5x = (z5x)h.m((re6)te6.o);
-            Objects.requireNonNull(f76.Companion);
-            final jwe$a b2 = f76.a.b;
-            final jub a2 = cwe.a(jkh);
-            final int n4 = (((n3 << 3 & 0x70) | 0x180) << 9 & 0x1C00) | 0x6;
-            if (!(h.j() instanceof xr0)) {
-                ukg.l0();
-                throw null;
-            }
-            h.E();
-            if (h.f()) {
-                h.A((otb)b2);
-            }
-            else {
-                h.o();
-            }
-            h.F();
-            r9x.v(h, (Object)b, (gub)f76.a.e);
-            r9x.v(h, (Object)dp8, (gub)f76.a.d);
-            r9x.v(h, (Object)tve, (gub)f76.a.f);
-            ((j36)a2).h0((Object)hvl.b(h, z5x, f76.a.g, h), (Object)h, (Object)(n4 >> 3 & 0x70));
-            h.x(2058660585);
-            h.x(1021196736);
-            if ((n4 >> 9 & 0xE & 0xB) == 0x2) {
-                if (h.i()) {
-                    h.H();
-                }
-            }
-            h.O();
-            h.O();
-            h.r();
-            h.O();
+            visibility = 8;
         }
-        final vwo k = h.k();
-        if (k != null) {
-            k.a((gub)new ib2$a(jkh, n));
-        }
+        ((View)f0).setVisibility(visibility);
+        jb2.F0.setText((CharSequence)d2);
+        ((CompoundButton)jb2.G0).setChecked(this.d.f(w84.a));
+        ((View)jb2.G0).setOnClickListener((View$OnClickListener)new zof(this, w84, jb2, 4));
+        xbm.i((oj)new qbk(jb2, 23));
     }
     
-    public static final boolean b(final dqg dqg) {
-        final Object m = ((ezd)dqg).m();
-        hb2 hb2;
-        if (m instanceof hb2) {
-            hb2 = (hb2)m;
-        }
-        else {
-            hb2 = null;
-        }
-        return hb2 != null && hb2.E0;
-    }
-    
-    public static final void c(final qgk$a qgk$a, final qgk qgk, final dqg dqg, final tve tve, final int n, final int n2, final dx dx) {
-        final Object m = ((ezd)dqg).m();
-        hb2 hb2;
-        if (m instanceof hb2) {
-            hb2 = (hb2)m;
-        }
-        else {
-            hb2 = null;
-        }
-        dx d0 = null;
-        Label_0046: {
-            if (hb2 != null) {
-                d0 = hb2.D0;
-                if (d0 != null) {
-                    break Label_0046;
-                }
-            }
-            d0 = dx;
-        }
-        qgk$a.f(qgk$a, qgk, d0.a(lr0.b(qgk.C0, qgk.D0), lr0.b(n, n2), tve), 0.0f, 2, (Object)null);
-    }
-    
-    public static final gqg d(final dx dx, final boolean b, final m76 m76) {
-        zzd.f((Object)dx, "alignment");
-        m76.x(56522820);
-        final ea6$b a = ea6.a;
-        Objects.requireNonNull(dx.Companion);
-        gqg a2;
-        if (zzd.a((Object)dx, (Object)dx$a.b) && !b) {
-            a2 = ib2.a;
-        }
-        else {
-            m76.x(511388516);
-            final boolean p3 = m76.P((Object)dx);
-            final boolean p4 = m76.P((Object)b);
-            final Object y = m76.y();
-            gqg gqg = null;
-            Label_0126: {
-                if (!(p4 | p3)) {
-                    Objects.requireNonNull(m76.Companion);
-                    if ((gqg = (gqg)y) != m76$a.b) {
-                        break Label_0126;
-                    }
-                }
-                gqg = new jb2(b, dx);
-                m76.p((Object)gqg);
-            }
-            m76.O();
-            a2 = gqg;
-        }
-        m76.O();
-        return a2;
+    public final v7x l(final ViewGroup viewGroup) {
+        czd.f((Object)viewGroup, "parent");
+        return (v7x)new jb2(this.e, viewGroup);
     }
 }

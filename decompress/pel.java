@@ -2,6 +2,6 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public class pel extends rnd
+public interface pel
 {
 }

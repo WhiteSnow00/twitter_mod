@@ -516,6 +516,18 @@
         <item quantity="one">%s सब्सक्राइबर</item>
         <item quantity="other">%s सब्सक्राइबर</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">दिन</item>
+        <item quantity="other">%d दिन</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">माह</item>
+        <item quantity="other">%d माह</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">साल</item>
+        <item quantity="other">%d साल</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d दिन</item>
         <item quantity="other">%dदिन</item>

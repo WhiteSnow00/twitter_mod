@@ -1,75 +1,72 @@
-import android.app.Activity;
-import java.util.Objects;
-import java.util.UUID;
-import android.app.Application$ActivityLifecycleCallbacks;
-import android.app.Application;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class b4c implements qn
+public final class b4c extends ouh
 {
-    public static final b4c.b4c$b Companion;
-    public final sn C0;
-    
-    static {
-        Companion = new b4c.b4c$b();
+    public b4c(final int n, final whq whq) {
+        synchronized (yhq.c) {
+            final ArrayList h = yhq.h;
+            List p2;
+            if (h.isEmpty() ^ true) {
+                p2 = mq4.P0((Collection)h);
+            }
+            else {
+                p2 = null;
+            }
+            Object o;
+            if (p2 != null) {
+                if ((o = mq4.D0(p2)) == null) {
+                    o = new b4c$a(p2);
+                }
+            }
+            else {
+                o = null;
+            }
+            monitorexit(yhq.c);
+            super(n, whq, (qsb)null, (qsb)o);
+        }
     }
     
-    public b4c(final Application application, final ibm ibm) {
-        zzd.f((Object)application, "application");
-        zzd.f((Object)ibm, "releaseCompletable");
-        final sn c0 = new sn(ibm);
-        this.C0 = c0;
-        application.registerActivityLifecycleCallbacks((Application$ActivityLifecycleCallbacks)new b4c$a(this));
+    public final void c() {
+        synchronized (yhq.c) {
+            ((thq)this).n();
+        }
     }
     
-    public final qn A(final UUID uuid) {
-        zzd.f((Object)uuid, "retainedKey");
-        final sn c0 = this.C0;
-        Objects.requireNonNull(c0);
-        return pn.b((qn)c0, uuid);
+    public final void j(final thq thq) {
+        czd.f((Object)thq, "snapshot");
+        qiq.a();
+        throw null;
     }
     
-    public final raf<rn> F(final rtb<? super rn, Boolean> rtb) {
-        final sn c0 = this.C0;
-        Objects.requireNonNull(c0);
-        return (raf<rn>)dia.a((raf)c0, (rtb)rtb);
+    public final void k(final thq thq) {
+        czd.f((Object)thq, "snapshot");
+        qiq.a();
+        throw null;
     }
     
-    public final b5j<rn> a() {
-        return this.C0.a();
+    public final void l() {
+        yhq.a();
     }
     
-    public final b5j<igj> b() {
-        return (b5j<igj>)pn.d((qn)this.C0);
+    public final thq s(final qsb<Object, fzv> qsb) {
+        final b4c$c b4c$c = new b4c$c((qsb)qsb);
+        final qsb<whq, fzv> a = (qsb<whq, fzv>)yhq.a;
+        return (thq)yhq.f((qsb<? super whq, ?>)new aiq((qsb)b4c$c));
     }
     
-    public final b5j<lgj> c() {
-        return (b5j<lgj>)pn.g((qn)this.C0);
+    public final uhq u() {
+        throw new IllegalStateException("Cannot apply the global snapshot directly. Call Snapshot.advanceGlobalSnapshot".toString());
     }
     
-    public final b5j<ngj> h() {
-        return (b5j<ngj>)pn.i((qn)this.C0);
-    }
-    
-    public final b5j<hgj> j() {
-        return (b5j<hgj>)pn.c((qn)this.C0);
-    }
-    
-    public final b5j<jgj> p() {
-        return (b5j<jgj>)pn.e((qn)this.C0);
-    }
-    
-    public final b5j<kgj> q() {
-        return (b5j<kgj>)pn.f((qn)this.C0);
-    }
-    
-    public final qn w(final Activity activity) {
-        zzd.f((Object)activity, "activity");
-        final sn c0 = this.C0;
-        Objects.requireNonNull(c0);
-        return pn.a((qn)c0, activity);
+    public final ouh z(final qsb<Object, fzv> qsb, final qsb<Object, fzv> qsb2) {
+        final b4c$b b4c$b = new b4c$b((qsb)qsb, (qsb)qsb2);
+        final qsb<whq, fzv> a = (qsb<whq, fzv>)yhq.a;
+        return (ouh)yhq.f((qsb<? super whq, ?>)new aiq((qsb)b4c$b));
     }
 }

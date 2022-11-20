@@ -10,55 +10,63 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonJsInstrumentation$$JsonObjectMapper extends JsonMapper<JsonJsInstrumentation>
 {
-    public static JsonJsInstrumentation _parse(final khe khe) throws IOException {
+    public static JsonJsInstrumentation _parse(final tge tge) throws IOException {
         final JsonJsInstrumentation jsonJsInstrumentation = new JsonJsInstrumentation();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonJsInstrumentation, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonJsInstrumentation, d, tge);
+            tge.l0();
         }
         return jsonJsInstrumentation;
     }
     
-    public static void _serialize(final JsonJsInstrumentation jsonJsInstrumentation, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonJsInstrumentation jsonJsInstrumentation, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonJsInstrumentation.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonJsInstrumentation.c, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonJsInstrumentation.c, "next_link", true, afe);
         }
-        tfe.T("timeout_ms", jsonJsInstrumentation.b);
-        tfe.u0("url", jsonJsInstrumentation.a);
+        afe.T("timeout_ms", jsonJsInstrumentation.b);
+        afe.t0("url", jsonJsInstrumentation.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonJsInstrumentation jsonJsInstrumentation, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonJsInstrumentation jsonJsInstrumentation, final String s, final tge tge) throws IOException {
         if ("next_link".equals(s)) {
-            jsonJsInstrumentation.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonJsInstrumentation.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("timeout_ms".equals(s)) {
-            jsonJsInstrumentation.b = khe.z();
+            jsonJsInstrumentation.b = tge.y();
         }
         else if ("url".equals(s)) {
-            jsonJsInstrumentation.a = khe.T((String)null);
+            jsonJsInstrumentation.a = tge.T((String)null);
         }
     }
     
-    public JsonJsInstrumentation parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonJsInstrumentation parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonJsInstrumentation jsonJsInstrumentation, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonJsInstrumentation, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonJsInstrumentation jsonJsInstrumentation, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonJsInstrumentation, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonJsInstrumentation)o, afe, b);
     }
 }

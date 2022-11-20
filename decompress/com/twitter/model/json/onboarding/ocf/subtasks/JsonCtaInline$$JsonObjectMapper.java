@@ -11,58 +11,66 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonCtaInline$$JsonObjectMapper extends JsonMapper<JsonCtaInline>
 {
-    public static JsonCtaInline _parse(final khe khe) throws IOException {
+    public static JsonCtaInline _parse(final tge tge) throws IOException {
         final JsonCtaInline jsonCtaInline = new JsonCtaInline();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonCtaInline, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonCtaInline, d, tge);
+            tge.l0();
         }
         return jsonCtaInline;
     }
     
-    public static void _serialize(final JsonCtaInline jsonCtaInline, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonCtaInline jsonCtaInline, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonCtaInline.c != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonCtaInline.c, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonCtaInline.c, afe, true);
         }
         if (jsonCtaInline.b != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonCtaInline.b, "primary_action_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonCtaInline.b, "primary_action_link", true, afe);
         }
-        tfe.u0("primary_text", jsonCtaInline.a);
+        afe.t0("primary_text", jsonCtaInline.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonCtaInline jsonCtaInline, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonCtaInline jsonCtaInline, final String s, final tge tge) throws IOException {
         if ("component_collection".equals(s)) {
-            jsonCtaInline.c = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+            jsonCtaInline.c = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
         }
         else if ("primary_action_link".equals(s)) {
-            jsonCtaInline.b = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonCtaInline.b = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonCtaInline.a = khe.T((String)null);
+            jsonCtaInline.a = tge.T((String)null);
         }
     }
     
-    public JsonCtaInline parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonCtaInline parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonCtaInline jsonCtaInline, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonCtaInline, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonCtaInline jsonCtaInline, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonCtaInline, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonCtaInline)o, afe, b);
     }
 }

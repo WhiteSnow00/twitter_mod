@@ -2,16 +2,15 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ivz implements hvz
+public interface ivz
 {
-    public static final tcz a;
+    double a();
     
-    static {
-        a = (tcz)new edz(icz.a(), false, true).c("measurement.scheduler.task_thread.cleanup_on_exit", false);
-    }
+    long c();
     
-    @Override
-    public final boolean a() {
-        return (boolean)((mdz)ivz.a).b();
-    }
+    long d();
+    
+    String e();
+    
+    boolean f();
 }

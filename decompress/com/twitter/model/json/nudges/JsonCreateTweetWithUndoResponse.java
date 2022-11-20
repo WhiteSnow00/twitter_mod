@@ -8,10 +8,9 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCreateTweetWithUndoResponse extends lhh<n57>
+public class JsonCreateTweetWithUndoResponse extends qhh<r47>
 {
-    @Override
-    public final h4j t() {
-        return (h4j)new n57$a();
+    public final n4j t() {
+        return (n4j)new r47$a();
     }
 }

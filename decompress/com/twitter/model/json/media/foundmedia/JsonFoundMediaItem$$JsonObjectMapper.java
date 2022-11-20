@@ -12,83 +12,83 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFoundMediaItem$$JsonObjectMapper extends JsonMapper<JsonFoundMediaItem>
 {
-    public static JsonFoundMediaItem _parse(final khe khe) throws IOException {
+    public static JsonFoundMediaItem _parse(final tge tge) throws IOException {
         final JsonFoundMediaItem jsonFoundMediaItem = new JsonFoundMediaItem();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFoundMediaItem, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFoundMediaItem, d, tge);
+            tge.l0();
         }
         return jsonFoundMediaItem;
     }
     
-    public static void _serialize(final JsonFoundMediaItem jsonFoundMediaItem, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFoundMediaItem jsonFoundMediaItem, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("alt_text", jsonFoundMediaItem.h);
+        afe.t0("alt_text", jsonFoundMediaItem.h);
         if (jsonFoundMediaItem.d != null) {
-            LoganSquare.typeConverterFor((Class)snb.class).serialize((Object)jsonFoundMediaItem.d, "found_media_origin", true, tfe);
+            LoganSquare.typeConverterFor((Class)pmb.class).serialize((Object)jsonFoundMediaItem.d, "found_media_origin", true, afe);
         }
-        tfe.u0("id", jsonFoundMediaItem.c);
-        tfe.u0("item_type", jsonFoundMediaItem.b);
+        afe.t0("id", jsonFoundMediaItem.c);
+        afe.t0("item_type", jsonFoundMediaItem.b);
         if (jsonFoundMediaItem.g != null) {
-            LoganSquare.typeConverterFor((Class)pnb.class).serialize((Object)jsonFoundMediaItem.g, "original_image", true, tfe);
+            LoganSquare.typeConverterFor((Class)mmb.class).serialize((Object)jsonFoundMediaItem.g, "original_image", true, afe);
         }
         if (jsonFoundMediaItem.a != null) {
-            LoganSquare.typeConverterFor((Class)tnb.class).serialize((Object)jsonFoundMediaItem.a, "provider", true, tfe);
+            LoganSquare.typeConverterFor((Class)qmb.class).serialize((Object)jsonFoundMediaItem.a, "provider", true, afe);
         }
         final ArrayList f = jsonFoundMediaItem.f;
         if (f != null) {
-            final Iterator g = q1a.g(tfe, "thumbnail_images", f);
-            while (g.hasNext()) {
-                final pnb pnb = g.next();
-                if (pnb != null) {
-                    LoganSquare.typeConverterFor((Class)pnb.class).serialize((Object)pnb, "lslocalthumbnail_imagesElement", false, tfe);
+            final Iterator a = br.A(afe, "thumbnail_images", f);
+            while (a.hasNext()) {
+                final mmb mmb = a.next();
+                if (mmb != null) {
+                    LoganSquare.typeConverterFor((Class)mmb.class).serialize((Object)mmb, "lslocalthumbnail_imagesElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("url", jsonFoundMediaItem.e);
+        afe.t0("url", jsonFoundMediaItem.e);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFoundMediaItem jsonFoundMediaItem, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFoundMediaItem jsonFoundMediaItem, final String s, final tge tge) throws IOException {
         if ("alt_text".equals(s)) {
-            jsonFoundMediaItem.h = khe.T((String)null);
+            jsonFoundMediaItem.h = tge.T((String)null);
         }
         else if ("found_media_origin".equals(s)) {
-            jsonFoundMediaItem.d = (snb)LoganSquare.typeConverterFor((Class)snb.class).parse(khe);
+            jsonFoundMediaItem.d = (pmb)LoganSquare.typeConverterFor((Class)pmb.class).parse(tge);
         }
         else if ("id".equals(s)) {
-            jsonFoundMediaItem.c = khe.T((String)null);
+            jsonFoundMediaItem.c = tge.T((String)null);
         }
         else if ("item_type".equals(s)) {
-            jsonFoundMediaItem.b = khe.T((String)null);
+            jsonFoundMediaItem.b = tge.T((String)null);
         }
         else if ("original_image".equals(s)) {
-            jsonFoundMediaItem.g = (pnb)LoganSquare.typeConverterFor((Class)pnb.class).parse(khe);
+            jsonFoundMediaItem.g = (mmb)LoganSquare.typeConverterFor((Class)mmb.class).parse(tge);
         }
         else if ("provider".equals(s)) {
-            jsonFoundMediaItem.a = (tnb)LoganSquare.typeConverterFor((Class)tnb.class).parse(khe);
+            jsonFoundMediaItem.a = (qmb)LoganSquare.typeConverterFor((Class)qmb.class).parse(tge);
         }
         else if ("thumbnail_images".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList f = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final pnb pnb = (pnb)LoganSquare.typeConverterFor((Class)pnb.class).parse(khe);
-                    if (pnb != null) {
-                        f.add(pnb);
+                while (tge.h0() != vie.O0) {
+                    final mmb mmb = (mmb)LoganSquare.typeConverterFor((Class)mmb.class).parse(tge);
+                    if (mmb != null) {
+                        f.add(mmb);
                     }
                 }
                 jsonFoundMediaItem.f = f;
@@ -98,15 +98,23 @@ public final class JsonFoundMediaItem$$JsonObjectMapper extends JsonMapper<JsonF
             }
         }
         else if ("url".equals(s)) {
-            jsonFoundMediaItem.e = khe.T((String)null);
+            jsonFoundMediaItem.e = tge.T((String)null);
         }
     }
     
-    public JsonFoundMediaItem parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFoundMediaItem parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFoundMediaItem jsonFoundMediaItem, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFoundMediaItem, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFoundMediaItem jsonFoundMediaItem, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFoundMediaItem, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFoundMediaItem)o, afe, b);
     }
 }

@@ -9,49 +9,57 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSubtaskDataReference$$JsonObjectMapper extends JsonMapper<JsonSubtaskDataReference>
 {
-    public static JsonSubtaskDataReference _parse(final khe khe) throws IOException {
+    public static JsonSubtaskDataReference _parse(final tge tge) throws IOException {
         final JsonSubtaskDataReference jsonSubtaskDataReference = new JsonSubtaskDataReference();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSubtaskDataReference, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSubtaskDataReference, d, tge);
+            tge.l0();
         }
         return jsonSubtaskDataReference;
     }
     
-    public static void _serialize(final JsonSubtaskDataReference jsonSubtaskDataReference, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSubtaskDataReference jsonSubtaskDataReference, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("key", jsonSubtaskDataReference.b);
-        tfe.u0("subtask_id", jsonSubtaskDataReference.a);
+        afe.t0("key", jsonSubtaskDataReference.b);
+        afe.t0("subtask_id", jsonSubtaskDataReference.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSubtaskDataReference jsonSubtaskDataReference, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSubtaskDataReference jsonSubtaskDataReference, final String s, final tge tge) throws IOException {
         if ("key".equals(s)) {
-            jsonSubtaskDataReference.b = khe.T((String)null);
+            jsonSubtaskDataReference.b = tge.T((String)null);
         }
         else if ("subtask_id".equals(s)) {
-            jsonSubtaskDataReference.a = khe.T((String)null);
+            jsonSubtaskDataReference.a = tge.T((String)null);
         }
     }
     
-    public JsonSubtaskDataReference parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSubtaskDataReference parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSubtaskDataReference jsonSubtaskDataReference, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSubtaskDataReference, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSubtaskDataReference jsonSubtaskDataReference, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSubtaskDataReference, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSubtaskDataReference)o, afe, b);
     }
 }

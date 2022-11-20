@@ -11,10 +11,10 @@ import android.content.Context;
 public class GalleryDeepLinks_GeneratedStaticProxyDeepLinkHandlers
 {
     public static Intent GalleryDeepLinks_deepLinkToPhotoLarge(final Context context, final Bundle bundle) {
-        zzd.f((Object)context, "context");
-        zzd.f((Object)bundle, "extras");
-        final Intent b = gd8.b(context, (vqa<Intent>)new zwb(bundle, context, 0));
-        zzd.e((Object)b, "wrapLogInIfLoggedOutInte\u2026)\n            }\n        }");
+        czd.f((Object)context, "context");
+        czd.f((Object)bundle, "extras");
+        final Intent b = rc8.b(context, (spa)new vmo(bundle, context, 2));
+        czd.e((Object)b, "wrapLogInIfLoggedOutInte\u2026)\n            }\n        }");
         return b;
     }
 }

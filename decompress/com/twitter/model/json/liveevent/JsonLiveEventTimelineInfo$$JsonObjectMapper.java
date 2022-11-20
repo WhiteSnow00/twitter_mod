@@ -10,75 +10,83 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLiveEventTimelineInfo$$JsonObjectMapper extends JsonMapper<JsonLiveEventTimelineInfo>
 {
-    public static JsonLiveEventTimelineInfo _parse(final khe khe) throws IOException {
+    public static JsonLiveEventTimelineInfo _parse(final tge tge) throws IOException {
         final JsonLiveEventTimelineInfo jsonLiveEventTimelineInfo = new JsonLiveEventTimelineInfo();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveEventTimelineInfo, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonLiveEventTimelineInfo, d, tge);
+            tge.l0();
         }
         return jsonLiveEventTimelineInfo;
     }
     
-    public static void _serialize(final JsonLiveEventTimelineInfo jsonLiveEventTimelineInfo, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveEventTimelineInfo jsonLiveEventTimelineInfo, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("compose_semantic_core_id", jsonLiveEventTimelineInfo.d);
-        tfe.u0("compose_timeline_id", jsonLiveEventTimelineInfo.f);
+        afe.t0("compose_semantic_core_id", jsonLiveEventTimelineInfo.d);
+        afe.t0("compose_timeline_id", jsonLiveEventTimelineInfo.f);
         if (jsonLiveEventTimelineInfo.e != null) {
-            LoganSquare.typeConverterFor((Class)ae7.class).serialize((Object)jsonLiveEventTimelineInfo.e, "customization_info", true, tfe);
+            LoganSquare.typeConverterFor((Class)hd7.class).serialize((Object)jsonLiveEventTimelineInfo.e, "customization_info", true, afe);
         }
-        tfe.u0("hashtag", jsonLiveEventTimelineInfo.c);
-        tfe.u0("timeline_id", jsonLiveEventTimelineInfo.a);
-        tfe.u0("timeline_source_id", jsonLiveEventTimelineInfo.g);
-        tfe.u0("timeline_source_type", jsonLiveEventTimelineInfo.h);
-        tfe.u0("title", jsonLiveEventTimelineInfo.b);
+        afe.t0("hashtag", jsonLiveEventTimelineInfo.c);
+        afe.t0("timeline_id", jsonLiveEventTimelineInfo.a);
+        afe.t0("timeline_source_id", jsonLiveEventTimelineInfo.g);
+        afe.t0("timeline_source_type", jsonLiveEventTimelineInfo.h);
+        afe.t0("title", jsonLiveEventTimelineInfo.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveEventTimelineInfo jsonLiveEventTimelineInfo, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveEventTimelineInfo jsonLiveEventTimelineInfo, final String s, final tge tge) throws IOException {
         if ("compose_semantic_core_id".equals(s)) {
-            jsonLiveEventTimelineInfo.d = khe.T((String)null);
+            jsonLiveEventTimelineInfo.d = tge.T((String)null);
         }
         else if ("compose_timeline_id".equals(s)) {
-            jsonLiveEventTimelineInfo.f = khe.T((String)null);
+            jsonLiveEventTimelineInfo.f = tge.T((String)null);
         }
         else if ("customization_info".equals(s)) {
-            jsonLiveEventTimelineInfo.e = (ae7)LoganSquare.typeConverterFor((Class)ae7.class).parse(khe);
+            jsonLiveEventTimelineInfo.e = (hd7)LoganSquare.typeConverterFor((Class)hd7.class).parse(tge);
         }
         else if ("hashtag".equals(s)) {
-            jsonLiveEventTimelineInfo.c = khe.T((String)null);
+            jsonLiveEventTimelineInfo.c = tge.T((String)null);
         }
         else if ("timeline_id".equals(s)) {
-            jsonLiveEventTimelineInfo.a = khe.T((String)null);
+            jsonLiveEventTimelineInfo.a = tge.T((String)null);
         }
         else if ("timeline_source_id".equals(s)) {
-            jsonLiveEventTimelineInfo.g = khe.T((String)null);
+            jsonLiveEventTimelineInfo.g = tge.T((String)null);
         }
         else if ("timeline_source_type".equals(s)) {
-            jsonLiveEventTimelineInfo.h = khe.T((String)null);
+            jsonLiveEventTimelineInfo.h = tge.T((String)null);
         }
         else if ("title".equals(s)) {
-            jsonLiveEventTimelineInfo.b = khe.T((String)null);
+            jsonLiveEventTimelineInfo.b = tge.T((String)null);
         }
     }
     
-    public JsonLiveEventTimelineInfo parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveEventTimelineInfo parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveEventTimelineInfo jsonLiveEventTimelineInfo, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveEventTimelineInfo, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveEventTimelineInfo jsonLiveEventTimelineInfo, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonLiveEventTimelineInfo, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveEventTimelineInfo)o, afe, b);
     }
 }

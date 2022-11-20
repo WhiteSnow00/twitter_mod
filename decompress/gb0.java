@@ -1,67 +1,116 @@
-import java.io.IOException;
+import android.graphics.Rect;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
+import android.graphics.ColorFilter;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gb0
+public class gb0<T extends fb0> implements fb0
 {
-    public static final alp<gb0> d;
-    public final String a;
-    public final String b;
-    public final int c;
+    public T D0;
     
-    static {
-        gb0.d = new a();
+    public gb0(final T d0) {
+        this.D0 = d0;
     }
     
-    public gb0(final b b) {
-        final String a = b.a;
-        pf8.r(a);
-        this.a = a;
-        final String b2 = b.b;
-        pf8.r(b2);
-        this.b = b2;
-        this.c = b.c;
+    public final int b() {
+        final fb0 d0 = this.D0;
+        int b;
+        if (d0 == null) {
+            b = 0;
+        }
+        else {
+            b = ((lb0)d0).b();
+        }
+        return b;
     }
     
-    public static final class a extends js2<gb0, b>
-    {
-        public a() {
-            super(0);
-        }
-        
-        public final void f(final flp flp, final Object o) throws IOException {
-            final gb0 gb0 = (gb0)o;
-            flp.G(gb0.a);
-            flp.G(gb0.b);
-            flp.z(gb0.c);
-        }
-        
-        public final h4j g() {
-            return new b();
-        }
-        
-        public final void h(final elp elp, final h4j h4j, final int n) throws IOException, ClassNotFoundException {
-            final b b = (b)h4j;
-            b.a = elp.I();
-            b.b = elp.I();
-            b.c = elp.z();
+    @Override
+    public final void clear() {
+        final fb0 d0 = this.D0;
+        if (d0 != null) {
+            d0.clear();
         }
     }
     
-    public static final class b extends h4j<gb0>
-    {
-        public String a;
-        public String b;
-        public int c;
-        
-        public final Object i() {
-            return new gb0(this);
+    public final int e() {
+        final fb0 d0 = this.D0;
+        int e;
+        if (d0 == null) {
+            e = 0;
         }
-        
-        public final boolean l() {
-            return this.a != null && this.b != null;
+        else {
+            e = ((lb0)d0).e();
         }
+        return e;
+    }
+    
+    @Override
+    public final void l(final ColorFilter colorFilter) {
+        final fb0 d0 = this.D0;
+        if (d0 != null) {
+            d0.l(colorFilter);
+        }
+    }
+    
+    @Override
+    public boolean r(final Drawable drawable, final Canvas canvas, final int n) {
+        final fb0 d0 = this.D0;
+        return d0 != null && d0.r(drawable, canvas, n);
+    }
+    
+    public final int t(int t) {
+        final fb0 d0 = this.D0;
+        if (d0 == null) {
+            t = 0;
+        }
+        else {
+            t = ((lb0)d0).t(t);
+        }
+        return t;
+    }
+    
+    @Override
+    public final void u(final int n) {
+        final fb0 d0 = this.D0;
+        if (d0 != null) {
+            d0.u(n);
+        }
+    }
+    
+    @Override
+    public final int v() {
+        final fb0 d0 = this.D0;
+        int v;
+        if (d0 == null) {
+            v = -1;
+        }
+        else {
+            v = d0.v();
+        }
+        return v;
+    }
+    
+    @Override
+    public final void w(final Rect rect) {
+        final fb0 d0 = this.D0;
+        if (d0 != null) {
+            d0.w(rect);
+        }
+    }
+    
+    @Override
+    public final int y() {
+        final fb0 d0 = this.D0;
+        int y;
+        if (d0 == null) {
+            y = -1;
+        }
+        else {
+            y = d0.y();
+        }
+        return y;
     }
 }

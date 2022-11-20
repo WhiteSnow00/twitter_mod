@@ -10,51 +10,59 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFetchUserRecommendationsResponse$$JsonObjectMapper extends JsonMapper<JsonFetchUserRecommendationsResponse>
 {
-    public static JsonFetchUserRecommendationsResponse _parse(final khe khe) throws IOException {
+    public static JsonFetchUserRecommendationsResponse _parse(final tge tge) throws IOException {
         final JsonFetchUserRecommendationsResponse jsonFetchUserRecommendationsResponse = new JsonFetchUserRecommendationsResponse();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFetchUserRecommendationsResponse, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFetchUserRecommendationsResponse, d, tge);
+            tge.l0();
         }
         return jsonFetchUserRecommendationsResponse;
     }
     
-    public static void _serialize(final JsonFetchUserRecommendationsResponse jsonFetchUserRecommendationsResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFetchUserRecommendationsResponse jsonFetchUserRecommendationsResponse, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.e("deduplication", jsonFetchUserRecommendationsResponse.b);
+        afe.e("deduplication", jsonFetchUserRecommendationsResponse.b);
         if (jsonFetchUserRecommendationsResponse.a != null) {
-            LoganSquare.typeConverterFor((Class)egw.class).serialize((Object)jsonFetchUserRecommendationsResponse.a, "user_recommendations", true, tfe);
+            LoganSquare.typeConverterFor((Class)xgw.class).serialize((Object)jsonFetchUserRecommendationsResponse.a, "user_recommendations", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonFetchUserRecommendationsResponse jsonFetchUserRecommendationsResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFetchUserRecommendationsResponse jsonFetchUserRecommendationsResponse, final String s, final tge tge) throws IOException {
         if ("deduplication".equals(s)) {
-            jsonFetchUserRecommendationsResponse.b = khe.k();
+            jsonFetchUserRecommendationsResponse.b = tge.k();
         }
         else if ("user_recommendations".equals(s)) {
-            jsonFetchUserRecommendationsResponse.a = (egw)LoganSquare.typeConverterFor((Class)egw.class).parse(khe);
+            jsonFetchUserRecommendationsResponse.a = (xgw)LoganSquare.typeConverterFor((Class)xgw.class).parse(tge);
         }
     }
     
-    public JsonFetchUserRecommendationsResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFetchUserRecommendationsResponse parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonFetchUserRecommendationsResponse jsonFetchUserRecommendationsResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFetchUserRecommendationsResponse, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonFetchUserRecommendationsResponse jsonFetchUserRecommendationsResponse, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFetchUserRecommendationsResponse, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonFetchUserRecommendationsResponse)o, afe, b);
     }
 }

@@ -522,6 +522,18 @@
         <item quantity="one">%s підписник</item>
         <item quantity="other">Підписників: %s</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">день</item>
+        <item quantity="other">%d дн.</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">місяць</item>
+        <item quantity="other">%d міс.</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">рік</item>
+        <item quantity="other">%d р.</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d дн</item>
         <item quantity="other">%d дн</item>

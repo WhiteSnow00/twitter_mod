@@ -1,18 +1,24 @@
-import com.twitter.model.liveevent.LiveEventConfiguration;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ytf implements p69$a
+public final class ytf
 {
-    public final lev a;
+    public final dof a;
     
-    public ytf(final qzf qzf, final LiveEventConfiguration liveEventConfiguration) {
-        this.a = qzf.b(liveEventConfiguration);
+    public ytf(final dof a) {
+        this.a = a;
     }
     
-    public final void a(final zf4 zf4) {
-        zf4.i((szo)this.a);
+    public final boolean a() {
+        final fmv b = asa.b();
+        boolean b2 = false;
+        if (b.b("live_event_squishy_header_collapse_locking_enabled", false)) {
+            b2 = b2;
+            if (!this.a.a()) {
+                b2 = true;
+            }
+        }
+        return b2;
     }
 }

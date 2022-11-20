@@ -8,7 +8,7 @@ import android.content.Context;
 
 public final class b
 {
-    public b(final fai fai, final Context context) {
-        fai.setTitle((CharSequence)context.getString(2131953747));
+    public b(final hai hai, final Context context) {
+        hai.setTitle((CharSequence)context.getString(2131953747));
     }
 }

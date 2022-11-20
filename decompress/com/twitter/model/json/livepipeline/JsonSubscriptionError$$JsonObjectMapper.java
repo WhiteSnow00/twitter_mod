@@ -9,53 +9,61 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSubscriptionError$$JsonObjectMapper extends JsonMapper<JsonSubscriptionError>
 {
-    public static JsonSubscriptionError _parse(final khe khe) throws IOException {
+    public static JsonSubscriptionError _parse(final tge tge) throws IOException {
         final JsonSubscriptionError jsonSubscriptionError = new JsonSubscriptionError();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonSubscriptionError, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonSubscriptionError, d, tge);
+            tge.l0();
         }
         return jsonSubscriptionError;
     }
     
-    public static void _serialize(final JsonSubscriptionError jsonSubscriptionError, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSubscriptionError jsonSubscriptionError, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.T("code", jsonSubscriptionError.b);
-        tfe.u0("message", jsonSubscriptionError.c);
-        tfe.u0("topic", jsonSubscriptionError.a);
+        afe.T("code", jsonSubscriptionError.b);
+        afe.t0("message", jsonSubscriptionError.c);
+        afe.t0("topic", jsonSubscriptionError.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonSubscriptionError jsonSubscriptionError, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonSubscriptionError jsonSubscriptionError, final String s, final tge tge) throws IOException {
         if ("code".equals(s)) {
-            jsonSubscriptionError.b = khe.z();
+            jsonSubscriptionError.b = tge.y();
         }
         else if ("message".equals(s)) {
-            jsonSubscriptionError.c = khe.T((String)null);
+            jsonSubscriptionError.c = tge.T((String)null);
         }
         else if ("topic".equals(s)) {
-            jsonSubscriptionError.a = khe.T((String)null);
+            jsonSubscriptionError.a = tge.T((String)null);
         }
     }
     
-    public JsonSubscriptionError parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonSubscriptionError parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonSubscriptionError jsonSubscriptionError, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonSubscriptionError, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonSubscriptionError jsonSubscriptionError, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonSubscriptionError, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonSubscriptionError)o, afe, b);
     }
 }

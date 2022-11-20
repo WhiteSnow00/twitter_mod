@@ -11,32 +11,31 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonUpdateUsers extends lhh<p3w>
+public class JsonUpdateUsers extends qhh<c4w>
 {
     @JsonField
-    public List<hfv> a;
+    public List<cgv> a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
     public JsonOcfComponentCollection c;
     
-    @Override
-    public final h4j t() {
-        final p3w$a p3w$a = new p3w$a();
+    public final n4j t() {
+        final c4w$a c4w$a = new c4w$a();
         final JsonOcfComponentCollection c = this.c;
-        n16 t;
+        x06 t;
         if (c != null) {
             t = c.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)p3w$a).j = t;
-        final int a = w4j.a;
-        p3w$a.k = this.a;
-        final xrv b = this.b;
-        pf8.r(b);
-        ((lsr$a)p3w$a).a = b;
-        return (h4j)p3w$a;
+        ((dtr$a)c4w$a).j = t;
+        final int a = c5j.a;
+        c4w$a.k = this.a;
+        final ssv b = this.b;
+        jee.l((Object)b);
+        ((dtr$a)c4w$a).a = b;
+        return (n4j)c4w$a;
     }
 }

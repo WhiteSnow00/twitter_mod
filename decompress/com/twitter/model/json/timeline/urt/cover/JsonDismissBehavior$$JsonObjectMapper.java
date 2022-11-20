@@ -10,47 +10,55 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonDismissBehavior$$JsonObjectMapper extends JsonMapper<JsonDismissBehavior>
 {
-    public static JsonDismissBehavior _parse(final khe khe) throws IOException {
+    public static JsonDismissBehavior _parse(final tge tge) throws IOException {
         final JsonDismissBehavior jsonDismissBehavior = new JsonDismissBehavior();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonDismissBehavior, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonDismissBehavior, d, tge);
+            tge.l0();
         }
         return jsonDismissBehavior;
     }
     
-    public static void _serialize(final JsonDismissBehavior jsonDismissBehavior, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonDismissBehavior jsonDismissBehavior, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonDismissBehavior.a != null) {
-            LoganSquare.typeConverterFor((Class)xwm.class).serialize((Object)jsonDismissBehavior.a, "feedbackMessage", true, tfe);
+            LoganSquare.typeConverterFor((Class)oxm.class).serialize((Object)jsonDismissBehavior.a, "feedbackMessage", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonDismissBehavior jsonDismissBehavior, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonDismissBehavior jsonDismissBehavior, final String s, final tge tge) throws IOException {
         if ("feedbackMessage".equals(s)) {
-            jsonDismissBehavior.a = (xwm)LoganSquare.typeConverterFor((Class)xwm.class).parse(khe);
+            jsonDismissBehavior.a = (oxm)LoganSquare.typeConverterFor((Class)oxm.class).parse(tge);
         }
     }
     
-    public JsonDismissBehavior parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonDismissBehavior parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonDismissBehavior jsonDismissBehavior, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonDismissBehavior, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonDismissBehavior jsonDismissBehavior, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonDismissBehavior, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonDismissBehavior)o, afe, b);
     }
 }

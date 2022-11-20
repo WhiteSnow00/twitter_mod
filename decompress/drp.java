@@ -1,36 +1,27 @@
-import java.util.List;
+import android.graphics.Paint;
+import android.text.TextPaint;
+import android.text.style.CharacterStyle;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class drp implements nm6
+public final class drp extends CharacterStyle
 {
-    public final String a;
-    public final g80 b;
-    public final List<g80> c;
-    public final f80 d;
-    public final i80 e;
-    public final g80 f;
-    public final int g;
-    public final int h;
-    public final float i;
-    public final boolean j;
+    public final int a;
+    public final float b;
+    public final float c;
+    public final float d;
     
-    public drp(final String a, final g80 b, final List<g80> c, final f80 d, final i80 e, final g80 f, final Object g, final Object h, final float i, final boolean j) {
+    public drp(final int a, final float b, final float c, final float d) {
         this.a = a;
         this.b = b;
         this.c = c;
         this.d = d;
-        this.e = e;
-        this.f = f;
-        this.g = (int)g;
-        this.h = (int)h;
-        this.i = i;
-        this.j = j;
     }
     
-    public final jl6 a(final sdg sdg, final ym1 ym1) {
-        return (jl6)new rkr(sdg, ym1, this);
+    public final void updateDrawState(final TextPaint textPaint) {
+        czd.f((Object)textPaint, "tp");
+        ((Paint)textPaint).setShadowLayer(this.d, this.b, this.c, this.a);
     }
 }

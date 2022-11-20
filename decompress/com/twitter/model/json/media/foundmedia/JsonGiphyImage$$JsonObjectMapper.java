@@ -14,67 +14,67 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonGiphyImage$$JsonObjectMapper extends JsonMapper<JsonGiphyImage>
 {
-    public static JsonGiphyImage _parse(final khe khe) throws IOException {
+    public static JsonGiphyImage _parse(final tge tge) throws IOException {
         final JsonGiphyImage jsonGiphyImage = new JsonGiphyImage();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonGiphyImage, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonGiphyImage, d, tge);
+            tge.l0();
         }
         return jsonGiphyImage;
     }
     
-    public static void _serialize(final JsonGiphyImage jsonGiphyImage, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonGiphyImage jsonGiphyImage, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("id", jsonGiphyImage.a);
+        afe.t0("id", jsonGiphyImage.a);
         final HashMap c = jsonGiphyImage.c;
         if (c != null) {
-            final Iterator h = q1a.h(tfe, "images", c);
-            while (h.hasNext()) {
-                final Map.Entry<String, JsonMediaSizeVariant> entry = h.next();
-                if (o1a.g((String)entry.getKey(), tfe, (Map.Entry)entry) == null) {
-                    tfe.j();
+            final Iterator z = mw.z(afe, "images", c);
+            while (z.hasNext()) {
+                final Map.Entry<String, JsonMediaSizeVariant> entry = z.next();
+                if (sde.e((String)entry.getKey(), afe, (Map.Entry)entry) == null) {
+                    afe.j();
                 }
                 else {
                     if (entry.getValue() == null) {
                         continue;
                     }
-                    JsonMediaSizeVariant$$JsonObjectMapper._serialize((JsonMediaSizeVariant)entry.getValue(), tfe, true);
+                    JsonMediaSizeVariant$$JsonObjectMapper._serialize((JsonMediaSizeVariant)entry.getValue(), afe, true);
                 }
             }
-            tfe.h();
+            afe.h();
         }
-        tfe.u0("url", jsonGiphyImage.b);
+        afe.t0("url", jsonGiphyImage.b);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonGiphyImage jsonGiphyImage, String j, final khe khe) throws IOException {
-        if ("id".equals(j)) {
-            jsonGiphyImage.a = khe.T((String)null);
+    public static void parseField(final JsonGiphyImage jsonGiphyImage, final String s, final tge tge) throws IOException {
+        if ("id".equals(s)) {
+            jsonGiphyImage.a = tge.T((String)null);
         }
-        else if ("images".equals(j)) {
-            if (khe.e() == lje.K0) {
+        else if ("images".equals(s)) {
+            if (tge.e() == vie.L0) {
                 final HashMap c = new HashMap();
-                while (khe.i0() != lje.L0) {
-                    j = khe.j();
-                    khe.i0();
-                    if (khe.e() == lje.U0) {
+                while (tge.h0() != vie.M0) {
+                    final String j = tge.j();
+                    tge.h0();
+                    if (tge.e() == vie.V0) {
                         c.put(j, null);
                     }
                     else {
-                        c.put(j, JsonMediaSizeVariant$$JsonObjectMapper._parse(khe));
+                        c.put(j, JsonMediaSizeVariant$$JsonObjectMapper._parse(tge));
                     }
                 }
                 jsonGiphyImage.c = c;
@@ -83,16 +83,24 @@ public final class JsonGiphyImage$$JsonObjectMapper extends JsonMapper<JsonGiphy
                 jsonGiphyImage.c = null;
             }
         }
-        else if ("url".equals(j)) {
-            jsonGiphyImage.b = khe.T((String)null);
+        else if ("url".equals(s)) {
+            jsonGiphyImage.b = tge.T((String)null);
         }
     }
     
-    public JsonGiphyImage parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonGiphyImage parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonGiphyImage jsonGiphyImage, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonGiphyImage, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonGiphyImage jsonGiphyImage, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonGiphyImage, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonGiphyImage)o, afe, b);
     }
 }

@@ -10,63 +10,71 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonURTTrendBadge$$JsonObjectMapper extends JsonMapper<JsonURTTrendBadge>
 {
-    public static JsonURTTrendBadge _parse(final khe khe) throws IOException {
+    public static JsonURTTrendBadge _parse(final tge tge) throws IOException {
         final JsonURTTrendBadge jsonURTTrendBadge = new JsonURTTrendBadge();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonURTTrendBadge, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonURTTrendBadge, d, tge);
+            tge.l0();
         }
         return jsonURTTrendBadge;
     }
     
-    public static void _serialize(final JsonURTTrendBadge jsonURTTrendBadge, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonURTTrendBadge jsonURTTrendBadge, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonURTTrendBadge.b != null) {
-            LoganSquare.typeConverterFor((Class)ghe.class).serialize((Object)jsonURTTrendBadge.b, "badgeColor", true, tfe);
+            LoganSquare.typeConverterFor((Class)pge.class).serialize((Object)jsonURTTrendBadge.b, "badgeColor", true, afe);
         }
-        tfe.u0("badgeText", jsonURTTrendBadge.a);
+        afe.t0("badgeText", jsonURTTrendBadge.a);
         if (jsonURTTrendBadge.d != null) {
-            LoganSquare.typeConverterFor((Class)n1u.class).serialize((Object)jsonURTTrendBadge.d, "badgeType", true, tfe);
+            LoganSquare.typeConverterFor((Class)c2u.class).serialize((Object)jsonURTTrendBadge.d, "badgeType", true, afe);
         }
         if (jsonURTTrendBadge.c != null) {
-            LoganSquare.typeConverterFor((Class)ghe.class).serialize((Object)jsonURTTrendBadge.c, "textColor", true, tfe);
+            LoganSquare.typeConverterFor((Class)pge.class).serialize((Object)jsonURTTrendBadge.c, "textColor", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonURTTrendBadge jsonURTTrendBadge, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonURTTrendBadge jsonURTTrendBadge, final String s, final tge tge) throws IOException {
         if ("badgeColor".equals(s)) {
-            jsonURTTrendBadge.b = (ghe)LoganSquare.typeConverterFor((Class)ghe.class).parse(khe);
+            jsonURTTrendBadge.b = (pge)LoganSquare.typeConverterFor((Class)pge.class).parse(tge);
         }
         else if ("badgeText".equals(s)) {
-            jsonURTTrendBadge.a = khe.T((String)null);
+            jsonURTTrendBadge.a = tge.T((String)null);
         }
         else if ("badgeType".equals(s)) {
-            jsonURTTrendBadge.d = (n1u)LoganSquare.typeConverterFor((Class)n1u.class).parse(khe);
+            jsonURTTrendBadge.d = (c2u)LoganSquare.typeConverterFor((Class)c2u.class).parse(tge);
         }
         else if ("textColor".equals(s)) {
-            jsonURTTrendBadge.c = (ghe)LoganSquare.typeConverterFor((Class)ghe.class).parse(khe);
+            jsonURTTrendBadge.c = (pge)LoganSquare.typeConverterFor((Class)pge.class).parse(tge);
         }
     }
     
-    public JsonURTTrendBadge parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonURTTrendBadge parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonURTTrendBadge jsonURTTrendBadge, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonURTTrendBadge, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonURTTrendBadge jsonURTTrendBadge, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonURTTrendBadge, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonURTTrendBadge)o, afe, b);
     }
 }

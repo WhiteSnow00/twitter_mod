@@ -13,50 +13,50 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonGraphQlGetBroadcastsResponse$$JsonObjectMapper extends JsonMapper<JsonGraphQlGetBroadcastsResponse>
 {
-    public static JsonGraphQlGetBroadcastsResponse _parse(final khe khe) throws IOException {
+    public static JsonGraphQlGetBroadcastsResponse _parse(final tge tge) throws IOException {
         final JsonGraphQlGetBroadcastsResponse jsonGraphQlGetBroadcastsResponse = new JsonGraphQlGetBroadcastsResponse();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonGraphQlGetBroadcastsResponse, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonGraphQlGetBroadcastsResponse, d, tge);
+            tge.l0();
         }
         return jsonGraphQlGetBroadcastsResponse;
     }
     
-    public static void _serialize(final JsonGraphQlGetBroadcastsResponse jsonGraphQlGetBroadcastsResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonGraphQlGetBroadcastsResponse jsonGraphQlGetBroadcastsResponse, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList a = jsonGraphQlGetBroadcastsResponse.a;
         if (a != null) {
-            final Iterator g = q1a.g(tfe, "broadcasts", a);
-            while (g.hasNext()) {
-                final b b2 = g.next();
+            final Iterator a2 = br.A(afe, "broadcasts", a);
+            while (a2.hasNext()) {
+                final b b2 = a2.next();
                 if (b2 != null) {
-                    LoganSquare.typeConverterFor((Class)b.class).serialize((Object)b2, "lslocalbroadcastsElement", false, tfe);
+                    LoganSquare.typeConverterFor((Class)b.class).serialize((Object)b2, "lslocalbroadcastsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonGraphQlGetBroadcastsResponse jsonGraphQlGetBroadcastsResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonGraphQlGetBroadcastsResponse jsonGraphQlGetBroadcastsResponse, final String s, final tge tge) throws IOException {
         if ("broadcasts".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final b b = (b)LoganSquare.typeConverterFor((Class)b.class).parse(khe);
+                while (tge.h0() != vie.O0) {
+                    final b b = (b)LoganSquare.typeConverterFor((Class)b.class).parse(tge);
                     if (b != null) {
                         a.add(b);
                     }
@@ -69,11 +69,19 @@ public final class JsonGraphQlGetBroadcastsResponse$$JsonObjectMapper extends Js
         }
     }
     
-    public JsonGraphQlGetBroadcastsResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonGraphQlGetBroadcastsResponse parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonGraphQlGetBroadcastsResponse jsonGraphQlGetBroadcastsResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonGraphQlGetBroadcastsResponse, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonGraphQlGetBroadcastsResponse jsonGraphQlGetBroadcastsResponse, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonGraphQlGetBroadcastsResponse, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonGraphQlGetBroadcastsResponse)o, afe, b);
     }
 }

@@ -2,28 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ksn extends gue implements rtb<pit, oyv>
+public final class ksn extends kkl
 {
-    public static final ksn C0;
+    public static final ksn D0;
     
     static {
-        C0 = new ksn();
+        D0 = new ksn();
     }
     
     public ksn() {
-        super(1);
+        super((Class)qsn.class, "isSuperFollowersOnly", "isSuperFollowersOnly()Z", 0);
     }
     
-    public final Object invoke(final Object o) {
-        final pit pit = (pit)o;
-        zzd.f((Object)pit, "$this$tooltipFlow");
-        pit.a(oit.U0);
-        pit.a(oit.V0);
-        pit.a(oit.W0);
-        pit.a(oit.X0);
-        pit.a(oit.Y0);
-        pit.a(oit.Z0);
-        pit.a(oit.a1);
-        return oyv.a;
+    public final Object get(final Object o) {
+        return ((qsn)o).g;
     }
 }

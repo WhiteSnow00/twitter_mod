@@ -5,15 +5,15 @@
 public final class fwg
 {
     public static final a Companion;
-    public static final fwg.fwg$b c;
-    public static final z9m d;
+    public static final b c;
+    public static final oam d;
     public final int a;
     public final long b;
     
     static {
         Companion = new a();
-        c = new fwg.fwg$b();
-        d = new z9m("^([0-9]+)_([0-9]+)$");
+        c = new b();
+        d = new oam("^([0-9]+)_([0-9]+)$");
     }
     
     public fwg(final int a, final long b) {
@@ -51,31 +51,30 @@ public final class fwg
         sb.append("_");
         sb.append(this.b);
         final String string = sb.toString();
-        zzd.e((Object)string, "StringBuilder().apply(builderAction).toString()");
+        czd.e((Object)string, "StringBuilder().apply(builderAction).toString()");
         return string;
     }
     
     public static final class a
     {
-        public final fwg a(final String s) {
-            zzd.f((Object)s, "mediaKey");
-            final kmg b = fwg.d.b((CharSequence)s);
+        public final fwg a(String value) {
+            czd.f((Object)value, "mediaKey");
+            final jmg b = fwg.d.b((CharSequence)value);
             final fwg fwg = null;
             if (b == null) {
-                e9a.d((Throwable)new IllegalArgumentException(zi.y("Unable to match media key <", s, ">")));
+                m8a.d((Throwable)new IllegalArgumentException(da8.j("Unable to match media key <", value, ">")));
                 return null;
             }
-            Integer value = null;
-            Long value2 = null;
-            Label_0232: {
-                Label_0143: {
+            Integer value2 = null;
+            Label_0229: {
+                Label_0134: {
                     try {
-                        final jmg e = ((mmg)b).c.e(1);
+                        final img e = ((lmg)b).c.e(1);
                         if (e != null) {
                             final String a = e.a;
                             if (a != null) {
-                                value = Integer.parseInt(a);
-                                break Label_0143;
+                                value2 = Integer.parseInt(a);
+                                break Label_0134;
                             }
                         }
                     }
@@ -83,18 +82,18 @@ public final class fwg
                         final StringBuilder sb = new StringBuilder();
                         sb.append(ex);
                         sb.append(" while parsing category of media key <");
-                        sb.append(s);
+                        sb.append(value);
                         sb.append(">");
-                        e9a.d((Throwable)new IllegalArgumentException(sb.toString()));
+                        m8a.d((Throwable)new IllegalArgumentException(sb.toString()));
                     }
-                    value = null;
+                    value2 = null;
                     try {
-                        final jmg e2 = ((mmg)b).c.e(2);
+                        final img e2 = ((lmg)b).c.e(2);
                         if (e2 != null) {
                             final String a2 = e2.a;
                             if (a2 != null) {
-                                value2 = Long.parseLong(a2);
-                                break Label_0232;
+                                value = (String)Long.valueOf(Long.parseLong(a2));
+                                break Label_0229;
                             }
                         }
                     }
@@ -102,21 +101,37 @@ public final class fwg
                         final StringBuilder sb2 = new StringBuilder();
                         sb2.append(ex2);
                         sb2.append(" while parsing id of media key <");
-                        sb2.append(s);
+                        sb2.append(value);
                         sb2.append(">");
-                        e9a.d((Throwable)new IllegalArgumentException(sb2.toString()));
+                        m8a.d((Throwable)new IllegalArgumentException(sb2.toString()));
                     }
                 }
-                value2 = null;
+                value = null;
             }
             fwg fwg2 = fwg;
-            if (value != null) {
+            if (value2 != null) {
                 fwg2 = fwg;
-                if (value2 != null) {
-                    fwg2 = new fwg(value, value2);
+                if (value != null) {
+                    fwg2 = new fwg(value2, (long)value);
                 }
             }
             return fwg2;
+        }
+    }
+    
+    public static final class b extends y4j<fwg>
+    {
+        public final Object d(final vlp vlp, final int n) {
+            czd.f((Object)vlp, "input");
+            return new fwg(vlp.x(), vlp.y());
+        }
+        
+        public final void f(final wlp wlp, final Object o) {
+            final fwg fwg = (fwg)o;
+            czd.f((Object)wlp, "output");
+            czd.f((Object)fwg, "mediaKey");
+            wlp.x(fwg.a);
+            wlp.y(fwg.b);
         }
     }
 }

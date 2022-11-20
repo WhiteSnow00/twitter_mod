@@ -9,21 +9,20 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCTA extends lhh<l73>
+public class JsonCTA extends qhh<c73>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     @JsonField
-    public bmd c;
+    public eld c;
     
-    @Override
-    public final h4j t() {
-        final l73$a l73$a = new l73$a();
-        l73$a.a = this.a;
-        l73$a.b = this.b;
-        l73$a.c = this.c;
-        return (h4j)l73$a;
+    public final n4j t() {
+        final c73$a c73$a = new c73$a();
+        c73$a.a = this.a;
+        c73$a.b = this.b;
+        c73$a.c = this.c;
+        return (n4j)c73$a;
     }
 }

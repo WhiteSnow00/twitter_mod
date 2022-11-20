@@ -4,47 +4,36 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hmt
+public final class hmt extends zus implements ycc, ntw
 {
-    public static final alp<hmt> c;
-    public final List<omt> a;
-    public final q7t b;
+    public final jwd q;
+    public final p6t r;
     
-    static {
-        hmt.c = new hmt.hmt$b();
+    public hmt(final a a) {
+        super((zus$a<?, ?>)a, 40);
+        final jwd p = a.p;
+        jee.l((Object)p);
+        this.q = p;
+        final p6t q = a.q;
+        jee.l((Object)q);
+        this.r = q;
     }
     
-    public hmt(final hmt.hmt$a hmt$a) {
-        final List a = hmt$a.a;
-        pf8.r(a);
-        this.a = a;
-        this.b = hmt$a.b;
+    public final List<jwd> f() {
+        return rif.v((Object)this.q);
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        final boolean b = o instanceof hmt;
-        final boolean b2 = false;
-        if (!b) {
-            return false;
+    public static final class a extends zus$a<hmt, a>
+    {
+        public jwd p;
+        public p6t q;
+        
+        public final Object i() {
+            return new hmt(this);
         }
-        if (this == o) {
-            return true;
+        
+        public final boolean l() {
+            return super.l() && this.p != null && this.q != null;
         }
-        final int a = w4j.a;
-        final hmt hmt = (hmt)o;
-        boolean b3 = b2;
-        if (w4j.a((Object)this.a, (Object)hmt.a)) {
-            b3 = b2;
-            if (w4j.a((Object)this.b, (Object)hmt.b)) {
-                b3 = true;
-            }
-        }
-        return b3;
-    }
-    
-    @Override
-    public final int hashCode() {
-        return w4j.g((Object)this.a, (Object)this.b);
     }
 }

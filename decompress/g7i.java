@@ -4,18 +4,18 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class g7i extends gue implements rtb<Integer, Object>
+public final class g7i extends ste implements qsb<Integer, Object>
 {
-    public final /* synthetic */ rtb C0;
-    public final /* synthetic */ List D0;
+    public final qsb D0;
+    public final List E0;
     
-    public g7i(final rtb c0, final List d0) {
-        this.C0 = c0;
+    public g7i(final qsb d0, final List e0) {
         this.D0 = d0;
+        this.E0 = e0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        return this.C0.invoke(this.D0.get(((Number)o).intValue()));
+        return this.D0.invoke(this.E0.get(((Number)o).intValue()));
     }
 }

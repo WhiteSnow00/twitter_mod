@@ -1,5 +1,9 @@
-import java.util.Map;
-import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+import android.content.Context;
+import android.util.Log;
+import java.io.File;
+import android.content.res.AssetManager;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -7,45 +11,28 @@ import java.util.HashMap;
 
 public final class h9y
 {
-    public String a;
-    public final long b;
-    public final HashMap c;
+    public final dxy a;
     
-    public h9y(final String a, final long b, final Map map) {
+    public h9y(final dxy a) {
         this.a = a;
-        this.b = b;
-        final HashMap c = new HashMap();
-        this.c = c;
-        if (map != null) {
-            c.putAll(map);
+    }
+    
+    public static final int b(final AssetManager assetManager, final File file) {
+        final int intValue = (int)q3j.n0((Object)assetManager, "addAssetPath", (Class)Integer.class, (Class)String.class, (Object)file.getPath());
+        final StringBuilder sb = new StringBuilder(39);
+        sb.append("addAssetPath completed with ");
+        sb.append(intValue);
+        Log.d("SplitCompat", sb.toString());
+        return intValue;
+    }
+    
+    public final void a(final Context context, final Set<File> set) {
+        synchronized (this) {
+            final AssetManager assets = context.getAssets();
+            final Iterator<File> iterator = set.iterator();
+            while (iterator.hasNext()) {
+                b(assets, iterator.next());
+            }
         }
-    }
-    
-    public final h9y a() {
-        return new h9y(this.a, this.b, new HashMap(this.c));
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof h9y)) {
-            return false;
-        }
-        final h9y h9y = (h9y)o;
-        return this.b == h9y.b && this.a.equals(h9y.a) && this.c.equals(h9y.c);
-    }
-    
-    @Override
-    public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final long b = this.b;
-        return this.c.hashCode() + (hashCode * 31 + (int)(b ^ b >>> 32)) * 31;
-    }
-    
-    @Override
-    public final String toString() {
-        return xa0.B(hfe.i("Event{name='", this.a, "', timestamp=", this.b), ", params=", this.c.toString(), "}");
     }
 }

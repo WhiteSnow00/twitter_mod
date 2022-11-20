@@ -9,8 +9,8 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOriginalImage extends ige
+public class JsonOriginalImage extends qfe
 {
     @JsonField
-    public moj a;
+    public soj a;
 }

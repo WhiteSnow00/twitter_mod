@@ -1,6 +1,4 @@
-import android.net.NetworkInfo;
 import android.content.Context;
-import android.net.ConnectivityManager;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -8,26 +6,12 @@ import android.net.ConnectivityManager;
 
 public final class adi
 {
-    public boolean a;
-    public final ConnectivityManager b;
+    public final Context a;
+    public long b;
+    public long c;
     
-    public adi(final Context context) {
-        this.b = (ConnectivityManager)context.getSystemService("connectivity");
-        this.a();
-    }
-    
-    public final void a() {
-        final NetworkInfo activeNetworkInfo = this.b.getActiveNetworkInfo();
-        boolean a = false;
-        if (activeNetworkInfo != null && activeNetworkInfo.isConnected()) {
-            if (activeNetworkInfo.getType() == 1) {
-                a = true;
-            }
-            this.a = a;
-            activeNetworkInfo.getType();
-        }
-        else {
-            this.a = false;
-        }
+    public adi(final Context a, final ar0 ar0) {
+        this.a = a;
+        ar0.b().i().subscribe((lj6)new vgd(this, 7));
     }
 }

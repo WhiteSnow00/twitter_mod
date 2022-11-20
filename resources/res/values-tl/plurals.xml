@@ -516,6 +516,18 @@
         <item quantity="one">%s Subscriber</item>
         <item quantity="other">%s (na) Subscriber</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">araw</item>
+        <item quantity="other">%d mga araw</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">buwan</item>
+        <item quantity="other">%d mga buwan</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">taon</item>
+        <item quantity="other">%d mga taon</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%dd</item>
         <item quantity="other">%dd</item>

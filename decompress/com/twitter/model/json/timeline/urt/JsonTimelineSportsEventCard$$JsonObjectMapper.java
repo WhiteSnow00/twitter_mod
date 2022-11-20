@@ -10,47 +10,55 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineSportsEventCard$$JsonObjectMapper extends JsonMapper<JsonTimelineSportsEventCard>
 {
-    public static JsonTimelineSportsEventCard _parse(final khe khe) throws IOException {
+    public static JsonTimelineSportsEventCard _parse(final tge tge) throws IOException {
         final JsonTimelineSportsEventCard jsonTimelineSportsEventCard = new JsonTimelineSportsEventCard();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineSportsEventCard, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineSportsEventCard, d, tge);
+            tge.l0();
         }
         return jsonTimelineSportsEventCard;
     }
     
-    public static void _serialize(final JsonTimelineSportsEventCard jsonTimelineSportsEventCard, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineSportsEventCard jsonTimelineSportsEventCard, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonTimelineSportsEventCard.a != null) {
-            LoganSquare.typeConverterFor((Class)dqv.class).serialize((Object)jsonTimelineSportsEventCard.a, "sportsEvent", true, tfe);
+            LoganSquare.typeConverterFor((Class)zqv.class).serialize((Object)jsonTimelineSportsEventCard.a, "sportsEvent", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineSportsEventCard jsonTimelineSportsEventCard, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineSportsEventCard jsonTimelineSportsEventCard, final String s, final tge tge) throws IOException {
         if ("sportsEvent".equals(s)) {
-            jsonTimelineSportsEventCard.a = (dqv)LoganSquare.typeConverterFor((Class)dqv.class).parse(khe);
+            jsonTimelineSportsEventCard.a = (zqv)LoganSquare.typeConverterFor((Class)zqv.class).parse(tge);
         }
     }
     
-    public JsonTimelineSportsEventCard parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineSportsEventCard parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineSportsEventCard jsonTimelineSportsEventCard, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineSportsEventCard, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineSportsEventCard jsonTimelineSportsEventCard, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineSportsEventCard, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineSportsEventCard)o, afe, b);
     }
 }

@@ -9,15 +9,14 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSubscriptionEventBuilder extends lhh<umr>
+public class JsonSubscriptionEventBuilder extends qhh<nnr>
 {
     @JsonField
-    public tmr[] a;
+    public mnr[] a;
     
-    @Override
-    public final h4j t() {
-        final umr.a a = new umr.a();
-        a.c = this.a;
-        return (h4j)a;
+    public final n4j t() {
+        final nnr$a nnr$a = new nnr$a();
+        nnr$a.c = this.a;
+        return (n4j)nnr$a;
     }
 }

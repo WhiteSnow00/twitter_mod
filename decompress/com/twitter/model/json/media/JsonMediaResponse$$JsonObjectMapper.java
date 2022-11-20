@@ -9,45 +9,53 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonMediaResponse$$JsonObjectMapper extends JsonMapper<JsonMediaResponse>
 {
-    public static JsonMediaResponse _parse(final khe khe) throws IOException {
+    public static JsonMediaResponse _parse(final tge tge) throws IOException {
         final JsonMediaResponse jsonMediaResponse = new JsonMediaResponse();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonMediaResponse, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonMediaResponse, d, tge);
+            tge.l0();
         }
         return jsonMediaResponse;
     }
     
-    public static void _serialize(final JsonMediaResponse jsonMediaResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonMediaResponse jsonMediaResponse, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.W("media_id_string", jsonMediaResponse.a);
+        afe.V("media_id_string", jsonMediaResponse.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonMediaResponse jsonMediaResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonMediaResponse jsonMediaResponse, final String s, final tge tge) throws IOException {
         if ("media_id_string".equals(s)) {
-            jsonMediaResponse.a = khe.L();
+            jsonMediaResponse.a = tge.K();
         }
     }
     
-    public JsonMediaResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonMediaResponse parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonMediaResponse jsonMediaResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonMediaResponse, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonMediaResponse jsonMediaResponse, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonMediaResponse, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonMediaResponse)o, afe, b);
     }
 }

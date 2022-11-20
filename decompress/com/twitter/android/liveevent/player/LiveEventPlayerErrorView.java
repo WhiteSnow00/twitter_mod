@@ -14,19 +14,20 @@ import android.widget.FrameLayout;
 
 public class LiveEventPlayerErrorView extends FrameLayout
 {
-    public final TextView C0;
+    public static final int E0 = 0;
+    public final TextView D0;
     
     public LiveEventPlayerErrorView(final Context context, final AttributeSet set) {
         super(context, set, 0);
         View.inflate(context, 2131624742, (ViewGroup)this);
-        this.C0 = (TextView)((View)this).findViewById(2131429826);
+        this.D0 = (TextView)((View)this).findViewById(2131429826);
         ((View)this).setBackgroundResource(2131099699);
-        ((View)this).setOnClickListener((View$OnClickListener)ywf.D0);
+        ((View)this).setOnClickListener((View$OnClickListener)jwf.D0);
         ((View)this).getContext();
-        bl0.a().t();
+        wk0.b().t();
     }
     
     public void setError(final String text) {
-        this.C0.setText((CharSequence)text);
+        this.D0.setText((CharSequence)text);
     }
 }

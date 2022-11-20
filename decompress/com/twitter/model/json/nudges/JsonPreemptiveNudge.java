@@ -9,18 +9,17 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonPreemptiveNudge extends lhh<utk>
+public class JsonPreemptiveNudge extends qhh<duk>
 {
-    @JsonField(typeConverter = rhe.class)
-    public uuk a;
+    @JsonField(typeConverter = ahe.class)
+    public cvk a;
     @JsonField
     public String b;
     
-    @Override
-    public final h4j t() {
-        final utk$b utk$b = new utk$b();
-        utk$b.b = this.a;
-        utk$b.a = this.b;
-        return (h4j)utk$b;
+    public final n4j t() {
+        final duk$b duk$b = new duk$b();
+        duk$b.b = this.a;
+        duk$b.a = this.b;
+        return (n4j)duk$b;
     }
 }

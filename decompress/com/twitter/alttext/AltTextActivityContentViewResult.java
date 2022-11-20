@@ -4,35 +4,84 @@
 
 package com.twitter.alttext;
 
+import kotlinx.serialization.KSerializer;
 import kotlinx.serialization.descriptors.SerialDescriptor;
 import kotlin.Metadata;
 
-@Metadata(bv = {}, d1 = { "\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u0000 '2\u00020\u0001:\u0002('B\u001f\u0012\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\t\u0012\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000b¢\u0006\u0004\b!\u0010\"B3\b\u0017\u0012\u0006\u0010#\u001a\u00020\u0012\u0012\n\b\u0001\u0010\r\u001a\u0004\u0018\u00010\t\u0012\n\b\u0001\u0010\u000e\u001a\u0004\u0018\u00010\u000b\u0012\b\u0010%\u001a\u0004\u0018\u00010$¢\u0006\u0004\b!\u0010&J!\u0010\b\u001a\u00020\u00072\u0006\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005H\u00c7\u0001J\u000b\u0010\n\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u000b\u0010\f\u001a\u0004\u0018\u00010\u000bH\u00c6\u0003J!\u0010\u000f\u001a\u00020\u00002\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000bH\u00c6\u0001J\t\u0010\u0011\u001a\u00020\u0010H\u00d6\u0001J\t\u0010\u0013\u001a\u00020\u0012H\u00d6\u0001J\u0013\u0010\u0017\u001a\u00020\u00162\b\u0010\u0015\u001a\u0004\u0018\u00010\u0014H\u00d6\u0003R\"\u0010\r\u001a\u0004\u0018\u00010\t8\u0006X\u0087\u0004¢\u0006\u0012\n\u0004\b\r\u0010\u0018\u0012\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u0019\u0010\u001aR\"\u0010\u000e\u001a\u0004\u0018\u00010\u000b8\u0006X\u0087\u0004¢\u0006\u0012\n\u0004\b\u000e\u0010\u001d\u0012\u0004\b \u0010\u001c\u001a\u0004\b\u001e\u0010\u001f¨\u0006)" }, d2 = { "Lcom/twitter/alttext/AltTextActivityContentViewResult;", "Lvn6;", "self", "Lsd6;", "output", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "serialDesc", "Loyv;", "write$Self", "Lrw9;", "component1", "Lnw9;", "component2", "editableImage", "editableGif", "copy", "", "toString", "", "hashCode", "", "other", "", "equals", "Lrw9;", "getEditableImage", "()Lrw9;", "getEditableImage$annotations", "()V", "Lnw9;", "getEditableGif", "()Lnw9;", "getEditableGif$annotations", "<init>", "(Lrw9;Lnw9;)V", "seen1", "Lqkp;", "serializationConstructorMarker", "(ILrw9;Lnw9;Lqkp;)V", "Companion", "$serializer", "subsystem.tfa.alttext.api_release" }, k = 1, mv = { 1, 7, 1 })
-@okp
-public final class AltTextActivityContentViewResult implements vn6
+@flp
+@Metadata(bv = {}, d1 = { "\u0000L\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u0000 '2\u00020\u0001:\u0002('B\u001f\u0012\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\t\u0012\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000b¢\u0006\u0004\b!\u0010\"B3\b\u0017\u0012\u0006\u0010#\u001a\u00020\u0012\u0012\n\b\u0001\u0010\r\u001a\u0004\u0018\u00010\t\u0012\n\b\u0001\u0010\u000e\u001a\u0004\u0018\u00010\u000b\u0012\b\u0010%\u001a\u0004\u0018\u00010$¢\u0006\u0004\b!\u0010&J!\u0010\b\u001a\u00020\u00072\u0006\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005H\u00c7\u0001J\u000b\u0010\n\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u000b\u0010\f\u001a\u0004\u0018\u00010\u000bH\u00c6\u0003J!\u0010\u000f\u001a\u00020\u00002\n\b\u0002\u0010\r\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\u000bH\u00c6\u0001J\t\u0010\u0011\u001a\u00020\u0010H\u00d6\u0001J\t\u0010\u0013\u001a\u00020\u0012H\u00d6\u0001J\u0013\u0010\u0017\u001a\u00020\u00162\b\u0010\u0015\u001a\u0004\u0018\u00010\u0014H\u00d6\u0003R\"\u0010\r\u001a\u0004\u0018\u00010\t8\u0006X\u0087\u0004¢\u0006\u0012\n\u0004\b\r\u0010\u0018\u0012\u0004\b\u001b\u0010\u001c\u001a\u0004\b\u0019\u0010\u001aR\"\u0010\u000e\u001a\u0004\u0018\u00010\u000b8\u0006X\u0087\u0004¢\u0006\u0012\n\u0004\b\u000e\u0010\u001d\u0012\u0004\b \u0010\u001c\u001a\u0004\b\u001e\u0010\u001f¨\u0006)" }, d2 = { "Lcom/twitter/alttext/AltTextActivityContentViewResult;", "Lbn6;", "self", "Lxc6;", "output", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "serialDesc", "Lfzv;", "write$Self", "Lew9;", "component1", "Law9;", "component2", "editableImage", "editableGif", "copy", "", "toString", "", "hashCode", "", "other", "", "equals", "Lew9;", "getEditableImage", "()Lew9;", "getEditableImage$annotations", "()V", "Law9;", "getEditableGif", "()Law9;", "getEditableGif$annotations", "<init>", "(Lew9;Law9;)V", "seen1", "Lhlp;", "serializationConstructorMarker", "(ILew9;Law9;Lhlp;)V", "Companion", "$serializer", "subsystem.tfa.alttext.api_release" }, k = 1, mv = { 1, 7, 1 })
+public final class AltTextActivityContentViewResult implements bn6
 {
-    public static final AltTextActivityContentViewResult.AltTextActivityContentViewResult$Companion Companion;
-    private final nw9 editableGif;
-    private final rw9 editableImage;
+    public static final Companion Companion;
+    private final aw9 editableGif;
+    private final ew9 editableImage;
     
     static {
-        Companion = new AltTextActivityContentViewResult.AltTextActivityContentViewResult$Companion();
+        Companion = new Companion();
     }
     
     public AltTextActivityContentViewResult() {
         this(null, null, 3, null);
     }
     
-    public AltTextActivityContentViewResult(final rw9 editableImage, final nw9 editableGif) {
+    public AltTextActivityContentViewResult(final int n, @flp(with = hw9.class) final ew9 editableImage, @flp(with = bw9.class) final aw9 editableGif, final hlp hlp) {
+        if ((n & 0x0) == 0x0) {
+            if ((n & 0x1) == 0x0) {
+                this.editableImage = null;
+            }
+            else {
+                this.editableImage = editableImage;
+            }
+            if ((n & 0x2) == 0x0) {
+                this.editableGif = null;
+            }
+            else {
+                this.editableGif = editableGif;
+            }
+            return;
+        }
+        blz.a0(n, 0, AltTextActivityContentViewResult$$serializer.INSTANCE.getDescriptor());
+        throw null;
+    }
+    
+    public AltTextActivityContentViewResult(final ew9 editableImage, final aw9 editableGif) {
         this.editableImage = editableImage;
         this.editableGif = editableGif;
     }
     
-    public static final void write$Self(final AltTextActivityContentViewResult altTextActivityContentViewResult, final sd6 sd6, final SerialDescriptor serialDescriptor) {
-        zzd.f((Object)altTextActivityContentViewResult, "self");
-        zzd.f((Object)sd6, "output");
-        zzd.f((Object)serialDescriptor, "serialDesc");
-        final boolean z = sd6.z(serialDescriptor);
+    public AltTextActivityContentViewResult(ew9 ew9, aw9 aw9, final int n, final rf8 rf8) {
+        if ((n & 0x1) != 0x0) {
+            ew9 = null;
+        }
+        if ((n & 0x2) != 0x0) {
+            aw9 = null;
+        }
+        this(ew9, aw9);
+    }
+    
+    public static AltTextActivityContentViewResult copy$default(final AltTextActivityContentViewResult altTextActivityContentViewResult, ew9 editableImage, aw9 editableGif, final int n, final Object o) {
+        if ((n & 0x1) != 0x0) {
+            editableImage = altTextActivityContentViewResult.editableImage;
+        }
+        if ((n & 0x2) != 0x0) {
+            editableGif = altTextActivityContentViewResult.editableGif;
+        }
+        return altTextActivityContentViewResult.copy(editableImage, editableGif);
+    }
+    
+    @flp(with = bw9.class)
+    public static void getEditableGif$annotations() {
+    }
+    
+    @flp(with = hw9.class)
+    public static void getEditableImage$annotations() {
+    }
+    
+    public static final void write$Self(final AltTextActivityContentViewResult altTextActivityContentViewResult, final xc6 xc6, final SerialDescriptor serialDescriptor) {
+        czd.f((Object)altTextActivityContentViewResult, "self");
+        czd.f((Object)xc6, "output");
+        czd.f((Object)serialDescriptor, "serialDesc");
+        final boolean z = xc6.z(serialDescriptor);
         final int n = 0;
         boolean b = false;
         Label_0052: {
@@ -45,33 +94,33 @@ public final class AltTextActivityContentViewResult implements vn6
             b = true;
         }
         if (b) {
-            sd6.x(serialDescriptor, 0, (skp)uw9.b, (Object)altTextActivityContentViewResult.editableImage);
+            xc6.y(serialDescriptor, 0, (jlp)hw9.b, (Object)altTextActivityContentViewResult.editableImage);
         }
         int n2 = 0;
-        Label_0099: {
-            if (!sd6.z(serialDescriptor)) {
+        Label_0096: {
+            if (!xc6.z(serialDescriptor)) {
                 n2 = n;
                 if (altTextActivityContentViewResult.editableGif == null) {
-                    break Label_0099;
+                    break Label_0096;
                 }
             }
             n2 = 1;
         }
         if (n2 != 0) {
-            sd6.x(serialDescriptor, 1, (skp)ow9.b, (Object)altTextActivityContentViewResult.editableGif);
+            xc6.y(serialDescriptor, 1, (jlp)bw9.b, (Object)altTextActivityContentViewResult.editableGif);
         }
     }
     
-    public final rw9 component1() {
+    public final ew9 component1() {
         return this.editableImage;
     }
     
-    public final nw9 component2() {
+    public final aw9 component2() {
         return this.editableGif;
     }
     
-    public final AltTextActivityContentViewResult copy(final rw9 rw9, final nw9 nw9) {
-        return new AltTextActivityContentViewResult(rw9, nw9);
+    public final AltTextActivityContentViewResult copy(final ew9 ew9, final aw9 aw9) {
+        return new AltTextActivityContentViewResult(ew9, aw9);
     }
     
     @Override
@@ -83,20 +132,20 @@ public final class AltTextActivityContentViewResult implements vn6
             return false;
         }
         final AltTextActivityContentViewResult altTextActivityContentViewResult = (AltTextActivityContentViewResult)o;
-        return zzd.a((Object)this.editableImage, (Object)altTextActivityContentViewResult.editableImage) && zzd.a((Object)this.editableGif, (Object)altTextActivityContentViewResult.editableGif);
+        return czd.a((Object)this.editableImage, (Object)altTextActivityContentViewResult.editableImage) && czd.a((Object)this.editableGif, (Object)altTextActivityContentViewResult.editableGif);
     }
     
-    public final nw9 getEditableGif() {
+    public final aw9 getEditableGif() {
         return this.editableGif;
     }
     
-    public final rw9 getEditableImage() {
+    public final ew9 getEditableImage() {
         return this.editableImage;
     }
     
     @Override
     public int hashCode() {
-        final rw9 editableImage = this.editableImage;
+        final ew9 editableImage = this.editableImage;
         int hashCode = 0;
         int hashCode2;
         if (editableImage == null) {
@@ -105,7 +154,7 @@ public final class AltTextActivityContentViewResult implements vn6
         else {
             hashCode2 = editableImage.hashCode();
         }
-        final nw9 editableGif = this.editableGif;
+        final aw9 editableGif = this.editableGif;
         if (editableGif != null) {
             hashCode = editableGif.hashCode();
         }
@@ -114,8 +163,8 @@ public final class AltTextActivityContentViewResult implements vn6
     
     @Override
     public String toString() {
-        final rw9 editableImage = this.editableImage;
-        final nw9 editableGif = this.editableGif;
+        final ew9 editableImage = this.editableImage;
+        final aw9 editableGif = this.editableGif;
         final StringBuilder sb = new StringBuilder();
         sb.append("AltTextActivityContentViewResult(editableImage=");
         sb.append(editableImage);
@@ -123,5 +172,13 @@ public final class AltTextActivityContentViewResult implements vn6
         sb.append(editableGif);
         sb.append(")");
         return sb.toString();
+    }
+    
+    @Metadata(bv = {}, d1 = { "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001J\u000f\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00030\u0002H\u00c6\u0001¨\u0006\u0005" }, d2 = { "Lcom/twitter/alttext/AltTextActivityContentViewResult$Companion;", "", "Lkotlinx/serialization/KSerializer;", "Lcom/twitter/alttext/AltTextActivityContentViewResult;", "serializer", "subsystem.tfa.alttext.api_release" }, k = 1, mv = { 1, 7, 1 })
+    public static final class Companion
+    {
+        public final KSerializer<AltTextActivityContentViewResult> serializer() {
+            return (KSerializer<AltTextActivityContentViewResult>)AltTextActivityContentViewResult$$serializer.INSTANCE;
+        }
     }
 }

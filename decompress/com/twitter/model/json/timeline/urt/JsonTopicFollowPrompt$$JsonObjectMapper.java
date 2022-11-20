@@ -11,71 +11,79 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTopicFollowPrompt$$JsonObjectMapper extends JsonMapper<JsonTopicFollowPrompt>
 {
-    public static final plt TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER;
+    public static final gmt TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER;
     
     static {
-        TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER = new plt();
+        TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER = new gmt();
     }
     
-    public static JsonTopicFollowPrompt _parse(final khe khe) throws IOException {
+    public static JsonTopicFollowPrompt _parse(final tge tge) throws IOException {
         final JsonTopicFollowPrompt jsonTopicFollowPrompt = new JsonTopicFollowPrompt();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTopicFollowPrompt, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTopicFollowPrompt, d, tge);
+            tge.l0();
         }
         return jsonTopicFollowPrompt;
     }
     
-    public static void _serialize(final JsonTopicFollowPrompt jsonTopicFollowPrompt, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTopicFollowPrompt jsonTopicFollowPrompt, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        ((StringBasedTypeConverter)JsonTopicFollowPrompt$$JsonObjectMapper.TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER).serialize((Object)jsonTopicFollowPrompt.c, "displayType", true, tfe);
-        tfe.u0("followIncentiveText", jsonTopicFollowPrompt.e);
-        tfe.u0("followIncentiveTitle", jsonTopicFollowPrompt.d);
+        ((StringBasedTypeConverter)JsonTopicFollowPrompt$$JsonObjectMapper.TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER).serialize((Object)jsonTopicFollowPrompt.c, "displayType", true, afe);
+        afe.t0("followIncentiveText", jsonTopicFollowPrompt.e);
+        afe.t0("followIncentiveTitle", jsonTopicFollowPrompt.d);
         if (jsonTopicFollowPrompt.b != null) {
-            LoganSquare.typeConverterFor((Class)gxd.class).serialize((Object)jsonTopicFollowPrompt.b, "followPromptTopic", true, tfe);
+            LoganSquare.typeConverterFor((Class)jwd.class).serialize((Object)jsonTopicFollowPrompt.b, "followPromptTopic", true, afe);
         }
-        tfe.u0("topicId", jsonTopicFollowPrompt.a);
+        afe.t0("topicId", jsonTopicFollowPrompt.a);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTopicFollowPrompt jsonTopicFollowPrompt, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTopicFollowPrompt jsonTopicFollowPrompt, final String s, final tge tge) throws IOException {
         if (!"displayType".equals(s) && !"followPromptDisplayType".equals(s)) {
             if ("followIncentiveText".equals(s)) {
-                jsonTopicFollowPrompt.e = khe.T((String)null);
+                jsonTopicFollowPrompt.e = tge.T((String)null);
             }
             else if ("followIncentiveTitle".equals(s)) {
-                jsonTopicFollowPrompt.d = khe.T((String)null);
+                jsonTopicFollowPrompt.d = tge.T((String)null);
             }
             else if ("followPromptTopic".equals(s)) {
-                jsonTopicFollowPrompt.b = (gxd)LoganSquare.typeConverterFor((Class)gxd.class).parse(khe);
+                jsonTopicFollowPrompt.b = (jwd)LoganSquare.typeConverterFor((Class)jwd.class).parse(tge);
             }
             else if ("topicId".equals(s)) {
-                jsonTopicFollowPrompt.a = khe.T((String)null);
+                jsonTopicFollowPrompt.a = tge.T((String)null);
             }
         }
         else {
-            jsonTopicFollowPrompt.c = (int)((StringBasedTypeConverter)JsonTopicFollowPrompt$$JsonObjectMapper.TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER).parse(khe);
+            jsonTopicFollowPrompt.c = (int)((StringBasedTypeConverter)JsonTopicFollowPrompt$$JsonObjectMapper.TOPIC_FOLLOW_PROMPT_DISPLAY_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonTopicFollowPrompt parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTopicFollowPrompt parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTopicFollowPrompt jsonTopicFollowPrompt, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTopicFollowPrompt, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTopicFollowPrompt jsonTopicFollowPrompt, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTopicFollowPrompt, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTopicFollowPrompt)o, afe, b);
     }
 }

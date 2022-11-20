@@ -8,11 +8,11 @@ public interface dec
 {
     public static final a Companion = a.a;
     
-    List<xbv> c();
+    List<cgv> e();
     
     public static final class a
     {
-        public static final /* synthetic */ a a;
+        public static final a a;
         
         static {
             a = new a();

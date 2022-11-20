@@ -17,57 +17,65 @@ public final class JsonTimelineUrl$$JsonObjectMapper extends JsonMapper<JsonTime
         URL_TYPE_TYPE_CONVERTER = new JsonTimelineUrl$a();
     }
     
-    public static JsonTimelineUrl _parse(final khe khe) throws IOException {
+    public static JsonTimelineUrl _parse(final tge tge) throws IOException {
         final JsonTimelineUrl jsonTimelineUrl = new JsonTimelineUrl();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineUrl, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineUrl, d, tge);
+            tge.l0();
         }
         return jsonTimelineUrl;
     }
     
-    public static void _serialize(final JsonTimelineUrl jsonTimelineUrl, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineUrl jsonTimelineUrl, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("url", jsonTimelineUrl.a);
-        ((StringBasedTypeConverter)JsonTimelineUrl$$JsonObjectMapper.URL_TYPE_TYPE_CONVERTER).serialize((Object)jsonTimelineUrl.b, "url_type", true, tfe);
+        afe.t0("url", jsonTimelineUrl.a);
+        ((StringBasedTypeConverter)JsonTimelineUrl$$JsonObjectMapper.URL_TYPE_TYPE_CONVERTER).serialize((Object)jsonTimelineUrl.b, "url_type", true, afe);
         if (jsonTimelineUrl.c != null) {
-            LoganSquare.typeConverterFor((Class)fov.class).serialize((Object)jsonTimelineUrl.c, "urtEndpointOptions", true, tfe);
+            LoganSquare.typeConverterFor((Class)epv.class).serialize((Object)jsonTimelineUrl.c, "urtEndpointOptions", true, afe);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineUrl jsonTimelineUrl, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonTimelineUrl jsonTimelineUrl, final String s, final tge tge) throws IOException {
         if ("url".equals(s)) {
-            jsonTimelineUrl.a = khe.T((String)null);
+            jsonTimelineUrl.a = tge.T((String)null);
         }
         else if (!"url_type".equals(s) && !"urlType".equals(s)) {
             if ("urtEndpointOptions".equals(s)) {
-                jsonTimelineUrl.c = (fov)LoganSquare.typeConverterFor((Class)fov.class).parse(khe);
+                jsonTimelineUrl.c = (epv)LoganSquare.typeConverterFor((Class)epv.class).parse(tge);
             }
         }
         else {
-            jsonTimelineUrl.b = (int)((StringBasedTypeConverter)JsonTimelineUrl$$JsonObjectMapper.URL_TYPE_TYPE_CONVERTER).parse(khe);
+            jsonTimelineUrl.b = (int)((StringBasedTypeConverter)JsonTimelineUrl$$JsonObjectMapper.URL_TYPE_TYPE_CONVERTER).parse(tge);
         }
     }
     
-    public JsonTimelineUrl parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineUrl parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineUrl jsonTimelineUrl, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineUrl, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineUrl jsonTimelineUrl, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineUrl, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineUrl)o, afe, b);
     }
 }

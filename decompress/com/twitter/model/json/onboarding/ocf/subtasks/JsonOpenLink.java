@@ -9,20 +9,19 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOpenLink extends lhh<jmj>
+public class JsonOpenLink extends qhh<omj>
 {
     @JsonField
-    public xrv a;
+    public ssv a;
     @JsonField
     public String b;
     
-    @Override
-    public final h4j t() {
-        final jmj$a jmj$a = new jmj$a();
-        final xrv a = this.a;
-        pf8.r(a);
-        jmj$a.k = a;
-        jmj$a.l = this.b;
-        return (h4j)jmj$a;
+    public final n4j t() {
+        final omj$a omj$a = new omj$a();
+        final ssv a = this.a;
+        jee.l((Object)a);
+        omj$a.k = a;
+        omj$a.l = this.b;
+        return (n4j)omj$a;
     }
 }

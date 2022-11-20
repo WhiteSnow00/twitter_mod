@@ -1,26 +1,19 @@
+import kotlin.Metadata;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class p52 extends gue implements gub<hn6, aws, oyv>
+@Metadata(bv = {}, d1 = { "\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0007\u0018\u00002\u00020\u0001:\u0001\u0004B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0005" }, d2 = { "Lp52;", "Le92;", "<init>", "()V", "a", "feature.tfa.bookmarks.implementation_release" }, k = 1, mv = { 1, 7, 1 })
+public final class p52 extends e92
 {
-    public final /* synthetic */ o52 C0;
+    public static final p52.p52$a Companion;
     
-    public p52(final o52 c0) {
-        this.C0 = c0;
-        super(2);
+    static {
+        Companion = new p52.p52$a();
     }
     
-    public final Object invoke(final Object o, final Object o2) {
-        final hn6 hn6 = (hn6)o;
-        final aws aws = (aws)o2;
-        zzd.f((Object)hn6, "contentUriNotifier");
-        zzd.f((Object)aws, "timelineIdentifier");
-        if (this.C0.h.d(aws, hn6) > 0) {
-            final o52 c0 = this.C0;
-            xw0.d(c0.j, (rj)new ej7((Object)c0, (Object)aws, 2));
-            hn6.b();
-        }
-        return oyv.a;
+    public p52() {
+        ((nv8)this).c2(2132017486);
     }
 }

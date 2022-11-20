@@ -1,10 +1,58 @@
-import kotlin.Metadata;
+import java.util.regex.Pattern;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-@Metadata(bv = {}, d1 = { "\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004" }, d2 = { "Lfmt;", "Lrnd;", "<init>", "()V", "feature.tfa.unifiedlanding.topic.plugin.implementation_release" }, k = 1, mv = { 1, 7, 1 })
-public final class fmt extends rnd
+public final class fmt
 {
+    public final jwd a;
+    public final int b;
+    public final String c;
+    public final String d;
+    
+    public fmt(final fmt.fmt$a fmt$a) {
+        final jwd a = fmt$a.a;
+        jee.l((Object)a);
+        this.a = a;
+        this.b = fmt$a.b;
+        this.c = fmt$a.c;
+        this.d = fmt$a.d;
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        final boolean b = o instanceof fmt;
+        final boolean b2 = false;
+        if (!b) {
+            return false;
+        }
+        if (this == o) {
+            return true;
+        }
+        final int a = c5j.a;
+        final fmt fmt = (fmt)o;
+        boolean b3 = b2;
+        if (c5j.a((Object)this.a, (Object)fmt.a)) {
+            b3 = b2;
+            if (this.b == fmt.b) {
+                final String c = this.c;
+                final String c2 = fmt.c;
+                final Pattern a2 = ikr.a;
+                b3 = b2;
+                if (czd.a((Object)c, (Object)c2)) {
+                    b3 = b2;
+                    if (czd.a((Object)this.d, (Object)fmt.d)) {
+                        b3 = true;
+                    }
+                }
+            }
+        }
+        return b3;
+    }
+    
+    @Override
+    public final int hashCode() {
+        return c5j.i((Object)this.a, (Object)this.b, (Object)this.c, (Object)this.d);
+    }
 }

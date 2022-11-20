@@ -1,31 +1,17 @@
+import android.content.Context;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class f22
+public final class f22 extends eus
 {
-    public static bf6<String, g22> a;
-    
-    public static bf6<String, g22> a() {
-        synchronized (f22.class) {
-            if (f22.a == null) {
-                f22.a = (bf6<String, g22>)new bf6((bra)new a(k83.a().T6()));
-                nds.a((Class)f22.class);
-            }
-            return f22.a;
-        }
+    public f22(final tcv tcv, final mws mws, final hss hss, final gh7<bo6> gh7, final gdf<cxs> gdf, final brb brb, final tod tod, final epi<cxs> epi, final Context context, final sc sc, final vxs vxs, final w0t w0t, final c3e<cxs> c3e, final xba<bo> xba, final udx udx, final efv efv) {
+        super(tcv, mws, hss, (gh7)gh7, (gdf)gdf, brb, tod, (epi)epi, sc, vxs, w0t, (c3e)c3e, (xba)xba, udx, efv);
     }
     
-    public static final class a implements bra<String, g22>
-    {
-        public final d9w a;
-        
-        public a(final d9w a) {
-            this.a = a;
-        }
-        
-        public final Object a(final Object o) {
-            return new g22(this.a, (String)o);
-        }
+    public final gdv$b l0(final gdv$b gdv$b) {
+        gdv$b.a = "blocked_users";
+        return gdv$b;
     }
 }

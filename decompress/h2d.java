@@ -1,16 +1,26 @@
+import android.os.RemoteException;
+import android.os.Bundle;
+import android.os.IInterface;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class h2d<S, D> implements z4e<S, D>
+public interface h2d extends IInterface
 {
-    public final D a(final S n) {
-        return this.c(n);
-    }
+    void A(final Bundle p0) throws RemoteException;
     
-    public boolean b(final S n) {
-        return true;
-    }
+    void V(final tey p0) throws RemoteException;
     
-    public abstract D c(final S p0);
+    l2d getView() throws RemoteException;
+    
+    void j() throws RemoteException;
+    
+    void onLowMemory() throws RemoteException;
+    
+    void r(final Bundle p0) throws RemoteException;
+    
+    void v1() throws RemoteException;
+    
+    void z() throws RemoteException;
 }

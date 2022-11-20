@@ -4,7 +4,7 @@
 
 package com.twitter.app.common.inject.retained;
 
-@l4j
+@r4j
 public interface DefaultRetainedObjectGraph extends RetainedObjectGraph
 {
 }

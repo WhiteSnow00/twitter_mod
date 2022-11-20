@@ -12,16 +12,16 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSsoSubtask extends lhh<w4r>
+public class JsonSsoSubtask extends qhh<p5r>
 {
     @JsonField
-    public xrv a;
+    public ssv a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
-    public xrv c;
-    @JsonField(typeConverter = r4r.class)
-    public q4r d;
+    public ssv c;
+    @JsonField(typeConverter = k5r.class)
+    public j5r d;
     @JsonField
     public List<String> e;
     @JsonField
@@ -35,38 +35,37 @@ public class JsonSsoSubtask extends lhh<w4r>
     @JsonField
     public JsonOcfComponentCollection j;
     
-    @Override
-    public final h4j t() {
-        final w4r$a w4r$a = new w4r$a();
-        ((lsr$a)w4r$a).a = this.a;
-        final int a = w4j.a;
-        ((lsr$a)w4r$a).c = this.c;
-        final xrv b = this.b;
-        zzd.f((Object)b, "failLink");
-        w4r$a.q = b;
-        final q4r d = this.d;
-        zzd.f((Object)d, "provider");
-        w4r$a.k = d;
+    public final n4j t() {
+        final p5r.a a = new p5r.a();
+        a.a = this.a;
+        final int a2 = c5j.a;
+        a.c = this.c;
+        final ssv b = this.b;
+        czd.f((Object)b, "failLink");
+        a.q = b;
+        final j5r d = this.d;
+        czd.f((Object)d, "provider");
+        a.k = d;
         final ArrayList e = this.e;
-        pf8.r(e);
-        zzd.f((Object)e, "scopes");
-        w4r$a.o = e;
-        w4r$a.l = this.f;
-        w4r$a.m = this.g;
-        w4r$a.n = this.h;
+        jee.l((Object)e);
+        czd.f((Object)e, "scopes");
+        a.o = e;
+        a.l = this.f;
+        a.m = this.g;
+        a.n = this.h;
         final String i = this.i;
-        pf8.r(i);
-        zzd.f((Object)i, "state");
-        w4r$a.p = i;
+        jee.l((Object)i);
+        czd.f((Object)i, "state");
+        a.p = i;
         final JsonOcfComponentCollection j = this.j;
-        n16 t;
+        x06 t;
         if (j != null) {
             t = j.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)w4r$a).j = t;
-        return (h4j)w4r$a;
+        a.j = t;
+        return (n4j)a;
     }
 }

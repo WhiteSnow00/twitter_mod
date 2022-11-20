@@ -37,73 +37,73 @@ import android.widget.Scroller;
 import android.os.Parcelable;
 import android.graphics.Rect;
 import java.util.ArrayList;
-import java.util.Comparator;
 import android.view.animation.Interpolator;
+import java.util.Comparator;
 import android.view.ViewGroup;
 
 public class ViewPager extends ViewGroup
 {
-    public static final Interpolator A1;
-    public static final int[] y1;
-    public static final Comparator<e> z1;
-    public int C0;
-    public final ArrayList<e> D0;
-    public final e E0;
-    public final Rect F0;
-    public cuj G0;
-    public int H0;
+    public static final Comparator<e> A1;
+    public static final Interpolator B1;
+    public static final int[] z1;
+    public int D0;
+    public final ArrayList<e> E0;
+    public final e F0;
+    public final Rect G0;
+    public huj H0;
     public int I0;
-    public Parcelable J0;
-    public ClassLoader K0;
-    public Scroller L0;
-    public boolean M0;
-    public j N0;
-    public int O0;
-    public Drawable P0;
-    public int Q0;
+    public int J0;
+    public Parcelable K0;
+    public ClassLoader L0;
+    public Scroller M0;
+    public boolean N0;
+    public j O0;
+    public int P0;
+    public Drawable Q0;
     public int R0;
-    public float S0;
+    public int S0;
     public float T0;
-    public int U0;
-    public boolean V0;
+    public float U0;
+    public int V0;
     public boolean W0;
     public boolean X0;
-    public int Y0;
-    public boolean Z0;
+    public boolean Y0;
+    public int Z0;
     public boolean a1;
-    public int b1;
+    public boolean b1;
     public int c1;
     public int d1;
-    public float e1;
+    public int e1;
     public float f1;
     public float g1;
     public float h1;
-    public int i1;
-    public VelocityTracker j1;
-    public int k1;
+    public float i1;
+    public int j1;
+    public VelocityTracker k1;
     public int l1;
     public int m1;
     public int n1;
-    public EdgeEffect o1;
+    public int o1;
     public EdgeEffect p1;
-    public boolean q1;
+    public EdgeEffect q1;
     public boolean r1;
-    public int s1;
-    public List<i> t1;
-    public i u1;
-    public List<h> v1;
-    public final ViewPager$c w1;
-    public int x1;
+    public boolean s1;
+    public int t1;
+    public List<i> u1;
+    public i v1;
+    public List<h> w1;
+    public final ViewPager$c x1;
+    public int y1;
     
     static {
-        y1 = new int[] { 16842931 };
-        ViewPager.z1 = new Comparator<e>() {
+        z1 = new int[] { 16842931 };
+        ViewPager.A1 = new Comparator<e>() {
             @Override
             public final int compare(final Object o, final Object o2) {
                 return ((e)o).b - ((e)o2).b;
             }
         };
-        A1 = (Interpolator)new Interpolator() {
+        B1 = (Interpolator)new Interpolator() {
             public final float getInterpolation(float n) {
                 --n;
                 return n * n * n * n * n + 1.0f;
@@ -113,113 +113,115 @@ public class ViewPager extends ViewGroup
     
     public ViewPager(Context context, final AttributeSet set) {
         super(context, set);
-        this.D0 = new ArrayList<e>();
-        this.E0 = new e();
-        this.F0 = new Rect();
-        this.I0 = -1;
-        this.J0 = null;
+        this.E0 = new ArrayList<e>();
+        this.F0 = new e();
+        this.G0 = new Rect();
+        this.J0 = -1;
         this.K0 = null;
-        this.S0 = -3.4028235E38f;
-        this.T0 = Float.MAX_VALUE;
-        this.Y0 = 1;
-        this.i1 = -1;
-        this.q1 = true;
-        this.w1 = new Runnable() {
+        this.L0 = null;
+        this.T0 = -3.4028235E38f;
+        this.U0 = Float.MAX_VALUE;
+        this.Z0 = 1;
+        this.j1 = -1;
+        this.r1 = true;
+        this.x1 = new Runnable(this) {
+            public final ViewPager D0;
+            
             @Override
             public final void run() {
-                ViewPager.this.setScrollState(0);
-                ViewPager.this.s();
+                this.D0.setScrollState(0);
+                this.D0.s();
             }
         };
-        this.x1 = 0;
+        this.y1 = 0;
         ((View)this).setWillNotDraw(false);
         this.setDescendantFocusability(262144);
         ((View)this).setFocusable(true);
         context = ((View)this).getContext();
-        this.L0 = new Scroller(context, ViewPager.A1);
+        this.M0 = new Scroller(context, ViewPager.B1);
         final ViewConfiguration value = ViewConfiguration.get(context);
         final float density = context.getResources().getDisplayMetrics().density;
-        this.d1 = value.getScaledPagingTouchSlop();
-        this.k1 = (int)(400.0f * density);
-        this.l1 = value.getScaledMaximumFlingVelocity();
-        this.o1 = new EdgeEffect(context);
+        this.e1 = value.getScaledPagingTouchSlop();
+        this.l1 = (int)(400.0f * density);
+        this.m1 = value.getScaledMaximumFlingVelocity();
         this.p1 = new EdgeEffect(context);
-        this.m1 = (int)(25.0f * density);
-        this.n1 = (int)(2.0f * density);
-        this.b1 = (int)(density * 16.0f);
-        p5x.z((View)this, (wf)new ViewPager.ViewPager$g(this));
-        if (p5x$d.c((View)this) == 0) {
-            p5x$d.s((View)this, 1);
+        this.q1 = new EdgeEffect(context);
+        this.n1 = (int)(25.0f * density);
+        this.o1 = (int)(2.0f * density);
+        this.c1 = (int)(density * 16.0f);
+        j6x.z((View)this, (vf)new ViewPager.ViewPager$g(this));
+        if (j6x$d.c((View)this) == 0) {
+            j6x$d.s((View)this, 1);
         }
-        p5x$i.u((View)this, (ogj)new o9x(this));
+        j6x$i.u((View)this, (ugj)new jax(this));
     }
     
     private int getClientWidth() {
         return ((View)this).getMeasuredWidth() - ((View)this).getPaddingLeft() - ((View)this).getPaddingRight();
     }
     
-    private void setScrollingCacheEnabled(final boolean w0) {
-        if (this.W0 != w0) {
-            this.W0 = w0;
+    private void setScrollingCacheEnabled(final boolean x0) {
+        if (this.X0 != x0) {
+            this.X0 = x0;
         }
     }
     
     public void A(final int n, final boolean b) {
-        this.B(n, b, this.X0 = false, 0);
+        this.B(n, b, this.Y0 = false, 0);
     }
     
     public final void B(int i, final boolean b, final boolean b2, final int n) {
-        final cuj g0 = this.G0;
+        final huj h0 = this.H0;
         final boolean b3 = false;
-        if (g0 == null || g0.getCount() <= 0) {
+        if (h0 == null || h0.getCount() <= 0) {
             this.setScrollingCacheEnabled(false);
             return;
         }
-        if (!b2 && this.H0 == i && this.D0.size() != 0) {
+        if (!b2 && this.I0 == i && this.E0.size() != 0) {
             this.setScrollingCacheEnabled(false);
             return;
         }
-        int h0;
+        int i2;
         if (i < 0) {
-            h0 = 0;
+            i2 = 0;
         }
-        else if ((h0 = i) >= this.G0.getCount()) {
-            h0 = this.G0.getCount() - 1;
+        else if ((i2 = i) >= this.H0.getCount()) {
+            i2 = this.H0.getCount() - 1;
         }
-        final int y0 = this.Y0;
-        i = this.H0;
-        if (h0 > i + y0 || h0 < i - y0) {
-            for (i = 0; i < this.D0.size(); ++i) {
-                this.D0.get(i).c = true;
+        i = this.Z0;
+        final int i3 = this.I0;
+        if (i2 > i3 + i || i2 < i3 - i) {
+            for (i = 0; i < this.E0.size(); ++i) {
+                this.E0.get(i).c = true;
             }
         }
         boolean b4 = b3;
-        if (this.H0 != h0) {
+        if (this.I0 != i2) {
             b4 = true;
         }
-        if (this.q1) {
-            this.H0 = h0;
+        if (this.r1) {
+            this.I0 = i2;
             if (b4) {
-                this.h(h0);
+                this.h(i2);
             }
             ((View)this).requestLayout();
         }
         else {
-            this.t(h0);
-            this.z(h0, b, n, b4);
+            this.t(i2);
+            this.z(i2, b, n, b4);
         }
     }
     
     public final e a(final int b, final int n) {
         final e e = new e();
         e.b = b;
-        e.a = this.G0.F((ViewGroup)this, b);
-        e.d = this.G0.D(b);
-        if (n >= 0 && n < this.D0.size()) {
-            this.D0.add(n, e);
+        e.a = this.H0.H((ViewGroup)this, b);
+        e.d = this.H0.F(b);
+        if (n >= 0 && n < this.E0.size()) {
+            this.E0.add(n, e);
         }
         else {
-            this.D0.add(e);
+            this.E0.add(e);
         }
         return e;
     }
@@ -232,7 +234,7 @@ public class ViewPager extends ViewGroup
                 final View child = this.getChildAt(i);
                 if (child.getVisibility() == 0) {
                     final e j = this.j(child);
-                    if (j != null && j.b == this.H0) {
+                    if (j != null && j.b == this.I0) {
                         child.addFocusables((ArrayList)list, n, n2);
                     }
                 }
@@ -254,7 +256,7 @@ public class ViewPager extends ViewGroup
             final View child = this.getChildAt(i);
             if (child.getVisibility() == 0) {
                 final e j = this.j(child);
-                if (j != null && j.b == this.H0) {
+                if (j != null && j.b == this.I0) {
                     child.addTouchables((ArrayList)list);
                 }
             }
@@ -269,7 +271,7 @@ public class ViewPager extends ViewGroup
         final f f = (f)generateLayoutParams;
         final boolean a = f.a | view.getClass().getAnnotation(d.class) != null;
         f.a = a;
-        if (this.V0) {
+        if (this.W0) {
             if (a) {
                 throw new IllegalStateException("Cannot add pager decor view during layout");
             }
@@ -282,30 +284,30 @@ public class ViewPager extends ViewGroup
     }
     
     public void b(final h h) {
-        if (this.v1 == null) {
-            this.v1 = new ArrayList();
+        if (this.w1 == null) {
+            this.w1 = new ArrayList();
         }
-        this.v1.add(h);
+        this.w1.add(h);
     }
     
     public void c(final i i) {
-        if (this.t1 == null) {
-            this.t1 = new ArrayList();
+        if (this.u1 == null) {
+            this.u1 = new ArrayList();
         }
-        this.t1.add(i);
+        this.u1.add(i);
     }
     
     public boolean canScrollHorizontally(final int n) {
-        final cuj g0 = this.G0;
+        final huj h0 = this.H0;
         final boolean b = false;
         boolean b2 = false;
-        if (g0 == null) {
+        if (h0 == null) {
             return false;
         }
         final int clientWidth = this.getClientWidth();
         final int scrollX = ((View)this).getScrollX();
         if (n < 0) {
-            if (scrollX > (int)(clientWidth * this.S0)) {
+            if (scrollX > (int)(clientWidth * this.T0)) {
                 b2 = true;
             }
             return b2;
@@ -313,7 +315,7 @@ public class ViewPager extends ViewGroup
         boolean b3 = b;
         if (n > 0) {
             b3 = b;
-            if (scrollX < (int)(clientWidth * this.T0)) {
+            if (scrollX < (int)(clientWidth * this.U0)) {
                 b3 = true;
             }
         }
@@ -325,21 +327,21 @@ public class ViewPager extends ViewGroup
     }
     
     public final void computeScroll() {
-        this.M0 = true;
-        if (!this.L0.isFinished() && this.L0.computeScrollOffset()) {
+        this.N0 = true;
+        if (!this.M0.isFinished() && this.M0.computeScrollOffset()) {
             final int scrollX = ((View)this).getScrollX();
             final int scrollY = ((View)this).getScrollY();
-            final int currX = this.L0.getCurrX();
-            final int currY = this.L0.getCurrY();
+            final int currX = this.M0.getCurrX();
+            final int currY = this.M0.getCurrY();
             if (scrollX != currX || scrollY != currY) {
                 ((View)this).scrollTo(currX, currY);
                 if (!this.q(currX)) {
-                    this.L0.abortAnimation();
+                    this.M0.abortAnimation();
                     ((View)this).scrollTo(0, currY);
                 }
             }
-            final WeakHashMap a = p5x.a;
-            p5x$d.k((View)this);
+            final WeakHashMap a = j6x.a;
+            j6x$d.k((View)this);
             return;
         }
         this.f(true);
@@ -349,8 +351,8 @@ public class ViewPager extends ViewGroup
         final View focus = ((View)this).findFocus();
         boolean b = false;
         View view = null;
-        Label_0176: {
-            Label_0173: {
+        Label_0182: {
+            Label_0179: {
                 if (focus != this) {
                     if ((view = focus) != null) {
                         ViewParent viewParent = focus.getParent();
@@ -366,12 +368,12 @@ public class ViewPager extends ViewGroup
                                             sb.append(" => ");
                                             sb.append(viewParent2.getClass().getSimpleName());
                                         }
-                                        final StringBuilder g = w48.g("arrowScroll tried to find focus based on non-child current focused view ");
-                                        g.append(sb.toString());
-                                        Log.e("ViewPager", g.toString());
-                                        break Label_0173;
+                                        final StringBuilder j = fu8.j("arrowScroll tried to find focus based on non-child current focused view ");
+                                        j.append(sb.toString());
+                                        Log.e("ViewPager", j.toString());
+                                        break Label_0179;
                                     }
-                                    break Label_0176;
+                                    break Label_0182;
                                 }
                                 else {
                                     viewParent = viewParent.getParent();
@@ -381,7 +383,7 @@ public class ViewPager extends ViewGroup
                             continue;
                         }
                     }
-                    break Label_0176;
+                    break Label_0182;
                 }
             }
             view = null;
@@ -389,8 +391,8 @@ public class ViewPager extends ViewGroup
         final View nextFocus = FocusFinder.getInstance().findNextFocus((ViewGroup)this, view, n);
         if (nextFocus != null && nextFocus != view) {
             if (n == 17) {
-                final int left = this.i(this.F0, nextFocus).left;
-                final int left2 = this.i(this.F0, view).left;
+                final int left = this.i(this.G0, nextFocus).left;
+                final int left2 = this.i(this.G0, view).left;
                 if (view != null && left >= left2) {
                     b = this.o();
                 }
@@ -399,8 +401,8 @@ public class ViewPager extends ViewGroup
                 }
             }
             else if (n == 66) {
-                final int left3 = this.i(this.F0, nextFocus).left;
-                final int left4 = this.i(this.F0, view).left;
+                final int left3 = this.i(this.G0, nextFocus).left;
+                final int left4 = this.i(this.G0, view).left;
                 if (view != null && left3 <= left4) {
                     b = this.p();
                 }
@@ -428,7 +430,7 @@ public class ViewPager extends ViewGroup
         boolean b = false;
         if (!dispatchKeyEvent) {
             boolean b2 = false;
-            Label_0136: {
+            Label_0133: {
                 if (keyEvent.getAction() == 0) {
                     final int keyCode = keyEvent.getKeyCode();
                     if (keyCode != 21) {
@@ -436,30 +438,30 @@ public class ViewPager extends ViewGroup
                             if (keyCode == 61) {
                                 if (keyEvent.hasNoModifiers()) {
                                     b2 = this.d(2);
-                                    break Label_0136;
+                                    break Label_0133;
                                 }
                                 if (keyEvent.hasModifiers(1)) {
                                     b2 = this.d(1);
-                                    break Label_0136;
+                                    break Label_0133;
                                 }
                             }
                         }
                         else {
                             if (keyEvent.hasModifiers(2)) {
                                 b2 = this.p();
-                                break Label_0136;
+                                break Label_0133;
                             }
                             b2 = this.d(66);
-                            break Label_0136;
+                            break Label_0133;
                         }
                     }
                     else {
                         if (keyEvent.hasModifiers(2)) {
                             b2 = this.o();
-                            break Label_0136;
+                            break Label_0133;
                         }
                         b2 = this.d(17);
-                        break Label_0136;
+                        break Label_0133;
                     }
                 }
                 b2 = false;
@@ -480,7 +482,7 @@ public class ViewPager extends ViewGroup
             final View child = this.getChildAt(i);
             if (child.getVisibility() == 0) {
                 final e j = this.j(child);
-                if (j != null && j.b == this.H0 && child.dispatchPopulateAccessibilityEvent(accessibilityEvent)) {
+                if (j != null && j.b == this.I0 && child.dispatchPopulateAccessibilityEvent(accessibilityEvent)) {
                     return true;
                 }
             }
@@ -494,54 +496,54 @@ public class ViewPager extends ViewGroup
         int n = 0;
         int n2 = 0;
         Label_0261: {
-            Label_0064: {
+            Label_0066: {
                 if (overScrollMode != 0) {
                     if (overScrollMode == 1) {
-                        final cuj g0 = this.G0;
-                        if (g0 != null && g0.getCount() > 1) {
-                            break Label_0064;
+                        final huj h0 = this.H0;
+                        if (h0 != null && h0.getCount() > 1) {
+                            break Label_0066;
                         }
                     }
-                    this.o1.finish();
                     this.p1.finish();
+                    this.q1.finish();
                     break Label_0261;
                 }
             }
-            if (!this.o1.isFinished()) {
+            if (!this.p1.isFinished()) {
                 final int save = canvas.save();
                 final int n3 = ((View)this).getHeight() - ((View)this).getPaddingTop() - ((View)this).getPaddingBottom();
                 final int width = ((View)this).getWidth();
                 canvas.rotate(270.0f);
-                canvas.translate((float)(((View)this).getPaddingTop() + -n3), this.S0 * width);
-                this.o1.setSize(n3, width);
-                n2 = ((false | this.o1.draw(canvas)) ? 1 : 0);
+                canvas.translate((float)(((View)this).getPaddingTop() + -n3), this.T0 * width);
+                this.p1.setSize(n3, width);
+                n2 = ((false | this.p1.draw(canvas)) ? 1 : 0);
                 canvas.restoreToCount(save);
             }
             n = n2;
-            if (!this.p1.isFinished()) {
+            if (!this.q1.isFinished()) {
                 final int save2 = canvas.save();
                 final int width2 = ((View)this).getWidth();
                 final int height = ((View)this).getHeight();
                 final int paddingTop = ((View)this).getPaddingTop();
                 final int paddingBottom = ((View)this).getPaddingBottom();
                 canvas.rotate(90.0f);
-                canvas.translate((float)(-((View)this).getPaddingTop()), -(this.T0 + 1.0f) * width2);
-                this.p1.setSize(height - paddingTop - paddingBottom, width2);
-                n = (n2 | (this.p1.draw(canvas) ? 1 : 0));
+                canvas.translate((float)(-((View)this).getPaddingTop()), -(this.U0 + 1.0f) * width2);
+                this.q1.setSize(height - paddingTop - paddingBottom, width2);
+                n = (n2 | (this.q1.draw(canvas) ? 1 : 0));
                 canvas.restoreToCount(save2);
             }
         }
         if (n != 0) {
-            final WeakHashMap a = p5x.a;
-            p5x$d.k((View)this);
+            final WeakHashMap a = j6x.a;
+            j6x$d.k((View)this);
         }
     }
     
     public final void drawableStateChanged() {
         super.drawableStateChanged();
-        final Drawable p0 = this.P0;
-        if (p0 != null && p0.isStateful()) {
-            p0.setState(((View)this).getDrawableState());
+        final Drawable q0 = this.Q0;
+        if (q0 != null && q0.isStateful()) {
+            q0.setState(((View)this).getDrawableState());
         }
     }
     
@@ -568,7 +570,7 @@ public class ViewPager extends ViewGroup
     
     public final void f(final boolean b) {
         int n;
-        if (this.x1 == 2) {
+        if (this.y1 == 2) {
             n = 1;
         }
         else {
@@ -576,12 +578,12 @@ public class ViewPager extends ViewGroup
         }
         if (n != 0) {
             this.setScrollingCacheEnabled(false);
-            if (this.L0.isFinished() ^ true) {
-                this.L0.abortAnimation();
+            if (this.M0.isFinished() ^ true) {
+                this.M0.abortAnimation();
                 final int scrollX = ((View)this).getScrollX();
                 final int scrollY = ((View)this).getScrollY();
-                final int currX = this.L0.getCurrX();
-                final int currY = this.L0.getCurrY();
+                final int currX = this.M0.getCurrX();
+                final int currY = this.M0.getCurrY();
                 if (scrollX != currX || scrollY != currY) {
                     ((View)this).scrollTo(currX, currY);
                     if (currX != scrollX) {
@@ -590,9 +592,9 @@ public class ViewPager extends ViewGroup
                 }
             }
         }
-        this.X0 = false;
-        for (int i = 0; i < this.D0.size(); ++i) {
-            final e e = this.D0.get(i);
+        this.Y0 = false;
+        for (int i = 0; i < this.E0.size(); ++i) {
+            final e e = this.E0.get(i);
             if (e.c) {
                 e.c = false;
                 n = 1;
@@ -600,67 +602,67 @@ public class ViewPager extends ViewGroup
         }
         if (n != 0) {
             if (b) {
-                final Runnable w1 = this.w1;
-                final WeakHashMap a = p5x.a;
-                p5x$d.m((View)this, (Runnable)w1);
+                final Runnable x1 = this.x1;
+                final WeakHashMap a = j6x.a;
+                j6x$d.m((View)this, (Runnable)x1);
             }
             else {
-                this.w1.run();
+                this.x1.run();
             }
         }
     }
     
     public final void g() {
-        final int count = this.G0.getCount();
-        this.C0 = count;
-        final boolean b = this.D0.size() < this.Y0 * 2 + 1 && this.D0.size() < count;
-        int n = this.H0;
+        final int count = this.H0.getCount();
+        this.D0 = count;
+        final boolean b = this.E0.size() < this.Z0 * 2 + 1 && this.E0.size() < count;
+        int n = this.I0;
         int i = 0;
         int n2 = 0;
         boolean b2 = b;
-        while (i < this.D0.size()) {
-            final e e = this.D0.get(i);
-            final int b3 = this.G0.B(e.a);
+        while (i < this.E0.size()) {
+            final e e = this.E0.get(i);
+            final int c = this.H0.C(e.a);
             int n3 = 0;
             int n4 = 0;
             int n5 = 0;
-            Label_0283: {
-                if (b3 == -1) {
+            Label_0279: {
+                if (c == -1) {
                     n3 = n;
                     n4 = i;
                     n5 = n2;
                 }
                 else {
-                    if (b3 == -2) {
-                        this.D0.remove(i);
+                    if (c == -2) {
+                        this.E0.remove(i);
                         final int n6 = i - 1;
                         int n7;
                         if ((n7 = n2) == 0) {
-                            this.G0.O((ViewGroup)this);
+                            this.H0.O((ViewGroup)this);
                             n7 = 1;
                         }
-                        this.G0.i((ViewGroup)this, e.b, e.a);
-                        final int h0 = this.H0;
+                        this.H0.i((ViewGroup)this, e.b, e.a);
+                        final int i2 = this.I0;
                         i = n6;
                         n2 = n7;
-                        if (h0 == e.b) {
-                            n = Math.max(0, Math.min(h0, -1 + count));
+                        if (i2 == e.b) {
+                            n = Math.max(0, Math.min(i2, -1 + count));
                             i = n6;
                             n2 = n7;
                         }
                     }
                     else {
-                        final int b4 = e.b;
+                        final int b3 = e.b;
                         n3 = n;
                         n4 = i;
                         n5 = n2;
-                        if (b4 == b3) {
-                            break Label_0283;
+                        if (b3 == c) {
+                            break Label_0279;
                         }
-                        if (b4 == this.H0) {
-                            n = b3;
+                        if (b3 == this.I0) {
+                            n = c;
                         }
-                        e.b = b3;
+                        e.b = c;
                     }
                     b2 = true;
                     n5 = n2;
@@ -673,9 +675,9 @@ public class ViewPager extends ViewGroup
             n2 = n5;
         }
         if (n2 != 0) {
-            this.G0.j((ViewGroup)this);
+            this.H0.j((ViewGroup)this);
         }
-        Collections.sort(this.D0, (Comparator<? super e>)ViewPager.z1);
+        Collections.sort(this.E0, (Comparator<? super e>)ViewPager.A1);
         if (b2) {
             for (int childCount = this.getChildCount(), j = 0; j < childCount; ++j) {
                 final f f = (f)this.getChildAt(j).getLayoutParams();
@@ -700,8 +702,8 @@ public class ViewPager extends ViewGroup
         return this.generateDefaultLayoutParams();
     }
     
-    public cuj getAdapter() {
-        return this.G0;
+    public huj getAdapter() {
+        return this.H0;
     }
     
     public final int getChildDrawingOrder(final int n, final int n2) {
@@ -709,28 +711,28 @@ public class ViewPager extends ViewGroup
     }
     
     public int getCurrentItem() {
-        return this.H0;
+        return this.I0;
     }
     
     public int getOffscreenPageLimit() {
-        return this.Y0;
+        return this.Z0;
     }
     
     public int getPageMargin() {
-        return this.O0;
+        return this.P0;
     }
     
     public final void h(final int n) {
-        final i u1 = this.u1;
-        if (u1 != null) {
-            u1.E(n);
+        final i v1 = this.v1;
+        if (v1 != null) {
+            v1.D(n);
         }
-        final ArrayList t1 = this.t1;
-        if (t1 != null) {
-            for (int i = 0; i < t1.size(); ++i) {
-                final i j = this.t1.get(i);
+        final ArrayList u1 = this.u1;
+        if (u1 != null) {
+            for (int i = 0; i < u1.size(); ++i) {
+                final i j = this.u1.get(i);
                 if (j != null) {
-                    j.E(n);
+                    j.D(n);
                 }
             }
         }
@@ -761,9 +763,9 @@ public class ViewPager extends ViewGroup
     }
     
     public final e j(final View view) {
-        for (int i = 0; i < this.D0.size(); ++i) {
-            final e e = this.D0.get(i);
-            if (this.G0.I(view, e.a)) {
+        for (int i = 0; i < this.E0.size(); ++i) {
+            final e e = this.E0.get(i);
+            if (this.H0.I(view, e.a)) {
                 return e;
             }
         }
@@ -782,7 +784,7 @@ public class ViewPager extends ViewGroup
         }
         float n2;
         if (clientWidth > 0) {
-            n2 = this.O0 / (float)clientWidth;
+            n2 = this.P0 / (float)clientWidth;
         }
         else {
             n2 = 0.0f;
@@ -792,43 +794,43 @@ public class ViewPager extends ViewGroup
         int b = -1;
         int i = 0;
         int n3 = 1;
-        while (i < this.D0.size()) {
-            final e e3 = this.D0.get(i);
+        while (i < this.E0.size()) {
+            final e e3 = this.E0.get(i);
             int n4 = i;
-            e e4 = e3;
+            e f0 = e3;
             if (n3 == 0) {
                 final int b2 = e3.b;
                 ++b;
                 n4 = i;
-                e4 = e3;
+                f0 = e3;
                 if (b2 != b) {
-                    e4 = this.E0;
-                    e4.e = e + d + n2;
-                    e4.b = b;
-                    e4.d = this.G0.D(b);
+                    f0 = this.F0;
+                    f0.e = e + d + n2;
+                    f0.b = b;
+                    f0.d = this.H0.F(b);
                     n4 = i - 1;
                 }
             }
-            e = e4.e;
-            final float d2 = e4.d;
+            e = f0.e;
+            final float d2 = f0.d;
             if (n3 == 0 && n < e) {
                 return e2;
             }
-            if (n < d2 + e + n2 || n4 == this.D0.size() - 1) {
-                return e4;
+            if (n < d2 + e + n2 || n4 == this.E0.size() - 1) {
+                return f0;
             }
-            b = e4.b;
-            d = e4.d;
+            b = f0.b;
+            d = f0.d;
             i = n4 + 1;
             n3 = 0;
-            e2 = e4;
+            e2 = f0;
         }
         return e2;
     }
     
     public final e l(final int n) {
-        for (int i = 0; i < this.D0.size(); ++i) {
-            final e e = this.D0.get(i);
+        for (int i = 0; i < this.E0.size(); ++i) {
+            final e e = this.E0.get(i);
             if (e.b == n) {
                 return e;
             }
@@ -837,9 +839,9 @@ public class ViewPager extends ViewGroup
     }
     
     public final void m(final int n, final float n2, final int n3) {
-        final int s1 = this.s1;
+        final int t1 = this.t1;
         final int n4 = 0;
-        if (s1 > 0) {
+        if (t1 > 0) {
             final int scrollX = ((View)this).getScrollX();
             int paddingLeft = ((View)this).getPaddingLeft();
             int paddingRight = ((View)this).getPaddingRight();
@@ -878,25 +880,25 @@ public class ViewPager extends ViewGroup
                 }
             }
         }
-        final i u1 = this.u1;
-        if (u1 != null) {
-            u1.h2(n, n2, n3);
+        final i v1 = this.v1;
+        if (v1 != null) {
+            v1.h2(n, n2, n3);
         }
-        final ArrayList t1 = this.t1;
-        if (t1 != null) {
-            for (int size = t1.size(), j = n4; j < size; ++j) {
-                final i k = this.t1.get(j);
+        final ArrayList u1 = this.u1;
+        if (u1 != null) {
+            for (int size = u1.size(), j = n4; j < size; ++j) {
+                final i k = this.u1.get(j);
                 if (k != null) {
                     k.h2(n, n2, n3);
                 }
             }
         }
-        this.r1 = true;
+        this.s1 = true;
     }
     
     public final void n(final MotionEvent motionEvent) {
         final int actionIndex = motionEvent.getActionIndex();
-        if (motionEvent.getPointerId(actionIndex) == this.i1) {
+        if (motionEvent.getPointerId(actionIndex) == this.j1) {
             int n;
             if (actionIndex == 0) {
                 n = 1;
@@ -904,19 +906,19 @@ public class ViewPager extends ViewGroup
             else {
                 n = 0;
             }
-            this.e1 = motionEvent.getX(n);
-            this.i1 = motionEvent.getPointerId(n);
-            final VelocityTracker j1 = this.j1;
-            if (j1 != null) {
-                j1.clear();
+            this.f1 = motionEvent.getX(n);
+            this.j1 = motionEvent.getPointerId(n);
+            final VelocityTracker k1 = this.k1;
+            if (k1 != null) {
+                k1.clear();
             }
         }
     }
     
     public final boolean o() {
-        final int h0 = this.H0;
-        if (h0 > 0) {
-            this.A(h0 - 1, true);
+        final int i0 = this.I0;
+        if (i0 > 0) {
+            this.A(i0 - 1, true);
             return true;
         }
         return false;
@@ -924,56 +926,56 @@ public class ViewPager extends ViewGroup
     
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        this.q1 = true;
+        this.r1 = true;
     }
     
     public void onDetachedFromWindow() {
-        ((View)this).removeCallbacks((Runnable)this.w1);
-        final Scroller l0 = this.L0;
-        if (l0 != null && !l0.isFinished()) {
-            this.L0.abortAnimation();
+        ((View)this).removeCallbacks((Runnable)this.x1);
+        final Scroller m0 = this.M0;
+        if (m0 != null && !m0.isFinished()) {
+            this.M0.abortAnimation();
         }
         super.onDetachedFromWindow();
     }
     
     public final void onDraw(final Canvas canvas) {
         super.onDraw(canvas);
-        if (this.O0 > 0 && this.P0 != null && this.D0.size() > 0 && this.G0 != null) {
+        if (this.P0 > 0 && this.Q0 != null && this.E0.size() > 0 && this.H0 != null) {
             final int scrollX = ((View)this).getScrollX();
             final int width = ((View)this).getWidth();
-            final float n = (float)this.O0;
+            final float n = (float)this.P0;
             final float n2 = (float)width;
             final float n3 = n / n2;
-            final ArrayList<e> d0 = this.D0;
+            final ArrayList<e> e0 = this.E0;
             int n4 = 0;
-            e e = d0.get(0);
-            float e2 = e.e;
-            for (int size = this.D0.size(), i = e.b; i < this.D0.get(size - 1).b; ++i) {
+            e e2 = e0.get(0);
+            float e3 = e2.e;
+            for (int size = this.E0.size(), i = e2.b; i < this.E0.get(size - 1).b; ++i) {
                 int b;
                 while (true) {
-                    b = e.b;
+                    b = e2.b;
                     if (i <= b || n4 >= size) {
                         break;
                     }
-                    final ArrayList<e> d2 = this.D0;
+                    final ArrayList<e> e4 = this.E0;
                     ++n4;
-                    e = d2.get(n4);
+                    e2 = e4.get(n4);
                 }
                 float n5;
                 if (i == b) {
-                    final float e3 = e.e;
-                    final float d3 = e.d;
-                    n5 = (e3 + d3) * n2;
-                    e2 = e3 + d3 + n3;
+                    final float e5 = e2.e;
+                    final float d = e2.d;
+                    n5 = (e5 + d) * n2;
+                    e3 = e5 + d + n3;
                 }
                 else {
-                    final float d4 = this.G0.D(i);
-                    n5 = (e2 + d4) * n2;
-                    e2 += d4 + n3;
+                    final float f = this.H0.F(i);
+                    n5 = (e3 + f) * n2;
+                    e3 += f + n3;
                 }
-                if (this.O0 + n5 > scrollX) {
-                    this.P0.setBounds(Math.round(n5), this.Q0, Math.round(this.O0 + n5), this.R0);
-                    this.P0.draw(canvas);
+                if (this.P0 + n5 > scrollX) {
+                    this.Q0.setBounds(Math.round(n5), this.R0, Math.round(this.P0 + n5), this.S0);
+                    this.Q0.draw(canvas);
                 }
                 if (n5 > scrollX + width) {
                     break;
@@ -986,10 +988,10 @@ public class ViewPager extends ViewGroup
         final int n = motionEvent.getAction() & 0xFF;
         if (n != 3 && n != 1) {
             if (n != 0) {
-                if (this.Z0) {
+                if (this.a1) {
                     return true;
                 }
-                if (this.a1) {
+                if (this.b1) {
                     return false;
                 }
             }
@@ -1000,81 +1002,81 @@ public class ViewPager extends ViewGroup
                     }
                 }
                 else {
-                    final int i1 = this.i1;
-                    if (i1 != -1) {
-                        final int pointerIndex = motionEvent.findPointerIndex(i1);
+                    final int j1 = this.j1;
+                    if (j1 != -1) {
+                        final int pointerIndex = motionEvent.findPointerIndex(j1);
                         final float x = motionEvent.getX(pointerIndex);
-                        final float n2 = x - this.e1;
+                        final float n2 = x - this.f1;
                         final float abs = Math.abs(n2);
                         final float y = motionEvent.getY(pointerIndex);
-                        final float abs2 = Math.abs(y - this.h1);
+                        final float abs2 = Math.abs(y - this.i1);
                         final float n3 = fcmpl(n2, 0.0f);
                         if (n3 != 0) {
-                            final float e1 = this.e1;
-                            if ((e1 >= this.c1 || n3 <= 0) && (e1 <= ((View)this).getWidth() - this.c1 || n2 >= 0.0f) && this.e((View)this, false, (int)n2, (int)x, (int)y)) {
-                                this.e1 = x;
-                                this.f1 = y;
-                                this.a1 = true;
+                            final float f1 = this.f1;
+                            if ((f1 >= this.d1 || n3 <= 0) && (f1 <= ((View)this).getWidth() - this.d1 || n2 >= 0.0f) && this.e((View)this, false, (int)n2, (int)x, (int)y)) {
+                                this.f1 = x;
+                                this.g1 = y;
+                                this.b1 = true;
                                 return false;
                             }
                         }
-                        final float n4 = (float)this.d1;
+                        final float n4 = (float)this.e1;
                         if (abs > n4 && abs * 0.5f > abs2) {
-                            this.Z0 = true;
+                            this.a1 = true;
                             this.x();
                             this.setScrollState(1);
-                            final float g1 = this.g1;
-                            final float n5 = (float)this.d1;
-                            float e2;
+                            final float h1 = this.h1;
+                            final float n5 = (float)this.e1;
+                            float f2;
                             if (n3 > 0) {
-                                e2 = g1 + n5;
+                                f2 = h1 + n5;
                             }
                             else {
-                                e2 = g1 - n5;
+                                f2 = h1 - n5;
                             }
-                            this.e1 = e2;
-                            this.f1 = y;
+                            this.f1 = f2;
+                            this.g1 = y;
                             this.setScrollingCacheEnabled(true);
                         }
                         else if (abs2 > n4) {
-                            this.a1 = true;
+                            this.b1 = true;
                         }
-                        if (this.Z0 && this.r(x)) {
-                            final WeakHashMap a = p5x.a;
-                            p5x$d.k((View)this);
+                        if (this.a1 && this.r(x)) {
+                            final WeakHashMap a = j6x.a;
+                            j6x$d.k((View)this);
                         }
                     }
                 }
             }
             else {
                 final float x2 = motionEvent.getX();
-                this.g1 = x2;
-                this.e1 = x2;
+                this.h1 = x2;
+                this.f1 = x2;
                 final float y2 = motionEvent.getY();
-                this.h1 = y2;
-                this.f1 = y2;
-                this.i1 = motionEvent.getPointerId(0);
-                this.a1 = false;
-                this.M0 = true;
-                this.L0.computeScrollOffset();
-                if (this.x1 == 2 && Math.abs(this.L0.getFinalX() - this.L0.getCurrX()) > this.n1) {
-                    this.L0.abortAnimation();
-                    this.X0 = false;
+                this.i1 = y2;
+                this.g1 = y2;
+                this.j1 = motionEvent.getPointerId(0);
+                this.b1 = false;
+                this.N0 = true;
+                this.M0.computeScrollOffset();
+                if (this.y1 == 2 && Math.abs(this.M0.getFinalX() - this.M0.getCurrX()) > this.o1) {
+                    this.M0.abortAnimation();
+                    this.Y0 = false;
                     this.s();
-                    this.Z0 = true;
+                    this.a1 = true;
                     this.x();
                     this.setScrollState(1);
                 }
                 else {
                     this.f(false);
-                    this.Z0 = false;
+                    this.a1 = false;
                 }
             }
-            if (this.j1 == null) {
-                this.j1 = VelocityTracker.obtain();
+            if (this.k1 == null) {
+                this.k1 = VelocityTracker.obtain();
             }
-            this.j1.addMovement(motionEvent);
-            return this.Z0;
+            this.k1.addMovement(motionEvent);
+            return this.a1;
         }
         this.y();
         return false;
@@ -1090,21 +1092,21 @@ public class ViewPager extends ViewGroup
         paddingBottom = ((View)this).getPaddingBottom();
         final int scrollX = ((View)this).getScrollX();
         int i = 0;
-        int s1 = 0;
+        int t1 = 0;
         while (i < childCount) {
             final View child = this.getChildAt(i);
             int n3 = paddingLeft;
             int n4 = paddingTop;
             int n5 = paddingRight;
             int n6 = paddingBottom;
-            int n7 = s1;
+            int n7 = t1;
             if (child.getVisibility() != 8) {
                 final f f = (f)child.getLayoutParams();
                 n3 = paddingLeft;
                 n4 = paddingTop;
                 n5 = paddingRight;
                 n6 = paddingBottom;
-                n7 = s1;
+                n7 = t1;
                 if (f.a) {
                     final int b2 = f.b;
                     final int n8 = b2 & 0x7;
@@ -1157,7 +1159,7 @@ public class ViewPager extends ViewGroup
                     }
                     final int n15 = n11 + scrollX;
                     child.layout(n15, max2, child.getMeasuredWidth() + n15, child.getMeasuredHeight() + max2);
-                    n7 = s1 + 1;
+                    n7 = t1 + 1;
                     n6 = paddingBottom;
                     n5 = paddingRight;
                     n4 = paddingTop;
@@ -1169,7 +1171,7 @@ public class ViewPager extends ViewGroup
             paddingTop = n4;
             paddingRight = n5;
             paddingBottom = n6;
-            s1 = n7;
+            t1 = n7;
         }
         for (int j = 0; j < childCount; ++j) {
             final View child2 = this.getChildAt(j);
@@ -1189,20 +1191,20 @@ public class ViewPager extends ViewGroup
                 }
             }
         }
-        this.Q0 = paddingTop;
-        this.R0 = n2 - paddingBottom;
-        this.s1 = s1;
-        if (this.q1) {
-            this.z(this.H0, false, 0, false);
+        this.R0 = paddingTop;
+        this.S0 = n2 - paddingBottom;
+        this.t1 = t1;
+        if (this.r1) {
+            this.z(this.I0, false, 0, false);
         }
-        this.q1 = false;
+        this.r1 = false;
     }
     
     public void onMeasure(int measuredWidth, int i) {
         final int n = 0;
         ((View)this).setMeasuredDimension(View.getDefaultSize(0, measuredWidth), View.getDefaultSize(0, i));
         measuredWidth = ((View)this).getMeasuredWidth();
-        this.c1 = Math.min(measuredWidth / 10, this.b1);
+        this.d1 = Math.min(measuredWidth / 10, this.c1);
         measuredWidth = measuredWidth - ((View)this).getPaddingLeft() - ((View)this).getPaddingRight();
         i = ((View)this).getMeasuredHeight() - ((View)this).getPaddingTop() - ((View)this).getPaddingBottom();
         final int childCount = this.getChildCount();
@@ -1240,7 +1242,7 @@ public class ViewPager extends ViewGroup
                         final int n10 = Integer.MIN_VALUE;
                         int n11 = 0;
                         int n13 = 0;
-                        Label_0267: {
+                        Label_0257: {
                             if (b2) {
                                 n11 = 1073741824;
                             }
@@ -1250,7 +1252,7 @@ public class ViewPager extends ViewGroup
                                     final int n12 = 1073741824;
                                     n11 = n10;
                                     n13 = n12;
-                                    break Label_0267;
+                                    break Label_0257;
                                 }
                             }
                             n13 = Integer.MIN_VALUE;
@@ -1309,10 +1311,10 @@ public class ViewPager extends ViewGroup
             i = n6;
         }
         View$MeasureSpec.makeMeasureSpec(measuredWidth, 1073741824);
-        this.U0 = View$MeasureSpec.makeMeasureSpec(i, 1073741824);
-        this.V0 = true;
+        this.V0 = View$MeasureSpec.makeMeasureSpec(i, 1073741824);
+        this.W0 = true;
         this.s();
-        this.V0 = false;
+        this.W0 = false;
         int childCount2;
         View child2;
         f f2;
@@ -1321,7 +1323,7 @@ public class ViewPager extends ViewGroup
             if (child2.getVisibility() != 8) {
                 f2 = (f)child2.getLayoutParams();
                 if (f2 == null || !f2.a) {
-                    child2.measure(View$MeasureSpec.makeMeasureSpec((int)(measuredWidth * f2.c), 1073741824), this.U0);
+                    child2.measure(View$MeasureSpec.makeMeasureSpec((int)(measuredWidth * f2.c), 1073741824), this.V0);
                 }
             }
         }
@@ -1344,7 +1346,7 @@ public class ViewPager extends ViewGroup
             final View child = this.getChildAt(i);
             if (child.getVisibility() == 0) {
                 final e j = this.j(child);
-                if (j != null && j.b == this.H0 && child.requestFocus(n, rect)) {
+                if (j != null && j.b == this.I0 && child.requestFocus(n, rect)) {
                     return true;
                 }
             }
@@ -1359,34 +1361,34 @@ public class ViewPager extends ViewGroup
             return;
         }
         final ViewPager.ViewPager$SavedState viewPager$SavedState = (ViewPager.ViewPager$SavedState)parcelable;
-        super.onRestoreInstanceState(((fa)viewPager$SavedState).getSuperState());
-        final cuj g0 = this.G0;
-        if (g0 != null) {
-            g0.L(viewPager$SavedState.adapterState, viewPager$SavedState.loader);
+        super.onRestoreInstanceState(((da)viewPager$SavedState).getSuperState());
+        final huj h0 = this.H0;
+        if (h0 != null) {
+            h0.L(viewPager$SavedState.adapterState, viewPager$SavedState.loader);
             this.B(viewPager$SavedState.position, false, true, 0);
         }
         else {
-            this.I0 = viewPager$SavedState.position;
-            this.J0 = viewPager$SavedState.adapterState;
-            this.K0 = viewPager$SavedState.loader;
+            this.J0 = viewPager$SavedState.position;
+            this.K0 = viewPager$SavedState.adapterState;
+            this.L0 = viewPager$SavedState.loader;
         }
     }
     
     public final Parcelable onSaveInstanceState() {
         final ViewPager.ViewPager$SavedState viewPager$SavedState = new ViewPager.ViewPager$SavedState(super.onSaveInstanceState());
-        viewPager$SavedState.position = this.H0;
-        final cuj g0 = this.G0;
-        if (g0 != null) {
-            viewPager$SavedState.adapterState = g0.M();
+        viewPager$SavedState.position = this.I0;
+        final huj h0 = this.H0;
+        if (h0 != null) {
+            viewPager$SavedState.adapterState = h0.M();
         }
         return (Parcelable)viewPager$SavedState;
     }
     
-    public void onSizeChanged(final int n, int o0, final int n2, final int n3) {
-        super.onSizeChanged(n, o0, n2, n3);
+    public void onSizeChanged(final int n, int p4, final int n2, final int n3) {
+        super.onSizeChanged(n, p4, n2, n3);
         if (n != n2) {
-            o0 = this.O0;
-            this.u(n, n2, o0, o0);
+            p4 = this.P0;
+            this.u(n, n2, p4, p4);
         }
     }
     
@@ -1396,14 +1398,14 @@ public class ViewPager extends ViewGroup
         if (action == 0 && motionEvent.getEdgeFlags() != 0) {
             return false;
         }
-        final cuj g0 = this.G0;
-        if (g0 != null && g0.getCount() != 0) {
-            if (this.j1 == null) {
-                this.j1 = VelocityTracker.obtain();
+        final huj h0 = this.H0;
+        if (h0 != null && h0.getCount() != 0) {
+            if (this.k1 == null) {
+                this.k1 = VelocityTracker.obtain();
             }
-            this.j1.addMovement(motionEvent);
+            this.k1.addMovement(motionEvent);
             final int n = motionEvent.getAction() & 0xFF;
-            Label_0722: {
+            Label_0724: {
                 if (n != 0) {
                     if (n != 1) {
                         if (n != 2) {
@@ -1411,44 +1413,44 @@ public class ViewPager extends ViewGroup
                                 if (n != 5) {
                                     if (n == 6) {
                                         this.n(motionEvent);
-                                        this.e1 = motionEvent.getX(motionEvent.findPointerIndex(this.i1));
+                                        this.f1 = motionEvent.getX(motionEvent.findPointerIndex(this.j1));
                                     }
                                 }
                                 else {
                                     final int actionIndex = motionEvent.getActionIndex();
-                                    this.e1 = motionEvent.getX(actionIndex);
-                                    this.i1 = motionEvent.getPointerId(actionIndex);
+                                    this.f1 = motionEvent.getX(actionIndex);
+                                    this.j1 = motionEvent.getPointerId(actionIndex);
                                 }
                             }
-                            else if (this.Z0) {
-                                this.z(this.H0, true, 0, false);
+                            else if (this.a1) {
+                                this.z(this.I0, true, 0, false);
                                 b = this.y();
                             }
                         }
                         else {
-                            if (!this.Z0) {
-                                final int pointerIndex = motionEvent.findPointerIndex(this.i1);
+                            if (!this.a1) {
+                                final int pointerIndex = motionEvent.findPointerIndex(this.j1);
                                 if (pointerIndex == -1) {
                                     b = this.y();
-                                    break Label_0722;
+                                    break Label_0724;
                                 }
                                 final float x = motionEvent.getX(pointerIndex);
-                                final float abs = Math.abs(x - this.e1);
+                                final float abs = Math.abs(x - this.f1);
                                 final float y = motionEvent.getY(pointerIndex);
-                                final float abs2 = Math.abs(y - this.f1);
-                                if (abs > this.d1 && abs > abs2) {
-                                    this.Z0 = true;
+                                final float abs2 = Math.abs(y - this.g1);
+                                if (abs > this.e1 && abs > abs2) {
+                                    this.a1 = true;
                                     this.x();
-                                    final float g2 = this.g1;
-                                    float e1;
-                                    if (x - g2 > 0.0f) {
-                                        e1 = g2 + this.d1;
+                                    final float h2 = this.h1;
+                                    float f1;
+                                    if (x - h2 > 0.0f) {
+                                        f1 = h2 + this.e1;
                                     }
                                     else {
-                                        e1 = g2 - this.d1;
+                                        f1 = h2 - this.e1;
                                     }
-                                    this.e1 = e1;
-                                    this.f1 = y;
+                                    this.f1 = f1;
+                                    this.g1 = y;
                                     this.setScrollState(1);
                                     this.setScrollingCacheEnabled(true);
                                     final ViewParent parent = ((View)this).getParent();
@@ -1457,32 +1459,32 @@ public class ViewPager extends ViewGroup
                                     }
                                 }
                             }
-                            if (this.Z0) {
-                                b = (false | this.r(motionEvent.getX(motionEvent.findPointerIndex(this.i1))));
+                            if (this.a1) {
+                                b = (false | this.r(motionEvent.getX(motionEvent.findPointerIndex(this.j1))));
                             }
                         }
                     }
-                    else if (this.Z0) {
-                        final VelocityTracker j1 = this.j1;
-                        j1.computeCurrentVelocity(1000, (float)this.l1);
-                        final int n2 = (int)j1.getXVelocity(this.i1);
-                        this.X0 = true;
+                    else if (this.a1) {
+                        final VelocityTracker k1 = this.k1;
+                        k1.computeCurrentVelocity(1000, (float)this.m1);
+                        final int n2 = (int)k1.getXVelocity(this.j1);
+                        this.Y0 = true;
                         final int clientWidth = this.getClientWidth();
                         final int scrollX = ((View)this).getScrollX();
-                        final e k = this.k();
-                        final float n3 = (float)this.O0;
+                        final e i = this.k();
+                        final float n3 = (float)this.P0;
                         final float n4 = (float)clientWidth;
                         final float n5 = n3 / n4;
-                        int b2 = k.b;
-                        final float n6 = (scrollX / n4 - k.e) / (k.d + n5);
-                        if (Math.abs((int)(motionEvent.getX(motionEvent.findPointerIndex(this.i1)) - this.g1)) > this.m1 && Math.abs(n2) > this.k1) {
+                        int b2 = i.b;
+                        final float n6 = (scrollX / n4 - i.e) / (i.d + n5);
+                        if (Math.abs((int)(motionEvent.getX(motionEvent.findPointerIndex(this.j1)) - this.h1)) > this.n1 && Math.abs(n2) > this.l1) {
                             if (n2 <= 0) {
                                 ++b2;
                             }
                         }
                         else {
                             float n7;
-                            if (b2 >= this.H0) {
+                            if (b2 >= this.I0) {
                                 n7 = 0.4f;
                             }
                             else {
@@ -1491,31 +1493,31 @@ public class ViewPager extends ViewGroup
                             b2 += (int)(n6 + n7);
                         }
                         int max = b2;
-                        if (this.D0.size() > 0) {
-                            final e e2 = this.D0.get(0);
-                            final ArrayList<e> d0 = this.D0;
-                            max = Math.max(e2.b, Math.min(b2, ((e)d0.get(d0.size() - 1)).b));
+                        if (this.E0.size() > 0) {
+                            final e e = this.E0.get(0);
+                            final ArrayList<e> e2 = this.E0;
+                            max = Math.max(e.b, Math.min(b2, ((e)e2.get(e2.size() - 1)).b));
                         }
                         this.B(max, true, true, n2);
                         b = this.y();
                     }
                 }
                 else {
-                    this.L0.abortAnimation();
-                    this.X0 = false;
+                    this.M0.abortAnimation();
+                    this.Y0 = false;
                     this.s();
                     final float x2 = motionEvent.getX();
-                    this.g1 = x2;
-                    this.e1 = x2;
+                    this.h1 = x2;
+                    this.f1 = x2;
                     final float y2 = motionEvent.getY();
-                    this.h1 = y2;
-                    this.f1 = y2;
-                    this.i1 = motionEvent.getPointerId(0);
+                    this.i1 = y2;
+                    this.g1 = y2;
+                    this.j1 = motionEvent.getPointerId(0);
                 }
             }
             if (b) {
-                final WeakHashMap a = p5x.a;
-                p5x$d.k((View)this);
+                final WeakHashMap a = j6x.a;
+                j6x$d.k((View)this);
             }
             return true;
         }
@@ -1523,22 +1525,22 @@ public class ViewPager extends ViewGroup
     }
     
     public final boolean p() {
-        final cuj g0 = this.G0;
-        if (g0 != null && this.H0 < g0.getCount() - 1) {
-            this.A(this.H0 + 1, true);
+        final huj h0 = this.H0;
+        if (h0 != null && this.I0 < h0.getCount() - 1) {
+            this.A(this.I0 + 1, true);
             return true;
         }
         return false;
     }
     
     public final boolean q(int n) {
-        if (this.D0.size() == 0) {
-            if (this.q1) {
+        if (this.E0.size() == 0) {
+            if (this.r1) {
                 return false;
             }
-            this.r1 = false;
+            this.s1 = false;
             this.m(0, 0.0f, 0);
-            if (this.r1) {
+            if (this.s1) {
                 return false;
             }
             throw new IllegalStateException("onPageScrolled did not call superclass implementation");
@@ -1546,80 +1548,80 @@ public class ViewPager extends ViewGroup
         else {
             final e k = this.k();
             final int clientWidth = this.getClientWidth();
-            final int o0 = this.O0;
-            final float n2 = (float)o0;
+            final int p = this.P0;
+            final float n2 = (float)p;
             final float n3 = (float)clientWidth;
             final float n4 = n2 / n3;
             final int b = k.b;
             final float n5 = (n / n3 - k.e) / (k.d + n4);
-            n = (int)((clientWidth + o0) * n5);
-            this.r1 = false;
+            n = (int)((clientWidth + p) * n5);
+            this.s1 = false;
             this.m(b, n5, n);
-            if (this.r1) {
+            if (this.s1) {
                 return true;
             }
             throw new IllegalStateException("onPageScrolled did not call superclass implementation");
         }
     }
     
-    public final boolean r(float e1) {
-        final float e2 = this.e1;
-        this.e1 = e1;
-        final float n = ((View)this).getScrollX() + (e2 - e1);
+    public final boolean r(float f1) {
+        final float f2 = this.f1;
+        this.f1 = f1;
+        final float n = ((View)this).getScrollX() + (f2 - f1);
         final float n2 = (float)this.getClientWidth();
-        e1 = this.S0 * n2;
-        float n3 = this.T0 * n2;
-        final ArrayList<e> d0 = this.D0;
+        f1 = this.T0 * n2;
+        float n3 = this.U0 * n2;
+        final ArrayList<e> e0 = this.E0;
         final boolean b = false;
-        final boolean b2 = false;
-        boolean b3 = false;
-        final e e3 = d0.get(0);
-        final ArrayList<e> d2 = this.D0;
-        final e e4 = d2.get(d2.size() - 1);
+        boolean b2 = false;
+        final boolean b3 = false;
+        final e e2 = e0.get(0);
+        final ArrayList<e> e3 = this.E0;
+        final e e4 = e3.get(e3.size() - 1);
         boolean b4;
-        if (e3.b != 0) {
-            e1 = e3.e * n2;
+        if (e2.b != 0) {
+            f1 = e2.e * n2;
             b4 = false;
         }
         else {
             b4 = true;
         }
         boolean b5;
-        if (e4.b != this.G0.getCount() - 1) {
+        if (e4.b != this.H0.getCount() - 1) {
             n3 = e4.e * n2;
             b5 = false;
         }
         else {
             b5 = true;
         }
-        if (n < e1) {
+        if (n < f1) {
+            b2 = b3;
             if (b4) {
-                this.o1.onPull(Math.abs(e1 - n) / n2);
-                b3 = true;
+                this.p1.onPull(Math.abs(f1 - n) / n2);
+                b2 = true;
             }
         }
         else {
-            b3 = b2;
-            e1 = n;
+            f1 = n;
             if (n > n3) {
-                b3 = b;
+                b2 = b;
                 if (b5) {
-                    this.p1.onPull(Math.abs(n - n3) / n2);
-                    b3 = true;
+                    this.q1.onPull(Math.abs(n - n3) / n2);
+                    b2 = true;
                 }
-                e1 = n3;
+                f1 = n3;
             }
         }
-        final float e5 = this.e1;
-        final int n4 = (int)e1;
-        this.e1 = e1 - n4 + e5;
+        final float f3 = this.f1;
+        final int n4 = (int)f1;
+        this.f1 = f1 - n4 + f3;
         ((View)this).scrollTo(n4, ((View)this).getScrollY());
         this.q(n4);
-        return b3;
+        return b2;
     }
     
     public final void removeView(final View view) {
-        if (this.V0) {
+        if (this.W0) {
             this.removeViewInLayout(view);
         }
         else {
@@ -1628,23 +1630,23 @@ public class ViewPager extends ViewGroup
     }
     
     public final void s() {
-        this.t(this.H0);
+        this.t(this.I0);
     }
     
-    public void setAdapter(final cuj g0) {
-        Object g2 = this.G0;
+    public void setAdapter(final huj h0) {
+        Object h2 = this.H0;
         final int n = 0;
-        if (g2 != null) {
-            synchronized (g2) {
-                ((cuj)g2).D0 = null;
-                monitorexit(g2);
-                this.G0.O((ViewGroup)this);
-                for (int i = 0; i < this.D0.size(); ++i) {
-                    g2 = this.D0.get(i);
-                    this.G0.i((ViewGroup)this, ((e)g2).b, ((e)g2).a);
+        if (h2 != null) {
+            synchronized (h2) {
+                ((huj)h2).E0 = null;
+                monitorexit(h2);
+                this.H0.O((ViewGroup)this);
+                for (int i = 0; i < this.E0.size(); ++i) {
+                    h2 = this.E0.get(i);
+                    this.H0.i((ViewGroup)this, ((e)h2).b, ((e)h2).a);
                 }
-                this.G0.j((ViewGroup)this);
-                this.D0.clear();
+                this.H0.j((ViewGroup)this);
+                this.E0.clear();
                 int n2;
                 for (int j = 0; j < this.getChildCount(); j = n2 + 1) {
                     n2 = j;
@@ -1653,32 +1655,32 @@ public class ViewPager extends ViewGroup
                         n2 = j - 1;
                     }
                 }
-                ((View)this).scrollTo(this.H0 = 0, 0);
+                ((View)this).scrollTo(this.I0 = 0, 0);
             }
         }
-        this.G0 = g0;
-        this.C0 = 0;
-        if (g0 != null) {
-            if (this.N0 == null) {
-                this.N0 = new j();
+        this.H0 = h0;
+        this.D0 = 0;
+        if (h0 != null) {
+            if (this.O0 == null) {
+                this.O0 = new j();
             }
-            final cuj g3 = this.G0;
-            final j n3 = this.N0;
-            synchronized (g3) {
-                g3.D0 = n3;
-                monitorexit(g3);
-                this.X0 = false;
-                final boolean q1 = this.q1;
-                this.q1 = true;
-                this.C0 = this.G0.getCount();
-                if (this.I0 >= 0) {
-                    this.G0.L(this.J0, this.K0);
-                    this.B(this.I0, false, true, 0);
-                    this.I0 = -1;
-                    this.J0 = null;
+            final huj h3 = this.H0;
+            final j o0 = this.O0;
+            synchronized (h3) {
+                h3.E0 = o0;
+                monitorexit(h3);
+                this.Y0 = false;
+                final boolean r1 = this.r1;
+                this.r1 = true;
+                this.D0 = this.H0.getCount();
+                if (this.J0 >= 0) {
+                    this.H0.L(this.K0, this.L0);
+                    this.B(this.J0, false, true, 0);
+                    this.J0 = -1;
                     this.K0 = null;
+                    this.L0 = null;
                 }
-                else if (!q1) {
+                else if (!r1) {
                     this.s();
                 }
                 else {
@@ -1686,21 +1688,21 @@ public class ViewPager extends ViewGroup
                 }
             }
         }
-        final ArrayList v1 = this.v1;
-        if (v1 != null && !v1.isEmpty()) {
-            for (int size = this.v1.size(), k = n; k < size; ++k) {
-                ((h)this.v1.get(k)).a(this, g0);
+        final ArrayList w1 = this.w1;
+        if (w1 != null && !w1.isEmpty()) {
+            for (int size = this.w1.size(), k = n; k < size; ++k) {
+                ((h)this.w1.get(k)).a(this, h0);
             }
         }
     }
     
     public void setCurrentItem(final int n) {
-        this.X0 = false;
-        this.B(n, this.q1 ^ true, false, 0);
+        this.Y0 = false;
+        this.B(n, this.r1 ^ true, false, 0);
     }
     
     public void setOffscreenPageLimit(final int n) {
-        int y0 = n;
+        int z0 = n;
         if (n < 1) {
             final StringBuilder sb = new StringBuilder();
             sb.append("Requested offscreen page limit ");
@@ -1708,107 +1710,107 @@ public class ViewPager extends ViewGroup
             sb.append(" too small; defaulting to ");
             sb.append(1);
             Log.w("ViewPager", sb.toString());
-            y0 = 1;
+            z0 = 1;
         }
-        if (y0 != this.Y0) {
-            this.Y0 = y0;
+        if (z0 != this.Z0) {
+            this.Z0 = z0;
             this.s();
         }
     }
     
     @Deprecated
-    public void setOnPageChangeListener(final i u1) {
-        this.u1 = u1;
+    public void setOnPageChangeListener(final i v1) {
+        this.v1 = v1;
     }
     
-    public void setPageMargin(final int o0) {
-        final int o2 = this.O0;
-        this.O0 = o0;
+    public void setPageMargin(final int p) {
+        final int p2 = this.P0;
+        this.P0 = p;
         final int width = ((View)this).getWidth();
-        this.u(width, width, o0, o2);
+        this.u(width, width, p, p2);
         ((View)this).requestLayout();
     }
     
     public void setPageMarginDrawable(final int n) {
         final Context context = ((View)this).getContext();
-        final Object a = eo6.a;
-        this.setPageMarginDrawable(eo6$c.b(context, n));
+        final Object a = kn6.a;
+        this.setPageMarginDrawable(kn6.c.b(context, n));
     }
     
-    public void setPageMarginDrawable(final Drawable p) {
-        this.P0 = p;
-        if (p != null) {
+    public void setPageMarginDrawable(final Drawable q0) {
+        this.Q0 = q0;
+        if (q0 != null) {
             ((View)this).refreshDrawableState();
         }
-        ((View)this).setWillNotDraw(p == null);
+        ((View)this).setWillNotDraw(q0 == null);
         ((View)this).invalidate();
     }
     
-    public void setScrollState(final int x1) {
-        if (this.x1 == x1) {
+    public void setScrollState(final int y1) {
+        if (this.y1 == y1) {
             return;
         }
-        this.x1 = x1;
-        final i u1 = this.u1;
-        if (u1 != null) {
-            u1.B3(x1);
+        this.y1 = y1;
+        final i v1 = this.v1;
+        if (v1 != null) {
+            v1.B3(y1);
         }
-        final ArrayList t1 = this.t1;
-        if (t1 != null) {
-            for (int i = 0; i < t1.size(); ++i) {
-                final i j = this.t1.get(i);
+        final ArrayList u1 = this.u1;
+        if (u1 != null) {
+            for (int i = 0; i < u1.size(); ++i) {
+                final i j = this.u1.get(i);
                 if (j != null) {
-                    j.B3(x1);
+                    j.B3(y1);
                 }
             }
         }
     }
     
     public final void t(int i) {
-        final int h0 = this.H0;
+        final int i2 = this.I0;
         e l;
-        if (h0 != i) {
-            l = this.l(h0);
-            this.H0 = i;
+        if (i2 != i) {
+            l = this.l(i2);
+            this.I0 = i;
         }
         else {
             l = null;
         }
-        if (this.G0 == null) {
+        if (this.H0 == null) {
             return;
         }
-        if (this.X0) {
+        if (this.Y0) {
             return;
         }
         if (((View)this).getWindowToken() == null) {
             return;
         }
-        this.G0.O((ViewGroup)this);
-        i = this.Y0;
-        final int max = Math.max(0, this.H0 - i);
-        final int count = this.G0.getCount();
-        final int min = Math.min(count - 1, this.H0 + i);
-        if (count == this.C0) {
+        this.H0.O((ViewGroup)this);
+        i = this.Z0;
+        final int max = Math.max(0, this.I0 - i);
+        final int count = this.H0.getCount();
+        final int min = Math.min(count - 1, this.I0 + i);
+        if (count == this.D0) {
             int j = 0;
             while (true) {
-                while (j < this.D0.size()) {
-                    final e e = this.D0.get(j);
+                while (j < this.E0.size()) {
+                    final e e = this.E0.get(j);
                     final int b = e.b;
-                    i = this.H0;
+                    i = this.I0;
                     if (b >= i) {
                         if (b == i) {
                             e a = e;
                             if (e == null) {
                                 a = e;
                                 if (count > 0) {
-                                    a = this.a(this.H0, j);
+                                    a = this.a(this.I0, j);
                                 }
                             }
                             if (a != null) {
                                 int n = j - 1;
                                 e e2;
                                 if (n >= 0) {
-                                    e2 = this.D0.get(n);
+                                    e2 = this.E0.get(n);
                                 }
                                 else {
                                     e2 = null;
@@ -1821,14 +1823,14 @@ public class ViewPager extends ViewGroup
                                 else {
                                     n2 = 2.0f - a.d + ((View)this).getPaddingLeft() / (float)clientWidth;
                                 }
-                                int k = this.H0 - 1;
+                                int k = this.I0 - 1;
                                 float n3 = 0.0f;
                                 e e3 = e2;
                                 while (k >= 0) {
                                     int n4 = 0;
                                     e e4 = null;
                                     float n5 = 0.0f;
-                                    Label_0570: {
+                                    Label_0564: {
                                         if (n3 >= n2 && k < max) {
                                             if (e3 == null) {
                                                 break;
@@ -1838,27 +1840,27 @@ public class ViewPager extends ViewGroup
                                             e4 = e3;
                                             n5 = n3;
                                             if (k != e3.b) {
-                                                break Label_0570;
+                                                break Label_0564;
                                             }
                                             i = j;
                                             n4 = n;
                                             e4 = e3;
                                             n5 = n3;
                                             if (e3.c) {
-                                                break Label_0570;
+                                                break Label_0564;
                                             }
-                                            this.D0.remove(n);
-                                            this.G0.i((ViewGroup)this, k, e3.a);
+                                            this.E0.remove(n);
+                                            this.H0.i((ViewGroup)this, k, e3.a);
                                             --n;
                                             i = --j;
                                             n4 = n;
                                             n5 = n3;
                                             if (n >= 0) {
-                                                e4 = this.D0.get(n);
+                                                e4 = this.E0.get(n);
                                                 i = j;
                                                 n4 = n;
                                                 n5 = n3;
-                                                break Label_0570;
+                                                break Label_0564;
                                             }
                                         }
                                         else if (e3 != null && k == e3.b) {
@@ -1868,11 +1870,11 @@ public class ViewPager extends ViewGroup
                                             n4 = n;
                                             n5 = n6;
                                             if (n >= 0) {
-                                                e4 = this.D0.get(n);
+                                                e4 = this.E0.get(n);
                                                 i = j;
                                                 n4 = n;
                                                 n5 = n6;
-                                                break Label_0570;
+                                                break Label_0564;
                                             }
                                         }
                                         else {
@@ -1881,11 +1883,11 @@ public class ViewPager extends ViewGroup
                                             n4 = n;
                                             n5 = n7;
                                             if (n >= 0) {
-                                                e4 = this.D0.get(n);
+                                                e4 = this.E0.get(n);
                                                 i = j;
                                                 n4 = n;
                                                 n5 = n7;
-                                                break Label_0570;
+                                                break Label_0564;
                                             }
                                         }
                                         e4 = null;
@@ -1900,8 +1902,8 @@ public class ViewPager extends ViewGroup
                                 int n8 = j + 1;
                                 if (d < 2.0f) {
                                     e e5;
-                                    if (n8 < this.D0.size()) {
-                                        e5 = this.D0.get(n8);
+                                    if (n8 < this.E0.size()) {
+                                        e5 = this.E0.get(n8);
                                     }
                                     else {
                                         e5 = null;
@@ -1913,13 +1915,13 @@ public class ViewPager extends ViewGroup
                                     else {
                                         n9 = ((View)this).getPaddingRight() / (float)clientWidth + 2.0f;
                                     }
-                                    int n10 = this.H0 + 1;
+                                    int n10 = this.I0 + 1;
                                     int n11 = n8;
                                     e e6 = e5;
                                     while (n10 < count) {
                                         float n12 = 0.0f;
                                         e e7 = null;
-                                        Label_0943: {
+                                        Label_0930: {
                                             if (d >= n9 && n10 > min) {
                                                 if (e6 == null) {
                                                     break;
@@ -1928,44 +1930,44 @@ public class ViewPager extends ViewGroup
                                                 e7 = e6;
                                                 i = n11;
                                                 if (n10 != e6.b) {
-                                                    break Label_0943;
+                                                    break Label_0930;
                                                 }
                                                 n12 = d;
                                                 e7 = e6;
                                                 i = n11;
                                                 if (e6.c) {
-                                                    break Label_0943;
+                                                    break Label_0930;
                                                 }
-                                                this.D0.remove(n11);
-                                                this.G0.i((ViewGroup)this, n10, e6.a);
+                                                this.E0.remove(n11);
+                                                this.H0.i((ViewGroup)this, n10, e6.a);
                                                 n12 = d;
-                                                if ((i = n11) < this.D0.size()) {
-                                                    e7 = this.D0.get(n11);
+                                                if ((i = n11) < this.E0.size()) {
+                                                    e7 = this.E0.get(n11);
                                                     n12 = d;
                                                     i = n11;
-                                                    break Label_0943;
+                                                    break Label_0930;
                                                 }
                                             }
                                             else if (e6 != null && n10 == e6.b) {
                                                 final float n13 = d + e6.d;
                                                 ++n11;
                                                 n12 = n13;
-                                                if ((i = n11) < this.D0.size()) {
-                                                    e7 = this.D0.get(n11);
+                                                if ((i = n11) < this.E0.size()) {
+                                                    e7 = this.E0.get(n11);
                                                     n12 = n13;
                                                     i = n11;
-                                                    break Label_0943;
+                                                    break Label_0930;
                                                 }
                                             }
                                             else {
                                                 final e a2 = this.a(n10, n11);
                                                 ++n11;
                                                 n12 = d + a2.d;
-                                                if ((i = n11) < this.D0.size()) {
-                                                    e7 = this.D0.get(n11);
+                                                if ((i = n11) < this.E0.size()) {
+                                                    e7 = this.E0.get(n11);
                                                     n12 = n12;
                                                     i = n11;
-                                                    break Label_0943;
+                                                    break Label_0930;
                                                 }
                                             }
                                             e7 = null;
@@ -1976,11 +1978,11 @@ public class ViewPager extends ViewGroup
                                         n11 = i;
                                     }
                                 }
-                                int count2 = this.G0.getCount();
+                                int count2 = this.H0.getCount();
                                 i = this.getClientWidth();
                                 float n14;
                                 if (i > 0) {
-                                    n14 = this.O0 / (float)i;
+                                    n14 = this.P0 / (float)i;
                                 }
                                 else {
                                     n14 = 0.0f;
@@ -1993,10 +1995,10 @@ public class ViewPager extends ViewGroup
                                         int n16 = 0;
                                         while (true) {
                                             final int n17 = i + 1;
-                                            if (n17 > a.b || n16 >= this.D0.size()) {
+                                            if (n17 > a.b || n16 >= this.E0.size()) {
                                                 break;
                                             }
-                                            e e8 = this.D0.get(n16);
+                                            e e8 = this.E0.get(n16);
                                             float e9;
                                             while (true) {
                                                 i = n17;
@@ -2006,14 +2008,14 @@ public class ViewPager extends ViewGroup
                                                 }
                                                 i = n17;
                                                 e9 = n15;
-                                                if (n16 >= this.D0.size() - 1) {
+                                                if (n16 >= this.E0.size() - 1) {
                                                     break;
                                                 }
                                                 ++n16;
-                                                e8 = this.D0.get(n16);
+                                                e8 = this.E0.get(n16);
                                             }
                                             while (i < e8.b) {
-                                                e9 += this.G0.D(i) + n14;
+                                                e9 += this.H0.F(i) + n14;
                                                 ++i;
                                             }
                                             e8.e = e9;
@@ -2021,14 +2023,14 @@ public class ViewPager extends ViewGroup
                                         }
                                     }
                                     else if (i > b2) {
-                                        int n18 = this.D0.size() - 1;
+                                        int n18 = this.E0.size() - 1;
                                         float e10 = l.e;
                                         while (true) {
                                             final int n19 = i - 1;
                                             if (n19 < a.b || n18 < 0) {
                                                 break;
                                             }
-                                            e e11 = this.D0.get(n18);
+                                            e e11 = this.E0.get(n18);
                                             float n20;
                                             while (true) {
                                                 n20 = e10;
@@ -2042,10 +2044,10 @@ public class ViewPager extends ViewGroup
                                                     break;
                                                 }
                                                 --n18;
-                                                e11 = this.D0.get(n18);
+                                                e11 = this.E0.get(n18);
                                             }
                                             while (i > e11.b) {
-                                                n20 -= this.G0.D(i) + n14;
+                                                n20 -= this.H0.F(i) + n14;
                                                 --i;
                                             }
                                             e10 = n20 - (e11.d + n14);
@@ -2053,42 +2055,42 @@ public class ViewPager extends ViewGroup
                                         }
                                     }
                                 }
-                                final int size = this.D0.size();
+                                final int size = this.E0.size();
                                 float e12 = a.e;
                                 final int b3 = a.b;
                                 i = b3 - 1;
-                                float s0;
-                                if (b3 == 0) {
-                                    s0 = e12;
-                                }
-                                else {
-                                    s0 = -3.4028235E38f;
-                                }
-                                this.S0 = s0;
-                                --count2;
                                 float t0;
-                                if (b3 == count2) {
-                                    t0 = a.d + e12 - 1.0f;
+                                if (b3 == 0) {
+                                    t0 = e12;
                                 }
                                 else {
-                                    t0 = Float.MAX_VALUE;
+                                    t0 = -3.4028235E38f;
                                 }
                                 this.T0 = t0;
+                                --count2;
+                                float u0;
+                                if (b3 == count2) {
+                                    u0 = a.d + e12 - 1.0f;
+                                }
+                                else {
+                                    u0 = Float.MAX_VALUE;
+                                }
+                                this.U0 = u0;
                                 for (int n21 = j - 1; n21 >= 0; --n21, --i) {
-                                    final e e13 = this.D0.get(n21);
+                                    final e e13 = this.E0.get(n21);
                                     int b4;
                                     while (true) {
                                         b4 = e13.b;
                                         if (i <= b4) {
                                             break;
                                         }
-                                        e12 -= this.G0.D(i) + n14;
+                                        e12 -= this.H0.F(i) + n14;
                                         --i;
                                     }
                                     e12 -= e13.d + n14;
                                     e13.e = e12;
                                     if (b4 == 0) {
-                                        this.S0 = e12;
+                                        this.T0 = e12;
                                     }
                                 }
                                 float e14 = a.e + a.d + n14;
@@ -2098,26 +2100,26 @@ public class ViewPager extends ViewGroup
                                     if (n8 >= size) {
                                         break;
                                     }
-                                    final e e15 = this.D0.get(n8);
+                                    final e e15 = this.E0.get(n8);
                                     int b5;
                                     while (true) {
                                         b5 = e15.b;
                                         if (i >= b5) {
                                             break;
                                         }
-                                        e14 += this.G0.D(i) + n14;
+                                        e14 += this.H0.F(i) + n14;
                                         ++i;
                                     }
                                     if (b5 == count2) {
-                                        this.T0 = e15.d + e14 - 1.0f;
+                                        this.U0 = e15.d + e14 - 1.0f;
                                     }
                                     e15.e = e14;
                                     e14 += e15.d + n14;
                                     ++n8;
                                 }
-                                this.G0.N((ViewGroup)this, this.H0, a.a);
+                                this.H0.N((ViewGroup)this, this.I0, a.a);
                             }
-                            this.G0.j((ViewGroup)this);
+                            this.H0.j((ViewGroup)this);
                             int childCount;
                             View child;
                             f f;
@@ -2137,13 +2139,13 @@ public class ViewPager extends ViewGroup
                             if (((View)this).hasFocus()) {
                                 View focus = ((View)this).findFocus();
                                 e j2 = null;
-                                Label_1823: {
+                                Label_1802: {
                                     if (focus != null) {
                                         while (true) {
                                             final ViewParent parent = focus.getParent();
                                             if (parent == this) {
                                                 j2 = this.j(focus);
-                                                break Label_1823;
+                                                break Label_1802;
                                             }
                                             if (parent == null) {
                                                 break;
@@ -2156,13 +2158,13 @@ public class ViewPager extends ViewGroup
                                     }
                                     j2 = null;
                                 }
-                                if (j2 == null || j2.b != this.H0) {
+                                if (j2 == null || j2.b != this.I0) {
                                     View child2;
                                     e j3;
                                     for (i = 0; i < this.getChildCount(); ++i) {
                                         child2 = this.getChildAt(i);
                                         j3 = this.j(child2);
-                                        if (j3 != null && j3.b == this.H0 && child2.requestFocus(2)) {
+                                        if (j3 != null && j3.b == this.I0 && child2.requestFocus(2)) {
                                             break;
                                         }
                                     }
@@ -2180,37 +2182,37 @@ public class ViewPager extends ViewGroup
                 continue;
             }
         }
-        String s2;
+        String s;
         try {
-            s2 = ((View)this).getResources().getResourceName(((View)this).getId());
+            s = ((View)this).getResources().getResourceName(((View)this).getId());
         }
         catch (final Resources$NotFoundException ex) {
-            s2 = Integer.toHexString(((View)this).getId());
+            s = Integer.toHexString(((View)this).getId());
         }
-        final StringBuilder g = w48.g("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: ");
-        k1b.j(g, this.C0, ", found: ", count, " Pager id: ");
-        g.append(s2);
-        g.append(" Pager class: ");
-        g.append(this.getClass());
-        g.append(" Problematic adapter: ");
-        g.append(this.G0.getClass());
-        throw new IllegalStateException(g.toString());
+        final StringBuilder j4 = fu8.j("The application's PagerAdapter changed the adapter's contents without calling PagerAdapter#notifyDataSetChanged! Expected adapter item count: ");
+        k0c.k(j4, this.D0, ", found: ", count, " Pager id: ");
+        j4.append(s);
+        j4.append(" Pager class: ");
+        j4.append(this.getClass());
+        j4.append(" Problematic adapter: ");
+        j4.append(this.H0.getClass());
+        throw new IllegalStateException(j4.toString());
     }
     
     public final void u(int n, final int n2, final int n3, final int n4) {
-        if (n2 > 0 && !this.D0.isEmpty()) {
-            if (!this.L0.isFinished()) {
-                this.L0.setFinalX(this.getCurrentItem() * this.getClientWidth());
+        if (n2 > 0 && !this.E0.isEmpty()) {
+            if (!this.M0.isFinished()) {
+                this.M0.setFinalX(this.getCurrentItem() * this.getClientWidth());
             }
             else {
                 ((View)this).scrollTo((int)(((View)this).getScrollX() / (float)(n2 - ((View)this).getPaddingLeft() - ((View)this).getPaddingRight() + n4) * (n - ((View)this).getPaddingLeft() - ((View)this).getPaddingRight() + n3)), ((View)this).getScrollY());
             }
         }
         else {
-            final e l = this.l(this.H0);
+            final e l = this.l(this.I0);
             float min;
             if (l != null) {
-                min = Math.min(l.e, this.T0);
+                min = Math.min(l.e, this.U0);
             }
             else {
                 min = 0.0f;
@@ -2224,20 +2226,20 @@ public class ViewPager extends ViewGroup
     }
     
     public void v(final h h) {
-        final ArrayList v1 = this.v1;
-        if (v1 != null) {
-            v1.remove(h);
+        final ArrayList w1 = this.w1;
+        if (w1 != null) {
+            w1.remove(h);
         }
     }
     
     public final boolean verifyDrawable(final Drawable drawable) {
-        return super.verifyDrawable(drawable) || drawable == this.P0;
+        return super.verifyDrawable(drawable) || drawable == this.Q0;
     }
     
     public void w(final i i) {
-        final ArrayList t1 = this.t1;
-        if (t1 != null) {
-            t1.remove(i);
+        final ArrayList u1 = this.u1;
+        if (u1 != null) {
+            u1.remove(i);
         }
     }
     
@@ -2249,18 +2251,18 @@ public class ViewPager extends ViewGroup
     }
     
     public final boolean y() {
-        this.i1 = -1;
+        this.j1 = -1;
         boolean b = false;
-        this.Z0 = false;
         this.a1 = false;
-        final VelocityTracker j1 = this.j1;
-        if (j1 != null) {
-            j1.recycle();
-            this.j1 = null;
+        this.b1 = false;
+        final VelocityTracker k1 = this.k1;
+        if (k1 != null) {
+            k1.recycle();
+            this.k1 = null;
         }
-        this.o1.onRelease();
         this.p1.onRelease();
-        if (this.o1.isFinished() || this.p1.isFinished()) {
+        this.q1.onRelease();
+        if (this.p1.isFinished() || this.q1.isFinished()) {
             b = true;
         }
         return b;
@@ -2270,7 +2272,7 @@ public class ViewPager extends ViewGroup
         final e l = this.l(n);
         int n3;
         if (l != null) {
-            n3 = (int)(Math.max(this.S0, Math.min(l.e, this.T0)) * this.getClientWidth());
+            n3 = (int)(Math.max(this.T0, Math.min(l.e, this.U0)) * this.getClientWidth());
         }
         else {
             n3 = 0;
@@ -2280,16 +2282,16 @@ public class ViewPager extends ViewGroup
                 this.setScrollingCacheEnabled(false);
             }
             else {
-                final Scroller l2 = this.L0;
+                final Scroller m0 = this.M0;
                 int n4;
-                if (l2 != null && !l2.isFinished()) {
-                    if (this.M0) {
-                        n4 = this.L0.getCurrX();
+                if (m0 != null && !m0.isFinished()) {
+                    if (this.N0) {
+                        n4 = this.M0.getCurrX();
                     }
                     else {
-                        n4 = this.L0.getStartX();
+                        n4 = this.M0.getStartX();
                     }
-                    this.L0.abortAnimation();
+                    this.M0.abortAnimation();
                     this.setScrollingCacheEnabled(false);
                 }
                 else {
@@ -2318,13 +2320,13 @@ public class ViewPager extends ViewGroup
                         n2 = Math.round(Math.abs((n11 * n10 + n10) / n2) * 1000.0f) * 4;
                     }
                     else {
-                        n2 = (int)((Math.abs(n5) / (this.G0.D(this.H0) * n9 + this.O0) + 1.0f) * 100.0f);
+                        n2 = (int)((Math.abs(n5) / (this.H0.F(this.I0) * n9 + this.P0) + 1.0f) * 100.0f);
                     }
                     n2 = Math.min(n2, 600);
-                    this.M0 = false;
-                    this.L0.startScroll(n4, scrollY, n5, n6, n2);
-                    final WeakHashMap a = p5x.a;
-                    p5x$d.k((View)this);
+                    this.N0 = false;
+                    this.M0.startScroll(n4, scrollY, n5, n6, n2);
+                    final WeakHashMap a = j6x.a;
+                    j6x$d.k((View)this);
                 }
             }
             if (b2) {
@@ -2372,7 +2374,7 @@ public class ViewPager extends ViewGroup
         public f(final Context context, final AttributeSet set) {
             super(context, set);
             this.c = 0.0f;
-            final TypedArray obtainStyledAttributes = context.obtainStyledAttributes(set, ViewPager.y1);
+            final TypedArray obtainStyledAttributes = context.obtainStyledAttributes(set, ViewPager.z1);
             this.b = obtainStyledAttributes.getInteger(0, 48);
             obtainStyledAttributes.recycle();
         }
@@ -2380,26 +2382,32 @@ public class ViewPager extends ViewGroup
     
     public interface h
     {
-        void a(final ViewPager p0, final cuj p1);
+        void a(final ViewPager p0, final huj p1);
     }
     
     public interface i
     {
         void B3(final int p0);
         
-        void E(final int p0);
+        void D(final int p0);
         
         void h2(final int p0, final float p1, final int p2);
     }
     
     public final class j extends DataSetObserver
     {
+        public final ViewPager a;
+        
+        public j(final ViewPager a) {
+            this.a = a;
+        }
+        
         public final void onChanged() {
-            ViewPager.this.g();
+            this.a.g();
         }
         
         public final void onInvalidated() {
-            ViewPager.this.g();
+            this.a.g();
         }
     }
 }

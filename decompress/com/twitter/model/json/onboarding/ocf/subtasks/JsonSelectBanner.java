@@ -11,39 +11,38 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSelectBanner extends lhh<kcp>
+public class JsonSelectBanner extends qhh<bdp>
 {
     @JsonField
     public JsonOcfRichText a;
     @JsonField
     public JsonOcfRichText b;
     @JsonField
-    public xrv c;
+    public ssv c;
     @JsonField
-    public xrv d;
+    public ssv d;
     @JsonField
-    public dsr e;
+    public vsr e;
     @JsonField
     public JsonOcfComponentCollection f;
     
-    @Override
-    public final h4j t() {
-        final kcp$a kcp$a = new kcp$a();
-        ((lsr$a)kcp$a).f = JsonOcfRichText.s(this.a);
-        final int a = w4j.a;
-        ((lsr$a)kcp$a).g = JsonOcfRichText.s(this.b);
-        ((lsr$a)kcp$a).a = this.c;
-        ((lsr$a)kcp$a).b = this.d;
-        kcp$a.k = this.e;
+    public final n4j t() {
+        final bdp$a bdp$a = new bdp$a();
+        ((dtr$a)bdp$a).f = JsonOcfRichText.s(this.a);
+        final int a = c5j.a;
+        ((dtr$a)bdp$a).g = JsonOcfRichText.s(this.b);
+        ((dtr$a)bdp$a).a = this.c;
+        ((dtr$a)bdp$a).b = this.d;
+        bdp$a.k = this.e;
         final JsonOcfComponentCollection f = this.f;
-        n16 t;
+        x06 t;
         if (f != null) {
             t = f.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)kcp$a).j = t;
-        return (h4j)kcp$a;
+        ((dtr$a)bdp$a).j = t;
+        return (n4j)bdp$a;
     }
 }

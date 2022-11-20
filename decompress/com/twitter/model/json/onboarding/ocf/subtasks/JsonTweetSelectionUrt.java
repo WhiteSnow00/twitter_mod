@@ -11,50 +11,49 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTweetSelectionUrt extends lhh<iru>
+public class JsonTweetSelectionUrt extends qhh<dsu>
 {
     @JsonField
-    public iej a;
+    public oej a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
-    public xrv c;
+    public ssv c;
     @JsonField
     public JsonTimelineQuery d;
     @JsonField
     public String e;
     @JsonField
-    public bej f;
+    public gej f;
     @JsonField
-    public abi g;
+    public cbi g;
     @JsonField
-    public pcj h;
+    public ucj h;
     @JsonField
     public JsonOcfComponentCollection i;
     
-    @Override
-    public final h4j t() {
-        final iru$a iru$a = new iru$a();
-        ((lsr$a)iru$a).h = this.a;
-        final int a = w4j.a;
-        final xrv b = this.b;
-        pf8.r(b);
-        ((lsr$a)iru$a).a = b;
-        ((lsr$a)iru$a).b = this.c;
-        ((em1$a)iru$a).k = JsonTimelineQuery.s(this.d);
-        ((em1$a)iru$a).l = this.e;
-        ((em1$a)iru$a).m = this.f;
-        ((em1$a)iru$a).n = this.g;
-        ((em1$a)iru$a).o = this.h;
+    public final n4j t() {
+        final dsu.a a = new dsu.a();
+        ((dtr$a)a).h = this.a;
+        final int a2 = c5j.a;
+        final ssv b = this.b;
+        jee.l((Object)b);
+        ((dtr$a)a).a = b;
+        ((dtr$a)a).b = this.c;
+        a.k = JsonTimelineQuery.s(this.d);
+        a.l = this.e;
+        a.m = this.f;
+        a.n = this.g;
+        a.o = this.h;
         final JsonOcfComponentCollection i = this.i;
-        n16 t;
+        x06 t;
         if (i != null) {
             t = i.t();
         }
         else {
             t = null;
         }
-        ((lsr$a)iru$a).j = t;
-        return (h4j)iru$a;
+        ((dtr$a)a).j = t;
+        return (n4j)a;
     }
 }

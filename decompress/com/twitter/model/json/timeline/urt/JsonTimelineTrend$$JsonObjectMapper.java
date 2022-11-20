@@ -12,100 +12,100 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonTimelineTrend$$JsonObjectMapper extends JsonMapper<JsonTimelineTrend>
 {
-    public static JsonTimelineTrend _parse(final khe khe) throws IOException {
+    public static JsonTimelineTrend _parse(final tge tge) throws IOException {
         final JsonTimelineTrend jsonTimelineTrend = new JsonTimelineTrend();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonTimelineTrend, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonTimelineTrend, d, tge);
+            tge.l0();
         }
         return jsonTimelineTrend;
     }
     
-    public static void _serialize(final JsonTimelineTrend jsonTimelineTrend, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonTimelineTrend jsonTimelineTrend, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         final ArrayList g = jsonTimelineTrend.g;
         if (g != null) {
-            final Iterator g2 = q1a.g(tfe, "associatedCardUrls", g);
-            while (g2.hasNext()) {
-                tfe.s0((String)g2.next());
+            final Iterator a = br.A(afe, "associatedCardUrls", g);
+            while (a.hasNext()) {
+                afe.r0((String)a.next());
             }
-            tfe.f();
+            afe.f();
         }
         final ArrayList h = jsonTimelineTrend.h;
         if (h != null) {
-            final Iterator g3 = q1a.g(tfe, "associatedTweetIds", h);
-            while (g3.hasNext()) {
-                tfe.s0((String)g3.next());
+            final Iterator a2 = br.A(afe, "associatedTweetIds", h);
+            while (a2.hasNext()) {
+                afe.r0((String)a2.next());
             }
-            tfe.f();
+            afe.f();
         }
         final ArrayList i = jsonTimelineTrend.i;
         if (i != null) {
-            final Iterator g4 = q1a.g(tfe, "associatedUserIds", i);
-            while (g4.hasNext()) {
-                tfe.s0((String)g4.next());
+            final Iterator a3 = br.A(afe, "associatedUserIds", i);
+            while (a3.hasNext()) {
+                afe.r0((String)a3.next());
             }
-            tfe.f();
+            afe.f();
         }
         final ArrayList d = jsonTimelineTrend.d;
         if (d != null) {
-            final Iterator g5 = q1a.g(tfe, "badges", d);
-            while (g5.hasNext()) {
-                final erv erv = g5.next();
-                if (erv != null) {
-                    LoganSquare.typeConverterFor((Class)erv.class).serialize((Object)erv, "lslocalbadgesElement", false, tfe);
+            final Iterator a4 = br.A(afe, "badges", d);
+            while (a4.hasNext()) {
+                final zrv zrv = a4.next();
+                if (zrv != null) {
+                    LoganSquare.typeConverterFor((Class)zrv.class).serialize((Object)zrv, "lslocalbadgesElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("description", jsonTimelineTrend.c);
+        afe.t0("description", jsonTimelineTrend.c);
         final ArrayList k = jsonTimelineTrend.k;
         if (k != null) {
-            final Iterator g6 = q1a.g(tfe, "groupedTrends", k);
-            while (g6.hasNext()) {
-                final o9c o9c = g6.next();
-                if (o9c != null) {
-                    LoganSquare.typeConverterFor((Class)o9c.class).serialize((Object)o9c, "lslocalgroupedTrendsElement", false, tfe);
+            final Iterator a5 = br.A(afe, "groupedTrends", k);
+            while (a5.hasNext()) {
+                final o8c o8c = a5.next();
+                if (o8c != null) {
+                    LoganSquare.typeConverterFor((Class)o8c.class).serialize((Object)o8c, "lslocalgroupedTrendsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
-        tfe.u0("name", jsonTimelineTrend.a);
+        afe.t0("name", jsonTimelineTrend.a);
         if (jsonTimelineTrend.e != null) {
-            LoganSquare.typeConverterFor((Class)dvv.class).serialize((Object)jsonTimelineTrend.e, "promotedMetadata", true, tfe);
+            LoganSquare.typeConverterFor((Class)wvv.class).serialize((Object)jsonTimelineTrend.e, "promotedMetadata", true, afe);
         }
-        tfe.u0("rank", jsonTimelineTrend.j);
+        afe.t0("rank", jsonTimelineTrend.j);
         if (jsonTimelineTrend.b != null) {
-            LoganSquare.typeConverterFor((Class)q7t.class).serialize((Object)jsonTimelineTrend.b, "url", true, tfe);
+            LoganSquare.typeConverterFor((Class)i8t.class).serialize((Object)jsonTimelineTrend.b, "url", true, afe);
         }
         if (jsonTimelineTrend.f != null) {
-            tfe.i("trendMetadata");
-            JsonTrendMetadata$$JsonObjectMapper._serialize(jsonTimelineTrend.f, tfe, true);
+            afe.i("trendMetadata");
+            JsonTrendMetadata$$JsonObjectMapper._serialize(jsonTimelineTrend.f, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonTimelineTrend jsonTimelineTrend, String s, final khe khe) throws IOException {
-        if ("associatedCardUrls".equals(s)) {
-            if (khe.e() == lje.M0) {
+    public static void parseField(final JsonTimelineTrend jsonTimelineTrend, String t, final tge tge) throws IOException {
+        if ("associatedCardUrls".equals(t)) {
+            if (tge.e() == vie.N0) {
                 final ArrayList g = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    s = khe.T((String)null);
-                    if (s != null) {
-                        g.add(s);
+                while (tge.h0() != vie.O0) {
+                    final String t2 = tge.T((String)null);
+                    if (t2 != null) {
+                        g.add(t2);
                     }
                 }
                 jsonTimelineTrend.g = g;
@@ -114,13 +114,13 @@ public final class JsonTimelineTrend$$JsonObjectMapper extends JsonMapper<JsonTi
                 jsonTimelineTrend.g = null;
             }
         }
-        else if ("associatedTweetIds".equals(s)) {
-            if (khe.e() == lje.M0) {
+        else if ("associatedTweetIds".equals(t)) {
+            if (tge.e() == vie.N0) {
                 final ArrayList h = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    s = khe.T((String)null);
-                    if (s != null) {
-                        h.add(s);
+                while (tge.h0() != vie.O0) {
+                    t = tge.T((String)null);
+                    if (t != null) {
+                        h.add(t);
                     }
                 }
                 jsonTimelineTrend.h = h;
@@ -129,13 +129,13 @@ public final class JsonTimelineTrend$$JsonObjectMapper extends JsonMapper<JsonTi
                 jsonTimelineTrend.h = null;
             }
         }
-        else if ("associatedUserIds".equals(s)) {
-            if (khe.e() == lje.M0) {
+        else if ("associatedUserIds".equals(t)) {
+            if (tge.e() == vie.N0) {
                 final ArrayList i = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    s = khe.T((String)null);
-                    if (s != null) {
-                        i.add(s);
+                while (tge.h0() != vie.O0) {
+                    final String t3 = tge.T((String)null);
+                    if (t3 != null) {
+                        i.add(t3);
                     }
                 }
                 jsonTimelineTrend.i = i;
@@ -144,13 +144,13 @@ public final class JsonTimelineTrend$$JsonObjectMapper extends JsonMapper<JsonTi
                 jsonTimelineTrend.i = null;
             }
         }
-        else if ("badges".equals(s)) {
-            if (khe.e() == lje.M0) {
+        else if ("badges".equals(t)) {
+            if (tge.e() == vie.N0) {
                 final ArrayList d = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final erv erv = (erv)LoganSquare.typeConverterFor((Class)erv.class).parse(khe);
-                    if (erv != null) {
-                        d.add(erv);
+                while (tge.h0() != vie.O0) {
+                    final zrv zrv = (zrv)LoganSquare.typeConverterFor((Class)zrv.class).parse(tge);
+                    if (zrv != null) {
+                        d.add(zrv);
                     }
                 }
                 jsonTimelineTrend.d = d;
@@ -159,16 +159,16 @@ public final class JsonTimelineTrend$$JsonObjectMapper extends JsonMapper<JsonTi
                 jsonTimelineTrend.d = null;
             }
         }
-        else if ("description".equals(s)) {
-            jsonTimelineTrend.c = khe.T((String)null);
+        else if ("description".equals(t)) {
+            jsonTimelineTrend.c = tge.T((String)null);
         }
-        else if ("groupedTrends".equals(s)) {
-            if (khe.e() == lje.M0) {
+        else if ("groupedTrends".equals(t)) {
+            if (tge.e() == vie.N0) {
                 final ArrayList k = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final o9c o9c = (o9c)LoganSquare.typeConverterFor((Class)o9c.class).parse(khe);
-                    if (o9c != null) {
-                        k.add(o9c);
+                while (tge.h0() != vie.O0) {
+                    final o8c o8c = (o8c)LoganSquare.typeConverterFor((Class)o8c.class).parse(tge);
+                    if (o8c != null) {
+                        k.add(o8c);
                     }
                 }
                 jsonTimelineTrend.k = k;
@@ -177,28 +177,36 @@ public final class JsonTimelineTrend$$JsonObjectMapper extends JsonMapper<JsonTi
                 jsonTimelineTrend.k = null;
             }
         }
-        else if ("name".equals(s)) {
-            jsonTimelineTrend.a = khe.T((String)null);
+        else if ("name".equals(t)) {
+            jsonTimelineTrend.a = tge.T((String)null);
         }
-        else if ("promotedMetadata".equals(s)) {
-            jsonTimelineTrend.e = (dvv)LoganSquare.typeConverterFor((Class)dvv.class).parse(khe);
+        else if ("promotedMetadata".equals(t)) {
+            jsonTimelineTrend.e = (wvv)LoganSquare.typeConverterFor((Class)wvv.class).parse(tge);
         }
-        else if ("rank".equals(s)) {
-            jsonTimelineTrend.j = khe.T((String)null);
+        else if ("rank".equals(t)) {
+            jsonTimelineTrend.j = tge.T((String)null);
         }
-        else if ("url".equals(s)) {
-            jsonTimelineTrend.b = (q7t)LoganSquare.typeConverterFor((Class)q7t.class).parse(khe);
+        else if ("url".equals(t)) {
+            jsonTimelineTrend.b = (i8t)LoganSquare.typeConverterFor((Class)i8t.class).parse(tge);
         }
-        else if ("trendMetadata".equals(s)) {
-            jsonTimelineTrend.f = JsonTrendMetadata$$JsonObjectMapper._parse(khe);
+        else if ("trendMetadata".equals(t)) {
+            jsonTimelineTrend.f = JsonTrendMetadata$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonTimelineTrend parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonTimelineTrend parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonTimelineTrend jsonTimelineTrend, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonTimelineTrend, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonTimelineTrend jsonTimelineTrend, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonTimelineTrend, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonTimelineTrend)o, afe, b);
     }
 }

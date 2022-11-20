@@ -12,122 +12,130 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonEmailVerification$$JsonObjectMapper extends JsonMapper<JsonEmailVerification>
 {
-    public static JsonEmailVerification _parse(final khe khe) throws IOException {
+    public static JsonEmailVerification _parse(final tge tge) throws IOException {
         final JsonEmailVerification jsonEmailVerification = new JsonEmailVerification();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonEmailVerification, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonEmailVerification, d, tge);
+            tge.l0();
         }
         return jsonEmailVerification;
     }
     
-    public static void _serialize(final JsonEmailVerification jsonEmailVerification, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonEmailVerification jsonEmailVerification, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonEmailVerification.h != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEmailVerification.h, "cancel_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEmailVerification.h, "cancel_link", true, afe);
         }
-        tfe.T("code_length", jsonEmailVerification.k);
+        afe.T("code_length", (int)jsonEmailVerification.k);
         if (jsonEmailVerification.l != null) {
-            tfe.i("component_collection");
-            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEmailVerification.l, tfe, true);
+            afe.i("component_collection");
+            JsonOcfComponentCollection$$JsonObjectMapper._serialize(jsonEmailVerification.l, afe, true);
         }
         if (jsonEmailVerification.c != null) {
-            tfe.i("detail_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEmailVerification.c, tfe, true);
+            afe.i("detail_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEmailVerification.c, afe, true);
         }
         if (jsonEmailVerification.e != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonEmailVerification.e, "email", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonEmailVerification.e, "email", true, afe);
         }
         if (jsonEmailVerification.i != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEmailVerification.i, "fail_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEmailVerification.i, "fail_link", true, afe);
         }
-        tfe.u0("hint_text", jsonEmailVerification.d);
+        afe.t0("hint_text", jsonEmailVerification.d);
         if (jsonEmailVerification.f != null) {
-            LoganSquare.typeConverterFor((Class)kcj.class).serialize((Object)jsonEmailVerification.f, "name", true, tfe);
+            LoganSquare.typeConverterFor((Class)pcj.class).serialize((Object)jsonEmailVerification.f, "name", true, afe);
         }
         if (jsonEmailVerification.g != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonEmailVerification.g, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonEmailVerification.g, "next_link", true, afe);
         }
         if (jsonEmailVerification.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEmailVerification.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEmailVerification.a, afe, true);
         }
         if (jsonEmailVerification.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEmailVerification.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonEmailVerification.b, afe, true);
         }
-        tfe.e("verification_status_polling_enabled", jsonEmailVerification.j);
+        afe.e("verification_status_polling_enabled", jsonEmailVerification.j);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonEmailVerification jsonEmailVerification, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonEmailVerification jsonEmailVerification, final String s, final tge tge) throws IOException {
         if ("cancel_link".equals(s)) {
-            jsonEmailVerification.h = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonEmailVerification.h = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else {
             final boolean equals = "code_length".equals(s);
             final Integer n = null;
             if (equals) {
                 Integer value;
-                if (khe.e() == lje.U0) {
+                if (tge.e() == vie.V0) {
                     value = n;
                 }
                 else {
-                    value = khe.z();
+                    value = tge.y();
                 }
                 jsonEmailVerification.k = value;
             }
             else if ("component_collection".equals(s)) {
-                jsonEmailVerification.l = JsonOcfComponentCollection$$JsonObjectMapper._parse(khe);
+                jsonEmailVerification.l = JsonOcfComponentCollection$$JsonObjectMapper._parse(tge);
             }
             else if ("detail_text".equals(s)) {
-                jsonEmailVerification.c = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+                jsonEmailVerification.c = JsonOcfRichText$$JsonObjectMapper._parse(tge);
             }
             else if ("email".equals(s)) {
-                jsonEmailVerification.e = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+                jsonEmailVerification.e = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
             }
             else if ("fail_link".equals(s)) {
-                jsonEmailVerification.i = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+                jsonEmailVerification.i = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
             }
             else if ("hint_text".equals(s)) {
-                jsonEmailVerification.d = khe.T((String)null);
+                jsonEmailVerification.d = tge.T((String)null);
             }
             else if ("name".equals(s)) {
-                jsonEmailVerification.f = (kcj)LoganSquare.typeConverterFor((Class)kcj.class).parse(khe);
+                jsonEmailVerification.f = (pcj)LoganSquare.typeConverterFor((Class)pcj.class).parse(tge);
             }
             else if ("next_link".equals(s)) {
-                jsonEmailVerification.g = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+                jsonEmailVerification.g = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
             }
             else if ("primary_text".equals(s)) {
-                jsonEmailVerification.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+                jsonEmailVerification.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
             }
             else if ("secondary_text".equals(s)) {
-                jsonEmailVerification.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+                jsonEmailVerification.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
             }
             else if ("verification_status_polling_enabled".equals(s)) {
-                jsonEmailVerification.j = khe.k();
+                jsonEmailVerification.j = tge.k();
             }
         }
     }
     
-    public JsonEmailVerification parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonEmailVerification parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonEmailVerification jsonEmailVerification, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonEmailVerification, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonEmailVerification jsonEmailVerification, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonEmailVerification, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonEmailVerification)o, afe, b);
     }
 }

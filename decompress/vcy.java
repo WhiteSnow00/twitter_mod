@@ -1,12 +1,13 @@
+import java.util.List;
+import java.util.RandomAccess;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface vcy
+public final class vcy extends fey implements RandomAccess
 {
-    boolean g(final String p0);
-    
-    void m(final String p0, final aey p1);
-    
-    aey n(final String p0);
+    public vcy(final ley ley, final Object o, final List list, final ody ody) {
+        super(ley, o, list, ody);
+    }
 }

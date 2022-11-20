@@ -2,22 +2,12 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface reh
+public final class reh
 {
-    public static final a Companion = a.a;
+    public final o5w a;
     
-    void a(final String p0);
-    
-    void b();
-    
-    void c();
-    
-    public static final class a
-    {
-        public static final /* synthetic */ a a;
-        
-        static {
-            a = new a();
-        }
+    public reh(final o5w a) {
+        czd.f((Object)a, "uriNavigator");
+        this.a = a;
     }
 }

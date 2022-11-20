@@ -6,13 +6,13 @@ import android.view.MenuItem;
 
 public final class kv
 {
-    public final xn6<sv, qv> a;
-    public final f7p b;
-    public final w4d c;
+    public final dn6<sv, qv> a;
+    public final y7p b;
+    public final b4d c;
     public qv d;
     public MenuItem e;
     
-    public kv(final xn6<sv, qv> a, final w4d c, final f7p b) {
+    public kv(final dn6<sv, qv> a, final b4d c, final y7p b) {
         this.d = qv.g;
         this.a = a;
         this.c = c;

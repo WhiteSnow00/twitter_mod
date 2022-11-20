@@ -11,67 +11,75 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOpenHomeTimeline$$JsonObjectMapper extends JsonMapper<JsonOpenHomeTimeline>
 {
-    public static JsonOpenHomeTimeline _parse(final khe khe) throws IOException {
+    public static JsonOpenHomeTimeline _parse(final tge tge) throws IOException {
         final JsonOpenHomeTimeline jsonOpenHomeTimeline = new JsonOpenHomeTimeline();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonOpenHomeTimeline, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonOpenHomeTimeline, d, tge);
+            tge.l0();
         }
         return jsonOpenHomeTimeline;
     }
     
-    public static void _serialize(final JsonOpenHomeTimeline jsonOpenHomeTimeline, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOpenHomeTimeline jsonOpenHomeTimeline, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
         if (jsonOpenHomeTimeline.c != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonOpenHomeTimeline.c, "cta_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOpenHomeTimeline.c, "cta_link", true, afe);
         }
         if (jsonOpenHomeTimeline.d != null) {
-            LoganSquare.typeConverterFor((Class)xrv.class).serialize((Object)jsonOpenHomeTimeline.d, "next_link", true, tfe);
+            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOpenHomeTimeline.d, "next_link", true, afe);
         }
         if (jsonOpenHomeTimeline.a != null) {
-            tfe.i("primary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonOpenHomeTimeline.a, tfe, true);
+            afe.i("primary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonOpenHomeTimeline.a, afe, true);
         }
         if (jsonOpenHomeTimeline.b != null) {
-            tfe.i("secondary_text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonOpenHomeTimeline.b, tfe, true);
+            afe.i("secondary_text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonOpenHomeTimeline.b, afe, true);
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonOpenHomeTimeline jsonOpenHomeTimeline, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonOpenHomeTimeline jsonOpenHomeTimeline, final String s, final tge tge) throws IOException {
         if ("cta_link".equals(s)) {
-            jsonOpenHomeTimeline.c = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonOpenHomeTimeline.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("next_link".equals(s)) {
-            jsonOpenHomeTimeline.d = (xrv)LoganSquare.typeConverterFor((Class)xrv.class).parse(khe);
+            jsonOpenHomeTimeline.d = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
         }
         else if ("primary_text".equals(s)) {
-            jsonOpenHomeTimeline.a = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonOpenHomeTimeline.a = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
         else if ("secondary_text".equals(s)) {
-            jsonOpenHomeTimeline.b = JsonOcfRichText$$JsonObjectMapper._parse(khe);
+            jsonOpenHomeTimeline.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
         }
     }
     
-    public JsonOpenHomeTimeline parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonOpenHomeTimeline parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonOpenHomeTimeline jsonOpenHomeTimeline, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonOpenHomeTimeline, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonOpenHomeTimeline jsonOpenHomeTimeline, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonOpenHomeTimeline, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonOpenHomeTimeline)o, afe, b);
     }
 }

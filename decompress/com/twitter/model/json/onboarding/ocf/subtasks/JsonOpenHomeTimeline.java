@@ -10,25 +10,24 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOpenHomeTimeline extends lhh<gmj>
+public class JsonOpenHomeTimeline extends qhh<lmj>
 {
     @JsonField
     public JsonOcfRichText a;
     @JsonField
     public JsonOcfRichText b;
     @JsonField
-    public xrv c;
+    public ssv c;
     @JsonField
-    public xrv d;
+    public ssv d;
     
-    @Override
-    public final h4j t() {
-        final gmj$a gmj$a = new gmj$a();
-        ((lsr$a)gmj$a).f = JsonOcfRichText.s(this.a);
-        final int a = w4j.a;
-        ((lsr$a)gmj$a).g = JsonOcfRichText.s(this.b);
-        gmj$a.k = this.c;
-        ((lsr$a)gmj$a).a = this.d;
-        return (h4j)gmj$a;
+    public final n4j t() {
+        final lmj$a lmj$a = new lmj$a();
+        ((dtr$a)lmj$a).f = JsonOcfRichText.s(this.a);
+        final int a = c5j.a;
+        ((dtr$a)lmj$a).g = JsonOcfRichText.s(this.b);
+        lmj$a.k = this.c;
+        ((dtr$a)lmj$a).a = this.d;
+        return (n4j)lmj$a;
     }
 }

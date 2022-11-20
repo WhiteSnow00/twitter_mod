@@ -9,15 +9,14 @@ import java.util.Map;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonGraphQlTweetReactionTypeMap extends aih<sou>
+public class JsonGraphQlTweetReactionTypeMap extends fih<mpu>
 {
-    @JsonField(name = { "reaction_type_map" }, typeConverter = tou.class)
+    @JsonField(name = { "reaction_type_map" }, typeConverter = npu.class)
     public Map<String, String> a;
     
-    @Override
     public final Object s() {
-        final sou$a sou$a = new sou$a();
-        sou$a.p((Map)this.a);
-        return ((h4j)sou$a).e();
+        final mpu$a mpu$a = new mpu$a();
+        mpu$a.p((Map)this.a);
+        return ((n4j)mpu$a).e();
     }
 }

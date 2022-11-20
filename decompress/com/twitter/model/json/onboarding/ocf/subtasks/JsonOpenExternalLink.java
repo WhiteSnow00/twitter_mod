@@ -9,24 +9,23 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOpenExternalLink extends lhh<cmj>
+public class JsonOpenExternalLink extends qhh<hmj>
 {
     @JsonField
     public String a;
     @JsonField
-    public xrv b;
+    public ssv b;
     @JsonField
-    public xrv c;
+    public ssv c;
     
-    @Override
-    public final h4j t() {
-        final cmj$a cmj$a = new cmj$a();
-        final String a = this.a;
-        zzd.f((Object)a, "externalLinkUrl");
-        cmj$a.k = a;
-        ((lsr$a)cmj$a).a = this.b;
-        final int a2 = w4j.a;
-        cmj$a.l = this.c;
-        return (h4j)cmj$a;
+    public final n4j t() {
+        final hmj.a a = new hmj.a();
+        final String a2 = this.a;
+        czd.f((Object)a2, "externalLinkUrl");
+        a.k = a2;
+        a.a = this.b;
+        final int a3 = c5j.a;
+        a.l = this.c;
+        return (n4j)a;
     }
 }

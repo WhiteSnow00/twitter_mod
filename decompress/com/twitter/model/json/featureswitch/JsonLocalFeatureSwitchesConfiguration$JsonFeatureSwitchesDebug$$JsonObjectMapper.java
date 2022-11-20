@@ -10,69 +10,77 @@ import com.bluelinelabs.logansquare.LoganSquare;
 import java.io.IOException;
 import com.bluelinelabs.logansquare.JsonMapper;
 
-public final class JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug$$JsonObjectMapper extends JsonMapper<JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug>
+public final class JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug$$JsonObjectMapper extends JsonMapper<JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug>
 {
-    public static JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug _parse(final khe khe) throws IOException {
-        final JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug = new JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug();
-        if (khe.e() == null) {
-            khe.i0();
+    public static JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug _parse(final tge tge) throws IOException {
+        final JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug jsonFeatureSwitchesDebug = new JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonFeatureSwitchesDebug, d, tge);
+            tge.l0();
         }
-        return jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug;
+        return jsonFeatureSwitchesDebug;
     }
     
-    public static void _serialize(final JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug jsonFeatureSwitchesDebug, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        final ArrayList a = jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug.a;
+        final ArrayList a = jsonFeatureSwitchesDebug.a;
         if (a != null) {
-            final Iterator g = q1a.g(tfe, "facets", a);
-            while (g.hasNext()) {
-                final rua rua = g.next();
-                if (rua != null) {
-                    LoganSquare.typeConverterFor((Class)rua.class).serialize((Object)rua, "lslocalfacetsElement", false, tfe);
+            final Iterator a2 = br.A(afe, "facets", a);
+            while (a2.hasNext()) {
+                final nta nta = a2.next();
+                if (nta != null) {
+                    LoganSquare.typeConverterFor((Class)nta.class).serialize((Object)nta, "lslocalfacetsElement", false, afe);
                 }
             }
-            tfe.f();
+            afe.f();
         }
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug jsonFeatureSwitchesDebug, final String s, final tge tge) throws IOException {
         if ("facets".equals(s)) {
-            if (khe.e() == lje.M0) {
+            if (tge.e() == vie.N0) {
                 final ArrayList a = new ArrayList();
-                while (khe.i0() != lje.N0) {
-                    final rua rua = (rua)LoganSquare.typeConverterFor((Class)rua.class).parse(khe);
-                    if (rua != null) {
-                        a.add(rua);
+                while (tge.h0() != vie.O0) {
+                    final nta nta = (nta)LoganSquare.typeConverterFor((Class)nta.class).parse(tge);
+                    if (nta != null) {
+                        a.add(nta);
                     }
                 }
-                jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug.a = a;
+                jsonFeatureSwitchesDebug.a = a;
             }
             else {
-                jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug.a = null;
+                jsonFeatureSwitchesDebug.a = null;
             }
         }
     }
     
-    public JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLocalFeatureSwitchesConfiguration$JsonFeatureSwitchesDebug, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug jsonFeatureSwitchesDebug, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonFeatureSwitchesDebug, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLocalFeatureSwitchesConfiguration.JsonFeatureSwitchesDebug)o, afe, b);
     }
 }

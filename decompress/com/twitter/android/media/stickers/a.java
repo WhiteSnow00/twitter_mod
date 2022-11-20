@@ -8,7 +8,7 @@ import java.util.List;
 
 public final class a
 {
-    public static List<hhr> a(final List<hhr> list, final long n) {
-        return hr4.c((List)list, (kub)new zgr(n, (otk)new bhr(n)));
+    public static List<bir> a(final List<bir> list, final long n) {
+        return fq4.c((List)list, (jtb)new thr(n, (xtk)new vhr(n)));
     }
 }

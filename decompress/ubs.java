@@ -1,52 +1,69 @@
-import java.util.List;
+import android.app.Activity;
+import java.util.concurrent.Executor;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ubs implements psd$a<Object, vbs>
+public abstract class ubs<TResult>
 {
-    public final jbs C0;
-    
-    public ubs(final jbs c0) {
-        zzd.f((Object)c0, "taskEndpointRepository");
-        this.C0 = c0;
+    public ubs<TResult> a(final zgj zgj) {
+        throw new UnsupportedOperationException("addOnCanceledListener is not implemented.");
     }
     
-    public final void b(final of6<Object, vbs> of6, final tsc<vbs, pav> tsc) {
-        zzd.f((Object)of6, "request");
-        final List k1 = gkr.K1((CharSequence)of6.h0().a.toString(), new String[] { "?" });
-        final boolean b = false;
-        final String s = k1.get(0);
-        final hlv b2 = dta.b();
-        zzd.e((Object)b2, "getCurrent()");
-        final boolean q = b2.q("ocf_2fa_enrollment_bouncer_enabled", false);
-        final boolean b3 = b2.q("zazu_native_report_flow_tweets_enabled", false) || b2.q("zazu_native_report_flow_profile_enabled", false) || b2.q("zazu_native_report_flow_lists_enabled", false);
-        int n = 0;
-        Label_0146: {
-            if (!q || !zzd.a((Object)"/1.1/onboarding/bounce.json", (Object)s)) {
-                n = (b ? 1 : 0);
-                if (!b3) {
-                    break Label_0146;
-                }
-                n = (b ? 1 : 0);
-                if (!zzd.a((Object)"/1.1/report/flow.json", (Object)s)) {
-                    break Label_0146;
-                }
-            }
-            n = 1;
-        }
-        if (n != 0) {
-            final vbs vbs = (vbs)tsc.g;
-            if (vbs != null) {
-                final abs a = vbs.a;
-                if (a != null) {
-                    final String a2 = a.a;
-                    if (a2 != null) {
-                        this.C0.a(a2, s);
-                    }
-                }
-            }
-        }
+    public ubs<TResult> b(final Executor executor, final zgj zgj) {
+        throw new UnsupportedOperationException("addOnCanceledListener is not implemented");
+    }
+    
+    public ubs<TResult> c(final ghj<TResult> ghj) {
+        throw new UnsupportedOperationException("addOnCompleteListener is not implemented");
+    }
+    
+    public abstract ubs<TResult> d(final kij p0);
+    
+    public abstract ubs<TResult> e(final Activity p0, final kij p1);
+    
+    public abstract ubs<TResult> f(final Executor p0, final kij p1);
+    
+    public abstract ubs<TResult> g(final akj<? super TResult> p0);
+    
+    public abstract ubs<TResult> h(final Activity p0, final akj<? super TResult> p1);
+    
+    public abstract ubs<TResult> i(final Executor p0, final akj<? super TResult> p1);
+    
+    public <TContinuationResult> ubs<TContinuationResult> j(final fo6<TResult, TContinuationResult> fo6) {
+        throw new UnsupportedOperationException("continueWith is not implemented");
+    }
+    
+    public <TContinuationResult> ubs<TContinuationResult> k(final Executor executor, final fo6<TResult, TContinuationResult> fo6) {
+        throw new UnsupportedOperationException("continueWith is not implemented");
+    }
+    
+    public <TContinuationResult> ubs<TContinuationResult> l(final fo6<TResult, ubs<TContinuationResult>> fo6) {
+        throw new UnsupportedOperationException("continueWithTask is not implemented");
+    }
+    
+    public <TContinuationResult> ubs<TContinuationResult> m(final Executor executor, final fo6<TResult, ubs<TContinuationResult>> fo6) {
+        throw new UnsupportedOperationException("continueWithTask is not implemented");
+    }
+    
+    public abstract Exception n();
+    
+    public abstract TResult o();
+    
+    public abstract <X extends Throwable> TResult p(final Class<X> p0) throws X, Throwable;
+    
+    public abstract boolean q();
+    
+    public abstract boolean r();
+    
+    public abstract boolean s();
+    
+    public <TContinuationResult> ubs<TContinuationResult> t(final str<TResult, TContinuationResult> str) {
+        throw new UnsupportedOperationException("onSuccessTask is not implemented");
+    }
+    
+    public <TContinuationResult> ubs<TContinuationResult> u(final Executor executor, final str<TResult, TContinuationResult> str) {
+        throw new UnsupportedOperationException("onSuccessTask is not implemented");
     }
 }

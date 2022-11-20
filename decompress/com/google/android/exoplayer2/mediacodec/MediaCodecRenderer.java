@@ -32,72 +32,72 @@ import com.google.android.exoplayer2.e;
 
 public abstract class MediaCodecRenderer extends e
 {
-    public static final byte[] g2;
+    public static final byte[] h2;
     public boolean A1;
     public boolean B1;
     public boolean C1;
     public boolean D1;
-    public w63 E1;
-    public long F1;
-    public int G1;
+    public boolean E1;
+    public n63 F1;
+    public long G1;
     public int H1;
-    public ByteBuffer I1;
-    public boolean J1;
+    public int I1;
+    public ByteBuffer J1;
     public boolean K1;
     public boolean L1;
     public boolean M1;
     public boolean N1;
-    public final c$b O0;
     public boolean O1;
-    public final com.google.android.exoplayer2.mediacodec.e P0;
-    public int P1;
-    public final boolean Q0;
+    public final c$b P0;
+    public boolean P1;
+    public final com.google.android.exoplayer2.mediacodec.e Q0;
     public int Q1;
-    public final float R0;
+    public final boolean R0;
     public int R1;
-    public final DecoderInputBuffer S0;
-    public boolean S1;
+    public final float S0;
+    public int S1;
     public final DecoderInputBuffer T0;
     public boolean T1;
     public final DecoderInputBuffer U0;
     public boolean U1;
-    public final rs1 V0;
-    public long V1;
-    public final drs<n> W0;
+    public final DecoderInputBuffer V0;
+    public boolean V1;
+    public final ns1 W0;
     public long W1;
-    public final ArrayList<Long> X0;
-    public boolean X1;
-    public final MediaCodec$BufferInfo Y0;
+    public final urs<n> X0;
+    public long X1;
+    public final ArrayList<Long> Y0;
     public boolean Y1;
-    public final long[] Z0;
+    public final MediaCodec$BufferInfo Z0;
     public boolean Z1;
     public final long[] a1;
     public boolean a2;
     public final long[] b1;
-    public ExoPlaybackException b2;
-    public n c1;
-    public oc8 c2;
+    public boolean b2;
+    public final long[] c1;
+    public ExoPlaybackException c2;
     public n d1;
-    public long d2;
-    public DrmSession e1;
+    public zb8 d2;
+    public n e1;
     public long e2;
     public DrmSession f1;
-    public int f2;
-    public MediaCrypto g1;
-    public boolean h1;
-    public long i1;
-    public float j1;
+    public long f2;
+    public DrmSession g1;
+    public int g2;
+    public MediaCrypto h1;
+    public boolean i1;
+    public long j1;
     public float k1;
-    public c l1;
-    public n m1;
-    public MediaFormat n1;
-    public boolean o1;
-    public float p1;
-    public ArrayDeque<d> q1;
-    public MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException r1;
-    public d s1;
-    public int t1;
-    public boolean u1;
+    public float l1;
+    public c m1;
+    public n n1;
+    public MediaFormat o1;
+    public boolean p1;
+    public float q1;
+    public ArrayDeque<d> r1;
+    public MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException s1;
+    public d t1;
+    public int u1;
     public boolean v1;
     public boolean w1;
     public boolean x1;
@@ -105,71 +105,71 @@ public abstract class MediaCodecRenderer extends e
     public boolean z1;
     
     static {
-        g2 = new byte[] { 0, 0, 1, 103, 66, -64, 11, -38, 37, -112, 0, 0, 1, 104, -50, 15, 19, 32, 0, 0, 1, 101, -120, -124, 13, -50, 113, 24, -96, 0, 47, -65, 28, 49, -61, 39, 93, 120 };
+        h2 = new byte[] { 0, 0, 1, 103, 66, -64, 11, -38, 37, -112, 0, 0, 1, 104, -50, 15, 19, 32, 0, 0, 1, 101, -120, -124, 13, -50, 113, 24, -96, 0, 47, -65, 28, 49, -61, 39, 93, 120 };
     }
     
-    public MediaCodecRenderer(final int n, final c$b o0, final com.google.android.exoplayer2.mediacodec.e p4, final float r0) {
+    public MediaCodecRenderer(final int n, final c$b p4, final com.google.android.exoplayer2.mediacodec.e q0, final float s0) {
         super(n);
-        this.O0 = o0;
-        Objects.requireNonNull(p4);
         this.P0 = p4;
-        this.Q0 = false;
-        this.R0 = r0;
-        this.S0 = new DecoderInputBuffer(0);
+        Objects.requireNonNull(q0);
+        this.Q0 = q0;
+        this.R0 = false;
+        this.S0 = s0;
         this.T0 = new DecoderInputBuffer(0);
-        this.U0 = new DecoderInputBuffer(2);
-        final rs1 v0 = new rs1();
-        this.V0 = v0;
-        this.W0 = (drs<n>)new drs();
-        this.X0 = new ArrayList<Long>();
-        this.Y0 = new MediaCodec$BufferInfo();
-        this.j1 = 1.0f;
+        this.U0 = new DecoderInputBuffer(0);
+        this.V0 = new DecoderInputBuffer(2);
+        final ns1 w0 = new ns1();
+        this.W0 = w0;
+        this.X0 = (urs<n>)new urs();
+        this.Y0 = new ArrayList<Long>();
+        this.Z0 = new MediaCodec$BufferInfo();
         this.k1 = 1.0f;
-        this.i1 = -9223372036854775807L;
-        this.Z0 = new long[10];
+        this.l1 = 1.0f;
+        this.j1 = -9223372036854775807L;
         this.a1 = new long[10];
         this.b1 = new long[10];
-        this.d2 = -9223372036854775807L;
+        this.c1 = new long[10];
         this.e2 = -9223372036854775807L;
-        ((DecoderInputBuffer)v0).s(0);
-        ((DecoderInputBuffer)v0).E0.order(ByteOrder.nativeOrder());
-        this.p1 = -1.0f;
-        this.t1 = 0;
-        this.P1 = 0;
-        this.G1 = -1;
-        this.H1 = -1;
-        this.F1 = -9223372036854775807L;
-        this.V1 = -9223372036854775807L;
-        this.W1 = -9223372036854775807L;
+        this.f2 = -9223372036854775807L;
+        w0.s(0);
+        w0.F0.order(ByteOrder.nativeOrder());
+        this.q1 = -1.0f;
+        this.u1 = 0;
         this.Q1 = 0;
+        this.H1 = -1;
+        this.I1 = -1;
+        this.G1 = -9223372036854775807L;
+        this.W1 = -9223372036854775807L;
+        this.X1 = -9223372036854775807L;
         this.R1 = 0;
+        this.S1 = 0;
     }
     
     public final boolean A0(final n n) throws ExoPlaybackException {
-        if (imw.a < 23) {
+        if (cnw.a < 23) {
             return true;
         }
-        if (this.l1 != null && this.R1 != 3) {
-            if (super.H0 != 0) {
-                final float k1 = this.k1;
-                final n[] j0 = super.J0;
-                Objects.requireNonNull(j0);
-                final float w = this.W(k1, j0);
-                final float p = this.p1;
-                if (p == w) {
+        if (this.m1 != null && this.S1 != 3) {
+            if (super.I0 != 0) {
+                final float l1 = this.l1;
+                final n[] k0 = super.K0;
+                Objects.requireNonNull(k0);
+                final float w = this.W(l1, k0);
+                final float q1 = this.q1;
+                if (q1 == w) {
                     return true;
                 }
                 if (w == -1.0f) {
                     this.O();
                     return false;
                 }
-                if (p == -1.0f && w <= this.R0) {
+                if (q1 == -1.0f && w <= this.S0) {
                     return true;
                 }
                 final Bundle parameters = new Bundle();
                 parameters.putFloat("operating-rate", w);
-                this.l1.setParameters(parameters);
-                this.p1 = w;
+                this.m1.setParameters(parameters);
+                this.q1 = w;
             }
         }
         return true;
@@ -177,159 +177,156 @@ public abstract class MediaCodecRenderer extends e
     
     public final void B0() throws ExoPlaybackException {
         try {
-            this.g1.setMediaDrmSession(this.Y(this.f1).b);
-            this.u0(this.f1);
-            this.Q1 = 0;
+            this.h1.setMediaDrmSession(this.Y(this.g1).b);
+            this.u0(this.g1);
             this.R1 = 0;
+            this.S1 = 0;
         }
         catch (final MediaCryptoException ex) {
-            throw this.A((Throwable)ex, this.c1, false, 6006);
+            throw this.A((Throwable)ex, this.d1, false, 6006);
         }
     }
     
-    @Override
     public void C() {
-        this.c1 = null;
-        this.d2 = -9223372036854775807L;
+        this.d1 = null;
         this.e2 = -9223372036854775807L;
-        this.f2 = 0;
+        this.f2 = -9223372036854775807L;
+        this.g2 = 0;
         this.T();
     }
     
     public final void C0(final long n) throws ExoPlaybackException {
-        n d1;
-        final n n2 = d1 = (n)this.W0.e(n);
+        n e1;
+        final n n2 = e1 = (n)this.X0.e(n);
         if (n2 == null) {
-            d1 = n2;
-            if (this.o1) {
-                final drs<n> w0 = this.W0;
-                synchronized (w0) {
+            e1 = n2;
+            if (this.p1) {
+                final urs<n> x0 = this.X0;
+                synchronized (x0) {
                     Object f;
-                    if (w0.d == 0) {
+                    if (x0.d == 0) {
                         f = null;
                     }
                     else {
-                        f = w0.f();
+                        f = x0.f();
                     }
-                    monitorexit(w0);
+                    monitorexit(x0);
                     final n n3 = (n)f;
                 }
             }
         }
         boolean b;
-        if (d1 != null) {
-            this.d1 = d1;
+        if (e1 != null) {
+            this.e1 = e1;
             b = true;
         }
         else {
             b = false;
         }
-        if (b || (this.o1 && this.d1 != null)) {
-            this.i0(this.d1, this.n1);
-            this.o1 = false;
+        if (b || (this.p1 && this.e1 != null)) {
+            this.i0(this.e1, this.o1);
+            this.p1 = false;
         }
     }
     
-    @Override
     public void E(final long n, final boolean b) throws ExoPlaybackException {
-        this.X1 = false;
         this.Y1 = false;
-        this.a2 = false;
-        if (this.L1) {
+        this.Z1 = false;
+        this.b2 = false;
+        if (this.M1) {
+            this.W0.q();
             this.V0.q();
-            this.U0.q();
-            this.M1 = false;
+            this.N1 = false;
         }
         else if (this.T()) {
             this.c0();
         }
-        final drs<n> w0 = this.W0;
-        synchronized (w0) {
-            final int d = w0.d;
-            monitorexit(w0);
+        final urs<n> x0 = this.X0;
+        synchronized (x0) {
+            final int d = x0.d;
+            monitorexit(x0);
             if (d > 0) {
-                this.Z1 = true;
+                this.a2 = true;
             }
-            this.W0.b();
-            final int f2 = this.f2;
-            if (f2 != 0) {
-                this.e2 = this.a1[f2 - 1];
-                this.d2 = this.Z0[f2 - 1];
-                this.f2 = 0;
+            this.X0.b();
+            final int g2 = this.g2;
+            if (g2 != 0) {
+                this.f2 = this.b1[g2 - 1];
+                this.e2 = this.a1[g2 - 1];
+                this.g2 = 0;
             }
         }
     }
     
-    @Override
-    public final void I(final n[] array, final long d2, final long e2) throws ExoPlaybackException {
-        final long e3 = this.e2;
+    public final void I(final n[] array, final long e2, final long f2) throws ExoPlaybackException {
+        final long f3 = this.f2;
         boolean b = true;
-        if (e3 == -9223372036854775807L) {
-            if (this.d2 != -9223372036854775807L) {
+        if (f3 == -9223372036854775807L) {
+            if (this.e2 != -9223372036854775807L) {
                 b = false;
             }
-            ri4.t(b);
-            this.d2 = d2;
+            omy.k(b);
             this.e2 = e2;
+            this.f2 = f2;
         }
         else {
-            final int f2 = this.f2;
-            final long[] a1 = this.a1;
-            if (f2 == a1.length) {
-                final long n = a1[f2 - 1];
+            final int g2 = this.g2;
+            final long[] b2 = this.b1;
+            if (g2 == b2.length) {
+                final long n = b2[g2 - 1];
                 final StringBuilder sb = new StringBuilder(65);
                 sb.append("Too many stream changes, so dropping offset: ");
                 sb.append(n);
                 Log.w("MediaCodecRenderer", sb.toString());
             }
             else {
-                this.f2 = f2 + 1;
+                this.g2 = g2 + 1;
             }
-            final long[] z0 = this.Z0;
-            final int f3 = this.f2;
-            final int n2 = f3 - 1;
-            z0[n2] = d2;
-            this.a1[n2] = e2;
-            this.b1[f3 - 1] = this.V1;
+            final long[] a1 = this.a1;
+            final int g3 = this.g2;
+            final int n2 = g3 - 1;
+            a1[n2] = e2;
+            this.b1[n2] = f2;
+            this.c1[g3 - 1] = this.W1;
         }
     }
     
     public final boolean K(final long n, final long n2) throws ExoPlaybackException {
-        ri4.t(this.Y1 ^ true);
-        if (this.V0.w()) {
-            final rs1 v0 = this.V0;
-            if (!this.n0(n, n2, null, ((DecoderInputBuffer)v0).E0, this.H1, 0, v0.L0, ((DecoderInputBuffer)v0).G0, ((vq2)v0).p(), ((vq2)this.V0).j(4), this.d1)) {
+        omy.k(this.Z1 ^ true);
+        if (this.W0.w()) {
+            final ns1 w0 = this.W0;
+            if (!this.n0(n, n2, null, w0.F0, this.I1, 0, w0.M0, w0.H0, ((mq2)w0).p(), ((mq2)this.W0).j(4), this.e1)) {
                 return false;
             }
-            this.j0(this.V0.K0);
-            this.V0.q();
+            this.j0(this.W0.L0);
+            this.W0.q();
         }
-        if (this.X1) {
-            this.Y1 = true;
+        if (this.Y1) {
+            this.Z1 = true;
             return false;
         }
-        if (this.M1) {
-            ri4.t(this.V0.v(this.U0));
-            this.M1 = false;
-        }
         if (this.N1) {
-            if (this.V0.w()) {
+            omy.k(this.W0.v(this.V0));
+            this.N1 = false;
+        }
+        if (this.O1) {
+            if (this.W0.w()) {
                 return true;
             }
             this.N();
-            this.N1 = false;
+            this.O1 = false;
             this.c0();
-            if (!this.L1) {
+            if (!this.M1) {
                 return false;
             }
         }
-        ri4.t(this.X1 ^ true);
-        final v53 b = this.B();
-        this.U0.q();
+        omy.k(this.Y1 ^ true);
+        final a8r b = this.B();
+        this.V0.q();
         while (true) {
             do {
-                this.U0.q();
-                final int j = this.J(b, this.U0, 0);
+                this.V0.q();
+                final int j = this.J(b, this.V0, 0);
                 if (j != -5) {
                     if (j != -4) {
                         if (j != -3) {
@@ -337,50 +334,50 @@ public abstract class MediaCodecRenderer extends e
                         }
                     }
                     else {
-                        if (!((vq2)this.U0).j(4)) {
-                            if (this.Z1) {
-                                final n c1 = this.c1;
-                                Objects.requireNonNull(c1);
-                                this.i0(this.d1 = c1, null);
-                                this.Z1 = false;
+                        if (!((mq2)this.V0).j(4)) {
+                            if (this.a2) {
+                                final n d1 = this.d1;
+                                Objects.requireNonNull(d1);
+                                this.i0(this.e1 = d1, null);
+                                this.a2 = false;
                             }
-                            this.U0.t();
+                            this.V0.t();
                             continue;
                         }
-                        this.X1 = true;
+                        this.Y1 = true;
                     }
                 }
                 else {
                     this.h0(b);
                 }
-                if (this.V0.w()) {
-                    ((DecoderInputBuffer)this.V0).t();
+                if (this.W0.w()) {
+                    this.W0.t();
                 }
-                return this.V0.w() || this.X1 || this.N1;
-            } while (this.V0.v(this.U0));
-            this.M1 = true;
+                return this.W0.w() || this.Y1 || this.O1;
+            } while (this.W0.v(this.V0));
+            this.N1 = true;
             continue;
         }
     }
     
-    public abstract rc8 L(final d p0, final n p1, final n p2);
+    public abstract cc8 L(final d p0, final n p1, final n p2);
     
     public MediaCodecDecoderException M(final Throwable t, final d d) {
         return new MediaCodecDecoderException(t, d);
     }
     
     public final void N() {
-        this.N1 = false;
+        this.O1 = false;
+        this.W0.q();
         this.V0.q();
-        this.U0.q();
+        this.N1 = false;
         this.M1 = false;
-        this.L1 = false;
     }
     
     public final void O() throws ExoPlaybackException {
-        if (this.S1) {
-            this.Q1 = 1;
-            this.R1 = 3;
+        if (this.T1) {
+            this.R1 = 1;
+            this.S1 = 3;
         }
         else {
             this.p0();
@@ -390,13 +387,13 @@ public abstract class MediaCodecRenderer extends e
     
     @TargetApi(23)
     public final boolean P() throws ExoPlaybackException {
-        if (this.S1) {
-            this.Q1 = 1;
-            if (this.v1 || this.x1) {
-                this.R1 = 3;
+        if (this.T1) {
+            this.R1 = 1;
+            if (this.w1 || this.y1) {
+                this.S1 = 3;
                 return false;
             }
-            this.R1 = 2;
+            this.S1 = 2;
         }
         else {
             this.B0();
@@ -406,126 +403,126 @@ public abstract class MediaCodecRenderer extends e
     
     public final boolean Q(final long n, final long n2) throws ExoPlaybackException {
         Label_0520: {
-            if (this.H1 < 0) {
-                int h1 = 0;
+            if (this.I1 < 0) {
+                int i1 = 0;
                 Label_0087: {
-                    if (this.y1 && this.T1) {
+                    if (this.z1 && this.U1) {
                         try {
-                            h1 = this.l1.j(this.Y0);
+                            i1 = this.m1.j(this.Z0);
                             break Label_0087;
                         }
                         catch (final IllegalStateException ex) {
                             this.m0();
-                            if (this.Y1) {
+                            if (this.Z1) {
                                 this.p0();
                             }
                             return false;
                         }
                     }
-                    h1 = this.l1.j(this.Y0);
+                    i1 = this.m1.j(this.Z0);
                 }
-                if (h1 < 0) {
-                    if (h1 == -2) {
-                        this.U1 = true;
-                        final MediaFormat outputFormat = this.l1.getOutputFormat();
-                        if (this.t1 != 0 && outputFormat.getInteger("width") == 32 && outputFormat.getInteger("height") == 32) {
-                            this.C1 = true;
+                if (i1 < 0) {
+                    if (i1 == -2) {
+                        this.V1 = true;
+                        final MediaFormat outputFormat = this.m1.getOutputFormat();
+                        if (this.u1 != 0 && outputFormat.getInteger("width") == 32 && outputFormat.getInteger("height") == 32) {
+                            this.D1 = true;
                         }
                         else {
-                            if (this.A1) {
+                            if (this.B1) {
                                 outputFormat.setInteger("channel-count", 1);
                             }
-                            this.n1 = outputFormat;
-                            this.o1 = true;
+                            this.o1 = outputFormat;
+                            this.p1 = true;
                         }
                         return true;
                     }
-                    if (this.D1 && (this.X1 || this.Q1 == 2)) {
+                    if (this.E1 && (this.Y1 || this.R1 == 2)) {
                         this.m0();
                     }
                     return false;
                 }
                 else {
-                    if (this.C1) {
-                        this.C1 = false;
-                        this.l1.releaseOutputBuffer(h1, false);
+                    if (this.D1) {
+                        this.D1 = false;
+                        this.m1.releaseOutputBuffer(i1, false);
                         return true;
                     }
-                    final MediaCodec$BufferInfo y0 = this.Y0;
-                    if (y0.size == 0 && (y0.flags & 0x4) != 0x0) {
+                    final MediaCodec$BufferInfo z0 = this.Z0;
+                    if (z0.size == 0 && (z0.flags & 0x4) != 0x0) {
                         this.m0();
                         return false;
                     }
-                    this.H1 = h1;
-                    final ByteBuffer b = this.l1.b(h1);
-                    if ((this.I1 = b) != null) {
-                        b.position(this.Y0.offset);
-                        final ByteBuffer i1 = this.I1;
-                        final MediaCodec$BufferInfo y2 = this.Y0;
-                        i1.limit(y2.offset + y2.size);
+                    this.I1 = i1;
+                    final ByteBuffer b = this.m1.b(i1);
+                    if ((this.J1 = b) != null) {
+                        b.position(this.Z0.offset);
+                        final ByteBuffer j1 = this.J1;
+                        final MediaCodec$BufferInfo z2 = this.Z0;
+                        j1.limit(z2.offset + z2.size);
                     }
-                    if (this.z1) {
-                        final MediaCodec$BufferInfo y3 = this.Y0;
-                        if (y3.presentationTimeUs == 0L && (y3.flags & 0x4) != 0x0) {
-                            final long v1 = this.V1;
-                            if (v1 != -9223372036854775807L) {
-                                y3.presentationTimeUs = v1;
+                    if (this.A1) {
+                        final MediaCodec$BufferInfo z3 = this.Z0;
+                        if (z3.presentationTimeUs == 0L && (z3.flags & 0x4) != 0x0) {
+                            final long w1 = this.W1;
+                            if (w1 != -9223372036854775807L) {
+                                z3.presentationTimeUs = w1;
                             }
                         }
                     }
-                    final long presentationTimeUs = this.Y0.presentationTimeUs;
+                    final long presentationTimeUs = this.Z0.presentationTimeUs;
                     while (true) {
-                        for (int size = this.X0.size(), j = 0; j < size; ++j) {
-                            if (this.X0.get(j) == presentationTimeUs) {
-                                this.X0.remove(j);
-                                final boolean j2 = true;
-                                this.J1 = j2;
-                                final long w1 = this.W1;
-                                final long presentationTimeUs2 = this.Y0.presentationTimeUs;
-                                this.K1 = (w1 == presentationTimeUs2);
+                        for (int size = this.Y0.size(), k = 0; k < size; ++k) {
+                            if (this.Y0.get(k) == presentationTimeUs) {
+                                this.Y0.remove(k);
+                                final boolean k2 = true;
+                                this.K1 = k2;
+                                final long x1 = this.X1;
+                                final long presentationTimeUs2 = this.Z0.presentationTimeUs;
+                                this.L1 = (x1 == presentationTimeUs2);
                                 this.C0(presentationTimeUs2);
                                 break Label_0520;
                             }
                         }
-                        final boolean j2 = false;
+                        final boolean k2 = false;
                         continue;
                     }
                 }
             }
         }
-        if (this.y1 && this.T1) {
+        if (this.z1 && this.U1) {
             try {
-                final c l1 = this.l1;
-                final ByteBuffer i2 = this.I1;
-                final int h2 = this.H1;
-                final MediaCodec$BufferInfo y4 = this.Y0;
-                final int flags = y4.flags;
-                final long presentationTimeUs3 = y4.presentationTimeUs;
-                final boolean j3 = this.J1;
-                final boolean k1 = this.K1;
-                final n d1 = this.d1;
+                final c m1 = this.m1;
+                final ByteBuffer j2 = this.J1;
+                final int i2 = this.I1;
+                final MediaCodec$BufferInfo z4 = this.Z0;
+                final int flags = z4.flags;
+                final long presentationTimeUs3 = z4.presentationTimeUs;
+                final boolean k3 = this.K1;
+                final boolean l1 = this.L1;
+                final n e1 = this.e1;
                 try {
-                    final boolean b2 = this.n0(n, n2, l1, i2, h2, flags, 1, presentationTimeUs3, j3, k1, d1);
+                    final boolean b2 = this.n0(n, n2, m1, j2, i2, flags, 1, presentationTimeUs3, k3, l1, e1);
                 }
                 catch (final IllegalStateException ex2) {}
             }
             catch (final IllegalStateException ex3) {}
             this.m0();
-            if (this.Y1) {
+            if (this.Z1) {
                 this.p0();
             }
             return false;
         }
-        final c l2 = this.l1;
-        final ByteBuffer i3 = this.I1;
-        final int h3 = this.H1;
-        final MediaCodec$BufferInfo y5 = this.Y0;
-        final boolean b2 = this.n0(n, n2, l2, i3, h3, y5.flags, 1, y5.presentationTimeUs, this.J1, this.K1, this.d1);
+        final c m2 = this.m1;
+        final ByteBuffer j3 = this.J1;
+        final int i3 = this.I1;
+        final MediaCodec$BufferInfo z5 = this.Z0;
+        final boolean b2 = this.n0(n, n2, m2, j3, i3, z5.flags, 1, z5.presentationTimeUs, this.K1, this.L1, this.e1);
         if (b2) {
-            this.j0(this.Y0.presentationTimeUs);
-            final boolean b3 = (this.Y0.flags & 0x4) != 0x0;
-            this.H1 = -1;
-            this.I1 = null;
+            this.j0(this.Z0.presentationTimeUs);
+            final boolean b3 = (this.Z0.flags & 0x4) != 0x0;
+            this.I1 = -1;
+            this.J1 = null;
             if (!b3) {
                 return true;
             }
@@ -535,124 +532,124 @@ public abstract class MediaCodecRenderer extends e
     }
     
     public final boolean R() throws ExoPlaybackException {
-        final c l1 = this.l1;
-        if (l1 != null && this.Q1 != 2) {
-            if (!this.X1) {
-                if (this.G1 < 0) {
-                    final int i = l1.i();
-                    if ((this.G1 = i) < 0) {
+        final c m1 = this.m1;
+        if (m1 != null && this.R1 != 2) {
+            if (!this.Y1) {
+                if (this.H1 < 0) {
+                    final int i = m1.i();
+                    if ((this.H1 = i) < 0) {
                         return false;
                     }
-                    this.T0.E0 = this.l1.a(i);
-                    this.T0.q();
+                    this.U0.F0 = this.m1.a(i);
+                    this.U0.q();
                 }
-                if (this.Q1 == 1) {
-                    if (!this.D1) {
-                        this.T1 = true;
-                        this.l1.k(this.G1, 0, 0L, 4);
+                if (this.R1 == 1) {
+                    if (!this.E1) {
+                        this.U1 = true;
+                        this.m1.k(this.H1, 0, 0L, 4);
                         this.t0();
                     }
-                    this.Q1 = 2;
+                    this.R1 = 2;
                     return false;
                 }
-                if (this.B1) {
-                    this.B1 = false;
-                    this.T0.E0.put(MediaCodecRenderer.g2);
-                    this.l1.k(this.G1, 38, 0L, 0);
+                if (this.C1) {
+                    this.C1 = false;
+                    this.U0.F0.put(MediaCodecRenderer.h2);
+                    this.m1.k(this.H1, 38, 0L, 0);
                     this.t0();
-                    return this.S1 = true;
+                    return this.T1 = true;
                 }
-                if (this.P1 == 1) {
-                    for (int j = 0; j < this.m1.P0.size(); ++j) {
-                        this.T0.E0.put((byte[])this.m1.P0.get(j));
+                if (this.Q1 == 1) {
+                    for (int j = 0; j < this.n1.Q0.size(); ++j) {
+                        this.U0.F0.put((byte[])this.n1.Q0.get(j));
                     }
-                    this.P1 = 2;
+                    this.Q1 = 2;
                 }
-                final int position = this.T0.E0.position();
-                final v53 b = this.B();
+                final int position = this.U0.F0.position();
+                final a8r b = this.B();
                 try {
-                    final int k = this.J(b, this.T0, 0);
+                    final int k = this.J(b, this.U0, 0);
                     if (this.j()) {
-                        this.W1 = this.V1;
+                        this.X1 = this.W1;
                     }
                     if (k == -3) {
                         return false;
                     }
                     if (k == -5) {
-                        if (this.P1 == 2) {
-                            this.T0.q();
-                            this.P1 = 1;
+                        if (this.Q1 == 2) {
+                            this.U0.q();
+                            this.Q1 = 1;
                         }
                         this.h0(b);
                         return true;
                     }
-                    if (((vq2)this.T0).j(4)) {
-                        if (this.P1 == 2) {
-                            this.T0.q();
-                            this.P1 = 1;
+                    if (((mq2)this.U0).j(4)) {
+                        if (this.Q1 == 2) {
+                            this.U0.q();
+                            this.Q1 = 1;
                         }
-                        this.X1 = true;
-                        if (!this.S1) {
+                        this.Y1 = true;
+                        if (!this.T1) {
                             this.m0();
                             return false;
                         }
                         try {
-                            if (!this.D1) {
-                                this.T1 = true;
-                                this.l1.k(this.G1, 0, 0L, 4);
+                            if (!this.E1) {
+                                this.U1 = true;
+                                this.m1.k(this.H1, 0, 0L, 4);
                                 this.t0();
                             }
                             return false;
                         }
                         catch (final MediaCodec$CryptoException ex) {
-                            throw this.A((Throwable)ex, this.c1, false, imw.u(ex.getErrorCode()));
+                            throw this.A((Throwable)ex, this.d1, false, cnw.u(ex.getErrorCode()));
                         }
                     }
-                    if (!this.S1 && !((vq2)this.T0).j(1)) {
-                        this.T0.q();
-                        if (this.P1 == 2) {
-                            this.P1 = 1;
+                    if (!this.T1 && !((mq2)this.U0).j(1)) {
+                        this.U0.q();
+                        if (this.Q1 == 2) {
+                            this.Q1 = 1;
                         }
                         return true;
                     }
-                    final boolean u = this.T0.u();
+                    final boolean u = this.U0.u();
                     if (u) {
-                        final r77 d0 = this.T0.D0;
-                        Objects.requireNonNull(d0);
+                        final v67 e0 = this.U0.E0;
+                        Objects.requireNonNull(e0);
                         if (position != 0) {
-                            if (d0.d == null) {
+                            if (e0.d == null) {
                                 final int[] array = { 0 };
-                                d0.d = array;
-                                d0.i.numBytesOfClearData = array;
+                                e0.d = array;
+                                e0.i.numBytesOfClearData = array;
                             }
-                            final int[] d2 = d0.d;
-                            d2[0] += position;
+                            final int[] d = e0.d;
+                            d[0] += position;
                         }
                     }
-                    if (this.u1 && !u) {
-                        final ByteBuffer e0 = this.T0.E0;
-                        final byte[] a = e6i.a;
-                        final int position2 = e0.position();
+                    if (this.v1 && !u) {
+                        final ByteBuffer f0 = this.U0.F0;
+                        final byte[] a = g6i.a;
+                        final int position2 = f0.position();
                         int n = 0;
                         int n2 = 0;
                         while (true) {
                             final int n3 = n + 1;
                             if (n3 >= position2) {
-                                e0.clear();
+                                f0.clear();
                                 break;
                             }
-                            final int n4 = e0.get(n) & 0xFF;
+                            final int n4 = f0.get(n) & 0xFF;
                             int n5;
                             if (n2 == 3) {
                                 n5 = n2;
                                 if (n4 == 1) {
                                     n5 = n2;
-                                    if ((e0.get(n3) & 0x1F) == 0x7) {
-                                        final ByteBuffer duplicate = e0.duplicate();
+                                    if ((f0.get(n3) & 0x1F) == 0x7) {
+                                        final ByteBuffer duplicate = f0.duplicate();
                                         duplicate.position(n - 3);
                                         duplicate.limit(position2);
-                                        e0.position(0);
-                                        e0.put(duplicate);
+                                        f0.position(0);
+                                        f0.put(duplicate);
                                         break;
                                     }
                                 }
@@ -669,78 +666,80 @@ public abstract class MediaCodecRenderer extends e
                             }
                             n = n3;
                         }
-                        if (this.T0.E0.position() == 0) {
+                        if (this.U0.F0.position() == 0) {
                             return true;
                         }
-                        this.u1 = false;
+                        this.v1 = false;
                     }
-                    final DecoderInputBuffer t0 = this.T0;
-                    long a2 = t0.G0;
-                    final w63 e2 = this.E1;
-                    long n6 = a2;
-                    if (e2 != null) {
-                        final n c1 = this.c1;
-                        if (e2.b == 0L) {
-                            e2.a = a2;
+                    final DecoderInputBuffer u2 = this.U0;
+                    final long h0 = u2.H0;
+                    final n63 f2 = this.F1;
+                    long n6 = h0;
+                    if (f2 != null) {
+                        final n d2 = this.d1;
+                        if (f2.b == 0L) {
+                            f2.a = h0;
                         }
-                        if (!e2.c) {
-                            final ByteBuffer e3 = t0.E0;
-                            Objects.requireNonNull(e3);
+                        if (f2.c) {
+                            n6 = h0;
+                        }
+                        else {
+                            final ByteBuffer f3 = u2.F0;
+                            Objects.requireNonNull(f3);
+                            int l = 0;
                             int n7 = 0;
-                            int n8 = 0;
-                            while (n7 < 4) {
-                                n8 = (n8 << 8 | (e3.get(n7) & 0xFF));
-                                ++n7;
+                            while (l < 4) {
+                                n7 = (n7 << 8 | (f3.get(l) & 0xFF));
+                                ++l;
                             }
-                            final int d3 = rrh.d(n8);
+                            final int d3 = wrh.d(n7);
                             if (d3 == -1) {
-                                e2.c = true;
-                                e2.b = 0L;
-                                e2.a = t0.G0;
+                                f2.c = true;
+                                f2.b = 0L;
+                                f2.a = u2.H0;
                                 Log.w("C2Mp3TimestampTracker", "MPEG audio header is invalid.");
-                                a2 = t0.G0;
+                                n6 = u2.H0;
                             }
                             else {
-                                a2 = e2.a((long)c1.b1);
-                                e2.b += d3;
+                                n6 = f2.a((long)d2.c1);
+                                f2.b += d3;
                             }
                         }
-                        final long v1 = this.V1;
-                        final w63 e4 = this.E1;
-                        final n c2 = this.c1;
-                        Objects.requireNonNull(e4);
-                        this.V1 = Math.max(v1, e4.a((long)c2.b1));
-                        n6 = a2;
+                        final long w1 = this.W1;
+                        final n63 f4 = this.F1;
+                        final n d4 = this.d1;
+                        Objects.requireNonNull(f4);
+                        this.W1 = Math.max(w1, f4.a((long)d4.c1));
                     }
-                    if (((vq2)this.T0).p()) {
-                        this.X0.add(n6);
+                    if (((mq2)this.U0).p()) {
+                        this.Y0.add(n6);
                     }
-                    if (this.Z1) {
-                        this.W0.a(n6, (Object)this.c1);
-                        this.Z1 = false;
+                    if (this.a2) {
+                        this.X0.a(n6, (Object)this.d1);
+                        this.a2 = false;
                     }
-                    this.V1 = Math.max(this.V1, n6);
-                    this.T0.t();
-                    if (((vq2)this.T0).m()) {
-                        this.a0(this.T0);
+                    this.W1 = Math.max(this.W1, n6);
+                    this.U0.t();
+                    if (((mq2)this.U0).m()) {
+                        this.a0(this.U0);
                     }
-                    this.l0(this.T0);
-                    Label_1077: {
+                    this.l0(this.U0);
+                    Label_1110: {
                         if (!u) {
-                            break Label_1077;
+                            break Label_1110;
                         }
                         try {
-                            this.l1.d(this.G1, this.T0.D0, n6);
+                            this.m1.d(this.H1, this.U0.E0, n6);
                             this.t0();
-                            this.S1 = true;
-                            this.P1 = 0;
-                            final oc8 c3 = this.c2;
-                            ++c3.c;
+                            this.T1 = true;
+                            this.Q1 = 0;
+                            final zb8 d5 = this.d2;
+                            ++d5.c;
                             return true;
-                            this.l1.k(this.G1, this.T0.E0.limit(), n6, 0);
+                            this.m1.k(this.H1, this.U0.F0.limit(), n6, 0);
                         }
                         catch (final MediaCodec$CryptoException ex2) {
-                            throw this.A((Throwable)ex2, this.c1, false, imw.u(ex2.getErrorCode()));
+                            throw this.A((Throwable)ex2, this.d1, false, cnw.u(ex2.getErrorCode()));
                         }
                     }
                 }
@@ -757,7 +756,7 @@ public abstract class MediaCodecRenderer extends e
     
     public final void S() {
         try {
-            this.l1.flush();
+            this.m1.flush();
         }
         finally {
             this.r0();
@@ -765,10 +764,10 @@ public abstract class MediaCodecRenderer extends e
     }
     
     public final boolean T() {
-        if (this.l1 == null) {
+        if (this.m1 == null) {
             return false;
         }
-        if (this.R1 != 3 && !this.v1 && (!this.w1 || this.U1) && (!this.x1 || !this.T1)) {
+        if (this.S1 != 3 && !this.w1 && (!this.x1 || this.V1) && (!this.y1 || !this.U1)) {
             this.S();
             return false;
         }
@@ -778,17 +777,17 @@ public abstract class MediaCodecRenderer extends e
     
     public final List<d> U(final boolean b) throws MediaCodecUtil$DecoderQueryException {
         List<d> list2;
-        final List<d> list = list2 = this.X(this.P0, this.c1, b);
+        final List<d> list = list2 = this.X(this.Q0, this.d1, b);
         if (list.isEmpty()) {
             list2 = list;
             if (b) {
-                final List<d> list3 = list2 = this.X(this.P0, this.c1, (boolean)(0 != 0));
+                final List<d> list3 = list2 = this.X(this.Q0, this.d1, (boolean)(0 != 0));
                 if (!list3.isEmpty()) {
-                    final String n0 = this.c1.N0;
+                    final String o0 = this.d1.O0;
                     final String value = String.valueOf(list3);
-                    final StringBuilder n2 = xpa.n(value.length() + dia.o(n0, 99), "Drm session requires secure decoder for ", n0, ", but no secure decoder available. Trying to proceed with ", value);
-                    n2.append(".");
-                    Log.w("MediaCodecRenderer", n2.toString());
+                    final StringBuilder d = x70.D(value.length() + wnj.f(o0, 99), "Drm session requires secure decoder for ", o0, ", but no secure decoder available. Trying to proceed with ", value);
+                    d.append(".");
+                    Log.w("MediaCodecRenderer", d.toString());
                     list2 = list3;
                 }
             }
@@ -804,16 +803,16 @@ public abstract class MediaCodecRenderer extends e
     
     public abstract List<d> X(final com.google.android.exoplayer2.mediacodec.e p0, final n p1, final boolean p2) throws MediaCodecUtil$DecoderQueryException;
     
-    public final lqb Y(final DrmSession drmSession) throws ExoPlaybackException {
-        final q77 e = drmSession.e();
-        if (e != null && !(e instanceof lqb)) {
+    public final hpb Y(final DrmSession drmSession) throws ExoPlaybackException {
+        final u67 e = drmSession.e();
+        if (e != null && !(e instanceof hpb)) {
             final String value = String.valueOf(e);
             final StringBuilder sb = new StringBuilder(value.length() + 43);
             sb.append("Expecting FrameworkCryptoConfig but found: ");
             sb.append(value);
-            throw this.A(new IllegalArgumentException(sb.toString()), this.c1, false, 6001);
+            throw this.A((Throwable)new IllegalArgumentException(sb.toString()), this.d1, false, 6001);
         }
-        return (lqb)e;
+        return (hpb)e;
     }
     
     public abstract c$a Z(final d p0, final n p1, final MediaCrypto p2, final float p3);
@@ -821,30 +820,29 @@ public abstract class MediaCodecRenderer extends e
     public void a0(final DecoderInputBuffer decoderInputBuffer) throws ExoPlaybackException {
     }
     
-    @Override
     public boolean b() {
-        final n c1 = this.c1;
+        final n d1 = this.d1;
         final boolean b = true;
-        if (c1 != null) {
+        if (d1 != null) {
             boolean b2;
             if (this.j()) {
-                b2 = super.M0;
+                b2 = super.N0;
             }
             else {
-                final bro i0 = super.I0;
-                Objects.requireNonNull(i0);
-                b2 = i0.b();
+                final tro j0 = super.J0;
+                Objects.requireNonNull(j0);
+                b2 = j0.b();
             }
             boolean b3 = b;
             if (b2) {
                 return b3;
             }
-            final boolean b4 = this.H1 >= 0;
+            final boolean b4 = this.I1 >= 0;
             b3 = b;
             if (b4) {
                 return b3;
             }
-            if (this.F1 != -9223372036854775807L && SystemClock.elapsedRealtime() < this.F1) {
+            if (this.G1 != -9223372036854775807L && SystemClock.elapsedRealtime() < this.G1) {
                 b3 = b;
                 return b3;
             }
@@ -852,29 +850,29 @@ public abstract class MediaCodecRenderer extends e
         return false;
     }
     
-    public final void b0(final d s1, final MediaCrypto mediaCrypto) throws Exception {
-        final String a = s1.a;
-        final int a2 = imw.a;
+    public final void b0(final d t1, final MediaCrypto mediaCrypto) throws Exception {
+        final String a = t1.a;
+        final int a2 = cnw.a;
         final float n = -1.0f;
         float w;
         if (a2 < 23) {
             w = -1.0f;
         }
         else {
-            final float k1 = this.k1;
-            final n[] j0 = super.J0;
-            Objects.requireNonNull(j0);
-            w = this.W(k1, j0);
+            final float l1 = this.l1;
+            final n[] k0 = super.K0;
+            Objects.requireNonNull(k0);
+            w = this.W(l1, k0);
         }
-        if (w <= this.R0) {
+        if (w <= this.S0) {
             w = n;
         }
         final long elapsedRealtime = SystemClock.elapsedRealtime();
-        final c$a z = this.Z(s1, this.c1, mediaCrypto, w);
+        final c$a z = this.Z(t1, this.d1, mediaCrypto, w);
         if (a2 >= 31) {
-            final hnk g0 = super.G0;
-            Objects.requireNonNull(g0);
-            MediaCodecRenderer.MediaCodecRenderer$a.a(z, g0);
+            final onk h0 = super.H0;
+            Objects.requireNonNull(h0);
+            MediaCodecRenderer.MediaCodecRenderer$a.a(z, h0);
         }
         try {
             final String value = String.valueOf(a);
@@ -885,153 +883,153 @@ public abstract class MediaCodecRenderer extends e
             else {
                 concat = new String("createCodec:");
             }
-            nkz.h(concat);
-            this.l1 = this.O0.a(z);
-            nkz.l();
+            blz.e(concat);
+            this.m1 = this.P0.a(z);
+            blz.o();
             final long elapsedRealtime2 = SystemClock.elapsedRealtime();
-            this.s1 = s1;
-            this.p1 = w;
-            this.m1 = this.c1;
-            int t1 = 0;
-            Label_0342: {
+            this.t1 = t1;
+            this.q1 = w;
+            this.n1 = this.d1;
+            int u1 = 0;
+            Label_0339: {
                 if (a2 <= 25 && "OMX.Exynos.avc.dec.secure".equals(a)) {
-                    final String d = imw.d;
+                    final String d = cnw.d;
                     if (d.startsWith("SM-T585") || d.startsWith("SM-A510") || d.startsWith("SM-A520") || d.startsWith("SM-J700")) {
-                        t1 = 2;
-                        break Label_0342;
+                        u1 = 2;
+                        break Label_0339;
                     }
                 }
                 if (a2 < 24 && ("OMX.Nvidia.h264.decode".equals(a) || "OMX.Nvidia.h264.decode.secure".equals(a))) {
-                    final String b = imw.b;
+                    final String b = cnw.b;
                     if ("flounder".equals(b) || "flounder_lte".equals(b) || "grouper".equals(b) || "tilapia".equals(b)) {
-                        t1 = 1;
-                        break Label_0342;
+                        u1 = 1;
+                        break Label_0339;
                     }
                 }
-                t1 = 0;
+                u1 = 0;
             }
-            this.t1 = t1;
-            final n m1 = this.m1;
-            this.u1 = (a2 < 21 && m1.P0.isEmpty() && "OMX.MTK.VIDEO.DECODER.AVC".equals(a));
-            boolean v1 = false;
-            Label_0482: {
-                Label_0479: {
+            this.u1 = u1;
+            final n n2 = this.n1;
+            this.v1 = (a2 < 21 && n2.Q0.isEmpty() && "OMX.MTK.VIDEO.DECODER.AVC".equals(a));
+            boolean w2 = false;
+            Label_0484: {
+                Label_0481: {
                     if (a2 >= 18 && (a2 != 18 || (!"OMX.SEC.avc.dec".equals(a) && !"OMX.SEC.avc.dec.secure".equals(a)))) {
-                        if (a2 == 19 && imw.d.startsWith("SM-G800")) {
+                        if (a2 == 19 && cnw.d.startsWith("SM-G800")) {
                             if ("OMX.Exynos.avc.dec".equals(a)) {
-                                break Label_0479;
+                                break Label_0481;
                             }
                             if ("OMX.Exynos.avc.dec.secure".equals(a)) {
-                                break Label_0479;
+                                break Label_0481;
                             }
                         }
-                        v1 = false;
-                        break Label_0482;
+                        w2 = false;
+                        break Label_0484;
                     }
                 }
-                v1 = true;
+                w2 = true;
             }
-            this.v1 = v1;
-            this.w1 = (a2 == 29 && "c2.android.aac.decoder".equals(a));
-            boolean x1 = false;
-            Label_0597: {
-                Label_0588: {
+            this.w1 = w2;
+            this.x1 = (a2 == 29 && "c2.android.aac.decoder".equals(a));
+            boolean y1 = false;
+            Label_0603: {
+                Label_0594: {
                     if (a2 > 23 || !"OMX.google.vorbis.decoder".equals(a)) {
                         if (a2 <= 19) {
-                            final String b2 = imw.b;
+                            final String b2 = cnw.b;
                             if (("hb2000".equals(b2) || "stvm8".equals(b2)) && ("OMX.amlogic.avc.decoder.awesome".equals(a) || "OMX.amlogic.avc.decoder.awesome.secure".equals(a))) {
-                                break Label_0588;
+                                break Label_0594;
                             }
                         }
-                        x1 = false;
-                        break Label_0597;
+                        y1 = false;
+                        break Label_0603;
                     }
                 }
-                x1 = true;
+                y1 = true;
             }
-            this.x1 = x1;
-            this.y1 = (a2 == 21 && "OMX.google.aac.decoder".equals(a));
-            boolean z2 = false;
-            Label_0737: {
-                if (a2 < 21 && "OMX.SEC.mp3.dec".equals(a) && "samsung".equals(imw.c)) {
-                    final String b3 = imw.b;
+            this.y1 = y1;
+            this.z1 = (a2 == 21 && "OMX.google.aac.decoder".equals(a));
+            boolean a3 = false;
+            Label_0745: {
+                if (a2 < 21 && "OMX.SEC.mp3.dec".equals(a) && "samsung".equals(cnw.c)) {
+                    final String b3 = cnw.b;
                     if (b3.startsWith("baffin") || b3.startsWith("grand") || b3.startsWith("fortuna") || b3.startsWith("gprimelte") || b3.startsWith("j2y18lte") || b3.startsWith("ms01")) {
-                        z2 = true;
-                        break Label_0737;
+                        a3 = true;
+                        break Label_0745;
                     }
                 }
-                z2 = false;
+                a3 = false;
             }
-            this.z1 = z2;
-            final n m2 = this.m1;
-            this.A1 = (a2 <= 18 && m2.a1 == 1 && "OMX.MTK.AUDIO.DECODER.MP3".equals(a));
-            final String a3 = s1.a;
-            this.D1 = ((a2 <= 25 && "OMX.rk.video_decoder.avc".equals(a3)) || (a2 <= 17 && "OMX.allwinner.video.decoder.avc".equals(a3)) || (a2 <= 29 && ("OMX.broadcom.video_decoder.tunnel".equals(a3) || "OMX.broadcom.video_decoder.tunnel.secure".equals(a3))) || ("Amazon".equals(imw.c) && "AFTS".equals(imw.d) && s1.f) || this.V());
-            this.l1.g();
-            if ("c2.android.mp3.decoder".equals(s1.a)) {
-                this.E1 = new w63();
+            this.A1 = a3;
+            final n n3 = this.n1;
+            this.B1 = (a2 <= 18 && n3.b1 == 1 && "OMX.MTK.AUDIO.DECODER.MP3".equals(a));
+            final String a4 = t1.a;
+            this.E1 = ((a2 <= 25 && "OMX.rk.video_decoder.avc".equals(a4)) || (a2 <= 17 && "OMX.allwinner.video.decoder.avc".equals(a4)) || (a2 <= 29 && ("OMX.broadcom.video_decoder.tunnel".equals(a4) || "OMX.broadcom.video_decoder.tunnel.secure".equals(a4))) || ("Amazon".equals(cnw.c) && "AFTS".equals(cnw.d) && t1.f) || this.V());
+            this.m1.g();
+            if ("c2.android.mp3.decoder".equals(t1.a)) {
+                this.F1 = new n63();
             }
-            if (super.H0 == 2) {
-                this.F1 = SystemClock.elapsedRealtime() + 1000L;
+            if (super.I0 == 2) {
+                this.G1 = SystemClock.elapsedRealtime() + 1000L;
             }
-            final oc8 c2 = this.c2;
-            ++c2.a;
+            final zb8 d2 = this.d2;
+            ++d2.a;
             this.f0(a, elapsedRealtime2, elapsedRealtime2 - elapsedRealtime);
         }
         finally {
-            nkz.l();
+            blz.o();
         }
     }
     
     public final void c0() throws ExoPlaybackException {
-        if (this.l1 == null && !this.L1) {
-            final n c1 = this.c1;
-            if (c1 != null) {
-                if (this.f1 == null && this.y0(c1)) {
-                    final n c2 = this.c1;
+        if (this.m1 == null && !this.M1) {
+            final n d1 = this.d1;
+            if (d1 != null) {
+                if (this.g1 == null && this.y0(d1)) {
+                    final n d2 = this.d1;
                     this.N();
-                    final String n0 = c2.N0;
-                    if (!"audio/mp4a-latm".equals(n0) && !"audio/mpeg".equals(n0) && !"audio/opus".equals(n0)) {
-                        final rs1 v0 = this.V0;
-                        Objects.requireNonNull(v0);
-                        v0.M0 = 1;
+                    final String o0 = d2.O0;
+                    if (!"audio/mp4a-latm".equals(o0) && !"audio/mpeg".equals(o0) && !"audio/opus".equals(o0)) {
+                        final ns1 w0 = this.W0;
+                        Objects.requireNonNull(w0);
+                        w0.N0 = 1;
                     }
                     else {
-                        final rs1 v2 = this.V0;
-                        Objects.requireNonNull(v2);
-                        v2.M0 = 32;
+                        final ns1 w2 = this.W0;
+                        Objects.requireNonNull(w2);
+                        w2.N0 = 32;
                     }
-                    this.L1 = true;
+                    this.M1 = true;
                     return;
                 }
-                this.u0(this.f1);
-                final String n2 = this.c1.N0;
-                final DrmSession e1 = this.e1;
-                if (e1 != null) {
-                    if (this.g1 == null) {
-                        final lqb y = this.Y(e1);
+                this.u0(this.g1);
+                final String o2 = this.d1.O0;
+                final DrmSession f1 = this.f1;
+                if (f1 != null) {
+                    if (this.h1 == null) {
+                        final hpb y = this.Y(f1);
                         if (y == null) {
-                            if (this.e1.K() == null) {
+                            if (this.f1.J() == null) {
                                 return;
                             }
                         }
                         else {
                             try {
-                                final MediaCrypto g1 = new MediaCrypto(y.a, y.b);
-                                this.g1 = g1;
-                                this.h1 = (!y.c && g1.requiresSecureDecoderComponent(n2));
+                                final MediaCrypto h1 = new MediaCrypto(y.a, y.b);
+                                this.h1 = h1;
+                                this.i1 = (!y.c && h1.requiresSecureDecoderComponent(o2));
                             }
                             catch (final MediaCryptoException ex) {
-                                throw this.A((Throwable)ex, this.c1, false, 6006);
+                                throw this.A((Throwable)ex, this.d1, false, 6006);
                             }
                         }
                     }
-                    if (lqb.d) {
-                        final int state = this.e1.getState();
+                    if (hpb.d) {
+                        final int state = this.f1.getState();
                         if (state == 1) {
-                            final DrmSession$DrmSessionException k = this.e1.K();
-                            Objects.requireNonNull(k);
-                            throw this.A((Throwable)k, this.c1, false, k.C0);
+                            final DrmSession$DrmSessionException j = this.f1.J();
+                            Objects.requireNonNull(j);
+                            throw this.A((Throwable)j, this.d1, false, j.D0);
                         }
                         if (state != 4) {
                             return;
@@ -1039,37 +1037,37 @@ public abstract class MediaCodecRenderer extends e
                     }
                 }
                 try {
-                    this.d0(this.g1, this.h1);
+                    this.d0(this.h1, this.i1);
                 }
                 catch (final MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException ex2) {
-                    throw this.A((Throwable)ex2, this.c1, false, 4001);
+                    throw this.A((Throwable)ex2, this.d1, false, 4001);
                 }
             }
         }
     }
     
     public final void d0(final MediaCrypto mediaCrypto, final boolean b) throws MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException {
-        if (this.q1 == null) {
+        if (this.r1 == null) {
             try {
                 final List<d> u = this.U(b);
-                final ArrayDeque<Object> q1 = new ArrayDeque<Object>();
-                this.q1 = (ArrayDeque<d>)q1;
-                if (this.Q0) {
-                    q1.addAll(u);
+                final ArrayDeque<Object> r1 = new ArrayDeque<Object>();
+                this.r1 = (ArrayDeque<d>)r1;
+                if (this.R0) {
+                    r1.addAll(u);
                 }
                 else if (!u.isEmpty()) {
-                    this.q1.add((d)u.get(0));
+                    this.r1.add((d)u.get(0));
                 }
-                this.r1 = null;
+                this.s1 = null;
             }
             catch (final MediaCodecUtil$DecoderQueryException ex) {
-                throw new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(this.c1, (Throwable)ex, b, -49998);
+                throw new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(this.d1, (Throwable)ex, b, -49998);
             }
         }
-        if (!this.q1.isEmpty()) {
-            final d d = this.q1.peekFirst();
-            while (this.l1 == null) {
-                final d d2 = this.q1.peekFirst();
+        if (!this.r1.isEmpty()) {
+            final d d = this.r1.peekFirst();
+            while (this.m1 == null) {
+                final d d2 = this.r1.peekFirst();
                 if (!this.x0(d2)) {
                     return;
                 }
@@ -1078,9 +1076,9 @@ public abstract class MediaCodecRenderer extends e
                     continue;
                 }
                 catch (final Exception ex2) {
-                    Label_0193: {
+                    Label_0199: {
                         if (d2 != d) {
-                            break Label_0193;
+                            break Label_0199;
                         }
                         try {
                             Log.w("MediaCodecRenderer", "Preferred decoder instantiation failed. Sleeping for 50ms then retrying.");
@@ -1094,53 +1092,52 @@ public abstract class MediaCodecRenderer extends e
                             final StringBuilder sb = new StringBuilder(value.length() + 30);
                             sb.append("Failed to initialize decoder: ");
                             sb.append(value);
-                            dml.F0("MediaCodecRenderer", sb.toString(), (Throwable)ex3);
-                            this.q1.removeFirst();
-                            final n c1 = this.c1;
+                            g63.f0("MediaCodecRenderer", sb.toString(), (Throwable)ex3);
+                            this.r1.removeFirst();
+                            final n d3 = this.d1;
                             final String a = d2.a;
-                            final String value2 = String.valueOf(c1);
-                            final StringBuilder sb2 = new StringBuilder(value2.length() + dia.o(a, 23));
+                            final String value2 = String.valueOf(d3);
+                            final StringBuilder sb2 = new StringBuilder(value2.length() + wnj.f(a, 23));
                             sb2.append("Decoder init failed: ");
                             sb2.append(a);
                             sb2.append(", ");
                             sb2.append(value2);
                             final String string = sb2.toString();
-                            final String n0 = c1.N0;
+                            final String o0 = d3.O0;
                             String diagnosticInfo;
-                            if (imw.a >= 21 && ex3 instanceof MediaCodec$CodecException) {
+                            if (cnw.a >= 21 && ex3 instanceof MediaCodec$CodecException) {
                                 diagnosticInfo = ((MediaCodec$CodecException)ex3).getDiagnosticInfo();
                             }
                             else {
                                 diagnosticInfo = null;
                             }
-                            final MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException r1 = new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(string, (Throwable)ex3, n0, b, d2, diagnosticInfo);
-                            this.e0((Exception)r1);
-                            final MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException r2 = this.r1;
-                            if (r2 == null) {
-                                this.r1 = r1;
+                            final MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException s1 = new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(string, (Throwable)ex3, o0, b, d2, diagnosticInfo);
+                            this.e0((Exception)s1);
+                            final MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException s2 = this.s1;
+                            if (s2 == null) {
+                                this.s1 = s1;
                             }
                             else {
-                                this.r1 = new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(((Throwable)r2).getMessage(), ((Throwable)r2).getCause(), r2.C0, r2.D0, r2.E0, r2.F0);
+                                this.s1 = new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(((Throwable)s2).getMessage(), ((Throwable)s2).getCause(), s2.D0, s2.E0, s2.F0, s2.G0);
                             }
-                            if (!this.q1.isEmpty()) {
+                            if (!this.r1.isEmpty()) {
                                 continue;
                             }
-                            throw this.r1;
+                            throw this.s1;
                         }
                     }
                 }
                 break;
             }
-            this.q1 = null;
+            this.r1 = null;
             return;
         }
-        throw new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(this.c1, (Throwable)null, b, -49999);
+        throw new MediaCodecRenderer.MediaCodecRenderer$DecoderInitializationException(this.d1, (Throwable)null, b, -49999);
     }
     
-    @Override
     public final int e(final n n) throws ExoPlaybackException {
         try {
-            return this.z0(this.P0, n);
+            return this.z0(this.Q0, n);
         }
         catch (final MediaCodecUtil$DecoderQueryException ex) {
             throw this.z((Throwable)ex, n);
@@ -1149,55 +1146,54 @@ public abstract class MediaCodecRenderer extends e
     
     public abstract void e0(final Exception p0);
     
-    @Override
     public boolean f() {
-        return this.Y1;
+        return this.Z1;
     }
     
     public abstract void f0(final String p0, final long p1, final long p2);
     
     public abstract void g0(final String p0);
     
-    public rc8 h0(final v53 v53) throws ExoPlaybackException {
+    public cc8 h0(final a8r a8r) throws ExoPlaybackException {
         final boolean b = true;
         final boolean b2 = true;
-        this.Z1 = true;
-        final n n = (n)v53.E0;
+        this.a2 = true;
+        final n n = (n)a8r.F0;
         Objects.requireNonNull(n);
-        if (n.N0 == null) {
-            throw this.A(new IllegalArgumentException(), n, false, 4005);
+        if (n.O0 == null) {
+            throw this.A((Throwable)new IllegalArgumentException(), n, false, 4005);
         }
-        this.v0((DrmSession)v53.D0);
-        this.c1 = n;
-        if (this.L1) {
-            this.N1 = true;
+        this.v0((DrmSession)a8r.E0);
+        this.d1 = n;
+        if (this.M1) {
+            this.O1 = true;
             return null;
         }
-        final c l1 = this.l1;
-        if (l1 == null) {
-            this.q1 = null;
+        final c m1 = this.m1;
+        if (m1 == null) {
+            this.r1 = null;
             this.c0();
             return null;
         }
-        final d s1 = this.s1;
-        final n m1 = this.m1;
-        final DrmSession e1 = this.e1;
+        final d t1 = this.t1;
+        final n n2 = this.n1;
         final DrmSession f1 = this.f1;
+        final DrmSession g1 = this.g1;
         boolean b4 = false;
         Label_0242: {
-            Label_0114: {
-                if (e1 != f1) {
-                    if (f1 != null) {
-                        if (e1 != null) {
-                            if (imw.a >= 23) {
-                                final UUID e2 = x63.e;
-                                if (!e2.equals(e1.c())) {
-                                    if (!e2.equals(f1.c())) {
-                                        final lqb y = this.Y(f1);
+            Label_0116: {
+                if (f1 != g1) {
+                    if (g1 != null) {
+                        if (f1 != null) {
+                            if (cnw.a >= 23) {
+                                final UUID e = o63.e;
+                                if (!e.equals(f1.c())) {
+                                    if (!e.equals(g1.c())) {
+                                        final hpb y = this.Y(g1);
                                         if (y != null) {
-                                            final boolean b3 = !y.c && f1.f(n.N0);
-                                            if (s1.f || !b3) {
-                                                break Label_0114;
+                                            final boolean b3 = !y.c && g1.f(n.O0);
+                                            if (t1.f || !b3) {
+                                                break Label_0116;
                                             }
                                         }
                                     }
@@ -1213,106 +1209,106 @@ public abstract class MediaCodecRenderer extends e
         }
         if (b4) {
             this.O();
-            return new rc8(s1.a, m1, n, 0, 128);
+            return new cc8(t1.a, n2, n, 0, 128);
         }
-        final boolean b5 = this.f1 != this.e1;
-        ri4.t(!b5 || imw.a >= 23);
-        final rc8 i = this.L(s1, m1, n);
-        final int d = i.d;
-        int n3 = 0;
-        Label_0613: {
-            Label_0610: {
+        final boolean b5 = this.g1 != this.f1;
+        omy.k(!b5 || cnw.a >= 23);
+        final cc8 l = this.L(t1, n2, n);
+        final int d = l.d;
+        int n4 = 0;
+        Label_0597: {
+            Label_0595: {
                 if (d != 0) {
-                    Label_0600: {
+                    Label_0586: {
                         if (d != 1) {
                             if (d != 2) {
                                 if (d != 3) {
                                     throw new IllegalStateException();
                                 }
                                 if (this.A0(n)) {
-                                    this.m1 = n;
+                                    this.n1 = n;
                                     if (b5 && !this.P()) {
-                                        break Label_0600;
+                                        break Label_0586;
                                     }
-                                    break Label_0610;
+                                    break Label_0595;
                                 }
                             }
                             else if (this.A0(n)) {
-                                this.O1 = true;
-                                this.P1 = 1;
-                                final int t1 = this.t1;
-                                boolean b6 = b2;
-                                if (t1 != 2) {
-                                    b6 = (t1 == 1 && n.S0 == m1.S0 && n.T0 == m1.T0 && b2);
+                                this.P1 = true;
+                                this.Q1 = 1;
+                                final int u1 = this.u1;
+                                boolean c1 = b2;
+                                if (u1 != 2) {
+                                    c1 = (u1 == 1 && n.T0 == n2.T0 && n.U0 == n2.U0 && b2);
                                 }
-                                this.B1 = b6;
-                                this.m1 = n;
+                                this.C1 = c1;
+                                this.n1 = n;
                                 if (b5 && !this.P()) {
-                                    break Label_0600;
+                                    break Label_0586;
                                 }
-                                break Label_0610;
+                                break Label_0595;
                             }
                         }
                         else if (this.A0(n)) {
-                            this.m1 = n;
+                            this.n1 = n;
                             if (b5) {
                                 if (!this.P()) {
-                                    break Label_0600;
+                                    break Label_0586;
                                 }
-                                break Label_0610;
+                                break Label_0595;
                             }
                             else {
-                                int n2 = b ? 1 : 0;
-                                if (this.S1) {
-                                    this.Q1 = 1;
-                                    if (!this.v1 && !this.x1) {
-                                        this.R1 = 1;
-                                        n2 = (b ? 1 : 0);
+                                int n3 = b ? 1 : 0;
+                                if (this.T1) {
+                                    this.R1 = 1;
+                                    if (!this.w1 && !this.y1) {
+                                        this.S1 = 1;
+                                        n3 = (b ? 1 : 0);
                                     }
                                     else {
-                                        this.R1 = 3;
-                                        n2 = 0;
+                                        this.S1 = 3;
+                                        n3 = 0;
                                     }
                                 }
-                                if (n2 == 0) {
-                                    break Label_0600;
+                                if (n3 == 0) {
+                                    break Label_0586;
                                 }
-                                break Label_0610;
+                                break Label_0595;
                             }
                         }
-                        n3 = 16;
-                        break Label_0613;
+                        n4 = 16;
+                        break Label_0597;
                     }
-                    n3 = 2;
-                    break Label_0613;
+                    n4 = 2;
+                    break Label_0597;
                 }
                 this.O();
             }
-            n3 = 0;
+            n4 = 0;
         }
-        if (i.d != 0 && (this.l1 != l1 || this.R1 == 3)) {
-            return new rc8(s1.a, m1, n, 0, n3);
+        if (l.d != 0 && (this.m1 != m1 || this.S1 == 3)) {
+            return new cc8(t1.a, n2, n, 0, n4);
         }
-        return i;
+        return l;
     }
     
     public abstract void i0(final n p0, final MediaFormat p1) throws ExoPlaybackException;
     
     public void j0(final long n) {
         while (true) {
-            int f2 = this.f2;
-            if (f2 == 0 || n < this.b1[0]) {
+            int g2 = this.g2;
+            if (g2 == 0 || n < this.c1[0]) {
                 break;
             }
-            final long[] z0 = this.Z0;
-            this.d2 = z0[0];
-            this.e2 = this.a1[0];
-            --f2;
-            System.arraycopy(z0, 1, z0, 0, this.f2 = f2);
             final long[] a1 = this.a1;
-            System.arraycopy(a1, 1, a1, 0, this.f2);
+            this.e2 = a1[0];
+            this.f2 = this.b1[0];
+            --g2;
+            System.arraycopy(a1, 1, a1, 0, this.g2 = g2);
             final long[] b1 = this.b1;
-            System.arraycopy(b1, 1, b1, 0, this.f2);
+            System.arraycopy(b1, 1, b1, 0, this.g2);
+            final long[] c1 = this.c1;
+            System.arraycopy(c1, 1, c1, 0, this.g2);
             this.k0();
         }
     }
@@ -1323,11 +1319,11 @@ public abstract class MediaCodecRenderer extends e
     
     @TargetApi(23)
     public final void m0() throws ExoPlaybackException {
-        final int r1 = this.R1;
-        if (r1 != 1) {
-            if (r1 != 2) {
-                if (r1 != 3) {
-                    this.Y1 = true;
+        final int s1 = this.S1;
+        if (s1 != 1) {
+            if (s1 != 2) {
+                if (s1 != 3) {
+                    this.Z1 = true;
                     this.q0();
                 }
                 else {
@@ -1348,15 +1344,15 @@ public abstract class MediaCodecRenderer extends e
     public abstract boolean n0(final long p0, final long p1, final c p2, final ByteBuffer p3, final int p4, final int p5, final int p6, final long p7, final boolean p8, final boolean p9, final n p10) throws ExoPlaybackException;
     
     public final boolean o0(int j) throws ExoPlaybackException {
-        final v53 b = this.B();
-        this.S0.q();
-        j = this.J(b, this.S0, j | 0x4);
+        final a8r b = this.B();
+        this.T0.q();
+        j = this.J(b, this.T0, j | 0x4);
         if (j == -5) {
             this.h0(b);
             return true;
         }
-        if (j == -4 && ((vq2)this.S0).j(4)) {
-            this.X1 = true;
+        if (j == -4 && ((mq2)this.T0).j(4)) {
+            this.Y1 = true;
             this.m0();
         }
         return false;
@@ -1364,39 +1360,39 @@ public abstract class MediaCodecRenderer extends e
     
     public final void p0() {
         try {
-            final c l1 = this.l1;
-            if (l1 != null) {
-                l1.release();
-                final oc8 c2 = this.c2;
-                ++c2.b;
-                this.g0(this.s1.a);
+            final c m1 = this.m1;
+            if (m1 != null) {
+                m1.release();
+                final zb8 d2 = this.d2;
+                ++d2.b;
+                this.g0(this.t1.a);
             }
-            this.l1 = null;
+            this.m1 = null;
             try {
-                final MediaCrypto g1 = this.g1;
-                if (g1 != null) {
-                    g1.release();
+                final MediaCrypto h1 = this.h1;
+                if (h1 != null) {
+                    h1.release();
                 }
             }
             finally {
-                this.g1 = null;
+                this.h1 = null;
                 this.u0(null);
                 this.s0();
             }
         }
         finally {
-            this.l1 = null;
+            this.m1 = null;
             try {
-                final MediaCrypto g2 = this.g1;
-                if (g2 != null) {
-                    g2.release();
+                final MediaCrypto h2 = this.h1;
+                if (h2 != null) {
+                    h2.release();
                 }
-                this.g1 = null;
+                this.h1 = null;
                 this.u0(null);
                 this.s0();
             }
             finally {
-                this.g1 = null;
+                this.h1 = null;
                 this.u0(null);
                 this.s0();
             }
@@ -1408,164 +1404,70 @@ public abstract class MediaCodecRenderer extends e
     
     public void r0() {
         this.t0();
-        this.H1 = -1;
-        this.I1 = null;
-        this.F1 = -9223372036854775807L;
+        this.I1 = -1;
+        this.J1 = null;
+        this.G1 = -9223372036854775807L;
+        this.U1 = false;
         this.T1 = false;
-        this.S1 = false;
-        this.B1 = false;
         this.C1 = false;
-        this.J1 = false;
+        this.D1 = false;
         this.K1 = false;
-        this.X0.clear();
-        this.V1 = -9223372036854775807L;
+        this.L1 = false;
+        this.Y0.clear();
         this.W1 = -9223372036854775807L;
-        final w63 e1 = this.E1;
-        if (e1 != null) {
-            e1.a = 0L;
-            e1.b = 0L;
-            e1.c = false;
+        this.X1 = -9223372036854775807L;
+        final n63 f1 = this.F1;
+        if (f1 != null) {
+            f1.a = 0L;
+            f1.b = 0L;
+            f1.c = false;
         }
-        this.Q1 = 0;
         this.R1 = 0;
-        this.P1 = (this.O1 ? 1 : 0);
+        this.S1 = 0;
+        this.Q1 = (this.P1 ? 1 : 0);
     }
     
-    @Override
-    public void s(final float j1, final float k1) throws ExoPlaybackException {
-        this.j1 = j1;
+    public void s(final float k1, final float l1) throws ExoPlaybackException {
         this.k1 = k1;
-        this.A0(this.m1);
+        this.l1 = l1;
+        this.A0(this.n1);
     }
     
     public final void s0() {
         this.r0();
-        this.b2 = null;
-        this.E1 = null;
-        this.q1 = null;
-        this.s1 = null;
-        this.m1 = null;
+        this.c2 = null;
+        this.F1 = null;
+        this.r1 = null;
+        this.t1 = null;
         this.n1 = null;
-        this.o1 = false;
-        this.U1 = false;
-        this.p1 = -1.0f;
-        this.t1 = 0;
-        this.u1 = false;
+        this.o1 = null;
+        this.p1 = false;
+        this.V1 = false;
+        this.q1 = -1.0f;
+        this.u1 = 0;
         this.v1 = false;
         this.w1 = false;
         this.x1 = false;
         this.y1 = false;
         this.z1 = false;
         this.A1 = false;
-        this.D1 = false;
-        this.O1 = false;
-        this.P1 = 0;
-        this.h1 = false;
+        this.B1 = false;
+        this.E1 = false;
+        this.P1 = false;
+        this.Q1 = 0;
+        this.i1 = false;
     }
     
     public final void t0() {
-        this.G1 = -1;
-        this.T0.E0 = null;
+        this.H1 = -1;
+        this.U0.F0 = null;
     }
     
-    @Override
     public final int u() {
         return 8;
     }
     
-    public final void u0(final DrmSession e1) {
-        final DrmSession e2 = this.e1;
-        if (e2 != e1) {
-            if (e1 != null) {
-                e1.a((com.google.android.exoplayer2.drm.c$a)null);
-            }
-            if (e2 != null) {
-                e2.b((com.google.android.exoplayer2.drm.c$a)null);
-            }
-        }
-        this.e1 = e1;
-    }
-    
-    @Override
-    public final void v(final long n, final long n2) throws ExoPlaybackException {
-        final boolean a2 = this.a2;
-        final boolean b = false;
-        if (a2) {
-            this.a2 = false;
-            this.m0();
-        }
-        final ExoPlaybackException b2 = this.b2;
-        if (b2 == null) {
-            try {
-                if (this.Y1) {
-                    this.q0();
-                    return;
-                }
-                if (this.c1 == null && !this.o0(2)) {
-                    return;
-                }
-                this.c0();
-                if (this.L1) {
-                    nkz.h("bypassRender");
-                    while (this.K(n, n2)) {}
-                    nkz.l();
-                }
-                else if (this.l1 != null) {
-                    final long elapsedRealtime = SystemClock.elapsedRealtime();
-                    nkz.h("drainAndFeed");
-                    while (this.Q(n, n2) && this.w0(elapsedRealtime)) {}
-                    while (this.R() && this.w0(elapsedRealtime)) {}
-                    nkz.l();
-                }
-                else {
-                    final oc8 c2 = this.c2;
-                    final int d = c2.d;
-                    final bro i0 = super.I0;
-                    Objects.requireNonNull(i0);
-                    c2.d = d + i0.e(n - super.K0);
-                    this.o0(1);
-                }
-                final oc8 c3 = this.c2;
-                monitorenter(c3);
-                monitorexit(c3);
-                return;
-            }
-            catch (final IllegalStateException ex) {
-                final int a3 = imw.a;
-                boolean b3 = false;
-                Label_0289: {
-                    if (a3 < 21 || !(ex instanceof MediaCodec$CodecException)) {
-                        final StackTraceElement[] stackTrace = ex.getStackTrace();
-                        if (stackTrace.length <= 0 || !stackTrace[0].getClassName().equals("android.media.MediaCodec")) {
-                            b3 = false;
-                            break Label_0289;
-                        }
-                    }
-                    b3 = true;
-                }
-                if (b3) {
-                    this.e0(ex);
-                    boolean b4 = b;
-                    if (a3 >= 21) {
-                        final boolean b5 = ex instanceof MediaCodec$CodecException && ((MediaCodec$CodecException)ex).isRecoverable();
-                        b4 = b;
-                        if (b5) {
-                            b4 = true;
-                        }
-                    }
-                    if (b4) {
-                        this.p0();
-                    }
-                    throw this.A((Throwable)this.M(ex, this.s1), this.c1, b4, 4003);
-                }
-                throw ex;
-            }
-        }
-        this.b2 = null;
-        throw b2;
-    }
-    
-    public final void v0(final DrmSession f1) {
+    public final void u0(final DrmSession f1) {
         final DrmSession f2 = this.f1;
         if (f2 != f1) {
             if (f1 != null) {
@@ -1578,8 +1480,99 @@ public abstract class MediaCodecRenderer extends e
         this.f1 = f1;
     }
     
+    public final void v(final long n, final long n2) throws ExoPlaybackException {
+        final boolean b2 = this.b2;
+        final boolean b3 = false;
+        if (b2) {
+            this.b2 = false;
+            this.m0();
+        }
+        final ExoPlaybackException c2 = this.c2;
+        if (c2 == null) {
+            try {
+                if (this.Z1) {
+                    this.q0();
+                    return;
+                }
+                if (this.d1 == null && !this.o0(2)) {
+                    return;
+                }
+                this.c0();
+                if (this.M1) {
+                    blz.e("bypassRender");
+                    while (this.K(n, n2)) {}
+                    blz.o();
+                }
+                else if (this.m1 != null) {
+                    final long elapsedRealtime = SystemClock.elapsedRealtime();
+                    blz.e("drainAndFeed");
+                    while (this.Q(n, n2) && this.w0(elapsedRealtime)) {}
+                    while (this.R() && this.w0(elapsedRealtime)) {}
+                    blz.o();
+                }
+                else {
+                    final zb8 d2 = this.d2;
+                    final int d3 = d2.d;
+                    final tro j0 = super.J0;
+                    Objects.requireNonNull(j0);
+                    d2.d = d3 + j0.h(n - super.L0);
+                    this.o0(1);
+                }
+                final zb8 d4 = this.d2;
+                monitorenter(d4);
+                monitorexit(d4);
+                return;
+            }
+            catch (final IllegalStateException ex) {
+                final int a = cnw.a;
+                boolean b4 = false;
+                Label_0289: {
+                    if (a < 21 || !(ex instanceof MediaCodec$CodecException)) {
+                        final StackTraceElement[] stackTrace = ex.getStackTrace();
+                        if (stackTrace.length <= 0 || !stackTrace[0].getClassName().equals("android.media.MediaCodec")) {
+                            b4 = false;
+                            break Label_0289;
+                        }
+                    }
+                    b4 = true;
+                }
+                if (b4) {
+                    this.e0(ex);
+                    boolean b5 = b3;
+                    if (a >= 21) {
+                        final boolean b6 = ex instanceof MediaCodec$CodecException && ((MediaCodec$CodecException)ex).isRecoverable();
+                        b5 = b3;
+                        if (b6) {
+                            b5 = true;
+                        }
+                    }
+                    if (b5) {
+                        this.p0();
+                    }
+                    throw this.A((Throwable)this.M(ex, this.t1), this.d1, b5, 4003);
+                }
+                throw ex;
+            }
+        }
+        this.c2 = null;
+        throw c2;
+    }
+    
+    public final void v0(final DrmSession g1) {
+        final DrmSession g2 = this.g1;
+        if (g2 != g1) {
+            if (g1 != null) {
+                g1.a((com.google.android.exoplayer2.drm.c$a)null);
+            }
+            if (g2 != null) {
+                g2.b((com.google.android.exoplayer2.drm.c$a)null);
+            }
+        }
+        this.g1 = g1;
+    }
+    
     public final boolean w0(final long n) {
-        return this.i1 == -9223372036854775807L || SystemClock.elapsedRealtime() - n < this.i1;
+        return this.j1 == -9223372036854775807L || SystemClock.elapsedRealtime() - n < this.j1;
     }
     
     public boolean x0(final d d) {

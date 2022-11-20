@@ -9,57 +9,65 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonLiveVideoStreamSource$$JsonObjectMapper extends JsonMapper<JsonLiveVideoStreamSource>
 {
-    public static JsonLiveVideoStreamSource _parse(final khe khe) throws IOException {
+    public static JsonLiveVideoStreamSource _parse(final tge tge) throws IOException {
         final JsonLiveVideoStreamSource jsonLiveVideoStreamSource = new JsonLiveVideoStreamSource();
-        if (khe.e() == null) {
-            khe.i0();
+        if (tge.e() == null) {
+            tge.h0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (tge.e() != vie.L0) {
+            tge.l0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonLiveVideoStreamSource, d, khe);
-            khe.m0();
+        while (tge.h0() != vie.M0) {
+            final String d = tge.d();
+            tge.h0();
+            parseField(jsonLiveVideoStreamSource, d, tge);
+            tge.l0();
         }
         return jsonLiveVideoStreamSource;
     }
     
-    public static void _serialize(final JsonLiveVideoStreamSource jsonLiveVideoStreamSource, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonLiveVideoStreamSource jsonLiveVideoStreamSource, final afe afe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            afe.q0();
         }
-        tfe.u0("cookieSetUrl", jsonLiveVideoStreamSource.a);
-        tfe.u0("noRedirectPlaybackUrl", jsonLiveVideoStreamSource.b);
-        tfe.u0("status", jsonLiveVideoStreamSource.c);
-        tfe.u0("streamType", jsonLiveVideoStreamSource.d);
+        afe.t0("cookieSetUrl", jsonLiveVideoStreamSource.a);
+        afe.t0("noRedirectPlaybackUrl", jsonLiveVideoStreamSource.b);
+        afe.t0("status", jsonLiveVideoStreamSource.c);
+        afe.t0("streamType", jsonLiveVideoStreamSource.d);
         if (b) {
-            tfe.h();
+            afe.h();
         }
     }
     
-    public static void parseField(final JsonLiveVideoStreamSource jsonLiveVideoStreamSource, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonLiveVideoStreamSource jsonLiveVideoStreamSource, final String s, final tge tge) throws IOException {
         if ("cookieSetUrl".equals(s)) {
-            jsonLiveVideoStreamSource.a = khe.T((String)null);
+            jsonLiveVideoStreamSource.a = tge.T((String)null);
         }
         else if ("noRedirectPlaybackUrl".equals(s)) {
-            jsonLiveVideoStreamSource.b = khe.T((String)null);
+            jsonLiveVideoStreamSource.b = tge.T((String)null);
         }
         else if ("status".equals(s)) {
-            jsonLiveVideoStreamSource.c = khe.T((String)null);
+            jsonLiveVideoStreamSource.c = tge.T((String)null);
         }
         else if ("streamType".equals(s)) {
-            jsonLiveVideoStreamSource.d = khe.T((String)null);
+            jsonLiveVideoStreamSource.d = tge.T((String)null);
         }
     }
     
-    public JsonLiveVideoStreamSource parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonLiveVideoStreamSource parse(final tge tge) throws IOException {
+        return _parse(tge);
     }
     
-    public void serialize(final JsonLiveVideoStreamSource jsonLiveVideoStreamSource, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonLiveVideoStreamSource, tfe, b);
+    public /* bridge */ Object parse(final tge tge) throws IOException {
+        return this.parse(tge);
+    }
+    
+    public void serialize(final JsonLiveVideoStreamSource jsonLiveVideoStreamSource, final afe afe, final boolean b) throws IOException {
+        _serialize(jsonLiveVideoStreamSource, afe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
+        this.serialize((JsonLiveVideoStreamSource)o, afe, b);
     }
 }

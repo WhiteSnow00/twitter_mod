@@ -522,6 +522,18 @@
         <item quantity="one">%s subskrybent</item>
         <item quantity="other">%s subskrybentów</item>
     </plurals>
+    <plurals name="subscription_duration_days">
+        <item quantity="one">dzień</item>
+        <item quantity="other">%d dni</item>
+    </plurals>
+    <plurals name="subscription_duration_months">
+        <item quantity="one">miesiąc</item>
+        <item quantity="other">%d miesięcy</item>
+    </plurals>
+    <plurals name="subscription_duration_years">
+        <item quantity="one">rok</item>
+        <item quantity="other">%d lat</item>
+    </plurals>
     <plurals name="time_days">
         <item quantity="one">%d dzień</item>
         <item quantity="other">%d dni</item>

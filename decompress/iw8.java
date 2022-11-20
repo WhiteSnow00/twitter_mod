@@ -1,58 +1,86 @@
-import android.view.ViewGroup;
-import android.view.View$MeasureSpec;
-import android.view.View;
-import android.util.AttributeSet;
-import android.content.Context;
-import android.view.Window;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class iw8 extends gb
+public final class iw8
 {
-    public final Window J0;
-    public final cwj K0;
-    public boolean L0;
-    public boolean M0;
+    public final boolean a;
+    public final boolean b;
+    public final bbp c;
+    public final boolean d;
+    public final boolean e;
     
-    public iw8(final Context context, final Window j0) {
-        super(context, (AttributeSet)null, 0, 6, (hg8)null);
-        this.J0 = j0;
-        final m36 a = m36.a;
-        this.K0 = (cwj)nkz.r((Object)m36.b);
+    public iw8() {
+        final bbp d0 = bbp.D0;
+        this.a = true;
+        this.b = true;
+        this.c = d0;
+        this.d = true;
+        this.e = true;
     }
     
-    public final void a(m76 h, final int n) {
-        h = h.h(1735448596);
-        final ea6$b a = ea6.a;
-        ((gub)((nhq)this.K0).getValue()).invoke((Object)h, (Object)0);
-        final vwo k = h.k();
-        if (k != null) {
-            k.a((gub)new iw8$a(this, n));
+    public iw8(boolean a, final int n) {
+        if ((n & 0x1) != 0x0) {
+            a = true;
         }
-    }
-    
-    public final void f(final boolean b, final int n, final int n2, final int n3, final int n4) {
-        super.f(b, n, n2, n3, n4);
-        final View child = ((ViewGroup)this).getChildAt(0);
-        if (child == null) {
-            return;
-        }
-        this.J0.setLayout(child.getMeasuredWidth(), child.getMeasuredHeight());
-    }
-    
-    public final void g(int measureSpec, final int n) {
-        if (this.L0) {
-            super.g(measureSpec, n);
+        final boolean b = (n & 0x2) != 0x0;
+        bbp d0;
+        if ((n & 0x4) != 0x0) {
+            d0 = bbp.D0;
         }
         else {
-            measureSpec = View$MeasureSpec.makeMeasureSpec(q0b.p(((View)this).getContext().getResources().getConfiguration().screenWidthDp * ((View)this).getContext().getResources().getDisplayMetrics().density), Integer.MIN_VALUE);
-            super.g(measureSpec, View$MeasureSpec.makeMeasureSpec(q0b.p(((View)this).getContext().getResources().getConfiguration().screenHeightDp * ((View)this).getContext().getResources().getDisplayMetrics().density), Integer.MIN_VALUE));
+            d0 = null;
         }
+        czd.f((Object)d0, "securePolicy");
+        this.a = a;
+        this.b = b;
+        this.c = d0;
+        this.d = true;
+        this.e = true;
     }
     
-    public final boolean getShouldCreateCompositionOnAttachedToWindow() {
-        return this.M0;
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof iw8)) {
+            return false;
+        }
+        final boolean a = this.a;
+        final iw8 iw8 = (iw8)o;
+        return a == iw8.a && this.b == iw8.b && this.c == iw8.c && this.d == iw8.d && this.e == iw8.e;
+    }
+    
+    @Override
+    public final int hashCode() {
+        final boolean a = this.a;
+        int n = 1231;
+        int n2;
+        if (a) {
+            n2 = 1231;
+        }
+        else {
+            n2 = 1237;
+        }
+        int n3;
+        if (this.b) {
+            n3 = 1231;
+        }
+        else {
+            n3 = 1237;
+        }
+        final int hashCode = this.c.hashCode();
+        int n4;
+        if (this.d) {
+            n4 = 1231;
+        }
+        else {
+            n4 = 1237;
+        }
+        if (!this.e) {
+            n = 1237;
+        }
+        return ((hashCode + (n2 * 31 + n3) * 31) * 31 + n4) * 31 + n;
     }
 }

@@ -1,38 +1,48 @@
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lws extends kus implements ydc, usw, mm3, jsw
+public final class lws
 {
-    public final gxd q;
-    public final kws r;
+    public final int a;
+    public final String b;
+    public final long c;
     
-    public lws(final a a) {
-        super((kus.a)a, 38);
-        final gxd p = a.p;
-        pf8.r(p);
-        this.q = p;
-        this.r = a.q;
+    public lws(final int a, final String b, final long c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public final List<gxd> f() {
-        return ijf.v((Object)this.q);
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof lws)) {
+            return false;
+        }
+        final lws lws = (lws)o;
+        return this.a == lws.a && czd.a((Object)this.b, (Object)lws.b) && this.c == lws.c;
     }
     
-    public static final class a extends kus.a<lws, a>
-    {
-        public gxd p;
-        public kws q;
-        
-        public final Object i() {
-            return new lws(this);
+    @Override
+    public final int hashCode() {
+        final int a = this.a;
+        final String b = this.b;
+        int hashCode;
+        if (b == null) {
+            hashCode = 0;
         }
-        
-        @Override
-        public final boolean l() {
-            return super.l() && this.p != null && this.q != null;
+        else {
+            hashCode = b.hashCode();
         }
+        final long c = this.c;
+        return (a * 31 + hashCode) * 31 + (int)(c ^ c >>> 32);
+    }
+    
+    @Override
+    public final String toString() {
+        return hmg.i(fu8.k("TimelineId(timelineType=", this.a, ", timelineTag=", this.b, ", timelineOwnerId="), this.c, ")");
     }
 }
