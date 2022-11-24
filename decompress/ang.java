@@ -1,26 +1,59 @@
-import android.view.View;
-import com.google.android.material.datepicker.c;
-import com.google.android.material.datepicker.g;
-import android.view.View$OnClickListener;
+import java.util.List;
+import com.google.android.filament.utils.Float3;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ang implements View$OnClickListener
+public final class ang
 {
-    public final /* synthetic */ g C0;
-    public final /* synthetic */ c D0;
-    
-    public ang(final c d0, final g c0) {
-        this.D0 = d0;
-        this.C0 = c0;
+    public static boolean a(final int n) {
+        if (n == 1) {
+            return true;
+        }
+        if (n == 2) {
+            return true;
+        }
+        if (n == 3) {
+            return false;
+        }
+        throw null;
     }
     
-    public final void onClick(final View view) {
-        final int n = this.D0.Z1().t1() - 1;
-        if (n >= 0) {
-            this.D0.b2(this.C0.C(n));
+    public static float b(final Float3 float3, final float n, final float n2) {
+        return float3.getY() * n + n2;
+    }
+    
+    public static String c(final StringBuilder sb, final long n, final String s) {
+        sb.append(n);
+        sb.append(s);
+        return sb.toString();
+    }
+    
+    public static void d(final tx6 tx6, final smp smp, final List list) {
+        ((k5j)new ar4$a((nmp)tx6)).c(smp, (Object)list);
+    }
+    
+    public static String e(final int n) {
+        if (n == 1) {
+            return "NAVIGATE_TO_LATEST_ISSUE";
         }
+        if (n == 2) {
+            return "NAVIGATE_TO_NEWSLETTER";
+        }
+        if (n == 3) {
+            return "UPDATE_STATE";
+        }
+        return "null";
+    }
+    
+    public static String f(final int n) {
+        if (n == 1) {
+            return "ASSET";
+        }
+        if (n == 2) {
+            return "PROFILE";
+        }
+        return "null";
     }
 }

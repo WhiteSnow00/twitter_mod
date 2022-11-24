@@ -1,20 +1,19 @@
-import android.widget.ImageView;
-import android.graphics.drawable.Drawable;
+import com.google.android.exoplayer2.upstream.a;
+import com.google.android.exoplayer2.upstream.a$a;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class li8 implements i9d$c
+public final class li8 implements ulc
 {
-    public final /* synthetic */ Drawable C0;
-    public final /* synthetic */ ImageView D0;
+    public final a$a a;
     
-    public li8(final Drawable c0, final ImageView d0) {
-        this.C0 = c0;
-        this.D0 = d0;
+    public li8(final a$a a) {
+        this.a = a;
     }
     
-    public final void a(final Exception ex) {
+    public final a a(final int n) {
+        return this.a.b();
     }
 }

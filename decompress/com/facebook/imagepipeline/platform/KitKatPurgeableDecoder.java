@@ -12,33 +12,33 @@ import android.annotation.TargetApi;
 import com.facebook.imagepipeline.nativecode.DalvikPurgeableDecoder;
 
 @TargetApi(19)
-@x49
+@m59
 public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder
 {
-    public final q6b c;
+    public final p6b c;
     
-    @x49
-    public KitKatPurgeableDecoder(final q6b c) {
+    @m59
+    public KitKatPurgeableDecoder(final p6b c) {
         this.c = c;
     }
     
-    public final Bitmap c(wi4<PooledByteBuffer> a, final BitmapFactory$Options bitmapFactory$Options) {
-        final PooledByteBuffer pooledByteBuffer = (PooledByteBuffer)a.h();
+    public final Bitmap c(cj4<PooledByteBuffer> a, final BitmapFactory$Options bitmapFactory$Options) {
+        final PooledByteBuffer pooledByteBuffer = a.h();
         final int size = pooledByteBuffer.size();
         a = this.c.a(size);
         try {
-            final byte[] array = (byte[])a.h();
+            final byte[] array = a.h();
             pooledByteBuffer.C(0, array, 0, size);
             final Bitmap decodeByteArray = BitmapFactory.decodeByteArray(array, 0, size, bitmapFactory$Options);
-            ri4.s((Object)decodeByteArray, (Object)"BitmapFactory returned null");
+            xd.K(decodeByteArray, "BitmapFactory returned null");
             return decodeByteArray;
         }
         finally {
-            wi4.e(a);
+            cj4.e(a);
         }
     }
     
-    public final Bitmap d(wi4<PooledByteBuffer> a, final int n, final BitmapFactory$Options bitmapFactory$Options) {
+    public final Bitmap d(cj4<PooledByteBuffer> a, final int n, final BitmapFactory$Options bitmapFactory$Options) {
         byte[] b;
         if (DalvikPurgeableDecoder.e(a, n)) {
             b = null;
@@ -46,13 +46,13 @@ public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder
         else {
             b = DalvikPurgeableDecoder.b;
         }
-        final PooledByteBuffer pooledByteBuffer = (PooledByteBuffer)a.h();
-        ri4.j(Boolean.valueOf(n <= pooledByteBuffer.size()));
-        final q6b c = this.c;
+        final PooledByteBuffer pooledByteBuffer = a.h();
+        xd.D(n <= pooledByteBuffer.size());
+        final p6b c = this.c;
         final int n2 = n + 2;
         a = c.a(n2);
         try {
-            final byte[] array = (byte[])a.h();
+            final byte[] array = a.h();
             pooledByteBuffer.C(0, array, 0, n);
             int n3 = n;
             if (b != null) {
@@ -61,11 +61,11 @@ public class KitKatPurgeableDecoder extends DalvikPurgeableDecoder
                 n3 = n2;
             }
             final Bitmap decodeByteArray = BitmapFactory.decodeByteArray(array, 0, n3, bitmapFactory$Options);
-            ri4.s((Object)decodeByteArray, (Object)"BitmapFactory returned null");
+            xd.K(decodeByteArray, "BitmapFactory returned null");
             return decodeByteArray;
         }
         finally {
-            wi4.e(a);
+            cj4.e(a);
         }
     }
 }

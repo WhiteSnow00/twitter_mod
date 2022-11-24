@@ -1,3 +1,4 @@
+import java.lang.annotation.Annotation;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
@@ -7,29 +8,45 @@ import java.util.HashMap;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class yky implements p4j<bfy>
+public final class yky implements b5j<ody>
 {
     public static final yky a;
     
     static {
-        final zzz d0 = zzz.D0;
+        final z000 f0 = z000.F0;
         a = new yky();
-        final dyz dyz = new dyz(1, d0);
+        final czz czz = new czz(1, f0);
         final HashMap hashMap = new HashMap();
-        hashMap.put(dyz.annotationType(), dyz);
+        hashMap.put(((Annotation)czz).annotationType(), czz);
         Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final dyz dyz2 = new dyz(2, d0);
+        final czz czz2 = new czz(2, f0);
         final HashMap hashMap2 = new HashMap();
-        hashMap2.put(dyz2.annotationType(), dyz2);
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
         Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final dyz dyz3 = new dyz(3, d0);
+        final czz czz3 = new czz(3, f0);
         final HashMap hashMap3 = new HashMap();
-        jg9.w(dyz3, hashMap3, dyz3, hashMap3);
+        hashMap3.put(((Annotation)czz3).annotationType(), czz3);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
+        final czz czz4 = new czz(4, f0);
+        final HashMap hashMap4 = new HashMap();
+        hashMap4.put(((Annotation)czz4).annotationType(), czz4);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap4));
+        final czz czz5 = new czz(5, f0);
+        final HashMap hashMap5 = new HashMap();
+        hashMap5.put(((Annotation)czz5).annotationType(), czz5);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap5));
+        final czz czz6 = new czz(6, f0);
+        final HashMap hashMap6 = new HashMap();
+        hashMap6.put(((Annotation)czz6).annotationType(), czz6);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap6));
+        final czz czz7 = new czz(7, f0);
+        final HashMap hashMap7 = new HashMap();
+        ehk.g(czz7, hashMap7, czz7, hashMap7);
     }
     
     public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final bfy bfy = (bfy)o;
-        final q4j q4j = (q4j)o2;
+        final ody ody = (ody)o;
+        final c5j c5j = (c5j)o2;
         throw null;
     }
 }

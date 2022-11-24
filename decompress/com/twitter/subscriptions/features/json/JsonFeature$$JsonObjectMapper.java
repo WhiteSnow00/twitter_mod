@@ -10,58 +10,66 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFeature$$JsonObjectMapper extends JsonMapper<JsonFeature>
 {
-    public static JsonFeature _parse(final khe khe) throws IOException {
+    public static JsonFeature _parse(final qhe qhe) throws IOException {
         final JsonFeature jsonFeature = new JsonFeature();
-        if (khe.e() == null) {
-            khe.i0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFeature, d, khe);
-            khe.m0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonFeature, d, qhe);
+            qhe.m0();
         }
         return jsonFeature;
     }
     
-    public static void _serialize(final JsonFeature jsonFeature, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFeature jsonFeature, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            yfe.r0();
         }
         if (jsonFeature.b != null) {
-            tfe.i("config");
-            JsonFeatureConfig$$JsonObjectMapper._serialize(jsonFeature.b, tfe, true);
+            yfe.i("config");
+            JsonFeatureConfig$$JsonObjectMapper._serialize(jsonFeature.b, yfe, true);
         }
-        tfe.u0("rest_id", jsonFeature.a);
+        yfe.u0("rest_id", jsonFeature.a);
         if (jsonFeature.c != null) {
-            LoganSquare.typeConverterFor((Class)juv.class).serialize((Object)jsonFeature.c, "undoTweet", true, tfe);
+            LoganSquare.typeConverterFor((Class)pvv.class).serialize((Object)jsonFeature.c, "undoTweet", true, yfe);
         }
         if (b) {
-            tfe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonFeature jsonFeature, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonFeature jsonFeature, final String s, final qhe qhe) throws IOException {
         if ("config".equals(s)) {
-            jsonFeature.b = JsonFeatureConfig$$JsonObjectMapper._parse(khe);
+            jsonFeature.b = JsonFeatureConfig$$JsonObjectMapper._parse(qhe);
         }
         else if ("rest_id".equals(s)) {
-            jsonFeature.a = khe.T((String)null);
+            jsonFeature.a = qhe.T((String)null);
         }
         else if ("undoTweet".equals(s)) {
-            jsonFeature.c = (juv)LoganSquare.typeConverterFor((Class)juv.class).parse(khe);
+            jsonFeature.c = (pvv)LoganSquare.typeConverterFor((Class)pvv.class).parse(qhe);
         }
     }
     
-    public JsonFeature parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFeature parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public void serialize(final JsonFeature jsonFeature, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFeature, tfe, b);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
+    }
+    
+    public void serialize(final JsonFeature jsonFeature, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonFeature, yfe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonFeature)o, yfe, b);
     }
 }

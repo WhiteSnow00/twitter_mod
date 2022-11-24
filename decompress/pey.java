@@ -1,98 +1,51 @@
-import android.accounts.AuthenticatorException;
-import java.io.IOException;
-import android.accounts.OperationCanceledException;
-import android.os.Handler;
-import android.accounts.AccountManagerCallback;
-import java.util.Objects;
-import java.util.Locale;
-import java.util.concurrent.TimeUnit;
-import java.util.Calendar;
-import android.accounts.AccountManager;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pey extends dbz
+public final class pey extends xey
 {
-    public long E0;
-    public String F0;
-    public AccountManager G0;
-    public Boolean H0;
-    public long I0;
+    public final transient int H0;
+    public final transient int I0;
+    public final xey J0;
     
-    public pey(final y7z y7z) {
-        super(y7z);
+    public pey(final xey j0, final int h0, final int i0) {
+        this.J0 = j0;
+        this.H0 = h0;
+        this.I0 = i0;
     }
     
-    public final boolean i() {
-        final Calendar instance = Calendar.getInstance();
-        this.E0 = TimeUnit.MINUTES.convert(instance.get(16) + instance.get(15), TimeUnit.MILLISECONDS);
-        final Locale default1 = Locale.getDefault();
-        final String language = default1.getLanguage();
-        final Locale english = Locale.ENGLISH;
-        this.F0 = zi.y(language.toLowerCase(english), "-", default1.getCountry().toLowerCase(english));
-        return false;
+    public final int g() {
+        return this.J0.i() + this.H0 + this.I0;
     }
     
-    public final long n() {
-        ((abz)this).g();
+    public final Object get(final int n) {
+        bs4.x0(n, this.I0);
+        return this.J0.get(n + this.H0);
+    }
+    
+    public final int i() {
+        return this.J0.i() + this.H0;
+    }
+    
+    public final Object[] j() {
+        return this.J0.j();
+    }
+    
+    @Override
+    public final xey k(final int n, final int n2) {
+        bs4.B0(n, n2, this.I0);
+        final xey j0 = this.J0;
+        final int h0 = this.H0;
+        return j0.k(n + h0, n2 + h0);
+    }
+    
+    public final int size() {
         return this.I0;
     }
     
-    public final long o() {
-        this.j();
-        return this.E0;
-    }
-    
-    public final String p() {
-        this.j();
-        return this.F0;
-    }
-    
-    public final boolean q() {
-        ((abz)this).g();
-        Objects.requireNonNull(((abz)this).C0.P0);
-        final long currentTimeMillis = System.currentTimeMillis();
-        if (currentTimeMillis - this.I0 > 86400000L) {
-            this.H0 = null;
-        }
-        Object h0 = this.H0;
-        if (h0 != null) {
-            return (boolean)h0;
-        }
-        if (eo6.a(((abz)this).C0.C0, "android.permission.GET_ACCOUNTS") != 0) {
-            ((abz)this).C0.b().L0.a("Permission error checking for dasher/unicorn accounts");
-            this.I0 = currentTimeMillis;
-            this.H0 = Boolean.FALSE;
-            return false;
-        }
-        if (this.G0 == null) {
-            this.G0 = AccountManager.get(((abz)this).C0.C0);
-        }
-        Label_0240: {
-            try {
-                h0 = this.G0.getAccountsByTypeAndFeatures("com.google", new String[] { "service_HOSTED" }, (AccountManagerCallback)null, (Handler)null).getResult();
-                if (h0 != null && ((Boolean)h0).length > 0) {
-                    this.H0 = Boolean.TRUE;
-                    this.I0 = currentTimeMillis;
-                    return true;
-                }
-                h0 = this.G0.getAccountsByTypeAndFeatures("com.google", new String[] { "service_uca" }, (AccountManagerCallback)null, (Handler)null).getResult();
-                if (h0 != null && ((Boolean)h0).length > 0) {
-                    this.H0 = Boolean.TRUE;
-                    this.I0 = currentTimeMillis;
-                    return true;
-                }
-                break Label_0240;
-            }
-            catch (final OperationCanceledException h0) {}
-            catch (final IOException h0) {}
-            catch (final AuthenticatorException ex) {}
-            ((abz)this).C0.b().I0.b("Exception checking account types", h0);
-        }
-        this.I0 = currentTimeMillis;
-        this.H0 = Boolean.FALSE;
-        return false;
+    public final /* bridge */ List subList(final int n, final int n2) {
+        return this.k(n, n2);
     }
 }

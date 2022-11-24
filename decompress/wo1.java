@@ -1,251 +1,248 @@
-import java.util.Iterator;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
+import android.view.MenuItem;
+import android.app.Activity;
+import android.view.KeyEvent;
+import android.view.Menu;
+import android.os.Bundle;
+import android.content.Intent;
+import android.content.Context;
+import java.util.Objects;
+import com.twitter.util.user.UserIdentifier;
 import java.util.Map;
-import com.facebook.imagepipeline.request.a$c;
-import com.facebook.imagepipeline.request.a;
-import java.util.Set;
+import android.content.res.Configuration;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class wo1 implements q0l
+public class wo1 extends kk0 implements cbf, pec, ytm, cdc, hec
 {
-    public static final Set<String> n;
-    public final a a;
-    public final String b;
-    public final String c;
-    public final u0l d;
-    public final Object e;
-    public final a$c f;
-    public final Map<String, Object> g;
-    public boolean h;
-    public bzk i;
-    public boolean j;
-    public boolean k;
-    public final List<r0l> l;
-    public final l8d m;
+    public final de6 H0;
+    public final y06 I0;
+    public final mn$a J0;
+    public final gda<Configuration> K0;
+    public final gda<fo> L0;
+    public final gda<l7k> M0;
+    public final gda<rf1> N0;
+    public final gda<lnd> O0;
+    public final gda<h5h> P0;
+    public final Map<String, Object> Q0;
+    public UserIdentifier R0;
+    public boolean S0;
+    public boolean T0;
+    public boolean U0;
     
-    static {
-        final int c0 = ked.C0;
-        final HashSet set = new HashSet(2);
-        Collections.addAll(set, "id", "uri_source");
-        wo1.n = new ked((Set)set);
+    public wo1() {
+        this.H0 = new de6();
+        final y06 i0 = new y06();
+        this.I0 = i0;
+        final int a = ln.a;
+        Objects.requireNonNull(mn.Companion);
+        this.J0 = new mn$a();
+        final kcm$b companion = kcm.Companion;
+        this.K0 = (gda<Configuration>)new gda((gba)companion.a((yz5)i0), false);
+        this.L0 = (gda<fo>)new gda((gba)companion.a((yz5)i0), false);
+        this.M0 = (gda<l7k>)new gda((gba)companion.a((yz5)i0), false);
+        this.N0 = (gda<rf1>)new gda((gba)companion.a((yz5)i0), false);
+        this.O0 = (gda<lnd>)new gda((gba)companion.a((yz5)i0), false);
+        this.P0 = (gda<h5h>)new gda((gba)companion.a((yz5)i0), false);
+        this.Q0 = (nuh$a)nuh.a(0);
+        this.R0 = UserIdentifier.UNDEFINED;
     }
     
-    public wo1(final a a, final String b, final String c, final u0l d, final Object e, final a$c f, final boolean h, final boolean j, final bzk i, final l8d m) {
-        this.a = a;
-        this.b = b;
-        final HashMap g = new HashMap();
-        (this.g = g).put("id", b);
-        Object b2;
-        if (a == null) {
-            b2 = "null-request";
-        }
-        else {
-            b2 = a.b;
-        }
-        g.put("uri_source", b2);
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-        this.h = h;
-        this.i = i;
-        this.j = j;
-        this.k = false;
-        this.l = new ArrayList();
-        this.m = m;
+    public final fda<lnd> A0() {
+        return (fda<lnd>)this.O0;
     }
     
-    public static void q(final List<r0l> list) {
-        if (list == null) {
-            return;
-        }
-        final Iterator<r0l> iterator = list.iterator();
-        while (iterator.hasNext()) {
-            iterator.next().a();
-        }
+    public final fda<l7k> D() {
+        return (fda<l7k>)this.M0;
     }
     
-    public static void r(final List<r0l> list) {
-        if (list == null) {
-            return;
-        }
-        final Iterator<r0l> iterator = list.iterator();
-        while (iterator.hasNext()) {
-            iterator.next().d();
-        }
+    public final <T> T D0(final String s) {
+        final T value = ((HashMap<K, T>)this.Q0).get(s);
+        final int a = o5j.a;
+        return value;
     }
     
-    public static void s(final List<r0l> list) {
-        if (list == null) {
-            return;
-        }
-        final Iterator<r0l> iterator = list.iterator();
-        while (iterator.hasNext()) {
-            iterator.next().c();
+    public final fda<h5h> G0() {
+        return (fda<h5h>)this.P0;
+    }
+    
+    public final fda<rf1> J() {
+        return (fda<rf1>)this.N0;
+    }
+    
+    public final void K(final jn jn) {
+        final mn$a j0 = this.J0;
+        Objects.requireNonNull(j0);
+        fj1.f();
+        j0.a.add(jn);
+    }
+    
+    public final boolean Y() {
+        return this.S0 && !((Activity)this).isFinishing();
+    }
+    
+    public final void attachBaseContext(final Context context) {
+        super.attachBaseContext(g6s.e(context));
+        if (!xes.c) {
+            i3r.b((Context)this);
         }
     }
     
-    public final Object a() {
-        return this.e;
-    }
-    
-    public final bzk b() {
-        synchronized (this) {
-            return this.i;
+    public final void c(final Map<String, Object> map) {
+        ((HashMap)this.Q0).clear();
+        if (map != null) {
+            final nuh$a q0 = this.Q0;
+            final int a = o5j.a;
+            ((HashMap)q0).putAll(map);
         }
     }
     
-    public final <T> T c(final String p0) {
-        // 
-        // This method could not be decompiled.
-        // 
-        // Original Bytecode:
-        // 
-        //     1: getfield        wo1.g:Ljava/util/HashMap;
-        //     4: ldc             "origin"
-        //     6: invokevirtual   java/util/HashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
-        //     9: areturn        
-        //    Signature:
-        //  <T:Ljava/lang/Object;>(Ljava/lang/String;)TT;
-        // 
-        // The error that occurred was:
-        // 
-        // java.lang.ArrayIndexOutOfBoundsException: 1
-        //     at com.strobel.decompiler.ast.AstBuilder.performStackAnalysis(AstBuilder.java:2030)
-        //     at com.strobel.decompiler.ast.AstBuilder.build(AstBuilder.java:108)
-        //     at com.strobel.decompiler.languages.java.ast.AstMethodBodyBuilder.createMethodBody(AstMethodBodyBuilder.java:203)
-        //     at com.strobel.decompiler.languages.java.ast.AstMethodBodyBuilder.createMethodBody(AstMethodBodyBuilder.java:93)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createMethodBody(AstBuilder.java:868)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createMethod(AstBuilder.java:761)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.addTypeMembers(AstBuilder.java:638)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeCore(AstBuilder.java:605)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeNoCache(AstBuilder.java:195)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createType(AstBuilder.java:162)
-        //     at com.strobel.decompiler.languages.java.ast.AstBuilder.addType(AstBuilder.java:137)
-        //     at com.strobel.decompiler.languages.java.JavaLanguage.buildAst(JavaLanguage.java:71)
-        //     at com.strobel.decompiler.languages.java.JavaLanguage.decompileType(JavaLanguage.java:59)
-        //     at com.strobel.decompiler.DecompilerDriver.decompileType(DecompilerDriver.java:333)
-        //     at com.strobel.decompiler.DecompilerDriver.decompileJar(DecompilerDriver.java:254)
-        //     at com.strobel.decompiler.DecompilerDriver.main(DecompilerDriver.java:129)
-        // 
-        throw new IllegalStateException("An error occurred while decompiling this method.");
+    public final void d(final b39 b39) {
+        this.H0.a(b39);
     }
     
-    public final void d(final String s, final Object o) {
-        if (((HashSet)wo1.n).contains(s)) {
-            return;
-        }
-        this.g.put(s, o);
-    }
-    
-    public final l8d e() {
-        return this.m;
-    }
-    
-    public final void f(final String s, final String s2) {
-        this.g.put("origin", s);
-        this.g.put("origin_sub", s2);
-    }
-    
-    public final String g() {
-        return this.c;
-    }
-    
-    public final Map<String, Object> getExtras() {
-        return this.g;
-    }
-    
-    public final String getId() {
-        return this.b;
-    }
-    
-    public final void h(final String s) {
-        this.f(s, "default");
-    }
-    
-    public final u0l i() {
-        return this.d;
+    public final boolean isDestroyed() {
+        return this.U0;
     }
     
     public final boolean j() {
-        synchronized (this) {
-            return this.j;
+        return this.T0;
+    }
+    
+    public final Map<String, Object> m0() {
+        return (Map<String, Object>)this.Q0;
+    }
+    
+    public final void onActivityResult(final int n, final int n2, final Intent intent) {
+        this.L0.e((Object)new fo(n, n2, intent));
+        super.onActivityResult(n, n2, intent);
+    }
+    
+    public void onBackPressed() {
+        this.N0.e((Object)rf1.a);
+        super.onBackPressed();
+    }
+    
+    public final void onConfigurationChanged(final Configuration configuration) {
+        super.onConfigurationChanged(configuration);
+        this.K0.e((Object)configuration);
+    }
+    
+    public void onCreate(final Bundle bundle) {
+        UserIdentifier r0 = aj1.fromIntent(((Activity)this).getIntent()).getOwner();
+        if (!r0.isDefined()) {
+            r0 = UserIdentifier.getCurrent();
         }
-    }
-    
-    public final void k() {
-    }
-    
-    public final a l() {
-        return this.a;
-    }
-    
-    public final void m(final Map<String, ?> map) {
-        if (map == null) {
-            return;
+        this.R0 = r0;
+        final Object lastNonConfigurationInstance = ((Activity)this).getLastNonConfigurationInstance();
+        final int a = o5j.a;
+        final Map map = (Map)lastNonConfigurationInstance;
+        ((HashMap)this.Q0).clear();
+        if (map != null) {
+            ((HashMap<Object, Object>)this.Q0).putAll(map);
         }
-        for (final Map.Entry<String, V> entry : map.entrySet()) {
-            this.d(entry.getKey(), entry.getValue());
-        }
+        super.onCreate(bundle);
     }
     
-    public final boolean n() {
-        synchronized (this) {
-            return this.h;
-        }
+    public boolean onCreateOptionsMenu(final Menu menu) {
+        this.P0.e((Object)new h5h$a(menu));
+        return super.onCreateOptionsMenu(menu);
     }
     
-    public final a$c o() {
-        return this.f;
+    public void onDestroy() {
+        this.H0.dispose();
+        this.U0 = true;
+        super.onDestroy();
+        this.I0.onComplete();
     }
     
-    public final void p(final r0l r0l) {
-        synchronized (this) {
-            this.l.add(r0l);
-            final boolean k = this.k;
-            monitorexit(this);
-            if (k) {
-                r0l.b();
-            }
-        }
+    public final boolean onKeyDown(final int n, final KeyEvent keyEvent) {
+        this.O0.e((Object)new gqe(keyEvent));
+        return super.onKeyDown(n, keyEvent);
     }
     
-    public final void t() {
-        synchronized (this) {
-            List list;
-            if (this.k) {
-                list = null;
-                monitorexit(this);
-            }
-            else {
-                this.k = true;
-                list = new ArrayList(this.l);
-                monitorexit(this);
-            }
-            if (list != null) {
-                final Iterator iterator = list.iterator();
-                while (iterator.hasNext()) {
-                    ((r0l)iterator.next()).b();
-                }
-            }
-        }
+    public final boolean onKeyLongPress(final int n, final KeyEvent keyEvent) {
+        this.O0.e((Object)new rqe(keyEvent));
+        return super.onKeyLongPress(n, keyEvent);
     }
     
-    public final List<r0l> u(final bzk i) {
-        synchronized (this) {
-            if (i == this.i) {
-                return null;
-            }
-            this.i = i;
-            return new ArrayList<r0l>(this.l);
+    public final boolean onKeyMultiple(final int n, final int n2, final KeyEvent keyEvent) {
+        this.O0.e((Object)new wqe(keyEvent));
+        return super.onKeyMultiple(n, n2, keyEvent);
+    }
+    
+    public final boolean onKeyUp(final int n, final KeyEvent keyEvent) {
+        this.O0.e((Object)new gre(keyEvent));
+        return super.onKeyUp(n, keyEvent);
+    }
+    
+    public final void onNewIntent(final Intent intent) {
+        this.J0.a((Activity)this, intent);
+        super.onNewIntent(intent);
+    }
+    
+    public final boolean onOptionsItemSelected(final MenuItem menuItem) {
+        this.P0.e((Object)new h5h$b(menuItem));
+        return super.onOptionsItemSelected(menuItem);
+    }
+    
+    public final void onPause() {
+        this.T0 = false;
+        super.onPause();
+    }
+    
+    public final boolean onPrepareOptionsMenu(final Menu menu) {
+        this.P0.e((Object)new h5h$d(menu));
+        return super.onPrepareOptionsMenu(menu);
+    }
+    
+    public final void onRequestPermissionsResult(final int n, final String[] array, final int[] array2) {
+        u7k.d().h((Activity)this, array);
+        this.M0.e((Object)l7k.Companion.a(n, array, array2));
+        super.onRequestPermissionsResult(n, array, array2);
+    }
+    
+    public void onResume() {
+        super.onResume();
+        this.T0 = true;
+    }
+    
+    public final Object onRetainNonConfigurationInstance() {
+        return this.Q0;
+    }
+    
+    public void onStart() {
+        super.onStart();
+        this.S0 = true;
+    }
+    
+    public void onStop() {
+        this.S0 = false;
+        super.onStop();
+    }
+    
+    public final UserIdentifier r() {
+        return this.R0;
+    }
+    
+    public final fda<Configuration> u() {
+        return (fda<Configuration>)this.K0;
+    }
+    
+    public final Object v(final String s, final Object o) {
+        Object o2;
+        if (o != null) {
+            o2 = ((HashMap<String, Object>)this.Q0).put(s, o);
         }
+        else {
+            o2 = ((HashMap<K, Object>)this.Q0).remove(s);
+        }
+        return o2;
+    }
+    
+    public final fda<fo> z() {
+        return (fda<fo>)this.L0;
     }
 }

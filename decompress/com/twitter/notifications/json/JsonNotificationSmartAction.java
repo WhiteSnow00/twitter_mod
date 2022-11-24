@@ -8,22 +8,23 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonNotificationSmartAction extends fih<fvi>
+public class JsonNotificationSmartAction extends tih<wvi>
 {
     @JsonField(name = { "notification_action" })
     public String a;
     @JsonField(name = { "action_details" })
-    public gvi b;
+    public xvi b;
     @JsonField(name = { "score" })
     public String c;
     
+    @Override
     public final Object s() {
         final String a = this.a;
-        final gvi b = this.b;
+        final xvi b = this.b;
         String c;
         if ((c = this.c) == null) {
             c = "-1";
         }
-        return new fvi(a, b, Double.parseDouble(c));
+        return new wvi(a, b, Double.parseDouble(c));
     }
 }

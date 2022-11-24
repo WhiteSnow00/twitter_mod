@@ -10,14 +10,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNFTsSlice extends fih<d6i$b>
+public class JsonNFTsSlice extends tih<w6i.b>
 {
     @JsonField
-    public List<b4i> a;
+    public List<u4i> a;
     @JsonField
-    public teq b;
+    public qfq b;
     
+    @Override
     public final Object s() {
-        return new d6i$b((List)this.a, this.b);
+        return new w6i.b(this.a, this.b);
     }
 }

@@ -1,33 +1,25 @@
+import java.util.Map;
+import com.twitter.rooms.model.helpers.RoomUserItem;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dxn extends gue implements rtb<gxn, oyv>
+public final class dxn extends pue implements stb<fxn, fxn>
 {
-    public final /* synthetic */ bxn C0;
+    public static final dxn F0;
     
-    public dxn(final bxn c0) {
-        this.C0 = c0;
+    static {
+        F0 = new dxn();
+    }
+    
+    public dxn() {
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final gxn gxn = (gxn)o;
-        zzd.f((Object)gxn, "$this$distinct");
-        final int ordinal = ((Enum)gxn.b).ordinal();
-        if (ordinal != 0) {
-            if (ordinal != 1) {
-                if (ordinal == 2) {
-                    this.C0.F0.setText(2131956947);
-                }
-            }
-            else {
-                this.C0.F0.setText(2131956950);
-            }
-        }
-        else {
-            this.C0.F0.setText(2131956946);
-        }
-        return oyv.a;
+        final fxn fxn = (fxn)o;
+        e0e.f((Object)fxn, "$this$setState");
+        return fxn.l(fxn, (RoomUserItem)null, (qgv)null, (String)null, (String)null, (Map)null, (ci6)null, false, false, false, false, false, false, false, false, (String)null, (Long)null, false, false, false, false, zn4.F0, 0, 0, false, false, false, 132120575);
     }
 }

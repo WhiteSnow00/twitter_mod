@@ -1,39 +1,25 @@
-import j$.util.function.Consumer$VivifiedWrapper;
-import j$.util.Iterator$_CC;
-import j$.util.function.Consumer;
-import android.view.ViewGroup;
+import android.text.TextUtils;
 import android.view.View;
-import java.util.Iterator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class z6x implements Iterator<View>, coe, j$.util.Iterator
+public final class z6x extends b7x$b<CharSequence>
 {
-    public int C0;
-    public final /* synthetic */ ViewGroup D0;
-    
-    public z6x(final ViewGroup d0) {
-        this.D0 = d0;
+    public z6x(final Class clazz) {
+        super(2131431896, clazz, 64, 30);
     }
     
-    @Override
-    public final boolean hasNext() {
-        return this.C0 < this.D0.getChildCount();
+    public final Object b(final View view) {
+        return b7x$o.a(view);
     }
     
-    @Override
-    public final Object next() {
-        final View child = this.D0.getChildAt(this.C0++);
-        if (child != null) {
-            return child;
-        }
-        throw new IndexOutOfBoundsException();
+    public final void c(final View view, final Object o) {
+        b7x$o.b(view, (CharSequence)o);
     }
     
-    @Override
-    public final void remove() {
-        this.D0.removeViewAt(--this.C0);
+    public final boolean f(final Object o, final Object o2) {
+        return TextUtils.equals((CharSequence)o, (CharSequence)o2) ^ true;
     }
 }

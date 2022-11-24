@@ -1,48 +1,29 @@
+import android.graphics.drawable.Drawable;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class plo
+public final class plo extends Drawable
 {
-    public int a;
-    public int b;
-    public int c;
-    public int d;
-    public int e;
-    public int f;
-    public boolean g;
-    public boolean h;
+    public static final double a;
     
-    public plo() {
-        this.a = 0;
-        this.b = 0;
-        this.c = Integer.MIN_VALUE;
-        this.d = Integer.MIN_VALUE;
-        this.e = 0;
-        this.f = 0;
-        this.g = false;
-        this.h = false;
+    static {
+        a = Math.cos(Math.toRadians(45.0));
     }
     
-    public final void a(final int a, final int b) {
-        this.c = a;
-        this.d = b;
-        this.h = true;
-        if (this.g) {
-            if (b != Integer.MIN_VALUE) {
-                this.a = b;
-            }
-            if (a != Integer.MIN_VALUE) {
-                this.b = a;
-            }
+    public static float a(final float n, final float n2, final boolean b) {
+        float n3 = n;
+        if (b) {
+            n3 = (float)((1.0 - plo.a) * n2 + n);
         }
-        else {
-            if (a != Integer.MIN_VALUE) {
-                this.a = a;
-            }
-            if (b != Integer.MIN_VALUE) {
-                this.b = b;
-            }
+        return n3;
+    }
+    
+    public static float b(final float n, final float n2, final boolean b) {
+        if (b) {
+            return (float)((1.0 - plo.a) * n2 + n * 1.5f);
         }
+        return n * 1.5f;
     }
 }

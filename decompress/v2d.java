@@ -1,4 +1,3 @@
-import android.os.RemoteException;
 import android.os.IInterface;
 
 // 
@@ -7,5 +6,4 @@ import android.os.IInterface;
 
 public interface v2d extends IInterface
 {
-    void D0(final u2d p0, final t2c p1) throws RemoteException;
 }

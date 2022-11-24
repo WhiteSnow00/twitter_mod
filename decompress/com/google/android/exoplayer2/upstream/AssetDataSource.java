@@ -12,7 +12,7 @@ import java.io.InputStream;
 import android.net.Uri;
 import android.content.res.AssetManager;
 
-public final class AssetDataSource extends jk1
+public final class AssetDataSource extends nk1
 {
     public final AssetManager e;
     public Uri f;
@@ -93,7 +93,7 @@ public final class AssetDataSource extends jk1
             try {
                 n = (int)Math.min(h, n2);
                 final InputStream g = this.g;
-                final int a = cnw.a;
+                final int a = rnw.a;
                 read = g.read(array, read, n);
                 if (read == -1) {
                     return -1;

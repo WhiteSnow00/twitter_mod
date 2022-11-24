@@ -2,18 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lvz implements kvz
+public final class lvz implements dgz
 {
-    public static final tcz a;
+    public static final lvz G0;
+    public final dgz F0;
     
     static {
-        a = (tcz)new edz(icz.a(), true, true).c("measurement.service.refactor.package_side_screen", false);
+        G0 = new lvz();
     }
     
-    public final void a() {
+    public lvz() {
+        final igz igz = new igz((Object)new nvz());
+        this.F0 = yru.M((dgz)igz);
     }
     
-    public final boolean c() {
-        return (boolean)((mdz)lvz.a).b();
+    public final Object a() {
+        return this.F0.a();
     }
 }

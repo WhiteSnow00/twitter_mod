@@ -1,20 +1,24 @@
-import com.twitter.util.user.UserIdentifier;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class k1c extends ywg
+public final class k1c implements g5e
 {
-    public k1c(final UserIdentifier userIdentifier) {
-        super(userIdentifier);
+    public final g5e a;
+    public final a1c b;
+    
+    public k1c(final g5e a, final a1c b) {
+        this.a = a;
+        this.b = b;
     }
     
-    public final tqc f0() {
-        final mcv mcv = new mcv();
-        ((tqc$a)mcv).e = arc$b.F0;
-        final int a = c5j.a;
-        ((tqc$a)mcv).n("/1.1/amplify/marketplace/defaults.json", "/");
-        return ((tqc$a)mcv).k();
+    public final Object a(final Object o) {
+        final g5e a = this.a;
+        final a1c b = this.b;
+        final i3t$a i3t$a = (i3t$a)a.a((Object)o);
+        i3t$a.n = b.s();
+        i3t$a.o = b.r();
+        i3t$a.p = swj.e(((am1)b).a, "include_dark_read");
+        return i3t$a;
     }
 }

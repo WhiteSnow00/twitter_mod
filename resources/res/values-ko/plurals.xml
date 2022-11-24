@@ -305,8 +305,8 @@
         <item quantity="other">외 %d명</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">슈퍼 팔로워</item>
-        <item quantity="other">슈퍼 팔로워</item>
+        <item quantity="one">구독자</item>
+        <item quantity="other">구독자</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">마음에 들어요 %s회</item>
@@ -402,7 +402,7 @@
         <item quantity="other">﻿%1$s 님 외 %2$d명﻿에게 보내는 답글</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s 님 외 %2$d명에게﻿ 보내는 답글. 다른 슈퍼 팔로워도 이 답글을 볼 수 있습니다.</item>
+        <item quantity="other">﻿%1$s 님 외 %2$d명에게﻿ 보내는 답글. 다른 구독자도 내 답글을 볼 수 있습니다.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%3$s﻿의 ﻿%1$s 및 기타 %2$d명﻿에게 답글하기</item>
@@ -411,7 +411,7 @@
         <item quantity="other">﻿%1$s 님, %2$s 님 외 %3$d명﻿에게 보내는 답글</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s %2$s 님 외 %3$d명에게﻿ 보내는 답글. 다른 슈퍼 팔로워도 이 답글을 볼 수 있습니다.</item>
+        <item quantity="other">﻿%1$s %2$s 님 외 %3$d명에게﻿ 보내는 답글. 다른 구독자도 이 답글을 볼 수 있습니다.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%4$s﻿의 ﻿%1$s %2$s 및 기타 %3$d명﻿에게 답글하기</item>

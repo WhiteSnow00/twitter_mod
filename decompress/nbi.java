@@ -2,115 +2,58 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class nbi implements mbi
+public final class nbi implements mxs
 {
-    public final mv1<mbi$a> a;
-    public final mv1<mbi$b> b;
-    public final gwo c;
-    public boolean d;
+    public final boolean a;
+    public final boolean b;
     
-    public nbi(final zgh zgh, final gwo c, final jto jto) {
-        final mbi$b d0 = mbi$b.D0;
-        this.c = c;
-        if (zgh != zgh.J0 && zgh != zgh.L0) {
-            if (zgh == zgh.K0) {
-                this.a = (mv1<mbi$a>)mv1.e((Object)mbi$a.D0);
-                this.b = (mv1<mbi$b>)mv1.e((Object)d0);
-            }
-            else {
-                this.a = (mv1<mbi$a>)mv1.e((Object)mbi$a.J0);
-                this.b = (mv1<mbi$b>)mv1.e((Object)mbi$b.I0);
-            }
+    public nbi(final boolean a, final boolean b) {
+        this.a = a;
+        this.b = b;
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
         }
-        else {
-            this.a = (mv1<mbi$a>)mv1.e((Object)mbi$a.E0);
-            this.b = (mv1<mbi$b>)mv1.e((Object)d0);
+        if (!(o instanceof nbi)) {
+            return false;
         }
-        jto.a((mso)new nbi$a(this));
+        final nbi nbi = (nbi)o;
+        return this.a == nbi.a && this.b == nbi.b;
     }
     
-    public final void a() {
-        this.b.onNext((Object)mbi$b.D0);
-    }
-    
-    public final void b() {
-        this.b.onNext((Object)mbi$b.F0);
-    }
-    
-    public final void c() {
-        this.a.onNext((Object)mbi$a.H0);
-    }
-    
-    public final h5j<mbi$b> d() {
-        return (h5j<mbi$b>)((h5j)this.b).distinctUntilChanged().skip(1L).observeOn(this.c);
-    }
-    
-    public final mbi$b e() {
-        return (mbi$b)this.b.f();
-    }
-    
-    public final void f() {
-        this.a.onNext((Object)mbi$a.F0);
-        if (mbi$b.G0 == this.e()) {
-            this.b.onNext((Object)mbi$b.H0);
+    @Override
+    public final int hashCode() {
+        final int a = this.a ? 1 : 0;
+        int n = 1;
+        int n2 = a;
+        if (a != 0) {
+            n2 = 1;
         }
-    }
-    
-    public final void g() {
-        this.d = true;
-        this.a.onNext((Object)mbi$a.G0);
-    }
-    
-    public final void h() {
-        this.a.onNext((Object)mbi$a.J0);
-        this.b.onNext((Object)mbi$b.I0);
-    }
-    
-    public final mbi$a i() {
-        return (mbi$a)this.a.f();
-    }
-    
-    public final void j() {
-        this.d = true;
-        this.a.onNext((Object)mbi$a.I0);
-        this.b.onNext((Object)mbi$b.E0);
-    }
-    
-    public final void k() {
-        this.b.onNext((Object)mbi$b.H0);
-    }
-    
-    public final void l(final boolean b) {
-        final mv1<mbi$a> a = this.a;
-        mbi$a mbi$a;
-        if (b) {
-            mbi$a = mbi$a.D0;
+        final int b = this.b ? 1 : 0;
+        if (b == 0) {
+            n = b;
         }
-        else {
-            mbi$a = mbi$a.E0;
-        }
-        a.onNext((Object)mbi$a);
-        this.b.onNext((Object)mbi$b.D0);
+        return n2 * 31 + n;
     }
     
-    public final h5j<mbi$a> m() {
-        return (h5j<mbi$a>)((h5j)this.a).distinctUntilChanged().skip(1L).observeOn(this.c);
+    @Override
+    public final String toString() {
+        return p4l.f("NavigationInstruction(startAtTop=", this.a, ", getNewer=", this.b, ")");
     }
     
-    public final void n() {
-        if (mbi$a.F0 == this.i()) {
-            this.b.onNext((Object)mbi$b.H0);
+    public static final class a implements xtd
+    {
+        public final boolean a;
+        
+        public a(final boolean a) {
+            this.a = a;
         }
-        else {
-            this.b.onNext((Object)mbi$b.G0);
-        }
-    }
-    
-    public final void onCameraClosed() {
-        if (this.d) {
-            this.d = false;
-            this.a.onNext((Object)mbi$a.E0);
-            this.b.onNext((Object)mbi$b.D0);
+        
+        public final boolean a() {
+            return false;
         }
     }
 }

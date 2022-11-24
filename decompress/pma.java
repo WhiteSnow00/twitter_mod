@@ -1,40 +1,34 @@
-import kotlinx.serialization.encoding.Encoder;
-import kotlinx.serialization.descriptors.SerialDescriptor;
-import kotlinx.serialization.encoding.Decoder;
-import kotlinx.serialization.KSerializer;
+import android.view.Menu;
+import android.content.res.Resources;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pma implements KSerializer<oma>
+public final class pma implements abi
 {
-    public static final pma b;
-    public final KSerializer<oma> a;
+    public final Resources F0;
+    public final qdw G0;
     
-    static {
-        b = new pma();
+    public pma(final Resources f0, final qdw g0) {
+        e0e.f((Object)f0, "resources");
+        e0e.f((Object)g0, "currentUser");
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public pma() {
-        final oma$b i = oma.i;
-        czd.e((Object)i, "SERIALIZER");
-        this.a = (lse$a)lse.b((rlp)i);
+    public final boolean N2(final zai zai, final Menu menu) {
+        e0e.f((Object)zai, "navComponent");
+        e0e.f((Object)menu, "menu");
+        zai.setTitle((CharSequence)this.F0.getString(2131954015));
+        if (!this.G0.a()) {
+            zai.a((CharSequence)flr.l(this.G0.c()));
+        }
+        return true;
     }
     
-    public final Object deserialize(final Decoder decoder) {
-        czd.f((Object)decoder, "decoder");
-        return this.a.deserialize(decoder);
-    }
-    
-    public final SerialDescriptor getDescriptor() {
-        return (SerialDescriptor)this.a.b;
-    }
-    
-    public final void serialize(final Encoder encoder, final Object o) {
-        final oma oma = (oma)o;
-        czd.f((Object)encoder, "encoder");
-        czd.f((Object)oma, "value");
-        this.a.serialize(encoder, (Object)oma);
+    public final int d2(final zai zai) {
+        e0e.f((Object)zai, "navComponent");
+        return 2;
     }
 }

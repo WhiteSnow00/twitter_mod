@@ -9,129 +9,129 @@ import java.util.Objects;
 
 public final class f implements h, h$a
 {
-    public final i$b C0;
-    public final long D0;
-    public final qx E0;
-    public i F0;
-    public h G0;
-    public h$a H0;
-    public long I0;
+    public final i$b F0;
+    public final long G0;
+    public final sx H0;
+    public i I0;
+    public h J0;
+    public h$a K0;
+    public long L0;
     
-    public f(final i$b c0, final qx e0, final long d0) {
-        this.C0 = c0;
-        this.E0 = e0;
-        this.D0 = d0;
-        this.I0 = -9223372036854775807L;
+    public f(final i$b f0, final sx h0, final long g0) {
+        this.F0 = f0;
+        this.H0 = h0;
+        this.G0 = g0;
+        this.L0 = -9223372036854775807L;
     }
     
     public final void a(final i$b i$b) {
-        long d0 = this.D0;
-        final long i0 = this.I0;
-        if (i0 != -9223372036854775807L) {
-            d0 = i0;
+        long g0 = this.G0;
+        final long l0 = this.L0;
+        if (l0 != -9223372036854775807L) {
+            g0 = l0;
         }
-        final i f0 = this.F0;
-        Objects.requireNonNull(f0);
-        final h f2 = f0.f(i$b, this.E0, d0);
-        this.G0 = f2;
-        if (this.H0 != null) {
-            f2.l((h$a)this, d0);
-        }
-    }
-    
-    public final long b() {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        return g0.b();
-    }
-    
-    public final boolean c() {
-        final h g0 = this.G0;
-        return g0 != null && g0.c();
-    }
-    
-    public final boolean d(final long n) {
-        final h g0 = this.G0;
-        return g0 != null && g0.d(n);
-    }
-    
-    public final long e() {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        return g0.e();
-    }
-    
-    public final void f(final long n) {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        g0.f(n);
-    }
-    
-    public final long g(final hha[] array, final boolean[] array2, final bro[] array3, final boolean[] array4, long n) {
-        final long i0 = this.I0;
-        if (i0 != -9223372036854775807L && n == this.D0) {
-            this.I0 = -9223372036854775807L;
-            n = i0;
-        }
-        final h g0 = this.G0;
-        final int a = imw.a;
-        return g0.g(array, array2, array3, array4, n);
-    }
-    
-    public final long h(final long n, final fbp fbp) {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        return g0.h(n, fbp);
-    }
-    
-    public final long j(final long n) {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        return g0.j(n);
-    }
-    
-    public final long k() {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        return g0.k();
-    }
-    
-    public final void l(final h$a h0, long d0) {
-        this.H0 = h0;
-        final h g0 = this.G0;
-        if (g0 != null) {
-            d0 = this.D0;
-            final long i0 = this.I0;
-            if (i0 != -9223372036854775807L) {
-                d0 = i0;
-            }
-            g0.l((h$a)this, d0);
+        final i i0 = this.I0;
+        Objects.requireNonNull(i0);
+        final h f = i0.f(i$b, this.H0, g0);
+        this.J0 = f;
+        if (this.K0 != null) {
+            f.o((h$a)this, g0);
         }
     }
     
-    public final void m(final p p) {
+    public final boolean b() {
+        final h j0 = this.J0;
+        return j0 != null && j0.b();
+    }
+    
+    public final long d() {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        return j0.d();
+    }
+    
+    public final void e(final p p) {
         final h h = (h)p;
-        final h$a h2 = this.H0;
-        final int a = imw.a;
-        ((p$a)h2).m((p)this);
+        final h$a k0 = this.K0;
+        final int a = rnw.a;
+        ((p$a)k0).e((p)this);
     }
     
-    public final void n(final h h) {
-        final h$a h2 = this.H0;
-        final int a = imw.a;
-        h2.n((h)this);
+    public final boolean f(final long n) {
+        final h j0 = this.J0;
+        return j0 != null && j0.f(n);
     }
     
-    public final void p() throws IOException {
+    public final long g() {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        return j0.g();
+    }
+    
+    public final void h(final long n) {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        j0.h(n);
+    }
+    
+    public final void i(final h h) {
+        final h$a k0 = this.K0;
+        final int a = rnw.a;
+        k0.i((h)this);
+    }
+    
+    public final long j(final tha[] array, final boolean[] array2, final mso[] array3, final boolean[] array4, long n) {
+        final long l0 = this.L0;
+        if (l0 != -9223372036854775807L && n == this.G0) {
+            this.L0 = -9223372036854775807L;
+            n = l0;
+        }
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        return j0.j(array, array2, array3, array4, n);
+    }
+    
+    public final long k(final long n, final rcp rcp) {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        return j0.k(n, rcp);
+    }
+    
+    public final long m(final long n) {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        return j0.m(n);
+    }
+    
+    public final long n() {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        return j0.n();
+    }
+    
+    public final void o(final h$a k0, long g0) {
+        this.K0 = k0;
+        final h j0 = this.J0;
+        if (j0 != null) {
+            g0 = this.G0;
+            final long l0 = this.L0;
+            if (l0 != -9223372036854775807L) {
+                g0 = l0;
+            }
+            j0.o((h$a)this, g0);
+        }
+    }
+    
+    public final void q() throws IOException {
         try {
-            final h g0 = this.G0;
-            if (g0 != null) {
-                g0.p();
+            final h j0 = this.J0;
+            if (j0 != null) {
+                j0.q();
             }
             else {
-                final i f0 = this.F0;
-                if (f0 != null) {
-                    f0.l();
+                final i i0 = this.I0;
+                if (i0 != null) {
+                    i0.l();
                 }
             }
         }
@@ -140,15 +140,15 @@ public final class f implements h, h$a
         }
     }
     
-    public final mvt r() {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        return g0.r();
+    public final twt v() {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        return j0.v();
     }
     
-    public final void u(final long n, final boolean b) {
-        final h g0 = this.G0;
-        final int a = imw.a;
-        g0.u(n, b);
+    public final void x(final long n, final boolean b) {
+        final h j0 = this.J0;
+        final int a = rnw.a;
+        j0.x(n, b);
     }
 }

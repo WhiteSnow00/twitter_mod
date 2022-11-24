@@ -1,97 +1,49 @@
-import java.util.LinkedList;
-import java.util.Set;
-import java.util.LinkedHashMap;
-import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Collection;
+import java.util.ArrayList;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class peg
+public final class peg implements Runnable
 {
-    public final Object a = a;
-    public final Object b = new LinkedHashMap();
+    public final qeg F0;
     
-    public peg(final int n) {
-        if (n != 2) {
-            this.a = new HashSet();
-            this.b = new sq2();
+    public peg(final qeg f0) {
+        this.F0 = f0;
+    }
+    
+    @Override
+    public final void run() {
+        if (this.F0.d == null) {
             return;
         }
-        this.a = new HashSet();
-        this.b = new HashSet();
-    }
-    
-    public Object a(final int n) {
-        final sq2 sq2 = (sq2)this.b;
-        synchronized (sq2) {
-            final sq2$a sq2$a = (sq2$a)sq2.a.get(n);
-            Object pollFirst;
-            if (sq2$a == null) {
-                pollFirst = null;
-                monitorexit(sq2);
+        final oeg d = this.F0.d;
+        final V a = d.a;
+        if (a != null) {
+            final qeg f0 = this.F0;
+            synchronized (f0) {
+                final Iterator iterator = new ArrayList(f0.a).iterator();
+                while (iterator.hasNext()) {
+                    ((geg)iterator.next()).a((Object)a);
+                }
+                return;
+            }
+        }
+        final qeg f2 = this.F0;
+        final Throwable b = d.b;
+        synchronized (f2) {
+            final ArrayList list = new ArrayList(f2.b);
+            if (list.isEmpty()) {
+                kag.c("Lottie encountered an error but no failure listener was added:", b);
+                monitorexit(f2);
             }
             else {
-                pollFirst = sq2$a.c.pollFirst();
-                sq2.a(sq2$a);
-                monitorexit(sq2);
-            }
-            if (pollFirst != null) {
-                synchronized (this) {
-                    ((Set)this.a).remove(pollFirst);
+                final Iterator iterator2 = list.iterator();
+                while (iterator2.hasNext()) {
+                    ((geg)iterator2.next()).a((Object)b);
                 }
-            }
-            return pollFirst;
-        }
-    }
-    
-    public abstract int b(final Object p0);
-    
-    public final Object c() {
-        final sq2 sq2 = (sq2)this.b;
-        synchronized (sq2) {
-            final sq2$a c = sq2.c;
-            Object pollLast;
-            if (c == null) {
-                pollLast = null;
-                monitorexit(sq2);
-            }
-            else {
-                pollLast = c.c.pollLast();
-                if (c.c.isEmpty()) {
-                    sq2.b(c);
-                    sq2.a.remove(c.b);
-                }
-                monitorexit(sq2);
-            }
-            if (pollLast != null) {
-                synchronized (this) {
-                    ((Set)this.a).remove(pollLast);
-                }
-            }
-            return pollLast;
-        }
-    }
-    
-    public void d(final Object o) {
-        synchronized (this) {
-            final boolean add = ((Set)this.a).add(o);
-            monitorexit(this);
-            if (add) {
-                final sq2 sq2 = (sq2)this.b;
-                final int b = this.b(o);
-                monitorenter(sq2);
-                try {
-                    sq2$a sq2$a;
-                    if ((sq2$a = (sq2$a)sq2.a.get(b)) == null) {
-                        sq2$a = new sq2$a(b, new LinkedList());
-                        sq2.a.put(b, (Object)sq2$a);
-                    }
-                    sq2$a.c.addLast(o);
-                    sq2.a(sq2$a);
-                    monitorexit(sq2);
-                }
-                finally {}
             }
         }
     }

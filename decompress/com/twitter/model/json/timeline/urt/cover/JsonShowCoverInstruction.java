@@ -8,23 +8,23 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonShowCoverInstruction extends aih<q3q>
+public class JsonShowCoverInstruction extends tih<e5q>
 {
     @JsonField
-    public qnv a;
+    public apv a;
     @JsonField
-    public qzo b;
+    public b1p b;
     
     @Override
     public final Object s() {
-        final qnv a = this.a;
-        q3q q3q;
+        final apv a = this.a;
+        e5q e5q;
         if (a != null) {
-            q3q = new q3q(a, this.b);
+            e5q = new e5q(a, this.b);
         }
         else {
-            q3q = null;
+            e5q = null;
         }
-        return q3q;
+        return e5q;
     }
 }

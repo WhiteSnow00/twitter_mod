@@ -1,45 +1,35 @@
-import java.util.Objects;
-import java.util.Map;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class nd extends xj1<Object>
+public abstract class nd<T> extends nb<T>
 {
-    public final /* synthetic */ od b;
+    public final pop h;
+    public final xpm i;
     
-    public nd(final od b) {
-        this.b = b;
+    public nd(final m1l<T> m1l, final pop h, final xpm i) {
+        rrb.b();
+        this.h = h;
+        this.i = i;
+        super.a = h.g;
+        rrb.b();
+        i.c((n1l)h);
+        rrb.b();
+        rrb.b();
+        m1l.a((pk6<T>)new md(this), h);
+        rrb.b();
+        rrb.b();
     }
     
-    public final void g() {
-        final od b = this.b;
-        synchronized (b) {
-            ri4.w(((ob)b).isClosed());
+    @Override
+    public final boolean close() {
+        if (!super.close()) {
+            return false;
         }
-    }
-    
-    public final void h(final Throwable t) {
-        final od b = this.b;
-        if (((ob)b).i(t, (Map)b.h.getExtras())) {
-            b.i.e((q0l)b.h, t);
+        if (!this.g()) {
+            this.i.i((n1l)this.h);
+            this.h.t();
         }
-    }
-    
-    public final void i(final Object o, final int n) {
-        final od b = this.b;
-        final cnp h = b.h;
-        final vi4 vi4 = (vi4)b;
-        Objects.requireNonNull(vi4);
-        final wi4 c = wi4.c((wi4)o);
-        final boolean e = xj1.e(n);
-        if (((ob)vi4).k((Object)c, e, (Map)h.getExtras()) && e) {
-            ((od)vi4).i.f((q0l)((od)vi4).h);
-        }
-    }
-    
-    public final void j(final float n) {
-        ((ob)this.b).j(n);
+        return true;
     }
 }

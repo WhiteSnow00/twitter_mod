@@ -2,6 +2,7 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hfc extends vmd
+public interface hfc
 {
+    k9x i();
 }

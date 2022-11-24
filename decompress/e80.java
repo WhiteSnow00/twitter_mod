@@ -4,13 +4,13 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e80 extends p6b
+public final class e80 extends q7b
 {
-    public e80(final List<dre<Integer>> list) {
-        super((Object)list, 1);
+    public e80(final List<zre<Integer>> list) {
+        super(list, 1);
     }
     
-    public final rm1<Integer, Integer> V() {
-        return (rm1<Integer, Integer>)new sq4((List)super.E0);
+    public final wm1<Integer, Integer> g() {
+        return (wm1<Integer, Integer>)new xr4((List)super.G0);
     }
 }

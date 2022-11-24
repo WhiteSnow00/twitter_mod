@@ -11,7 +11,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject;
 import com.twitter.nft.subsystem.model.Web3Wallet;
 
 @JsonObject
-public class JsonWeb3WalletResponse extends fih<Web3Wallet>
+public class JsonWeb3WalletResponse extends tih<Web3Wallet>
 {
     @JsonField(name = { "nickname" })
     public String a;
@@ -21,6 +21,7 @@ public class JsonWeb3WalletResponse extends fih<Web3Wallet>
     @JsonField(name = { "network" })
     public Network c;
     
+    @Override
     public final Object s() {
         return new Web3Wallet(this.a, this.b, this.c);
     }

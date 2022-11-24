@@ -1,37 +1,30 @@
+import android.view.accessibility.AccessibilityRecord;
+import android.view.accessibility.AccessibilityEvent;
 import android.view.View;
-import android.view.ViewGroup;
-import android.util.Property;
+import com.google.android.material.internal.CheckableImageButton;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class c84 extends Property<ViewGroup, Float>
+public final class c84 extends wf
 {
-    public static final Property<ViewGroup, Float> a;
+    public final CheckableImageButton d;
     
-    static {
-        c84.a = new c84();
+    public c84(final CheckableImageButton d) {
+        this.d = d;
     }
     
-    public c84() {
-        super((Class)Float.class, "childrenAlpha");
+    @Override
+    public final void c(final View view, final AccessibilityEvent accessibilityEvent) {
+        super.c(view, accessibilityEvent);
+        ((AccessibilityRecord)accessibilityEvent).setChecked(this.d.isChecked());
     }
     
-    public final Object get(final Object o) {
-        Float value = (Float)((View)o).getTag(2131430152);
-        if (value == null) {
-            value = 1.0f;
-        }
-        return value;
-    }
-    
-    public final void set(final Object o, final Object o2) {
-        final ViewGroup viewGroup = (ViewGroup)o;
-        final float floatValue = (float)o2;
-        ((View)viewGroup).setTag(2131430152, (Object)floatValue);
-        for (int childCount = viewGroup.getChildCount(), i = 0; i < childCount; ++i) {
-            viewGroup.getChildAt(i).setAlpha(floatValue);
-        }
+    @Override
+    public final void d(final View view, final ng ng) {
+        super.a.onInitializeAccessibilityNodeInfo(view, ng.a);
+        ng.C(this.d.J0);
+        ng.D(this.d.isChecked());
     }
 }

@@ -9,45 +9,53 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonResource$$JsonObjectMapper extends JsonMapper<JsonResource>
 {
-    public static JsonResource _parse(final khe khe) throws IOException {
+    public static JsonResource _parse(final qhe qhe) throws IOException {
         final JsonResource jsonResource = new JsonResource();
-        if (khe.e() == null) {
-            khe.i0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonResource, d, khe);
-            khe.m0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonResource, d, qhe);
+            qhe.m0();
         }
         return jsonResource;
     }
     
-    public static void _serialize(final JsonResource jsonResource, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonResource jsonResource, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            yfe.r0();
         }
-        tfe.u0("id", jsonResource.a);
+        yfe.u0("id", jsonResource.a);
         if (b) {
-            tfe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonResource jsonResource, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonResource jsonResource, final String s, final qhe qhe) throws IOException {
         if ("id".equals(s)) {
-            jsonResource.a = khe.T((String)null);
+            jsonResource.a = qhe.T((String)null);
         }
     }
     
-    public JsonResource parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonResource parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public void serialize(final JsonResource jsonResource, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonResource, tfe, b);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
+    }
+    
+    public void serialize(final JsonResource jsonResource, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonResource, yfe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonResource)o, yfe, b);
     }
 }

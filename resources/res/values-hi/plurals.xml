@@ -305,8 +305,8 @@
         <item quantity="other">%d अन्य</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">सुपर फ़ॉलोअर</item>
-        <item quantity="other">सुपर फ़ॉलोअर्स</item>
+        <item quantity="one">सब्सक्राइबर</item>
+        <item quantity="other">सब्सक्राइबर</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s पसंदीदा</item>
@@ -402,7 +402,7 @@
         <item quantity="other">﻿%1$s को और %2$d अन्य﻿ को जवाब दे रहे हैं</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s और %2$d अन्य﻿ को जवाब दे रहे हैं. आपका जवाब अन्य सुपर फ़ॉलोअर्स को भी दिखाई देगा.</item>
+        <item quantity="other">﻿%1$s और %2$d अन्य﻿ को जवाब दे रहे हैं. आपका जवाब अन्य सब्सक्राइबर्स को भी दिखाई देगा.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%3$s﻿ में ﻿%1$s और %2$d अन्य﻿ को जवाब दे रहे हैं</item>
@@ -411,7 +411,7 @@
         <item quantity="other">﻿%1$s %2$s और %3$d अन्य﻿ को जवाब दे रहे हैं</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s %2$s और %3$d अन्य﻿ को जवाब दे रहे हैं. आपका जवाब अन्य सुपर फ़ॉलोअर्स को भी दिखाई देगा.</item>
+        <item quantity="other">﻿%1$s %2$s और %3$d अन्य﻿ को जवाब दे रहे हैं. आपका जवाब अन्य सब्सक्राइबर्स को भी दिखाई देगा.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%4$s﻿ में ﻿%1$s %2$s और %3$d अन्य﻿ को जवाब दे रहे हैं</item>

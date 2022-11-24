@@ -2,20 +2,29 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class buz implements auz
+public final class buz implements dgz
 {
-    public static final tcz a;
+    public static final buz G0;
+    public final dgz F0;
     
     static {
-        final edz edz = new edz(icz.a(), false, true);
-        edz.a("measurement.id.lifecycle.app_in_background_parameter", 0L);
-        edz.c("measurement.lifecycle.app_backgrounded_tracking", true);
-        a = (tcz)edz.c("measurement.lifecycle.app_in_background_parameter", false);
-        edz.a("measurement.id.lifecycle.app_backgrounded_tracking", 0L);
+        G0 = new buz();
     }
     
-    @Override
-    public final boolean a() {
-        return (boolean)((mdz)buz.a).b();
+    public buz() {
+        final igz igz = new igz((Object)new suz());
+        this.F0 = yru.M((dgz)igz);
+    }
+    
+    public static void c() {
+        buz.G0.b().a();
+    }
+    
+    public final /* bridge */ Object a() {
+        return this.b();
+    }
+    
+    public final ruz b() {
+        return (ruz)this.F0.a();
     }
 }

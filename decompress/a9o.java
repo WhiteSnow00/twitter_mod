@@ -1,28 +1,21 @@
-import com.twitter.rooms.manager.RoomStateManager$l0;
-import java.util.Map;
-import java.util.Set;
-import tv.periscope.model.b;
-import com.twitter.rooms.di.room.RoomObjectGraph;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class a9o extends ste implements qsb<vqn, vqn>
+public final class a9o extends pue implements stb<Long, idq<? extends Long>>
 {
-    public static final a9o D0;
+    public final u8o F0;
+    public final String G0;
     
-    static {
-        D0 = new a9o();
-    }
-    
-    public a9o() {
+    public a9o(final u8o f0, final String g0) {
+        this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final vqn vqn = (vqn)o;
-        czd.f((Object)vqn, "$this$setState");
-        return vqn.l(vqn, null, null, false, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0, null, null, null, false, null, null, null, false, null, 0, null, null, null, null, null, false, null, false, false, false, null, null, false, -8388609, 2047);
+        final Long n = (Long)o;
+        e0e.f((Object)n, "sentTweetId");
+        return this.F0.f.b(this.G0, (long)n).w((Object)n);
     }
 }

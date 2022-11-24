@@ -6,7 +6,7 @@ package com.twitter.android.revenue.brandsurvey.di.retained;
 
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@l4j
+@d5j
 public interface BrandSurveyQuestionRetainedObjectGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
 }

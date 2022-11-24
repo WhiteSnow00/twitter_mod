@@ -2,22 +2,15 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class piz extends miz
+public final class piz
 {
     @Override
-    public final xiz a(final Object o) {
-        final xiz zza = ((pjz)o).zza;
+    public final boolean equals(final Object o) {
         throw null;
     }
     
     @Override
-    public final void b(final Object o) {
-        final xiz zza = ((pjz)o).zza;
+    public final int hashCode() {
         throw null;
-    }
-    
-    @Override
-    public final boolean c(final xnz xnz) {
-        return xnz instanceof pjz;
     }
 }

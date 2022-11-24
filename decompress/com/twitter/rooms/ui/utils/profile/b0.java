@@ -4,25 +4,25 @@
 
 package com.twitter.rooms.ui.utils.profile;
 
-public final class b0 implements orc$a<t12>
+public final class b0 implements osc$a<b22>
 {
-    public final RoomProfileViewModel D0;
-    public final long E0;
+    public final RoomProfileViewModel F0;
+    public final long G0;
     
-    public b0(final RoomProfileViewModel d0, final long e0) {
-        this.D0 = d0;
-        this.E0 = e0;
+    public b0(final RoomProfileViewModel f0, final long g0) {
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public final void a(final wv0 wv0) {
+    public final void a(final aw0 aw0) {
     }
     
-    public final void b(final wv0 wv0) {
-        final t12 t12 = (t12)wv0;
-        this.D0.W0.c(this.E0);
-        vjo.G(this.D0.T0, "user_profile", "actions", "unblock", "click", null, 48);
+    public final void b(final aw0 aw0) {
+        final b22 b22 = (b22)aw0;
+        this.F0.Y0.c(this.G0);
+        oko.G(this.F0.V0, "user_profile", "actions", "unblock", "click", (ufv)null, 48);
     }
     
-    public final void c(final wv0 wv0, final boolean b) {
+    public final void c(final aw0 aw0, final boolean b) {
     }
 }

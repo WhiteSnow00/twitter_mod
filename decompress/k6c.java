@@ -1,41 +1,33 @@
-import com.twitter.model.json.pc.JsonEngagementRequestInput;
-import com.twitter.util.user.UserIdentifier;
-import android.content.Context;
+import android.os.Parcel;
+import android.os.Bundle;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class k6c extends d6c
+public final class k6c extends sd
 {
-    public static final k6c.k6c$b Companion;
-    public static final cba t1;
-    public final long r1;
-    public uil s1;
+    public static final Parcelable$Creator<k6c> CREATOR;
+    public final int F0;
+    public int G0;
+    public Bundle H0;
     
     static {
-        Companion = new k6c.k6c$b();
-        t1 = (cba)bba.Companion.b("app", "twitter_service", "favorite", "delete");
+        CREATOR = (Parcelable$Creator)new q1y();
     }
     
-    public k6c(final Context context, final UserIdentifier userIdentifier, final long n, final long r1) {
-        final vav c2 = vav.c2(userIdentifier);
-        czd.e((Object)c2, "get(userIdentifier)");
-        czd.f((Object)context, "context");
-        czd.f((Object)userIdentifier, "userIdentifier");
-        super(context, userIdentifier, n, false, c2);
-        this.r1 = r1;
-        ((wv0<Object>)this).G((qtm<Object>)new mdi());
-        ((a2p$a)((anm<Object, Object>)this).Y()).a.K0 = (bba)k6c.t1;
+    public k6c(final int f0, final int g0, final Bundle h0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
     }
     
-    public final tqc f0() {
-        final p6c a = w1e.A("unfavorite_tweet");
-        a.p("tweet_id", (Object)this.r1);
-        final uil s1 = this.s1;
-        if (s1 != null) {
-            a.p("engagement_request", (Object)JsonEngagementRequestInput.s(s1));
-        }
-        return (tqc)((n4j)a).e();
+    public final void writeToParcel(final Parcel parcel, int x1) {
+        x1 = xd.x1(parcel, 20293);
+        xd.n1(parcel, 1, this.F0);
+        xd.n1(parcel, 2, this.G0);
+        xd.g1(parcel, 3, this.H0);
+        xd.B1(parcel, x1);
     }
 }

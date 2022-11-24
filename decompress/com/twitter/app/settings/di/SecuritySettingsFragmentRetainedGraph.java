@@ -7,10 +7,10 @@ package com.twitter.app.settings.di;
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 import com.twitter.app.common.inject.retained.RetainedObjectGraph;
 
-@r4j
+@d5j
 public interface SecuritySettingsFragmentRetainedGraph extends RetainedObjectGraph
 {
-    @r4j
+    @d5j
     public interface SecuritySettingsFragmentViewGraph extends ViewObjectGraph
     {
     }

@@ -1,85 +1,72 @@
+import java.util.Iterator;
+import android.content.Context;
+import com.twitter.util.user.UserIdentifier;
+import java.util.List;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class upi
+public final class upi extends x0b
 {
-    public final String a;
-    public final String b;
-    public final int c;
-    public final String d;
-    public final boolean e;
-    public final boolean f;
-    public final xpi g;
+    public static final List<Integer> R0;
+    public final long M0;
+    public final UserIdentifier N0;
+    public final tsc O0;
+    public final kbv P0;
+    public final ipv Q0;
     
-    public upi(final String a, final String b, final int c, final String d, final boolean e, final boolean f, final xpi g) {
-        czd.f((Object)a, "id");
-        czd.f((Object)b, "name");
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-        this.g = g;
+    static {
+        R0 = ojf.w((Object)7, (Object[])new Integer[] { 8, 9, 6 });
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof upi)) {
-            return false;
-        }
-        final upi upi = (upi)o;
-        return czd.a((Object)this.a, (Object)upi.a) && czd.a((Object)this.b, (Object)upi.b) && this.c == upi.c && czd.a((Object)this.d, (Object)upi.d) && this.e == upi.e && this.f == upi.f && this.g == upi.g;
+    public upi(final Context context, final UserIdentifier n0, final long m0, final tsc o0, final kbv p6, final ipv q0) {
+        super(context);
+        this.M0 = m0;
+        this.N0 = n0;
+        this.O0 = o0;
+        this.P0 = p6;
+        this.Q0 = q0;
     }
     
-    @Override
-    public final int hashCode() {
-        final int f = hmg.f(this.b, this.a.hashCode() * 31, 31);
-        final int c = this.c;
-        final String d = this.d;
-        int hashCode = 0;
-        int hashCode2;
-        if (d == null) {
-            hashCode2 = 0;
+    public final void m() {
+        if (!"enabled".equalsIgnoreCase(ita.b().d("android_notifications_tab_urt_6030"))) {
+            return;
         }
-        else {
-            hashCode2 = d.hashCode();
+        final oxo t = ((sp1)kbv.d2(this.N0)).T();
+        final String a = ttl.a(new String[] { ttl.b("data_type", (Object)8), ttl.g("type", (Iterable)upi.R0), ttl.b("data_id", (Object)this.M0), ttl.b("data_type_group", (Object)6) });
+        final xmq c = ((rmq)t.f((Class)qss.class)).c();
+        final ojf h = ojf.H();
+        final zsl$a zsl$a = new zsl$a();
+        ((lp1$a)zsl$a).s(a);
+        ((lp1$a)zsl$a).o("type");
+        Object o = c.e((zsl)((z4j)zsl$a).e());
+        try {
+            while (((j1m)o).moveToNext()) {
+                h.p((Object)((qss$a)((j1m)o).a()).getType());
+            }
+            ((j1m)o).close();
+            for (final int intValue : (List)((z4j)h).e()) {
+                o = this.O0;
+                final kbv p0 = this.P0;
+                final vdq vdq = new vdq((Object)p0);
+                final fxs$a fxs$a = new fxs$a();
+                fxs$a.c = this.N0.getId();
+                fxs$a.a = intValue;
+                ((tsc)o).f((osc)new szi(super.I0, this.N0, intValue, 1, (jpv)new x98(new y98((pml)vdq, (fxs)((z4j)fxs$a).e(), 2, this.Q0)), p0));
+            }
         }
-        final int e = this.e ? 1 : 0;
-        int n = 1;
-        int n2 = e;
-        if (e != 0) {
-            n2 = 1;
+        finally {
+            if (o != null) {
+                try {
+                    ((j1m)o).close();
+                }
+                finally {
+                    final Throwable t2;
+                    final Throwable t3;
+                    t2.addSuppressed(t3);
+                }
+            }
         }
-        final int f2 = this.f ? 1 : 0;
-        if (f2 == 0) {
-            n = f2;
-        }
-        final xpi g = this.g;
-        if (g != null) {
-            hashCode = g.hashCode();
-        }
-        return ((((f + c) * 31 + hashCode2) * 31 + n2) * 31 + n) * 31 + hashCode;
-    }
-    
-    @Override
-    public final String toString() {
-        final String a = this.a;
-        final String b = this.b;
-        final int c = this.c;
-        final String d = this.d;
-        final boolean e = this.e;
-        final boolean f = this.f;
-        final xpi g = this.g;
-        final StringBuilder q = tqf.q("NotificationChannel(id=", a, ", name=", b, ", importance=");
-        i81.x(q, c, ", description=", d, ", lights=");
-        jg9.u(q, e, ", vibrate=", f, ", sound=");
-        q.append(g);
-        q.append(")");
-        return q.toString();
     }
 }

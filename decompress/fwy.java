@@ -1,3 +1,4 @@
+import java.lang.annotation.Annotation;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
@@ -7,33 +8,37 @@ import java.util.HashMap;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fwy implements p4j<n9z>
+public final class fwy implements b5j<h9z>
 {
     public static final fwy a;
     
     static {
-        final zzz d0 = zzz.D0;
+        final z000 f0 = z000.F0;
         a = new fwy();
-        final dyz dyz = new dyz(1, d0);
+        final czz czz = new czz(1, f0);
         final HashMap hashMap = new HashMap();
-        hashMap.put(dyz.annotationType(), dyz);
+        hashMap.put(((Annotation)czz).annotationType(), czz);
         Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final dyz dyz2 = new dyz(2, d0);
+        final czz czz2 = new czz(2, f0);
         final HashMap hashMap2 = new HashMap();
-        hashMap2.put(dyz2.annotationType(), dyz2);
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
         Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final dyz dyz3 = new dyz(3, d0);
+        final czz czz3 = new czz(3, f0);
         final HashMap hashMap3 = new HashMap();
-        hashMap3.put(dyz3.annotationType(), dyz3);
+        hashMap3.put(((Annotation)czz3).annotationType(), czz3);
         Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
-        final dyz dyz4 = new dyz(4, d0);
+        final czz czz4 = new czz(4, f0);
         final HashMap hashMap4 = new HashMap();
-        jg9.w(dyz4, hashMap4, dyz4, hashMap4);
+        hashMap4.put(((Annotation)czz4).annotationType(), czz4);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap4));
+        final czz czz5 = new czz(5, f0);
+        final HashMap hashMap5 = new HashMap();
+        ehk.g(czz5, hashMap5, czz5, hashMap5);
     }
     
     public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final n9z n9z = (n9z)o;
-        final q4j q4j = (q4j)o2;
+        final h9z h9z = (h9z)o;
+        final c5j c5j = (c5j)o2;
         throw null;
     }
 }

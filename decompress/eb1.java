@@ -5,7 +5,7 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class eb1 extends ijc
+public final class eb1 extends kjc
 {
     public final String a;
     public final List<String> b;
@@ -29,9 +29,9 @@ public final class eb1 extends ijc
         if (o == this) {
             return true;
         }
-        if (o instanceof ijc) {
-            final ijc ijc = (ijc)o;
-            if (!this.a.equals(ijc.b()) || !this.b.equals(ijc.a())) {
+        if (o instanceof kjc) {
+            final kjc kjc = (kjc)o;
+            if (!this.a.equals(kjc.b()) || !this.b.equals(kjc.a())) {
                 b = false;
             }
             return b;
@@ -44,9 +44,9 @@ public final class eb1 extends ijc
     }
     
     public final String toString() {
-        final StringBuilder g = w48.g("HeartBeatResult{userAgent=");
-        g.append(this.a);
-        g.append(", usedDates=");
-        return gp.A(g, (List)this.b, "}");
+        final StringBuilder f = ehk.f("HeartBeatResult{userAgent=");
+        f.append(this.a);
+        f.append(", usedDates=");
+        return ad.A(f, this.b, "}");
     }
 }

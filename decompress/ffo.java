@@ -1,28 +1,29 @@
-import java.util.concurrent.TimeUnit;
+import java.util.Iterator;
+import java.util.ArrayList;
+import com.twitter.rooms.model.AudioSpaceTopicItem;
+import java.util.Set;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ffo
+public final class ffo extends lhm<Set<? extends AudioSpaceTopicItem>>
 {
-    public static final rlp<afo> a;
-    public static final long b;
-    
-    static {
-        ffo.a = new bfo();
-        b = TimeUnit.DAYS.toMillis(30L);
+    public ffo() {
+        super((Object)null, 1, (wg8)null);
     }
     
-    public static final afo a(String s) {
-        final boolean b = s.length() > 0;
-        afo afo = null;
-        if (!b) {
-            s = null;
+    public final Set<String> g() {
+        final Set<AudioSpaceTopicItem> h = this.h();
+        final ArrayList list = new ArrayList<String>(nr4.d1((Iterable)h, 10));
+        final Iterator<Object> iterator = h.iterator();
+        while (iterator.hasNext()) {
+            list.add(iterator.next().getTopicId());
         }
-        if (s != null) {
-            afo = (afo)klp.a(oi1.a(s), (rlp)ffo.a);
-        }
-        return afo;
+        return rr4.n2((Iterable)list);
+    }
+    
+    public final Set<AudioSpaceTopicItem> h() {
+        return (Set)this.e((Object)r3a.F0);
     }
 }

@@ -8,14 +8,15 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonInAppMessageInfo extends fih<gfd>
+public class JsonInAppMessageInfo extends tih<ggd>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     
+    @Override
     public final Object s() {
-        return new gfd(this.a, this.b);
+        return new ggd(this.a, this.b);
     }
 }

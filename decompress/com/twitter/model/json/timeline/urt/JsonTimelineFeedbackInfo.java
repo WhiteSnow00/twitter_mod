@@ -9,30 +9,30 @@ import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineFeedbackInfo extends aih<cvs>
+public class JsonTimelineFeedbackInfo extends tih<kws>
 {
     @JsonField(name = { "feedbackKeys" })
     public List<String> a;
     @JsonField
     public String b;
     @JsonField
-    public vva c;
+    public wva c;
     
     @Override
     public final Object s() {
         Object o;
         if (this.a == null) {
-            zi.A("A JsonTimelineFeedbackInfo must have a non-null feedbackActionKeys");
+            c0e.i("A JsonTimelineFeedbackInfo must have a non-null feedbackActionKeys");
             o = null;
         }
         else {
-            o = new cvs(this.a, this.b, this.c);
+            o = new kws((List)this.a, this.b, this.c);
         }
         return o;
     }
     
     @JsonObject
-    public static class JsonTimelineFeedbackDisplayContext extends aih<vva>
+    public static class JsonTimelineFeedbackDisplayContext extends tih<wva>
     {
         @JsonField
         public String a;
@@ -40,11 +40,11 @@ public class JsonTimelineFeedbackInfo extends aih<cvs>
         @Override
         public final Object s() {
             Object o;
-            if (pjr.e((CharSequence)this.a)) {
+            if (flr.e((CharSequence)this.a)) {
                 o = null;
             }
             else {
-                o = new vva(this.a);
+                o = new wva(this.a);
             }
             return o;
         }

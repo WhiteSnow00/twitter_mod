@@ -9,53 +9,53 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfSmsVerifyBeginResponse$$JsonObjectMapper extends JsonMapper<JsonOcfSmsVerifyBeginResponse>
 {
-    public static JsonOcfSmsVerifyBeginResponse _parse(final tge tge) throws IOException {
+    public static JsonOcfSmsVerifyBeginResponse _parse(final qhe qhe) throws IOException {
         final JsonOcfSmsVerifyBeginResponse jsonOcfSmsVerifyBeginResponse = new JsonOcfSmsVerifyBeginResponse();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfSmsVerifyBeginResponse, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfSmsVerifyBeginResponse, d, qhe);
+            qhe.m0();
         }
         return jsonOcfSmsVerifyBeginResponse;
     }
     
-    public static void _serialize(final JsonOcfSmsVerifyBeginResponse jsonOcfSmsVerifyBeginResponse, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfSmsVerifyBeginResponse jsonOcfSmsVerifyBeginResponse, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
-        afe.t0("normalized_phone_number", jsonOcfSmsVerifyBeginResponse.a);
+        yfe.u0("normalized_phone_number", jsonOcfSmsVerifyBeginResponse.a);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfSmsVerifyBeginResponse jsonOcfSmsVerifyBeginResponse, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfSmsVerifyBeginResponse jsonOcfSmsVerifyBeginResponse, final String s, final qhe qhe) throws IOException {
         if ("normalized_phone_number".equals(s)) {
-            jsonOcfSmsVerifyBeginResponse.a = tge.T((String)null);
+            jsonOcfSmsVerifyBeginResponse.a = qhe.T((String)null);
         }
     }
     
-    public JsonOcfSmsVerifyBeginResponse parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfSmsVerifyBeginResponse parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfSmsVerifyBeginResponse jsonOcfSmsVerifyBeginResponse, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfSmsVerifyBeginResponse, afe, b);
+    public void serialize(final JsonOcfSmsVerifyBeginResponse jsonOcfSmsVerifyBeginResponse, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfSmsVerifyBeginResponse, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfSmsVerifyBeginResponse)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfSmsVerifyBeginResponse)o, yfe, b);
     }
 }

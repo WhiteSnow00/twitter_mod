@@ -9,8 +9,8 @@ import java.util.Map;
 import android.os.Parcel;
 import android.os.Parcelable$Creator;
 
-@xoe
-public class UsersContentViewProvider$SavedState<OBJ extends UsersContentViewProvider> extends zp1<OBJ>
+@upe
+public class UsersContentViewProvider$SavedState<OBJ extends UsersContentViewProvider> extends eq1<OBJ>
 {
     public static final Parcelable$Creator CREATOR;
     
@@ -26,37 +26,37 @@ public class UsersContentViewProvider$SavedState<OBJ extends UsersContentViewPro
         super((Object)obj);
     }
     
-    public OBJ deserializeValue(final vlp vlp, final OBJ obj) throws IOException, ClassNotFoundException {
-        final UsersContentViewProvider usersContentViewProvider = (UsersContentViewProvider)super.deserializeValue(vlp, (Object)obj);
-        usersContentViewProvider.c1 = vlp.s();
-        usersContentViewProvider.d1 = vlp.s();
-        usersContentViewProvider.e1 = (long[])((y4j)lw6.l).a(vlp);
-        usersContentViewProvider.f1 = (cgv)((y4j)cgv.N1).a(vlp);
-        usersContentViewProvider.i1 = (brb)((y4j)brb.E0).a(vlp);
-        usersContentViewProvider.j1 = (Map)gmw.s().a(vlp);
-        usersContentViewProvider.k1 = (f74)((y4j)f74.c).a(vlp);
-        usersContentViewProvider.m1 = vlp.x();
+    public OBJ deserializeValue(final rmp rmp, final OBJ obj) throws IOException, ClassNotFoundException {
+        final UsersContentViewProvider usersContentViewProvider = (UsersContentViewProvider)super.deserializeValue(rmp, (Object)obj);
+        usersContentViewProvider.e1 = rmp.u();
+        usersContentViewProvider.f1 = rmp.u();
+        usersContentViewProvider.g1 = (long[])((k5j)rx6.l).a(rmp);
+        usersContentViewProvider.h1 = (qgv)((k5j)qgv.P1).a(rmp);
+        usersContentViewProvider.k1 = (dsb)((k5j)dsb.G0).a(rmp);
+        usersContentViewProvider.l1 = (Map)vmw.o().a(rmp);
+        usersContentViewProvider.m1 = (j84)((k5j)j84.c).a(rmp);
+        usersContentViewProvider.o1 = rmp.z();
         return (OBJ)usersContentViewProvider;
     }
     
-    public /* bridge */ Object deserializeValue(final vlp vlp, final Object o) throws IOException, ClassNotFoundException {
-        return this.deserializeValue(vlp, (UsersContentViewProvider)o);
+    public /* bridge */ Object deserializeValue(final rmp rmp, final Object o) throws IOException, ClassNotFoundException {
+        return this.deserializeValue(rmp, (UsersContentViewProvider)o);
     }
     
-    public void serializeValue(final wlp wlp, final OBJ obj) throws IOException {
-        super.serializeValue(wlp, (Object)obj);
-        wlp.r(obj.c1);
-        wlp.r(obj.d1);
-        wlp.A((Object)obj.e1, (rlp)lw6.l);
-        wlp.A((Object)obj.f1, (rlp)cgv.N1);
-        ((y4j)brb.E0).c(wlp, (Object)obj.i1);
-        final int a = c5j.a;
-        wlp.A((Object)obj.j1, gmw.s());
-        ((y4j)f74.c).c(wlp, (Object)obj.k1);
-        wlp.x(obj.m1);
+    public void serializeValue(final smp smp, final OBJ obj) throws IOException {
+        super.serializeValue(smp, (Object)obj);
+        smp.t(obj.e1);
+        smp.t(obj.f1);
+        smp.C((Object)obj.g1, (nmp)rx6.l);
+        smp.C((Object)obj.h1, (nmp)qgv.P1);
+        ((k5j)dsb.G0).c(smp, (Object)obj.k1);
+        final int a = o5j.a;
+        smp.C((Object)obj.l1, vmw.o());
+        ((k5j)j84.c).c(smp, (Object)obj.m1);
+        smp.z(obj.o1);
     }
     
-    public /* bridge */ void serializeValue(final wlp wlp, final Object o) throws IOException {
-        this.serializeValue(wlp, (UsersContentViewProvider)o);
+    public /* bridge */ void serializeValue(final smp smp, final Object o) throws IOException {
+        this.serializeValue(smp, (UsersContentViewProvider)o);
     }
 }

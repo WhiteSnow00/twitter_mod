@@ -1,29 +1,36 @@
-import android.content.Context;
-import java.util.Set;
+import android.text.Html$TagHandler;
+import android.text.Html$ImageGetter;
+import android.text.Html;
+import android.os.Build$VERSION;
+import android.text.Spanned;
+import android.annotation.SuppressLint;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class orc implements nrc
+@SuppressLint({ "InlinedApi" })
+public final class orc
 {
-    public final xau a;
-    public final br0 b;
-    public final Set<String> c;
-    
-    public orc(final xau a, final Context context, final br0 b) {
-        zzd.f((Object)a, "prefs");
-        zzd.f((Object)context, "context");
-        zzd.f((Object)b, "applicationInfoProvider");
-        this.a = a;
-        this.b = b;
-        final String[] stringArray = context.getResources().getStringArray(2130903067);
-        zzd.e((Object)stringArray, "context.resources.getStr\u2026array.http_client_values)");
-        this.c = jt0.Y0((Object[])stringArray);
-        zzd.e((Object)context.getResources().getStringArray(2130903066), "context.resources.getStr\u2026http_client_mock_entries)");
+    public static Spanned a(final String s, final int n) {
+        if (Build$VERSION.SDK_INT >= 24) {
+            return a.a(s, n);
+        }
+        return Html.fromHtml(s);
     }
     
-    public final jsc a() {
-        return new jsc(this.a.e("proxy_enabled", false), this.a.j("proxy_host", ""), this.a.j("proxy_port", ""));
+    public static final class a
+    {
+        public static Spanned a(final String s, final int n) {
+            return Html.fromHtml(s, n);
+        }
+        
+        public static Spanned b(final String s, final int n, final Html$ImageGetter html$ImageGetter, final Html$TagHandler html$TagHandler) {
+            return Html.fromHtml(s, n, html$ImageGetter, html$TagHandler);
+        }
+        
+        public static String c(final Spanned spanned, final int n) {
+            return Html.toHtml(spanned, n);
+        }
     }
 }

@@ -1,76 +1,49 @@
-import java.util.Objects;
-import java.util.List;
+import android.content.Context;
+import android.widget.TextView;
+import android.view.View;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import android.content.res.Resources;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class fom implements oax
+public final class fom extends b4e<iq7$c$b, a>
 {
-    public static final class a extends fom
-    {
-        public final List<yp7$c> a;
-        public final boolean b;
-        
-        public a() {
-            this((List<? extends yp7$c>)v2a.C0, false);
-        }
-        
-        public a(final List<? extends yp7$c> a, final boolean b) {
-            zzd.f((Object)a, "inboxItems");
-            this.a = (List<yp7$c>)a;
-            this.b = b;
-        }
-        
-        public static a l(final a a, final boolean b) {
-            final List<yp7$c> a2 = a.a;
-            Objects.requireNonNull(a);
-            zzd.f((Object)a2, "inboxItems");
-            return new a(a2, b);
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof a)) {
-                return false;
-            }
-            final a a = (a)o;
-            return zzd.a((Object)this.a, (Object)a.a) && this.b == a.b;
-        }
-        
-        @Override
-        public final int hashCode() {
-            final int hashCode = this.a.hashCode();
-            int b;
-            if ((b = (this.b ? 1 : 0)) != 0) {
-                b = 1;
-            }
-            return hashCode * 31 + b;
-        }
-        
-        @Override
-        public final String toString() {
-            final List<yp7$c> a = this.a;
-            final boolean b = this.b;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("Content(inboxItems=");
-            sb.append(a);
-            sb.append(", isRefreshing=");
-            sb.append(b);
-            sb.append(")");
-            return sb.toString();
-        }
+    public final Resources d;
+    
+    public fom(final Resources d) {
+        e0e.f((Object)d, "res");
+        super((Class)iq7$c$b.class);
+        this.d = d;
     }
     
-    public static final class b extends fom
+    public final void k(final n8x n8x, final Object o, final kcm kcm) {
+        final a a = (a)n8x;
+        final iq7$c$b iq7$c$b = (iq7$c$b)o;
+        e0e.f((Object)a, "viewHolder");
+        e0e.f((Object)iq7$c$b, "item");
+        a.G0.setText((CharSequence)this.d.getString(0));
+    }
+    
+    public final n8x l(final ViewGroup viewGroup) {
+        e0e.f((Object)viewGroup, "parent");
+        final View inflate = LayoutInflater.from(((View)viewGroup).getContext()).inflate(2131624629, viewGroup, false);
+        e0e.e((Object)inflate, "from(parent.context).inf\u2026pty_state, parent, false)");
+        return (n8x)new a(inflate);
+    }
+    
+    public static final class a extends sl8
     {
-        public static final b a;
+        public final TextView G0;
         
-        static {
-            a = new b();
+        public a(final View view) {
+            super(view);
+            this.G0 = (TextView)view;
+            final Context context = view.getContext();
+            e0e.e((Object)context, "itemView.context");
+            view.setBackgroundColor(b1b.B(context, 2130969036));
         }
     }
 }

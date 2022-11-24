@@ -1,940 +1,522 @@
 import android.graphics.Paint;
-import android.graphics.Canvas;
 import android.text.TextPaint;
-import android.graphics.PathEffect;
-import android.graphics.Paint$Cap;
-import android.graphics.Paint$Join;
-import android.graphics.Paint$Style;
-import android.graphics.Path;
-import android.graphics.RectF;
-import android.graphics.Paint$FontMetricsInt;
-import kotlin.NoWhenBranchMatchedException;
-import java.util.ArrayList;
-import android.text.Spanned;
-import android.text.TextUtils$TruncateAt;
-import android.os.Build$VERSION;
-import android.text.SpannableString;
+import android.text.style.ScaleXSpan;
+import java.util.Arrays;
+import android.text.style.LeadingMarginSpan$Standard;
 import android.text.Spannable;
+import android.text.SpannableString;
+import java.util.Collection;
+import android.os.Build$VERSION;
+import android.graphics.Typeface;
+import java.util.Locale;
 import java.util.Objects;
+import java.util.ArrayList;
 import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e50 implements qvj
+public final class e50 implements iwj
 {
-    public final f50 a;
-    public final int b;
-    public final long c;
-    public final vis d;
-    public final CharSequence e;
-    public final List<c6m> f;
-    public final qwe g;
+    public final kks a;
+    public final List<xc0$b<f1r>> b;
+    public final List<xc0$b<phk>> c;
+    public final qkb$b d;
+    public final rp8 e;
+    public final y60 f;
+    public final CharSequence g;
+    public final jwe h;
+    public final List<cnv> i;
+    public final int j;
     
-    public e50(final f50 a, int i, final boolean b, final long c) {
+    public e50(String g, final kks a, final List<xc0$b<f1r>> b, final List<xc0$b<phk>> c, final qkb$b d, final rp8 e) {
+        e0e.f((Object)g, "text");
+        e0e.f((Object)a, "style");
+        e0e.f((Object)d, "fontFamilyResolver");
+        e0e.f((Object)e, "density");
         this.a = a;
-        this.b = i;
+        this.b = b;
         this.c = c;
-        if (pi6.i(c) != 0 || pi6.j(c) != 0) {
-            throw new IllegalArgumentException("Setting Constraints.minWidth and Constraints.minHeight is not supported, these should be the default zero values instead.".toString());
+        this.d = d;
+        this.e = e;
+        final y60 f = new y60(e.getDensity());
+        this.f = f;
+        this.i = new ArrayList();
+        final bgs b2 = a.b.b;
+        final s5g k = a.a.k;
+        final int n = 3;
+        int a2;
+        if (b2 != null) {
+            a2 = b2.a;
         }
-        if (i >= 1) {
-            final sjs a2 = a.a;
-            boolean b3 = false;
-            Label_0220: {
-                if (b && !xjs.a(a2.a.h, fli.b0(0))) {
-                    final long h = a2.a.h;
-                    Objects.requireNonNull(xjs.Companion);
-                    if (!xjs.a(h, xjs.c)) {
-                        final mes a3 = a2.b.a;
-                        if (a3 != null) {
-                            Objects.requireNonNull(mes.Companion);
-                            if (a3.a != 5) {
-                                final mes a4 = a2.b.a;
-                                boolean b2 = false;
-                                Label_0206: {
-                                    if (a4 != null) {
-                                        if (a4.a == 4) {
-                                            b2 = true;
-                                            break Label_0206;
-                                        }
-                                    }
-                                    b2 = false;
-                                }
-                                if (!b2) {
-                                    b3 = true;
-                                    break Label_0220;
-                                }
-                            }
+        else {
+            Objects.requireNonNull(bgs.Companion);
+            a2 = 3;
+        }
+        Objects.requireNonNull(bgs.Companion);
+        int j = 0;
+        Label_0346: {
+            if (a2 != 4) {
+                if (a2 == 5) {
+                    j = n;
+                    break Label_0346;
+                }
+                if (a2 == 1) {
+                    j = 0;
+                    break Label_0346;
+                }
+                if (a2 == 2) {
+                    j = 1;
+                    break Label_0346;
+                }
+                if (a2 != 3) {
+                    throw new IllegalStateException("Invalid TextDirection.".toString());
+                }
+                Locale locale = null;
+                Label_0316: {
+                    if (k != null) {
+                        final eik a3 = k.e().a;
+                        e0e.d((Object)a3, "null cannot be cast to non-null type androidx.compose.ui.text.intl.AndroidLocale");
+                        if ((locale = ((o40)a3).a) != null) {
+                            break Label_0316;
                         }
                     }
+                    locale = Locale.getDefault();
                 }
-                b3 = false;
+                final int a4 = rks.a;
+                final int a5 = rks.a.a(locale);
+                if (a5 != 0) {
+                    j = n;
+                    if (a5 == 1) {
+                        break Label_0346;
+                    }
+                }
             }
-            Object e;
-            if (b3) {
-                e = a.g;
-                if (((CharSequence)e).length() != 0) {
-                    if (e instanceof Spannable) {
-                        e = e;
+            j = 2;
+        }
+        this.j = j;
+        final mub<qkb, qlb, mlb, nlb, Typeface> mub = (mub<qkb, qlb, mlb, nlb, Typeface>)new mub<qkb, qlb, mlb, nlb, Typeface>(this) {
+            public final e50 F0;
+            
+            public final Object I(Object b, final Object o, final Object o2, final Object o3) {
+                final qkb qkb = (qkb)b;
+                final qlb qlb = (qlb)o;
+                final int a = ((mlb)o2).a;
+                final int a2 = ((nlb)o3).a;
+                e0e.f((Object)qlb, "fontWeight");
+                final cnv cnv = new cnv(this.F0.d.a(qkb, qlb, a, a2));
+                this.F0.i.add(cnv);
+                b = cnv.b;
+                e0e.d(b, "null cannot be cast to non-null type android.graphics.Typeface");
+                return b;
+            }
+        };
+        final f1r a6 = a.a;
+        e0e.f((Object)a6, "style");
+        final long c2 = pks.c(a6.b);
+        Objects.requireNonNull(qks.Companion);
+        if (qks.a(c2, 4294967296L)) {
+            ((Paint)f).setTextSize(e.V(a6.b));
+        }
+        else if (qks.a(c2, 8589934592L)) {
+            ((Paint)f).setTextSize(pks.d(a6.b) * ((Paint)f).getTextSize());
+        }
+        if (p4j.y(a6)) {
+            final qkb f2 = a6.f;
+            qlb qlb;
+            if ((qlb = a6.c) == null) {
+                Objects.requireNonNull(qlb.Companion);
+                qlb = qlb.M0;
+            }
+            final mlb d2 = a6.d;
+            int a7;
+            if (d2 != null) {
+                a7 = d2.a;
+            }
+            else {
+                Objects.requireNonNull(mlb.Companion);
+                a7 = 0;
+            }
+            final nlb e2 = a6.e;
+            int a8;
+            if (e2 != null) {
+                a8 = e2.a;
+            }
+            else {
+                Objects.requireNonNull(nlb.Companion);
+                a8 = 1;
+            }
+            e0e.f((Object)qlb, "fontWeight");
+            final cnv cnv = new cnv(mub.F0.d.a(f2, qlb, a7, a8));
+            mub.F0.i.add(cnv);
+            final Object b3 = cnv.b;
+            e0e.d(b3, "null cannot be cast to non-null type android.graphics.Typeface");
+            ((Paint)f).setTypeface((Typeface)b3);
+        }
+        final s5g i = a6.k;
+        if (i != null && !e0e.a((Object)i, (Object)s5g.Companion.a())) {
+            if (Build$VERSION.SDK_INT >= 24) {
+                v5g.a.b(f, a6.k);
+            }
+            else {
+                q5g q5g;
+                if (a6.k.isEmpty()) {
+                    q5g = q5g.Companion.a();
+                }
+                else {
+                    q5g = a6.k.e();
+                }
+                ((Paint)f).setTextLocale(tpz.V(q5g));
+            }
+        }
+        if (qks.a(pks.c(a6.h), 8589934592L)) {
+            ((Paint)f).setLetterSpacing(pks.d(a6.h));
+        }
+        final String g2 = a6.g;
+        if (g2 != null && !e0e.a((Object)g2, (Object)"")) {
+            ((Paint)f).setFontFeatureSettings(a6.g);
+        }
+        final wis l = a6.j;
+        if (l != null) {
+            Objects.requireNonNull(wis.Companion);
+            if (!e0e.a((Object)l, (Object)wis.c)) {
+                ((Paint)f).setTextScaleX(((Paint)f).getTextScaleX() * a6.j.a);
+                ((Paint)f).setTextSkewX(((Paint)f).getTextSkewX() + a6.j.b);
+            }
+        }
+        f.b(a6.c());
+        final wq2 b4 = a6.b();
+        Objects.requireNonNull(aeq.Companion);
+        f.a(b4, aeq.c, a6.a());
+        f.c(a6.n);
+        long n2;
+        if (qks.a(pks.c(a6.h), 4294967296L) && pks.d(a6.h) != 0.0f) {
+            n2 = a6.h;
+        }
+        else {
+            Objects.requireNonNull(pks.Companion);
+            n2 = pks.c;
+        }
+        final long m = a6.l;
+        Objects.requireNonNull(sr4.Companion);
+        long n3;
+        if (sr4.c(m, sr4.f)) {
+            n3 = sr4.g;
+        }
+        else {
+            n3 = a6.l;
+        }
+        final ur1 i2 = a6.i;
+        Objects.requireNonNull(ur1.Companion);
+        ur1 i3;
+        if (i2 != null && e0e.a((Object)i2.a, (Object)0.0f)) {
+            i3 = null;
+        }
+        else {
+            i3 = a6.i;
+        }
+        xfs m2 = a6.m;
+        Objects.requireNonNull(xfs.Companion);
+        if (!(e0e.a((Object)m2, (Object)xfs.b) ^ true)) {
+            m2 = null;
+        }
+        final f1r f1r = new f1r(0L, 0L, (qlb)null, (mlb)null, (nlb)null, (qkb)null, (String)null, n2, i3, (wis)null, (s5g)null, n3, m2, (vrp)null, 9855);
+        final float textSize = ((Paint)f).getTextSize();
+        final ArrayList list = (ArrayList)rr4.T1((Collection)shw.x0((Object)new xc0$b((Object)f1r, 0, g.length())), (Iterable)b);
+        Label_3044: {
+            if (list.isEmpty() && c.isEmpty()) {
+                final xis d3 = a.b.d;
+                Objects.requireNonNull(xis.Companion);
+                if (e0e.a((Object)d3, (Object)xis.c) && ma7.B(a.b.c)) {
+                    break Label_3044;
+                }
+            }
+            final Object o = new SpannableString((CharSequence)g);
+            final bjk c3 = a.c;
+            boolean a9 = false;
+            Label_1273: {
+                if (c3 != null) {
+                    final mik b5 = c3.b;
+                    if (b5 != null) {
+                        a9 = b5.a;
+                        break Label_1273;
+                    }
+                }
+                a9 = true;
+            }
+            Label_1520: {
+                if (a9) {
+                    final jwj b6 = a.b;
+                    if (b6.f == null) {
+                        final float o2 = pk7.o(b6.c, textSize, e);
+                        if (!Float.isNaN(o2)) {
+                            pk7.v((Spannable)o, new mdf(o2), 0, ((SpannableString)o).length());
+                        }
+                        break Label_1520;
+                    }
+                }
+                ndf ndf;
+                if ((ndf = a.b.f) == null) {
+                    Objects.requireNonNull(ndf.Companion);
+                    ndf = ndf.c;
+                }
+                final long c4 = a.b.c;
+                e0e.f((Object)ndf, "lineHeightStyle");
+                final float o3 = pk7.o(c4, textSize, e);
+                if (!Float.isNaN(o3)) {
+                    int length;
+                    if (((SpannableString)o).length() != 0 && xlr.c2((CharSequence)o) != '\n') {
+                        length = ((SpannableString)o).length();
                     }
                     else {
-                        e = new SpannableString((CharSequence)e);
+                        length = ((SpannableString)o).length() + 1;
                     }
-                    yvl.R((Spannable)e, (Object)new ujd(), ((CharSequence)e).length() - 1, ((CharSequence)e).length() - 1);
+                    final int b7 = ndf.b;
+                    pk7.v((Spannable)o, new odf(o3, length, (b7 & 0x1) > 0, (b7 & 0x10) > 0, ndf.a), 0, ((SpannableString)o).length());
                 }
             }
-            else {
-                e = a.g;
-            }
-            this.e = (CharSequence)e;
-            final mes a5 = a2.b.a;
-            Objects.requireNonNull(mes.Companion);
-            boolean b4 = false;
-            Label_0360: {
-                if (a5 != null) {
-                    if (a5.a == 1) {
-                        b4 = true;
-                        break Label_0360;
+            final xis d4 = a.b.d;
+            if (d4 != null && (!pks.a(d4.a, ma7.w(0)) || !pks.a(d4.b, ma7.w(0))) && !ma7.B(d4.a)) {
+                if (!ma7.B(d4.b)) {
+                    final long c5 = pks.c(d4.a);
+                    float v;
+                    if (qks.a(c5, 4294967296L)) {
+                        v = e.V(d4.a);
                     }
-                }
-                b4 = false;
-            }
-            int n = 0;
-            Label_0512: {
-                if (b4) {
-                    n = 3;
-                }
-                else {
-                    boolean b5 = false;
-                    Label_0395: {
-                        if (a5 != null) {
-                            if (a5.a == 2) {
-                                b5 = true;
-                                break Label_0395;
-                            }
-                        }
-                        b5 = false;
-                    }
-                    if (b5) {
-                        n = 4;
+                    else if (qks.a(c5, 8589934592L)) {
+                        v = pks.d(d4.a) * textSize;
                     }
                     else {
-                        boolean b6 = false;
-                        Label_0430: {
-                            if (a5 != null) {
-                                if (a5.a == 3) {
-                                    b6 = true;
-                                    break Label_0430;
-                                }
-                            }
-                            b6 = false;
-                        }
-                        if (b6) {
-                            n = 2;
-                        }
-                        else {
-                            boolean b7 = false;
-                            Label_0465: {
-                                if (a5 != null) {
-                                    if (a5.a == 5) {
-                                        b7 = true;
-                                        break Label_0465;
-                                    }
-                                }
-                                b7 = false;
-                            }
-                            if (!b7) {
-                                boolean b8 = false;
-                                Label_0498: {
-                                    if (a5 != null) {
-                                        if (a5.a == 6) {
-                                            b8 = true;
-                                            break Label_0498;
-                                        }
-                                    }
-                                    b8 = false;
-                                }
-                                if (b8) {
-                                    n = 1;
-                                    break Label_0512;
-                                }
-                            }
-                            n = 0;
-                        }
+                        v = 0.0f;
                     }
-                }
-            }
-            final uvj b9 = a2.b;
-            final mes a6 = b9.a;
-            int n2;
-            if (a6 == null) {
-                n2 = 0;
-            }
-            else {
-                int n3;
-                if (a6.a == 4) {
-                    n3 = 1;
-                }
-                else {
-                    n3 = 0;
-                }
-                n2 = n3;
-            }
-            final n1d h2 = b9.h;
-            Objects.requireNonNull(n1d.Companion);
-            int n4;
-            if (czd.a((Object)h2, (Object)n1d.b)) {
-                if (Build$VERSION.SDK_INT <= 32) {
-                    n4 = 1;
-                }
-                else {
-                    n4 = 3;
-                }
-            }
-            else {
-                czd.a((Object)h2, (Object)n1d.a);
-                n4 = 0;
-            }
-            final kcf g = a2.b.g;
-            kcf$b kcf$b;
-            if (g != null) {
-                kcf$b = new kcf$b(g.a);
-            }
-            else {
-                kcf$b = null;
-            }
-            Objects.requireNonNull(kcf$b.Companion);
-            boolean b10 = false;
-            Label_0671: {
-                if (kcf$b != null) {
-                    if (kcf$b.a == 1) {
-                        b10 = true;
-                        break Label_0671;
+                    final long c6 = pks.c(d4.b);
+                    float v2;
+                    if (qks.a(c6, 4294967296L)) {
+                        v2 = e.V(d4.b);
                     }
-                }
-                b10 = false;
-            }
-            int n5 = 0;
-            Label_0752: {
-                if (!b10) {
-                    boolean b11 = false;
-                    Label_0703: {
-                        if (kcf$b != null) {
-                            if (kcf$b.a == 2) {
-                                b11 = true;
-                                break Label_0703;
-                            }
-                        }
-                        b11 = false;
-                    }
-                    if (b11) {
-                        n5 = 1;
-                        break Label_0752;
-                    }
-                    boolean b12 = false;
-                    Label_0738: {
-                        if (kcf$b != null) {
-                            if (kcf$b.a == 3) {
-                                b12 = true;
-                                break Label_0738;
-                            }
-                        }
-                        b12 = false;
-                    }
-                    if (b12) {
-                        n5 = 2;
-                        break Label_0752;
-                    }
-                }
-                n5 = 0;
-            }
-            final kcf g2 = a2.b.g;
-            kcf$c kcf$c;
-            if (g2 != null) {
-                kcf$c = new kcf$c(g2.b);
-            }
-            else {
-                kcf$c = null;
-            }
-            Objects.requireNonNull(kcf$c.Companion);
-            boolean b13 = false;
-            Label_0813: {
-                if (kcf$c != null) {
-                    if (kcf$c.a == 1) {
-                        b13 = true;
-                        break Label_0813;
-                    }
-                }
-                b13 = false;
-            }
-            int n6 = 0;
-            Label_0929: {
-                if (!b13) {
-                    boolean b14 = false;
-                    Label_0845: {
-                        if (kcf$c != null) {
-                            if (kcf$c.a == 2) {
-                                b14 = true;
-                                break Label_0845;
-                            }
-                        }
-                        b14 = false;
-                    }
-                    if (b14) {
-                        n6 = 1;
-                        break Label_0929;
-                    }
-                    boolean b15 = false;
-                    Label_0880: {
-                        if (kcf$c != null) {
-                            if (kcf$c.a == 3) {
-                                b15 = true;
-                                break Label_0880;
-                            }
-                        }
-                        b15 = false;
-                    }
-                    if (b15) {
-                        n6 = 2;
-                        break Label_0929;
-                    }
-                    boolean b16 = false;
-                    Label_0915: {
-                        if (kcf$c != null) {
-                            if (kcf$c.a == 4) {
-                                b16 = true;
-                                break Label_0915;
-                            }
-                        }
-                        b16 = false;
-                    }
-                    if (b16) {
-                        n6 = 3;
-                        break Label_0929;
-                    }
-                }
-                n6 = 0;
-            }
-            final kcf g3 = a2.b.g;
-            kcf$d kcf$d;
-            if (g3 != null) {
-                kcf$d = new kcf$d(g3.c);
-            }
-            else {
-                kcf$d = null;
-            }
-            Objects.requireNonNull(kcf$d.Companion);
-            boolean b17 = false;
-            Label_0990: {
-                if (kcf$d != null) {
-                    if (kcf$d.a == 1) {
-                        b17 = true;
-                        break Label_0990;
-                    }
-                }
-                b17 = false;
-            }
-            int n7 = 0;
-            Label_1036: {
-                if (!b17) {
-                    boolean b18 = false;
-                    Label_1022: {
-                        if (kcf$d != null) {
-                            if (kcf$d.a == 2) {
-                                b18 = true;
-                                break Label_1022;
-                            }
-                        }
-                        b18 = false;
-                    }
-                    if (b18) {
-                        n7 = 1;
-                        break Label_1036;
-                    }
-                }
-                n7 = 0;
-            }
-            TextUtils$TruncateAt end;
-            if (b) {
-                end = TextUtils$TruncateAt.END;
-            }
-            else {
-                end = null;
-            }
-            final vis v = this.v(n, n2, end, i, n4, n5, n6, n7);
-            Label_1206: {
-                if (b && v.a() > pi6.g(c) && i > 1) {
-                    final int g4 = pi6.g(c);
-                    while (true) {
-                        int e2;
-                        vis v2;
-                        for (e2 = v.e, i = 0; i < e2; ++i) {
-                            if (v.d(i) > g4) {
-                                v2 = v;
-                                if (i >= 0) {
-                                    v2 = v;
-                                    if (i != this.b) {
-                                        if (i < 1) {
-                                            i = 1;
-                                        }
-                                        v2 = this.v(n, n2, end, i, n4, n5, n6, n7);
-                                    }
-                                }
-                                this.d = v2;
-                                break Label_1206;
-                            }
-                        }
-                        i = v.e;
-                        continue;
-                    }
-                }
-                this.d = v;
-            }
-            this.a.f.a(a2.c(), oj7.d(this.getWidth(), this.getHeight()), a2.b());
-            final vis d = this.d;
-            zqp[] array;
-            if (!(d.j() instanceof Spanned)) {
-                array = new zqp[0];
-            }
-            else {
-                array = (zqp[])((Spanned)d.j()).getSpans(0, d.j().length(), (Class)zqp.class);
-                czd.e((Object)array, "brushSpans");
-                if (array.length == 0) {
-                    i = 1;
-                }
-                else {
-                    i = 0;
-                }
-                if (i != 0) {
-                    array = new zqp[0];
-                }
-            }
-            int length;
-            for (length = array.length, i = 0; i < length; ++i) {
-                array[i].F0 = new ddq(oj7.d(this.getWidth(), this.getHeight()));
-            }
-            final CharSequence e3 = this.e;
-            Object d2;
-            if (!(e3 instanceof Spanned)) {
-                d2 = f2a.D0;
-            }
-            else {
-                final Object[] spans = ((Spanned)e3).getSpans(0, e3.length(), (Class)chk.class);
-                czd.e((Object)spans, "getSpans(0, length, PlaceholderSpan::class.java)");
-                final ArrayList list = new ArrayList<c6m>(spans.length);
-                for (int length2 = spans.length, j = 0; j < length2; ++j) {
-                    final chk chk = (chk)spans[j];
-                    final Spanned spanned = (Spanned)e3;
-                    final int spanStart = spanned.getSpanStart((Object)chk);
-                    final int spanEnd = spanned.getSpanEnd((Object)chk);
-                    final int f = this.d.f(spanStart);
-                    if (f >= this.b) {
-                        i = 1;
+                    else if (qks.a(c6, 8589934592L)) {
+                        v2 = pks.d(d4.b) * textSize;
                     }
                     else {
-                        i = 0;
+                        v2 = 0.0f;
                     }
-                    final boolean b19 = this.d.d.getEllipsisCount(f) > 0 && spanEnd > this.d.d.getEllipsisStart(f);
-                    final boolean b20 = spanEnd > this.d.e(f);
-                    c6m c6m;
-                    if (!b19 && !b20 && i == 0) {
-                        rqm rqm;
-                        if (this.d.d.isRtlCharAt(spanStart)) {
-                            rqm = rqm.E0;
-                        }
-                        else {
-                            rqm = rqm.D0;
-                        }
-                        i = ((Enum)rqm).ordinal();
-                        float n8;
-                        if (i != 0) {
-                            if (i != 1) {
-                                throw new NoWhenBranchMatchedException();
-                            }
-                            n8 = this.n(spanStart, true) - chk.c();
-                        }
-                        else {
-                            n8 = this.n(spanStart, true);
-                        }
-                        final float n9 = (float)chk.c();
-                        final vis d3 = this.d;
-                        float g5 = 0.0f;
-                        Label_1913: {
-                            float n12 = 0.0f;
-                            Label_1906: {
-                                float n10 = 0.0f;
-                                float n11 = 0.0f;
-                                switch (chk.I0) {
-                                    default: {
-                                        throw new IllegalStateException("unexpected verticalAlignment");
-                                    }
-                                    case 6: {
-                                        final Paint$FontMetricsInt a7 = chk.a();
-                                        n10 = (float)((a7.ascent + a7.descent - chk.b()) / 2);
-                                        n11 = d3.c(f);
-                                        break;
-                                    }
-                                    case 5: {
-                                        n12 = d3.c(f) + chk.a().descent;
-                                        i = chk.b();
-                                        break Label_1906;
-                                    }
-                                    case 4: {
-                                        n10 = (float)chk.a().ascent;
-                                        n11 = d3.c(f);
-                                        break;
-                                    }
-                                    case 3: {
-                                        g5 = (d3.d(f) + d3.g(f) - chk.b()) / 2;
-                                        break Label_1913;
-                                    }
-                                    case 2: {
-                                        n12 = d3.d(f);
-                                        i = chk.b();
-                                        break Label_1906;
-                                    }
-                                    case 1: {
-                                        g5 = d3.g(f);
-                                        break Label_1913;
-                                    }
-                                    case 0: {
-                                        n12 = d3.c(f);
-                                        i = chk.b();
-                                        break Label_1906;
+                    pk7.v((Spannable)o, new LeadingMarginSpan$Standard((int)(float)Math.ceil(v), (int)(float)Math.ceil(v2)), 0, ((SpannableString)o).length());
+                }
+            }
+            final ArrayList list2 = new ArrayList<xc0$b>(list.size());
+            for (int size = list.size(), n4 = 0; n4 < size; ++n4) {
+                final Object value = list.get(n4);
+                final xc0$b xc0$b = (xc0$b)value;
+                if (p4j.y((f1r)xc0$b.a) || ((f1r)xc0$b.a).e != null) {
+                    list2.add((xc0$b)value);
+                }
+            }
+            f1r f1r2;
+            if (p4j.y(a.a) || a.a.e != null) {
+                final f1r a10 = a.a;
+                f1r2 = new f1r(0L, 0L, a10.c, a10.d, a10.e, a10.f, (String)null, 0L, (ur1)null, (wis)null, (s5g)null, 0L, (xfs)null, (vrp)null, 16323);
+            }
+            else {
+                f1r2 = null;
+            }
+            final j1r j1r = new j1r((Spannable)o, (mub)mub);
+            if (list2.size() <= 1) {
+                if (list2.isEmpty() ^ true) {
+                    final f1r f1r3 = (f1r)list2.get(0).a;
+                    f1r e3;
+                    if (f1r2 == null) {
+                        e3 = f1r3;
+                    }
+                    else {
+                        e3 = f1r2.e(f1r3);
+                    }
+                    j1r.h0((Object)e3, (Object)list2.get(0).b, (Object)list2.get(0).c);
+                }
+            }
+            else {
+                final int size2 = list2.size();
+                final int n5 = size2 * 2;
+                final Integer[] array = new Integer[n5];
+                for (int n6 = 0; n6 < n5; ++n6) {
+                    array[n6] = 0;
+                }
+                for (int size3 = list2.size(), n7 = 0; n7 < size3; ++n7) {
+                    final xc0$b xc0$b2 = list2.get(n7);
+                    array[n7] = xc0$b2.b;
+                    array[n7 + size2] = xc0$b2.c;
+                }
+                final Comparable[] array2 = array;
+                if (array2.length > 1) {
+                    Arrays.sort(array2);
+                }
+                final int intValue = ((Number)ft0.X0((Object[])array)).intValue();
+                int n8 = 0;
+                final int n9 = n5;
+                int n10 = intValue;
+                final ArrayList<xc0$b> list3 = (ArrayList<xc0$b>)list2;
+                while (n8 < n9) {
+                    final int intValue2 = array[n8];
+                    if (intValue2 != n10) {
+                        final int size4 = list3.size();
+                        f1r f1r4 = f1r2;
+                        Object e4;
+                        for (int n11 = 0; n11 < size4; ++n11, f1r4 = (f1r)e4) {
+                            final xc0$b xc0$b3 = list3.get(n11);
+                            final int b8 = xc0$b3.b;
+                            final int c7 = xc0$b3.c;
+                            e4 = f1r4;
+                            if (b8 != c7) {
+                                e4 = f1r4;
+                                if (yc0.c(n10, intValue2, b8, c7)) {
+                                    e4 = xc0$b3.a;
+                                    if (f1r4 != null) {
+                                        e4 = f1r4.e((f1r)e4);
                                     }
                                 }
-                                g5 = n11 + n10;
-                                break Label_1913;
                             }
-                            g5 = n12 - i;
                         }
-                        c6m = new c6m(n8, g5, n9 + n8, chk.b() + g5);
+                        if (f1r4 != null) {
+                            j1r.h0((Object)f1r4, (Object)n10, (Object)intValue2);
+                        }
+                        n10 = intValue2;
+                    }
+                    ++n8;
+                }
+            }
+            final ArrayList<e1r> list4 = new ArrayList<e1r>();
+            final int size5 = list.size();
+            int n12 = 0;
+            rp8 rp8 = e;
+            while (n12 < size5) {
+                final xc0$b xc0$b4 = list.get(n12);
+                final int b9 = xc0$b4.b;
+                final int c8 = xc0$b4.c;
+                rp8 rp9;
+                if (b9 >= 0 && b9 < ((SpannableString)o).length() && c8 > b9 && c8 <= ((SpannableString)o).length()) {
+                    final int b10 = xc0$b4.b;
+                    final int c9 = xc0$b4.c;
+                    final f1r f1r5 = (f1r)xc0$b4.a;
+                    final ur1 i4 = f1r5.i;
+                    if (i4 != null) {
+                        pk7.v((Spannable)o, new vr1(i4.a), b10, c9);
+                    }
+                    pk7.s((Spannable)o, f1r5.c(), b10, c9);
+                    final wq2 b11 = f1r5.b();
+                    final float a11 = f1r5.a();
+                    if (b11 != null) {
+                        if (b11 instanceof jmq) {
+                            pk7.s((Spannable)o, ((jmq)b11).a, b10, c9);
+                        }
+                        else if (b11 instanceof trp) {
+                            pk7.v((Spannable)o, new urp((trp)b11, a11), b10, c9);
+                        }
+                    }
+                    final xfs m3 = f1r5.m;
+                    if (m3 != null) {
+                        Objects.requireNonNull(xfs.Companion);
+                        final int a12 = m3.a;
+                        final boolean b12 = (0x1 | a12) == a12;
+                        final int a13 = m3.a;
+                        pk7.v((Spannable)o, new yfs(b12, (0x2 | a13) == a13), b10, c9);
+                    }
+                    pk7.t((Spannable)o, f1r5.b, e, b10, c9);
+                    final String g3 = f1r5.g;
+                    if (g3 != null) {
+                        pk7.v((Spannable)o, new ukb(g3), b10, c9);
+                    }
+                    final wis j2 = f1r5.j;
+                    if (j2 != null) {
+                        pk7.v((Spannable)o, new ScaleXSpan(j2.a), b10, c9);
+                        pk7.v((Spannable)o, new meq(j2.b), b10, c9);
+                    }
+                    pk7.u((Spannable)o, f1r5.k, b10, c9);
+                    pk7.r((Spannable)o, f1r5.l, b10, c9);
+                    final vrp n13 = f1r5.n;
+                    if (n13 != null) {
+                        final int i5 = yru.I(n13.a);
+                        final float d5 = kgj.d(n13.b);
+                        final float e5 = kgj.e(n13.b);
+                        float c10 = n13.c;
+                        if (c10 == 0.0f) {
+                            c10 = Float.MIN_VALUE;
+                        }
+                        pk7.v((Spannable)o, new yrp(i5, d5, e5, c10), b10, c9);
+                    }
+                    final long h = f1r5.h;
+                    final long c11 = pks.c(h);
+                    Objects.requireNonNull(qks.Companion);
+                    Object o4;
+                    if (qks.a(c11, 4294967296L)) {
+                        o4 = new x7f(e.V(h));
+                    }
+                    else if (qks.a(c11, 8589934592L)) {
+                        o4 = new w7f(pks.d(h));
                     }
                     else {
-                        c6m = null;
+                        o4 = null;
                     }
-                    list.add(c6m);
-                }
-                d2 = list;
-            }
-            this.f = (List<c6m>)d2;
-            this.g = pps.m(3, (nsb)new e50$a(this));
-            return;
-        }
-        throw new IllegalArgumentException("maxLines should be greater than 0".toString());
-    }
-    
-    public final c6m a(final int n) {
-        final vis d = this.d;
-        final int f = d.f(n);
-        final float g = d.g(f);
-        final float d2 = d.d(f);
-        final boolean b = d.d.getParagraphDirection(f) == 1;
-        final boolean rtlChar = d.d.isRtlCharAt(n);
-        float n2 = 0.0f;
-        float n3 = 0.0f;
-        Label_0180: {
-            if (b && !rtlChar) {
-                n2 = d.h(n, false);
-                n3 = d.h(n + 1, true);
-            }
-            else {
-                float n4;
-                float n5;
-                if (b && rtlChar) {
-                    n4 = d.i(n, false);
-                    n5 = d.i(n + 1, true);
+                    rp9 = e;
+                    if (o4 != null) {
+                        list4.add(new e1r(o4, b10, c9));
+                        rp9 = e;
+                    }
                 }
                 else {
-                    if (!rtlChar) {
-                        n2 = d.i(n, false);
-                        n3 = d.i(n + 1, true);
-                        break Label_0180;
-                    }
-                    n4 = d.h(n, false);
-                    n5 = d.h(n + 1, true);
+                    rp9 = rp8;
                 }
-                final float n6 = n5;
-                n3 = n4;
-                n2 = n6;
+                ++n12;
+                rp8 = rp9;
             }
-        }
-        final RectF rectF = new RectF(n2, g, n3, d2);
-        return new c6m(rectF.left, rectF.top, rectF.right, rectF.bottom);
-    }
-    
-    public final rqm b(int f) {
-        f = this.d.f(f);
-        rqm rqm;
-        if (this.d.d.getParagraphDirection(f) == 1) {
-            rqm = rqm.D0;
-        }
-        else {
-            rqm = rqm.E0;
-        }
-        return rqm;
-    }
-    
-    public final float c(final int n) {
-        return this.d.g(n);
-    }
-    
-    public final c6m d(int f) {
-        if (f >= 0 && f <= this.e.length()) {
-            final float h = this.d.h(f, false);
-            f = this.d.f(f);
-            return new c6m(h, this.d.g(f), h, this.d.d(f));
-        }
-        final StringBuilder l = da8.l("offset(", f, ") is out of bounds (0,");
-        l.append(this.e.length());
-        throw new AssertionError((Object)l.toString());
-    }
-    
-    public final long e(int n) {
-        final xqx xqx = (xqx)this.g.getValue();
-        final yqx a = xqx.a;
-        a.a(n);
-        int n2;
-        if (xqx.a.e(a.d.preceding(n))) {
-            final yqx a2 = xqx.a;
-            a2.a(n);
-            int preceding = n;
-            while (true) {
-                n2 = preceding;
-                if (preceding == -1) {
-                    break;
-                }
-                final boolean b = a2.e(preceding) && !a2.c(preceding);
-                n2 = preceding;
-                if (b) {
-                    break;
-                }
-                a2.a(preceding);
-                preceding = a2.d.preceding(preceding);
+            for (int size6 = list4.size(), n14 = 0; n14 < size6; ++n14) {
+                final e1r e1r = list4.get(n14);
+                pk7.v((Spannable)o, e1r.a, e1r.b, e1r.c);
             }
-        }
-        else {
-            final yqx a3 = xqx.a;
-            a3.a(n);
-            if (a3.d(n)) {
-                if (a3.d.isBoundary(n) && !a3.b(n)) {
-                    n2 = n;
-                }
-                else {
-                    n2 = a3.d.preceding(n);
-                }
+            if (c.size() > 0) {
+                final phk phk = (phk)c.get(0).a;
+                new(qhk.class)();
+                Objects.requireNonNull(phk);
+                pks.d(0L);
+                kqe.Q();
+                pks.d(0L);
+                kqe.Q();
+                e.p0();
+                e.getDensity();
+                Objects.requireNonNull(rhk.Companion);
+                throw new IllegalStateException("Invalid PlaceholderVerticalAlign".toString());
             }
-            else if (a3.b(n)) {
-                n2 = a3.d.preceding(n);
+            g = (String)o;
+        }
+        this.g = g;
+        this.h = new jwe((CharSequence)g, (TextPaint)this.f, this.j);
+    }
+    
+    public final boolean a() {
+        final ArrayList i = this.i;
+        final int size = i.size();
+        final boolean b = false;
+        int n = 0;
+        boolean b2;
+        while (true) {
+            b2 = b;
+            if (n >= size) {
+                break;
             }
-            else {
-                n2 = -1;
+            final cnv cnv = (cnv)i.get(n);
+            if (cnv.a.getValue() != cnv.b) {
+                b2 = true;
+                break;
             }
+            ++n;
         }
-        int n3;
-        if ((n3 = n2) == -1) {
-            n3 = n;
-        }
-        final xqx xqx2 = (xqx)this.g.getValue();
-        final yqx a4 = xqx2.a;
-        a4.a(n);
-        int n4;
-        if (xqx2.a.c(a4.d.following(n))) {
-            final yqx a5 = xqx2.a;
-            a5.a(n);
-            int following = n;
-            while (true) {
-                n4 = following;
-                if (following == -1) {
-                    break;
-                }
-                final boolean b2 = !a5.e(following) && a5.c(following);
-                n4 = following;
-                if (b2) {
-                    break;
-                }
-                a5.a(following);
-                following = a5.d.following(following);
-            }
-        }
-        else {
-            final yqx a6 = xqx2.a;
-            a6.a(n);
-            if (a6.b(n)) {
-                if (a6.d.isBoundary(n) && !a6.d(n)) {
-                    n4 = n;
-                }
-                else {
-                    n4 = a6.d.following(n);
-                }
-            }
-            else if (a6.d(n)) {
-                n4 = a6.d.following(n);
-            }
-            else {
-                n4 = -1;
-            }
-        }
-        if (n4 != -1) {
-            n = n4;
-        }
-        return c9y.h(n3, n);
+        return b2;
     }
     
-    public final float f() {
-        return this.d.c(0);
+    public final float b() {
+        return ((Number)this.h.c.getValue()).floatValue();
     }
     
-    public final int g(final long n) {
-        final vis d = this.d;
-        final int lineForVertical = d.d.getLineForVertical(d.f + (int)wfj.e(n));
-        final vis d2 = this.d;
-        return d2.d.getOffsetForHorizontal(lineForVertical, d2.b(lineForVertical) * -1 + wfj.d(n));
-    }
-    
-    public final float getHeight() {
-        return (float)this.d.a();
-    }
-    
-    public final float getWidth() {
-        return (float)pi6.h(this.c);
-    }
-    
-    public final void h(final ag3 ag3, final long n, final arp arp, final ffs ffs) {
-        final z60 f = this.a.f;
-        f.b(n);
-        f.c(arp);
-        f.d(ffs);
-        this.w(ag3);
-    }
-    
-    public final int i(final int n) {
-        return this.d.d.getLineStart(n);
-    }
-    
-    public final int j(int n, final boolean b) {
-        if (b) {
-            final vis d = this.d;
-            if (d.d.getEllipsisStart(n) == 0) {
-                n = d.d.getLineVisibleEnd(n);
-            }
-            else {
-                n = d.d.getEllipsisStart(n) + d.d.getLineStart(n);
-            }
-        }
-        else {
-            n = this.d.e(n);
-        }
-        return n;
-    }
-    
-    public final float k(final int n) {
-        final vis d = this.d;
-        final float lineRight = d.d.getLineRight(n);
-        float i;
-        if (n == d.e - 1) {
-            i = d.i;
-        }
-        else {
-            i = 0.0f;
-        }
-        return lineRight + i;
-    }
-    
-    public final int l(final float n) {
-        final vis d = this.d;
-        return d.d.getLineForVertical(d.f + (int)n);
-    }
-    
-    public final lzj m(final int n, final int n2) {
-        int n3 = 0;
-        if (n >= 0) {
-            n3 = n3;
-            if (n <= n2) {
-                n3 = 1;
-            }
-        }
-        if (n3 != 0 && n2 <= this.e.length()) {
-            final Path path = new Path();
-            final vis d = this.d;
-            Objects.requireNonNull(d);
-            d.d.getSelectionPath(n, n2, path);
-            if (d.f != 0 && !path.isEmpty()) {
-                path.offset(0.0f, (float)d.f);
-            }
-            return (lzj)new g50(path);
-        }
-        final StringBuilder f = shc.f("Start(", n, ") or End(", n2, ") is out of Range(0..");
-        f.append(this.e.length());
-        f.append("), or start > end!");
-        throw new AssertionError((Object)f.toString());
-    }
-    
-    public final float n(final int n, final boolean b) {
-        float n2;
-        if (b) {
-            n2 = this.d.h(n, false);
-        }
-        else {
-            n2 = this.d.i(n, false);
-        }
-        return n2;
-    }
-    
-    public final float o(final int n) {
-        final vis d = this.d;
-        final float lineLeft = d.d.getLineLeft(n);
-        float h;
-        if (n == d.e - 1) {
-            h = d.h;
-        }
-        else {
-            h = 0.0f;
-        }
-        return lineLeft + h;
-    }
-    
-    public final float p() {
-        final vis d = this.d;
-        return d.c(d.e - 1);
-    }
-    
-    public final int q(final int n) {
-        return this.d.f(n);
-    }
-    
-    public final rqm r(final int n) {
-        rqm rqm;
-        if (this.d.d.isRtlCharAt(n)) {
-            rqm = rqm.E0;
-        }
-        else {
-            rqm = rqm.D0;
-        }
-        return rqm;
-    }
-    
-    public final float s(final int n) {
-        return this.d.d(n);
-    }
-    
-    public final List<c6m> t() {
-        return this.f;
-    }
-    
-    public final void u(final ag3 ag3, final fq2 fq2, final float n, final arp arp, final ffs ffs, final nbu e) {
-        final z60 f = this.a.f;
-        f.a(fq2, oj7.d(this.getWidth(), this.getHeight()), n);
-        f.c(arp);
-        f.d(ffs);
-        if (e != null) {
-            if (!czd.a((Object)f.e, (Object)e)) {
-                f.e = e;
-                if (czd.a((Object)e, (Object)sxa.D0)) {
-                    ((Paint)f).setStyle(Paint$Style.FILL);
-                }
-                else if (e instanceof ilr) {
-                    ((Paint)f).setStyle(Paint$Style.STROKE);
-                    final ilr ilr = (ilr)e;
-                    ((Paint)f).setStrokeWidth(ilr.D0);
-                    ((Paint)f).setStrokeMiter(ilr.E0);
-                    final int g0 = ilr.G0;
-                    Objects.requireNonNull(llr.Companion);
-                    final int n2 = 0;
-                    Paint$Join strokeJoin;
-                    if (g0 == 0) {
-                        strokeJoin = Paint$Join.MITER;
-                    }
-                    else if (g0 == 1) {
-                        strokeJoin = Paint$Join.ROUND;
-                    }
-                    else if (g0 == 2) {
-                        strokeJoin = Paint$Join.BEVEL;
-                    }
-                    else {
-                        strokeJoin = Paint$Join.MITER;
-                    }
-                    ((Paint)f).setStrokeJoin(strokeJoin);
-                    final int f2 = ilr.F0;
-                    Objects.requireNonNull(jlr.Companion);
-                    Paint$Cap strokeCap;
-                    if (f2 == 0) {
-                        strokeCap = Paint$Cap.BUTT;
-                    }
-                    else if (f2 == 1) {
-                        strokeCap = Paint$Cap.ROUND;
-                    }
-                    else {
-                        int n3 = n2;
-                        if (f2 == 2) {
-                            n3 = 1;
-                        }
-                        if (n3 != 0) {
-                            strokeCap = Paint$Cap.SQUARE;
-                        }
-                        else {
-                            strokeCap = Paint$Cap.BUTT;
-                        }
-                    }
-                    ((Paint)f).setStrokeCap(strokeCap);
-                    final ozj h0 = ilr.H0;
-                    if (h0 != null) {
-                        final h50 h2 = (h50)h0;
-                    }
-                    ((Paint)f).setPathEffect((PathEffect)null);
-                }
-            }
-        }
-        this.w(ag3);
-    }
-    
-    public final vis v(final int n, final int n2, final TextUtils$TruncateAt textUtils$TruncateAt, final int n3, final int n4, final int n5, final int n6, final int n7) {
-        final CharSequence e = this.e;
-        final float width = this.getWidth();
-        final f50 a = this.a;
-        final z60 f = a.f;
-        final int j = a.j;
-        final mve h = a.h;
-        final sjs a2 = a.a;
-        czd.f((Object)a2, "<this>");
-        final lik c = a2.c;
-        if (c != null) {
-            final xhk b = c.b;
-            if (b != null) {
-                final boolean a3 = b.a;
-                return new vis(e, width, (TextPaint)f, n, textUtils$TruncateAt, j, a3, n3, n5, n6, n7, n4, n2, h);
-            }
-        }
-        final boolean a3 = true;
-        return new vis(e, width, (TextPaint)f, n, textUtils$TruncateAt, j, a3, n3, n5, n6, n7, n4, n2, h);
-    }
-    
-    public final void w(final ag3 ag3) {
-        final Canvas a = f20.a;
-        final Canvas a2 = ((e20)ag3).a;
-        if (this.d.c) {
-            a2.save();
-            a2.clipRect(0.0f, 0.0f, this.getWidth(), this.getHeight());
-        }
-        final vis d = this.d;
-        Objects.requireNonNull(d);
-        czd.f((Object)a2, "canvas");
-        final int f = d.f;
-        if (f != 0) {
-            a2.translate(0.0f, (float)f);
-        }
-        final pes n = d.n;
-        Objects.requireNonNull(n);
-        n.a = a2;
-        d.d.draw((Canvas)d.n);
-        final int f2 = d.f;
-        if (f2 != 0) {
-            a2.translate(0.0f, -1 * (float)f2);
-        }
-        if (this.d.c) {
-            a2.restore();
-        }
+    public final float c() {
+        return ((Number)this.h.b.getValue()).floatValue();
     }
 }

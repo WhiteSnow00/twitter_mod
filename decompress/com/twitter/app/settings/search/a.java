@@ -4,42 +4,42 @@
 
 package com.twitter.app.settings.search;
 
-@sa8(c = "com.twitter.app.settings.search.SettingsSearchResultsViewModel$1$1", f = "SettingsSearchResultsViewModel.kt", l = {}, m = "invokeSuspend")
-public final class a extends p0s implements ftb<bqp, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.app.settings.search.SettingsSearchResultsViewModel$1$1", f = "SettingsSearchResultsViewModel.kt", l = {}, m = "invokeSuspend")
+public final class a extends l1s implements hub<wqp, mp6<? super vzv>, Object>
 {
-    public Object D0;
-    public final SettingsSearchResultsViewModel E0;
+    public Object F0;
+    public final SettingsSearchResultsViewModel G0;
     
-    public a(final SettingsSearchResultsViewModel e0, final go6<? super a> go6) {
-        this.E0 = e0;
-        super(2, (go6)go6);
+    public a(final SettingsSearchResultsViewModel g0, final mp6<? super a> mp6) {
+        this.G0 = g0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object d0, final go6<?> go6) {
-        final a a = new a(this.E0, (go6<? super a>)go6);
-        a.D0 = d0;
-        return (go6<fzv>)a;
+    public final mp6<vzv> create(final Object f0, final mp6<?> mp6) {
+        final a a = new a(this.G0, (mp6<? super a>)mp6);
+        a.F0 = f0;
+        return (mp6<vzv>)a;
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final a a = (a)this.create(o, (go6<?>)o2);
-        final fzv a2 = fzv.a;
+        final a a = (a)this.create(o, (mp6<?>)o2);
+        final vzv a2 = vzv.a;
         a.invokeSuspend(a2);
         return a2;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final bqp bqp = (bqp)this.D0;
-        final int length = bqp.b.length();
+        jb2.M0(o);
+        final wqp wqp = (wqp)this.F0;
+        final int length = wqp.b.length();
         boolean b = true;
-        if (length <= 0 || !bqp.a.isEmpty()) {
+        if (length <= 0 || !wqp.a.isEmpty()) {
             b = false;
         }
-        final SettingsSearchResultsViewModel e0 = this.E0;
-        final a$a a$a = new a$a(bqp, b);
-        final coe<Object>[] p = SettingsSearchResultsViewModel.P0;
-        e0.Q((qsb)a$a);
-        return fzv.a;
+        final SettingsSearchResultsViewModel g0 = this.G0;
+        final a$a a$a = new a$a(wqp, b);
+        final ape<Object>[] r0 = SettingsSearchResultsViewModel.R0;
+        g0.Q((stb)a$a);
+        return vzv.a;
     }
 }

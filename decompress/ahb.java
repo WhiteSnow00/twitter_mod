@@ -2,34 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ahb implements oax
+public final class ahb extends pue implements stb<zgb, Boolean>
 {
-    public final boolean a;
+    public static final ahb F0;
+    
+    static {
+        F0 = new ahb();
+    }
     
     public ahb() {
-        this.a = false;
+        super(1);
     }
     
-    public ahb(final boolean b, final int n, final hg8 hg8) {
-        this.a = false;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || (o instanceof ahb && this.a == ((ahb)o).a);
-    }
-    
-    @Override
-    public final int hashCode() {
-        int a;
-        if ((a = (this.a ? 1 : 0)) != 0) {
-            a = 1;
-        }
-        return a;
-    }
-    
-    @Override
-    public final String toString() {
-        return mb0.x("FolderEmptyViewState(isEnabled=", this.a, ")");
+    public final Object invoke(final Object o) {
+        final zgb zgb = (zgb)o;
+        e0e.f((Object)zgb, "it");
+        return zgb.a;
     }
 }

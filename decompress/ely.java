@@ -1,85 +1,41 @@
+import java.io.IOException;
+import org.checkerframework.checker.nullness.compatqual.NullableDecl;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ely extends hv0
+public final class ely extends zky
 {
-    public final String a;
-    public final String b;
-    
-    public ely(final String a, final String b) {
-        this.a = a;
-        this.b = b;
+    public ely(final String s, final String s2, @NullableDecl final Character c) {
+        final wky wky = new wky(s, s2.toCharArray());
+        super(wky, c);
+        r1n.s0(wky.b.length == 64);
     }
     
-    public final String a() {
-        return this.b;
-    }
-    
-    public final int b() {
-        return 0;
-    }
-    
-    public final String c() {
-        return this.a;
-    }
-    
-    public final boolean equals(final Object o) {
-        if (o == this) {
-            return true;
+    @Override
+    public final void b(final Appendable appendable, final byte[] array, int i) throws IOException {
+        final int n = i + 0;
+        final int length = array.length;
+        int n2 = 0;
+        r1n.r0(0, n, length);
+        while (i >= 3) {
+            final int n3 = n2 + 1;
+            final byte b = array[n2];
+            final int n4 = n3 + 1;
+            final byte b2 = array[n3];
+            n2 = n4 + 1;
+            final int n5 = (b2 & 0xFF) << 8 | (b & 0xFF) << 16 | (array[n4] & 0xFF);
+            final char c = super.a.b[n5 >>> 18];
+            final StringBuilder sb = (StringBuilder)appendable;
+            sb.append(c);
+            sb.append(super.a.b[n5 >>> 12 & 0x3F]);
+            sb.append(super.a.b[n5 >>> 6 & 0x3F]);
+            sb.append(super.a.b[n5 & 0x3F]);
+            i -= 3;
         }
-        if (o instanceof hv0) {
-            final hv0 hv0 = (hv0)o;
-            if (hv0.b() == 0) {
-                final String a = this.a;
-                if (a == null) {
-                    if (hv0.c() != null) {
-                        return false;
-                    }
-                }
-                else if (!a.equals(hv0.c())) {
-                    return false;
-                }
-                final String b = this.b;
-                if (b == null) {
-                    if (hv0.a() != null) {
-                        return false;
-                    }
-                }
-                else if (!b.equals(hv0.a())) {
-                    return false;
-                }
-                return true;
-            }
+        if (n2 < n) {
+            this.c(appendable, array, n2, n - n2);
         }
-        return false;
-    }
-    
-    public final int hashCode() {
-        final String a = this.a;
-        int hashCode = 0;
-        int hashCode2;
-        if (a == null) {
-            hashCode2 = 0;
-        }
-        else {
-            hashCode2 = a.hashCode();
-        }
-        final String b = this.b;
-        if (b != null) {
-            hashCode = b.hashCode();
-        }
-        return (hashCode2 ^ 0xD5009D89) * 1000003 ^ hashCode;
-    }
-    
-    public final String toString() {
-        final String a = this.a;
-        final String b = this.b;
-        final StringBuilder sb = new StringBuilder(String.valueOf(a).length() + 68 + String.valueOf(b).length());
-        sb.append("AssetPackLocation{packStorageMethod=");
-        sb.append(0);
-        sb.append(", path=");
-        sb.append(a);
-        return ta0.z(sb, ", assetsPath=", b, "}");
     }
 }

@@ -1,30 +1,50 @@
-import java.lang.annotation.Annotation;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
-import java.util.HashMap;
+import android.app.PendingIntent;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
+import android.os.Parcel;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ljy implements j4j<mcy>
+public final class ljy implements Parcelable$Creator<bi6>
 {
-    public static final ljy a;
+    public final Object createFromParcel(final Parcel parcel) {
+        final int w = SafeParcelReader.w(parcel);
+        PendingIntent pendingIntent = null;
+        String e = null;
+        int r = 0;
+        int r2 = 0;
+        while (parcel.dataPosition() < w) {
+            final int int1 = parcel.readInt();
+            final char c = (char)int1;
+            if (c != '\u0001') {
+                if (c != '\u0002') {
+                    if (c != '\u0003') {
+                        if (c != '\u0004') {
+                            SafeParcelReader.v(parcel, int1);
+                        }
+                        else {
+                            e = SafeParcelReader.e(parcel, int1);
+                        }
+                    }
+                    else {
+                        pendingIntent = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<PendingIntent>)PendingIntent.CREATOR);
+                    }
+                }
+                else {
+                    r2 = SafeParcelReader.r(parcel, int1);
+                }
+            }
+            else {
+                r = SafeParcelReader.r(parcel, int1);
+            }
+        }
+        SafeParcelReader.j(parcel, w);
+        return new bi6(r, r2, pendingIntent, e);
+    }
     
-    static {
-        final ozz c0 = ozz.C0;
-        a = new ljy();
-        final rxz rxz = new rxz(1, c0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(((Annotation)rxz).annotationType(), rxz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final rxz rxz2 = new rxz(2, c0);
-        final HashMap hashMap2 = new HashMap();
-        hashMap2.put(((Annotation)rxz2).annotationType(), rxz2);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final rxz rxz3 = new rxz(3, c0);
-        final HashMap hashMap3 = new HashMap();
-        sbl.m(rxz3, hashMap3, rxz3, hashMap3);
+    public final Object[] newArray(final int n) {
+        return new bi6[n];
     }
 }

@@ -7,49 +7,49 @@ package com.twitter.business.moduleconfiguration.businessinfo;
 import com.twitter.weaver.mvi.MviViewModel;
 import java.util.Objects;
 
-@gb8(c = "com.twitter.business.moduleconfiguration.businessinfo.BusinessInfoViewModel$intents$2$11", f = "BusinessInfoViewModel.kt", l = {}, m = "invokeSuspend")
-public final class b extends xzr implements gub<cx2$f, ap6<? super oyv>, Object>
+@vb8(c = "com.twitter.business.moduleconfiguration.businessinfo.BusinessInfoViewModel$intents$2$11", f = "BusinessInfoViewModel.kt", l = {}, m = "invokeSuspend")
+public final class b extends l1s implements hub<nx2$f, mp6<? super vzv>, Object>
 {
-    public final /* synthetic */ BusinessInfoViewModel C0;
+    public final BusinessInfoViewModel F0;
     
-    public b(final BusinessInfoViewModel c0, final ap6<? super b> ap6) {
-        this.C0 = c0;
-        super(2, (ap6)ap6);
+    public b(final BusinessInfoViewModel f0, final mp6<? super b> mp6) {
+        this.F0 = f0;
+        super(2, (mp6)mp6);
     }
     
-    public final ap6<oyv> create(final Object o, final ap6<?> ap6) {
-        return (ap6<oyv>)new b(this.C0, (ap6<? super b>)ap6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new b(this.F0, (mp6<? super b>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final b b = (b)this.create(o, (ap6<?>)o2);
-        final oyv a = oyv.a;
+        final b b = (b)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         b.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        kq9.b1(o);
-        final fd4 s0 = this.C0.S0;
-        s0.a(m0n.Z(s0.b, "clear_data", "confirm", 8));
-        final BusinessInfoViewModel c0 = this.C0;
-        final String currentModuleId = c0.a1.getCurrentModuleId();
-        oyv a;
+        jb2.M0(o);
+        final kd4 v0 = this.F0.V0;
+        v0.a(shw.R(v0.b, "clear_data", "confirm", 8));
+        final BusinessInfoViewModel f0 = this.F0;
+        final String currentModuleId = f0.d1.getCurrentModuleId();
+        vzv a;
         if (currentModuleId != null) {
-            final iz5 f = c0.O0.f(currentModuleId);
-            final kt1 kt1 = new kt1((rtb)new cz2(c0), 9);
-            Objects.requireNonNull(f);
-            ((MviViewModel)c0).x((iz5)new g06((h06)f, (fk6)kt1, (fk6)jvb.d, (rj)jvb.c), (rtb)new gz2(c0));
-            a = oyv.a;
+            final yz5 f2 = f0.R0.f(currentModuleId);
+            final bu1 bu1 = new bu1((stb)new nz2(f0), 7);
+            Objects.requireNonNull(f2);
+            ((MviViewModel)f0).x((yz5)new w06((x06)f2, (rk6)bu1, (rk6)lvb.d, (sj)lvb.c), (stb)new rz2(f0));
+            a = vzv.a;
         }
         else {
             a = null;
         }
         if (a == null) {
-            c0.a1.clearAllData();
-            ((MviViewModel)c0).Q((rtb)lz2.C0);
-            ((MviViewModel)c0).V((Object)new ax2$a(false, 3));
+            f0.d1.clearAllData();
+            ((MviViewModel)f0).Q((stb)wz2.F0);
+            ((MviViewModel)f0).V((Object)new lx2$a(false, 3));
         }
-        return oyv.a;
+        return vzv.a;
     }
 }

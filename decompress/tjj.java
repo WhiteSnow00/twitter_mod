@@ -2,7 +2,11 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface tjj<ResultT>
+public final class tjj extends g7r
 {
-    void b(final ResultT p0);
+    public static final tjj G0;
+    
+    static {
+        G0 = new tjj();
+    }
 }

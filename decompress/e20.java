@@ -10,7 +10,7 @@ import android.graphics.Canvas;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e20 implements ag3
+public final class e20 implements ah3
 {
     public Canvas a;
     public final Rect b;
@@ -24,7 +24,7 @@ public final class e20 implements ag3
     
     public final void a(final float n, final float n2, final float n3, final float n4, int n5) {
         final Canvas a = this.a;
-        Objects.requireNonNull(hh4.Companion);
+        Objects.requireNonNull(mi4.Companion);
         if (n5 == 0) {
             n5 = 1;
         }
@@ -49,12 +49,12 @@ public final class e20 implements ag3
         this.a.restore();
     }
     
-    public final void d(final lzj lzj, int n) {
-        czd.f((Object)lzj, "path");
+    public final void d(final c0k c0k, int n) {
+        e0e.f((Object)c0k, "path");
         final Canvas a = this.a;
-        if (lzj instanceof g50) {
-            final Path a2 = ((g50)lzj).a;
-            Objects.requireNonNull(hh4.Companion);
+        if (c0k instanceof f50) {
+            final Path a2 = ((f50)c0k).a;
+            Objects.requireNonNull(mi4.Companion);
             if (n == 0) {
                 n = 1;
             }
@@ -78,60 +78,60 @@ public final class e20 implements ag3
         this.a.scale(n, n2);
     }
     
-    public final void f(final float n, final float n2, final float n3, final float n4, final float n5, final float n6, final fvj fvj) {
-        this.a.drawArc(n, n2, n3, n4, n5, n6, false, fvj.p());
+    public final void f(final float n, final float n2, final float n3, final float n4, final float n5, final float n6, final uvj uvj) {
+        this.a.drawArc(n, n2, n3, n4, n5, n6, false, uvj.p());
     }
     
-    public final void g(final c6m c6m, final int n) {
-        this.a(c6m.a, c6m.b, c6m.c, c6m.d, n);
+    public final void g(final p6m p6m, final int n) {
+        this.a(p6m.a, p6m.b, p6m.c, p6m.d, n);
     }
     
-    public final void h(final m5d m5d, final long n, final long n2, final long n3, final long n4, final fvj fvj) {
-        czd.f((Object)m5d, "image");
+    public final void h(final m6d m6d, final long n, final long n2, final long n3, final long n4, final uvj uvj) {
+        e0e.f((Object)m6d, "image");
         final Canvas a = this.a;
-        final Bitmap a2 = psd.a(m5d);
+        final Bitmap a2 = rtd.a(m6d);
         final Rect b = this.b;
-        final ftd$a companion = ftd.Companion;
+        final hud$a companion = hud.Companion;
         final int left = (int)(n >> 32);
         b.left = left;
-        b.top = ftd.c(n);
+        b.top = hud.c(n);
         b.right = left + (int)(n2 >> 32);
-        b.bottom = ltd.b(n2) + ftd.c(n);
+        b.bottom = nud.b(n2) + hud.c(n);
         final Rect c = this.c;
         final int left2 = (int)(n3 >> 32);
         c.left = left2;
-        c.top = ftd.c(n3);
+        c.top = hud.c(n3);
         c.right = left2 + (int)(n4 >> 32);
-        c.bottom = ltd.b(n4) + ftd.c(n3);
-        a.drawBitmap(a2, b, c, fvj.p());
+        c.bottom = nud.b(n4) + hud.c(n3);
+        a.drawBitmap(a2, b, c, uvj.p());
     }
     
-    public final void i(final m5d m5d, final long n, final fvj fvj) {
-        czd.f((Object)m5d, "image");
-        this.a.drawBitmap(psd.a(m5d), wfj.d(n), wfj.e(n), fvj.p());
+    public final void i(final m6d m6d, final long n, final uvj uvj) {
+        e0e.f((Object)m6d, "image");
+        this.a.drawBitmap(rtd.a(m6d), kgj.d(n), kgj.e(n), uvj.p());
     }
     
     public final void j() {
-        as2.q(this.a, true);
+        jb2.O(this.a, true);
     }
     
-    public final void k(final c6m c6m, final fvj fvj) {
-        nh.a((ag3)this, c6m, fvj);
+    public final void k(final p6m p6m, final uvj uvj) {
+        ad.a((ah3)this, p6m, uvj);
     }
     
-    public final void l(final long n, final long n2, final fvj fvj) {
-        this.a.drawLine(wfj.d(n), wfj.e(n), wfj.d(n2), wfj.e(n2), fvj.p());
+    public final void l(final long n, final long n2, final uvj uvj) {
+        this.a.drawLine(kgj.d(n), kgj.e(n), kgj.d(n2), kgj.e(n2), uvj.p());
     }
     
-    public final void m(final float n, final float n2, final float n3, final float n4, final float n5, final float n6, final fvj fvj) {
-        this.a.drawRoundRect(n, n2, n3, n4, n5, n6, fvj.p());
+    public final void m(final float n, final float n2, final float n3, final float n4, final float n5, final float n6, final uvj uvj) {
+        this.a.drawRoundRect(n, n2, n3, n4, n5, n6, uvj.p());
     }
     
-    public final void n(final lzj lzj, final fvj fvj) {
-        czd.f((Object)lzj, "path");
+    public final void n(final c0k c0k, final uvj uvj) {
+        e0e.f((Object)c0k, "path");
         final Canvas a = this.a;
-        if (lzj instanceof g50) {
-            a.drawPath(((g50)lzj).a, fvj.p());
+        if (c0k instanceof f50) {
+            a.drawPath(((f50)c0k).a, uvj.p());
             return;
         }
         throw new UnsupportedOperationException("Unable to obtain android.graphics.Path");
@@ -146,7 +146,7 @@ public final class e20 implements ag3
     }
     
     public final void q() {
-        as2.q(this.a, false);
+        jb2.O(this.a, false);
     }
     
     public final void r(final float[] values) {
@@ -215,21 +215,21 @@ public final class e20 implements ag3
         }
     }
     
-    public final void s(final c6m c6m, final fvj fvj) {
-        this.a.saveLayer(c6m.a, c6m.b, c6m.c, c6m.d, fvj.p(), 31);
+    public final void s(final p6m p6m, final uvj uvj) {
+        this.a.saveLayer(p6m.a, p6m.b, p6m.c, p6m.d, uvj.p(), 31);
     }
     
-    public final void t(final long n, final float n2, final fvj fvj) {
-        this.a.drawCircle(wfj.d(n), wfj.e(n), n2, fvj.p());
+    public final void t(final long n, final float n2, final uvj uvj) {
+        this.a.drawCircle(kgj.d(n), kgj.e(n), n2, uvj.p());
     }
     
-    public final void u(final float n, final float n2, final float n3, final float n4, final fvj fvj) {
-        czd.f((Object)fvj, "paint");
-        this.a.drawRect(n, n2, n3, n4, fvj.p());
+    public final void u(final float n, final float n2, final float n3, final float n4, final uvj uvj) {
+        e0e.f((Object)uvj, "paint");
+        this.a.drawRect(n, n2, n3, n4, uvj.p());
     }
     
     public final void v(final Canvas a) {
-        czd.f((Object)a, "<set-?>");
+        e0e.f((Object)a, "<set-?>");
         this.a = a;
     }
 }

@@ -10,69 +10,69 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfEntity$$JsonObjectMapper extends JsonMapper<JsonOcfEntity>
 {
-    public static JsonOcfEntity _parse(final tge tge) throws IOException {
+    public static JsonOcfEntity _parse(final qhe qhe) throws IOException {
         final JsonOcfEntity jsonOcfEntity = new JsonOcfEntity();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfEntity, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfEntity, d, qhe);
+            qhe.m0();
         }
         return jsonOcfEntity;
     }
     
-    public static void _serialize(final JsonOcfEntity jsonOcfEntity, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfEntity jsonOcfEntity, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
-        afe.T("from_index", jsonOcfEntity.a);
+        yfe.T("from_index", jsonOcfEntity.a);
         if (jsonOcfEntity.d != null) {
-            LoganSquare.typeConverterFor((Class)vsr.class).serialize((Object)jsonOcfEntity.d, "subtask_data_reference", true, afe);
+            LoganSquare.typeConverterFor((Class)ttr.class).serialize((Object)jsonOcfEntity.d, "subtask_data_reference", true, yfe);
         }
-        afe.T("to_index", jsonOcfEntity.b);
+        yfe.T("to_index", jsonOcfEntity.b);
         if (jsonOcfEntity.c != null) {
-            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOcfEntity.c, "navigation_link", true, afe);
+            LoganSquare.typeConverterFor((Class)dtv.class).serialize((Object)jsonOcfEntity.c, "navigation_link", true, yfe);
         }
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfEntity jsonOcfEntity, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfEntity jsonOcfEntity, final String s, final qhe qhe) throws IOException {
         if ("from_index".equals(s)) {
-            jsonOcfEntity.a = tge.y();
+            jsonOcfEntity.a = qhe.z();
         }
         else if ("subtask_data_reference".equals(s)) {
-            jsonOcfEntity.d = (vsr)LoganSquare.typeConverterFor((Class)vsr.class).parse(tge);
+            jsonOcfEntity.d = (ttr)LoganSquare.typeConverterFor((Class)ttr.class).parse(qhe);
         }
         else if ("to_index".equals(s)) {
-            jsonOcfEntity.b = tge.y();
+            jsonOcfEntity.b = qhe.z();
         }
         else if ("navigation_link".equals(s)) {
-            jsonOcfEntity.c = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
+            jsonOcfEntity.c = (dtv)LoganSquare.typeConverterFor((Class)dtv.class).parse(qhe);
         }
     }
     
-    public JsonOcfEntity parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfEntity parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfEntity jsonOcfEntity, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfEntity, afe, b);
+    public void serialize(final JsonOcfEntity jsonOcfEntity, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfEntity, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfEntity)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfEntity)o, yfe, b);
     }
 }

@@ -14,11 +14,11 @@ public final class jlc
     
     @Override
     public final String toString() {
-        final StringBuilder g = w48.g("HistoricalChange(uptimeMillis=");
-        g.append(this.a);
-        g.append(", position=");
-        g.append((Object)qfj.j(this.b));
-        g.append(')');
-        return g.toString();
+        final StringBuilder f = ehk.f("HistoricalChange(uptimeMillis=");
+        f.append(this.a);
+        f.append(", position=");
+        f.append((Object)kgj.j(this.b));
+        f.append(')');
+        return f.toString();
     }
 }

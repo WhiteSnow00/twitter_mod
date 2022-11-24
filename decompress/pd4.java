@@ -1,20 +1,23 @@
 import android.view.View;
-import android.content.Context;
+import android.animation.ValueAnimator;
+import com.google.android.material.textfield.a;
+import android.animation.ValueAnimator$AnimatorUpdateListener;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class pd4 extends wf
+public final class pd4 implements ValueAnimator$AnimatorUpdateListener
 {
-    public final ng$a d;
+    public final a F0;
     
-    public pd4(final Context context, final int n) {
-        this.d = new ng$a(16, (CharSequence)context.getString(n));
+    public pd4(final a f0) {
+        this.F0 = f0;
     }
     
-    public void d(final View view, final ng ng) {
-        super.a.onInitializeAccessibilityNodeInfo(view, ng.a);
-        ng.b(this.d);
+    public final void onAnimationUpdate(final ValueAnimator valueAnimator) {
+        final float floatValue = (float)valueAnimator.getAnimatedValue();
+        ((View)((b5a)this.F0).c).setScaleX(floatValue);
+        ((View)((b5a)this.F0).c).setScaleY(floatValue);
     }
 }

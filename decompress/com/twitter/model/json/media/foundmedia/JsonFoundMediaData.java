@@ -9,14 +9,15 @@ import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonFoundMediaData extends fih<hmb>
+public class JsonFoundMediaData extends tih<inb>
 {
     @JsonField
-    public List<kmb> a;
+    public List<lnb> a;
     @JsonField
-    public List<nmb> b;
+    public List<onb> b;
     
+    @Override
     public final Object s() {
-        return new hmb(gdd.g((List)this.a), gdd.g((List)this.b));
+        return new inb(ged.g((List)this.a), ged.g((List)this.b));
     }
 }

@@ -1,26 +1,38 @@
+import java.io.IOException;
+import com.google.firebase.encoders.EncodingException;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kml extends ste implements ftb<x66, Integer, fzv>
+public final class kml implements epw
 {
-    public final iml D0;
-    public final okh E0;
-    public final int F0;
-    public final int G0;
+    public boolean a;
+    public boolean b;
+    public lxa c;
+    public final hml d;
     
-    public kml(final iml d0, final okh e0, final int f0, final int g0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = g0;
-        super(2);
+    public kml(final hml d) {
+        this.a = false;
+        this.b = false;
+        this.d = d;
     }
     
-    public final Object invoke(final Object o, final Object o2) {
-        final x66 x66 = (x66)o;
-        ((Number)o2).intValue();
-        this.D0.b(this.E0, x66, this.F0 | 0x1, this.G0);
-        return fzv.a;
+    public final epw b(final String s) throws IOException {
+        if (!this.a) {
+            this.a = true;
+            this.d.b(this.c, (Object)s, this.b);
+            return (epw)this;
+        }
+        throw new EncodingException("Cannot encode a second value in the ValueEncoderContext");
+    }
+    
+    public final epw c(final boolean b) throws IOException {
+        if (!this.a) {
+            this.a = true;
+            this.d.c(this.c, (int)(b ? 1 : 0), this.b);
+            return (epw)this;
+        }
+        throw new EncodingException("Cannot encode a second value in the ValueEncoderContext");
     }
 }

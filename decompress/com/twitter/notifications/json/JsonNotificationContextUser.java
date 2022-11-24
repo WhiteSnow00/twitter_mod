@@ -9,31 +9,32 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNotificationContextUser extends fih<yqi>
+public class JsonNotificationContextUser extends tih<ori>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     
+    @Override
     public final Object s() {
-        final boolean e = ikr.e((CharSequence)this.a);
+        final boolean e = flr.e((CharSequence)this.a);
         Object o = null;
         if (e) {
-            i48.t("Context user missing screen name");
+            mqb.o("Context user missing screen name");
         }
-        else if (ikr.e((CharSequence)this.b)) {
-            i48.t("Context user missing avatar");
+        else if (flr.e((CharSequence)this.b)) {
+            mqb.o("Context user missing avatar");
         }
         else {
-            final yqi.a a = new yqi.a();
-            final String a2 = this.a;
-            czd.f((Object)a2, "screenName");
-            a.a = a2;
+            final ori$a ori$a = new ori$a();
+            final String a = this.a;
+            e0e.f((Object)a, "screenName");
+            ori$a.a = a;
             final String b = this.b;
-            czd.f((Object)b, "imageUrl");
-            a.b = b;
-            o = a.e();
+            e0e.f((Object)b, "imageUrl");
+            ori$a.b = b;
+            o = ((z4j)ori$a).e();
         }
         return o;
     }

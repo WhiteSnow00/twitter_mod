@@ -2,40 +2,25 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wuz implements vuz
+public final class wuz implements dgz
 {
-    public static final tcz a;
-    public static final wcz b;
-    public static final qcz c;
-    public static final qcz d;
-    public static final adz e;
+    public static final wuz G0;
+    public final dgz F0;
     
     static {
-        final edz edz = new edz(icz.a(), false, true);
-        a = (tcz)edz.c("measurement.test.boolean_flag", false);
-        b = new wcz(edz, -3.0);
-        c = (qcz)edz.a("measurement.test.int_flag", -2L);
-        d = (qcz)edz.a("measurement.test.long_flag", -1L);
-        e = new adz(edz, "measurement.test.string_flag", "---");
+        G0 = new wuz();
     }
     
-    public final double a() {
-        return (double)wuz.b.b();
+    public wuz() {
+        final igz igz = new igz((Object)new yuz());
+        this.F0 = yru.M((dgz)igz);
     }
     
-    public final long c() {
-        return (long)((mdz)wuz.c).b();
+    public final /* bridge */ Object a() {
+        return this.b();
     }
     
-    public final long d() {
-        return (long)((mdz)wuz.d).b();
-    }
-    
-    public final String e() {
-        return (String)((mdz)wuz.e).b();
-    }
-    
-    public final boolean f() {
-        return (boolean)((mdz)wuz.a).b();
+    public final xuz b() {
+        return (xuz)this.F0.a();
     }
 }

@@ -10,93 +10,96 @@ import kotlin.Metadata;
 public final class QuaternionKt
 {
     public static final Quaternion abs(final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return new Quaternion(Math.abs(quaternion.getX()), Math.abs(quaternion.getY()), Math.abs(quaternion.getZ()), Math.abs(quaternion.getW()));
     }
     
     public static final Quaternion conjugate(final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return new Quaternion(-quaternion.getX(), -quaternion.getY(), -quaternion.getZ(), quaternion.getW());
     }
     
     public static final Quaternion cross(Quaternion quaternion, final Quaternion quaternion2) {
-        czd.f((Object)quaternion, "a");
-        czd.f((Object)quaternion2, "b");
+        e0e.f((Object)quaternion, "a");
+        e0e.f((Object)quaternion2, "b");
         quaternion = new Quaternion(quaternion2.getZ() * quaternion.getY() + (quaternion2.getW() * quaternion.getX() + quaternion2.getX() * quaternion.getW()) - quaternion2.getY() * quaternion.getZ(), quaternion2.getX() * quaternion.getZ() + (quaternion2.getW() * quaternion.getY() + (quaternion2.getY() * quaternion.getW() - quaternion2.getZ() * quaternion.getX())), quaternion2.getW() * quaternion.getZ() + (quaternion2.getY() * quaternion.getX() + quaternion2.getZ() * quaternion.getW() - quaternion2.getX() * quaternion.getY()), quaternion2.getW() * quaternion.getW() - quaternion2.getX() * quaternion.getX() - quaternion2.getY() * quaternion.getY() - quaternion2.getZ() * quaternion.getZ());
         return new Quaternion(quaternion.getX(), quaternion.getY(), quaternion.getZ(), 0.0f);
     }
     
     public static final Quaternion div(final float n, final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return new Quaternion(n / quaternion.getX(), n / quaternion.getY(), n / quaternion.getZ(), n / quaternion.getW());
     }
     
     public static final float dot(final Quaternion quaternion, final Quaternion quaternion2) {
-        czd.f((Object)quaternion, "a");
-        czd.f((Object)quaternion2, "b");
+        e0e.f((Object)quaternion, "a");
+        e0e.f((Object)quaternion2, "b");
         return quaternion2.getW() * quaternion.getW() + (quaternion2.getZ() * quaternion.getZ() + (quaternion2.getY() * quaternion.getY() + quaternion2.getX() * quaternion.getX()));
     }
     
     public static final Float3 eulerAngles(Quaternion normalize) {
-        czd.f((Object)normalize, "q");
+        e0e.f((Object)normalize, "q");
         normalize = normalize(normalize);
         return new Float3((float)Math.atan2((normalize.getX() * normalize.getW() + normalize.getZ() * normalize.getY()) * 2.0f, normalize.getZ() * normalize.getZ() + (normalize.getW() * normalize.getW() - normalize.getX() * normalize.getX() - normalize.getY() * normalize.getY())) * 57.295776f, (float)Math.asin((normalize.getZ() * normalize.getX() - normalize.getY() * normalize.getW()) * -2.0f) * 57.295776f, (float)Math.atan2((normalize.getZ() * normalize.getW() + normalize.getY() * normalize.getX()) * 2.0f, normalize.getX() * normalize.getX() + normalize.getW() * normalize.getW() - normalize.getY() * normalize.getY() - normalize.getZ() * normalize.getZ()) * 57.295776f);
     }
     
     public static final Quaternion inverse(final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         final float n = 1.0f / (quaternion.getW() * quaternion.getW() + (quaternion.getZ() * quaternion.getZ() + (quaternion.getY() * quaternion.getY() + quaternion.getX() * quaternion.getX())));
         return new Quaternion(-quaternion.getX() * n, -quaternion.getY() * n, -quaternion.getZ() * n, quaternion.getW() * n);
     }
     
     public static final float length(final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return (float)Math.sqrt(quaternion.getW() * quaternion.getW() + (quaternion.getZ() * quaternion.getZ() + (quaternion.getY() * quaternion.getY() + quaternion.getX() * quaternion.getX())));
     }
     
     public static final float length2(final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return quaternion.getW() * quaternion.getW() + (quaternion.getZ() * quaternion.getZ() + (quaternion.getY() * quaternion.getY() + quaternion.getX() * quaternion.getX()));
     }
     
-    public static final Quaternion lerp(Quaternion quaternion, Quaternion quaternion2, float x) {
-        czd.f((Object)quaternion, "a");
-        czd.f((Object)quaternion2, "b");
-        final float n = 1 - x;
+    public static final Quaternion lerp(Quaternion quaternion, Quaternion quaternion2, float y) {
+        e0e.f((Object)quaternion, "a");
+        e0e.f((Object)quaternion2, "b");
+        final float n = 1 - y;
         quaternion = new Quaternion(quaternion.getX() * n, quaternion.getY() * n, quaternion.getZ() * n, quaternion.getW() * n);
-        quaternion2 = new Quaternion(quaternion2.getX() * x, quaternion2.getY() * x, quaternion2.getZ() * x, quaternion2.getW() * x);
-        x = quaternion.getX();
-        return new Quaternion(quaternion2.getX() + x, quaternion2.getY() + quaternion.getY(), quaternion2.getZ() + quaternion.getZ(), quaternion2.getW() + quaternion.getW());
+        quaternion2 = new Quaternion(quaternion2.getX() * y, quaternion2.getY() * y, quaternion2.getZ() * y, quaternion2.getW() * y);
+        final float x = quaternion.getX();
+        final float x2 = quaternion2.getX();
+        final float y2 = quaternion.getY();
+        y = quaternion2.getY();
+        return new Quaternion(x2 + x, y + y2, quaternion2.getZ() + quaternion.getZ(), quaternion2.getW() + quaternion.getW());
     }
     
     public static final Quaternion minus(final float n, final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return new Quaternion(n - quaternion.getX(), n - quaternion.getY(), n - quaternion.getZ(), n - quaternion.getW());
     }
     
     public static final Quaternion nlerp(final Quaternion quaternion, final Quaternion quaternion2, final float n) {
-        czd.f((Object)quaternion, "a");
-        czd.f((Object)quaternion2, "b");
+        e0e.f((Object)quaternion, "a");
+        e0e.f((Object)quaternion2, "b");
         return normalize(lerp(quaternion, quaternion2, n));
     }
     
     public static final Quaternion normalize(final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         final float n = 1.0f / (float)Math.sqrt(quaternion.getW() * quaternion.getW() + (quaternion.getZ() * quaternion.getZ() + (quaternion.getY() * quaternion.getY() + quaternion.getX() * quaternion.getX())));
         return new Quaternion(quaternion.getX() * n, quaternion.getY() * n, quaternion.getZ() * n, quaternion.getW() * n);
     }
     
     public static final Quaternion plus(final float n, final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return new Quaternion(quaternion.getX() + n, quaternion.getY() + n, quaternion.getZ() + n, quaternion.getW() + n);
     }
     
-    public static final Quaternion slerp(Quaternion quaternion, final Quaternion quaternion2, float y, float y2) {
-        czd.f((Object)quaternion, "a");
-        czd.f((Object)quaternion2, "b");
+    public static final Quaternion slerp(Quaternion quaternion, final Quaternion quaternion2, float y, float z) {
+        e0e.f((Object)quaternion, "a");
+        e0e.f((Object)quaternion2, "b");
         final float n = quaternion2.getW() * quaternion.getW() + (quaternion2.getZ() * quaternion.getZ() + (quaternion2.getY() * quaternion.getY() + quaternion2.getX() * quaternion.getX()));
         final float abs = Math.abs(n);
-        if (1.0f - abs < y2) {
+        if (1.0f - abs < z) {
             Quaternion unaryMinus = quaternion;
             if (n < 0.0f) {
                 unaryMinus = quaternion.unaryMinus();
@@ -116,23 +119,24 @@ public final class QuaternionKt
         }
         final float n4 = (float)Math.acos(n3);
         final float n5 = (float)Math.sin(n4);
-        if (n5 < y2) {
+        if (n5 < z) {
             return normalize(lerp(quaternion, quaternion2, y));
         }
-        y2 = 1.0f / n5;
-        final float n6 = (float)Math.sin((1.0f - y) * n4) * y2;
-        y2 *= (float)Math.sin(n4 * y);
+        z = 1.0f / n5;
+        final float n6 = (float)Math.sin((1.0f - y) * n4) * z;
+        z *= (float)Math.sin(n4 * y);
         quaternion = new Quaternion(quaternion.getX() * n6, quaternion.getY() * n6, quaternion.getZ() * n6, quaternion.getW() * n6);
-        y = y2;
+        y = z;
         if (n < 0.0f) {
-            y = -y2;
+            y = -z;
         }
         final Quaternion quaternion3 = new Quaternion(quaternion2.getX() * y, quaternion2.getY() * y, quaternion2.getZ() * y, quaternion2.getW() * y);
         final float x = quaternion.getX();
         final float x2 = quaternion3.getX();
-        y = quaternion.getY();
-        y2 = quaternion3.getY();
-        return normalize(new Quaternion(x2 + x, y2 + y, quaternion3.getZ() + quaternion.getZ(), quaternion3.getW() + quaternion.getW()));
+        final float y2 = quaternion.getY();
+        y = quaternion3.getY();
+        z = quaternion.getZ();
+        return normalize(new Quaternion(x2 + x, y + y2, quaternion3.getZ() + z, quaternion3.getW() + quaternion.getW()));
     }
     
     public static Quaternion slerp$default(final Quaternion quaternion, final Quaternion quaternion2, final float n, float n2, final int n3, final Object o) {
@@ -143,7 +147,7 @@ public final class QuaternionKt
     }
     
     public static final Quaternion times(final float n, final Quaternion quaternion) {
-        czd.f((Object)quaternion, "q");
+        e0e.f((Object)quaternion, "q");
         return new Quaternion(quaternion.getX() * n, quaternion.getY() * n, quaternion.getZ() * n, quaternion.getW() * n);
     }
 }

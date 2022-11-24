@@ -1,51 +1,64 @@
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.view.ViewGroup;
-import android.view.View$OnClickListener;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zu7 extends v3e<wx7$h, a>
+public final class zu7
 {
-    public final rtb<wx7$h, oyv> d;
+    public final String a;
+    public final su7 b;
+    public final tu7 c;
     
-    public zu7(final rtb<? super wx7$h, oyv> d) {
-        super((Class)wx7$h.class);
-        this.d = (rtb<wx7$h, oyv>)d;
+    public zu7(final String a, final su7 b, final tu7 c) {
+        e0e.f((Object)a, "__typename");
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public final void k(final c7x c7x, final Object o, final ibm ibm) {
-        final a a = (a)c7x;
-        final wx7$h wx7$h = (wx7$h)o;
-        zzd.f((Object)a, "viewHolder");
-        zzd.f((Object)wx7$h, "item");
-        a.D0.setText(j2d.d((CharSequence)wx7$h.a));
-        ((View)a.E0).setContentDescription((CharSequence)wx7$h.a);
-        a.C0.setOnClickListener((View$OnClickListener)new x7w((Object)this, (Object)wx7$h, 4));
-    }
-    
-    public final c7x l(final ViewGroup viewGroup) {
-        zzd.f((Object)viewGroup, "parent");
-        return (c7x)new a(viewGroup);
-    }
-    
-    public static final class a extends el8
-    {
-        public final TextView D0;
-        public final ImageView E0;
-        
-        public a(final ViewGroup viewGroup) {
-            final View v = lf.v(viewGroup, "parent", 2131624340, viewGroup, false);
-            super(v);
-            final View viewById = v.findViewById(2131431940);
-            zzd.e((Object)viewById, "heldView.findViewById(R.id.text)");
-            this.D0 = (TextView)viewById;
-            final View viewById2 = v.findViewById(2131429505);
-            zzd.e((Object)viewById2, "heldView.findViewById(R.id.icon)");
-            this.E0 = (ImageView)viewById2;
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
         }
+        if (!(o instanceof zu7)) {
+            return false;
+        }
+        final zu7 zu7 = (zu7)o;
+        return e0e.a((Object)this.a, (Object)zu7.a) && e0e.a((Object)this.b, (Object)zu7.b) && e0e.a((Object)this.c, (Object)zu7.c);
+    }
+    
+    @Override
+    public final int hashCode() {
+        final int hashCode = this.a.hashCode();
+        final su7 b = this.b;
+        int hashCode2 = 0;
+        int hashCode3;
+        if (b == null) {
+            hashCode3 = 0;
+        }
+        else {
+            hashCode3 = b.hashCode();
+        }
+        final tu7 c = this.c;
+        if (c != null) {
+            hashCode2 = c.hashCode();
+        }
+        return (hashCode * 31 + hashCode3) * 31 + hashCode2;
+    }
+    
+    @Override
+    public final String toString() {
+        final String a = this.a;
+        final su7 b = this.b;
+        final tu7 c = this.c;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("DMReactionSliceResult(__typename=");
+        sb.append(a);
+        sb.append(", dMReactionSlice=");
+        sb.append(b);
+        sb.append(", dMReactionSliceFailure=");
+        sb.append(c);
+        sb.append(")");
+        return sb.toString();
     }
 }

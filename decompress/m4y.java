@@ -1,23 +1,24 @@
-import android.app.Dialog;
+import com.google.android.gms.common.api.Scope;
+import com.google.android.gms.common.api.a$g;
+import com.google.android.gms.common.api.a;
+import com.google.android.gms.common.api.a$a;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class m4y extends uau
+public final class m4y
 {
-    public final /* synthetic */ Dialog C0;
-    public final /* synthetic */ o4y D0;
+    public static final a$a<e7q, h7q> a;
+    public static final a$a<e7q, v3y> b;
+    public static final a<h7q> c;
     
-    public m4y(final o4y d0, final Dialog c0) {
-        this.D0 = d0;
-        this.C0 = c0;
-    }
-    
-    public final void r() {
-        this.D0.D0.m();
-        if (this.C0.isShowing()) {
-            this.C0.dismiss();
-        }
+    static {
+        final a$g a$g = new a$g();
+        final t1y t1y = m4y.a = new t1y();
+        m4y.b = new s2y();
+        new Scope("profile");
+        new Scope("email");
+        c = new a<h7q>("SignIn.API", (a.a$a<C, a.d>)t1y, (a.a$g<C>)a$g);
     }
 }

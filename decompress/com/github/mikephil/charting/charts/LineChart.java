@@ -10,35 +10,35 @@ import android.graphics.Bitmap;
 import android.util.AttributeSet;
 import android.content.Context;
 
-public class LineChart extends hi1<mcf> implements ncf
+public class LineChart extends ji1<jdf> implements kdf
 {
     public LineChart(final Context context, final AttributeSet set) {
         super(context, set);
     }
     
-    public mcf getLineData() {
-        return (mcf)((jt3)this).E0;
+    public jdf getLineData() {
+        return (jdf)((ju3)this).G0;
     }
     
     public final void h() {
         super.h();
-        ((jt3)this).U0 = (i78)new lcf((ncf)this, ((jt3)this).X0, ((jt3)this).W0);
+        ((ju3)this).W0 = (l88)new idf((kdf)this, ((ju3)this).Z0, ((ju3)this).Y0);
     }
     
     public final void onDetachedFromWindow() {
-        final i78 u0 = ((jt3)this).U0;
-        if (u0 != null && u0 instanceof lcf) {
-            final lcf lcf = (lcf)u0;
-            final Canvas o0 = lcf.O0;
-            if (o0 != null) {
-                o0.setBitmap((Bitmap)null);
-                lcf.O0 = null;
+        final l88 w0 = ((ju3)this).W0;
+        if (w0 != null && w0 instanceof idf) {
+            final idf idf = (idf)w0;
+            final Canvas q0 = idf.Q0;
+            if (q0 != null) {
+                q0.setBitmap((Bitmap)null);
+                idf.Q0 = null;
             }
-            final WeakReference n0 = lcf.N0;
-            if (n0 != null) {
-                ((Bitmap)n0.get()).recycle();
-                lcf.N0.clear();
-                lcf.N0 = null;
+            final WeakReference p0 = idf.P0;
+            if (p0 != null) {
+                ((Bitmap)p0.get()).recycle();
+                idf.P0.clear();
+                idf.P0 = null;
             }
         }
         super.onDetachedFromWindow();

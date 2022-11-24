@@ -6,14 +6,14 @@ package com.google.android.gms.common.api;
 
 public final class UnsupportedApiCallException extends UnsupportedOperationException
 {
-    public final yra D0;
+    public final gta F0;
     
-    public UnsupportedApiCallException(final yra d0) {
-        this.D0 = d0;
+    public UnsupportedApiCallException(final gta f0) {
+        this.F0 = f0;
     }
     
     @Override
     public final String getMessage() {
-        return "Missing ".concat(String.valueOf(this.D0));
+        return "Missing ".concat(String.valueOf(this.F0));
     }
 }

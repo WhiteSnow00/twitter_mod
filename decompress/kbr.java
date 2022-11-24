@@ -2,19 +2,24 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kbr extends kkl
+public final class kbr extends ul1
 {
-    public static final kbr D0;
+    public final String c;
+    public final shr d;
     
-    static {
-        D0 = new kbr();
+    public kbr(final String c, final shr d) {
+        super(c, d);
+        this.c = c;
+        this.d = d;
     }
     
-    public kbr() {
-        super((Class)pbr.class, "author", "getAuthor()Ljava/lang/String;", 0);
+    @Override
+    public final String a() {
+        return this.c;
     }
     
-    public final Object get(final Object o) {
-        return ((pbr)o).d;
+    @Override
+    public final shr b() {
+        return this.d;
     }
 }

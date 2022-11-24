@@ -14,42 +14,40 @@ import com.google.firebase.messaging.FirebaseMessagingService;
 
 public class TwitterFirebaseMessagingService extends FirebaseMessagingService
 {
-    public final dql K0;
+    public final pql M0;
     
     public TwitterFirebaseMessagingService() {
-        final dql q4 = m1f.d().q4();
-        this.K0 = q4;
+        final pql q4 = m58.m().q4();
+        this.M0 = q4;
     }
     
-    @Override
     public final void d() {
-        final xra a = xra.a();
+        final fta a = fta.a();
         Objects.requireNonNull(a);
         final UserIdentifier logged_OUT = UserIdentifier.LOGGED_OUT;
-        final af4 af4 = new af4(logged_OUT);
-        ((u0p)af4).q(new String[] { "notification", "status_bar", null, null, "push_data_dropped" });
-        ((u0p)af4).s = 2;
-        final int a2 = c5j.a;
-        a.b(logged_OUT, (elm)af4);
+        final fg4 fg4 = new fg4(logged_OUT);
+        ((o1p)fg4).q(new String[] { "notification", "status_bar", null, null, "push_data_dropped" });
+        ((o1p)fg4).s = 2;
+        final int a2 = o5j.a;
+        a.b(logged_OUT, (tlm)fg4);
     }
     
-    @Override
-    public final void e(rdm value) {
-        if (((d8q)value.r()).isEmpty()) {
-            final h8a h8a = new h8a();
-            final Object o = ((BaseBundle)value.D0).getString("google.message_id");
+    public final void e(eem value) {
+        if (((z8q)value.p()).isEmpty()) {
+            final m9a m9a = new m9a();
+            final Object o = ((BaseBundle)value.F0).getString("google.message_id");
             String string;
             if ((string = (String)o) == null) {
-                string = ((BaseBundle)value.D0).getString("message_id");
+                string = ((BaseBundle)value.F0).getString("message_id");
             }
-            jee.l((Object)string);
-            ((HashMap<String, String>)h8a.a).put("messageId", string);
-            h8a.b = new IllegalArgumentException("[FCMMigration] Received FCM message with empty data");
-            m8a.c(h8a);
+            vmw.g((Object)string);
+            ((HashMap<String, String>)m9a.a).put("messageId", string);
+            m9a.b = new IllegalArgumentException("[FCMMigration] Received FCM message with empty data");
+            r9a.c(m9a);
             return;
         }
-        final Map r = value.r();
-        value = (rdm)((BaseBundle)value.D0).get("google.sent_time");
+        final Map<String, String> p = value.p();
+        value = (eem)((BaseBundle)value.F0).get("google.sent_time");
         long n = 0L;
         Label_0185: {
             if (value instanceof Long) {
@@ -71,79 +69,78 @@ public class TwitterFirebaseMessagingService extends FirebaseMessagingService
                 n = 0L;
             }
         }
-        ((d8q<String, String>)r).put("sent_time", String.valueOf(n));
-        final i0k i0k = new i0k(r);
-        final dql k0 = this.K0;
-        Objects.requireNonNull(k0);
-        final UserIdentifier e = i0k.e();
-        if (!((uew)k0.a).l(e)) {
+        ((z8q)p).put((Object)"sent_time", (Object)String.valueOf(n));
+        final y0k y0k = new y0k(p);
+        final pql m0 = this.M0;
+        Objects.requireNonNull(m0);
+        final UserIdentifier e = y0k.e();
+        if (!((kfw)m0.a).l(e)) {
             return;
         }
-        final String s = ((d8q<K, String>)r).getOrDefault("scribe_target", null);
-        jee.l((Object)s);
-        if (k0.k.b()) {
-            k0.k.a(s);
+        final String s = (String)((z8q)p).getOrDefault((Object)"scribe_target", (Object)null);
+        vmw.g((Object)s);
+        if (m0.k.b()) {
+            m0.k.a(s);
             return;
         }
-        final Object o = k0.f.a;
-        ((mxo)o).a();
+        final Object o = m0.f.a;
+        ((hyo)o).a();
         try {
             String v;
-            if ((v = ((d8q<K, String>)r).getOrDefault("impression_id", null)) == null) {
+            if ((v = (String)((z8q)p).getOrDefault((Object)"impression_id", (Object)null)) == null) {
                 v = "not_provided";
             }
-            ((mxo)o).f((Object)"impression_id", (Object)v);
-            k0.h.d(e, s, v);
-            final xra h = k0.h;
+            ((hyo)o).f((Object)"impression_id", (Object)v);
+            m0.h.d(e, s, v);
+            final fta h = m0.h;
             Objects.requireNonNull(h);
-            final af4 af4 = new af4(e);
-            ((u0p)af4).q(new String[] { "notification", "status_bar", null, null, "push_data_received" });
-            ((u0p)af4).v = v;
-            final int a = c5j.a;
-            ((u0p)af4).s = 2;
-            h.b(e, (elm)af4);
-            if (i0k.b() != 295) {
-                if (!k0.e.d()) {
-                    final xra h2 = k0.h;
+            final fg4 fg4 = new fg4(e);
+            ((o1p)fg4).q(new String[] { "notification", "status_bar", null, null, "push_data_received" });
+            ((o1p)fg4).v = v;
+            final int a = o5j.a;
+            ((o1p)fg4).s = 2;
+            h.b(e, (tlm)fg4);
+            if (y0k.b() != 295) {
+                if (!m0.e.d()) {
+                    final fta h2 = m0.h;
                     Objects.requireNonNull(h2);
-                    final af4 af5 = new af4(e);
-                    ((u0p)af5).q(new String[] { "notification", "status_bar", null, s, "not_granted" });
-                    h2.b(e, (elm)af5);
+                    final fg4 fg5 = new fg4(e);
+                    ((o1p)fg5).q(new String[] { "notification", "status_bar", null, s, "not_granted" });
+                    h2.b(e, (tlm)fg5);
                 }
-                else if (!k0.e.m()) {
-                    final xra h3 = k0.h;
+                else if (!m0.e.m()) {
+                    final fta h3 = m0.h;
                     Objects.requireNonNull(h3);
-                    final af4 af6 = new af4(e);
-                    ((u0p)af6).q(new String[] { "notification", "status_bar", null, s, "blocked" });
-                    h3.b(e, (elm)af6);
+                    final fg4 fg6 = new fg4(e);
+                    ((o1p)fg6).q(new String[] { "notification", "status_bar", null, s, "blocked" });
+                    h3.b(e, (tlm)fg6);
                 }
                 else {
-                    final h5j p = k0.d.g(i0k).P();
-                    final fql c = k0.c;
+                    final t5j p2 = m0.d.g(y0k).P();
+                    final rql c = m0.c;
                     Objects.requireNonNull(c);
-                    final h5j filter = p.doOnNext((lj6)new ghh((Object)c, 22)).filter((ytk)new xi0((Object)k0, 11));
-                    final qol g = k0.g;
+                    final t5j filter = p2.doOnNext((rk6)new kxw((Object)c, 16)).filter((ouk)new e0h((Object)m0, 4));
+                    final cpl g = m0.g;
                     Objects.requireNonNull(g);
-                    filter.filter((ytk)new y4x((Object)g)).subscribe((lj6)new r8f((Object)k0, 4));
+                    filter.filter((ouk)new c5((Object)g)).subscribe((rk6)new a3x((Object)m0, 2));
                 }
             }
         }
         finally {
-            ((mxo)o).b();
-            ((mxo)o).c();
+            ((hyo)o).b();
+            ((hyo)o).c();
         }
     }
     
-    @Override
     public final void f(final String s) {
-        final xra a = xra.a();
+        final fta a = fta.a();
         a.c("refresh");
-        if (ikr.e((CharSequence)s)) {
+        if (flr.e((CharSequence)s)) {
             a.c("invalid_received");
         }
         else {
             a.c("valid_received");
-            m1f.d().D7().c(s);
+            m58.m().D7().c(s);
         }
     }
 }

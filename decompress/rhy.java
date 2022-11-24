@@ -1,53 +1,49 @@
-import android.os.RemoteException;
-import android.os.Parcelable$Creator;
-import com.google.android.gms.common.api.Status;
 import android.os.Parcel;
-import android.os.IBinder;
-import android.os.IInterface;
-import android.os.Binder;
+import java.util.Objects;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class rhy extends Binder implements IInterface
+public final class rhy extends sd
 {
-    public rhy() {
-        this.attachInterface((IInterface)this, "com.google.android.gms.auth.api.phone.internal.ISmsRetrieverResultCallback");
+    public static final Parcelable$Creator<rhy> CREATOR;
+    public final String F0;
+    public final fhy G0;
+    public final String H0;
+    public final long I0;
+    
+    static {
+        CREATOR = (Parcelable$Creator)new why();
     }
     
-    public final IBinder asBinder() {
-        return (IBinder)this;
+    public rhy(final String f0, final fhy g0, final String h0, final long i0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
+        this.I0 = i0;
     }
     
-    public final boolean onTransact(int a, final Parcel parcel, final Parcel parcel2, final int n) throws RemoteException {
-        final boolean b = false;
-        boolean onTransact;
-        if (a > 16777215) {
-            onTransact = super.onTransact(a, parcel, parcel2, n);
-        }
-        else {
-            parcel.enforceInterface(this.getInterfaceDescriptor());
-            onTransact = false;
-        }
-        if (onTransact) {
-            return true;
-        }
-        final vaz vaz = (vaz)this;
-        boolean b2 = b;
-        if (a == 1) {
-            final Parcelable$Creator creator = Status.CREATOR;
-            a = eoy.a;
-            Object o;
-            if (parcel.readInt() == 0) {
-                o = null;
-            }
-            else {
-                o = creator.createFromParcel(parcel);
-            }
-            af8.O((Status)o, (Object)null, ((jqz)((nnz)vaz).a).d);
-            b2 = true;
-        }
-        return b2;
+    public rhy(final rhy rhy, final long i0) {
+        Objects.requireNonNull(rhy, "null reference");
+        this.F0 = rhy.F0;
+        this.G0 = rhy.G0;
+        this.H0 = rhy.H0;
+        this.I0 = i0;
+    }
+    
+    @Override
+    public final String toString() {
+        final String h0 = this.H0;
+        final String f0 = this.F0;
+        final String value = String.valueOf(this.G0);
+        final StringBuilder k = l58.k("origin=", h0, ",name=", f0, ",params=");
+        k.append(value);
+        return k.toString();
+    }
+    
+    public final void writeToParcel(final Parcel parcel, final int n) {
+        why.a(this, parcel, n);
     }
 }

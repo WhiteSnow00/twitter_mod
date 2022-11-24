@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Értesítést kapsz majd az új Tweetekről.</item>
-        <item>Értesítést kapsz majd az új, csak Kiemelt követői Tweetekről.</item>
+        <item>Értesítést kapsz majd az új, előfizetőknek szóló Tweetekről.</item>
         <item>Értesítést kapsz majd az új, élő videót tartalmazó Tweetekről.</item>
         <item>Értesítést kapsz majd az új, Terekkel kapcsolatos Tweetekről.</item>
         <item>Nem kapsz majd értesítést az új Tweetekről.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweet</item>
-        <item>Csak Kiemelt követői Tweetek</item>
+        <item>Csak előfizetőknek szóló Tweetek</item>
         <item>Élő videó</item>
         <item>Terek</item>
         <item>Nincs</item>
     </array>
     <array name="account_notif_options_old">
         <item>Az összes Tweet</item>
-        <item>Csak Kiemelt követői Tweetek</item>
+        <item>Csak előfizetői Tweetek</item>
         <item>Csak élő videó</item>
         <item>Csak Terek</item>
         <item>Ki</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Értesítés kérése a felhasználói fiók minden Tweetjéről.</item>
-        <item>Értesítést kapsz majd a Kiemelt követői Tweetekről.</item>
+        <item>Csak az előfizetői Tweetekről kapsz értesítést.</item>
         <item>Értesítés kérése csak az elő közvetítésekről.</item>
         <item>Csak a Terekről kérek értesítést.</item>
         <item>Értesítések kikapcsolása a felhasználói fiók minden Tweetjéhez.</item>

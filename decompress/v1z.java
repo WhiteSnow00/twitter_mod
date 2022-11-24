@@ -1,18 +1,26 @@
-import android.os.Handler$Callback;
-import android.os.Looper;
-import android.os.Handler;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class v1z extends Handler
+public abstract class v1z
 {
-    public v1z(final Looper looper) {
-        super(looper);
+    public abstract int a();
+    
+    public abstract long b();
+    
+    public abstract String c();
+    
+    public abstract boolean d();
+    
+    public abstract boolean e();
+    
+    public abstract byte[] f();
+    
+    public final boolean g() {
+        return this.c() != null && this.c().endsWith("/");
     }
     
-    public v1z(final Looper looper, final Handler$Callback handler$Callback) {
-        super(looper, handler$Callback);
+    public final boolean h() {
+        return this.a() == 0;
     }
 }

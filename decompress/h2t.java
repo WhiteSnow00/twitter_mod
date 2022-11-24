@@ -2,24 +2,31 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class h2t implements e2t
+public final class h2t extends vxs
 {
-    public final String a;
+    public final c2t k;
     
     public h2t(final a a) {
-        this.a = a.a;
+        super((vxs$a)a);
+        final c2t k = a.k;
+        vmw.g((Object)k);
+        this.k = k;
     }
     
-    public static final class a extends h4j<h2t>
+    public static final class a extends vxs$a<h2t, a>
     {
-        public String a;
+        public c2t k;
+        
+        public a(final long n) {
+            super(n);
+        }
         
         public final Object i() {
             return new h2t(this);
         }
         
-        public final boolean l() {
-            return pjr.g((CharSequence)this.a);
+        public final boolean k() {
+            return this.k != null;
         }
     }
 }

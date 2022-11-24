@@ -1,18 +1,27 @@
-import java.util.Set;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class r3j extends umd implements uej
+public final class r3j
 {
-    public static final int X1 = 0;
+    public final String a;
     
-    public final h5j<Boolean> H0() {
-        return (h5j<Boolean>)vej.a((umd)this, (nsb)new r1x((Object)this, 1));
+    public r3j(final String a) {
+        this.a = a;
     }
     
-    public final h5j<Set<Long>> e() {
-        return (h5j<Set<Long>>)vej.a((umd)this, (nsb)new q1x((Object)this, 1));
+    @Override
+    public final boolean equals(final Object o) {
+        return this == o || (o != null && r3j.class == o.getClass() && this.a.equals(((r3j)o).a));
+    }
+    
+    @Override
+    public final int hashCode() {
+        return o5j.f((Object)this.a);
+    }
+    
+    @Override
+    public final String toString() {
+        return this.a;
     }
 }

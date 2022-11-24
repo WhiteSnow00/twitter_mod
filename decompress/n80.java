@@ -5,13 +5,13 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class n80 extends p6b
+public final class n80 extends q7b
 {
-    public n80(final List<dre<jrp>> list) {
-        super((Object)list, 1);
+    public n80(final List<zre<esp>> list) {
+        super(list, 1);
     }
     
-    public final rm1<jrp, Path> V() {
-        return (rm1<jrp, Path>)new prp((List)super.E0);
+    public final wm1<esp, Path> g() {
+        return new ksp((List<zre<esp>>)super.G0);
     }
 }

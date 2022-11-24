@@ -2,7 +2,6 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface nc9 extends okh$b
+public final class nc9 implements fvd
 {
-    void x(final yk6 p0);
 }

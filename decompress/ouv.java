@@ -2,19 +2,14 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ouv extends kkl
+public final class ouv extends q7b
 {
-    public static final ouv D0;
+    public final gcu H0;
     
-    static {
-        D0 = new ouv();
-    }
-    
-    public ouv() {
-        super((Class)tuv.class, "tweetCreationTimeMillis", "getTweetCreationTimeMillis()J", 0);
-    }
-    
-    public final Object get(final Object o) {
-        return ((tuv)o).e;
+    public ouv(final puv puv, final gcu h0) {
+        e0e.f((Object)puv, "undoSendFeatureGate");
+        e0e.f((Object)h0, "userPreferences");
+        super(h0);
+        this.H0 = h0;
     }
 }

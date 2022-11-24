@@ -1,12 +1,21 @@
+import java.util.Objects;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface kir
+public final class kir extends ul1
 {
-    float a();
+    public final String c;
+    public final boolean d;
+    public boolean e;
     
-    boolean b();
-    
-    float getInterpolation(final float p0);
+    public kir(final String c, final boolean d, final boolean e) {
+        final String l = mqb.l("section_", c);
+        Objects.requireNonNull(shr.Companion);
+        super(l, (shr)shr$a.b);
+        this.c = c;
+        this.d = d;
+        this.e = e;
+    }
 }

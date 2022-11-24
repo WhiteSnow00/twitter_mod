@@ -8,14 +8,15 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTwitterUserPhone extends fih<sfw>
+public class JsonTwitterUserPhone extends tih<igw>
 {
     @JsonField
     public boolean a;
     
+    @Override
     public final Object s() {
-        final sfw$a sfw$a = new sfw$a();
-        sfw$a.a = this.a;
-        return ((n4j)sfw$a).e();
+        final igw$a igw$a = new igw$a();
+        igw$a.a = this.a;
+        return ((z4j)igw$a).e();
     }
 }

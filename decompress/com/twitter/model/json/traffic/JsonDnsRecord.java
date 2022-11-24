@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonDnsRecord extends aih<s49>
+public class JsonDnsRecord extends tih<h59>
 {
     @JsonField
     public String a;
@@ -19,11 +19,11 @@ public class JsonDnsRecord extends aih<s49>
     @Override
     public final Object s() {
         Object o;
-        if (pjr.e((CharSequence)this.a)) {
+        if (flr.e((CharSequence)this.a)) {
             o = null;
         }
         else {
-            o = new s49(this.a, this.b);
+            o = new h59(this.a, this.b);
         }
         return o;
     }

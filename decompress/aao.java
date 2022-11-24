@@ -1,28 +1,21 @@
-import com.twitter.rooms.manager.RoomStateManager;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class aao extends gue implements rtb<gqn, oyv>
+public final class aao extends pue implements stb<String, vzv>
 {
-    public final /* synthetic */ otb<oyv> C0;
-    public final /* synthetic */ gqn D0;
-    public final /* synthetic */ RoomStateManager E0;
+    public static final aao F0;
     
-    public aao(final otb<oyv> c0, final gqn d0, final RoomStateManager e0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
+    static {
+        F0 = new aao();
+    }
+    
+    public aao() {
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        zzd.f((Object)o, "it");
-        this.C0.invoke();
-        if (this.D0.u == hqn.C0) {
-            this.E0.y1.onNext((Object)Boolean.TRUE);
-        }
-        return oyv.a;
+        e0e.f((Object)o, "it");
+        return vzv.a;
     }
 }

@@ -8,21 +8,21 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTile extends aih<zos>
+public class JsonTile extends tih<jqs>
 {
     @JsonField
-    public bca a;
+    public rca a;
     @JsonField(name = { "tileUrl", "url" })
-    public q7t b;
+    public c9t b;
     @JsonField
-    public bps c;
+    public lqs c;
     
     @Override
     public final Object s() {
-        final zos$a zos$a = new zos$a();
-        zos$a.a = this.a;
-        zos$a.b = this.b;
-        zos$a.c = this.c;
-        return ((h4j)zos$a).j();
+        final jqs.a a = new jqs.a();
+        a.a = this.a;
+        a.b = this.b;
+        a.c = this.c;
+        return a.j();
     }
 }

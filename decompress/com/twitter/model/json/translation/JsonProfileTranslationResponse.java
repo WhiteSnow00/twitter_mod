@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.FIELD_NAME)
-public class JsonProfileTranslationResponse extends aih<z7l>
+public class JsonProfileTranslationResponse extends tih<z8l>
 {
     @JsonField
     public String a;
@@ -19,14 +19,14 @@ public class JsonProfileTranslationResponse extends aih<z7l>
     
     @Override
     public final Object s() {
-        final z7l$a z7l$a = new z7l$a();
+        final z8l$a z8l$a = new z8l$a();
         final JsonProfileTranslation b = this.b;
-        ((c0u$a)z7l$a).a = b.c;
-        ((c0u$a)z7l$a).b = b.d;
-        ((c0u$a)z7l$a).c = b.e;
-        ((c0u$a)z7l$a).d = b.f;
+        ((l1u$a)z8l$a).a = b.c;
+        ((l1u$a)z8l$a).b = b.d;
+        ((l1u$a)z8l$a).c = b.e;
+        ((l1u$a)z8l$a).d = b.f;
         final JsonProfileTranslation b2 = this.b;
-        ((c0u$a)z7l$a).e = goz.s(new jeu(b2.a, b2.b, (Map)null), true);
-        return ((h4j)z7l$a).j();
+        ((l1u$a)z8l$a).e = xd.i0(new rfu(b2.a, b2.b, null), true);
+        return ((z4j)z8l$a).j();
     }
 }

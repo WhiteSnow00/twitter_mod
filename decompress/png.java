@@ -1,28 +1,29 @@
+import androidx.fragment.app.Fragment;
+import android.view.View;
+import com.google.android.material.datepicker.c;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class png implements kzm
+public final class png extends wf
 {
-    public static final png a;
+    public final c d;
     
-    static {
-        a = new png();
+    public png(final c d) {
+        this.d = d;
     }
     
-    public final zym a(final m76 m76) {
-        m76.x(-1419762518);
-        final ea6$b a = ea6.a;
-        final zym a2 = kzm.Companion.a(((pr4)m76.m((re6)ll6.a)).a, ((ks4)m76.m((re6)ls4.a)).m());
-        m76.O();
-        return a2;
-    }
-    
-    public final long b(final m76 m76) {
-        m76.x(550536719);
-        final ea6$b a = ea6.a;
-        final long b = kzm.Companion.b(((pr4)m76.m((re6)ll6.a)).a, ((ks4)m76.m((re6)ls4.a)).m());
-        m76.O();
-        return b;
+    @Override
+    public final void d(final View view, final ng ng) {
+        super.a.onInitializeAccessibilityNodeInfo(view, ng.a);
+        String s;
+        if (this.d.M1.getVisibility() == 0) {
+            s = ((Fragment)this.d).W0(2131955204);
+        }
+        else {
+            s = ((Fragment)this.d).W0(2131955202);
+        }
+        ng.O((CharSequence)s);
     }
 }

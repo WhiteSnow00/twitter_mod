@@ -8,30 +8,24 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonExploreLocation extends fih<uja>
+public class JsonExploreLocation extends tih<ala>
 {
     @JsonField
     public String a;
     @JsonField(name = { "place_id" })
     public String b;
-    @JsonField(name = { "location_type" }, typeConverter = tee.class)
+    @JsonField(name = { "location_type" }, typeConverter = rfe.class)
     public int c;
     
+    @Override
     public final /* bridge */ Object s() {
         return this.t();
     }
     
-    public final uja t() {
-        final uja$a uja$a = new uja$a();
-        uja$a.a = this.a;
-        uja$a.b = this.b;
-        return (uja)((n4j)uja$a).e();
-    }
-    
-    @JsonObject
-    public static class JsonTwitterLocationPlaceLocationType extends qfe
-    {
-        @JsonField(name = { "original_name" }, typeConverter = tee.class)
-        public int a;
+    public final ala t() {
+        final ala$a ala$a = new ala$a();
+        ala$a.a = this.a;
+        ala$a.b = this.b;
+        return (ala)((z4j)ala$a).e();
     }
 }

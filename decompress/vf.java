@@ -9,19 +9,19 @@ import android.text.style.ClickableSpan;
 
 public final class vf extends ClickableSpan
 {
-    public final int C0;
-    public final ng D0;
-    public final int E0;
+    public final int F0;
+    public final ng G0;
+    public final int H0;
     
-    public vf(final int c0, final ng d0, final int e0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
+    public vf(final int f0, final ng g0, final int h0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
     }
     
     public final void onClick(final View view) {
         final Bundle bundle = new Bundle();
-        ((BaseBundle)bundle).putInt("ACCESSIBILITY_CLICKABLE_SPAN_ID", this.C0);
-        this.D0.a.performAction(this.E0, bundle);
+        ((BaseBundle)bundle).putInt("ACCESSIBILITY_CLICKABLE_SPAN_ID", this.F0);
+        this.G0.a.performAction(this.H0, bundle);
     }
 }

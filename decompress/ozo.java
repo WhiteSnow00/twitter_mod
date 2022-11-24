@@ -1,63 +1,48 @@
-import java.util.Objects;
+import java.io.File;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ozo<T extends szo> extends yxc
+public final class ozo
 {
-    public final xzo<T> b;
-    public final n5k<T> c;
+    public final File a;
+    public final long b;
     
-    public ozo(final xzo<T> b, final n5k<T> c) {
-        zzd.f((Object)b, "scribeItemProvider");
-        zzd.f((Object)c, "periscopeScribeHelper");
+    public ozo(final File a, final long b) {
+        this.a = a;
         this.b = b;
-        this.c = c;
     }
     
-    public final void a() {
-        Objects.requireNonNull(super.a);
-        this.c.b("", "hangup_screen", "cancel", this.e());
-    }
-    
-    public final void b(final boolean b, final boolean b2) {
-        super.b(b, b2);
-        String s = "";
-        if (b) {
-            final n5k<T> c = this.c;
-            final Boolean a = super.a.a;
-            if (a != null) {
-                if (a) {
-                    s = "audio";
-                }
-                else {
-                    s = "video";
-                }
-            }
-            c.b("hangup", s, "by_broadcaster", this.e());
-            return;
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
         }
-        this.c.b("", "hangup_screen", "confirm", this.e());
+        if (!(o instanceof ozo)) {
+            return false;
+        }
+        final ozo ozo = (ozo)o;
+        return e0e.a((Object)this.a, (Object)ozo.a) && this.b == ozo.b;
     }
     
-    public final void c(final boolean b) {
-        final yxc$b a = new yxc$b();
-        super.a = a;
-        a.a = b;
-        Objects.requireNonNull(super.a);
-        this.c.b("in_broadcast_actions_menu", "hangup", "", this.e());
+    @Override
+    public final int hashCode() {
+        final int hashCode = this.a.hashCode();
+        final long b = this.b;
+        return hashCode * 31 + (int)(b ^ b >>> 32);
     }
     
-    public final void d(final boolean b) {
-        final yxc$b a = new yxc$b();
-        super.a = a;
-        a.a = b;
-        Objects.requireNonNull(super.a);
-        this.c.b("chat_bottom_bar", "hangup", "", this.e());
-    }
-    
-    public final szo e() {
-        return this.b.a();
+    @Override
+    public final String toString() {
+        final File a = this.a;
+        final long b = this.b;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("Screenshot(file=");
+        sb.append(a);
+        sb.append(", takenTimestamp=");
+        sb.append(b);
+        sb.append(")");
+        return sb.toString();
     }
 }

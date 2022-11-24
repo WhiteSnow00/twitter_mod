@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public final class JsonNotificationChannelGroup extends fih<wpi>
+public final class JsonNotificationChannelGroup extends tih<mqi>
 {
     @JsonField
     public String a;
@@ -17,7 +17,8 @@ public final class JsonNotificationChannelGroup extends fih<wpi>
     @JsonField
     public String c;
     
+    @Override
     public final Object s() {
-        return new wpi(this.a, this.b, this.c);
+        return new mqi(this.a, this.b, this.c);
     }
 }

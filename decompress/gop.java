@@ -1,56 +1,52 @@
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.View$OnClickListener;
-import android.app.Activity;
-import com.twitter.onboarding.ocf.settings.SettingsListViewModel;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gop extends a3e<h8c, hop>
+public final class gop implements sr9
 {
-    public final dej d;
-    public final SettingsListViewModel e;
-    public final dn6<qop, rop> f;
-    public final mv1<tmi> g;
-    public final acs h;
-    public final Activity i;
-    public yai j;
+    public final int a;
+    public final int b;
     
-    public gop(final dej d, final SettingsListViewModel e, final obi<?> obi, final acs h, final Activity i, final yai j) {
-        super((Class)h8c.class);
-        this.g = (mv1<tmi>)mv1.e((Object)tmi.a);
-        this.d = d;
-        this.e = e;
-        this.h = h;
-        this.i = i;
-        final dn6 h2 = obi.h((Class)rop.class, (tsm)new etr());
-        this.f = (dn6<qop, rop>)h2;
-        this.j = j;
-        f.i(h2.c(), (n93)new jgk((Object)this, 21));
+    public gop(final int a, final int b) {
+        this.a = a;
+        this.b = b;
     }
     
-    public final void k(final v7x v7x, final Object o, final xbm xbm) {
-        final hop hop = (hop)v7x;
-        final i8c a = ((h8c)o).a;
-        hop.E0.setText((CharSequence)((oxm)a.a).D0);
-        final dej d = this.d;
-        final cej b = a.b;
-        if (b == null) {
-            ((View)hop.F0).setVisibility(8);
+    public final void a(final vx9 vx9) {
+        e0e.f((Object)vx9, "buffer");
+        final int f = jb2.F(this.a, 0, vx9.e());
+        final int f2 = jb2.F(this.b, 0, vx9.e());
+        if (f < f2) {
+            vx9.i(f, f2);
         }
         else {
-            d.a(hop.F0, (oxm)b);
+            vx9.i(f2, f);
         }
-        hop.D0.setOnClickListener((View$OnClickListener)new ty((Object)this, (Object)a, 15));
-        final t19 subscribe = ((h5j)this.g).subscribe((lj6)new fy0((Object)this, (Object)a, (Object)hop, 8));
-        hop.H0.a();
-        hop.H0.c(subscribe);
-        xbm.i((oj)new tzo((Object)hop, 13));
     }
     
-    public final v7x l(final ViewGroup viewGroup) {
-        return (v7x)new hop(da8.h(viewGroup, 2131625081, viewGroup, false));
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof gop)) {
+            return false;
+        }
+        final int a = this.a;
+        final gop gop = (gop)o;
+        return a == gop.a && this.b == gop.b;
+    }
+    
+    @Override
+    public final int hashCode() {
+        return this.a * 31 + this.b;
+    }
+    
+    @Override
+    public final String toString() {
+        final StringBuilder f = ehk.f("SetSelectionCommand(start=");
+        f.append(this.a);
+        f.append(", end=");
+        return gwl.x(f, this.b, ')');
     }
 }

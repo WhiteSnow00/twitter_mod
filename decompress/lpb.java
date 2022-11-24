@@ -1,25 +1,21 @@
-import android.database.sqlite.SQLiteCursor;
-import android.database.sqlite.SQLiteProgram;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteQuery;
-import android.database.sqlite.SQLiteCursorDriver;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDatabase$CursorFactory;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lpb implements SQLiteDatabase$CursorFactory
+public final class lpb implements Runnable
 {
-    public final ozr a;
+    public final FragmentStateAdapter F0;
     
-    public lpb(final ozr a) {
-        this.a = a;
+    public lpb(final FragmentStateAdapter f0) {
+        this.F0 = f0;
     }
     
-    public final Cursor newCursor(final SQLiteDatabase sqLiteDatabase, final SQLiteCursorDriver sqLiteCursorDriver, final String s, final SQLiteQuery sqLiteQuery) {
-        this.a.b((nzr)new ppb((SQLiteProgram)sqLiteQuery, 0));
-        return (Cursor)new SQLiteCursor(sqLiteCursorDriver, s, sqLiteQuery);
+    @Override
+    public final void run() {
+        final FragmentStateAdapter f0 = this.F0;
+        f0.O0 = false;
+        f0.F();
     }
 }

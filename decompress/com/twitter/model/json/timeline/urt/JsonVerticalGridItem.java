@@ -8,10 +8,10 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonVerticalGridItem extends aih<csw>
+public class JsonVerticalGridItem extends tih<ktw>
 {
-    @JsonField(name = { "content" }, typeConverter = t8t.class)
-    public csw a;
+    @JsonField(name = { "content" }, typeConverter = fat.class)
+    public ktw a;
     
     @Override
     public final Object s() {

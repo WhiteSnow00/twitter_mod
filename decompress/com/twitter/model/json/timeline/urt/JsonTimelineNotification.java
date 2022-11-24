@@ -8,21 +8,21 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineNotification extends aih<wzs>
+public class JsonTimelineNotification extends tih<f1t>
 {
     @JsonField
     public String a;
     @JsonField(name = { "url" })
-    public q7t b;
+    public c9t b;
     @JsonField(typeConverter = d.class)
-    public d4t c;
+    public o5t c;
     
     @Override
     public final Object s() {
-        if (pjr.g((CharSequence)this.a)) {
-            final q7t b = this.b;
+        if (flr.g((CharSequence)this.a)) {
+            final c9t b = this.b;
             if (b != null) {
-                return new wzs(this.a, b, poa.V(this.c));
+                return new f1t(this.a, b, ix.w(this.c));
             }
         }
         return null;

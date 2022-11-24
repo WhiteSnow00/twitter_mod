@@ -8,13 +8,13 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineSportsEventCard extends aih<g4t>
+public class JsonTimelineSportsEventCard extends tih<r5t>
 {
     @JsonField
-    public dqv a;
+    public krv a;
     
     @Override
     public final Object s() {
-        return new g4t(this.a);
+        return new r5t(this.a);
     }
 }

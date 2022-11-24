@@ -1,21 +1,17 @@
-import java.io.IOException;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lzy implements p4j<zuy>
+public final class lzy implements c0z
 {
-    public static final lzy a;
+    public static final lzy F0;
     
     static {
-        a = new lzy();
-        fu8.p(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, new dqy(1)), 2)), 3)));
+        F0 = new lzy();
     }
     
-    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final zuy zuy = (zuy)o;
-        final q4j q4j = (q4j)o2;
-        throw null;
+    public final Object a() {
+        final n0z c = s0z.c;
+        return (int)stz.G0.b().q();
     }
 }

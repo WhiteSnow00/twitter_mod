@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonMomentInfoBadge extends fih<eld>
+public class JsonMomentInfoBadge extends tih<fmd>
 {
     @JsonField
     public String a;
@@ -18,7 +18,8 @@ public class JsonMomentInfoBadge extends fih<eld>
     @JsonField
     public int c;
     
+    @Override
     public final Object s() {
-        return new eld(this.a, dr4.g(this.c, 255), dr4.g(this.b, 255));
+        return new fmd(this.a, js4.g(this.c, 255), js4.g(this.b, 255));
     }
 }

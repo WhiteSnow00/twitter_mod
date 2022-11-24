@@ -1,25 +1,18 @@
-import com.twitter.business.model.phone.BusinessPhoneInfoData;
-import com.twitter.business.api.BusinessPhoneContentViewResult;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class px2 extends ste implements qsb<BusinessPhoneContentViewResult, ynj<BusinessPhoneInfoData>>
+public final class px2 implements f1m
 {
-    public static final px2 D0;
-    
-    static {
-        D0 = new px2();
+    public final t5j<Boolean> a() {
+        final t5j just = t5j.just((Object)Boolean.TRUE);
+        e0e.e((Object)just, "just(true)");
+        return (t5j<Boolean>)just;
     }
     
-    public px2() {
-        super(1);
-    }
-    
-    public final Object invoke(final Object o) {
-        final BusinessPhoneContentViewResult businessPhoneContentViewResult = (BusinessPhoneContentViewResult)o;
-        czd.f((Object)businessPhoneContentViewResult, "it");
-        return ynj.b((Object)businessPhoneContentViewResult.getPhoneInfoData());
+    public final t5j<String> b() {
+        final t5j just = t5j.just((Object)"0");
+        e0e.e((Object)just, "just(\"0\")");
+        return (t5j<String>)just;
     }
 }

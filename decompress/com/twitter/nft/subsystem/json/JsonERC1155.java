@@ -8,10 +8,10 @@ import com.twitter.nft.subsystem.model.Network;
 import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
-import com.twitter.nft.subsystem.model.NFTSmartContract$ERC1155;
+import com.twitter.nft.subsystem.model.NFTSmartContract;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonERC1155 extends fih<NFTSmartContract$ERC1155>
+public class JsonERC1155 extends tih<NFTSmartContract.ERC1155>
 {
     @JsonField(name = { "name" })
     public String a;
@@ -22,7 +22,8 @@ public class JsonERC1155 extends fih<NFTSmartContract$ERC1155>
     @JsonField(name = { "network" })
     public Network d;
     
+    @Override
     public final Object s() {
-        return new NFTSmartContract$ERC1155(this.a, this.b, this.c, this.d);
+        return new NFTSmartContract.ERC1155(this.a, this.b, this.c, this.d);
     }
 }

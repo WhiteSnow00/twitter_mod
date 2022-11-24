@@ -9,27 +9,27 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTFullCover extends aih<hov>
+public class JsonURTFullCover extends tih<rpv>
 {
-    @JsonField(name = { "displayType", "fullCoverDisplayType" }, typeConverter = unv.class)
+    @JsonField(name = { "displayType", "fullCoverDisplayType" }, typeConverter = epv.class)
     public int a;
     @JsonField
-    public xwm b;
+    public fym b;
     @JsonField
-    public snv c;
+    public cpv c;
     @JsonField
-    public xwm d;
+    public fym d;
     @JsonField
-    public snv e;
+    public cpv e;
     @JsonField
-    public xwm f;
+    public fym f;
     @JsonField
-    public eov g;
+    public opv g;
     @JsonField
-    public szg h;
+    public l0h h;
     @JsonField
-    public List<lnv> i;
-    @JsonField(typeConverter = wov.class)
+    public List<vov> i;
+    @JsonField(typeConverter = fqv.class)
     public int j;
     
     public JsonURTFullCover() {
@@ -38,17 +38,17 @@ public class JsonURTFullCover extends aih<hov>
     
     @Override
     public final Object s() {
-        final hov$a hov$a = new hov$a();
-        hov$a.c = this.a;
-        hov$a.a = this.b;
-        hov$a.b = this.c;
-        hov$a.d = this.d;
-        hov$a.e = this.e;
-        hov$a.f = this.f;
-        hov$a.g = this.g;
-        hov$a.h = this.h;
-        hov$a.i = this.i;
-        hov$a.j = this.j;
-        return ((h4j)hov$a).j();
+        final rpv.a a = new rpv.a();
+        a.c = this.a;
+        a.a = this.b;
+        a.b = this.c;
+        a.d = this.d;
+        a.e = this.e;
+        a.f = this.f;
+        a.g = this.g;
+        a.h = this.h;
+        a.i = this.i;
+        a.j = this.j;
+        return a.j();
     }
 }

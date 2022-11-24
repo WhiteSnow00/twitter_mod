@@ -2,7 +2,7 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ca1 extends d17$c
+public final class ca1 extends o17$c
 {
     public final String a;
     public final String b;
@@ -25,9 +25,9 @@ public final class ca1 extends d17$c
         if (o == this) {
             return true;
         }
-        if (o instanceof d17$c) {
-            final d17$c d17$c = (d17$c)o;
-            if (!this.a.equals(d17$c.a()) || !this.b.equals(d17$c.b())) {
+        if (o instanceof o17$c) {
+            final o17$c o17$c = (o17$c)o;
+            if (!this.a.equals(o17$c.a()) || !this.b.equals(o17$c.b())) {
                 b = false;
             }
             return b;
@@ -40,9 +40,9 @@ public final class ca1 extends d17$c
     }
     
     public final String toString() {
-        final StringBuilder g = w48.g("CustomAttribute{key=");
-        g.append(this.a);
-        g.append(", value=");
-        return hi.I(g, this.b, "}");
+        final StringBuilder f = ehk.f("CustomAttribute{key=");
+        f.append(this.a);
+        f.append(", value=");
+        return m51.y(f, this.b, "}");
     }
 }

@@ -238,7 +238,7 @@
     </plurals>
     <plurals name="member_count">
         <item quantity="one">%s Anggota</item>
-        <item quantity="other">%s Anggota</item>
+        <item quantity="other">%s anggota</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d menit</item>
@@ -305,8 +305,8 @@
         <item quantity="other">%d lainnya</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Pelanggan Super Follow</item>
-        <item quantity="other">Pelanggan Super Follow</item>
+        <item quantity="one">Pelanggan</item>
+        <item quantity="other">Pelanggan</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s Suka</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Membalas ﻿%1$s dan %2$d lainnya﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Membalas ﻿%1$s dan %2$d lainnya﻿. Balasan Anda juga akan terlihat oleh Pelanggan Super Follow lainnya.</item>
+        <item quantity="other">Membalas ﻿%1$s dan %2$d lainnya﻿. Balasan Anda juga akan terlihat oleh Pelanggan lainnya.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Membalas ﻿%1$s dan %2$d lainnya﻿ di ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Membalas ﻿%1$s %2$s dan %3$d lainnya﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Membalas ﻿%1$s %2$s dan %3$d lainnya﻿. Balasan Anda juga akan terlihat oleh Pelanggan Super Follow lainnya.</item>
+        <item quantity="other">Membalas ﻿%1$s %2$s dan %3$d lainnya﻿. Balasan Anda juga akan terlihat oleh Pelanggan lainnya.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Membalas ﻿%1$s %2$s dan %3$d lainnya﻿ di ﻿%4$s﻿</item>

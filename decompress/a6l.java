@@ -1,32 +1,34 @@
-import android.view.View;
-import android.view.ViewGroup;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class a6l extends gue implements rtb<r6l, oyv>
+public interface a6l
 {
-    public final /* synthetic */ r5l C0;
+    bbq<noj<uow>> a(final String p0, final e43 p1, final i7 p2, final boolean p3);
     
-    public a6l(final r5l c0) {
-        this.C0 = c0;
-        super(1);
-    }
+    bbq<noj<uow>> b(final String p0, final vef p1, final boolean p2);
     
-    public final Object invoke(final Object o) {
-        final r6l r6l = (r6l)o;
-        zzd.f((Object)r6l, "$this$distinct");
-        final ViewGroup l0 = this.C0.L0;
-        zzd.e((Object)l0, "moduleRow");
-        int visibility;
-        if (r6l.c) {
-            visibility = 0;
-        }
-        else {
-            visibility = 8;
-        }
-        ((View)l0).setVisibility(visibility);
-        return oyv.a;
-    }
+    bbq<noj<uow>> c(final e43 p0, final i7 p1, final boolean p2);
+    
+    yz5 d(final boolean p0);
+    
+    bbq<noj<uow>> e(final vef p0, final boolean p1);
+    
+    yz5 f(final String p0);
+    
+    bbq<noj<uow>> g(final String p0, final pfh p1, final boolean p2);
+    
+    bbq<noj<uow>> h(final pfh p0, final boolean p1);
+    
+    bbq<noj<String>> i(final String p0);
+    
+    yz5 j(final String p0);
+    
+    yz5 k();
+    
+    yz5 l(final u7l p0);
+    
+    yz5 m(final String p0);
+    
+    bbq<noj<x9w>> n(final String p0, final boolean p1);
 }

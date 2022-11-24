@@ -10,62 +10,62 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfHorizonIcon$$JsonObjectMapper extends JsonMapper<JsonOcfHorizonIcon>
 {
-    public static final ndj OCF_HORIZON_ICON_TYPE_CONVERTER;
+    public static final aej OCF_HORIZON_ICON_TYPE_CONVERTER;
     
     static {
-        OCF_HORIZON_ICON_TYPE_CONVERTER = new ndj();
+        OCF_HORIZON_ICON_TYPE_CONVERTER = new aej();
     }
     
-    public static JsonOcfHorizonIcon _parse(final tge tge) throws IOException {
+    public static JsonOcfHorizonIcon _parse(final qhe qhe) throws IOException {
         final JsonOcfHorizonIcon jsonOcfHorizonIcon = new JsonOcfHorizonIcon();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfHorizonIcon, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfHorizonIcon, d, qhe);
+            qhe.m0();
         }
         return jsonOcfHorizonIcon;
     }
     
-    public static void _serialize(final JsonOcfHorizonIcon jsonOcfHorizonIcon, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfHorizonIcon jsonOcfHorizonIcon, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
-        final mdj a = jsonOcfHorizonIcon.a;
+        final zdj a = jsonOcfHorizonIcon.a;
         if (a != null) {
-            ((StringBasedTypeConverter)JsonOcfHorizonIcon$$JsonObjectMapper.OCF_HORIZON_ICON_TYPE_CONVERTER).serialize((Object)a, "icon", true, afe);
+            ((StringBasedTypeConverter)JsonOcfHorizonIcon$$JsonObjectMapper.OCF_HORIZON_ICON_TYPE_CONVERTER).serialize((Object)a, "icon", true, yfe);
         }
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfHorizonIcon jsonOcfHorizonIcon, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfHorizonIcon jsonOcfHorizonIcon, final String s, final qhe qhe) throws IOException {
         if ("icon".equals(s)) {
-            jsonOcfHorizonIcon.a = (mdj)((StringBasedTypeConverter)JsonOcfHorizonIcon$$JsonObjectMapper.OCF_HORIZON_ICON_TYPE_CONVERTER).parse(tge);
+            jsonOcfHorizonIcon.a = (zdj)((StringBasedTypeConverter)JsonOcfHorizonIcon$$JsonObjectMapper.OCF_HORIZON_ICON_TYPE_CONVERTER).parse(qhe);
         }
     }
     
-    public JsonOcfHorizonIcon parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfHorizonIcon parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfHorizonIcon jsonOcfHorizonIcon, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfHorizonIcon, afe, b);
+    public void serialize(final JsonOcfHorizonIcon jsonOcfHorizonIcon, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfHorizonIcon, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfHorizonIcon)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfHorizonIcon)o, yfe, b);
     }
 }

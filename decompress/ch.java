@@ -1,7 +1,14 @@
+import android.view.View;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ch extends l2d$a
+public interface ch
 {
+    boolean k(final View p0);
+    
+    public abstract static class a
+    {
+    }
 }

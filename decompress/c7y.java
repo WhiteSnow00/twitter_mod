@@ -1,38 +1,15 @@
-import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
-import android.os.Parcel;
-import com.google.android.gms.auth.api.credentials.IdToken;
-import android.os.Parcelable$Creator;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class c7y implements Parcelable$Creator<IdToken>
+public final class c7y
 {
-    public final Object createFromParcel(final Parcel parcel) {
-        final int w = SafeParcelReader.w(parcel);
-        String e = null;
-        String e2 = null;
-        while (parcel.dataPosition() < w) {
-            final int int1 = parcel.readInt();
-            final char c = (char)int1;
-            if (c != '\u0001') {
-                if (c != '\u0002') {
-                    SafeParcelReader.v(parcel, int1);
-                }
-                else {
-                    e2 = SafeParcelReader.e(parcel, int1);
-                }
-            }
-            else {
-                e = SafeParcelReader.e(parcel, int1);
-            }
-        }
-        SafeParcelReader.j(parcel, w);
-        return new IdToken(e, e2);
-    }
+    public static final gta a;
+    public static final gta b;
+    public static final gta c;
+    public static final gta[] d;
     
-    public final /* bridge */ Object[] newArray(final int n) {
-        return new IdToken[n];
+    static {
+        d = new gta[] { a = new gta("auth_api_credentials_begin_sign_in", 4L), b = new gta("auth_api_credentials_sign_out", 2L), new gta("auth_api_credentials_authorize", 1L), new gta("auth_api_credentials_revoke_access", 1L), c = new gta("auth_api_credentials_save_password", 3L), new gta("auth_api_credentials_get_sign_in_intent", 4L), new gta("auth_api_credentials_save_account_linking_token", 2L) };
     }
 }

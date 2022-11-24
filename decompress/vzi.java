@@ -1,43 +1,31 @@
-import java.util.Iterator;
-import com.twitter.core.ui.styles.icons.implementation.Icon;
-import java.util.Map;
+import j$.util.function.Predicate$_CC;
+import j$.util.function.Predicate;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class vzi
+public final class vzi implements Predicate
 {
-    public static final a Companion;
-    public static final Map<String, Icon> a;
+    public static final vzi a;
     
     static {
-        Companion = new a();
-        a = kq9.X0(new gvj((Object)"error_circle", (Object)gpc.J));
+        a = new vzi();
     }
     
-    public static final class a
-    {
-        public final String a(final int n) {
-            final Iterator<Object> iterator = vzi.a.entrySet().iterator();
-            while (true) {
-                Map.Entry<String, Icon> next;
-                do {
-                    final boolean hasNext = iterator.hasNext();
-                    final String s = null;
-                    if (!hasNext) {
-                        next = null;
-                        final Map.Entry<String, V> entry = (Map.Entry<String, V>)next;
-                        String s2 = s;
-                        if (entry != null) {
-                            s2 = entry.getKey();
-                        }
-                        return s2;
-                    }
-                    next = iterator.next();
-                } while (((Map.Entry<K, Icon>)next).getValue().getDrawableRes() != n);
-                continue;
-            }
-        }
+    public final Predicate and(final Predicate predicate) {
+        return Predicate$_CC.$default$and((Predicate)this, predicate);
+    }
+    
+    public final Predicate negate() {
+        return Predicate$_CC.$default$negate((Predicate)this);
+    }
+    
+    public final Predicate or(final Predicate predicate) {
+        return Predicate$_CC.$default$or((Predicate)this, predicate);
+    }
+    
+    public final boolean test(final Object o) {
+        return ((ysj)o).d == 6;
     }
 }

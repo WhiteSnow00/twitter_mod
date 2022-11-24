@@ -15,7 +15,7 @@ import java.net.DatagramSocket;
 import android.net.Uri;
 import java.net.DatagramPacket;
 
-public final class UdpDataSource extends jk1
+public final class UdpDataSource extends nk1
 {
     public final int e;
     public final byte[] f;

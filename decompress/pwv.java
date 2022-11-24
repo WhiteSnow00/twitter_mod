@@ -1,24 +1,57 @@
+import java.util.Iterator;
+import java.util.List;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pwv extends hfe<mwv>
+public final class pwv implements mwv<rnt>
 {
-    public static final m7c<mwv> b;
+    public final List<String> F0;
+    public final c9t G0;
     
-    static {
-        final m7c$a m7c$a = new m7c$a();
-        ((qjg)m7c$a.a).w((Object)"CardMediaComponent", (Object)tq9.A);
-        ((qjg)m7c$a.a).w((Object)"CardDetailsComponent", (Object)rq9.v);
-        ((qjg)m7c$a.a).w((Object)"CardAppStoreDetailsComponent", (Object)wq9.z);
-        ((qjg)m7c$a.a).w((Object)"CardButtonGroupComponent", (Object)vq9.B);
-        ((qjg)m7c$a.a).w((Object)"CardSwipeableMediaComponent", (Object)uq9.z);
-        ((qjg)m7c$a.a).w((Object)"CardFacepileComponent", (Object)fzf.B);
-        ((qjg)m7c$a.a).w((Object)"CardFollowButtonComponent", (Object)gie.A);
-        b = (m7c)((n4j)m7c$a).e();
+    public pwv(final List<String> f0, final c9t g0) {
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public pwv() {
-        super(pwv.b);
+    public final Object b(final y4c y4c, final lsm lsm) {
+        final ojf h = ojf.H();
+        final Iterator<String> iterator = this.F0.iterator();
+        while (iterator.hasNext()) {
+            final qgv f = y4c.f(iterator.next());
+            if (f != null) {
+                final ynt$a ynt$a = new ynt$a();
+                ynt$a.a = f.F0;
+                ynt$a.b = f.G0;
+                ynt$a.c = f.c();
+                h.p((Object)((z4j)ynt$a).e());
+            }
+        }
+        final rnt.a a = new rnt.a();
+        a.b = this.G0;
+        a.o((List<ynt>)((z4j)h).e());
+        return a.e();
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        boolean b = true;
+        if (this == o) {
+            return true;
+        }
+        if (o != null && pwv.class == o.getClass()) {
+            final pwv pwv = (pwv)o;
+            if (!o5j.a((Object)this.F0, (Object)pwv.F0) || !o5j.a((Object)this.G0, (Object)pwv.G0)) {
+                b = false;
+            }
+            return b;
+        }
+        return false;
+    }
+    
+    @Override
+    public final int hashCode() {
+        return o5j.g((Object)this.F0, (Object)this.G0);
     }
 }

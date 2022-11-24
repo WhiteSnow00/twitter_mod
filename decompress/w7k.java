@@ -1,44 +1,17 @@
-import androidx.compose.ui.platform.ComposeView;
 import java.util.List;
-import android.view.View;
+import java.util.Map;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class w7k extends ste implements nsb<fzv>
+public final class w7k
 {
-    public final y7k D0;
-    public final bib E0;
+    public final Map<Long, lt7> a;
+    public final List<qgv> b;
     
-    public w7k(final y7k d0, final bib e0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        super(0);
-    }
-    
-    public final Object invoke() {
-        final hal hal = (hal)this.D0.c.get();
-        final ComposeView a = this.D0.a;
-        final int ordinal = ((Enum)this.E0).ordinal();
-        int n;
-        if (ordinal != 0 && ordinal != 1) {
-            if (ordinal != 2) {
-                if (ordinal != 4) {
-                    n = 0;
-                }
-                else {
-                    n = 2131427992;
-                }
-            }
-            else {
-                n = 2131427988;
-            }
-        }
-        else {
-            n = 2131430551;
-        }
-        hal.Q1((View)a, (List)null, n);
-        return fzv.a;
+    public w7k(final Map<Long, lt7> map, final List<qgv> list) {
+        this.a = kkg.p((Map)map);
+        this.b = ojf.x((List)list);
     }
 }

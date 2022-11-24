@@ -5,7 +5,7 @@ import android.os.Build$VERSION;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ec1 extends q9r$c
+public final class ec1 extends jbr$c
 {
     public final String a;
     public final String b;
@@ -38,9 +38,9 @@ public final class ec1 extends q9r$c
         if (o == this) {
             return true;
         }
-        if (o instanceof q9r$c) {
-            final q9r$c q9r$c = (q9r$c)o;
-            if (!this.a.equals(q9r$c.c()) || !this.b.equals(q9r$c.b()) || this.c != q9r$c.a()) {
+        if (o instanceof jbr$c) {
+            final jbr$c jbr$c = (jbr$c)o;
+            if (!this.a.equals(jbr$c.c()) || !this.b.equals(jbr$c.b()) || this.c != jbr$c.a()) {
                 b = false;
             }
             return b;
@@ -62,11 +62,11 @@ public final class ec1 extends q9r$c
     }
     
     public final String toString() {
-        final StringBuilder g = w48.g("OsData{osRelease=");
-        g.append(this.a);
-        g.append(", osCodeName=");
-        g.append(this.b);
-        g.append(", isRooted=");
-        return bd.y(g, this.c, "}");
+        final StringBuilder f = ehk.f("OsData{osRelease=");
+        f.append(this.a);
+        f.append(", osCodeName=");
+        f.append(this.b);
+        f.append(", isRooted=");
+        return xj0.B(f, this.c, "}");
     }
 }

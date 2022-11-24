@@ -8,14 +8,14 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineUrl extends aih<q7t>
+public class JsonTimelineUrl extends tih<c9t>
 {
     @JsonField
     public String a;
     @JsonField(name = { "url_type", "urlType" }, typeConverter = JsonTimelineUrl.JsonTimelineUrl$a.class)
     public int b;
     @JsonField
-    public fov c;
+    public ppv c;
     
     @Override
     public final Object s() {
@@ -27,23 +27,23 @@ public class JsonTimelineUrl extends aih<q7t>
                     o = null;
                 }
                 else {
-                    final y6w$a y6w$a = new y6w$a();
-                    y6w$a.a = this.a;
-                    y6w$a.b = this.c;
-                    o = ((h4j)y6w$a).j();
+                    final x7w.a a = new x7w.a();
+                    a.a = this.a;
+                    a.b = this.c;
+                    o = a.j();
                 }
             }
             else {
-                final zdf.a a = new zdf.a();
-                a.a = this.a;
-                a.b = this.c;
-                o = a.j();
+                final ief$a ief$a = new ief$a();
+                ief$a.a = this.a;
+                ief$a.b = this.c;
+                o = ((z4j)ief$a).j();
             }
         }
         else {
-            final zdf.a a2 = new zdf.a();
-            a2.a = this.a;
-            o = a2.j();
+            final ief$a ief$a2 = new ief$a();
+            ief$a2.a = this.a;
+            o = ((z4j)ief$a2).j();
         }
         return o;
     }

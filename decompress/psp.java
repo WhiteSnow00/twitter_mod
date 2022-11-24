@@ -1,31 +1,37 @@
-import android.content.ClipData;
-import android.content.ClipData$Item;
-import android.net.Uri;
-import java.util.ArrayList;
-import android.content.Intent;
-import android.text.Html;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class psp
+public final class psp implements zm6
 {
-    public static String a(final CharSequence charSequence) {
-        return Html.escapeHtml(charSequence);
+    public final String a;
+    public final f80 b;
+    public final List<f80> c;
+    public final e80 d;
+    public final h80 e;
+    public final f80 f;
+    public final int g;
+    public final int h;
+    public final float i;
+    public final boolean j;
+    
+    public psp(final String a, final f80 b, final List<f80> c, final e80 d, final h80 e, final f80 f, final Object g, final Object h, final float i, final boolean j) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.f = f;
+        this.g = (int)g;
+        this.h = (int)h;
+        this.i = i;
+        this.j = j;
     }
     
-    public static void b(final Intent intent, final ArrayList<Uri> list) {
-        final ClipData clipData = new ClipData((CharSequence)null, new String[] { intent.getType() }, new ClipData$Item(intent.getCharSequenceExtra("android.intent.extra.TEXT"), intent.getStringExtra("android.intent.extra.HTML_TEXT"), (Intent)null, (Uri)list.get(0)));
-        for (int size = list.size(), i = 1; i < size; ++i) {
-            clipData.addItem(new ClipData$Item((Uri)list.get(i)));
-        }
-        intent.setClipData(clipData);
-        intent.addFlags(1);
-    }
-    
-    public static void c(final Intent intent) {
-        intent.setClipData((ClipData)null);
-        intent.setFlags(intent.getFlags() & 0xFFFFFFFE);
+    @Override
+    public final wl6 a(final ceg ceg, final ym1 ym1) {
+        return (wl6)new hmr(ceg, ym1, this);
     }
 }

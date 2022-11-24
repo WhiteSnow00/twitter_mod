@@ -1,54 +1,81 @@
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class p0t extends mxs implements mxs$a
+public final class p0t
 {
-    public final m0t j;
+    public static final a Companion;
+    public static final p0t d;
+    public final String a;
+    public final j5t b;
+    public final b3t c;
     
-    public p0t(final String s, final long n, final h0p h0p, final qvs qvs, final long n2, final m0t j, final boolean b, final j1t j1t, final amh amh) {
-        super(s, n, h0p, qvs, n2, b, j1t, amh);
-        this.j = j;
+    static {
+        Companion = new a();
+        d = new p0t(null, null, null);
     }
     
-    public final zus$a a(final w3c w3c, final wrm wrm) {
-        final fpi p2 = w3c.e.get(this.j.a);
-        Object q;
-        if (p2 == null) {
-            q = gdd.E0;
-            final int a = c5j.a;
+    public p0t(final String a, final j5t b, final b3t c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof p0t)) {
+            return false;
+        }
+        final p0t p0t = (p0t)o;
+        return e0e.a((Object)this.a, (Object)p0t.a) && e0e.a((Object)this.b, (Object)p0t.b) && e0e.a((Object)this.c, (Object)p0t.c);
+    }
+    
+    @Override
+    public final int hashCode() {
+        final String a = this.a;
+        int hashCode = 0;
+        int hashCode2;
+        if (a == null) {
+            hashCode2 = 0;
         }
         else {
-            q = fq4.c((List)p2.b, (jtb)new hj1((Object)w3c, 1));
+            hashCode2 = a.hashCode();
         }
-        final xua xua = null;
-        nh0 c;
-        if (p2 == null) {
-            c = null;
+        final j5t b = this.b;
+        int hashCode3;
+        if (b == null) {
+            hashCode3 = 0;
         }
         else {
-            c = w3c.c(String.valueOf(p2.k));
+            hashCode3 = b.hashCode();
         }
-        final n0t$a n0t$a = new n0t$a();
-        n0t$a.p = p2;
-        n0t$a.q = (List)q;
-        n0t$a.r = c;
-        ((zus$a)n0t$a).a = ((evs)this).b;
-        ((zus$a)n0t$a).c = ((evs)this).c;
-        ((zus$a)n0t$a).f = super.e;
-        final qvs f = super.f;
-        xua a2 = xua;
-        if (f != null) {
-            a2 = wrm.a(f);
+        final b3t c = this.c;
+        if (c != null) {
+            hashCode = c.hashCode();
         }
-        ((zus$a)n0t$a).g = a2;
-        final m0t j = this.j;
-        n0t$a.s = j.b;
-        ((zus$a)n0t$a).n = super.h;
-        ((zus$a)n0t$a).h = (u4t)j.c;
-        ((zus$a)n0t$a).o = super.i;
-        return (zus$a)n0t$a;
+        return (hashCode2 * 31 + hashCode3) * 31 + hashCode;
+    }
+    
+    @Override
+    public final String toString() {
+        final String a = this.a;
+        final j5t b = this.b;
+        final b3t c = this.c;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("TimelineMetadata(title=");
+        sb.append(a);
+        sb.append(", timelineScribeConfig=");
+        sb.append(b);
+        sb.append(", timelineReaderModeConfig=");
+        sb.append(c);
+        sb.append(")");
+        return sb.toString();
+    }
+    
+    public static final class a
+    {
     }
 }

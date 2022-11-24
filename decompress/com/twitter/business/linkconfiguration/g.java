@@ -5,94 +5,104 @@
 package com.twitter.business.linkconfiguration;
 
 import com.twitter.weaver.mvi.MviViewModel;
+import com.twitter.business.model.listselection.BusinessListSelectionData;
 import com.twitter.business.features.linkmodule.model.LinkModuleDomainConfig;
 import kotlin.NoWhenBranchMatchedException;
 import java.util.Objects;
-import com.twitter.business.model.listselection.BusinessListSelectionData;
+import com.twitter.business.model.listselection.BusinessListSelectionData$LinkModuleCallToActionLabel;
 
-@sa8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$3", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
-public final class g extends p0s implements ftb<eef$c, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$3", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
+public final class g extends l1s implements hub<bff$c, mp6<? super vzv>, Object>
 {
-    public Object D0;
-    public final LinkModuleConfigurationViewModel E0;
+    public Object F0;
+    public final LinkModuleConfigurationViewModel G0;
     
-    public g(final LinkModuleConfigurationViewModel e0, final go6<? super g> go6) {
-        this.E0 = e0;
-        super(2, (go6)go6);
+    public g(final LinkModuleConfigurationViewModel g0, final mp6<? super g> mp6) {
+        this.G0 = g0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object d0, final go6<?> go6) {
-        final g g = new g(this.E0, (go6<? super g>)go6);
-        g.D0 = d0;
-        return (go6<fzv>)g;
+    public final mp6<vzv> create(final Object f0, final mp6<?> mp6) {
+        final g g = new g(this.G0, (mp6<? super g>)mp6);
+        g.F0 = f0;
+        return (mp6<vzv>)g;
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final g g = (g)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final g g = (g)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         g.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final eef$c eef$c = (eef$c)this.D0;
-        final LinkModuleConfigurationViewModel e0 = this.E0;
-        final BusinessListSelectionData a = eef$c.a;
-        if (a instanceof BusinessListSelectionData.LinkModuleCallToActionLabel) {
-            final LinkModuleDomainConfig c1 = e0.c1;
-            final g93 w0 = e0.W0;
-            final f93 callToAction = ((BusinessListSelectionData.LinkModuleCallToActionLabel)a).getCallToAction();
-            Objects.requireNonNull(w0);
-            czd.f((Object)callToAction, "input");
-            d93 d93 = null;
+        jb2.M0(o);
+        final bff$c bff$c = (bff$c)this.F0;
+        final LinkModuleConfigurationViewModel g0 = this.G0;
+        final BusinessListSelectionData a = bff$c.a;
+        if (a instanceof BusinessListSelectionData$LinkModuleCallToActionLabel) {
+            final LinkModuleDomainConfig e1 = g0.e1;
+            final y93 y0 = g0.Y0;
+            final x93 callToAction = ((BusinessListSelectionData$LinkModuleCallToActionLabel)a).getCallToAction();
+            Objects.requireNonNull(y0);
+            e0e.f((Object)callToAction, "input");
+            v93 v93 = null;
             switch (((Enum)callToAction).ordinal()) {
                 default: {
                     throw new NoWhenBranchMatchedException();
                 }
                 case 8: {
-                    d93 = d93.N0;
+                    v93 = v93.P0;
                     break;
                 }
                 case 7: {
-                    d93 = d93.M0;
+                    v93 = v93.O0;
                     break;
                 }
                 case 6: {
-                    d93 = d93.L0;
+                    v93 = v93.N0;
                     break;
                 }
                 case 5: {
-                    d93 = d93.K0;
+                    v93 = v93.M0;
                     break;
                 }
                 case 4: {
-                    d93 = d93.J0;
+                    v93 = v93.L0;
                     break;
                 }
                 case 3: {
-                    d93 = d93.I0;
+                    v93 = v93.K0;
                     break;
                 }
                 case 2: {
-                    d93 = d93.H0;
+                    v93 = v93.J0;
                     break;
                 }
                 case 1: {
-                    d93 = d93.G0;
+                    v93 = v93.I0;
                     break;
                 }
                 case 0: {
-                    d93 = d93.F0;
+                    v93 = v93.H0;
                     break;
                 }
             }
-            e0.c1 = LinkModuleDomainConfig.copy$default(c1, null, d93, null, 5, null);
-            final LinkModuleConfigurationViewModel e2 = this.E0;
-            ((MviViewModel)e2).Q((qsb)new g$a(e2));
-            return fzv.a;
+            g0.e1 = LinkModuleDomainConfig.copy$default(e1, (String)null, v93, (String)null, 5, (Object)null);
+            final LinkModuleConfigurationViewModel g2 = this.G0;
+            ((MviViewModel)g2).Q((stb)new stb<LinkModuleConfigurationViewModel$b, LinkModuleConfigurationViewModel$b>(g2) {
+                public final LinkModuleConfigurationViewModel F0;
+                
+                public final Object invoke(final Object o) {
+                    final LinkModuleConfigurationViewModel$b linkModuleConfigurationViewModel$b = (LinkModuleConfigurationViewModel$b)o;
+                    e0e.f((Object)linkModuleConfigurationViewModel$b, "$this$setState");
+                    final LinkModuleConfigurationViewModel f0 = this.F0;
+                    return LinkModuleConfigurationViewModel$b.l(linkModuleConfigurationViewModel$b, false, f0.Q0.a(f0.e1.getCta()), (String)null, false, false, false, 61);
+                }
+            });
+            return vzv.a;
         }
-        final BusinessListSelectionData a2 = eef$c.a;
+        final BusinessListSelectionData a2 = bff$c.a;
         final StringBuilder sb = new StringBuilder();
         sb.append("Argument of type ");
         sb.append(a2);

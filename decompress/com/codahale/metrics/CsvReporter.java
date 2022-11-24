@@ -20,14 +20,14 @@ import java.nio.charset.Charset;
 
 public class CsvReporter extends ScheduledReporter
 {
-    private static final eag LOGGER;
+    private static final pag LOGGER;
     private static final Charset UTF_8;
     private final Clock clock;
     private final File directory;
     private final Locale locale;
     
     static {
-        LOGGER = hag.e((Class)CsvReporter.class);
+        LOGGER = sag.e((Class)CsvReporter.class);
         UTF_8 = Charset.forName("UTF-8");
     }
     
@@ -36,6 +36,10 @@ public class CsvReporter extends ScheduledReporter
         this.directory = directory;
         this.locale = locale;
         this.clock = clock;
+    }
+    
+    public CsvReporter(final MetricRegistry metricRegistry, final File file, final Locale locale, final TimeUnit timeUnit, final TimeUnit timeUnit2, final Clock clock, final MetricFilter metricFilter, final CsvReporter$1 csvReporter$1) {
+        this(metricRegistry, file, locale, timeUnit, timeUnit2, clock, metricFilter);
     }
     
     public static CsvReporter.CsvReporter$Builder forRegistry(final MetricRegistry metricRegistry) {

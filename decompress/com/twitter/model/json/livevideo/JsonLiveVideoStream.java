@@ -11,7 +11,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonLiveVideoStream extends fih<q1g>
+public class JsonLiveVideoStream extends tih<n2g>
 {
     @JsonField
     public JsonLiveVideoStreamSource a;
@@ -21,19 +21,20 @@ public class JsonLiveVideoStream extends fih<q1g>
     public String c;
     @JsonField(name = { "shareUrl" })
     public String d;
-    @JsonField(name = { "restrictions" }, typeConverter = lfe.class)
-    public List<p1g> e;
+    @JsonField(name = { "restrictions" }, typeConverter = jge.class)
+    public List<m2g> e;
     
     public JsonLiveVideoStream() {
-        this.e = new ArrayList<p1g>();
+        this.e = new ArrayList<m2g>();
     }
     
+    @Override
     public final Object s() {
         final JsonLiveVideoStreamSource a = this.a;
         if (a != null) {
             final String b = a.b;
             if (b != null) {
-                return new q1g(b, a.a, this.b, this.c, this.d, a.d, (List)this.e);
+                return new n2g(b, a.a, this.b, this.c, this.d, a.d, (List)this.e);
             }
         }
         return null;

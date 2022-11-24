@@ -7,10 +7,10 @@ package com.twitter.android.media.imageeditor.di;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@l4j
+@d5j
 public interface EditImageRetainedGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
-    @l4j
+    @d5j
     public interface EditImageViewGraph extends TwitterFragmentActivityViewObjectGraph
     {
     }

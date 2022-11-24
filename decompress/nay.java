@@ -1,14 +1,29 @@
-import com.google.android.gms.common.api.Status;
+import android.os.Process;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class nay extends ady
+public final class nay extends Thread
 {
-    public final im1<Status> a;
+    public nay(final ThreadGroup threadGroup) {
+        super(threadGroup, "GmsDynamite");
+    }
     
-    public nay(final im1<Status> a) {
-        this.a = a;
+    @Override
+    public final void run() {
+        Process.setThreadPriority(19);
+        monitorenter(this);
+        try {
+            try {
+                while (true) {
+                    this.wait();
+                }
+            }
+            finally {
+                monitorexit(this);
+            }
+        }
+        catch (final InterruptedException ex) {}
     }
 }

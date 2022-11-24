@@ -1,35 +1,49 @@
-import java.util.Objects;
+import com.twitter.app.chrome.di.view.DynamicChromeFragmentViewObjectGraph;
+import android.net.Uri;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class eo9<T> extends zll<T>
+public class eo9 extends und implements g1u, hlt, l9s
 {
-    public final hiq<T> b;
-    
-    public eo9(final hiq<T> b, final nsb<? extends T> nsb) {
-        czd.f((Object)b, "policy");
-        czd.f((Object)nsb, "defaultFactory");
-        super((nsb)nsb);
-        this.b = b;
+    public final void B(final Uri uri) {
+        this.i2().B(uri);
     }
     
-    public final m8r<T> a(final T value, final x66 x66, final int n) {
-        x66.x(-84026900);
-        final n96$b a = n96.a;
-        x66.x(-492369756);
-        final Object y = x66.y();
-        Objects.requireNonNull(x66.Companion);
-        Object p3 = y;
-        if (y == x66$a.b) {
-            p3 = blz.P(value, this.b);
-            x66.p(p3);
-        }
-        x66.O();
-        final puh puh = (puh)p3;
-        puh.setValue((Object)value);
-        x66.O();
-        return (m8r<T>)puh;
+    public final boolean E() {
+        return this.i2().E();
+    }
+    
+    public final boolean G() {
+        return this.i2().G();
+    }
+    
+    public final boolean I() {
+        return false;
+    }
+    
+    public final void N(final int n) {
+        k5b.b((y2e)this).getView().setTranslationY((float)n);
+    }
+    
+    public final boolean X1(final boolean b) {
+        return this.i2().X1(b);
+    }
+    
+    public final yo9 i2() {
+        return ((DynamicChromeFragmentViewObjectGraph)k5b.f((y2e)this)).w();
+    }
+    
+    public final boolean n1() {
+        return this.i2().n1();
+    }
+    
+    public final boolean y() {
+        return true;
+    }
+    
+    public final boolean y0() {
+        return this.X1(true);
     }
 }

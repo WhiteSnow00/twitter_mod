@@ -301,8 +301,8 @@
         <item quantity="other">outros %d</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super Follower</item>
-        <item quantity="other">Super Followers</item>
+        <item quantity="one">Assinante</item>
+        <item quantity="other">Assinantes</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s curtiu</item>
@@ -398,7 +398,7 @@
         <item quantity="other">Em resposta a ﻿%1$s e outros %2$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Em resposta a ﻿%1$s e mais %2$d ﻿. Sua resposta também estará visível a outros Super Followers.</item>
+        <item quantity="other">Respondendo a ﻿%1$s e mais %2$d﻿. Sua resposta também ficará visível para outros Assinantes.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Em resposta a ﻿%1$s e mais %2$d ﻿ em ﻿%3$s﻿</item>
@@ -407,7 +407,7 @@
         <item quantity="other">Em resposta a ﻿%1$s %2$s e outros %3$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Em resposta a ﻿%1$s %2$s e mais %3$d﻿. Sua resposta também estará visível a outros Super Followers.</item>
+        <item quantity="other">Respondendo a ﻿%1$s %2$s e outros %3$d﻿. Sua resposta também ficará visível para outros Assinantes.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Em resposta a ﻿%1$s %2$s e mais %3$d ﻿ em ﻿%4$s﻿</item>

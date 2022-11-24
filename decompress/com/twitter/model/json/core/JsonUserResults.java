@@ -8,11 +8,12 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonUserResults extends fih<kiw>
+public class JsonUserResults extends tih<ziw>
 {
-    @JsonField(typeConverter = oiw.class)
-    public kiw a;
+    @JsonField(typeConverter = djw.class)
+    public ziw a;
     
+    @Override
     public final Object s() {
         return this.a;
     }

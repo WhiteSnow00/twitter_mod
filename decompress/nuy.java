@@ -1,24 +1,40 @@
+import java.lang.annotation.Annotation;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
 import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class nuy implements p4j<p7z>
+public final class nuy implements b5j<c7z>
 {
     public static final nuy a;
     
     static {
+        final z000 f0 = z000.F0;
         a = new nuy();
-        final dyz dyz = new dyz(1, zzz.D0);
+        final czz czz = new czz(1, f0);
         final HashMap hashMap = new HashMap();
-        jg9.w(dyz, hashMap, dyz, hashMap);
+        hashMap.put(((Annotation)czz).annotationType(), czz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final czz czz2 = new czz(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final czz czz3 = new czz(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        hashMap3.put(((Annotation)czz3).annotationType(), czz3);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
+        final czz czz4 = new czz(4, f0);
+        final HashMap hashMap4 = new HashMap();
+        ehk.g(czz4, hashMap4, czz4, hashMap4);
     }
     
     public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final p7z p7z = (p7z)o;
-        final q4j q4j = (q4j)o2;
+        final c7z c7z = (c7z)o;
+        final c5j c5j = (c5j)o2;
         throw null;
     }
 }

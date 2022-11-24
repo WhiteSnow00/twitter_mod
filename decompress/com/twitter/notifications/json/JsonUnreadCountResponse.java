@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonUnreadCountResponse extends fih<x0w>
+public class JsonUnreadCountResponse extends tih<n1w>
 {
     @JsonField
     public int a;
@@ -18,7 +18,8 @@ public class JsonUnreadCountResponse extends fih<x0w>
     @JsonField
     public int c;
     
+    @Override
     public final Object s() {
-        return new x0w(this.a, this.b);
+        return new n1w(this.a, this.b);
     }
 }

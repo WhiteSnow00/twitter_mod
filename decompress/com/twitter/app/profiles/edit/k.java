@@ -4,35 +4,35 @@
 
 package com.twitter.app.profiles.edit;
 
-@sa8(c = "com.twitter.app.profiles.edit.EditVerifiedPhoneStatusViewModel$intents$2$3", f = "EditVerifiedPhoneStatusViewModel.kt", l = {}, m = "invokeSuspend")
-public final class k extends p0s implements ftb<ov9, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.app.profiles.edit.EditVerifiedPhoneStatusViewModel$intents$2$3", f = "EditVerifiedPhoneStatusViewModel.kt", l = {}, m = "invokeSuspend")
+public final class k extends l1s implements hub<ow9, mp6<? super vzv>, Object>
 {
-    public final EditVerifiedPhoneStatusViewModel D0;
-    public final lv9 E0;
+    public final EditVerifiedPhoneStatusViewModel F0;
+    public final lw9 G0;
     
-    public k(final EditVerifiedPhoneStatusViewModel d0, final lv9 e0, final go6<? super k> go6) {
-        this.D0 = d0;
-        this.E0 = e0;
-        super(2, (go6)go6);
+    public k(final EditVerifiedPhoneStatusViewModel f0, final lw9 g0, final mp6<? super k> mp6) {
+        this.F0 = f0;
+        this.G0 = g0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new k(this.D0, this.E0, (go6<? super k>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new k(this.F0, this.G0, (mp6<? super k>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final k k = (k)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final k k = (k)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         k.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final EditVerifiedPhoneStatusViewModel d0 = this.D0;
-        final k$a k$a = new k$a(d0, this.E0);
-        final coe<Object>[] p = EditVerifiedPhoneStatusViewModel.P0;
-        d0.T((qsb)k$a);
-        return fzv.a;
+        jb2.M0(o);
+        final EditVerifiedPhoneStatusViewModel f0 = this.F0;
+        final k$a k$a = new k$a(f0, this.G0);
+        final ape<Object>[] r0 = EditVerifiedPhoneStatusViewModel.R0;
+        f0.T((stb)k$a);
+        return vzv.a;
     }
 }

@@ -1,35 +1,72 @@
-import java.io.IOException;
-import java.util.Collections;
 import java.util.Map;
-import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class noy implements p4j<l0z>
+public final class noy extends mzz
 {
-    public static final noy a;
+    public final Integer b;
+    public final Map<String, Integer> c;
     
-    static {
-        final zzz d0 = zzz.D0;
-        a = new noy();
-        final dyz dyz = new dyz(1, d0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(dyz.annotationType(), dyz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final dyz dyz2 = new dyz(2, d0);
-        final HashMap hashMap2 = new HashMap();
-        hashMap2.put(dyz2.annotationType(), dyz2);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final dyz dyz3 = new dyz(3, d0);
-        final HashMap hashMap3 = new HashMap();
-        jg9.w(dyz3, hashMap3, dyz3, hashMap3);
+    public noy(final Integer b, final Map c) {
+        this.b = b;
+        this.c = c;
     }
     
-    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final l0z l0z = (l0z)o;
-        final q4j q4j = (q4j)o2;
-        throw null;
+    @Override
+    public final Integer a() {
+        return this.b;
+    }
+    
+    @Override
+    public final Map<String, Integer> b() {
+        return this.c;
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        if (o == this) {
+            return true;
+        }
+        if (o instanceof mzz) {
+            final mzz mzz = (mzz)o;
+            final Integer b = this.b;
+            if (b == null) {
+                if (mzz.a() != null) {
+                    return false;
+                }
+            }
+            else if (!b.equals(mzz.a())) {
+                return false;
+            }
+            if (this.c.equals(mzz.b())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    @Override
+    public final int hashCode() {
+        final Integer b = this.b;
+        int hashCode;
+        if (b == null) {
+            hashCode = 0;
+        }
+        else {
+            hashCode = b.hashCode();
+        }
+        return (hashCode ^ 0xF4243) * 1000003 ^ this.c.hashCode();
+    }
+    
+    @Override
+    public final String toString() {
+        final String value = String.valueOf(this.b);
+        final String value2 = String.valueOf(this.c);
+        final StringBuilder sb = new StringBuilder(value.length() + 81 + value2.length());
+        jba.s(sb, "LocalTestingConfig{defaultSplitInstallErrorCode=", value, ", splitInstallErrorCodeByModule=", value2);
+        sb.append("}");
+        return sb.toString();
     }
 }

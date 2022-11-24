@@ -21,118 +21,118 @@ import android.content.Intent;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hxb extends abv implements on, rx0, ixb$a, kxb$a, kxb$b
+public final class hxb extends kcv implements rn, qx0, jxb$a, lxb$a, lxb$b
 {
-    public final yqg W0;
-    public final uvw X0;
+    public final rrg Z0;
+    public final cxw a1;
     
-    public hxb(final Intent intent, final z7x z7x, final Resources resources, final p9s p9s, final fxe<z9i> fxe, final kn kn, final gob gob, final uaf uaf, final sag sag, final LayoutInflater layoutInflater, final pca<p4h> pca, final UserIdentifier userIdentifier, final cbv cbv, final fxe<spa> fxe2, final q6g q6g, final c8p c8p, final gam gam, final mbi<?> mbi, final r6p r6p, final GalleryGridContentViewArgs galleryGridContentViewArgs, final ibm ibm, final pca<bo> pca2, final a8p a8p) {
-        super(intent, z7x, resources, p9s, (fxe)fxe, kn, gob, uaf, sag, layoutInflater, (pca)pca, userIdentifier, cbv, (fxe)fxe2, q6g, c8p, gam, (mbi)mbi, r6p, a8p);
-        final uvw videoAllowed = galleryGridContentViewArgs.getVideoAllowed();
-        this.X0 = videoAllowed;
+    public hxb(final Intent intent, final k9x k9x, final Resources resources, final cbs cbs, final mxe<tai> mxe, final nn nn, final dob dob, final cbf cbf, final cbg cbg, final LayoutInflater layoutInflater, final fda<h5h> fda, final UserIdentifier userIdentifier, final mcv mcv, final mxe<ypa> mxe2, final a7g a7g, final o9p o9p, final ibm ibm, final fci<?> fci, final c8p c8p, final GalleryGridContentViewArgs galleryGridContentViewArgs, final kcm kcm, final fda<fo> fda2, final m9p m9p) {
+        super(intent, k9x, resources, cbs, mxe, nn, dob, cbf, cbg, layoutInflater, fda, userIdentifier, mcv, mxe2, a7g, o9p, ibm, fci, c8p, m9p);
+        final cxw videoAllowed = galleryGridContentViewArgs.getVideoAllowed();
+        this.a1 = videoAllowed;
         final int cameraInitiator = galleryGridContentViewArgs.getCameraInitiator();
         final boolean disableNonGifItems = galleryGridContentViewArgs.getDisableNonGifItems();
         final String scribeSection = galleryGridContentViewArgs.getScribeSection();
         EnumSet set;
-        if (videoAllowed instanceof uvw$d) {
-            set = l1h.N0;
+        if (videoAllowed instanceof cxw$d) {
+            set = e2h.Q0;
         }
         else {
-            set = l1h.M0;
+            set = e2h.P0;
         }
-        final yqg w0 = new yqg((Context)gob, (on)this, scribeSection, set, userIdentifier, z7x, ibm, cameraInitiator);
-        this.W0 = w0;
-        final rxb l2 = new rxb((Activity)gob, w0, (rx0)this, videoAllowed);
-        ixb ixb;
-        if ((ixb = (ixb)gob.Q().H("gallery")) == null) {
-            ixb = new ixb();
-            final p q = gob.Q();
-            final a a = new a(q);
-            a.e(2131429300, (Fragment)ixb, "gallery", 1);
+        final rrg z0 = new rrg((Context)dob, (rn)this, scribeSection, set, userIdentifier, k9x, kcm, cameraInitiator);
+        this.Z0 = z0;
+        final sxb o2 = new sxb((Activity)dob, z0, (qx0)this, videoAllowed);
+        jxb jxb;
+        if ((jxb = (jxb)dob.P().H("gallery")) == null) {
+            jxb = new jxb();
+            final p p23 = dob.P();
+            final a a = new a(p23);
+            a.e(2131429301, (Fragment)jxb, "gallery", 1);
             a.c();
-            q.D();
+            p23.D();
         }
-        final int[] a2 = lxb.a;
-        final hc2 onClickListener = new hc2((Object)w0, (Object)this, (Object)this, 4);
+        final int[] a2 = mxb.a;
+        final cwd onClickListener = new cwd((Object)z0, (Object)this, (Object)this, 4);
         final boolean b = cameraInitiator == 3 || cameraInitiator == 5;
         final boolean b2 = cameraInitiator != 4;
-        final ijf$a ijf$a = new ijf$a(3);
+        final ojf$a ojf$a = new ojf$a(3);
         for (int i = 0; i < 3; ++i) {
             final int n = a2[i];
-            final jxb jxb = null;
+            final kxb kxb = null;
             Object a3;
             if (n != 0) {
-                a3 = jxb;
+                a3 = kxb;
                 if (n != 1) {
                     if (n != 2) {
-                        a3 = jxb;
+                        a3 = kxb;
                     }
                     else {
-                        a3 = jxb;
+                        a3 = kxb;
                         if (b) {
-                            a3 = new jxb((Context)gob, (AttributeSet)null);
-                            ((View)a3).setId(2131429304);
-                            ((View)a3).setContentDescription((CharSequence)((Context)gob).getString(2131952311));
-                            ((jxb)a3).setIcon(xd9.a((Context)gob, 2130969729, 2131232236));
-                            ((View)a3).setBackgroundColor(goz.J((Context)gob, 2130969036));
+                            a3 = new kxb((Context)dob, (AttributeSet)null);
+                            ((View)a3).setId(2131429305);
+                            ((View)a3).setContentDescription((CharSequence)((Context)dob).getString(2131952310));
+                            ((kxb)a3).setIcon(ie9.a((Context)dob, 2130969729, 2131232236));
+                            ((View)a3).setBackgroundColor(b1b.B((Context)dob, 2130969036));
                         }
                     }
                 }
             }
             else {
-                a3 = jxb;
+                a3 = kxb;
                 if (b2) {
-                    a3 = kxb.a((Context)gob);
+                    a3 = lxb.a((Context)dob);
                 }
             }
             if (a3 != null) {
                 ((View)a3).setOnClickListener((View$OnClickListener)onClickListener);
-                ((ijf)ijf$a).p(a3);
+                ((ojf)ojf$a).p(a3);
             }
         }
-        final List list = (List)((h4j)ijf$a).e();
-        ixb.Y1 = list.toArray(new View[list.size()]);
-        ixb.r2 = (videoAllowed != uvw$b.b);
-        final gxb w2 = ixb.W1;
-        if (w2 == null) {
-            ixb.g2 = disableNonGifItems;
+        final List list = (List)((z4j)ojf$a).e();
+        jxb.b2 = list.toArray(new View[list.size()]);
+        jxb.u2 = (videoAllowed != cxw$b.b);
+        final gxb z2 = jxb.Z1;
+        if (z2 == null) {
+            jxb.j2 = disableNonGifItems;
         }
-        else if (w2.U0 != disableNonGifItems) {
-            w2.U0 = disableNonGifItems;
-            w2.p();
+        else if (z2.X0 != disableNonGifItems) {
+            z2.X0 = disableNonGifItems;
+            z2.p();
         }
-        ixb.b2 = (ixb$a)this;
-        ixb.l2 = (lzg)l2;
-        final ViewGroup viewGroup = (ViewGroup)((tll$a$b)((x9)this).c()).D0.findViewById(2131429299);
-        viewGroup.addView(ixb.i2(viewGroup), 0);
-        f.i(pca2.v0(), (u93)new en((Object)this, 10));
+        jxb.e2 = (jxb$a)this;
+        jxb.o2 = (d0h)o2;
+        final ViewGroup viewGroup = (ViewGroup)((sml$a$b)this.c()).G0.findViewById(2131429300);
+        viewGroup.addView(jxb.i2(viewGroup), 0);
+        f.i(fda2.v0(), (fa3)new es2((Object)this, 10));
     }
     
-    public final boolean L3(final wqg wqg) {
+    public final boolean L3(final prg prg) {
         return true;
     }
     
-    public final void e0(final Intent intent, final int n) {
-        ((x9)this).D0.startActivityForResult(intent, n, (Bundle)null);
+    public final void d0(final Intent intent, final int n) {
+        super.G0.startActivityForResult(intent, n, (Bundle)null);
     }
     
     public final void g1() {
-        this.W0.k();
+        this.Z0.k();
     }
     
-    public final void p1(final dy0 dy0) {
-        final wqg d = dy0.d();
+    public final void p1(final cy0 cy0) {
+        final prg d = cy0.d();
         if (d == null) {
             return;
         }
-        ((x9)this).E0.c((vn6)new GalleryGridMediaAttachedResult(d));
+        super.H0.c((ho6)new GalleryGridMediaAttachedResult(d));
     }
     
-    public final void u3(final ww9 ww9, final View view) {
-        this.W0.d(ww9, (rx0)this);
+    public final void u3(final jx9 jx9, final View view) {
+        this.Z0.d(jx9, (qx0)this);
     }
     
     public final void v1() {
-        this.W0.j(this.X0, false);
+        this.Z0.j(this.a1, false);
     }
 }

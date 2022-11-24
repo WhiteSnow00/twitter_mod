@@ -39,26 +39,26 @@ public final class ClippingMediaSource extends c<Void>
         return this.k.e();
     }
     
-    public final h f(final i$b i$b, final rx rx, final long n) {
-        final b b = new b(this.k.f(i$b, rx, n), this.n, this.s, this.t);
+    public final h f(final i$b i$b, final sx sx, final long n) {
+        final b b = new b(this.k.f(i$b, sx, n), this.n, this.s, this.t);
         this.o.add(b);
         return (h)b;
     }
     
     public final void g(final h h) {
-        omy.k(this.o.remove(h));
-        this.k.g(((b)h).D0);
+        omi.p(this.o.remove(h));
+        this.k.g(((b)h).F0);
         if (this.o.isEmpty()) {
             final a q = this.q;
             Objects.requireNonNull(q);
-            this.y(q.E0);
+            this.y(q.G0);
         }
     }
     
     public final void l() throws IOException {
         final ClippingMediaSource$IllegalClippingException r = this.r;
         if (r == null) {
-            final Iterator iterator = super.h.values().iterator();
+            final Iterator<c$b<T>> iterator = super.h.values().iterator();
             while (iterator.hasNext()) {
                 ((c$b)iterator.next()).a.l();
             }
@@ -67,12 +67,13 @@ public final class ClippingMediaSource extends c<Void>
         throw r;
     }
     
-    public final void s(final pyt j) {
+    public final void s(final hzt j) {
         super.j = j;
-        super.i = cnw.l();
+        super.i = rnw.l();
         this.x(this.k);
     }
     
+    @Override
     public final void u() {
         super.u();
         this.r = null;
@@ -90,152 +91,152 @@ public final class ClippingMediaSource extends c<Void>
         final e0$d p = this.p;
         final int n = 0;
         e0.o(0, p);
-        final long t0 = this.p.T0;
+        final long v0 = this.p.V0;
         final a q = this.q;
-        long t2 = Long.MIN_VALUE;
+        long t = Long.MIN_VALUE;
         long n2;
         long m;
         if (q != null && !this.o.isEmpty()) {
             final long s = this.s;
             if (this.m != Long.MIN_VALUE) {
-                t2 = this.t - t0;
+                t = this.t - v0;
             }
-            n2 = s - t0;
-            m = t2;
+            n2 = s - v0;
+            m = t;
         }
         else {
             final long l = this.l;
             m = this.m;
-            this.s = t0 + l;
+            this.s = v0 + l;
             if (m != Long.MIN_VALUE) {
-                t2 = t0 + m;
+                t = v0 + m;
             }
-            this.t = t2;
+            this.t = t;
             for (int size = this.o.size(), i = 0; i < size; ++i) {
                 final b b = this.o.get(i);
                 final long s2 = this.s;
-                final long t3 = this.t;
-                b.H0 = s2;
-                b.I0 = t3;
+                final long t2 = this.t;
+                b.J0 = s2;
+                b.K0 = t2;
             }
             n2 = l;
         }
         try {
-            ((com.google.android.exoplayer2.source.a)this).t((e0)(this.q = new a(e0, n2, m)));
+            this.t((e0)(this.q = new a(e0, n2, m)));
         }
         catch (final ClippingMediaSource$IllegalClippingException r) {
             this.r = r;
             for (int j = n; j < this.o.size(); ++j) {
-                this.o.get(j).J0 = this.r;
+                this.o.get(j).L0 = this.r;
             }
         }
     }
     
-    public static final class a extends cmb
+    public static final class a extends dnb
     {
-        public final long F0;
-        public final long G0;
         public final long H0;
-        public final boolean I0;
+        public final long I0;
+        public final long J0;
+        public final boolean K0;
         
-        public a(final e0 e0, long h0, long g0) throws ClippingMediaSource$IllegalClippingException {
+        public a(final e0 e0, long j0, long i0) throws ClippingMediaSource$IllegalClippingException {
             super(e0);
-            final int j = e0.j();
+            final int k = e0.j();
             final boolean b = false;
-            if (j != 1) {
+            if (k != 1) {
                 throw new ClippingMediaSource$IllegalClippingException(0);
             }
             final e0$d o = e0.o(0, new e0$d());
-            final long max = Math.max(0L, h0);
-            if (!o.O0 && max != 0L && !o.K0) {
+            final long max = Math.max(0L, j0);
+            if (!o.Q0 && max != 0L && !o.M0) {
                 throw new ClippingMediaSource$IllegalClippingException(1);
             }
-            if (g0 == Long.MIN_VALUE) {
-                h0 = o.Q0;
+            if (i0 == Long.MIN_VALUE) {
+                j0 = o.S0;
             }
             else {
-                h0 = Math.max(0L, g0);
+                j0 = Math.max(0L, i0);
             }
-            final long q0 = o.Q0;
-            g0 = h0;
-            if (q0 != -9223372036854775807L) {
-                g0 = h0;
-                if (h0 > q0) {
-                    g0 = q0;
+            final long s0 = o.S0;
+            i0 = j0;
+            if (s0 != -9223372036854775807L) {
+                i0 = j0;
+                if (j0 > s0) {
+                    i0 = s0;
                 }
-                if (max > g0) {
+                if (max > i0) {
                     throw new ClippingMediaSource$IllegalClippingException(2);
                 }
             }
-            this.F0 = max;
-            this.G0 = g0;
-            final long n = lcmp(g0, -9223372036854775807L);
+            this.H0 = max;
+            this.I0 = i0;
+            final long n = lcmp(i0, -9223372036854775807L);
             if (n == 0) {
-                h0 = -9223372036854775807L;
+                j0 = -9223372036854775807L;
             }
             else {
-                h0 = g0 - max;
+                j0 = i0 - max;
             }
-            this.H0 = h0;
-            boolean i0 = b;
+            this.J0 = j0;
+            boolean k2 = b;
             Label_0236: {
-                if (o.L0) {
+                if (o.N0) {
                     if (n != 0) {
-                        i0 = b;
-                        if (q0 == -9223372036854775807L) {
+                        k2 = b;
+                        if (s0 == -9223372036854775807L) {
                             break Label_0236;
                         }
-                        i0 = b;
-                        if (g0 != q0) {
+                        k2 = b;
+                        if (i0 != s0) {
                             break Label_0236;
                         }
                     }
-                    i0 = true;
+                    k2 = true;
                 }
             }
-            this.I0 = i0;
+            this.K0 = k2;
         }
         
         public final e0$b h(final int n, final e0$b e0$b, final boolean b) {
-            super.E0.h(0, e0$b, b);
-            final long n2 = e0$b.H0 - this.F0;
-            final long h0 = this.H0;
+            super.G0.h(0, e0$b, b);
+            final long n2 = e0$b.J0 - this.H0;
+            final long j0 = this.J0;
             long n3;
-            if (h0 == -9223372036854775807L) {
+            if (j0 == -9223372036854775807L) {
                 n3 = -9223372036854775807L;
             }
             else {
-                n3 = h0 - n2;
+                n3 = j0 - n2;
             }
-            e0$b.i(e0$b.D0, e0$b.E0, 0, n3, n2, qq.J0, false);
+            e0$b.i(e0$b.F0, e0$b.G0, 0, n3, n2, sq.L0, false);
             return e0$b;
         }
         
-        public final e0$d p(final int n, final e0$d e0$d, long p3) {
-            super.E0.p(0, e0$d, 0L);
-            final long t0 = e0$d.T0;
-            p3 = this.F0;
-            e0$d.T0 = t0 + p3;
-            e0$d.Q0 = this.H0;
-            e0$d.L0 = this.I0;
-            final long p4 = e0$d.P0;
-            if (p4 != -9223372036854775807L) {
-                p3 = Math.max(p4, p3);
-                e0$d.P0 = p3;
-                final long g0 = this.G0;
-                if (g0 != -9223372036854775807L) {
-                    p3 = Math.min(p3, g0);
+        public final e0$d p(final int n, final e0$d e0$d, long r0) {
+            super.G0.p(0, e0$d, 0L);
+            final long v0 = e0$d.V0;
+            r0 = this.H0;
+            e0$d.V0 = v0 + r0;
+            e0$d.S0 = this.J0;
+            e0$d.N0 = this.K0;
+            final long r2 = e0$d.R0;
+            if (r2 != -9223372036854775807L) {
+                r0 = Math.max(r2, r0);
+                e0$d.R0 = r0;
+                final long i0 = this.I0;
+                if (i0 != -9223372036854775807L) {
+                    r0 = Math.min(r0, i0);
                 }
-                e0$d.P0 = p3 - this.F0;
+                e0$d.R0 = r0 - this.H0;
             }
-            p3 = cnw.T(this.F0);
-            final long h0 = e0$d.H0;
-            if (h0 != -9223372036854775807L) {
-                e0$d.H0 = h0 + p3;
+            r0 = rnw.T(this.H0);
+            final long j0 = e0$d.J0;
+            if (j0 != -9223372036854775807L) {
+                e0$d.J0 = j0 + r0;
             }
-            final long i0 = e0$d.I0;
-            if (i0 != -9223372036854775807L) {
-                e0$d.I0 = i0 + p3;
+            final long k0 = e0$d.K0;
+            if (k0 != -9223372036854775807L) {
+                e0$d.K0 = k0 + r0;
             }
             return e0$d;
         }

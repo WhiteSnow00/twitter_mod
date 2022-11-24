@@ -10,18 +10,18 @@ import android.util.AttributeSet;
 import android.content.Context;
 import kotlin.Metadata;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002¨\u0006\u0006" }, d2 = { "Lcom/twitter/app/main/MainBadgeableTabLayout;", "Loh1;", "Lef9;", "drawerController", "Lfzv;", "setDrawerController", "feature.tfa.main.implementation_release" }, k = 1, mv = { 1, 7, 1 })
-public final class MainBadgeableTabLayout extends oh1
+@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001J\u000e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0002¨\u0006\u0006" }, d2 = { "Lcom/twitter/app/main/MainBadgeableTabLayout;", "Lqh1;", "Lhg9;", "drawerController", "Lvzv;", "setDrawerController", "feature.tfa.main.implementation_release" }, k = 1, mv = { 1, 7, 1 })
+public final class MainBadgeableTabLayout extends qh1
 {
-    public ef9 w1;
+    public hg9 y1;
     
     public MainBadgeableTabLayout(final Context context, final AttributeSet set) {
-        czd.f((Object)context, "context");
+        e0e.f((Object)context, "context");
         super(context, set, 0);
     }
     
     public final void d(final TabLayout$g tabLayout$g, final boolean b) {
-        czd.f((Object)tabLayout$g, "tab");
+        e0e.f((Object)tabLayout$g, "tab");
         super.d(tabLayout$g, b);
         if (tabLayout$g.i == 2131428830) {
             tabLayout$g.e((View)null);
@@ -37,9 +37,9 @@ public final class MainBadgeableTabLayout extends oh1
             }
         }
         if (n != 0) {
-            final ef9 w1 = this.w1;
-            if (w1 != null) {
-                w1.a();
+            final hg9 y1 = this.y1;
+            if (y1 != null) {
+                y1.a();
             }
         }
         else {
@@ -47,8 +47,8 @@ public final class MainBadgeableTabLayout extends oh1
         }
     }
     
-    public final void setDrawerController(final ef9 w1) {
-        czd.f((Object)w1, "drawerController");
-        this.w1 = w1;
+    public final void setDrawerController(final hg9 y1) {
+        e0e.f((Object)y1, "drawerController");
+        this.y1 = y1;
     }
 }

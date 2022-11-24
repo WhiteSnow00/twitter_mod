@@ -2,19 +2,18 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gbr extends kkl
+public final class gbr<T> extends lml<T>
 {
-    public static final gbr D0;
-    
-    static {
-        D0 = new gbr();
+    public gbr(final ptb<? extends T> ptb) {
+        e0e.f((Object)ptb, "defaultFactory");
+        super(ptb);
     }
     
-    public gbr() {
-        super((Class)pbr.class, "contentDescription", "getContentDescription()Ljava/lang/String;", 0);
-    }
-    
-    public final Object get(final Object o) {
-        return ((pbr)o).i;
+    public final l9r<T> a(final T t, final d86 d86, final int n) {
+        d86.x(-1121811719);
+        final sa6$b a = sa6.a;
+        final pbr pbr = new pbr((Object)t);
+        d86.O();
+        return (l9r<T>)pbr;
     }
 }

@@ -8,15 +8,15 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonThreadReaderHeader extends aih<gms>
+public class JsonThreadReaderHeader extends tih<uns>
 {
     @JsonField
     public JsonThreadReaderHeader.JsonThreadReaderHeader$TimelineUserThreadHeaderContent a;
     
     @Override
     public final Object s() {
-        final hfv e = ffa.e(this.a.a);
-        pf8.r(e);
-        return new gms(e);
+        final qgv b = dvc.b(this.a.a);
+        vmw.g((Object)b);
+        return new uns(b);
     }
 }

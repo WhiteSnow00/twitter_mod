@@ -23,33 +23,33 @@ public final class PushTokenUpdateWorker extends Worker
     }
     
     public PushTokenUpdateWorker(final Context context, final WorkerParameters workerParameters) {
-        czd.f((Object)context, "context");
-        czd.f((Object)workerParameters, "workerParams");
+        e0e.f((Object)context, "context");
+        e0e.f((Object)workerParameters, "workerParams");
         super(context, workerParameters);
     }
     
     public final c$a g() {
-        final trl o3 = x68.i().o3();
+        final esl o3 = o6f.b().o3();
         Objects.requireNonNull(o3);
-        cj1.e();
-        final qrl c = o3.c;
+        fj1.e();
+        final bsl c = o3.c;
         Objects.requireNonNull(c);
-        qrl.a(new af4(vba.f((ica)c.b, "", "", "started")));
+        bsl.a(new fg4(dda.f((qda)c.b, "", "", "started")));
         o3.f.h();
-        final kj b = o3.b;
+        final oj b = o3.b;
         final List d = b.a.d();
-        final jyi b2 = b.b;
+        final wyi b2 = b.b;
         Objects.requireNonNull(b2);
-        final mma e = i5e.e((Iterable)d, (xtk)new wag((Object)b2, 2));
-        final mrc g = o3.g;
+        final tna e = k6e.e((Iterable)d, (nuk)new k07((Object)b2, 2));
+        final msc g = o3.g;
         Objects.requireNonNull(g);
-        final h5j fromIterable = h5j.fromIterable((Iterable)i5e.e((Iterable)e, (xtk)new pi7((Object)g, 5)));
-        final ot8 d2 = o3.d;
-        final eaq b3 = o3.a.b();
+        final t5j fromIterable = t5j.fromIterable((Iterable)k6e.e((Iterable)e, (nuk)new eba((Object)g, 5)));
+        final uu8 d2 = o3.d;
+        final bbq b3 = o3.a.b();
         Objects.requireNonNull(d2);
-        final h5j flatMap = h5j.combineLatest((taj)b3.P(), (taj)fromIterable, (zv1)nt8.E0).flatMap((psb)new q2((Object)d2, 3));
-        final m4s a = hq1.a;
-        flatMap.defaultIfEmpty((Object)(System.currentTimeMillis() + 86400000L)).reduce((zv1)mt8.E0).s().blockingSubscribe((ccj)new srl(o3));
+        final t5j flatMap = t5j.combineLatest((fbj)b3.P(), (fbj)fromIterable, (hw1)tu8.G0).flatMap((rtb)new wsf(d2, 4));
+        final g5s a = nq1.a;
+        flatMap.defaultIfEmpty((Object)(System.currentTimeMillis() + 86400000L)).reduce((hw1)su8.G0).r().blockingSubscribe((ocj)new dsl(o3));
         return (c$a)new c$a$c();
     }
 }

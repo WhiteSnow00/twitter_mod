@@ -1,60 +1,37 @@
 import android.os.RemoteException;
+import com.google.android.gms.auth.api.credentials.Credential;
+import android.os.Parcelable$Creator;
+import com.google.android.gms.common.api.Status;
 import android.os.Parcel;
-import android.os.IBinder;
-import android.os.IInterface;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class u8y implements IInterface
+public abstract class u8y extends i7y implements w8y
 {
-    public final IBinder a;
-    public final String b;
-    
-    public u8y(final IBinder a, final String b) {
-        this.a = a;
-        this.b = b;
+    public u8y() {
+        super("com.google.android.gms.auth.api.credentials.internal.ICredentialsCallbacks");
     }
     
-    public final void U0(final int n, final Parcel parcel) throws RemoteException {
-        final Parcel obtain = Parcel.obtain();
-        try {
-            this.a.transact(n, parcel, obtain, 0);
-            obtain.readException();
-        }
-        finally {
-            parcel.recycle();
-            obtain.recycle();
-        }
-    }
-    
-    public final IBinder asBinder() {
-        return this.a;
-    }
-    
-    public final Parcel s() {
-        final Parcel obtain = Parcel.obtain();
-        obtain.writeInterfaceToken(this.b);
-        return obtain;
-    }
-    
-    public final Parcel x(final int n, final Parcel parcel) throws RemoteException {
-        final Parcel obtain = Parcel.obtain();
-        try {
-            try {
-                this.a.transact(n, parcel, obtain, 0);
-                obtain.readException();
-                parcel.recycle();
-                return obtain;
+    public final boolean s(final int n, final Parcel parcel, final Parcel parcel2) throws RemoteException {
+        if (n != 1) {
+            if (n != 2) {
+                if (n != 3) {
+                    return false;
+                }
+                final Status status = n7y.a(parcel, (android.os.Parcelable$Creator<Status>)Status.CREATOR);
+                parcel.readString();
+                throw new UnsupportedOperationException();
             }
-            finally {}
+            else {
+                this.v(n7y.a(parcel, (android.os.Parcelable$Creator<Status>)Status.CREATOR));
+            }
         }
-        catch (final RuntimeException ex) {
-            final Parcel parcel2;
-            parcel2.recycle();
-            throw ex;
+        else {
+            this.H0(n7y.a(parcel, (android.os.Parcelable$Creator<Status>)Status.CREATOR), n7y.a(parcel, (android.os.Parcelable$Creator<Credential>)Credential.CREATOR));
         }
-        parcel.recycle();
+        parcel2.writeNoException();
+        return true;
     }
 }

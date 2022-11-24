@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Θα λαμβάνετε ειδοποιήσεις για νέα Tweet.</item>
-        <item>Θα λαμβάνετε ειδοποιήσεις για νέα Tweet Σούπερ ακόλουθων μόνο.</item>
+        <item>Θα λαμβάνετε ειδοποιήσεις για νέα Tweet για συνδρομές.</item>
         <item>Θα λαμβάνετε ειδοποιήσεις για νέα Tweet με ζωντανό βίντεο.</item>
         <item>Θα λαμβάνετε ειδοποιήσεις για νέα Tweet Χώρων.</item>
         <item>Δεν θα λαμβάνετε πλέον ειδοποιήσεις για νέα Tweet.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweet</item>
-        <item>Tweet Σούπερ ακόλουθων μόνο</item>
+        <item>Tweet μόνο για συνδρομές</item>
         <item>Ζωντανό βίντεο</item>
         <item>Χώροι</item>
         <item>Καμία</item>
     </array>
     <array name="account_notif_options_old">
         <item>Όλα τα Tweet</item>
-        <item>Μόνο Tweet για Σούπερ ακόλουθους</item>
+        <item>Μόνο Tweet για συνδρομές</item>
         <item>Μόνο ζωντανό βίντεο</item>
         <item>Μόνο Χώροι</item>
         <item>Ανενεργό</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Λήψη ειδοποιήσεων για όλα τα Tweet αυτού του λογαριασμού.</item>
-        <item>Λάβετε ειδοποιήσεις μόνο για νέα Tweet για Σούπερ ακόλουθους</item>
+        <item>Λάβετε ειδοποιήσεις μόνο για Tweet για συνδρομές.</item>
         <item>Λήψη ειδοποιήσεων μόνο για ζωντανές εκπομπές.</item>
         <item>Λάβετε ειδοποιήσεις μόνο για τους Χώρους</item>
         <item>Απενεργοποίηση των ειδοποιήσεων για τα Tweet αυτού του λογαριασμού.</item>

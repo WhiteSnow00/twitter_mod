@@ -4,21 +4,17 @@
 
 public enum vy
 {
-    public static final a Companion;
-    public static final rlp<vy> D0;
+    public static final vy.vy$a Companion;
+    public static final nmp<vy> F0;
     
-    E0, 
-    F0;
+    G0, 
+    H0;
     
-    public static final vy[] G0;
+    public static final vy[] I0;
     
     static {
-        Companion = new a();
-        final lw6$h a = lw6.a;
-        vy.D0 = new mw6((Class)vy.class);
-    }
-    
-    public static final class a
-    {
+        Companion = new vy.vy$a();
+        final rx6$h a = rx6.a;
+        vy.F0 = new sx6((Class)vy.class);
     }
 }

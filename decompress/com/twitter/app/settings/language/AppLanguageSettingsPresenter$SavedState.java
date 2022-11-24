@@ -8,8 +8,8 @@ import java.io.IOException;
 import android.os.Parcel;
 import android.os.Parcelable$Creator;
 
-@xoe
-public class AppLanguageSettingsPresenter$SavedState<OBJ extends AppLanguageSettingsPresenter> extends zp1<OBJ>
+@upe
+public class AppLanguageSettingsPresenter$SavedState<OBJ extends AppLanguageSettingsPresenter> extends eq1<OBJ>
 {
     public static final Parcelable$Creator CREATOR;
     
@@ -25,22 +25,22 @@ public class AppLanguageSettingsPresenter$SavedState<OBJ extends AppLanguageSett
         super((Object)obj);
     }
     
-    public OBJ deserializeValue(final vlp vlp, final OBJ obj) throws IOException, ClassNotFoundException {
-        final AppLanguageSettingsPresenter appLanguageSettingsPresenter = (AppLanguageSettingsPresenter)super.deserializeValue(vlp, (Object)obj);
-        appLanguageSettingsPresenter.g = vlp.s();
+    public OBJ deserializeValue(final rmp rmp, final OBJ obj) throws IOException, ClassNotFoundException {
+        final AppLanguageSettingsPresenter appLanguageSettingsPresenter = (AppLanguageSettingsPresenter)super.deserializeValue(rmp, (Object)obj);
+        appLanguageSettingsPresenter.g = rmp.u();
         return (OBJ)appLanguageSettingsPresenter;
     }
     
-    public /* bridge */ Object deserializeValue(final vlp vlp, final Object o) throws IOException, ClassNotFoundException {
-        return this.deserializeValue(vlp, (AppLanguageSettingsPresenter)o);
+    public /* bridge */ Object deserializeValue(final rmp rmp, final Object o) throws IOException, ClassNotFoundException {
+        return this.deserializeValue(rmp, (AppLanguageSettingsPresenter)o);
     }
     
-    public void serializeValue(final wlp wlp, final OBJ obj) throws IOException {
-        super.serializeValue(wlp, (Object)obj);
-        wlp.r(obj.g);
+    public void serializeValue(final smp smp, final OBJ obj) throws IOException {
+        super.serializeValue(smp, (Object)obj);
+        smp.t(obj.g);
     }
     
-    public /* bridge */ void serializeValue(final wlp wlp, final Object o) throws IOException {
-        this.serializeValue(wlp, (AppLanguageSettingsPresenter)o);
+    public /* bridge */ void serializeValue(final smp smp, final Object o) throws IOException {
+        this.serializeValue(smp, (AppLanguageSettingsPresenter)o);
     }
 }

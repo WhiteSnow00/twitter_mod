@@ -1,45 +1,118 @@
-import java.util.LinkedHashMap;
-import com.twitter.ui.components.text.legacy.TypefacesTextView;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class qxk implements ilx<nc2, lc2, kc2>
+public final class qxk implements pxk, rp8
 {
-    public final TypefacesTextView D0;
-    public final rhh<nc2> E0;
+    public final rp8 F0;
+    public boolean G0;
+    public boolean H0;
+    public final nyh I0;
     
-    public qxk(final TypefacesTextView d0) {
-        czd.f((Object)d0, "textView");
-        this.D0 = d0;
-        this.E0 = (rhh<nc2>)q3j.g0((qsb)new qsb<rhh$a<nc2>, fzv>(this) {
-            public final qxk D0;
-            
-            public final Object invoke(final Object o) {
-                final rhh$a rhh$a = (rhh$a)o;
-                czd.f((Object)rhh$a, "$this$watch");
-                rhh$a.a((ftb)rhh$a$c.D0, (qsb)new lxk(this.D0));
-                final pxk pxk = new pxk(this.D0);
-                final LinkedHashMap b = rhh$a.b;
-                final rhh$a rhh$a2 = new rhh$a();
-                pxk.invoke(rhh$a2);
-                b.put(nc2$d.class, rhh$a2.b());
-                return fzv.a;
+    public qxk(final rp8 f0) {
+        e0e.f((Object)f0, "density");
+        this.F0 = f0;
+        this.I0 = new nyh(false);
+    }
+    
+    public final long C(final float n) {
+        return this.F0.C(n);
+    }
+    
+    public final long C0(final long n) {
+        return this.F0.C0(n);
+    }
+    
+    public final long D(final long n) {
+        return this.F0.D(n);
+    }
+    
+    @Override
+    public final Object F(final mp6<? super Boolean> mp6) {
+        qxk$a qxk$a2 = null;
+        Label_0047: {
+            if (mp6 instanceof qxk$a) {
+                final qxk$a qxk$a = (qxk$a)mp6;
+                final int i0 = qxk$a.I0;
+                if ((i0 & Integer.MIN_VALUE) != 0x0) {
+                    qxk$a.I0 = i0 + Integer.MIN_VALUE;
+                    qxk$a2 = qxk$a;
+                    break Label_0047;
+                }
             }
-        });
+            qxk$a2 = new qxk$a(this, (mp6)mp6);
+        }
+        final Object g0 = qxk$a2.G0;
+        final jz6 f0 = jz6.F0;
+        final int i2 = qxk$a2.I0;
+        qxk f2;
+        if (i2 != 0) {
+            if (i2 != 1) {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            f2 = qxk$a2.F0;
+            jb2.M0(g0);
+        }
+        else {
+            jb2.M0(g0);
+            if (!this.G0 && !this.H0) {
+                final nyh i3 = this.I0;
+                qxk$a2.F0 = this;
+                qxk$a2.I0 = 1;
+                if (i3.b((Object)null, (mp6)qxk$a2) == f0) {
+                    return f0;
+                }
+            }
+            f2 = this;
+        }
+        return f2.G0;
     }
     
-    public final void T(final jbx jbx) {
-        final nc2 nc2 = (nc2)jbx;
-        czd.f((Object)nc2, "state");
-        this.E0.b((Object)nc2);
+    public final int S(final float n) {
+        return this.F0.S(n);
     }
     
-    public final void q(final Object o) {
+    public final float V(final long n) {
+        return this.F0.V(n);
     }
     
-    public final h5j w() {
-        return zip.a();
+    public final void d() {
+        this.H0 = true;
+        this.I0.a((Object)null);
+    }
+    
+    public final void e() {
+        this.G0 = true;
+        this.I0.a((Object)null);
+    }
+    
+    public final void f() {
+        this.I0.c((Object)null);
+        this.G0 = false;
+        this.H0 = false;
+    }
+    
+    public final float getDensity() {
+        return this.F0.getDensity();
+    }
+    
+    public final float m0(final int n) {
+        return this.F0.m0(n);
+    }
+    
+    public final float n0(final float n) {
+        return this.F0.n0(n);
+    }
+    
+    public final float p0() {
+        return this.F0.p0();
+    }
+    
+    public final float t0(final float n) {
+        return this.F0.t0(n);
+    }
+    
+    public final int w0(final long n) {
+        return this.F0.w0(n);
     }
 }

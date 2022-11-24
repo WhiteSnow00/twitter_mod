@@ -2,6 +2,11 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface w1r extends t8r<v1r>
+public enum w1r
 {
+    F0, 
+    G0, 
+    H0;
+    
+    public static final w1r[] I0;
 }

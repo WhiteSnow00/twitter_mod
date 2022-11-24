@@ -4,13 +4,19 @@
 
 package com.twitter.nft.subsystem.api.args;
 
+import kotlinx.serialization.encoding.Encoder;
+import kotlinx.serialization.DeserializationStrategy;
+import kotlinx.serialization.UnknownFieldException;
+import kotlinx.serialization.encoding.Decoder;
+import kotlinx.serialization.builtins.BuiltinSerializersKt;
+import kotlinx.serialization.KSerializer;
 import kotlinx.serialization.descriptors.SerialDescriptor;
 import com.twitter.nft.subsystem.model.NFTSmartContract;
 import kotlin.Metadata;
 import com.twitter.app.common.args.ContentViewArgs;
 
-@flp
-@Metadata(bv = {}, d1 = { "\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u0000 &2\u00020\u0001:\u0002'&B%\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\f¢\u0006\u0004\b \u0010!B9\b\u0017\u0012\u0006\u0010\"\u001a\u00020\u0013\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\f\u0012\b\u0010$\u001a\u0004\u0018\u00010#¢\u0006\u0004\b \u0010%J!\u0010\b\u001a\u00020\u00072\u0006\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005H\u00c7\u0001J\u000b\u0010\n\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u000b\u0010\u000b\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u000b\u0010\r\u001a\u0004\u0018\u00010\fH\u00c6\u0003J-\u0010\u0011\u001a\u00020\u00002\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u0010\u001a\u0004\u0018\u00010\fH\u00c6\u0001J\t\u0010\u0012\u001a\u00020\tH\u00d6\u0001J\t\u0010\u0014\u001a\u00020\u0013H\u00d6\u0001J\u0013\u0010\u0018\u001a\u00020\u00172\b\u0010\u0016\u001a\u0004\u0018\u00010\u0015H\u00d6\u0003R\u0019\u0010\u000e\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u000e\u0010\u0019\u001a\u0004\b\u001a\u0010\u001bR\u0019\u0010\u000f\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u0019\u001a\u0004\b\u001c\u0010\u001bR\u0019\u0010\u0010\u001a\u0004\u0018\u00010\f8\u0006¢\u0006\f\n\u0004\b\u0010\u0010\u001d\u001a\u0004\b\u001e\u0010\u001f¨\u0006(" }, d2 = { "Lcom/twitter/nft/subsystem/api/args/NFTPickerAvatarContentViewArgs;", "Lcom/twitter/app/common/args/ContentViewArgs;", "self", "Lxc6;", "output", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "serialDesc", "Lfzv;", "write$Self", "", "component1", "component2", "Lcom/twitter/nft/subsystem/model/NFTSmartContract;", "component3", "imageUrl", "token", "smartContract", "copy", "toString", "", "hashCode", "", "other", "", "equals", "Ljava/lang/String;", "getImageUrl", "()Ljava/lang/String;", "getToken", "Lcom/twitter/nft/subsystem/model/NFTSmartContract;", "getSmartContract", "()Lcom/twitter/nft/subsystem/model/NFTSmartContract;", "<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/twitter/nft/subsystem/model/NFTSmartContract;)V", "seen1", "Lhlp;", "serializationConstructorMarker", "(ILjava/lang/String;Ljava/lang/String;Lcom/twitter/nft/subsystem/model/NFTSmartContract;Lhlp;)V", "Companion", "$serializer", "subsystem.tfa.nft.api_release" }, k = 1, mv = { 1, 7, 1 })
+@bmp
+@Metadata(bv = {}, d1 = { "\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u000b\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u0000 &2\u00020\u0001:\u0002'&B%\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\f¢\u0006\u0004\b \u0010!B9\b\u0017\u0012\u0006\u0010\"\u001a\u00020\u0013\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u0010\u001a\u0004\u0018\u00010\f\u0012\b\u0010$\u001a\u0004\u0018\u00010#¢\u0006\u0004\b \u0010%J!\u0010\b\u001a\u00020\u00072\u0006\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005H\u00c7\u0001J\u000b\u0010\n\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u000b\u0010\u000b\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u000b\u0010\r\u001a\u0004\u0018\u00010\fH\u00c6\u0003J-\u0010\u0011\u001a\u00020\u00002\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u0010\u001a\u0004\u0018\u00010\fH\u00c6\u0001J\t\u0010\u0012\u001a\u00020\tH\u00d6\u0001J\t\u0010\u0014\u001a\u00020\u0013H\u00d6\u0001J\u0013\u0010\u0018\u001a\u00020\u00172\b\u0010\u0016\u001a\u0004\u0018\u00010\u0015H\u00d6\u0003R\u0019\u0010\u000e\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u000e\u0010\u0019\u001a\u0004\b\u001a\u0010\u001bR\u0019\u0010\u000f\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u0019\u001a\u0004\b\u001c\u0010\u001bR\u0019\u0010\u0010\u001a\u0004\u0018\u00010\f8\u0006¢\u0006\f\n\u0004\b\u0010\u0010\u001d\u001a\u0004\b\u001e\u0010\u001f¨\u0006(" }, d2 = { "Lcom/twitter/nft/subsystem/api/args/NFTPickerAvatarContentViewArgs;", "Lcom/twitter/app/common/args/ContentViewArgs;", "self", "Lee6;", "output", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "serialDesc", "Lvzv;", "write$Self", "", "component1", "component2", "Lcom/twitter/nft/subsystem/model/NFTSmartContract;", "component3", "imageUrl", "token", "smartContract", "copy", "toString", "", "hashCode", "", "other", "", "equals", "Ljava/lang/String;", "getImageUrl", "()Ljava/lang/String;", "getToken", "Lcom/twitter/nft/subsystem/model/NFTSmartContract;", "getSmartContract", "()Lcom/twitter/nft/subsystem/model/NFTSmartContract;", "<init>", "(Ljava/lang/String;Ljava/lang/String;Lcom/twitter/nft/subsystem/model/NFTSmartContract;)V", "seen1", "Ldmp;", "serializationConstructorMarker", "(ILjava/lang/String;Ljava/lang/String;Lcom/twitter/nft/subsystem/model/NFTSmartContract;Ldmp;)V", "Companion", "$serializer", "subsystem.tfa.nft.api_release" }, k = 1, mv = { 1, 7, 1 })
 public final class NFTPickerAvatarContentViewArgs implements ContentViewArgs
 {
     public static final NFTPickerAvatarContentViewArgs.NFTPickerAvatarContentViewArgs$Companion Companion;
@@ -22,14 +28,14 @@ public final class NFTPickerAvatarContentViewArgs implements ContentViewArgs
         Companion = new NFTPickerAvatarContentViewArgs.NFTPickerAvatarContentViewArgs$Companion();
     }
     
-    public NFTPickerAvatarContentViewArgs(final int n, final String imageUrl, final String token, final NFTSmartContract smartContract, final hlp hlp) {
+    public NFTPickerAvatarContentViewArgs(final int n, final String imageUrl, final String token, final NFTSmartContract smartContract, final dmp dmp) {
         if (0x7 == (n & 0x7)) {
             this.imageUrl = imageUrl;
             this.token = token;
             this.smartContract = smartContract;
             return;
         }
-        blz.a0(n, 7, NFTPickerAvatarContentViewArgs$$serializer.INSTANCE.getDescriptor());
+        shw.V0(n, 7, $serializer.INSTANCE.getDescriptor());
         throw null;
     }
     
@@ -52,14 +58,14 @@ public final class NFTPickerAvatarContentViewArgs implements ContentViewArgs
         return nftPickerAvatarContentViewArgs.copy(imageUrl, token, smartContract);
     }
     
-    public static final void write$Self(final NFTPickerAvatarContentViewArgs nftPickerAvatarContentViewArgs, final xc6 xc6, final SerialDescriptor serialDescriptor) {
-        czd.f((Object)nftPickerAvatarContentViewArgs, "self");
-        czd.f((Object)xc6, "output");
-        czd.f((Object)serialDescriptor, "serialDesc");
-        final gkr a = gkr.a;
-        xc6.y(serialDescriptor, 0, (jlp)a, (Object)nftPickerAvatarContentViewArgs.imageUrl);
-        xc6.y(serialDescriptor, 1, (jlp)a, (Object)nftPickerAvatarContentViewArgs.token);
-        xc6.y(serialDescriptor, 2, (jlp)NFTSmartContract.Companion.serializer(), (Object)nftPickerAvatarContentViewArgs.smartContract);
+    public static final void write$Self(final NFTPickerAvatarContentViewArgs nftPickerAvatarContentViewArgs, final ee6 ee6, final SerialDescriptor serialDescriptor) {
+        e0e.f((Object)nftPickerAvatarContentViewArgs, "self");
+        e0e.f((Object)ee6, "output");
+        e0e.f((Object)serialDescriptor, "serialDesc");
+        final dlr a = dlr.a;
+        ee6.y(serialDescriptor, 0, (fmp)a, (Object)nftPickerAvatarContentViewArgs.imageUrl);
+        ee6.y(serialDescriptor, 1, (fmp)a, (Object)nftPickerAvatarContentViewArgs.token);
+        ee6.y(serialDescriptor, 2, (fmp)NFTSmartContract.Companion.serializer(), (Object)nftPickerAvatarContentViewArgs.smartContract);
     }
     
     public final String component1() {
@@ -87,7 +93,7 @@ public final class NFTPickerAvatarContentViewArgs implements ContentViewArgs
             return false;
         }
         final NFTPickerAvatarContentViewArgs nftPickerAvatarContentViewArgs = (NFTPickerAvatarContentViewArgs)o;
-        return czd.a((Object)this.imageUrl, (Object)nftPickerAvatarContentViewArgs.imageUrl) && czd.a((Object)this.token, (Object)nftPickerAvatarContentViewArgs.token) && czd.a((Object)this.smartContract, (Object)nftPickerAvatarContentViewArgs.smartContract);
+        return e0e.a((Object)this.imageUrl, (Object)nftPickerAvatarContentViewArgs.imageUrl) && e0e.a((Object)this.token, (Object)nftPickerAvatarContentViewArgs.token) && e0e.a((Object)this.smartContract, (Object)nftPickerAvatarContentViewArgs.smartContract);
     }
     
     public final String getImageUrl() {
@@ -133,9 +139,96 @@ public final class NFTPickerAvatarContentViewArgs implements ContentViewArgs
         final String imageUrl = this.imageUrl;
         final String token = this.token;
         final NFTSmartContract smartContract = this.smartContract;
-        final StringBuilder q = tqf.q("NFTPickerAvatarContentViewArgs(imageUrl=", imageUrl, ", token=", token, ", smartContract=");
-        q.append(smartContract);
-        q.append(")");
-        return q.toString();
+        final StringBuilder k = l58.k("NFTPickerAvatarContentViewArgs(imageUrl=", imageUrl, ", token=", token, ", smartContract=");
+        k.append(smartContract);
+        k.append(")");
+        return k.toString();
+    }
+    
+    @Metadata(bv = {}, d1 = { "\u00004\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0006\b\u00c7\u0002\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0013\u0010\u0014J\u001a\u0010\u0005\u001a\f\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00040\u0003H\u00d6\u0001¢\u0006\u0004\b\u0005\u0010\u0006J\u0011\u0010\t\u001a\u00020\u00022\u0006\u0010\b\u001a\u00020\u0007H\u00d6\u0001J\u0019\u0010\u000e\u001a\u00020\r2\u0006\u0010\u000b\u001a\u00020\n2\u0006\u0010\f\u001a\u00020\u0002H\u00d6\u0001R\u0014\u0010\u0012\u001a\u00020\u000f8VX\u00d6\u0005¢\u0006\u0006\u001a\u0004\b\u0010\u0010\u0011¨\u0006\u0015" }, d2 = { "com/twitter/nft/subsystem/api/args/NFTPickerAvatarContentViewArgs.$serializer", "Lezb;", "Lcom/twitter/nft/subsystem/api/args/NFTPickerAvatarContentViewArgs;", "", "Lkotlinx/serialization/KSerializer;", "childSerializers", "()[Lkotlinx/serialization/KSerializer;", "Lkotlinx/serialization/encoding/Decoder;", "decoder", "deserialize", "Lkotlinx/serialization/encoding/Encoder;", "encoder", "value", "Lvzv;", "serialize", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "getDescriptor", "()Lkotlinx/serialization/descriptors/SerialDescriptor;", "descriptor", "<init>", "()V", "subsystem.tfa.nft.api_release" }, k = 1, mv = { 1, 7, 1 })
+    public static final class $serializer implements ezb<NFTPickerAvatarContentViewArgs>
+    {
+        public static final $serializer INSTANCE;
+        public static final SerialDescriptor descriptor;
+        
+        static {
+            final fpk descriptor2 = new fpk("com.twitter.nft.subsystem.api.args.NFTPickerAvatarContentViewArgs", (ezb)(INSTANCE = new $serializer()), 3);
+            descriptor2.k("imageUrl", false);
+            descriptor2.k("token", false);
+            descriptor2.k("smartContract", false);
+            descriptor = (SerialDescriptor)descriptor2;
+        }
+        
+        private $serializer() {
+        }
+        
+        public KSerializer<?>[] childSerializers() {
+            final dlr a = dlr.a;
+            return (KSerializer<?>[])new KSerializer[] { BuiltinSerializersKt.e((KSerializer)a), BuiltinSerializersKt.e((KSerializer)a), BuiltinSerializersKt.e(NFTSmartContract.Companion.serializer()) };
+        }
+        
+        public NFTPickerAvatarContentViewArgs deserialize(final Decoder decoder) {
+            e0e.f((Object)decoder, "decoder");
+            final SerialDescriptor descriptor = this.getDescriptor();
+            final ce6 c = decoder.c(descriptor);
+            c.p();
+            Object n = null;
+            Object n2 = null;
+            Object n3 = null;
+            int i = 1;
+            int n4 = 0;
+            while (i != 0) {
+                final int o = c.o(descriptor);
+                if (o != -1) {
+                    if (o != 0) {
+                        if (o != 1) {
+                            if (o != 2) {
+                                throw new UnknownFieldException(o);
+                            }
+                            n2 = c.n(descriptor, 2, (DeserializationStrategy)NFTSmartContract.Companion.serializer(), n2);
+                            n4 |= 0x4;
+                        }
+                        else {
+                            n3 = c.n(descriptor, 1, (DeserializationStrategy)dlr.a, n3);
+                            n4 |= 0x2;
+                        }
+                    }
+                    else {
+                        n = c.n(descriptor, 0, (DeserializationStrategy)dlr.a, n);
+                        n4 |= 0x1;
+                    }
+                }
+                else {
+                    i = 0;
+                }
+            }
+            c.d(descriptor);
+            return new NFTPickerAvatarContentViewArgs(n4, (String)n, (String)n3, (NFTSmartContract)n2, null);
+        }
+        
+        public /* bridge */ Object deserialize(final Decoder decoder) {
+            return this.deserialize(decoder);
+        }
+        
+        public SerialDescriptor getDescriptor() {
+            return $serializer.descriptor;
+        }
+        
+        public void serialize(final Encoder encoder, final NFTPickerAvatarContentViewArgs nftPickerAvatarContentViewArgs) {
+            e0e.f((Object)encoder, "encoder");
+            e0e.f((Object)nftPickerAvatarContentViewArgs, "value");
+            final SerialDescriptor descriptor = this.getDescriptor();
+            final ee6 c = encoder.c(descriptor);
+            NFTPickerAvatarContentViewArgs.write$Self(nftPickerAvatarContentViewArgs, c, descriptor);
+            c.d(descriptor);
+        }
+        
+        public /* bridge */ void serialize(final Encoder encoder, final Object o) {
+            this.serialize(encoder, (NFTPickerAvatarContentViewArgs)o);
+        }
+        
+        public KSerializer<?>[] typeParametersSerializers() {
+            return (KSerializer<?>[])d4j.K0;
+        }
     }
 }

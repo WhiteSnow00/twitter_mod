@@ -1,42 +1,26 @@
-import java.util.LinkedHashMap;
-import android.util.SizeF;
-import android.util.Size;
-import android.util.SparseArray;
-import java.io.Serializable;
-import android.os.Parcelable;
-import java.util.ArrayList;
-import android.os.Bundle;
-import android.os.Binder;
-import java.util.Map;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pso
+public final class pso implements ifj
 {
-    public static final a Companion;
-    public static final Class<?>[] f;
-    public final Map<String, Object> a;
-    public final Map<String, wso$c> b;
-    public final Map<String, Object> c;
-    public final Map<String, muh<Object>> d;
-    public final oso e;
+    public static final pso.pso$a Companion;
     
     static {
-        Companion = new a();
-        f = new Class[] { Boolean.TYPE, boolean[].class, Double.TYPE, double[].class, Integer.TYPE, int[].class, Long.TYPE, long[].class, String.class, String[].class, Binder.class, Bundle.class, Byte.TYPE, byte[].class, Character.TYPE, char[].class, CharSequence.class, CharSequence[].class, ArrayList.class, Float.TYPE, float[].class, Parcelable.class, Parcelable[].class, Serializable.class, Short.TYPE, short[].class, SparseArray.class, Size.class, SizeF.class };
+        Companion = new pso.pso$a();
     }
     
-    public pso() {
-        this.a = new LinkedHashMap();
-        this.b = new LinkedHashMap();
-        this.c = new LinkedHashMap();
-        this.d = new LinkedHashMap();
-        this.e = new oso(this);
-    }
-    
-    public static final class a
-    {
+    public final String a() {
+        String a = ifj.Companion.a("ro.trackingId.com.twitter");
+        if (flr.g((CharSequence)a)) {
+            final fg4 fg4 = new fg4(new String[] { "external::oem:referrer:system_properties" });
+            ((o1p)fg4).t = a;
+            final int a2 = o5j.a;
+            sbw.b((tlm)fg4);
+        }
+        else {
+            a = null;
+        }
+        return a;
     }
 }

@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>你将收到新推文通知。</item>
-        <item>你将收到新的仅限超级关注者的推文通知。</item>
+        <item>点赞、提及、转推等等 — 来自其他认证用户的互动会出现在这里。</item>
         <item>你将收到新直播视频推文的通知。</item>
         <item>你将收到新空间推文的通知。</item>
         <item>你将不会再收到新推文通知。</item>
     </array>
     <array name="account_notif_options">
         <item>推文</item>
-        <item>仅限超级关注者的推文</item>
+        <item>仅订阅推文</item>
         <item>直播视频</item>
         <item>空间</item>
         <item>无</item>
     </array>
     <array name="account_notif_options_old">
         <item>全部推文</item>
-        <item>仅超级关注推文</item>
+        <item>仅订阅推文</item>
         <item>仅限直播视频</item>
         <item>仅空间</item>
         <item>关闭</item>
     </array>
     <array name="account_notif_subtitles">
         <item>获取此账号的所有推文的通知。</item>
-        <item>接收仅限超级关注推文的通知。</item>
+        <item>仅接收订阅推文的通知。</item>
         <item>仅获取直播播客的通知。</item>
         <item>只接收空间的通知。</item>
         <item>关闭此账号的推文通知。</item>

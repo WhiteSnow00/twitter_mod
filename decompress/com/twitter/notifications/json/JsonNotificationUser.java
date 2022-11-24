@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNotificationUser extends fih<mvi>
+public class JsonNotificationUser extends tih<dwi>
 {
     @JsonField
     public long a;
@@ -24,25 +24,26 @@ public class JsonNotificationUser extends fih<mvi>
     @JsonField(name = { "following" })
     public boolean f;
     
+    @Override
     public final Object s() {
         final long a = this.a;
         Object o;
         if (a == 0L) {
-            i48.t("Missing id");
+            mqb.o("Missing id");
             o = null;
         }
         else {
-            final mvi$a mvi$a = new mvi$a();
-            mvi$a.a = a;
-            mvi$a.c = this.c;
-            mvi$a.d = this.d;
-            mvi$a.e = this.e;
-            mvi$a.f = this.f;
+            final dwi$a dwi$a = new dwi$a();
+            dwi$a.a = a;
+            dwi$a.c = this.c;
+            dwi$a.d = this.d;
+            dwi$a.e = this.e;
+            dwi$a.f = this.f;
             final String b = this.b;
             if (b != null) {
-                mvi$a.o(b);
+                dwi$a.o(b);
             }
-            o = ((n4j)mvi$a).e();
+            o = ((z4j)dwi$a).e();
         }
         return o;
     }

@@ -1,59 +1,68 @@
-import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
-import android.os.Parcel;
-import android.os.Parcelable$Creator;
+import android.os.IInterface;
+import java.util.concurrent.Callable;
+import android.os.IBinder;
+import android.content.ComponentName;
+import com.android.billingclient.api.b;
+import android.content.ServiceConnection;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ocy implements Parcelable$Creator<n6g>
+public final class ocy implements ServiceConnection
 {
-    public final Object createFromParcel(final Parcel parcel) {
-        final int w = SafeParcelReader.w(parcel);
-        boolean k = false;
-        boolean i = false;
-        boolean j = false;
-        boolean l = false;
-        boolean m = false;
-        boolean k2 = false;
-        while (parcel.dataPosition() < w) {
-            final int int1 = parcel.readInt();
-            switch ((char)int1) {
-                default: {
-                    SafeParcelReader.v(parcel, int1);
-                    continue;
-                }
-                case '\u0006': {
-                    k2 = SafeParcelReader.k(parcel, int1);
-                    continue;
-                }
-                case '\u0005': {
-                    m = SafeParcelReader.k(parcel, int1);
-                    continue;
-                }
-                case '\u0004': {
-                    l = SafeParcelReader.k(parcel, int1);
-                    continue;
-                }
-                case '\u0003': {
-                    j = SafeParcelReader.k(parcel, int1);
-                    continue;
-                }
-                case '\u0002': {
-                    i = SafeParcelReader.k(parcel, int1);
-                    continue;
-                }
-                case '\u0001': {
-                    k = SafeParcelReader.k(parcel, int1);
-                    continue;
-                }
-            }
-        }
-        SafeParcelReader.j(parcel, w);
-        return new n6g(k, i, j, l, m, k2);
+    public final Object F0;
+    public pw1 G0;
+    public final b H0;
+    
+    public ocy(final b h0, final pw1 g0) {
+        this.H0 = h0;
+        this.F0 = new Object();
+        this.G0 = g0;
     }
     
-    public final Object[] newArray(final int n) {
-        return new n6g[n];
+    public final void a(final vx1 vx1) {
+        synchronized (this.F0) {
+            final pw1 g0 = this.G0;
+            if (g0 != null) {
+                g0.a(vx1);
+            }
+        }
+    }
+    
+    public final void onServiceConnected(final ComponentName componentName, final IBinder binder) {
+        p9y.e("BillingClient", "Billing service connected.");
+        final b h0 = this.H0;
+        final int a = foy.a;
+        Object f;
+        if (binder == null) {
+            f = null;
+        }
+        else {
+            final IInterface queryLocalInterface = binder.queryLocalInterface("com.android.vending.billing.IInAppBillingService");
+            if (queryLocalInterface instanceof fty) {
+                f = queryLocalInterface;
+            }
+            else {
+                f = new tiy(binder);
+            }
+        }
+        h0.f = (fty)f;
+        final b h2 = this.H0;
+        if (h2.e((Callable)new gcy((Object)this, 0), 30000L, (Runnable)new wby(this), h2.b()) == null) {
+            this.a(this.H0.d());
+        }
+    }
+    
+    public final void onServiceDisconnected(final ComponentName componentName) {
+        p9y.f("BillingClient", "Billing service disconnected.");
+        this.H0.f = null;
+        this.H0.a = 0;
+        synchronized (this.F0) {
+            final pw1 g0 = this.G0;
+            if (g0 != null) {
+                g0.b();
+            }
+        }
     }
 }

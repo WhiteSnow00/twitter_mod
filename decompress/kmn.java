@@ -1,10 +1,14 @@
+import android.content.Context;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public interface kmn
 {
-    eaq<p01> a(final String p0);
+    void a(final Context p0, final long p1, final ptb<vzv> p2);
     
-    eaq<w47> b(final String p0);
+    void b(final Context p0, final long p1, final boolean p2, final ptb<vzv> p3);
+    
+    void c(final Context p0, final long p1, final ptb<vzv> p2);
 }

@@ -305,8 +305,8 @@
         <item quantity="other">%d muuta</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Superseuraaja</item>
-        <item quantity="other">Superseuraajat</item>
+        <item quantity="one">Tilaaja</item>
+        <item quantity="other">Tilaajat</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s tykkäys</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Vastaus käyttäjälle ﻿%1$s ja %2$d muulle﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Vastataan käyttäjälle ﻿%1$s ja %2$d muulle﻿. Vastauksesi näkyy myös muille superseuraajille.</item>
+        <item quantity="other">Vastataan käyttäjälle ﻿%1$s ja %2$d muulle﻿. Vastauksesi näkyy myös muille Tilaajille.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Vastataan käyttäjälle ﻿%1$s ja %2$d muulle﻿ Huoneessa ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Vastauksena käyttäjille ﻿%1$s, %2$s ja %3$d muulle﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Vastataan käyttäjälle ﻿%1$s %2$s ja %3$d muulle﻿. Vastauksesi näkyy myös muille superseuraajille.</item>
+        <item quantity="other">Vastataan käyttäjälle ﻿%1$s %2$s ja %3$d muulle﻿. Vastauksesi näkyy myös muille tilaajille.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Vastataan käyttäjille ﻿%1$s %2$s ja %3$d muulle﻿ Huoneessa ﻿%4$s﻿</item>

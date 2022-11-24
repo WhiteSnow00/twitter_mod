@@ -1,49 +1,43 @@
-import android.os.Bundle;
-import android.app.Activity;
-import android.app.Application$ActivityLifecycleCallbacks;
+import android.graphics.Rect;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gyy implements Application$ActivityLifecycleCallbacks
+public final class gyy implements f000, c0z
 {
-    public final kyy D0;
+    public static final gyy F0;
+    public static final gyy G0;
     
-    public gyy(final kyy d0) {
-        this.D0 = d0;
+    static {
+        F0 = new gyy();
+        G0 = new gyy();
     }
     
-    public final void onActivityCreated(final Activity activity, final Bundle bundle) {
-        this.D0.b((xvy)new iwy(this, bundle, activity));
+    public Object a() {
+        final n0z c = s0z.c;
+        return stz.G0.b().d();
     }
     
-    public final void onActivityDestroyed(final Activity activity) {
-        this.D0.b((xvy)new fty(this, activity));
-    }
-    
-    public final void onActivityPaused(final Activity activity) {
-        this.D0.b((xvy)new uwy(this, activity));
-    }
-    
-    public final void onActivityResumed(final Activity activity) {
-        this.D0.b((xvy)new hry(this, activity));
-    }
-    
-    public final void onActivitySaveInstanceState(final Activity activity, final Bundle bundle) {
-        final eny eny = new eny();
-        this.D0.b((xvy)new zxy(this, activity, eny));
-        final Bundle x = eny.x(50L);
-        if (x != null) {
-            bundle.putAll(x);
+    public Object c(final Object o) {
+        final cyz cyz = (cyz)o;
+        final List y0 = iuk.Y0(cyz.G0);
+        String i0;
+        if (egz.A(cyz.I0)) {
+            i0 = "";
         }
-    }
-    
-    public final void onActivityStarted(final Activity activity) {
-        this.D0.b((xvy)new mwy(this, activity));
-    }
-    
-    public final void onActivityStopped(final Activity activity) {
-        this.D0.b((xvy)new zry(this, activity));
+        else {
+            i0 = cyz.I0;
+        }
+        final Rect u0 = iuk.U0(y0);
+        String k0;
+        if (egz.A(cyz.K0)) {
+            k0 = "und";
+        }
+        else {
+            k0 = cyz.K0;
+        }
+        return new cfs$a(i0, u0, y0, k0);
     }
 }

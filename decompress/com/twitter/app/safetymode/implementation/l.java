@@ -4,36 +4,36 @@
 
 package com.twitter.app.safetymode.implementation;
 
-@sa8(c = "com.twitter.app.safetymode.implementation.SafetyModePreviewViewModel$intents$2$6", f = "SafetyModePreviewViewModel.kt", l = {}, m = "invokeSuspend")
-public final class l extends p0s implements ftb<rqo.a, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.app.safetymode.implementation.SafetyModePreviewViewModel$intents$2$6", f = "SafetyModePreviewViewModel.kt", l = {}, m = "invokeSuspend")
+public final class l extends l1s implements hub<kro$a, mp6<? super vzv>, Object>
 {
-    public final SafetyModePreviewViewModel D0;
-    public final uqo E0;
+    public final SafetyModePreviewViewModel F0;
+    public final nro G0;
     
-    public l(final SafetyModePreviewViewModel d0, final uqo e0, final go6<? super l> go6) {
-        this.D0 = d0;
-        this.E0 = e0;
-        super(2, (go6)go6);
+    public l(final SafetyModePreviewViewModel f0, final nro g0, final mp6<? super l> mp6) {
+        this.F0 = f0;
+        this.G0 = g0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new l(this.D0, this.E0, (go6<? super l>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new l(this.F0, this.G0, (mp6<? super l>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final l l = (l)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final l l = (l)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         l.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final SafetyModePreviewViewModel d0 = this.D0;
-        final l$a l$a = new l$a(d0, this.E0);
-        final coe<Object>[] q0 = SafetyModePreviewViewModel.Q0;
-        d0.T((qsb)l$a);
-        this.D0.V((Object)oqo$b.a);
-        return fzv.a;
+        jb2.M0(o);
+        final SafetyModePreviewViewModel f0 = this.F0;
+        final l$a l$a = new l$a(f0, this.G0);
+        final ape<Object>[] s0 = SafetyModePreviewViewModel.S0;
+        f0.T((stb)l$a);
+        this.F0.V((Object)hro$b.a);
+        return vzv.a;
     }
 }

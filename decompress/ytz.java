@@ -2,20 +2,29 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ytz implements xtz
+public final class ytz implements dgz
 {
-    public static final tcz a;
+    public static final ytz G0;
+    public final dgz F0;
     
     static {
-        final edz edz = new edz(icz.a(), false, true);
-        edz.c("measurement.sdk.collection.enable_extend_user_property_size", true);
-        edz.c("measurement.sdk.collection.last_deep_link_referrer2", true);
-        a = (tcz)edz.c("measurement.sdk.collection.last_deep_link_referrer_campaign2", false);
-        edz.a("measurement.id.sdk.collection.last_deep_link_referrer2", 0L);
+        G0 = new ytz();
     }
     
-    @Override
-    public final boolean a() {
-        return (boolean)((mdz)ytz.a).b();
+    public ytz() {
+        final igz igz = new igz((Object)new auz());
+        this.F0 = yru.M((dgz)igz);
+    }
+    
+    public static void c() {
+        ytz.G0.b().a();
+    }
+    
+    public final /* bridge */ Object a() {
+        return this.b();
+    }
+    
+    public final ztz b() {
+        return (ztz)this.F0.a();
     }
 }

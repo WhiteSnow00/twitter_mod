@@ -4,6 +4,6 @@
 
 package com.twitter.android.settings;
 
-public class TrendsPrefActivity extends vmd
+public class TrendsPrefActivity extends vnd
 {
 }

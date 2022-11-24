@@ -8,33 +8,33 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelinePrompt extends aih<t0t>
+public class JsonTimelinePrompt extends tih<c2t>
 {
-    @JsonField(name = { "content" }, typeConverter = c1t.class)
-    public u0t a;
+    @JsonField(name = { "content" }, typeConverter = l2t.class)
+    public d2t a;
     @JsonField(name = { "clientEventInfo" })
-    public qzo b;
+    public b1p b;
     
     @Override
     public final Object s() {
-        final u0t a = this.a;
-        t0t t0t;
+        final d2t a = this.a;
+        c2t c2t;
         if (a != null) {
-            t0t = new t0t(a, this.b);
+            c2t = new c2t(a, this.b);
         }
         else {
-            t0t = null;
+            c2t = null;
         }
-        return t0t;
+        return c2t;
     }
     
     @JsonObject
-    public static class JsonTimelinePromptContent extends aih<u0t>
+    public static class JsonTimelinePromptContent extends tih<d2t>
     {
         @JsonField(name = { "relevancePrompt" })
-        public s1t a;
+        public c3t a;
         @JsonField(name = { "onboardingLikesStartPrompt" })
-        public mkj b;
+        public glj b;
         
         @Override
         public final Object s() {

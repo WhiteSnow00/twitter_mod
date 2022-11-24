@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonNotificationUserContainer extends fih<a>
+public class JsonNotificationUserContainer extends tih<a>
 {
     @JsonField
     public long a;
@@ -20,14 +20,15 @@ public class JsonNotificationUserContainer extends fih<a>
         this.b = "";
     }
     
+    @Override
     public final /* bridge */ Object s() {
         return this.t();
     }
     
     public final a t() {
-        final a$a a$a = new a$a();
-        a$a.a = UserIdentifier.fromId(this.a);
-        a$a.b = ozl.Companion.a(this.b);
-        return (a)((n4j)a$a).e();
+        final a.a a = new a.a();
+        a.a = UserIdentifier.fromId(this.a);
+        a.b = yzl.Companion.a(this.b);
+        return (a)a.e();
     }
 }

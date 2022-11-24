@@ -1,85 +1,61 @@
-import java.util.Collection;
-import java.util.Arrays;
-import java.util.Set;
-import android.os.Build$VERSION;
-import java.util.HashSet;
-import android.os.Build;
+import com.twitter.nft.subsystem.model.VerifyWalletResponse;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public enum jmx implements lf6
+public final class jmx extends VerifyWalletResponse
 {
-    F0("FORCE_DARK", "FORCE_DARK"), 
-    G0("FORCE_DARK_STRATEGY", "FORCE_DARK_BEHAVIOR");
+    public final String a;
+    public final String b;
+    public final int c;
+    public final b5i d;
     
-    public final String C0;
-    public final String D0;
-    public final int E0;
-    
-    public jmx(final String s2, final String s3) {
-        this(s2, s3, -1);
+    public jmx(final String a, final String b, final int c, final b5i d) {
+        e0e.f((Object)a, "id");
+        e0e.f((Object)b, "restId");
+        super((wg8)null);
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
     }
     
-    public jmx(final String c0, final String d0, final int e0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
-    }
-    
-    public final String b() {
-        return this.C0;
-    }
-    
-    public final boolean e() {
-        final HashSet a = jmx.a.a;
-        final String d0 = this.D0;
-        final boolean contains = a.contains(d0);
-        final boolean b = false;
-        if (!contains) {
-            final String type = Build.TYPE;
-            final boolean b2 = "eng".equals(type) || "userdebug".equals(type);
-            boolean b3 = b;
-            if (!b2) {
-                return b3;
-            }
-            final StringBuilder sb = new StringBuilder();
-            sb.append(d0);
-            sb.append(":dev");
-            b3 = b;
-            if (!a.contains(sb.toString())) {
-                return b3;
-            }
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
         }
-        return true;
+        if (!(o instanceof jmx)) {
+            return false;
+        }
+        final jmx jmx = (jmx)o;
+        return e0e.a((Object)this.a, (Object)jmx.a) && e0e.a((Object)this.b, (Object)jmx.b) && this.c == jmx.c && e0e.a((Object)this.d, (Object)jmx.d);
     }
     
-    public final boolean isSupported() {
-        final int e0 = this.E0;
-        boolean b = false;
-        boolean b2 = false;
-        Label_0029: {
-            if (e0 != -1) {
-                if (Build$VERSION.SDK_INT >= e0) {
-                    b2 = true;
-                    break Label_0029;
-                }
-            }
-            b2 = false;
+    public final int hashCode() {
+        final int d = brg.d(this.b, this.a.hashCode() * 31, 31);
+        final int c = this.c;
+        final b5i d2 = this.d;
+        int hashCode;
+        if (d2 == null) {
+            hashCode = 0;
         }
-        if (b2 || this.e()) {
-            b = true;
+        else {
+            hashCode = d2.hashCode();
         }
-        return b;
+        return (d + c) * 31 + hashCode;
     }
     
-    public static final class a
-    {
-        public static final Set<String> a;
-        
-        static {
-            jmx.a.a = new HashSet((Collection<? extends E>)Arrays.asList(kmx$b.a.b()));
-        }
+    public final String toString() {
+        final String a = this.a;
+        final String b = this.b;
+        final int c = this.c;
+        final b5i d = this.d;
+        final StringBuilder k = l58.k("Web3NFTCollection(id=", a, ", restId=", b, ", ownersCount=");
+        k.append(c);
+        k.append(", nftOwnersSlice=");
+        k.append(d);
+        k.append(")");
+        return k.toString();
     }
 }

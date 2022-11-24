@@ -305,8 +305,8 @@
         <item quantity="other">%d weitere</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super-Follower</item>
-        <item quantity="other">Super-Follower</item>
+        <item quantity="one">Abonnent*in</item>
+        <item quantity="other">Abonnent*innen</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s „Gefällt mir“-Angabe</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Antwort an ﻿%1$s und %2$d weitere﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Antwort an ﻿%1$s und %2$d weitere﻿. Deine Antwort wird auch für andere Super-Follower sichtbar sein.</item>
+        <item quantity="other">Antwort an ﻿%1$s und %2$d weitere﻿. Deine Antwort ist auch für andere Abonnent*innen sichtbar.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Antwort an ﻿%1$s und %2$d weitere﻿ in ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Antwort an ﻿%1$s, %2$s und %3$d weitere﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Antwort an ﻿%1$s %2$s und %3$d weitere﻿. Deine Antwort wird auch für andere Super-Follower sichtbar sein.</item>
+        <item quantity="other">Antwort an ﻿%1$s %2$s und %3$d weitere﻿. Deine Antwort ist auch für andere Abonnent*innen sichtbar.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Antwort an ﻿%1$s %2$s und %3$d weitere﻿ in ﻿%4$s﻿</item>

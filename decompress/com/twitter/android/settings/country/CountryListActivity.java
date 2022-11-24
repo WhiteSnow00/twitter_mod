@@ -4,6 +4,6 @@
 
 package com.twitter.android.settings.country;
 
-public class CountryListActivity extends vmd
+public class CountryListActivity extends vnd
 {
 }

@@ -2,21 +2,18 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ba1 extends i07$e
+public final class ba1 extends o17$a
 {
-    public final String a;
+    public final int a;
     public final String b;
-    public final long c;
-    public final Long d;
-    public final boolean e;
-    public final i07$e$a f;
-    public final i07$e$f g;
-    public final i07$e$e h;
-    public final i07$e$c i;
-    public final fdd<i07$e$d> j;
-    public final int k;
+    public final int c;
+    public final int d;
+    public final long e;
+    public final long f;
+    public final long g;
+    public final String h;
     
-    public ba1(final String a, final String b, final long c, final Long d, final boolean e, final i07$e$a f, final i07$e$f g, final i07$e$e h, final i07$e$c i, final fdd j, final int k, final ba1$a ba1$a) {
+    public ba1(final int a, final String b, final int c, final int d, final long e, final long f, final long g, final String h) {
         this.a = a;
         this.b = b;
         this.c = c;
@@ -25,29 +22,26 @@ public final class ba1 extends i07$e
         this.f = f;
         this.g = g;
         this.h = h;
-        this.i = i;
-        this.j = j;
-        this.k = k;
     }
     
-    public final i07$e$a a() {
-        return this.f;
-    }
-    
-    public final i07$e$c b() {
-        return this.i;
-    }
-    
-    public final Long c() {
+    public final int a() {
         return this.d;
     }
     
-    public final fdd<i07$e$d> d() {
-        return this.j;
+    public final int b() {
+        return this.a;
     }
     
-    public final String e() {
-        return this.a;
+    public final String c() {
+        return this.b;
+    }
+    
+    public final long d() {
+        return this.e;
+    }
+    
+    public final int e() {
+        return this.c;
     }
     
     public final boolean equals(final Object o) {
@@ -55,58 +49,17 @@ public final class ba1 extends i07$e
         if (o == this) {
             return true;
         }
-        if (o instanceof i07$e) {
-            final i07$e i07$e = (i07$e)o;
-            if (this.a.equals(i07$e.e()) && this.b.equals(i07$e.g()) && this.c == i07$e.i()) {
-                final Long d = this.d;
-                if (d == null) {
-                    if (i07$e.c() != null) {
-                        return false;
-                    }
-                }
-                else if (!d.equals(i07$e.c())) {
-                    return false;
-                }
-                if (this.e == i07$e.k() && this.f.equals(i07$e.a())) {
-                    final i07$e$f g = this.g;
-                    if (g == null) {
-                        if (i07$e.j() != null) {
-                            return false;
-                        }
-                    }
-                    else if (!g.equals(i07$e.j())) {
-                        return false;
-                    }
-                    final i07$e$e h = this.h;
-                    if (h == null) {
-                        if (i07$e.h() != null) {
-                            return false;
-                        }
-                    }
-                    else if (!h.equals(i07$e.h())) {
-                        return false;
-                    }
-                    final i07$e$c i = this.i;
-                    if (i == null) {
-                        if (i07$e.b() != null) {
-                            return false;
-                        }
-                    }
-                    else if (!i.equals(i07$e.b())) {
-                        return false;
-                    }
-                    final fdd<i07$e$d> j = this.j;
-                    if (j == null) {
-                        if (i07$e.d() != null) {
-                            return false;
-                        }
-                    }
-                    else if (!j.equals(i07$e.d())) {
-                        return false;
-                    }
-                    if (this.k == i07$e.f()) {
+        if (o instanceof o17$a) {
+            final o17$a o17$a = (o17$a)o;
+            if (this.a == o17$a.b() && this.b.equals(o17$a.c()) && this.c == o17$a.e() && this.d == o17$a.a() && this.e == o17$a.d() && this.f == o17$a.f() && this.g == o17$a.g()) {
+                final String h = this.h;
+                if (h == null) {
+                    if (o17$a.h() == null) {
                         return b;
                     }
+                }
+                else if (h.equals(o17$a.h())) {
+                    return b;
                 }
             }
             b = false;
@@ -115,180 +68,106 @@ public final class ba1 extends i07$e
         return false;
     }
     
-    public final int f() {
-        return this.k;
+    public final long f() {
+        return this.f;
     }
     
-    public final String g() {
-        return this.b;
+    public final long g() {
+        return this.g;
     }
     
-    public final i07$e$e h() {
+    public final String h() {
         return this.h;
     }
     
     public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final int hashCode2 = this.b.hashCode();
-        final long c = this.c;
-        final int n = (int)(c ^ c >>> 32);
-        final Long d = this.d;
-        int hashCode3 = 0;
-        int hashCode4;
-        if (d == null) {
-            hashCode4 = 0;
-        }
-        else {
-            hashCode4 = d.hashCode();
-        }
-        int n2;
-        if (this.e) {
-            n2 = 1231;
-        }
-        else {
-            n2 = 1237;
-        }
-        final int hashCode5 = this.f.hashCode();
-        final i07$e$f g = this.g;
-        int hashCode6;
-        if (g == null) {
-            hashCode6 = 0;
-        }
-        else {
-            hashCode6 = g.hashCode();
-        }
-        final i07$e$e h = this.h;
-        int hashCode7;
+        final int a = this.a;
+        final int hashCode = this.b.hashCode();
+        final int c = this.c;
+        final int d = this.d;
+        final long e = this.e;
+        final int n = (int)(e ^ e >>> 32);
+        final long f = this.f;
+        final int n2 = (int)(f ^ f >>> 32);
+        final long g = this.g;
+        final int n3 = (int)(g ^ g >>> 32);
+        final String h = this.h;
+        int hashCode2;
         if (h == null) {
-            hashCode7 = 0;
+            hashCode2 = 0;
         }
         else {
-            hashCode7 = h.hashCode();
+            hashCode2 = h.hashCode();
         }
-        final i07$e$c i = this.i;
-        int hashCode8;
-        if (i == null) {
-            hashCode8 = 0;
-        }
-        else {
-            hashCode8 = i.hashCode();
-        }
-        final fdd<i07$e$d> j = this.j;
-        if (j != null) {
-            hashCode3 = j.hashCode();
-        }
-        return ((((((((((hashCode ^ 0xF4243) * 1000003 ^ hashCode2) * 1000003 ^ n) * 1000003 ^ hashCode4) * 1000003 ^ n2) * 1000003 ^ hashCode5) * 1000003 ^ hashCode6) * 1000003 ^ hashCode7) * 1000003 ^ hashCode8) * 1000003 ^ hashCode3) * 1000003 ^ this.k;
-    }
-    
-    public final long i() {
-        return this.c;
-    }
-    
-    public final i07$e$f j() {
-        return this.g;
-    }
-    
-    public final boolean k() {
-        return this.e;
-    }
-    
-    public final i07$e$b l() {
-        return new b(this);
+        return (((((((a ^ 0xF4243) * 1000003 ^ hashCode) * 1000003 ^ c) * 1000003 ^ d) * 1000003 ^ n) * 1000003 ^ n2) * 1000003 ^ n3) * 1000003 ^ hashCode2;
     }
     
     public final String toString() {
-        final StringBuilder j = fu8.j("Session{generator=");
-        j.append(this.a);
-        j.append(", identifier=");
-        j.append(this.b);
-        j.append(", startedAt=");
-        j.append(this.c);
-        j.append(", endedAt=");
-        j.append(this.d);
-        j.append(", crashed=");
-        j.append(this.e);
-        j.append(", app=");
-        j.append(this.f);
-        j.append(", user=");
-        j.append(this.g);
-        j.append(", os=");
-        j.append(this.h);
-        j.append(", device=");
-        j.append(this.i);
-        j.append(", events=");
-        j.append(this.j);
-        j.append(", generatorType=");
-        return wc0.A(j, this.k, "}");
+        final StringBuilder f = ehk.f("ApplicationExitInfo{pid=");
+        f.append(this.a);
+        f.append(", processName=");
+        f.append(this.b);
+        f.append(", reasonCode=");
+        f.append(this.c);
+        f.append(", importance=");
+        f.append(this.d);
+        f.append(", pss=");
+        f.append(this.e);
+        f.append(", rss=");
+        f.append(this.f);
+        f.append(", timestamp=");
+        f.append(this.g);
+        f.append(", traceFile=");
+        return m51.y(f, this.h, "}");
     }
     
-    public static final class b extends i07$e$b
+    public static final class a extends o17$a$a
     {
-        public String a;
+        public Integer a;
         public String b;
-        public Long c;
-        public Long d;
-        public Boolean e;
-        public i07$e$a f;
-        public i07$e$f g;
-        public i07$e$e h;
-        public i07$e$c i;
-        public fdd<i07$e$d> j;
-        public Integer k;
+        public Integer c;
+        public Integer d;
+        public Long e;
+        public Long f;
+        public Long g;
+        public String h;
         
-        public b() {
-        }
-        
-        public b(final i07$e i07$e) {
-            this.a = i07$e.e();
-            this.b = i07$e.g();
-            this.c = i07$e.i();
-            this.d = i07$e.c();
-            this.e = i07$e.k();
-            this.f = i07$e.a();
-            this.g = i07$e.j();
-            this.h = i07$e.h();
-            this.i = i07$e.b();
-            this.j = i07$e.d();
-            this.k = i07$e.f();
-        }
-        
-        public final i07$e a() {
+        public final o17$a a() {
             String s;
             if (this.a == null) {
-                s = " generator";
+                s = " pid";
             }
             else {
                 s = "";
             }
-            String h = s;
+            String l = s;
             if (this.b == null) {
-                h = hmg.h(s, " identifier");
+                l = mqb.l(s, " processName");
             }
-            String h2 = h;
+            String i = l;
             if (this.c == null) {
-                h2 = hmg.h(h, " startedAt");
+                i = mqb.l(l, " reasonCode");
             }
-            String h3 = h2;
+            String j = i;
+            if (this.d == null) {
+                j = mqb.l(i, " importance");
+            }
+            String k = j;
             if (this.e == null) {
-                h3 = hmg.h(h2, " crashed");
+                k = mqb.l(j, " pss");
             }
-            String h4 = h3;
+            String m = k;
             if (this.f == null) {
-                h4 = hmg.h(h3, " app");
+                m = mqb.l(k, " rss");
             }
-            String h5 = h4;
-            if (this.k == null) {
-                h5 = hmg.h(h4, " generatorType");
+            String l2 = m;
+            if (this.g == null) {
+                l2 = mqb.l(m, " timestamp");
             }
-            if (h5.isEmpty()) {
-                return new ba1(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i, this.j, this.k, null);
+            if (l2.isEmpty()) {
+                return new ba1(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h);
             }
-            throw new IllegalStateException(hmg.h("Missing required properties:", h5));
-        }
-        
-        public final i07$e$b b(final boolean b) {
-            this.e = b;
-            return this;
+            throw new IllegalStateException(mqb.l("Missing required properties:", l2));
         }
     }
 }

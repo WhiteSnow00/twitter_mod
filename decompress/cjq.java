@@ -1,61 +1,82 @@
-import android.widget.LinearLayout;
-import com.twitter.ui.components.text.legacy.TypefacesTextView;
+import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cjq
+public class cjq<T> implements ear, bjq<T>
 {
-    public final TypefacesTextView a;
-    public final LinearLayout b;
+    public final djq<T> F0;
+    public cjq.cjq$a<T> G0;
     
-    public cjq(final TypefacesTextView a) {
-        this.a = a;
-        this.b = null;
+    public cjq(final T t, final djq<T> f0) {
+        e0e.f((Object)f0, "policy");
+        this.F0 = f0;
+        this.G0 = (cjq.cjq$a<T>)new cjq.cjq$a((Object)t);
     }
     
-    public cjq(final TypefacesTextView a, final LinearLayout b) {
-        this.a = a;
-        this.b = b;
+    public final djq<T> a() {
+        return this.F0;
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof cjq)) {
-            return false;
-        }
-        final cjq cjq = (cjq)o;
-        return zzd.a((Object)this.a, (Object)cjq.a) && zzd.a((Object)this.b, (Object)cjq.b);
+    public final stb<T, vzv> d() {
+        return (stb<T, vzv>)new stb<T, vzv>(this) {
+            public final cjq<T> F0;
+            
+            public final Object invoke(final Object value) {
+                this.F0.setValue((T)value);
+                return vzv.a;
+            }
+        };
     }
     
-    @Override
-    public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final LinearLayout b = this.b;
-        int hashCode2;
-        if (b == null) {
-            hashCode2 = 0;
+    public final void g(final gar gar) {
+        this.G0 = (cjq.cjq$a<T>)gar;
+    }
+    
+    public final T getValue() {
+        return (T)((cjq.cjq$a)uiq.r((gar)this.G0, (ear)this)).c;
+    }
+    
+    public final T h() {
+        return this.getValue();
+    }
+    
+    public final gar k() {
+        return (gar)this.G0;
+    }
+    
+    public final gar n(final gar gar, gar gar2, final gar gar3) {
+        final cjq.cjq$a cjq$a = (cjq.cjq$a)gar;
+        if (!this.F0.b(((cjq.cjq$a)gar2).c, ((cjq.cjq$a)gar3).c)) {
+            this.F0.a();
+            gar2 = null;
         }
-        else {
-            hashCode2 = b.hashCode();
+        return gar2;
+    }
+    
+    public final void setValue(final T c) {
+        final cjq.cjq$a cjq$a = (cjq.cjq$a)uiq.h((gar)this.G0);
+        if (!this.F0.b(cjq$a.c, (Object)c)) {
+            final cjq.cjq$a<T> g0 = this.G0;
+            final uiq$a a = uiq.a;
+            synchronized (uiq.c) {
+                Objects.requireNonNull(piq.Companion);
+                final piq j = uiq.j();
+                ((cjq.cjq$a)uiq.o((gar)g0, (ear)this, j, (gar)cjq$a)).c = c;
+                monitorexit(uiq.c);
+                uiq.n(j, (ear)this);
+            }
         }
-        return hashCode * 31 + hashCode2;
     }
     
     @Override
     public final String toString() {
-        final TypefacesTextView a = this.a;
-        final LinearLayout b = this.b;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("SocialProofViews(textView=");
-        sb.append(a);
-        sb.append(", facePile=");
-        sb.append(b);
-        sb.append(")");
-        return sb.toString();
+        final cjq.cjq$a cjq$a = (cjq.cjq$a)uiq.h((gar)this.G0);
+        final StringBuilder f = ehk.f("MutableState(value=");
+        f.append(cjq$a.c);
+        f.append(")@");
+        f.append(this.hashCode());
+        return f.toString();
     }
 }

@@ -1,60 +1,117 @@
+import android.os.BaseBundle;
+import android.os.Bundle;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.os.Build$VERSION;
+import android.content.pm.PackageManager$NameNotFoundException;
+import android.util.Log;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.app.Activity;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class vai implements tws
+public final class vai
 {
-    public final boolean a;
-    public final boolean b;
-    
-    public vai(final boolean a, final boolean b) {
-        this.a = a;
-        this.b = b;
+    public static Intent a(final Activity activity) {
+        final Intent a = vai.a.a(activity);
+        if (a != null) {
+            return a;
+        }
+        try {
+            final String c = c((Context)activity, activity.getComponentName());
+            if (c == null) {
+                return null;
+            }
+            final ComponentName component = new ComponentName((Context)activity, c);
+            try {
+                Intent intent;
+                if (c((Context)activity, component) == null) {
+                    intent = Intent.makeMainActivity(component);
+                }
+                else {
+                    intent = new Intent().setComponent(component);
+                }
+                return intent;
+            }
+            catch (final PackageManager$NameNotFoundException ex) {
+                final StringBuilder sb = new StringBuilder();
+                sb.append("getParentActivityIntent: bad parentActivityName '");
+                sb.append(c);
+                sb.append("' in manifest");
+                Log.e("NavUtils", sb.toString());
+                return null;
+            }
+        }
+        catch (final PackageManager$NameNotFoundException ex2) {
+            throw new IllegalArgumentException((Throwable)ex2);
+        }
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
+    public static Intent b(final Context context, ComponentName component) throws PackageManager$NameNotFoundException {
+        final String c = c(context, component);
+        if (c == null) {
+            return null;
         }
-        if (!(o instanceof vai)) {
-            return false;
+        component = new ComponentName(component.getPackageName(), c);
+        Intent intent;
+        if (c(context, component) == null) {
+            intent = Intent.makeMainActivity(component);
         }
-        final vai vai = (vai)o;
-        return this.a == vai.a && this.b == vai.b;
+        else {
+            intent = new Intent().setComponent(component);
+        }
+        return intent;
     }
     
-    @Override
-    public final int hashCode() {
-        final int a = this.a ? 1 : 0;
-        int n = 1;
-        int n2 = a;
-        if (a != 0) {
-            n2 = 1;
+    public static String c(final Context context, final ComponentName componentName) throws PackageManager$NameNotFoundException {
+        final PackageManager packageManager = context.getPackageManager();
+        final int sdk_INT = Build$VERSION.SDK_INT;
+        int n = 640;
+        if (sdk_INT >= 29) {
+            n = 269222528;
         }
-        final int b = this.b ? 1 : 0;
-        if (b == 0) {
-            n = b;
+        else if (sdk_INT >= 24) {
+            n = 787072;
         }
-        return n2 * 31 + n;
+        final ActivityInfo activityInfo = packageManager.getActivityInfo(componentName, n);
+        final String parentActivityName = activityInfo.parentActivityName;
+        if (parentActivityName != null) {
+            return parentActivityName;
+        }
+        final Bundle metaData = activityInfo.metaData;
+        if (metaData == null) {
+            return null;
+        }
+        final String string = ((BaseBundle)metaData).getString("android.support.PARENT_ACTIVITY");
+        if (string == null) {
+            return null;
+        }
+        String string2 = string;
+        if (string.charAt(0) == '.') {
+            final StringBuilder sb = new StringBuilder();
+            sb.append(context.getPackageName());
+            sb.append(string);
+            string2 = sb.toString();
+        }
+        return string2;
     }
     
-    @Override
-    public final String toString() {
-        return da8.k("NavigationInstruction(startAtTop=", this.a, ", getNewer=", this.b, ")");
-    }
-    
-    public static final class a implements vsd
+    public static final class a
     {
-        public final boolean a;
-        
-        public a(final boolean a) {
-            this.a = a;
+        public static Intent a(final Activity activity) {
+            return activity.getParentActivityIntent();
         }
         
-        @Override
-        public final boolean a() {
-            return false;
+        public static boolean b(final Activity activity, final Intent intent) {
+            return activity.navigateUpTo(intent);
+        }
+        
+        public static boolean c(final Activity activity, final Intent intent) {
+            return activity.shouldUpRecreateTask(intent);
         }
     }
 }

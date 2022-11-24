@@ -1,35 +1,37 @@
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.Iterator;
+import java.util.ListIterator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gqy implements p4j<w2z>
+public abstract class gqy<F, T> extends cqy implements ListIterator<T>
 {
-    public static final gqy a;
-    
-    static {
-        final zzz d0 = zzz.D0;
-        a = new gqy();
-        final dyz dyz = new dyz(1, d0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(dyz.annotationType(), dyz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final dyz dyz2 = new dyz(2, d0);
-        final HashMap hashMap2 = new HashMap();
-        hashMap2.put(dyz2.annotationType(), dyz2);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final dyz dyz3 = new dyz(3, d0);
-        final HashMap hashMap3 = new HashMap();
-        jg9.w(dyz3, hashMap3, dyz3, hashMap3);
+    public gqy(final ListIterator<? extends F> listIterator) {
+        super((Iterator)listIterator, 0);
     }
     
-    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final w2z w2z = (w2z)o;
-        final q4j q4j = (q4j)o2;
-        throw null;
+    public final void add(final T t) {
+        throw new UnsupportedOperationException();
+    }
+    
+    public final boolean hasPrevious() {
+        return ((ListIterator)super.G0).hasPrevious();
+    }
+    
+    public final int nextIndex() {
+        return ((ListIterator)super.G0).nextIndex();
+    }
+    
+    public final T previous() {
+        return (T)this.b(((ListIterator)super.G0).previous());
+    }
+    
+    public final int previousIndex() {
+        return ((ListIterator)super.G0).previousIndex();
+    }
+    
+    public final void set(final T t) {
+        throw new UnsupportedOperationException();
     }
 }

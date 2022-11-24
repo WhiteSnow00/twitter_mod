@@ -1,19 +1,25 @@
-import com.google.gson.JsonIOException;
+import androidx.work.c$a$b;
+import androidx.work.c$a$a;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class sj6 implements i4j<Object>
+public final class sj6
 {
-    public final /* synthetic */ String C0;
+    public static final String a;
     
-    public sj6(final String c0) {
-        this.C0 = c0;
+    static {
+        final String g = jag.g("ConstraintTrkngWrkr");
+        e0e.e((Object)g, "tagWithPrefix(\"ConstraintTrkngWrkr\")");
+        a = g;
     }
     
-    @Override
-    public final Object O() {
-        throw new JsonIOException(this.C0);
+    public static final boolean a(final oop oop) {
+        return oop.o(new c$a$a());
+    }
+    
+    public static final boolean b(final oop oop) {
+        return oop.o(new c$a$b());
     }
 }

@@ -1,109 +1,186 @@
-import android.os.BaseBundle;
-import android.os.Bundle;
-import java.lang.annotation.Annotation;
-import java.lang.reflect.Constructor;
-import android.os.Parcelable;
+import androidx.appcompat.widget.AppCompatImageButton;
+import android.widget.EditText;
+import android.graphics.drawable.Drawable;
+import java.util.WeakHashMap;
+import android.content.Context;
+import android.text.TextUtils;
+import android.widget.TextView;
+import android.view.View;
+import android.widget.LinearLayout$LayoutParams;
+import android.view.View$OnClickListener;
+import android.view.ViewGroup$MarginLayoutParams;
+import android.util.AttributeSet;
+import android.view.ViewGroup;
+import android.view.LayoutInflater;
+import android.view.ViewGroup$LayoutParams;
+import android.widget.FrameLayout$LayoutParams;
+import android.view.View$OnLongClickListener;
+import android.graphics.PorterDuff$Mode;
+import android.content.res.ColorStateList;
+import com.google.android.material.internal.CheckableImageButton;
+import androidx.appcompat.widget.AppCompatTextView;
+import com.google.android.material.textfield.TextInputLayout;
+import android.annotation.SuppressLint;
+import android.widget.LinearLayout;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class n8r<T> implements Parcelable
+@SuppressLint({ "ViewConstructor" })
+public final class n8r extends LinearLayout
 {
-    private static final n8r EMPTY;
-    private String mKey;
+    public final TextInputLayout F0;
+    public final AppCompatTextView G0;
+    public CharSequence H0;
+    public final CheckableImageButton I0;
+    public ColorStateList J0;
+    public PorterDuff$Mode K0;
+    public View$OnLongClickListener L0;
+    public boolean M0;
     
-    static {
-        EMPTY = (n8r)new n8r.n8r$a();
-    }
-    
-    public static String createKey(final Object o) {
-        return o.getClass().toString();
-    }
-    
-    public static <T> n8r<T> empty() {
-        final n8r empty = n8r.EMPTY;
-        final int a = w4j.a;
-        return empty;
-    }
-    
-    private static <T> Class<? super T> findAutoSaveClass(final Class<T> clazz) {
-        for (Class<? super T> superclass = clazz; superclass != null; superclass = superclass.getSuperclass()) {
-            if (superclass.isAnnotationPresent((Class<? extends Annotation>)a91.class)) {
-                return superclass;
-            }
+    public n8r(final TextInputLayout f0, final gbt gbt) {
+        super(((View)f0).getContext());
+        this.F0 = f0;
+        ((View)this).setVisibility(8);
+        this.setOrientation(0);
+        ((View)this).setLayoutParams((ViewGroup$LayoutParams)new FrameLayout$LayoutParams(-2, -1, 8388611));
+        final CheckableImageButton i0 = (CheckableImageButton)LayoutInflater.from(((View)this).getContext()).inflate(2131624278, (ViewGroup)this, false);
+        this.I0 = i0;
+        final Context context = ((View)this).getContext();
+        CharSequence h0 = null;
+        final AppCompatTextView g0 = new AppCompatTextView(context, (AttributeSet)null);
+        this.G0 = g0;
+        if (hog.f(((View)this).getContext())) {
+            nlg.g((ViewGroup$MarginLayoutParams)((View)i0).getLayoutParams(), 0);
         }
-        final StringBuilder sb = new StringBuilder();
-        sb.append("The class does not use @AutoSaveState: ");
-        sb.append(clazz);
-        throw new IllegalArgumentException(sb.toString());
-    }
-    
-    public static <T> bra<T, n8r<T>> from(final Class<T> clazz) {
-        final Class<? super T> autoSaveClass = findAutoSaveClass(clazz);
-        final rv0 p = jgw.p0((Class)autoSaveClass);
-        final String l0 = tjp.L0((gjp)rv0.f(p), (CharSequence)"_", 62);
-        final StringBuilder sb = new StringBuilder();
-        sb.append(l0);
-        sb.append("$SavedState");
-        final String string = sb.toString();
-        zzd.f((Object)string, "name");
-        final String s = (String)rv0.e(p, string, null).F0.getValue();
-        final Class a0 = rp2.A0(s);
-        if (a0 != null) {
-            try {
-                return (bra<T, n8r<T>>)new xax((Object)a0.getConstructor(autoSaveClass), 4);
-            }
-            catch (final Exception ex) {
-                throw new IllegalStateException("The state saver doesn't have a constructor taking an object", ex);
-            }
+        this.c(null);
+        this.d(null);
+        if (gbt.o(62)) {
+            this.J0 = hog.a(((View)this).getContext(), gbt, 62);
         }
-        throw new IllegalStateException(l7k.c("Generated state saver class can't be found: ", s));
+        if (gbt.o(63)) {
+            this.K0 = gdx.e(gbt.j(63, -1), (PorterDuff$Mode)null);
+        }
+        if (gbt.o(61)) {
+            this.b(gbt.g(61));
+            if (gbt.o(60)) {
+                this.a(gbt.n(60));
+            }
+            i0.setCheckable(gbt.a(59, true));
+        }
+        ((View)g0).setVisibility(8);
+        ((View)g0).setId(2131431995);
+        ((View)g0).setLayoutParams((ViewGroup$LayoutParams)new LinearLayout$LayoutParams(-2, -2));
+        final WeakHashMap a = b7x.a;
+        b7x$g.f((View)g0, 1);
+        uks.f((TextView)g0, gbt.l(55, 0));
+        if (gbt.o(56)) {
+            ((TextView)g0).setTextColor(gbt.c(56));
+        }
+        final CharSequence n = gbt.n(54);
+        if (!TextUtils.isEmpty(n)) {
+            h0 = n;
+        }
+        this.H0 = h0;
+        ((TextView)g0).setText(n);
+        this.g();
+        ((ViewGroup)this).addView((View)i0);
+        ((ViewGroup)this).addView((View)g0);
     }
     
-    public static <T> bra<T, n8r<T>> from(final T t) {
-        final Class<?> class1 = t.getClass();
-        final int a = w4j.a;
-        return from((Class<T>)class1);
+    public final void a(final CharSequence contentDescription) {
+        if (((View)this.I0).getContentDescription() != contentDescription) {
+            ((View)this.I0).setContentDescription(contentDescription);
+        }
     }
     
-    public static <T> void restoreFromBundle(final T t, final Bundle bundle) {
-        restoreFromBundle(t, bundle, createKey(t));
+    public final void b(final Drawable imageDrawable) {
+        ((AppCompatImageButton)this.I0).setImageDrawable(imageDrawable);
+        if (imageDrawable != null) {
+            i4d.a(this.F0, this.I0, this.J0, this.K0);
+            this.e(true);
+            i4d.c(this.F0, this.I0, this.J0);
+        }
+        else {
+            this.e(false);
+            this.c(null);
+            this.d(null);
+            this.a(null);
+        }
     }
     
-    public static <T> void restoreFromBundle(final T t, final Bundle bundle, final String s) {
-        if (bundle == null) {
+    public final void c(final View$OnClickListener onClickListener) {
+        final CheckableImageButton i0 = this.I0;
+        final View$OnLongClickListener l0 = this.L0;
+        ((View)i0).setOnClickListener(onClickListener);
+        i4d.d(i0, l0);
+    }
+    
+    public final void d(final View$OnLongClickListener view$OnLongClickListener) {
+        this.L0 = view$OnLongClickListener;
+        final CheckableImageButton i0 = this.I0;
+        ((View)i0).setOnLongClickListener(view$OnLongClickListener);
+        i4d.d(i0, view$OnLongClickListener);
+    }
+    
+    public final void e(final boolean b) {
+        final int visibility = ((View)this.I0).getVisibility();
+        int visibility2 = 0;
+        if (visibility == 0 != b) {
+            final CheckableImageButton i0 = this.I0;
+            if (!b) {
+                visibility2 = 8;
+            }
+            ((View)i0).setVisibility(visibility2);
+            this.f();
+            this.g();
+        }
+    }
+    
+    public final void f() {
+        final EditText j0 = this.F0.J0;
+        if (j0 == null) {
             return;
         }
-        final n8r n8r = (n8r)bundle.getParcelable(s);
-        if (n8r != null) {
-            n8r.restoreState(t);
+        final int visibility = ((View)this.I0).getVisibility();
+        final int n = 0;
+        int f;
+        if (visibility == 0) {
+            f = n;
         }
-    }
-    
-    public String getKey() {
-        return this.mKey;
-    }
-    
-    public abstract void restoreState(final T p0);
-    
-    public void saveToBundle(final Bundle bundle) {
-        final String key = this.getKey();
-        if (key == null) {
-            throw new IllegalStateException("key must not be null");
+        else {
+            final WeakHashMap a = b7x.a;
+            f = b7x$e.f((View)j0);
         }
-        if (!((BaseBundle)bundle).containsKey(key)) {
-            this.saveToBundle(bundle, key);
-            return;
+        final AppCompatTextView g0 = this.G0;
+        final int compoundPaddingTop = ((TextView)j0).getCompoundPaddingTop();
+        final int dimensionPixelSize = ((View)this).getContext().getResources().getDimensionPixelSize(2131166363);
+        final int compoundPaddingBottom = ((TextView)j0).getCompoundPaddingBottom();
+        final WeakHashMap a2 = b7x.a;
+        b7x$e.k((View)g0, f, compoundPaddingTop, dimensionPixelSize, compoundPaddingBottom);
+    }
+    
+    public final void g() {
+        final CharSequence h0 = this.H0;
+        int visibility = 8;
+        int visibility2;
+        if (h0 != null && !this.M0) {
+            visibility2 = 0;
         }
-        throw new IllegalStateException("key cannot be used twice");
+        else {
+            visibility2 = 8;
+        }
+        if (((View)this.I0).getVisibility() == 0 || visibility2 == 0) {
+            visibility = 0;
+        }
+        ((View)this).setVisibility(visibility);
+        ((View)this.G0).setVisibility(visibility2);
+        this.F0.v();
     }
     
-    public void saveToBundle(final Bundle bundle, final String s) {
-        bundle.putParcelable(s, (Parcelable)this);
-    }
-    
-    public void setKey(final String mKey) {
-        this.mKey = mKey;
+    public final void onMeasure(final int n, final int n2) {
+        super.onMeasure(n, n2);
+        this.f();
     }
 }

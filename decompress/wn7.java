@@ -1,73 +1,45 @@
-import com.twitter.util.user.UserIdentifier;
-import java.util.HashMap;
-import com.twitter.app.dm.DMGroupParticipantsListController$a;
-import com.twitter.app.dm.c;
 import java.util.List;
-import java.util.Collection;
-import java.util.Objects;
-import com.twitter.app.dm.DMGroupParticipantsListController;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wn7 implements iyj$a
+public final class wn7 implements zq<sn7$c>
 {
-    public final DMGroupParticipantsListController a;
+    public static final wn7 a;
+    public static final List<String> b;
     
-    public wn7(final DMGroupParticipantsListController a) {
-        this.a = a;
+    static {
+        a = new wn7();
+        b = shw.x0((Object)"dm_event_results");
     }
     
-    public final void a(final n3e<exj> n3e) {
-        final DMGroupParticipantsListController a = this.a;
-        Objects.requireNonNull(a);
-        final rif$a rif$a = new rif$a(n3e.getSize());
-        final rif$a rif$a2 = new rif$a(n3e.getSize());
-        final n3e$b n3e$b = new n3e$b((n3e)n3e);
-        final boolean b = false;
-        int n = 0;
-        while (n3e$b.hasNext()) {
-            final exj exj = (exj)((pgz)n3e$b).next();
-            if (exj != null && exj.I0 != null) {
-                ((rif)rif$a).p((Object)exj.D0);
-                ((HashMap<UserIdentifier, Boolean>)a.l).put(exj.I0.f(), Boolean.valueOf(exj.I0.M0));
-                if (exj.L0) {
-                    final boolean b2 = (n = ((exj.D0 == a.j.getId()) ? 1 : 0)) != 0;
-                    if (a.k != 0) {
-                        continue;
-                    }
-                    ((rif)rif$a2).p((Object)exj.I0);
-                    n = (b2 ? 1 : 0);
-                }
-                else {
-                    ((rif)rif$a2).p((Object)exj.I0);
-                }
-            }
-        }
-        a.b = fq4.H((Collection)((n4j)rif$a).e());
-        ((plw)a.h).m((List)((n4j)rif$a2).e());
-        final DMGroupParticipantsListController$a g = a.g;
-        final int size = ((rif)rif$a).size();
-        final c a2 = ((c.c$a)g).a;
-        boolean i1 = b;
-        if (n != 0) {
-            i1 = b;
-            if (a2.g1 == 0) {
-                i1 = true;
-            }
-        }
-        a2.i1 = i1;
-        a2.h1 = size;
-        a2.d1();
+    @Override
+    public final /* bridge */ void a(final yle yle, final lb7 lb7, final Object o) {
+        this.d(yle, lb7, (sn7$c)o);
     }
     
-    public final void b() {
-        final DMGroupParticipantsListController a = this.a;
-        Objects.requireNonNull(a);
-        final gdd$b e0 = gdd.E0;
-        final int a2 = c5j.a;
-        a.b = fq4.H((Collection)e0);
-        ((plw)a.h).m((List)e0);
+    @Override
+    public final /* bridge */ Object b(final kie kie, final lb7 lb7) {
+        return this.c(kie, lb7);
+    }
+    
+    public final sn7$c c(final kie kie, final lb7 lb7) {
+        e0e.f((Object)kie, "reader");
+        e0e.f((Object)lb7, "customScalarAdapters");
+        Object o = null;
+        while (kie.k3((List)wn7.b) == 0) {
+            o = cr.c((zq)un7.a, false).b(kie, lb7);
+        }
+        e0e.c(o);
+        return new sn7$c((sn7$a)o);
+    }
+    
+    public final void d(final yle yle, final lb7 lb7, final sn7$c sn7$c) {
+        e0e.f((Object)yle, "writer");
+        e0e.f((Object)lb7, "customScalarAdapters");
+        e0e.f((Object)sn7$c, "value");
+        yle.A1("dm_event_results");
+        cr.c((zq)un7.a, false).a(yle, lb7, (Object)sn7$c.a);
     }
 }

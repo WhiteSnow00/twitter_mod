@@ -1,14 +1,25 @@
-import java.util.AbstractMap;
-import java.util.Map;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class acm extends akr<Integer>
+public final class acm
 {
-    public acm() {
-        final Integer value = 2;
-        super((Object)value, new Map.Entry[] { (Map.Entry)new AbstractMap.SimpleImmutableEntry("Normal", 1), (Map.Entry)new AbstractMap.SimpleImmutableEntry("Compact", value), (Map.Entry)new AbstractMap.SimpleImmutableEntry("Large", 3), (Map.Entry)new AbstractMap.SimpleImmutableEntry("ThumbsUpAndDown", 4) });
+    public final int a;
+    
+    public acm(final a a) {
+        final long a2 = a.a;
+        vmw.g((Object)a.b);
+        this.a = a.c;
+    }
+    
+    public static final class a extends z4j<acm>
+    {
+        public long a;
+        public String b;
+        public int c;
+        
+        public final Object i() {
+            return new acm(this);
+        }
     }
 }

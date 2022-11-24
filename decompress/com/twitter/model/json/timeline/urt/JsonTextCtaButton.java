@@ -8,19 +8,19 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTextCtaButton extends aih<s77$d>
+public class JsonTextCtaButton extends tih<b87$d>
 {
     @JsonField
     public String a;
     @JsonField
-    public q7t b;
+    public c9t b;
     
     @Override
     public final Object s() {
-        if (pjr.g((CharSequence)this.a)) {
-            final q7t b = this.b;
-            if (b != null && pjr.g((CharSequence)b.a())) {
-                return new s77$d(this.a, this.b);
+        if (flr.g((CharSequence)this.a)) {
+            final c9t b = this.b;
+            if (b != null && flr.g((CharSequence)b.a())) {
+                return new b87$d(this.a, this.b);
             }
         }
         return null;

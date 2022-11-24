@@ -1,76 +1,20 @@
+import android.content.Context;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class t9h
+public final class t9h implements pml
 {
-    public final Boolean a;
-    public final Boolean b;
-    public final fq6 c;
+    public final pml<Context> F0;
+    public final pml<d67> G0;
     
-    public t9h() {
-        this.a = null;
-        this.b = null;
-        this.c = null;
+    public t9h(final pml<Context> f0, final pml<d67> g0) {
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public t9h(final Boolean a, final Boolean b, final fq6 c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof t9h)) {
-            return false;
-        }
-        final t9h t9h = (t9h)o;
-        return czd.a((Object)this.a, (Object)t9h.a) && czd.a((Object)this.b, (Object)t9h.b) && czd.a((Object)this.c, (Object)t9h.c);
-    }
-    
-    @Override
-    public final int hashCode() {
-        final Boolean a = this.a;
-        int hashCode = 0;
-        int hashCode2;
-        if (a == null) {
-            hashCode2 = 0;
-        }
-        else {
-            hashCode2 = a.hashCode();
-        }
-        final Boolean b = this.b;
-        int hashCode3;
-        if (b == null) {
-            hashCode3 = 0;
-        }
-        else {
-            hashCode3 = b.hashCode();
-        }
-        final fq6 c = this.c;
-        if (c != null) {
-            hashCode = c.hashCode();
-        }
-        return (hashCode2 * 31 + hashCode3) * 31 + hashCode;
-    }
-    
-    @Override
-    public final String toString() {
-        final Boolean a = this.a;
-        final Boolean b = this.b;
-        final fq6 c = this.c;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("MetadataUpdates(isMuted=");
-        sb.append(a);
-        sb.append(", isNsfw=");
-        sb.append(b);
-        sb.append(", conversationContext=");
-        sb.append(c);
-        sb.append(")");
-        return sb.toString();
+    public final Object get() {
+        return new s9h((Context)this.F0.get(), (d67)this.G0.get());
     }
 }

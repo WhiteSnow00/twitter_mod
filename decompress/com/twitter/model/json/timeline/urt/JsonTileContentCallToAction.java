@@ -8,24 +8,24 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTileContentCallToAction extends aih<dps>
+public class JsonTileContentCallToAction extends tih<nqs>
 {
     @JsonField
     public String a;
     @JsonField
-    public xwm b;
-    @JsonField(typeConverter = u77.class)
-    public s77 c;
+    public fym b;
+    @JsonField(typeConverter = d87.class)
+    public b87 c;
     
     @Override
     public final Object s() {
-        dps dps;
-        if (pjr.g((CharSequence)this.a)) {
-            dps = new dps(this.a, this.b, this.c);
+        nqs nqs;
+        if (flr.g((CharSequence)this.a)) {
+            nqs = new nqs(this.a, this.b, this.c);
         }
         else {
-            dps = null;
+            nqs = null;
         }
-        return dps;
+        return nqs;
     }
 }

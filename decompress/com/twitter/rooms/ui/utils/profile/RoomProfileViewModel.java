@@ -13,47 +13,45 @@ import com.twitter.rooms.subsystem.api.args.RoomProfileArgs;
 import kotlin.Metadata;
 import com.twitter.weaver.mvi.MviViewModel;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00052\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001:\u0001\u0006¨\u0006\u0007" }, d2 = { "Lcom/twitter/rooms/ui/utils/profile/RoomProfileViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lown;", "Livn;", "Lfvn;", "Companion", "e", "feature.tfa.rooms.ui.utils.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
-public final class RoomProfileViewModel extends MviViewModel<own, ivn, fvn>
+@Metadata(bv = {}, d1 = { "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00052\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001:\u0001\u0006¨\u0006\u0007" }, d2 = { "Lcom/twitter/rooms/ui/utils/profile/RoomProfileViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lfxn;", "Lzvn;", "Lwvn;", "Companion", "e", "feature.tfa.rooms.ui.utils.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
+public final class RoomProfileViewModel extends MviViewModel<fxn, zvn, wvn>
 {
-    public static final e Companion;
-    public static final coe<Object>[] a1;
-    public final RoomProfileArgs O0;
-    public final Context P0;
-    public final e1n Q0;
-    public final mjo R0;
-    public final trc S0;
-    public final vjo T0;
-    public final bdn U0;
-    public final vln V0;
-    public final ajo W0;
-    public final jnn X0;
-    public final dgn Y0;
-    public final hyh Z0;
+    public static final RoomProfileViewModel.RoomProfileViewModel$e Companion;
+    public static final ape<Object>[] c1;
+    public final RoomProfileArgs Q0;
+    public final Context R0;
+    public final u1n S0;
+    public final eko T0;
+    public final tsc U0;
+    public final oko V0;
+    public final tdn W0;
+    public final nmn X0;
+    public final sjo Y0;
+    public final bon Z0;
+    public final wgn a1;
+    public final yyh b1;
     
     static {
-        a1 = new coe[] { (coe)w9.f((Class)RoomProfileViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
-        Companion = new e();
+        c1 = new ape[] { (ape)lb0.h(RoomProfileViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
+        Companion = new RoomProfileViewModel.RoomProfileViewModel$e();
     }
     
-    public RoomProfileViewModel(final RoomProfileArgs o0, final Context p14, final RoomStateManager roomStateManager, final e1n q0, final mjo r0, final xbm xbm, final trc s0, final vjo t0, final giw giw, final bdn u0, final vln v0, final ajo w0, final jnn x0, final dgn y0) {
-        czd.f((Object)o0, "args");
-        czd.f((Object)p14, "context");
-        czd.f((Object)roomStateManager, "roomStateManager");
-        czd.f((Object)q0, "privateEmojiSentDispatcher");
-        czd.f((Object)r0, "roomUtilsFragmentViewEventDispatcher");
-        czd.f((Object)xbm, "releaseCompletable");
-        czd.f((Object)s0, "httpRequestController");
-        czd.f((Object)t0, "scribeReporter");
-        czd.f((Object)giw, "userRepository");
-        czd.f((Object)u0, "roomDismissFragmentViewEventDispatcher");
-        czd.f((Object)v0, "roomGuestActionsEventDispatcher");
-        czd.f((Object)w0, "roomUsersCache");
-        czd.f((Object)x0, "roomHostEventDispatcher");
-        czd.f((Object)y0, "roomEmojiColorRepository");
-        super((k9e)xbm, (jbx)new own((RoomUserItem)null, (cgv)null, (String)null, (String)null, (Map)null, false, (wg6)null, false, false, false, false, false, false, false, false, (String)null, (Long)null, false, false, false, false, (um4)null, 0, 0, false, false, false, 134217727, (rf8)null));
-        this.O0 = o0;
-        this.P0 = p14;
+    public RoomProfileViewModel(final RoomProfileArgs q0, final Context r0, final RoomStateManager roomStateManager, final u1n s0, final eko t0, final kcm kcm, final tsc u0, final oko v0, final viw viw, final tdn w0, final nmn x0, final sjo y0, final bon z0, final wgn a1) {
+        e0e.f((Object)q0, "args");
+        e0e.f((Object)r0, "context");
+        e0e.f((Object)roomStateManager, "roomStateManager");
+        e0e.f((Object)s0, "privateEmojiSentDispatcher");
+        e0e.f((Object)t0, "roomUtilsFragmentViewEventDispatcher");
+        e0e.f((Object)kcm, "releaseCompletable");
+        e0e.f((Object)u0, "httpRequestController");
+        e0e.f((Object)v0, "scribeReporter");
+        e0e.f((Object)viw, "userRepository");
+        e0e.f((Object)w0, "roomDismissFragmentViewEventDispatcher");
+        e0e.f((Object)x0, "roomGuestActionsEventDispatcher");
+        e0e.f((Object)y0, "roomUsersCache");
+        e0e.f((Object)z0, "roomHostEventDispatcher");
+        e0e.f((Object)a1, "roomEmojiColorRepository");
+        super((iae)kcm, (ccx)new fxn((RoomUserItem)null, (qgv)null, (String)null, (String)null, (Map)null, false, (ci6)null, false, false, false, false, false, false, false, false, (String)null, (Long)null, false, false, false, false, (zn4)null, 0, 0, false, false, false, 134217727, (wg8)null));
         this.Q0 = q0;
         this.R0 = r0;
         this.S0 = s0;
@@ -63,74 +61,27 @@ public final class RoomProfileViewModel extends MviViewModel<own, ivn, fvn>
         this.W0 = w0;
         this.X0 = x0;
         this.Y0 = y0;
-        MviViewModel.N((MviViewModel)this, (eaq)y0.a(), (String)null, (jrx)null, (ftb)new RoomProfileViewModel$a(this, (go6)null), 3, (Object)null);
-        MviViewModel.M((MviViewModel)this, (h5j)y0.c(), (String)null, (jrx)null, (ftb)new RoomProfileViewModel$b(this, (go6)null), 3, (Object)null);
-        final h5j compose = giw.b(o0.getUser().getUserIdentifier()).compose((pbj)vnj.D0);
-        czd.e((Object)compose, "userRepository.getUser(a\u2026tional.unwrapIfPresent())");
-        MviViewModel.M((MviViewModel)this, compose, (String)null, (jrx)null, (ftb)new RoomProfileViewModel$c(this, roomStateManager, (go6)null), 3, (Object)null);
-        MviViewModel.M((MviViewModel)this, (h5j)roomStateManager.A1, (String)null, (jrx)null, (ftb)new RoomProfileViewModel$d(this, (go6)null), 3, (Object)null);
-        this.Z0 = ewj.n(this, (qsb)new qsb<jyh<ivn>, fzv>(this) {
-            public final RoomProfileViewModel D0;
-            
-            public final Object invoke(final Object o) {
-                final jyh jyh = (jyh)o;
-                czd.f((Object)jyh, "$this$weaver");
-                jyh.a(v9m.a((Class)ivn$a.class), (ftb)new l(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$p.class), (ftb)new h0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$n.class), (ftb)new o0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$o.class), (ftb)new q0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$f.class), (ftb)new s0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$c.class), (ftb)new t0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$r.class), (ftb)new u0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$g.class), (ftb)new v0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$i.class), (ftb)new w0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$y.class), (ftb)new m(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$u.class), (ftb)new q(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$w.class), (ftb)new t(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$x.class), (ftb)new w(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$q.class), (ftb)new x(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$d.class), (ftb)new a0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$v.class), (ftb)new d0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$j.class), (ftb)new e0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$k.class), (ftb)new f0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$b.class), (ftb)new g0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$e.class), (ftb)new i0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$h.class), (ftb)new j0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$s.class), (ftb)new k0((go6)null));
-                jyh.a(v9m.a((Class)ivn$t.class), (ftb)new l0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$m.class), (ftb)new m0(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)ivn$l.class), (ftb)new n0(this.D0, (go6)null));
-                return fzv.a;
-            }
-        });
+        this.Z0 = z0;
+        this.a1 = a1;
+        MviViewModel.N((MviViewModel)this, (bbq)a1.a(), (String)null, (asx)null, (hub)new RoomProfileViewModel$a(this, (mp6)null), 3, (Object)null);
+        MviViewModel.M((MviViewModel)this, (t5j)a1.c(), (String)null, (asx)null, (hub)new RoomProfileViewModel$b(this, (mp6)null), 3, (Object)null);
+        final t5j compose = viw.b(q0.getUser().getUserIdentifier()).compose((bcj)loj.F0);
+        e0e.e((Object)compose, "userRepository.getUser(a\u2026tional.unwrapIfPresent())");
+        MviViewModel.M((MviViewModel)this, compose, (String)null, (asx)null, (hub)new RoomProfileViewModel$c(this, roomStateManager, (mp6)null), 3, (Object)null);
+        MviViewModel.M((MviViewModel)this, (t5j)roomStateManager.C1, (String)null, (asx)null, (hub)new RoomProfileViewModel$d(this, (mp6)null), 3, (Object)null);
+        this.b1 = hfe.v((MviViewModel)this, (stb)new RoomProfileViewModel$f(this));
     }
     
-    public static final void W(final RoomProfileViewModel roomProfileViewModel, final own own, final String s) {
+    public static final void W(final RoomProfileViewModel roomProfileViewModel, final fxn fxn, final String s) {
         Objects.requireNonNull(roomProfileViewModel);
-        final RoomUserItem a = own.a;
+        final RoomUserItem a = fxn.a;
         if (a != null) {
-            roomProfileViewModel.V0.a.onNext((Object)new vln.a.h(a.getPeriscopeUserId(), a.getTwitterUserId(), a));
-            fu8.o(s, (Integer)null, false, 6, roomProfileViewModel.R0);
+            roomProfileViewModel.X0.a.onNext((Object)new nmn$a.h(a.getPeriscopeUserId(), a.getTwitterUserId(), a));
+            bng.h(s, (Integer)null, false, 6, roomProfileViewModel.T0);
         }
     }
     
-    public final jyh<ivn> v() {
-        return (jyh<ivn>)this.Z0.a((coe)RoomProfileViewModel.a1[0]);
-    }
-    
-    public static final class e
-    {
-        public final um4 a(final RoomUserItem roomUserItem) {
-            um4 um4 = um4.D0;
-            if (roomUserItem != null) {
-                if (roomUserItem.isInvitedToCohost()) {
-                    um4 = um4.E0;
-                }
-                else if (roomUserItem.isCohost()) {
-                    um4 = um4.F0;
-                }
-            }
-            return um4;
-        }
+    public final azh<zvn> v() {
+        return (azh<zvn>)this.b1.a((ape)RoomProfileViewModel.c1[0]);
     }
 }

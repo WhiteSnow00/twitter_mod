@@ -1,25 +1,56 @@
-import android.os.Bundle;
+import java.util.AbstractCollection;
+import java.util.NoSuchElementException;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gey extends bdy<Void>
+public final class gey<E> extends egy<Object>
 {
-    public final /* synthetic */ igy c;
+    public final int F0;
+    public int G0;
+    public final xey<E> H0;
     
-    public gey(final igy c, final sdz<Void> sdz) {
-        this.c = c;
-        super(c, (sdz)sdz);
+    public gey(final xey<E> h0, final int g0) {
+        final int size = ((AbstractCollection)h0).size();
+        if (g0 >= 0 && g0 <= size) {
+            this.F0 = size;
+            this.G0 = g0;
+            this.H0 = h0;
+            return;
+        }
+        throw new IndexOutOfBoundsException(bs4.C0(g0, size, "index"));
     }
     
-    public final void J0(final Bundle bundle, final Bundle bundle2) {
-        super.J0(bundle, bundle2);
-        if (!this.c.f.compareAndSet(true, false)) {
-            igy.g.o("Expected keepingAlive to be true, but was false.", new Object[0]);
+    public final boolean hasNext() {
+        return this.G0 < this.F0;
+    }
+    
+    public final boolean hasPrevious() {
+        return this.G0 > 0;
+    }
+    
+    public final Object next() {
+        if (this.hasNext()) {
+            return this.H0.get(this.G0++);
         }
-        if (bundle.getBoolean("keep_alive")) {
-            this.c.g();
+        throw new NoSuchElementException();
+    }
+    
+    public final int nextIndex() {
+        return this.G0;
+    }
+    
+    public final Object previous() {
+        if (this.hasPrevious()) {
+            final int g0 = this.G0 - 1;
+            this.G0 = g0;
+            return this.H0.get(g0);
         }
+        throw new NoSuchElementException();
+    }
+    
+    public final int previousIndex() {
+        return this.G0 - 1;
     }
 }

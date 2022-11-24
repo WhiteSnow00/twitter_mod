@@ -13,68 +13,68 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonUiLink$$JsonObjectMapper extends JsonMapper<JsonUiLink>
 {
-    public static final dbi NAVIGATION_LINK_TYPE_TYPE_CONVERTER;
+    public static final ubi NAVIGATION_LINK_TYPE_TYPE_CONVERTER;
     
     static {
-        NAVIGATION_LINK_TYPE_TYPE_CONVERTER = new dbi();
+        NAVIGATION_LINK_TYPE_TYPE_CONVERTER = new ubi();
     }
     
-    public static JsonUiLink _parse(final tge tge) throws IOException {
+    public static JsonUiLink _parse(final qhe qhe) throws IOException {
         final JsonUiLink jsonUiLink = new JsonUiLink();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonUiLink, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonUiLink, d, qhe);
+            qhe.m0();
         }
         return jsonUiLink;
     }
     
-    public static void _serialize(final JsonUiLink jsonUiLink, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonUiLink jsonUiLink, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         final ArrayList i = jsonUiLink.i;
         if (i != null) {
-            final Iterator a = br.A(afe, "callbacks", i);
-            while (a.hasNext()) {
-                final mzo mzo = a.next();
-                if (mzo != null) {
-                    LoganSquare.typeConverterFor((Class)mzo.class).serialize((Object)mzo, "lslocalcallbacksElement", false, afe);
+            final Iterator e = d10.E(yfe, "callbacks", i);
+            while (e.hasNext()) {
+                final g0p g0p = e.next();
+                if (g0p != null) {
+                    LoganSquare.typeConverterFor((Class)g0p.class).serialize((Object)g0p, "lslocalcallbacksElement", false, yfe);
                 }
             }
-            afe.f();
+            yfe.f();
         }
-        afe.e("is_destructive", jsonUiLink.f);
-        afe.t0("label", jsonUiLink.d);
-        afe.t0("link_id", jsonUiLink.e);
-        ((StringBasedTypeConverter)JsonUiLink$$JsonObjectMapper.NAVIGATION_LINK_TYPE_TYPE_CONVERTER).serialize((Object)jsonUiLink.a, "link_type", true, afe);
-        afe.t0("subtask_id", jsonUiLink.c);
+        yfe.e("is_destructive", jsonUiLink.f);
+        yfe.u0("label", jsonUiLink.d);
+        yfe.u0("link_id", jsonUiLink.e);
+        ((StringBasedTypeConverter)JsonUiLink$$JsonObjectMapper.NAVIGATION_LINK_TYPE_TYPE_CONVERTER).serialize((Object)jsonUiLink.a, "link_type", true, yfe);
+        yfe.u0("subtask_id", jsonUiLink.c);
         if (jsonUiLink.h != null) {
-            LoganSquare.typeConverterFor((Class)xsr.class).serialize((Object)jsonUiLink.h, "subtask_navigation_context", true, afe);
+            LoganSquare.typeConverterFor((Class)vtr.class).serialize((Object)jsonUiLink.h, "subtask_navigation_context", true, yfe);
         }
-        afe.e("suppress_client_events", jsonUiLink.g);
-        afe.t0("url", jsonUiLink.b);
+        yfe.e("suppress_client_events", jsonUiLink.g);
+        yfe.u0("url", jsonUiLink.b);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonUiLink jsonUiLink, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonUiLink jsonUiLink, final String s, final qhe qhe) throws IOException {
         if ("callbacks".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList i = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final mzo mzo = (mzo)LoganSquare.typeConverterFor((Class)mzo.class).parse(tge);
-                    if (mzo != null) {
-                        i.add(mzo);
+                while (qhe.i0() != rje.Q0) {
+                    final g0p g0p = (g0p)LoganSquare.typeConverterFor((Class)g0p.class).parse(qhe);
+                    if (g0p != null) {
+                        i.add(g0p);
                     }
                 }
                 jsonUiLink.i = i;
@@ -84,44 +84,44 @@ public final class JsonUiLink$$JsonObjectMapper extends JsonMapper<JsonUiLink>
             }
         }
         else if ("is_destructive".equals(s)) {
-            jsonUiLink.f = tge.k();
+            jsonUiLink.f = qhe.l();
         }
         else if ("label".equals(s)) {
-            jsonUiLink.d = tge.T((String)null);
+            jsonUiLink.d = qhe.T((String)null);
         }
         else if ("link_id".equals(s)) {
-            jsonUiLink.e = tge.T((String)null);
+            jsonUiLink.e = qhe.T((String)null);
         }
         else if ("link_type".equals(s)) {
-            jsonUiLink.a = (int)((StringBasedTypeConverter)JsonUiLink$$JsonObjectMapper.NAVIGATION_LINK_TYPE_TYPE_CONVERTER).parse(tge);
+            jsonUiLink.a = (int)((StringBasedTypeConverter)JsonUiLink$$JsonObjectMapper.NAVIGATION_LINK_TYPE_TYPE_CONVERTER).parse(qhe);
         }
         else if ("subtask_id".equals(s)) {
-            jsonUiLink.c = tge.T((String)null);
+            jsonUiLink.c = qhe.T((String)null);
         }
         else if ("subtask_navigation_context".equals(s)) {
-            jsonUiLink.h = (xsr)LoganSquare.typeConverterFor((Class)xsr.class).parse(tge);
+            jsonUiLink.h = (vtr)LoganSquare.typeConverterFor((Class)vtr.class).parse(qhe);
         }
         else if ("suppress_client_events".equals(s)) {
-            jsonUiLink.g = tge.k();
+            jsonUiLink.g = qhe.l();
         }
         else if ("url".equals(s)) {
-            jsonUiLink.b = tge.T((String)null);
+            jsonUiLink.b = qhe.T((String)null);
         }
     }
     
-    public JsonUiLink parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonUiLink parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonUiLink jsonUiLink, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonUiLink, afe, b);
+    public void serialize(final JsonUiLink jsonUiLink, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonUiLink, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonUiLink)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonUiLink)o, yfe, b);
     }
 }

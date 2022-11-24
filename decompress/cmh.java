@@ -1,20 +1,32 @@
-import android.graphics.drawable.Drawable;
-import android.content.Context;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cmh extends d5e
+public final class cmh extends vxs
 {
-    public cmh(final Context context) {
-        final Drawable drawable = context.getDrawable(2131231156);
-        zzd.c((Object)drawable);
-        super(1, drawable);
+    public final xlh k;
+    
+    public cmh(final a a) {
+        super((vxs$a)a);
+        final xlh k = a.k;
+        vmw.g((Object)k);
+        this.k = k;
     }
     
-    public final boolean j(final int n) {
-        final gmh$a j0 = gmh$a.J0;
-        return n == 5;
+    public static final class a extends vxs$a<cmh, a>
+    {
+        public xlh k;
+        
+        public a(final long n) {
+            super(n);
+        }
+        
+        public final Object i() {
+            return new cmh(this);
+        }
+        
+        public final boolean k() {
+            return this.k != null;
+        }
     }
 }

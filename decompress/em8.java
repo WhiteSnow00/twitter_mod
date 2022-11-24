@@ -1,27 +1,30 @@
+import android.os.Looper;
+import java.util.ArrayList;
+import android.os.Handler;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class em8<I, O> extends rj1<I>
+public final class em8 extends dm8
 {
-    public final jj6<O> b;
+    public final Object b;
+    public final Handler c;
+    public ArrayList<dm8$a> d;
+    public ArrayList<dm8$a> e;
+    public final em8$a f;
     
-    public em8(final jj6<O> b) {
-        this.b = b;
+    public em8() {
+        this.b = new Object();
+        this.f = new em8$a(this);
+        this.d = new ArrayList<dm8$a>();
+        this.e = new ArrayList<dm8$a>();
+        this.c = new Handler(Looper.getMainLooper());
     }
     
-    @Override
-    public void g() {
-        this.b.a();
-    }
-    
-    @Override
-    public void h(final Throwable t) {
-        this.b.d(t);
-    }
-    
-    @Override
-    public void j(final float n) {
-        this.b.b(n);
+    public final void a(final dm8$a dm8$a) {
+        synchronized (this.b) {
+            this.d.remove(dm8$a);
+        }
     }
 }

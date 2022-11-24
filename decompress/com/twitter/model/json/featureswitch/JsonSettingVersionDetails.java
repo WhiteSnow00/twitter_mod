@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSettingVersionDetails extends fih<vnp>
+public class JsonSettingVersionDetails extends tih<sop>
 {
     @JsonField(name = { "experiments" })
     public String a;
@@ -18,12 +18,13 @@ public class JsonSettingVersionDetails extends fih<vnp>
     @JsonField(name = { "settings" })
     public String c;
     
+    @Override
     public final Object s() {
         final String a = this.a;
         if (a != null) {
             final String b = this.b;
             if (b != null) {
-                return new vnp(a, b, this.c);
+                return new sop(a, b, this.c);
             }
         }
         return null;

@@ -7,10 +7,10 @@ package com.twitter.android.settings.dm.di;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@r4j
+@d5j
 public interface DMSettingsRetainedGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
-    @r4j
+    @d5j
     public interface DMSettingsViewGraph extends TwitterFragmentActivityViewObjectGraph
     {
     }

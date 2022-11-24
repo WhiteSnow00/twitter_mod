@@ -1,28 +1,34 @@
-import android.os.Parcelable;
+import android.os.RemoteException;
 import android.os.Parcel;
-import com.google.android.gms.auth.api.credentials.Credential;
-import android.os.Parcelable$Creator;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import android.os.Parcelable;
+import android.os.IInterface;
+import com.google.android.gms.common.api.a;
+import com.google.android.gms.common.api.c;
+import com.google.android.gms.common.api.Status;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class g8y extends rd
+public final class g8y extends j8y<Status>
 {
-    public static final Parcelable$Creator<g8y> CREATOR;
-    public final Credential D0;
-    
-    static {
-        CREATOR = (Parcelable$Creator)new i8y();
+    public g8y(final c c) {
+        super(c);
     }
     
-    public g8y(final Credential d0) {
-        this.D0 = d0;
+    public final /* bridge */ etm d(final Status status) {
+        return (etm)status;
     }
     
-    public final void writeToParcel(final Parcel parcel, final int n) {
-        final int d1 = fli.d1(parcel, 20293);
-        fli.X0(parcel, 1, (Parcelable)this.D0, n);
-        fli.g1(parcel, d1);
+    public final void m(final a.b b) throws RemoteException {
+        final r7y r7y = (r7y)b;
+        final x8y x8y = (x8y)((gm1)r7y).D();
+        final d8y d8y = new d8y(this);
+        final GoogleSignInOptions l1 = r7y.l1;
+        final Parcel s = x8y.s();
+        n7y.c(s, (IInterface)d8y);
+        n7y.b(s, (Parcelable)l1);
+        x8y.x(103, s);
     }
 }

@@ -9,60 +9,60 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfRichTextQuantityPair$$JsonObjectMapper extends JsonMapper<JsonOcfRichTextQuantityPair>
 {
-    public static JsonOcfRichTextQuantityPair _parse(final tge tge) throws IOException {
+    public static JsonOcfRichTextQuantityPair _parse(final qhe qhe) throws IOException {
         final JsonOcfRichTextQuantityPair jsonOcfRichTextQuantityPair = new JsonOcfRichTextQuantityPair();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfRichTextQuantityPair, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfRichTextQuantityPair, d, qhe);
+            qhe.m0();
         }
         return jsonOcfRichTextQuantityPair;
     }
     
-    public static void _serialize(final JsonOcfRichTextQuantityPair jsonOcfRichTextQuantityPair, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfRichTextQuantityPair jsonOcfRichTextQuantityPair, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         if (jsonOcfRichTextQuantityPair.b != null) {
-            afe.i("text");
-            JsonOcfRichText$$JsonObjectMapper._serialize(jsonOcfRichTextQuantityPair.b, afe, true);
+            yfe.i("text");
+            JsonOcfRichText$$JsonObjectMapper._serialize(jsonOcfRichTextQuantityPair.b, yfe, true);
         }
-        afe.T("threshold", jsonOcfRichTextQuantityPair.a);
+        yfe.T("threshold", jsonOcfRichTextQuantityPair.a);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfRichTextQuantityPair jsonOcfRichTextQuantityPair, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfRichTextQuantityPair jsonOcfRichTextQuantityPair, final String s, final qhe qhe) throws IOException {
         if ("text".equals(s)) {
-            jsonOcfRichTextQuantityPair.b = JsonOcfRichText$$JsonObjectMapper._parse(tge);
+            jsonOcfRichTextQuantityPair.b = JsonOcfRichText$$JsonObjectMapper._parse(qhe);
         }
         else if ("threshold".equals(s)) {
-            jsonOcfRichTextQuantityPair.a = tge.y();
+            jsonOcfRichTextQuantityPair.a = qhe.z();
         }
     }
     
-    public JsonOcfRichTextQuantityPair parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfRichTextQuantityPair parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfRichTextQuantityPair jsonOcfRichTextQuantityPair, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfRichTextQuantityPair, afe, b);
+    public void serialize(final JsonOcfRichTextQuantityPair jsonOcfRichTextQuantityPair, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfRichTextQuantityPair, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfRichTextQuantityPair)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfRichTextQuantityPair)o, yfe, b);
     }
 }

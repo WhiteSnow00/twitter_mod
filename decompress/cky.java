@@ -1,34 +1,65 @@
-import java.lang.annotation.Annotation;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cky implements j4j<ody>
+public final class cky<E> extends mhy<E>
 {
-    public static final cky a;
+    public final transient E I0;
+    public transient int J0;
     
-    static {
-        final ozz c0 = ozz.C0;
-        a = new cky();
-        final rxz rxz = new rxz(1, c0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(((Annotation)rxz).annotationType(), rxz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final rxz rxz2 = new rxz(2, c0);
-        final HashMap hashMap2 = new HashMap();
-        hashMap2.put(((Annotation)rxz2).annotationType(), rxz2);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final rxz rxz3 = new rxz(3, c0);
-        final HashMap hashMap3 = new HashMap();
-        hashMap3.put(((Annotation)rxz3).annotationType(), rxz3);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
-        final rxz rxz4 = new rxz(4, c0);
-        final HashMap hashMap4 = new HashMap();
-        sbl.m(rxz4, hashMap4, rxz4, hashMap4);
+    public cky(final E i0) {
+        Objects.requireNonNull(i0);
+        this.I0 = i0;
+    }
+    
+    public cky(final E i0, final int j0) {
+        this.I0 = i0;
+        this.J0 = j0;
+    }
+    
+    public final boolean contains(final Object o) {
+        return this.I0.equals(o);
+    }
+    
+    public final int e(final Object[] array) {
+        array[0] = this.I0;
+        return 1;
+    }
+    
+    public final yjy<E> g() {
+        return (yjy<E>)new ghy(this.I0);
+    }
+    
+    public final int hashCode() {
+        int j0;
+        if ((j0 = this.J0) == 0) {
+            j0 = this.I0.hashCode();
+            this.J0 = j0;
+        }
+        return j0;
+    }
+    
+    public final Iterator iterator() {
+        return (Iterator)this.g();
+    }
+    
+    public final boolean n() {
+        return this.J0 != 0;
+    }
+    
+    public final int size() {
+        return 1;
+    }
+    
+    public final String toString() {
+        final String string = this.I0.toString();
+        final StringBuilder sb = new StringBuilder(l58.g(string, 2));
+        sb.append('[');
+        sb.append(string);
+        sb.append(']');
+        return sb.toString();
     }
 }

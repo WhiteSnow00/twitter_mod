@@ -1,75 +1,73 @@
-import tv.periscope.android.lib.webrtc.janus.JanusClient;
-import tv.periscope.android.lib.webrtc.janus.plugin.JanusPluginInteractor;
-import tv.periscope.android.lib.webrtc.janus.plugin.JanusPluginManager;
+import java.util.List;
+import java.util.Iterator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class q5e implements lj6
+public final class q5e implements tna
 {
-    public final int D0;
-    public final qsb E0;
+    public final Iterable F0;
     
-    public q5e(final qsb e0, final int d0) {
-        this.D0 = d0;
-        this.E0 = e0;
+    public q5e(final Iterable f0) {
+        this.F0 = f0;
     }
     
-    public final void accept(final Object o) {
-        switch (this.D0) {
-            default: {
-                final qsb e0 = this.E0;
-                czd.f((Object)e0, "$tmp0");
-                e0.invoke(o);
-                return;
-            }
-            case 9: {
-                final qsb e2 = this.E0;
-                final t3p$b companion = t3p.Companion;
-                czd.f((Object)e2, "$tmp0");
-                e2.invoke(o);
-                return;
-            }
-            case 8: {
-                final qsb e3 = this.E0;
-                czd.f((Object)e3, "$tmp0");
-                e3.invoke(o);
-                return;
-            }
-            case 7: {
-                final qsb e4 = this.E0;
-                czd.f((Object)e4, "$tmp0");
-                e4.invoke(o);
-                return;
-            }
-            case 6: {
-                JanusPluginManager.d(this.E0, o);
-                return;
-            }
-            case 5: {
-                JanusPluginManager.r(this.E0, o);
-                return;
-            }
-            case 4: {
-                JanusPluginInteractor.q(this.E0, o);
-                return;
-            }
-            case 3: {
-                JanusPluginInteractor.x(this.E0, o);
-                return;
-            }
-            case 2: {
-                JanusPluginInteractor.v(this.E0, o);
-                return;
-            }
-            case 1: {
-                JanusClient.a(this.E0, o);
-                return;
-            }
-            case 0: {
-                JanusClient.n(this.E0, o);
-            }
-        }
+    public final Object K0(final nuk nuk) {
+        final int a = sna.a;
+        return k6e.g((Iterable)this, nuk);
+    }
+    
+    public final tna O1(final nuk nuk) {
+        final int a = sna.a;
+        return k6e.e((Iterable)this, nuk);
+    }
+    
+    public final boolean W0(final nuk nuk) {
+        final int a = sna.a;
+        return this.K0(nuk) != null;
+    }
+    
+    public final Object first() {
+        final int a = sna.a;
+        return k6e.i((Iterable)this);
+    }
+    
+    public final int getSize() {
+        final int a = sna.a;
+        return k6e.l((Iterable)this);
+    }
+    
+    public final boolean isEmpty() {
+        final int a = sna.a;
+        return sna.a((tna)this, 0);
+    }
+    
+    public final Iterator iterator() {
+        return (Iterator)new d6e(this.F0);
+    }
+    
+    public final int j1(final nuk nuk) {
+        final int a = sna.a;
+        return k6e.h((Iterable)this, nuk);
+    }
+    
+    public final tna l1(final nuk nuk) {
+        final int a = sna.a;
+        return k6e.e((Iterable)this, ((d0g)nuk).a());
+    }
+    
+    public final boolean s2(final int n) {
+        return sna.a((tna)this, n);
+    }
+    
+    public final List t3() {
+        final int a = sna.a;
+        return ojf.u((Iterable)this);
+    }
+    
+    public final tna v2(final lub lub) {
+        final int a = sna.a;
+        return (tna)new t5e((Iterable)this, lub);
     }
 }

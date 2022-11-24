@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTwitterLocation extends aih<ocv>
+public class JsonTwitterLocation extends tih<xdv>
 {
     @JsonField(name = { "name" })
     public String a;
@@ -21,6 +21,6 @@ public class JsonTwitterLocation extends aih<ocv>
     
     @Override
     public final Object s() {
-        return new ocv(this.a, this.b, this.d, this.c);
+        return new xdv(this.a, this.b, this.d, this.c);
     }
 }

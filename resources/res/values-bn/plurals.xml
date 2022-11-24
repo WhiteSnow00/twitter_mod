@@ -305,8 +305,8 @@
         <item quantity="other">অন্য %d জন</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">অভাবনীয় অনুসরণকারী</item>
-        <item quantity="other">অভাবনীয় অনুসরণকারী</item>
+        <item quantity="one">সাবস্ক্রাইবার</item>
+        <item quantity="other">সাবস্ক্রাইবারগণ</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s পছন্দ করেছেন</item>
@@ -402,7 +402,7 @@
         <item quantity="other">﻿%1$s-কে এবং অন্য %2$d জনকে﻿ উত্তর দিচ্ছেন</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s এবং %2$d অন্যান্যদের﻿ উত্তর দিচ্ছে। আপনার উত্তর অন্য অভাবনীয় অনুসরণকারীরাও দেখতে পাবেন।</item>
+        <item quantity="other">﻿%1$s এবং অন্যান্য %2$d জনকে﻿ উত্তর দেওয়া হচ্ছে। আপনার উত্তর অন্য সাবস্ক্রাইবাররাও দেখতে পাবেন।</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%1$s এবং %2$d অন্যান্য﻿ কে ﻿%3$s﻿ এ উত্তর দেওয়া হচ্ছে</item>
@@ -411,7 +411,7 @@
         <item quantity="other">﻿%1$s %2$s এবং অন্য %3$d জনকে﻿ উত্তর দিচ্ছেন</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s %2$s এবং অন্যন্য %3$d জনকে﻿ উত্তর দেওয়া হচ্ছে। আপনার উত্তর অন্য অভাবনীয় অনুসরণকারীরাও দেখতে পাবেন।</item>
+        <item quantity="other">﻿%1$s %2$s এবং অন্যান্য %3$d জনকে﻿ উত্তর দেওয়া হচ্ছে। আপনার উত্তর অন্য সাবস্ক্রাইবাররাও দেখতে পাবেন।</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%1$s %2$s এবং %3$d অন্যান্য﻿ কে ﻿%4$s﻿ এ উত্তর দেওয়া হচ্ছে</item>

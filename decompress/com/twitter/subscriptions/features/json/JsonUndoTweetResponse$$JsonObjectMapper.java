@@ -9,76 +9,84 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonUndoTweetResponse$$JsonObjectMapper extends JsonMapper<JsonUndoTweetResponse>
 {
-    public static JsonUndoTweetResponse _parse(final khe khe) throws IOException {
+    public static JsonUndoTweetResponse _parse(final qhe qhe) throws IOException {
         final JsonUndoTweetResponse jsonUndoTweetResponse = new JsonUndoTweetResponse();
-        if (khe.e() == null) {
-            khe.i0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonUndoTweetResponse, d, khe);
-            khe.m0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonUndoTweetResponse, d, qhe);
+            qhe.m0();
         }
         return jsonUndoTweetResponse;
     }
     
-    public static void _serialize(final JsonUndoTweetResponse jsonUndoTweetResponse, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonUndoTweetResponse jsonUndoTweetResponse, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            yfe.r0();
         }
-        tfe.e("undo_original_tweet_enabled", jsonUndoTweetResponse.e);
-        tfe.e("undo_poll_tweet_enabled", jsonUndoTweetResponse.f);
-        tfe.e("undo_quote_tweet_enabled", jsonUndoTweetResponse.a);
-        tfe.e("undo_reply_tweet_enabled", jsonUndoTweetResponse.b);
-        tfe.e("undo_thread_tweet_enabled", jsonUndoTweetResponse.d);
-        tfe.T("undo_tweet_duration_secs", jsonUndoTweetResponse.c);
-        tfe.e("view_tweet_after_sending_enabled", jsonUndoTweetResponse.g);
+        yfe.e("undo_original_tweet_enabled", jsonUndoTweetResponse.e);
+        yfe.e("undo_poll_tweet_enabled", jsonUndoTweetResponse.f);
+        yfe.e("undo_quote_tweet_enabled", jsonUndoTweetResponse.a);
+        yfe.e("undo_reply_tweet_enabled", jsonUndoTweetResponse.b);
+        yfe.e("undo_thread_tweet_enabled", jsonUndoTweetResponse.d);
+        yfe.T("undo_tweet_duration_secs", (int)jsonUndoTweetResponse.c);
+        yfe.e("view_tweet_after_sending_enabled", jsonUndoTweetResponse.g);
         if (b) {
-            tfe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonUndoTweetResponse jsonUndoTweetResponse, final String s, final khe khe) throws IOException {
+    public static void parseField(final JsonUndoTweetResponse jsonUndoTweetResponse, final String s, final qhe qhe) throws IOException {
         if ("undo_original_tweet_enabled".equals(s)) {
-            jsonUndoTweetResponse.e = khe.k();
+            jsonUndoTweetResponse.e = qhe.l();
         }
         else if ("undo_poll_tweet_enabled".equals(s)) {
-            jsonUndoTweetResponse.f = khe.k();
+            jsonUndoTweetResponse.f = qhe.l();
         }
         else if ("undo_quote_tweet_enabled".equals(s)) {
-            jsonUndoTweetResponse.a = khe.k();
+            jsonUndoTweetResponse.a = qhe.l();
         }
         else if ("undo_reply_tweet_enabled".equals(s)) {
-            jsonUndoTweetResponse.b = khe.k();
+            jsonUndoTweetResponse.b = qhe.l();
         }
         else if ("undo_thread_tweet_enabled".equals(s)) {
-            jsonUndoTweetResponse.d = khe.k();
+            jsonUndoTweetResponse.d = qhe.l();
         }
         else if ("undo_tweet_duration_secs".equals(s)) {
             Integer value;
-            if (khe.e() == lje.U0) {
+            if (qhe.e() == rje.X0) {
                 value = null;
             }
             else {
-                value = khe.z();
+                value = qhe.z();
             }
             jsonUndoTweetResponse.c = value;
         }
         else if ("view_tweet_after_sending_enabled".equals(s)) {
-            jsonUndoTweetResponse.g = khe.k();
+            jsonUndoTweetResponse.g = qhe.l();
         }
     }
     
-    public JsonUndoTweetResponse parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonUndoTweetResponse parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public void serialize(final JsonUndoTweetResponse jsonUndoTweetResponse, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonUndoTweetResponse, tfe, b);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
+    }
+    
+    public void serialize(final JsonUndoTweetResponse jsonUndoTweetResponse, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonUndoTweetResponse, yfe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonUndoTweetResponse)o, yfe, b);
     }
 }

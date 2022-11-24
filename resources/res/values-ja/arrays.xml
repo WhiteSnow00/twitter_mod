@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>新しいツイートの通知を受け取ります。</item>
-        <item>新しいスーパーフォロワー専用ツイートの通知を受け取ります。</item>
+        <item>新しいサブスクリプションツイートの通知を受け取ります。</item>
         <item>新しいライブ動画ツイートの通知を受け取ります。</item>
         <item>新しいスペースツイートの通知を受け取ります。</item>
         <item>新しいツイートの通知を受け取りません。</item>
     </array>
     <array name="account_notif_options">
         <item>ツイート</item>
-        <item>スーパーフォロワー専用ツイート</item>
+        <item>サブスクリプションのみのツイート</item>
         <item>ライブ動画</item>
         <item>スペース</item>
         <item>なし</item>
     </array>
     <array name="account_notif_options_old">
         <item>すべてのツイート</item>
-        <item>スーパーフォローツイートのみ</item>
+        <item>サブスクリプションツイートのみ</item>
         <item>ライブ動画のみ</item>
         <item>スペースのみ</item>
         <item>オフ</item>
     </array>
     <array name="account_notif_subtitles">
         <item>このアカウントのすべてのツイートについての通知を受け取ります。</item>
-        <item>スーパーフォローツイートの通知のみ受け取ります。</item>
+        <item>サブスクリプションツイートの通知のみを受け取ります。</item>
         <item>放送中のライブ放送についての通知のみ受け取ります。</item>
         <item>スペースの通知のみ受け取ります。</item>
         <item>このアカウントのツイートについての通知をオフにします。</item>

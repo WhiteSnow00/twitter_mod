@@ -8,20 +8,20 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTTrendBadge extends aih<erv>
+public class JsonURTTrendBadge extends tih<ksv>
 {
     @JsonField
     public String a;
     @JsonField
-    public ghe b;
+    public mhe b;
     @JsonField
-    public ghe c;
+    public mhe c;
     @JsonField
-    public n1u d;
+    public u2u d;
     
     @Override
     public final Object s() {
-        final ghe b = this.b;
+        final mhe b = this.b;
         int intValue = -7829368;
         if (b != null) {
             Integer n;
@@ -30,7 +30,7 @@ public class JsonURTTrendBadge extends aih<erv>
             }
             intValue = n;
         }
-        final ghe c = this.c;
+        final mhe c = this.c;
         int intValue2 = -1;
         if (c != null) {
             Integer n2;
@@ -39,12 +39,12 @@ public class JsonURTTrendBadge extends aih<erv>
             }
             intValue2 = n2;
         }
-        final n1u d = this.d;
-        final n1u c2 = n1u.C0;
-        n1u n1u;
-        if ((n1u = d) == null) {
-            n1u = c2;
+        final u2u d = this.d;
+        final u2u f0 = u2u.F0;
+        u2u u2u;
+        if ((u2u = d) == null) {
+            u2u = f0;
         }
-        return new erv(n1u, this.a, intValue, intValue2);
+        return new ksv(u2u, this.a, intValue, intValue2);
     }
 }

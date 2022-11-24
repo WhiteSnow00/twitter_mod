@@ -16,7 +16,7 @@ import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.content.res.Resources;
 
-public final class RawResourceDataSource extends jk1
+public final class RawResourceDataSource extends nk1
 {
     public final Resources e;
     public final String f;
@@ -185,7 +185,7 @@ public final class RawResourceDataSource extends jk1
             try {
                 n = (int)Math.min(j, n2);
                 final FileInputStream i = this.i;
-                final int a = cnw.a;
+                final int a = rnw.a;
                 read = i.read(array, read, n);
                 if (read != -1) {
                     final long k = this.j;
@@ -241,7 +241,7 @@ public final class RawResourceDataSource extends jk1
         //    49: iconst_0       
         //    50: putfield        com/google/android/exoplayer2/upstream/RawResourceDataSource.k:Z
         //    53: aload_0        
-        //    54: invokevirtual   jk1.q:()V
+        //    54: invokevirtual   nk1.q:()V
         //    57: return         
         //    58: astore_1       
         //    59: goto            78
@@ -265,10 +265,10 @@ public final class RawResourceDataSource extends jk1
         //    91: iconst_0       
         //    92: putfield        com/google/android/exoplayer2/upstream/RawResourceDataSource.k:Z
         //    95: aload_0        
-        //    96: invokevirtual   jk1.q:()V
+        //    96: invokevirtual   nk1.q:()V
         //    99: aload_1        
         //   100: athrow         
-        //   101: astore_1       
+        //   101: astore_2       
         //   102: goto            121
         //   105: astore_2       
         //   106: new             Lcom/google/android/exoplayer2/upstream/RawResourceDataSource$RawResourceDataSourceException;
@@ -285,10 +285,10 @@ public final class RawResourceDataSource extends jk1
         //   123: putfield        com/google/android/exoplayer2/upstream/RawResourceDataSource.i:Ljava/io/FileInputStream;
         //   126: aload_0        
         //   127: getfield        com/google/android/exoplayer2/upstream/RawResourceDataSource.h:Landroid/content/res/AssetFileDescriptor;
-        //   130: astore_2       
-        //   131: aload_2        
+        //   130: astore_1       
+        //   131: aload_1        
         //   132: ifnull          139
-        //   135: aload_2        
+        //   135: aload_1        
         //   136: invokevirtual   android/content/res/AssetFileDescriptor.close:()V
         //   139: aload_0        
         //   140: aconst_null    
@@ -300,8 +300,8 @@ public final class RawResourceDataSource extends jk1
         //   152: iconst_0       
         //   153: putfield        com/google/android/exoplayer2/upstream/RawResourceDataSource.k:Z
         //   156: aload_0        
-        //   157: invokevirtual   jk1.q:()V
-        //   160: aload_1        
+        //   157: invokevirtual   nk1.q:()V
+        //   160: aload_2        
         //   161: athrow         
         //   162: astore_1       
         //   163: goto            182
@@ -325,7 +325,7 @@ public final class RawResourceDataSource extends jk1
         //   195: iconst_0       
         //   196: putfield        com/google/android/exoplayer2/upstream/RawResourceDataSource.k:Z
         //   199: aload_0        
-        //   200: invokevirtual   jk1.q:()V
+        //   200: invokevirtual   nk1.q:()V
         //   203: aload_1        
         //   204: athrow         
         //    Exceptions:

@@ -1,9 +1,16 @@
-import android.os.IInterface;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface jcy extends IInterface
+public final class jcy
 {
+    @Override
+    public final boolean equals(final Object o) {
+        throw null;
+    }
+    
+    @Override
+    public final int hashCode() {
+        throw null;
+    }
 }

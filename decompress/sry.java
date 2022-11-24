@@ -1,25 +1,16 @@
-import android.os.RemoteException;
-import java.util.Objects;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class sry extends jvy
+public final class sry<T> implements dsy<T>
 {
-    public final /* synthetic */ String G0;
-    public final /* synthetic */ wxy H0;
+    public dsy<T> F0;
     
-    public sry(final wxy h0, final String g0) {
-        this.H0 = h0;
-        this.G0 = g0;
-        super(h0, true);
-    }
-    
-    @Override
-    public final void a() throws RemoteException {
-        final doy f = this.H0.f;
-        Objects.requireNonNull(f, "null reference");
-        f.endAdUnitExposure(this.G0, super.D0);
+    public final T a() {
+        final dsy<T> f0 = this.F0;
+        if (f0 != null) {
+            return (T)f0.a();
+        }
+        throw new IllegalStateException();
     }
 }

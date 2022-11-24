@@ -8,13 +8,13 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineReaderModeConfig extends aih<r1t>
+public class JsonTimelineReaderModeConfig extends tih<b3t>
 {
     @JsonField(name = { "is_reader_mode_available" })
     public boolean a;
     
     @Override
     public final Object s() {
-        return new r1t(this.a);
+        return new b3t(this.a);
     }
 }

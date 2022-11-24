@@ -9,14 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonLiveEventReminderWrapper extends fih<zwf>
+public class JsonLiveEventReminderWrapper extends tih<uxf>
 {
     @JsonField(name = { "remind_me_subscription" })
-    public vwf a;
+    public qxf a;
     
+    @Override
     public final Object s() {
-        final zwf$a zwf$a = new zwf$a();
-        zwf$a.a = this.a;
-        return ((n4j)zwf$a).e();
+        final uxf$a uxf$a = new uxf$a();
+        uxf$a.a = this.a;
+        return ((z4j)uxf$a).e();
     }
 }

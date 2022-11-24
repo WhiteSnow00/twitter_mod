@@ -8,37 +8,35 @@ import java.util.Arrays;
 
 public final class u extends y
 {
-    public static final f$a<u> E0;
-    public final float D0;
+    public static final f$a<u> H0;
+    public final float G0;
     
     static {
-        u.E0 = g71.F0;
+        u.H0 = g71.J0;
     }
     
     public u() {
-        this.D0 = -1.0f;
+        this.G0 = -1.0f;
     }
     
-    public u(final float d0) {
-        ri4.l(d0 >= 0.0f && d0 <= 100.0f, (Object)"percent must be in the range of [0, 100]");
-        this.D0 = d0;
+    public u(final float g0) {
+        omi.n(g0 >= 0.0f && g0 <= 100.0f, (Object)"percent must be in the range of [0, 100]");
+        this.G0 = g0;
     }
     
-    @Override
     public final boolean equals(final Object o) {
         final boolean b = o instanceof u;
         boolean b2 = false;
         if (!b) {
             return false;
         }
-        if (this.D0 == ((u)o).D0) {
+        if (this.G0 == ((u)o).G0) {
             b2 = true;
         }
         return b2;
     }
     
-    @Override
     public final int hashCode() {
-        return Arrays.hashCode(new Object[] { this.D0 });
+        return Arrays.hashCode(new Object[] { this.G0 });
     }
 }

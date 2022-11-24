@@ -9,12 +9,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNFTOwnershipError extends fih<o0i$c>
+public class JsonNFTOwnershipError extends tih<f1i.c>
 {
     @JsonField
     public String a;
     
+    @Override
     public final Object s() {
-        return new o0i$c(this.a);
+        return new f1i.c(this.a);
     }
 }

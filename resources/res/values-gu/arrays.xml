@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>તમને નવી ટ્વીટ્સ માટેની સૂચનાઓ મળશે.</item>
-        <item>તમને માત્ર સુપર અનુયાયીઓવાળી નવી ટ્વીટ્સ માટે સૂચનાઓ મળશે.</item>
+        <item>તમને નવી &apos;સબ્સ્ક્રિપ્શનની ટ્વીટ્સ&apos; માટે સૂચનાઓ મળશે.</item>
         <item>તમને લાઈવ વિડિયોવાળી નવી ટ્વીટ્સ માટેની સૂચનાઓ મળશે.</item>
         <item>તમને નવી Spaces ટ્વીટ્સ માટેની સૂચનાઓ મળશે.</item>
         <item>તમને હવે નવી ટ્વીટ્સ માટેની સૂચનાઓ મળશે નહીં.</item>
     </array>
     <array name="account_notif_options">
         <item>ટ્વીટ્સ</item>
-        <item>માત્ર સુપર અનુયાયીઓવાળી ટ્વીટ્સ</item>
+        <item>માત્ર &apos;સબ્સ્ક્રિપ્શનની ટ્વીટ્સ&apos;</item>
         <item>લાઈવ વિડિયો</item>
         <item>Spaces</item>
         <item>કોઈ નહીં</item>
     </array>
     <array name="account_notif_options_old">
         <item>તમામ ટ્વીટ્સ</item>
-        <item>માત્ર સુપર ફોલોઝવાળી ટ્વીટ્સ</item>
+        <item>માત્ર &apos;સબ્સ્ક્રિપ્શનની ટ્વીટ્સ&apos;</item>
         <item>માત્ર લાઈવ વિડિયો</item>
         <item>ફક્ત Spaces</item>
         <item>બંધ</item>
     </array>
     <array name="account_notif_subtitles">
         <item>આ એકાઉન્ટની તમામ ટ્વીટ્સ માટે સૂચનાઓ મેળવો.</item>
-        <item>માત્ર સુપર ફોલોઝવાળી ટ્વીટ્સ માટે સૂચનાઓ મેળવો.</item>
+        <item>માત્ર &apos;સબ્સ્ક્રિપ્શનની ટ્વીટ્સ&apos; માટે સૂચનાઓ મેળવો.</item>
         <item>માત્ર લાઈવ બ્રોડકાસ્ટ્સ માટે સૂચનાઓ મેળવો.</item>
         <item>ફક્ત Spaces માટે સૂચનાઓ મેળવો.</item>
         <item>આ એકાઉન્ટની ટ્વીટ્સ માટે સૂચનાઓ બંધ કરો.</item>

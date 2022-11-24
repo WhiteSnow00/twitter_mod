@@ -9,12 +9,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonAvatarUpdateSuccessResult extends fih<o0i$a>
+public class JsonAvatarUpdateSuccessResult extends tih<f1i.a>
 {
     @JsonField(name = { "media_url" })
     public String a;
     
+    @Override
     public final Object s() {
-        return new o0i$a(this.a);
+        return new f1i.a(this.a);
     }
 }

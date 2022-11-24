@@ -9,22 +9,22 @@ import java.util.List;
 import com.twitter.rooms.model.helpers.RoomUserItem;
 import java.util.Set;
 
-public final class a extends gue implements rtb<y9n, y9n>
+public final class a extends pue implements stb<dbn, dbn>
 {
-    public final /* synthetic */ Set<RoomUserItem> C0;
-    public final /* synthetic */ Set<RoomUserItem> D0;
-    public final /* synthetic */ Set<RoomUserItem> E0;
+    public final Set<RoomUserItem> F0;
+    public final Set<RoomUserItem> G0;
+    public final Set<RoomUserItem> H0;
     
-    public a(final Set<RoomUserItem> c0, final Set<RoomUserItem> d0, final Set<RoomUserItem> e0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
+    public a(final Set<RoomUserItem> f0, final Set<RoomUserItem> g0, final Set<RoomUserItem> h0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final y9n y9n = (y9n)o;
-        zzd.f((Object)y9n, "$this$setState");
-        return y9n.l(y9n, (String)null, (pf3)null, (Set)this.C0, (Set)this.D0, (Set)this.E0, (String)null, (String)null, (Long)null, 0, false, (String)null, false, (String)null, 0, (mos)null, (knl)null, (List)null, false, false, false, false, false, (NarrowcastSpaceType)null, false, false, (elu)null, (lh5)null, 536870799);
+        final dbn dbn = (dbn)o;
+        e0e.f((Object)dbn, "$this$setState");
+        return dbn.l(dbn, null, null, this.F0, this.G0, this.H0, null, null, null, 0, false, null, false, null, 0, null, null, null, false, false, false, false, false, null, false, false, null, null, 536870799);
     }
 }

@@ -1,64 +1,48 @@
-import java.util.ArrayList;
-import java.util.Map;
+import com.twitter.util.user.UserIdentifier;
+import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class apl implements zol
+public final class apl implements ch1
 {
-    public final Map<Class<? extends n5s<?, ?>>, bpl> a;
+    public final kfw a;
+    public final znl<wg1> b;
     
-    public apl(final Map<Class<? extends n5s<?, ?>>, ? extends bpl> a) {
-        this.a = (Map<Class<? extends n5s<?, ?>>, bpl>)a;
+    public apl(final kfw a, final kcm kcm, final rql rql, final h1w h1w) {
+        final znl b = new znl();
+        this.b = (znl<wg1>)b;
+        this.a = a;
+        final de6 de6 = new de6();
+        kcm.i((sj)new gsw(de6, 4));
+        de6.a(rql.a().filter((ouk)new ke4((Object)this, 7)).subscribe((rk6)new ec2((Object)this, 17)));
+        final t5j c = a.c();
+        Objects.requireNonNull(h1w);
+        final t5j switchMap = c.switchMap((rtb)new zx9((Object)h1w, 7));
+        Objects.requireNonNull((Object)b);
+        de6.a(switchMap.subscribe((rk6)new di3((Object)b, 18)));
     }
     
-    public final b5j<mqi> a(final mqi mqi, final xsi xsi) {
-        zzd.f((Object)mqi, "notificationBuilder");
-        zzd.f((Object)xsi, "notificationLayout");
-        final ArrayList list = new ArrayList();
-        final k20 k20 = (k20)xsi.a.g(x50.H0);
-        final Object o = null;
-        if (k20 != null) {
-            final Object c0 = ((z5s)k20).C0;
-            k3j.v(c0, (Class)n5s.class);
-            final n5s n5s = (n5s)c0;
-            final bpl bpl = this.a.get(n5s.getClass());
-            b5j map = null;
-            Label_0135: {
-                if (bpl != null) {
-                    final b5j a = bpl.a(n5s);
-                    if (a != null) {
-                        map = a.map((qtb)new ros((rtb)new apl$a(mqi), 27));
-                        break Label_0135;
-                    }
-                }
-                map = null;
-            }
-            if (map != null) {
-                list.add(map);
-            }
+    public static wg1 b(final bti bti, final String b, final Integer n) {
+        final wg1.b b2 = new wg1.b();
+        b2.c = n;
+        b2.b = b;
+        b2.a = bti.B;
+        return (wg1)b2.e();
+    }
+    
+    public final void a(final UserIdentifier a, final String b) {
+        if (b.equals("launcher")) {
+            final nda a2 = nda.a();
+            final fg4 fg4 = new fg4(new String[] { "app:badge:::clear" });
+            ((o1p)fg4).A();
+            a2.b(a, (tlm)fg4);
         }
-        final v30 v30 = (v30)xsi.a.g(x50.I0);
-        if (v30 != null) {
-            final Object c2 = ((z5s)v30).C0;
-            k3j.v(c2, (Class)n5s.class);
-            final n5s n5s2 = (n5s)c2;
-            final bpl bpl2 = this.a.get(n5s2.getClass());
-            Object map2 = o;
-            if (bpl2 != null) {
-                final b5j a2 = bpl2.a(n5s2);
-                map2 = o;
-                if (a2 != null) {
-                    map2 = a2.map((qtb)new dzf((rtb)new apl$b(mqi), 6));
-                }
-            }
-            if (map2 != null) {
-                list.add(map2);
-            }
-        }
-        final b5j doOnError = b5j.combineLatest((Iterable)list, (qtb)new wpl((rtb)new apl$c(mqi), 2)).doOnError((fk6)new jua((rtb)new apl$d(this), 29));
-        zzd.e((Object)doOnError, "override fun setupLayout\u2026tEvent(\"failure\") }\n    }");
-        return (b5j<mqi>)doOnError;
+        final wg1.b b2 = new wg1.b();
+        b2.c = 0;
+        b2.b = b;
+        b2.a = a;
+        this.b.onNext((Object)b2.e());
     }
 }

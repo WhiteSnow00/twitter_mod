@@ -13,7 +13,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonDnsResolve extends aih<p49>
+public class JsonDnsResolve extends tih<f59>
 {
     @JsonField
     public long a;
@@ -24,14 +24,14 @@ public class JsonDnsResolve extends aih<p49>
     
     @Override
     public final Object s() {
-        p49 d2;
+        f59 d2;
         if (this.b > 0L && this.a > 0L) {
             if (this.c == null) {
-                final ged$b c0 = ged.C0;
-                final int a = w4j.a;
-                this.c = (Map<String, JsonDnsMap>)c0;
+                final ked$b f0 = ked.F0;
+                final int a = o5j.a;
+                this.c = (Map<String, JsonDnsMap>)f0;
             }
-            final sjg t = sjg.t();
+            final kkg t = kkg.t();
             final Iterator<Map.Entry<String, JsonDnsMap>> iterator = this.c.entrySet().iterator();
             while (true) {
                 final boolean hasNext = iterator.hasNext();
@@ -42,23 +42,23 @@ public class JsonDnsResolve extends aih<p49>
                 final Map.Entry<String, V> entry = iterator.next();
                 final String s = entry.getKey();
                 final JsonDnsMap jsonDnsMap = (JsonDnsMap)entry.getValue();
-                if (!pjr.g((CharSequence)s) || jsonDnsMap == null) {
+                if (!flr.g((CharSequence)s) || jsonDnsMap == null) {
                     continue;
                 }
                 final ArrayList a2 = jsonDnsMap.a;
                 int n2 = 0;
-                Label_0222: {
+                Label_0224: {
                     if (a2 != null) {
                         if (!a2.isEmpty()) {
                             final Iterator iterator2 = jsonDnsMap.a.iterator();
-                            s49 s2;
+                            h59 h59;
                             do {
                                 n2 = n;
                                 if (!iterator2.hasNext()) {
-                                    break Label_0222;
+                                    break Label_0224;
                                 }
-                                s2 = (s49)iterator2.next();
-                            } while (s2 != null && pjr.g((CharSequence)s2.a) && pjr.g((CharSequence)s2.b));
+                                h59 = (h59)iterator2.next();
+                            } while (h59 != null && flr.g((CharSequence)h59.a) && flr.g((CharSequence)h59.b));
                         }
                     }
                     n2 = 0;
@@ -68,20 +68,20 @@ public class JsonDnsResolve extends aih<p49>
                 }
                 t.w((Object)s, (Object)jsonDnsMap.a);
             }
-            final long a3 = zau.d().a();
+            final long a3 = icu.d().a();
             final TimeUnit seconds = TimeUnit.SECONDS;
             final long millis = seconds.toMillis(this.b);
             final long millis2 = seconds.toMillis(this.a);
-            final Map map = (Map)((h4j)t).e();
-            final p49 d = p49.d;
-            final nmp x = nmp.x();
+            final Map map = (Map)((z4j)t).e();
+            final f59 d = f59.d;
+            final aop x = aop.x();
             x.p((Iterable)map.keySet());
-            final ged$b c2 = ged.C0;
-            final int a4 = w4j.a;
-            d2 = new p49(p49.a(map, x, (Map)c2, 1), millis + a3, millis2 + a3);
+            final ked$b f2 = ked.F0;
+            final int a4 = o5j.a;
+            d2 = new f59(f59.a(map, x, (Map)f2, 1), millis + a3, millis2 + a3);
         }
         else {
-            d2 = p49.d;
+            d2 = f59.d;
         }
         return d2;
     }

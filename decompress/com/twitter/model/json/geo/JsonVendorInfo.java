@@ -9,34 +9,36 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonVendorInfo extends fih<pqw>
+public class JsonVendorInfo extends tih<frw>
 {
     @JsonField
-    public pqw$c a;
+    public frw$c a;
     @JsonField
-    public pqw$a b;
+    public frw$a b;
     
+    @Override
     public final Object s() {
-        return new pqw(this.b, this.a);
+        return new frw(this.b, this.a);
     }
     
     @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-    public static class JsonFourSquareInfo extends fih<pqw$a>
+    public static class JsonFourSquareInfo extends tih<frw$a>
     {
         @JsonField
         public String a;
         
+        @Override
         public final Object s() {
             String a;
             if ((a = this.a) == null) {
                 a = "";
             }
-            return new pqw$a(a);
+            return new frw$a(a);
         }
     }
     
     @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-    public static class JsonYelpInfo extends fih<pqw$c>
+    public static class JsonYelpInfo extends tih<frw$c>
     {
         @JsonField
         public String a;
@@ -49,6 +51,7 @@ public class JsonVendorInfo extends fih<pqw>
         @JsonField
         public double e;
         
+        @Override
         public final Object s() {
             String a = this.a;
             if (a == null) {
@@ -60,13 +63,13 @@ public class JsonVendorInfo extends fih<pqw>
             }
             final String c = this.c;
             final double n = Math.round(this.e * 2.0) / 2.0;
-            for (final pqw$c$b e0 : pqw$c$b.values()) {
-                if (Math.abs(e0.D0 - n) < 1.0E-8) {
-                    return new pqw$c(a, b, c, e0, this.d);
+            for (final frw$c$b g0 : frw$c$b.values()) {
+                if (Math.abs(g0.F0 - n) < 1.0E-8) {
+                    return new frw$c(a, b, c, g0, this.d);
                 }
             }
-            pqw$c$b e0 = pqw$c$b.E0;
-            return new pqw$c(a, b, c, e0, this.d);
+            frw$c$b g0 = frw$c$b.G0;
+            return new frw$c(a, b, c, g0, this.d);
         }
     }
 }

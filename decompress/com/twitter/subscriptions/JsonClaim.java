@@ -10,21 +10,22 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 import kotlin.Metadata;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005" }, d2 = { "Lcom/twitter/subscriptions/JsonClaim;", "Lfih;", "Lla4;", "<init>", "()V", "subsystem.tfa.subscriptions.json_release" }, k = 1, mv = { 1, 7, 1 })
+@Metadata(bv = {}, d1 = { "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005" }, d2 = { "Lcom/twitter/subscriptions/JsonClaim;", "Ltih;", "Lob4;", "<init>", "()V", "subsystem.tfa.subscriptions.json_release" }, k = 1, mv = { 1, 7, 1 })
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public final class JsonClaim extends fih<la4>
+public final class JsonClaim extends tih<ob4>
 {
     @JsonField
-    public List<sqm> a;
+    public List<grm> a;
     @JsonField
     public String b;
     
     public JsonClaim() {
-        this.a = (List<sqm>)f2a.D0;
+        this.a = (List<grm>)h3a.F0;
         this.b = "";
     }
     
+    @Override
     public final Object s() {
-        return new la4(this.b, (List)this.a);
+        return new ob4(this.b, (List)this.a);
     }
 }

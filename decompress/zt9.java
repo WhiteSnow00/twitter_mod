@@ -1,62 +1,50 @@
-import androidx.preference.Preference;
-import android.widget.TextView;
-import androidx.preference.EditTextPreference;
+import com.twitter.app.profiles.edit.bottomsheets.PronounsSpeedBumpBottomSheetFragmentArgs;
 import android.view.View;
-import android.os.Bundle;
-import android.widget.EditText;
-import androidx.preference.c;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class zt9 extends c
+public final class zt9 implements xlx<cu9, Object, st9>, ny9<st9>
 {
-    public EditText X1;
-    public CharSequence Y1;
+    public final gx8 F0;
+    public final t5j<Object> G0;
+    public final tt9 H0;
+    public final View I0;
+    public final ynl<vzv> J0;
     
-    @Override
-    public final void A1(final Bundle bundle) {
-        super.A1(bundle);
-        bundle.putCharSequence("EditTextPreferenceDialogFragment.text", this.Y1);
+    public zt9(final duo duo, final View view, final tt9 h0, final gx8 f0, final t5j<Object> g0) {
+        e0e.f((Object)duo, "savedStateHandler");
+        e0e.f((Object)view, "rootView");
+        e0e.f((Object)h0, "effectHandler");
+        e0e.f((Object)f0, "dialogOpener");
+        e0e.f((Object)g0, "toolbarIntentObservable");
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
+        final View viewById = view.findViewById(2131431307);
+        e0e.e((Object)viewById, "rootView.findViewById(R.id.see_examples_text)");
+        this.I0 = viewById;
+        this.J0 = (ynl<vzv>)new ynl();
     }
     
-    @Override
-    public final void g2(final View view) {
-        super.g2(view);
-        ((View)(this.X1 = (EditText)view.findViewById(16908291))).requestFocus();
-        final EditText x1 = this.X1;
-        if (x1 != null) {
-            ((TextView)x1).setText(this.Y1);
-            final EditText x2 = this.X1;
-            x2.setSelection(((CharSequence)x2.getText()).length());
-            return;
-        }
-        throw new IllegalStateException("Dialog view must contain an EditText with id @android:id/edit");
-    }
-    
-    @Override
-    public final void h2(final boolean b) {
-        if (b) {
-            final String string = this.X1.getText().toString();
-            if (((Preference)this.j2()).f((Object)string)) {
-                this.j2().Y(string);
-            }
+    public final void T(final ccx ccx) {
+        final cu9 cu9 = (cu9)ccx;
+        e0e.f((Object)cu9, "state");
+        if (cu9.b) {
+            this.F0.d((lw8)new PronounsSpeedBumpBottomSheetFragmentArgs(), (px8)px8$a.F0).w((rtb)new mav((stb)au9.F0, 7)).F((rk6)this.J0);
         }
     }
     
-    public final EditTextPreference j2() {
-        return (EditTextPreference)this.f2();
+    public final void r(final Object o) {
+        final st9 st9 = (st9)o;
+        e0e.f((Object)st9, "effect");
+        this.H0.a(st9);
     }
     
-    @Override
-    public final void k1(final Bundle bundle) {
-        super.k1(bundle);
-        if (bundle == null) {
-            this.Y1 = this.j2().t1;
-        }
-        else {
-            this.Y1 = bundle.getCharSequence("EditTextPreferenceDialogFragment.text");
-        }
+    public final t5j<Object> w() {
+        final t5j merge = t5j.merge((Iterable)shw.y0((Object[])new t5j[] { vq9.a(this.I0).map((rtb)new yj4((stb)zt9$b.F0, 12)), ((t5j)this.J0).map((rtb)new nav((stb)zt9$c.F0, 12)), this.G0 }));
+        e0e.e((Object)merge, "merge(\n        listOf(\n \u2026bservable\n        )\n    )");
+        return (t5j<Object>)merge;
     }
 }

@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Você receberá notificações sobre novos Tweets.</item>
-        <item>Você receberá notificações sobre novos Tweets exclusivos para Super Followers.</item>
+        <item>Você receberá notificações para novos Tweets da Assinatura.</item>
         <item>Você receberá notificações de novos Tweets de vídeo ao vivo.</item>
         <item>Você receberá notificações sobre novos Tweets dos Espaços.</item>
         <item>Você não receberá mais notificações sobre novos Tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Tweets exclusivos para Super Follower</item>
+        <item>Tweets exclusivos da Assinatura</item>
         <item>Vídeo ao vivo</item>
         <item>Espaços</item>
         <item>Nenhum</item>
     </array>
     <array name="account_notif_options_old">
         <item>Todos os Tweets</item>
-        <item>Somente Tweets do Super Follows</item>
+        <item>Somente Tweets da Assinatura</item>
         <item>Somente vídeos ao vivo</item>
         <item>Somente Espaços</item>
         <item>Desativado</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Receba notificações para todos os Tweets dessa conta.</item>
-        <item>Receba notificações somente de Tweets do Super Follows.</item>
+        <item>Você receberá notificações somente para Tweets da Assinatura.</item>
         <item>Receba notificações somente para transmissões ao vivo.</item>
         <item>Receba notificações somente para Espaços.</item>
         <item>Desative as notificações para os Tweets desta conta.</item>

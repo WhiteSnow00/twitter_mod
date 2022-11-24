@@ -5,12 +5,10 @@
 public final class c46
 {
     public static final c46 a;
-    public static ftb<x66, Integer, fzv> b;
-    public static ftb<x66, Integer, fzv> c;
+    public static hub<d86, Integer, vzv> b;
     
     static {
         a = new c46();
-        c46.b = (t26)io7.h(954879418, false, (Object)c46$a.D0);
-        c46.c = (t26)io7.h(1918065384, false, (Object)c46$b.D0);
+        c46.b = (z36)w9y.j(210148896, false, c46$a.F0);
     }
 }

@@ -4,21 +4,21 @@
 
 package com.twitter.rooms.ui.audiospace;
 
-public final class y extends gue implements rtb<oyh<f6n, String>, oyv>
+public final class y extends pue implements stb<gzh<l7n, String>, vzv>
 {
-    public final /* synthetic */ RoomAudioSpaceViewModel C0;
-    public final /* synthetic */ f6n D0;
+    public final RoomAudioSpaceViewModel F0;
+    public final l7n G0;
     
-    public y(final RoomAudioSpaceViewModel c0, final f6n d0) {
-        this.C0 = c0;
-        this.D0 = d0;
+    public y(final RoomAudioSpaceViewModel f0, final l7n g0) {
+        this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final oyh oyh = (oyh)o;
-        zzd.f((Object)oyh, "$this$intoWeaver");
-        oyh.e((gub)new x(this.C0, this.D0, (ap6)null));
-        return oyv.a;
+        final gzh gzh = (gzh)o;
+        e0e.f((Object)gzh, "$this$intoWeaver");
+        gzh.e((hub)new x(this.F0, this.G0, (mp6)null));
+        return vzv.a;
     }
 }

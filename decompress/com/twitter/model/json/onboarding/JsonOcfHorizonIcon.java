@@ -9,11 +9,12 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOcfHorizonIcon extends fih<mdj>
+public class JsonOcfHorizonIcon extends tih<zdj>
 {
-    @JsonField(typeConverter = ndj.class)
-    public mdj a;
+    @JsonField(typeConverter = aej.class)
+    public zdj a;
     
+    @Override
     public final Object s() {
         return this.a;
     }

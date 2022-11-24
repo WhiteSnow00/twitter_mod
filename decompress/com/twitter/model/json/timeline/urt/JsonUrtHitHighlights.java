@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonUrtHitHighlights extends aih<d7w>
+public class JsonUrtHitHighlights extends tih<c8w>
 {
     @JsonField(name = { "startIndex" })
     public int a;
@@ -26,7 +26,7 @@ public class JsonUrtHitHighlights extends aih<d7w>
         if (a > -1) {
             final int b = this.b;
             if (a <= b) {
-                return new d7w(a, b);
+                return new c8w(a, b);
             }
         }
         return null;

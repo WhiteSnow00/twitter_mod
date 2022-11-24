@@ -1,19 +1,21 @@
-import android.content.res.Resources;
+import android.widget.TextView;
+import android.view.View;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class xbm
+public final class xbm implements q7f
 {
-    public final co1 a;
-    public final dwi b;
-    public final Resources c;
+    public final View F0;
+    public final TextView G0;
     
-    public xbm(final Resources c, final co1 a, final dwi b, final sag sag) {
-        this.c = c;
-        this.a = a;
-        this.b = b;
-        sag.c((tgt)new wbm(this));
+    public xbm(final View f0, final TextView g0) {
+        this.F0 = f0;
+        this.G0 = g0;
+    }
+    
+    public final View getView() {
+        return this.F0;
     }
 }

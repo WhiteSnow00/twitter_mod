@@ -6,7 +6,7 @@ package com.twitter.android.revenue.brandsurvey.di.view;
 
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 
-@l4j
+@d5j
 public interface BrandSurveyQuestionViewObjectGraph extends TwitterFragmentActivityViewObjectGraph
 {
 }

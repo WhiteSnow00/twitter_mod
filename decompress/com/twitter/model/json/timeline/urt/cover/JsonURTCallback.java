@@ -8,20 +8,20 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTCallback extends aih<lnv>
+public class JsonURTCallback extends tih<vov>
 {
     @JsonField
     public String a;
     
     @Override
     public final Object s() {
-        lnv lnv;
-        if (pjr.g((CharSequence)this.a)) {
-            lnv = new lnv(this.a);
+        vov vov;
+        if (flr.g((CharSequence)this.a)) {
+            vov = new vov(this.a);
         }
         else {
-            lnv = null;
+            vov = null;
         }
-        return lnv;
+        return vov;
     }
 }

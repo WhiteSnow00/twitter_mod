@@ -6,7 +6,7 @@ package com.twitter.app.legacy.di;
 
 import com.twitter.app.common.inject.retained.RetainedObjectGraph;
 
-@r4j
+@d5j
 public interface AbsPreferenceRetainedObjectGraph extends RetainedObjectGraph
 {
 }

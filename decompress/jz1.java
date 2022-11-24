@@ -2,44 +2,16 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jz1
+public final class jz1 extends jvb implements stb<Throwable, vzv>
 {
-    public static final rlp<jz1> g;
-    public final String a;
-    public final oxm b;
-    public final oxm c;
-    public final String d;
-    public kz1 e;
-    public lz1 f;
-    
-    static {
-        jz1.g = new jz1.jz1$a();
+    public jz1(final Object o) {
+        super(1, o, (Class)r9a.class, "logError", "logError(Ljava/lang/Throwable;)V", 0);
     }
     
-    public jz1(final jz1.jz1$b jz1$b) {
-        this.a = jz1$b.a;
-        this.b = jz1$b.b;
-        this.c = jz1$b.c;
-        this.d = jz1$b.d;
-        this.e = jz1$b.e;
-        this.f = jz1$b.f;
-    }
-    
-    @Override
-    public final String toString() {
-        final StringBuilder j = fu8.j("BirdwatchPivot{title=");
-        j.append(this.a);
-        j.append(" subtitle=");
-        j.append(this.b);
-        j.append(" footer=");
-        j.append(this.c);
-        j.append(" destinationUrl=");
-        j.append(this.d);
-        j.append(" callToAction=");
-        j.append(this.e);
-        j.append(" iconType=");
-        j.append(this.f);
-        j.append('}');
-        return j.toString();
+    public final Object invoke(final Object o) {
+        final Throwable t = (Throwable)o;
+        e0e.f((Object)t, "p0");
+        ((r9a)((ea3)this).receiver).f(t);
+        return vzv.a;
     }
 }

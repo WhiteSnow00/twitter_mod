@@ -10,22 +10,27 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTopicDetail extends aih<dlt>
+public class JsonTopicDetail extends tih<mmt>
 {
     @JsonField
     public JsonTextContent a;
     @JsonField
     public JsonTextContent b;
     
-    public final dlt t() {
-        final dlt$a dlt$a = new dlt$a();
+    @Override
+    public final /* bridge */ Object s() {
+        return this.t();
+    }
+    
+    public final mmt t() {
+        final mmt$a mmt$a = new mmt$a();
         final String a = this.a.a;
         final String s = "";
         String b = a;
         if (a == null) {
             b = "";
         }
-        dlt$a.b = b;
+        mmt$a.b = b;
         final JsonTextContent b2 = this.b;
         String a2 = s;
         if (b2 != null) {
@@ -34,7 +39,7 @@ public class JsonTopicDetail extends aih<dlt>
                 a2 = s;
             }
         }
-        dlt$a.c = a2;
-        return (dlt)((h4j)dlt$a).e();
+        mmt$a.c = a2;
+        return (mmt)((z4j)mmt$a).e();
     }
 }

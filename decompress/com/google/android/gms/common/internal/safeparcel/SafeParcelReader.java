@@ -13,9 +13,9 @@ import android.os.Parcel;
 
 public final class SafeParcelReader
 {
-    public static Bundle a(final Parcel parcel, int u) {
-        u = u(parcel, u);
-        final int dataPosition = parcel.dataPosition();
+    public static Bundle a(final Parcel parcel, int dataPosition) {
+        final int u = u(parcel, dataPosition);
+        dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -24,9 +24,9 @@ public final class SafeParcelReader
         return bundle;
     }
     
-    public static byte[] b(final Parcel parcel, int u) {
-        u = u(parcel, u);
-        final int dataPosition = parcel.dataPosition();
+    public static byte[] b(final Parcel parcel, int dataPosition) {
+        final int u = u(parcel, dataPosition);
+        dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -35,9 +35,9 @@ public final class SafeParcelReader
         return byteArray;
     }
     
-    public static int[] c(final Parcel parcel, int u) {
-        u = u(parcel, u);
-        final int dataPosition = parcel.dataPosition();
+    public static int[] c(final Parcel parcel, int dataPosition) {
+        final int u = u(parcel, dataPosition);
+        dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -46,9 +46,9 @@ public final class SafeParcelReader
         return intArray;
     }
     
-    public static <T extends Parcelable> T d(final Parcel parcel, int dataPosition, final Parcelable$Creator<T> parcelable$Creator) {
-        final int u = u(parcel, dataPosition);
-        dataPosition = parcel.dataPosition();
+    public static <T extends Parcelable> T d(final Parcel parcel, int u, final Parcelable$Creator<T> parcelable$Creator) {
+        u = u(parcel, u);
+        final int dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -57,9 +57,9 @@ public final class SafeParcelReader
         return (T)parcelable;
     }
     
-    public static String e(final Parcel parcel, int dataPosition) {
-        final int u = u(parcel, dataPosition);
-        dataPosition = parcel.dataPosition();
+    public static String e(final Parcel parcel, int u) {
+        u = u(parcel, u);
+        final int dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -79,9 +79,9 @@ public final class SafeParcelReader
         return stringArray;
     }
     
-    public static ArrayList<String> g(final Parcel parcel, int u) {
-        u = u(parcel, u);
-        final int dataPosition = parcel.dataPosition();
+    public static ArrayList<String> g(final Parcel parcel, int dataPosition) {
+        final int u = u(parcel, dataPosition);
+        dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -90,9 +90,9 @@ public final class SafeParcelReader
         return stringArrayList;
     }
     
-    public static <T> T[] h(final Parcel parcel, int dataPosition, final Parcelable$Creator<T> parcelable$Creator) {
-        final int u = u(parcel, dataPosition);
-        dataPosition = parcel.dataPosition();
+    public static <T> T[] h(final Parcel parcel, int u, final Parcelable$Creator<T> parcelable$Creator) {
+        u = u(parcel, u);
+        final int dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -116,7 +116,7 @@ public final class SafeParcelReader
         if (parcel.dataPosition() == n) {
             return;
         }
-        throw new ParseException(jxa.p(37, "Overread allowed size end=", n), parcel);
+        throw new ParseException(go9.p(37, "Overread allowed size end=", n), parcel);
     }
     
     public static boolean k(final Parcel parcel, final int n) {
@@ -161,9 +161,9 @@ public final class SafeParcelReader
         return parcel.readFloat();
     }
     
-    public static IBinder q(final Parcel parcel, int u) {
-        u = u(parcel, u);
-        final int dataPosition = parcel.dataPosition();
+    public static IBinder q(final Parcel parcel, int dataPosition) {
+        final int u = u(parcel, dataPosition);
+        dataPosition = parcel.dataPosition();
         if (u == 0) {
             return null;
         }
@@ -240,7 +240,7 @@ public final class SafeParcelReader
         sb.append(n2);
         sb.append(" got ");
         sb.append(n);
-        throw new ParseException(ta0.z(sb, " (0x", hexString, ")"), parcel);
+        throw new ParseException(wa0.y(sb, " (0x", hexString, ")"), parcel);
     }
     
     public static void y(final Parcel parcel, int u, final int n) {
@@ -254,7 +254,7 @@ public final class SafeParcelReader
         sb.append(n);
         sb.append(" got ");
         sb.append(u);
-        throw new ParseException(ta0.z(sb, " (0x", hexString, ")"), parcel);
+        throw new ParseException(wa0.y(sb, " (0x", hexString, ")"), parcel);
     }
     
     public static class ParseException extends RuntimeException
@@ -263,7 +263,7 @@ public final class SafeParcelReader
             final int dataPosition = parcel.dataPosition();
             final int dataSize = parcel.dataSize();
             final StringBuilder sb = new StringBuilder(String.valueOf(s).length() + 41);
-            bo1.z(sb, s, " Parcel: pos=", dataPosition, " size=");
+            m51.z(sb, s, " Parcel: pos=", dataPosition, " size=");
             sb.append(dataSize);
             super(sb.toString());
         }

@@ -7,19 +7,19 @@ package com.google.android.gms.common.api;
 public class ApiException extends Exception
 {
     @Deprecated
-    public final Status D0;
+    public final Status F0;
     
-    public ApiException(final Status d0) {
-        final int e0 = d0.E0;
-        String f0 = d0.F0;
-        if (f0 == null) {
-            f0 = "";
+    public ApiException(final Status f0) {
+        final int g0 = f0.G0;
+        String h0 = f0.H0;
+        if (h0 == null) {
+            h0 = "";
         }
-        final StringBuilder sb = new StringBuilder(String.valueOf(f0).length() + 13);
-        sb.append(e0);
+        final StringBuilder sb = new StringBuilder(String.valueOf(h0).length() + 13);
+        sb.append(g0);
         sb.append(": ");
-        sb.append(f0);
+        sb.append(h0);
         super(sb.toString());
-        this.D0 = d0;
+        this.F0 = f0;
     }
 }

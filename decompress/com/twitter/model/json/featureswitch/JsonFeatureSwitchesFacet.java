@@ -13,7 +13,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonFeatureSwitchesFacet extends fih<nta>
+public class JsonFeatureSwitchesFacet extends tih<uua>
 {
     @JsonField
     public String a;
@@ -24,16 +24,17 @@ public class JsonFeatureSwitchesFacet extends fih<nta>
     @JsonField
     public boolean d;
     @JsonField
-    public List<tta> e;
+    public List<ava> e;
     
+    @Override
     public final Object s() {
-        final qjg t = qjg.t();
+        final kkg t = kkg.t();
         final ArrayList e = this.e;
         if (e != null) {
-            for (final tta tta : e) {
-                t.w((Object)tta.a, (Object)tta);
+            for (final ava ava : e) {
+                t.w((Object)ava.a, (Object)ava);
             }
         }
-        return new nta(this.a, (Map)((n4j)t).e());
+        return new uua(this.a, (Map)((z4j)t).e());
     }
 }

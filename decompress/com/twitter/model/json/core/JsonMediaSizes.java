@@ -8,12 +8,13 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonMediaSizes extends fih<edq>
+public class JsonMediaSizes extends tih<beq>
 {
     @JsonField(name = { "large" })
     public JsonMediaSize a;
     
+    @Override
     public final Object s() {
-        return kih.c((fih)this.a);
+        return yih.c((tih)this.a);
     }
 }

@@ -41,11 +41,11 @@ public final class zv implements a
             final IvParameterSpec ivParameterSpec = new IvParameterSpec(this.c);
             try {
                 instance.init(2, secretKeySpec, ivParameterSpec);
-                ex = (InvalidAlgorithmParameterException)new v78(this.a, (b)ex);
+                ex = (InvalidAlgorithmParameterException)new x88(this.a, (b)ex);
                 this.d = new CipherInputStream((InputStream)ex, instance);
-                if (!((v78)ex).G0) {
-                    ((v78)ex).D0.a(((v78)ex).E0);
-                    ((v78)ex).G0 = true;
+                if (!((x88)ex).I0) {
+                    ((x88)ex).F0.a(((x88)ex).G0);
+                    ((x88)ex).I0 = true;
                 }
                 return -1L;
             }
@@ -78,9 +78,9 @@ public final class zv implements a
         return this.a.d();
     }
     
-    public final void g(final pyt pyt) {
-        Objects.requireNonNull(pyt);
-        this.a.g(pyt);
+    public final void g(final hzt hzt) {
+        Objects.requireNonNull(hzt);
+        this.a.g(hzt);
     }
     
     public final Uri m() {

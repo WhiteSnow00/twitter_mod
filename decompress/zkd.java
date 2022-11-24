@@ -1,91 +1,60 @@
-import android.view.ViewStub;
-import android.widget.TextSwitcher;
-import android.view.View;
-import android.content.res.Configuration;
+import java.util.NoSuchElementException;
+import j$.util.function.Consumer$VivifiedWrapper;
+import j$.util.Iterator$_CC;
+import j$.util.function.Consumer;
+import java.util.Iterator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class zkd
+public abstract class zkd<T> implements Iterator<T>, j$.util.Iterator
 {
-    public final Configuration a;
-    public View b;
-    public View c;
-    public vxj d;
-    public vxj e;
-    public TextSwitcher f;
-    public View g;
-    public View h;
-    public View i;
-    public final int j;
-    public final View k;
-    public final ViewStub l;
-    public final ahm<View> m;
-    public final int n;
+    public int F0;
+    public int G0;
+    public boolean H0;
     
-    public zkd(final View k, final int n, final int j, final Configuration a) {
-        final ahm e = ahm.e();
-        this.m = (ahm<View>)e;
-        this.a = a;
-        this.k = k;
-        final ViewStub l = (ViewStub)k.findViewById(n);
-        this.l = l;
-        this.j = j;
-        if (l == null) {
-            e.onNext((Object)(this.i = k.findViewById(j)));
-            e.onComplete();
-            final View i = this.i;
-            if (i != null) {
-                this.a(i);
-            }
-            if (this.i == null) {
-                wk0.b().a();
-            }
+    public zkd(final int f0) {
+        this.F0 = f0;
+    }
+    
+    public abstract T a(final int p0);
+    
+    public abstract void b(final int p0);
+    
+    public final void forEachRemaining(final Consumer consumer) {
+        Iterator$_CC.$default$forEachRemaining((Iterator)this, consumer);
+    }
+    
+    @Override
+    public final void forEachRemaining(final java.util.function.Consumer consumer) {
+        Iterator$_CC.$default$forEachRemaining((Iterator)this, Consumer$VivifiedWrapper.convert(consumer));
+    }
+    
+    @Override
+    public final boolean hasNext() {
+        return this.G0 < this.F0;
+    }
+    
+    @Override
+    public final T next() {
+        if (this.hasNext()) {
+            final T a = this.a(this.G0);
+            ++this.G0;
+            this.H0 = true;
+            return a;
         }
-        this.n = k.getMinimumHeight();
+        throw new NoSuchElementException();
     }
     
-    public abstract void a(final View p0);
-    
-    public final View b() {
-        this.e();
-        final View i = this.i;
-        jee.l((Object)i);
-        final View view = i;
-        return i;
-    }
-    
-    public final vxj c() {
-        this.e();
-        final vxj d = this.d;
-        jee.l((Object)d);
-        return d;
-    }
-    
-    public final vxj d() {
-        this.e();
-        final vxj e = this.e;
-        jee.l((Object)e);
-        return e;
-    }
-    
-    public final void e() {
-        if (this.i == null) {
-            final ViewStub l = this.l;
-            if (l != null && ((View)l).getParent() != null) {
-                final View inflate = this.l.inflate();
-                this.i = inflate;
-                this.m.onNext((Object)inflate);
-                this.m.onComplete();
-            }
-            else {
-                this.i = this.k.findViewById(this.j);
-            }
-            final View i = this.i;
-            if (i != null) {
-                this.a(i);
-            }
+    @Override
+    public final void remove() {
+        if (this.H0) {
+            this.b(--this.G0);
+            --this.F0;
+            this.H0 = false;
+            return;
         }
+        throw new IllegalStateException();
     }
 }

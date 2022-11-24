@@ -1,28 +1,31 @@
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
 import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class l9z implements j4j<ejz>
+public final class l9z implements b5j<kjz>
 {
     public static final l9z a;
     
     static {
+        final vry f0 = vry.F0;
         a = new l9z();
-        final vpy vpy = new vpy(0);
-        vpy.b = 1;
-        final qqy f = vpy.f();
+        final cry cry = new cry(1, f0);
         final HashMap hashMap = new HashMap();
-        final vpy l = sbl.l(f, hashMap, f, hashMap, 0);
-        l.b = 2;
-        final qqy f2 = l.f();
+        hashMap.put(cry.annotationType(), cry);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final cry cry2 = new cry(2, f0);
         final HashMap hashMap2 = new HashMap();
-        final vpy i = sbl.l(f2, hashMap2, f2, hashMap2, 0);
-        i.b = 3;
-        final qqy f3 = i.f();
-        final HashMap hashMap3 = new HashMap();
-        eta.i(f3, hashMap3, f3, hashMap3);
+        awg.i(cry2, hashMap2, cry2, hashMap2);
+    }
+    
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final kjz kjz = (kjz)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

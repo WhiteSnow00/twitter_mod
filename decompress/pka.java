@@ -1,27 +1,32 @@
-import com.twitter.android.explore.locations.ExploreLocationsViewModel;
-import java.util.List;
+import com.twitter.ui.components.text.legacy.TypefacesTextView;
+import android.view.View;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pka extends ste implements qsb<List<? extends uja>, fzv>
+public final class pka implements q7x$a
 {
-    public final ExploreLocationsViewModel D0;
-    public final String E0;
+    public final int F0;
+    public final Object G0;
     
-    public pka(final ExploreLocationsViewModel d0, final String e0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        super(1);
+    public pka(final Object g0, final int f0) {
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public final Object invoke(final Object o) {
-        final List list = (List)o;
-        final mv1 g0 = this.D0.G0;
-        final String e0 = this.E0;
-        czd.e((Object)list, "locations");
-        g0.onNext((Object)new ska(e0, list, false, false, false, 28));
-        return fzv.a;
+    public final q7x a(final View view) {
+        switch (this.F0) {
+            default: {
+                return (q7x)((mww$a)this.G0).a(view);
+            }
+            case 0: {
+                final kcm kcm = (kcm)this.G0;
+                final TypefacesTextView typefacesTextView = (TypefacesTextView)view;
+                e0e.f((Object)kcm, "$releaseCompletable");
+                e0e.f((Object)typefacesTextView, "view");
+                return (q7x)new oad(typefacesTextView, kcm);
+            }
+        }
     }
 }

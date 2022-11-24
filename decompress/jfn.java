@@ -2,19 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jfn extends kkl
+public final class jfn extends pue implements stb<wen, Boolean>
 {
-    public static final jfn D0;
+    public static final jfn F0;
     
     static {
-        D0 = new jfn();
+        F0 = new jfn();
     }
     
     public jfn() {
-        super((Class)zfn.class, "narrowCastSpaceType", "getNarrowCastSpaceType()Ltv/periscope/model/NarrowcastSpaceType;", 0);
+        super(1);
     }
     
-    public final Object get(final Object o) {
-        return ((zfn)o).q;
+    public final Object invoke(final Object o) {
+        final wen wen = (wen)o;
+        e0e.f((Object)wen, "it");
+        return wen.a;
     }
 }

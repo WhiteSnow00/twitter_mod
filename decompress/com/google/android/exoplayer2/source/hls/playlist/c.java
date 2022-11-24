@@ -33,7 +33,7 @@ public final class c extends cmc
     public final c.c$e v;
     
     public c(final int d, final String s, final List<String> list, final long n, final boolean g, long n2, final boolean i, final int j, final long k, final int l, final long m, final long n3, final boolean b, final boolean o, final boolean p20, final b q, final List<c.c$c> list2, final List<c.c$a> list3, final c.c$e v, final Map<Uri, c.c$b> map) {
-        super(s, list, b);
+        super(s, (List)list, b);
         this.d = d;
         this.h = n2;
         this.g = g;
@@ -46,16 +46,16 @@ public final class c extends cmc
         this.o = o;
         this.p = p20;
         this.q = q;
-        this.r = aed.q((Collection)list2);
-        this.s = aed.q((Collection)list3);
-        this.t = fed.c((Map<?, ?>)map);
+        this.r = eed.q((Collection<?>)list2);
+        this.s = eed.q((Collection<?>)list3);
+        this.t = jed.c((Map<?, ?>)map);
         if (!list3.isEmpty()) {
-            final c.c$a c$a = (c.c$a)fk7.H(list3);
-            this.u = ((c.c$d)c$a).G0 + ((c.c$d)c$a).E0;
+            final c.c$a c$a = (c.c$a)tpz.F(list3);
+            this.u = ((c.c$d)c$a).J0 + ((c.c$d)c$a).H0;
         }
         else if (!list2.isEmpty()) {
-            final c.c$c c$c = (c.c$c)fk7.H(list2);
-            this.u = ((c.c$d)c$c).G0 + ((c.c$d)c$c).E0;
+            final c.c$c c$c = (c.c$c)tpz.F(list2);
+            this.u = ((c.c$d)c$c).J0 + ((c.c$d)c$c).H0;
         }
         else {
             this.u = 0L;
@@ -74,7 +74,6 @@ public final class c extends cmc
         this.v = v;
     }
     
-    @Override
     public final Object a(final List list) {
         return this;
     }

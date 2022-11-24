@@ -1,34 +1,50 @@
-import android.os.RemoteException;
-import android.os.Parcel;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import android.os.Parcelable;
-import android.os.IInterface;
-import com.google.android.gms.common.api.a;
+import java.util.Iterator;
+import android.util.Log;
+import java.util.concurrent.TimeUnit;
+import android.content.Context;
 import com.google.android.gms.common.api.c;
-import com.google.android.gms.common.api.Status;
+import java.util.Set;
+import java.util.concurrent.Semaphore;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class m7y extends p7y<Status>
+public final class m7y extends ow0<Void> implements f7q
 {
-    public m7y(final c c) {
-        super(c);
+    public final Semaphore Q0;
+    public final Set<c> R0;
+    
+    public m7y(final Context context, final Set<c> r0) {
+        super(context);
+        this.Q0 = new Semaphore(0);
+        this.R0 = r0;
     }
     
-    public final /* bridge */ psm d(final Status status) {
-        return (psm)status;
+    public final void k() {
+        this.Q0.drainPermits();
+        this.i();
     }
     
-    public final void m(final a.b b) throws RemoteException {
-        final x6y x6y = (x6y)b;
-        final d8y d8y = (d8y)((bm1)x6y).D();
-        final j7y j7y = new j7y(this);
-        final GoogleSignInOptions j1 = x6y.j1;
-        final Parcel s = ((w5y)d8y).s();
-        t6y.c(s, (IInterface)j7y);
-        t6y.b(s, (Parcelable)j1);
-        ((w5y)d8y).x(103, s);
+    public final void onComplete() {
+        this.Q0.release();
+    }
+    
+    public final /* bridge */ Object r() {
+        final Iterator<c> iterator = this.R0.iterator();
+        int n = 0;
+        while (iterator.hasNext()) {
+            if (iterator.next().i((f7q)this)) {
+                ++n;
+            }
+        }
+        try {
+            this.Q0.tryAcquire(n, 5L, TimeUnit.SECONDS);
+        }
+        catch (final InterruptedException ex) {
+            Log.i("GACSignInLoader", "Unexpected InterruptedException", (Throwable)ex);
+            Thread.currentThread().interrupt();
+        }
+        return null;
     }
 }

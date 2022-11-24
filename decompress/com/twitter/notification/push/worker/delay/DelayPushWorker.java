@@ -19,37 +19,37 @@ import androidx.work.RxWorker;
 public final class DelayPushWorker extends RxWorker
 {
     public static final DelayPushWorker.DelayPushWorker$a Companion;
-    public final ol8 J0;
+    public final um8 L0;
     
     static {
         Companion = new DelayPushWorker.DelayPushWorker$a();
     }
     
     public DelayPushWorker(final Context context, final WorkerParameters workerParameters) {
-        czd.f((Object)context, "appContext");
-        czd.f((Object)workerParameters, "workerParams");
+        e0e.f((Object)context, "appContext");
+        e0e.f((Object)workerParameters, "workerParams");
         super(context, workerParameters);
-        final ol8 s4 = x68.i().S4();
-        czd.e((Object)s4, "get().delayPushWorkerDelegate");
-        this.J0 = s4;
+        final um8 s4 = o6f.b().S4();
+        e0e.e((Object)s4, "get().delayPushWorkerDelegate");
+        this.L0 = s4;
     }
     
-    public final eaq<c$a> h() {
-        final ol8 j0 = this.J0;
-        final b b = ((c)this).E0.b;
-        czd.e((Object)b, "inputData");
-        final int c = ((c)this).E0.c;
-        Objects.requireNonNull(j0);
+    public final bbq<c$a> h() {
+        final um8 l0 = this.L0;
+        final b b = ((c)this).G0.b;
+        e0e.e((Object)b, "inputData");
+        final int c = ((c)this).G0.c;
+        Objects.requireNonNull(l0);
         final long d = b.d("notification_id", 0L);
         final String e = b.e("scribe_target");
-        final UserIdentifier userIdentifier = (UserIdentifier)klp.a(b.c("recipient_id"), UserIdentifier.SERIALIZER);
-        eaq eaq;
+        final UserIdentifier userIdentifier = (UserIdentifier)gmp.a(b.c("recipient_id"), UserIdentifier.SERIALIZER);
+        bbq bbq;
         if (userIdentifier == null) {
-            eaq = eaq.v((Object)new c$a$a()).m((lj6)new fta((qsb)new pl8(j0, e), 27));
+            bbq = bbq.v((Object)new c$a$a()).m((rk6)new t3m((stb)new vm8(l0, e), 25));
         }
         else {
-            eaq = eaq.Q((lcq)j0.a.f(userIdentifier, d).m((lj6)new s05((qsb)new rl8(j0), 24)), (lcq)j0.a.c(userIdentifier), (zv1)new ew7((ftb)new ql8(j0), 3));
+            bbq = bbq.Q((idq)l0.a.f(userIdentifier, d).m((rk6)new p95((stb)new xm8(l0), 28)), (idq)l0.a.c(userIdentifier), (hw1)new hqf((hub)new wm8(l0), 4));
         }
-        return (eaq<c$a>)eaq;
+        return (bbq<c$a>)bbq;
     }
 }

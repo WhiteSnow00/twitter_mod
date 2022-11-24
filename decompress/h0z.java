@@ -2,25 +2,13 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class h0z
+public final class h0z extends zkz implements npz
 {
-    public abstract int a();
-    
-    public abstract long b();
-    
-    public abstract String c();
-    
-    public abstract boolean d();
-    
-    public abstract boolean e();
-    
-    public abstract byte[] f();
-    
-    public final boolean g() {
-        return this.c() != null && this.c().endsWith("/");
+    public h0z() {
+        super((bmz)k0z.s());
     }
     
-    public final boolean h() {
-        return this.a() == 0;
+    public h0z(final pk7 pk7) {
+        super((bmz)k0z.s());
     }
 }

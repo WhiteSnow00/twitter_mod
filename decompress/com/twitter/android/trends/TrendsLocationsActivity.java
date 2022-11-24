@@ -4,6 +4,6 @@
 
 package com.twitter.android.trends;
 
-public class TrendsLocationsActivity extends vmd
+public class TrendsLocationsActivity extends vnd
 {
 }

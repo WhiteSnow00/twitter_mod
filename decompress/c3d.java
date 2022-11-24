@@ -1,9 +1,8 @@
-import android.os.IInterface;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface c3d extends IInterface
+public interface c3d
 {
+    flc a(final float p0, final float p1);
 }

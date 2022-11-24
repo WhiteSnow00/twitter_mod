@@ -15,24 +15,24 @@ public final class h extends c
         final int c = super.b.c;
         int n2 = n;
         int n3 = 0;
-        Label_0100: {
-            Label_0094: {
+        Label_0096: {
+            Label_0092: {
                 if (c != 3) {
                     if (c != 4) {
                         n3 = n;
                         if (c == 268435456) {
-                            break Label_0100;
+                            break Label_0096;
                         }
                         if (c == 536870912) {
                             n2 = n / 3;
-                            break Label_0094;
+                            break Label_0092;
                         }
                         if (c != 805306368) {
                             throw new IllegalStateException();
                         }
                     }
                     n3 = n / 2;
-                    break Label_0100;
+                    break Label_0096;
                 }
             }
             n3 = n2 * 2;
@@ -74,7 +74,7 @@ public final class h extends c
             }
             else {
                 while (k < limit) {
-                    final short n6 = (short)(imw.h(byteBuffer.getFloat(k), -1.0f, 1.0f) * 32767.0f);
+                    final short n6 = (short)(rnw.h(byteBuffer.getFloat(k), -1.0f, 1.0f) * 32767.0f);
                     l.put((byte)(n6 & 0xFF));
                     l.put((byte)(n6 >> 8 & 0xFF));
                     k += 4;

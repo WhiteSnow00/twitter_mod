@@ -1,74 +1,161 @@
-import java.util.Objects;
-import java.util.List;
+import android.net.Uri;
+import android.text.TextUtils;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class n6w implements xq<m6w>
+public final class n6w
 {
-    public static final n6w a;
-    public static final List<String> b;
-    
-    static {
-        a = new n6w();
-        b = s9i.s("display_url", "expanded_url", "indices", "url");
-    }
-    
-    public final /* bridge */ void a(final ale ale, final fa7 fa7, final Object o) {
-        this.d(ale, fa7, (m6w)o);
-    }
-    
-    public final /* bridge */ Object b(final ohe ohe, final fa7 fa7) {
-        return this.c(ohe, fa7);
-    }
-    
-    public final m6w c(final ohe ohe, final fa7 fa7) {
-        czd.f((Object)ohe, "reader");
-        czd.f((Object)fa7, "customScalarAdapters");
-        String s = null;
-        String s2 = null;
-        String s3;
-        Object o = s3 = null;
-        while (true) {
-            final int j3 = ohe.j3((List)n6w.b);
-            if (j3 != 0) {
-                if (j3 != 1) {
-                    if (j3 != 2) {
-                        if (j3 != 3) {
-                            break;
-                        }
-                        s3 = (String)ar.i.b(ohe, fa7);
-                    }
-                    else {
-                        Objects.requireNonNull(ysd.Companion);
-                        o = ar.b((xq)ar.a((xq)fa7.a(ysd.a))).b(ohe, fa7);
-                    }
-                }
-                else {
-                    s2 = (String)ar.i.b(ohe, fa7);
-                }
-            }
-            else {
-                s = (String)ar.i.b(ohe, fa7);
+    public static int[] a(final String s) {
+        final int[] array = new int[4];
+        if (TextUtils.isEmpty((CharSequence)s)) {
+            array[0] = -1;
+            return array;
+        }
+        final int length = s.length();
+        int index = s.indexOf(35);
+        if (index == -1) {
+            index = length;
+        }
+        final int index2 = s.indexOf(63);
+        int n;
+        if (index2 == -1 || (n = index2) > index) {
+            n = index;
+        }
+        final int index3 = s.indexOf(47);
+        int n2;
+        if (index3 == -1 || (n2 = index3) > n) {
+            n2 = n;
+        }
+        int index4;
+        if ((index4 = s.indexOf(58)) > n2) {
+            index4 = -1;
+        }
+        final int n3 = index4 + 2;
+        int n4;
+        if (n3 < n && s.charAt(index4 + 1) == '/' && s.charAt(n3) == '/') {
+            final int index5 = s.indexOf(47, index4 + 3);
+            if (index5 == -1 || (n4 = index5) > n) {
+                n4 = n;
             }
         }
-        return new m6w(s, s2, (List)o, s3);
+        else {
+            n4 = index4 + 1;
+        }
+        array[0] = index4;
+        array[1] = n4;
+        array[2] = n;
+        array[3] = index;
+        return array;
     }
     
-    public final void d(final ale ale, final fa7 fa7, final m6w m6w) {
-        czd.f((Object)ale, "writer");
-        czd.f((Object)fa7, "customScalarAdapters");
-        czd.f((Object)m6w, "value");
-        ale.z1("display_url");
-        final i2j i = ar.i;
-        i.a(ale, fa7, (Object)m6w.a);
-        ale.z1("expanded_url");
-        i.a(ale, fa7, (Object)m6w.b);
-        ale.z1("indices");
-        Objects.requireNonNull(ysd.Companion);
-        ar.b((xq)ar.a((xq)fa7.a(ysd.a))).a(ale, fa7, (Object)m6w.c);
-        ale.z1("url");
-        i.a(ale, fa7, (Object)m6w.d);
+    public static String b(final StringBuilder sb, int i, int n) {
+        if (i >= n) {
+            return sb.toString();
+        }
+        int n2 = i;
+        if (sb.charAt(i) == '/') {
+            n2 = i + 1;
+        }
+        int n3;
+        i = (n3 = n2);
+        while (i <= n) {
+            int n4;
+            if (i == n) {
+                n4 = i;
+            }
+            else {
+                if (sb.charAt(i) != '/') {
+                    ++i;
+                    continue;
+                }
+                n4 = i + 1;
+            }
+            final int n5 = n3 + 1;
+            if (i == n5 && sb.charAt(n3) == '.') {
+                sb.delete(n3, n4);
+                n -= n4 - n3;
+            }
+            else {
+                if (i == n3 + 2 && sb.charAt(n3) == '.' && sb.charAt(n5) == '.') {
+                    i = sb.lastIndexOf("/", n3 - 2) + 1;
+                    int n6;
+                    if (i > n2) {
+                        n6 = i;
+                    }
+                    else {
+                        n6 = n2;
+                    }
+                    sb.delete(n6, n4);
+                    n -= n4 - n6;
+                }
+                else {
+                    ++i;
+                }
+                n3 = i;
+            }
+            i = n3;
+        }
+        return sb.toString();
+    }
+    
+    public static String c(String s, final String s2) {
+        final StringBuilder sb = new StringBuilder();
+        String s3 = s;
+        if (s == null) {
+            s3 = "";
+        }
+        if ((s = s2) == null) {
+            s = "";
+        }
+        final int[] a = a(s);
+        if (a[0] != -1) {
+            sb.append(s);
+            b(sb, a[1], a[2]);
+            return sb.toString();
+        }
+        final int[] a2 = a(s3);
+        if (a[3] == 0) {
+            sb.append(s3, 0, a2[3]);
+            sb.append(s);
+            return sb.toString();
+        }
+        if (a[2] == 0) {
+            sb.append(s3, 0, a2[2]);
+            sb.append(s);
+            return sb.toString();
+        }
+        if (a[1] != 0) {
+            final int n = a2[0] + 1;
+            sb.append(s3, 0, n);
+            sb.append(s);
+            return b(sb, a[1] + n, n + a[2]);
+        }
+        if (s.charAt(a[1]) == '/') {
+            sb.append(s3, 0, a2[1]);
+            sb.append(s);
+            return b(sb, a2[1], a2[1] + a[2]);
+        }
+        if (a2[0] + 2 < a2[1] && a2[1] == a2[2]) {
+            sb.append(s3, 0, a2[1]);
+            sb.append('/');
+            sb.append(s);
+            return b(sb, a2[1], a2[1] + a[2] + 1);
+        }
+        int lastIndex = s3.lastIndexOf(47, a2[2] - 1);
+        if (lastIndex == -1) {
+            lastIndex = a2[1];
+        }
+        else {
+            ++lastIndex;
+        }
+        sb.append(s3, 0, lastIndex);
+        sb.append(s);
+        return b(sb, a2[1], lastIndex + a[2]);
+    }
+    
+    public static Uri d(final String s, final String s2) {
+        return Uri.parse(c(s, s2));
     }
 }

@@ -1,4 +1,4 @@
-import android.net.Uri;
+import com.google.android.gms.auth.api.credentials.CredentialPickerConfig;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
 import android.os.Parcel;
 import android.os.Parcelable$Creator;
@@ -7,59 +7,71 @@ import android.os.Parcelable$Creator;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class o7y implements Parcelable$Creator<k6q>
+public final class o7y implements Parcelable$Creator<f77>
 {
     public final Object createFromParcel(final Parcel parcel) {
         final int w = SafeParcelReader.w(parcel);
-        String e = null;
-        Object e3;
-        Object e2 = e3 = null;
-        Object o;
-        String e4 = (String)(o = e3);
-        Object e6;
-        Object e5 = e6 = o;
+        String[] f = null;
+        CredentialPickerConfig credentialPickerConfig2;
+        CredentialPickerConfig credentialPickerConfig = credentialPickerConfig2 = null;
+        Object e2;
+        Object e = e2 = credentialPickerConfig2;
+        int r = 0;
+        boolean k = false;
+        boolean i = false;
+        boolean j = false;
         while (parcel.dataPosition() < w) {
             final int int1 = parcel.readInt();
-            switch ((char)int1) {
-                default: {
-                    SafeParcelReader.v(parcel, int1);
-                    continue;
+            final char c = (char)int1;
+            if (c != '\u03e8') {
+                switch (c) {
+                    default: {
+                        SafeParcelReader.v(parcel, int1);
+                        continue;
+                    }
+                    case 8: {
+                        j = SafeParcelReader.k(parcel, int1);
+                        continue;
+                    }
+                    case 7: {
+                        e2 = SafeParcelReader.e(parcel, int1);
+                        continue;
+                    }
+                    case 6: {
+                        e = SafeParcelReader.e(parcel, int1);
+                        continue;
+                    }
+                    case 5: {
+                        i = SafeParcelReader.k(parcel, int1);
+                        continue;
+                    }
+                    case 4: {
+                        credentialPickerConfig2 = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<CredentialPickerConfig>)CredentialPickerConfig.CREATOR);
+                        continue;
+                    }
+                    case 3: {
+                        credentialPickerConfig = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<CredentialPickerConfig>)CredentialPickerConfig.CREATOR);
+                        continue;
+                    }
+                    case 2: {
+                        f = SafeParcelReader.f(parcel, int1);
+                        continue;
+                    }
+                    case 1: {
+                        k = SafeParcelReader.k(parcel, int1);
+                        continue;
+                    }
                 }
-                case '\u0007': {
-                    e6 = SafeParcelReader.e(parcel, int1);
-                    continue;
-                }
-                case '\u0006': {
-                    e5 = SafeParcelReader.e(parcel, int1);
-                    continue;
-                }
-                case '\u0005': {
-                    o = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<Uri>)Uri.CREATOR);
-                    continue;
-                }
-                case '\u0004': {
-                    e4 = SafeParcelReader.e(parcel, int1);
-                    continue;
-                }
-                case '\u0003': {
-                    e3 = SafeParcelReader.e(parcel, int1);
-                    continue;
-                }
-                case '\u0002': {
-                    e2 = SafeParcelReader.e(parcel, int1);
-                    continue;
-                }
-                case '\u0001': {
-                    e = SafeParcelReader.e(parcel, int1);
-                    continue;
-                }
+            }
+            else {
+                r = SafeParcelReader.r(parcel, int1);
             }
         }
         SafeParcelReader.j(parcel, w);
-        return new k6q(e, (String)e2, (String)e3, e4, (Uri)o, (String)e5, (String)e6);
+        return new f77(r, k, f, credentialPickerConfig, credentialPickerConfig2, i, (String)e, (String)e2, j);
     }
     
     public final /* bridge */ Object[] newArray(final int n) {
-        return new k6q[n];
+        return new f77[n];
     }
 }

@@ -6,7 +6,7 @@ package com.twitter.app.safety.mutedkeywords.di.retained;
 
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@r4j
+@d5j
 public interface MutedKeywordsRetainedObjectGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
 }

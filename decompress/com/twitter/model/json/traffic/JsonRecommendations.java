@@ -13,7 +13,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonRecommendations extends aih<aq6>
+public class JsonRecommendations extends tih<mq6>
 {
     @JsonField
     public long a;
@@ -28,35 +28,35 @@ public class JsonRecommendations extends aih<aq6>
         Object o = null;
         if (b > 0L) {
             if (this.c == null) {
-                final ged$b c0 = ged.C0;
-                final int a = w4j.a;
-                this.c = (Map<String, JsonServerRecommendation>)c0;
+                final ked$b f0 = ked.F0;
+                final int a = o5j.a;
+                this.c = (Map<String, JsonServerRecommendation>)f0;
             }
-            final ijf$a ijf$a = new ijf$a(this.c.size());
+            final ojf$a ojf$a = new ojf$a(this.c.size());
             for (final Map.Entry<String, V> entry : this.c.entrySet()) {
                 final String s = entry.getKey();
                 final JsonServerRecommendation jsonServerRecommendation = (JsonServerRecommendation)entry.getValue();
-                if (pjr.g((CharSequence)s) && jsonServerRecommendation != null && jsonServerRecommendation.s()) {
-                    ij1.b(jsonServerRecommendation.s());
+                if (flr.g((CharSequence)s) && jsonServerRecommendation != null && jsonServerRecommendation.s()) {
+                    fj1.b(jsonServerRecommendation.s());
                     Object o2;
                     if (jsonServerRecommendation.a != null) {
-                        o2 = new hwm(s, jsonServerRecommendation.a);
+                        o2 = new oxm(s, jsonServerRecommendation.a);
                     }
                     else if (jsonServerRecommendation.b != null) {
                         final JsonPrediction b2 = jsonServerRecommendation.b;
-                        o2 = new stk(s, b2.a, (List)b2.b, b2.c, (Map)b2.d);
+                        o2 = new ruk(s, b2.a, (List)b2.b, b2.c, (Map)b2.d);
                     }
                     else {
-                        ij1.h("impossible");
+                        fj1.h("impossible");
                         o2 = null;
                     }
-                    ((ijf)ijf$a).p(o2);
+                    ((ojf)ojf$a).p(o2);
                 }
             }
-            final t3s a2 = mq1.a;
+            final g5s a2 = nq1.a;
             final long currentTimeMillis = System.currentTimeMillis();
             final TimeUnit seconds = TimeUnit.SECONDS;
-            o = new aq6(seconds.toMillis(this.b) + currentTimeMillis, seconds.toMillis(this.a) + System.currentTimeMillis(), (List)((h4j)ijf$a).e());
+            o = new mq6(seconds.toMillis(this.b) + currentTimeMillis, seconds.toMillis(this.a) + System.currentTimeMillis(), (List)((z4j)ojf$a).e());
         }
         return o;
     }

@@ -8,9 +8,9 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineConversationAnnotation extends aih<nts>
+public class JsonTimelineConversationAnnotation extends tih<yus>
 {
-    @JsonField(typeConverter = lq6.class)
+    @JsonField(typeConverter = xq6.class)
     public int a;
     @JsonField
     public String b;
@@ -19,10 +19,10 @@ public class JsonTimelineConversationAnnotation extends aih<nts>
     
     @Override
     public final Object s() {
-        final nts$a nts$a = new nts$a();
-        nts$a.a = this.a;
-        nts$a.b = this.b;
-        nts$a.c = this.c;
-        return ((h4j)nts$a).e();
+        final yus$a yus$a = new yus$a();
+        yus$a.a = this.a;
+        yus$a.b = this.b;
+        yus$a.c = this.c;
+        return ((z4j)yus$a).e();
     }
 }

@@ -1,25 +1,60 @@
-import java.util.concurrent.TimeUnit;
+import android.os.BaseBundle;
+import android.os.Bundle;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class b0a implements eow
+public final class b0a extends cl1
 {
-    public final gwo a;
+    public static final b0a.b0a$b Companion;
+    public final String c;
+    public final String d;
+    public final qgv e;
+    public final String f;
+    public final jji g;
+    public final sfv h;
     
-    public b0a(final gwo a) {
-        this.a = a;
+    static {
+        Companion = new b0a.b0a$b();
     }
     
-    public final h5j<how> a(final how how) {
-        final int a = how.a;
-        if (a == 3) {
-            return (h5j<how>)h5j.just((Object)how);
+    public b0a(final Bundle bundle) {
+        super(bundle);
+        final String string = ((BaseBundle)((am1)this).a).getString("title");
+        e0e.c((Object)string);
+        this.c = string;
+        final String string2 = ((BaseBundle)((am1)this).a).getString("revue_url");
+        e0e.c((Object)string2);
+        this.d = string2;
+        final Object a = gmp.a(((am1)this).a.getByteArray("current_profile_user"), (nmp)qgv.P1);
+        e0e.c(a);
+        this.e = (qgv)a;
+        final String string3 = ((BaseBundle)((am1)this).a).getString("account_id");
+        e0e.c((Object)string3);
+        this.f = string3;
+        final Object a2 = gmp.a(((am1)this).a.getByteArray("newsletter_source"), (nmp)new sx6((Class)jji.class));
+        e0e.c(a2);
+        this.g = (jji)a2;
+        this.h = (sfv)gmp.a(((am1)this).a.getByteArray("twitter_scribe_association"), (nmp)sfv.i);
+    }
+    
+    public static final class a extends cl1$a<b0a, a>
+    {
+        public a() {
+            super(800);
         }
-        if (a == 4) {
-            return (h5j<how>)h5j.just((Object)how).delay(3000L, TimeUnit.MILLISECONDS, this.a);
+        
+        public final bl1 x() {
+            return (bl1)new e0a();
         }
-        return (h5j<how>)h5j.just((Object)how).delay(800L, TimeUnit.MILLISECONDS, this.a);
+        
+        public final a z(final jji jji) {
+            e0e.f((Object)jji, "newsletterSource");
+            final Bundle a = ((am1.a)this).a;
+            final rx6$h a2 = rx6.a;
+            a.putByteArray("newsletter_source", gmp.e((Object)jji, (nmp)new sx6((Class)jji.class)));
+            return this;
+        }
     }
 }

@@ -4,12 +4,12 @@
 
 package com.twitter.rooms.ui.core.consumptionpreview.di;
 
-public final class b extends gue implements rtb<aki, Boolean>
+public final class b extends pue implements stb<uki, Boolean>
 {
-    public static final b C0;
+    public static final b F0;
     
     static {
-        C0 = new b();
+        F0 = new b();
     }
     
     public b() {
@@ -17,8 +17,8 @@ public final class b extends gue implements rtb<aki, Boolean>
     }
     
     public final Object invoke(final Object o) {
-        final aki aki = (aki)o;
-        zzd.f((Object)aki, "it");
-        return aki.a;
+        final uki uki = (uki)o;
+        e0e.f((Object)uki, "it");
+        return uki.a;
     }
 }

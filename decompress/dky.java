@@ -1,77 +1,47 @@
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
-import java.util.Arrays;
-import java.math.RoundingMode;
-import java.util.Objects;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dky
+public final class dky extends ohy
 {
-    public final String a;
-    public final char[] b;
-    public final int c;
-    public final int d;
-    public final int e;
-    public final int f;
-    public final byte[] g;
+    public dky() {
+        super.a.add(qly.H0);
+        super.a.add(qly.y1);
+        super.a.add(qly.B1);
+    }
     
-    public dky(String concat, final char[] b) {
-        this.a = concat;
-        Objects.requireNonNull(b);
-        this.b = b;
-        try {
-            final int d0 = w9i.d0(b.length, RoundingMode.UNNECESSARY);
-            this.d = d0;
-            final int min = Math.min(8, Integer.lowestOneBit(d0));
-            try {
-                this.e = 8 / min;
-                this.f = d0 / min;
-                this.c = b.length - 1;
-                final byte[] g = new byte[128];
-                Arrays.fill(g, (byte)(-1));
-                final int n = 0;
-                for (int i = 0; i < b.length; ++i) {
-                    final char c = b[i];
-                    g63.k0(c < '\u0080', "Non-ASCII character: %s", c);
-                    g63.k0(g[c] == -1, "Duplicate character: %s", c);
-                    g[c] = (byte)i;
-                }
-                this.g = g;
-                final boolean[] array = new boolean[this.e];
-                for (int j = n; j < this.f; ++j) {
-                    array[w9i.c0(j << 3, this.d, RoundingMode.CEILING)] = true;
-                }
+    @Override
+    public final kfy a(final String s, final y7z y7z, final List list) {
+        final qly g0 = qly.G0;
+        final int ordinal = ((Enum)vbz.e(s)).ordinal();
+        if (ordinal != 1) {
+            if (ordinal == 47) {
+                final qly y1 = qly.y1;
+                vbz.h("NOT", 1, list);
+                return (kfy)new icy(Boolean.valueOf(y7z.d((kfy)list.get(0)).j() ^ true));
             }
-            catch (final ArithmeticException ex) {
-                concat = new String(b);
-                if (concat.length() != 0) {
-                    concat = "Illegal alphabet ".concat(concat);
-                }
-                else {
-                    concat = new String("Illegal alphabet ");
-                }
-                throw new IllegalArgumentException(concat, ex);
+            if (ordinal != 50) {
+                this.b(s);
+                throw null;
             }
+            final qly b1 = qly.B1;
+            vbz.h("OR", 2, list);
+            final kfy d = y7z.d((kfy)list.get(0));
+            if (d.j()) {
+                return d;
+            }
+            return y7z.d((kfy)list.get(1));
         }
-        catch (final ArithmeticException ex2) {
-            throw new IllegalArgumentException(jxa.p(35, "Illegal alphabet length ", b.length), ex2);
+        else {
+            final qly h0 = qly.H0;
+            vbz.h("AND", 2, list);
+            final kfy d2 = y7z.d((kfy)list.get(0));
+            if (!d2.j()) {
+                return d2;
+            }
+            return y7z.d((kfy)list.get(1));
         }
-    }
-    
-    @Override
-    public final boolean equals(@NullableDecl final Object o) {
-        return o instanceof dky && Arrays.equals(this.b, ((dky)o).b);
-    }
-    
-    @Override
-    public final int hashCode() {
-        return Arrays.hashCode(this.b);
-    }
-    
-    @Override
-    public final String toString() {
-        return this.a;
     }
 }

@@ -1,34 +1,56 @@
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.Animatable;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class w6d extends vj1
+public final class w6d
 {
-    public long b;
-    public x6d c;
+    public static final nmp<w6d> e;
+    public int a;
+    public int b;
+    public int c;
+    public int d;
     
-    public w6d(final x6d c) {
-        this.b = -1L;
-        this.c = c;
+    static {
+        w6d.e = new w6d.w6d$b();
+    }
+    
+    public w6d(final a a) {
+        this.a = a.a;
+        this.b = a.b;
+        this.c = a.c;
+        this.d = a.d;
     }
     
     @Override
-    public final void d(final String s, final Object o, final Animatable animatable) {
-        final long currentTimeMillis = System.currentTimeMillis();
-        final x6d c = this.c;
-        if (c != null) {
-            final long b = this.b;
-            final na8 na8 = (na8)c;
-            na8.V0 = currentTimeMillis - b;
-            ((Drawable)na8).invalidateSelf();
+    public final boolean equals(final Object o) {
+        boolean b = true;
+        if (this == o) {
+            return true;
         }
+        if (o != null && w6d.class == o.getClass()) {
+            final w6d w6d = (w6d)o;
+            if (this.a != w6d.a || this.b != w6d.b || this.c != w6d.c || this.d != w6d.d) {
+                b = false;
+            }
+            return b;
+        }
+        return false;
     }
     
     @Override
-    public final void e(final String s, final Object o) {
-        this.b = System.currentTimeMillis();
+    public final int hashCode() {
+        return o5j.i((Object)this.a, (Object)this.b, (Object)this.c, (Object)this.d);
+    }
+    
+    public static final class a extends z4j<w6d>
+    {
+        public int a;
+        public int b;
+        public int c;
+        public int d;
+        
+        public final Object i() {
+            return new w6d(this);
+        }
     }
 }

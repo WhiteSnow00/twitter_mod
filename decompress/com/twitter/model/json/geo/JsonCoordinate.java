@@ -9,14 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCoordinate extends fih<dv6>
+public class JsonCoordinate extends tih<jw6>
 {
     @JsonField
     public double a;
     @JsonField
     public double b;
     
+    @Override
     public final Object s() {
-        return new dv6(this.a, this.b);
+        return new jw6(this.a, this.b);
     }
 }

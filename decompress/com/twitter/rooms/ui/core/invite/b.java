@@ -8,12 +8,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.List;
 
-public final class b extends ste implements qsb<wpn, wpn>
+public final class b extends pue implements stb<mqn, mqn>
 {
-    public static final b D0;
+    public static final b F0;
     
     static {
-        D0 = new b();
+        F0 = new b();
     }
     
     public b() {
@@ -21,8 +21,8 @@ public final class b extends ste implements qsb<wpn, wpn>
     }
     
     public final Object invoke(final Object o) {
-        final wpn wpn = (wpn)o;
-        czd.f((Object)wpn, "$this$setState");
-        return wpn.l(wpn, (gpn)null, (List)f2a.D0, (Integer)null, false, (Set)p2a.D0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
+        final mqn mqn = (mqn)o;
+        e0e.f((Object)mqn, "$this$setState");
+        return mqn.l(mqn, (xpn)null, (List)h3a.F0, (Integer)null, false, (Set)r3a.F0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
     }
 }

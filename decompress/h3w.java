@@ -1,30 +1,42 @@
-import com.twitter.subscriptions.preferences.api.UpdateSettingsDataSourceException;
-import com.twitter.async.http.HttpRequestResultException;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class h3w extends omm<ruv, pmi, i3w>
+public final class h3w extends k5j<f3w>
 {
+    public static final h3w b;
+    
+    static {
+        b = new h3w();
+    }
+    
     public h3w() {
-        super((psc)null, 1, (hg8)null);
+        super(2);
     }
     
-    public final ksc c(final Object o) {
-        final ruv ruv = (ruv)o;
-        zzd.f((Object)ruv, "args");
-        return (ksc)new i3w(ruv);
-    }
-    
-    public final Object d(final ksc ksc) {
-        final i3w i3w = (i3w)ksc;
-        zzd.f((Object)i3w, "request");
-        final tsc t = ((ksc)i3w).T();
-        zzd.e((Object)t, "request.result");
-        if (t.b && t.g != null) {
-            return pmi.a;
+    public final Object d(final rmp rmp, final int n) {
+        e0e.f((Object)rmp, "input");
+        final long a = rmp.A();
+        final String c = rmp.C();
+        e0e.e((Object)c, "input.readNotNullString()");
+        final long a2 = rmp.A();
+        final long a3 = rmp.A();
+        if (n < 2) {
+            rmp.u();
         }
-        throw new UpdateSettingsDataSourceException((Throwable)HttpRequestResultException.a((tsc<?, Object>)t));
+        final String c2 = rmp.C();
+        e0e.e((Object)c2, "input.readNotNullString()");
+        final f3w f3w = new f3w(a, c, a2, a3, c2);
+        if (n < 1) {
+            rmp.A();
+        }
+        return f3w;
+    }
+    
+    public final void f(final smp smp, final Object o) {
+        final f3w f3w = (f3w)o;
+        e0e.f((Object)smp, "output");
+        e0e.f((Object)f3w, "entry");
+        smp.A(f3w.c).G(f3w.d).A(f3w.e).A(f3w.f).G(f3w.g);
     }
 }

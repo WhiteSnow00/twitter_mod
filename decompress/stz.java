@@ -2,18 +2,25 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class stz implements rtz
+public final class stz implements dgz
 {
-    public static final tcz a;
+    public static final stz G0;
+    public final dgz F0;
     
     static {
-        a = (tcz)new edz(icz.a(), true, true).c("measurement.audience.dynamic_filters.oob_fix", true);
+        G0 = new stz();
     }
     
-    public final void a() {
+    public stz() {
+        final igz igz = new igz((Object)new utz());
+        this.F0 = yru.M((dgz)igz);
     }
     
-    public final boolean c() {
-        return (boolean)((mdz)stz.a).b();
+    public final /* bridge */ Object a() {
+        return this.b();
+    }
+    
+    public final ttz b() {
+        return (ttz)this.F0.a();
     }
 }

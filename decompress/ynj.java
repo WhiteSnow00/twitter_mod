@@ -1,105 +1,123 @@
-import org.checkerframework.checker.nullness.qual.EnsuresNonNullIf;
-import com.google.android.exoplayer2.ParserException;
-import java.util.List;
-import com.google.android.exoplayer2.n;
-import com.google.android.exoplayer2.n$a;
-import java.util.Arrays;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ynj extends oir
+public final class ynj
 {
-    public static final byte[] n;
-    public static final byte[] o;
+    public final znj a;
+    public final qnj b;
+    public final snj c;
+    public final onj d;
+    public final xnj e;
     
-    static {
-        n = new byte[] { 79, 112, 117, 115, 72, 101, 97, 100 };
-        o = new byte[] { 79, 112, 117, 115, 84, 97, 103, 115 };
+    public ynj() {
+        this(null, null, null, null, 31);
     }
     
-    public static boolean f(final mwj mwj, final byte[] array) {
-        final int c = mwj.c;
-        final int b = mwj.b;
-        if (c - b < array.length) {
-            return false;
+    public ynj(znj a, qnj b, snj c, onj d, final int n) {
+        if ((n & 0x1) != 0x0) {
+            a = null;
         }
-        final byte[] array2 = new byte[array.length];
-        mwj.d(array2, 0, array.length);
-        mwj.D(b);
-        return Arrays.equals(array2, array);
+        if ((n & 0x2) != 0x0) {
+            b = null;
+        }
+        if ((n & 0x4) != 0x0) {
+            c = null;
+        }
+        if ((n & 0x8) != 0x0) {
+            d = null;
+        }
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = null;
     }
     
-    public final long c(final mwj mwj) {
-        final byte[] a = mwj.a;
-        final int n = a[0] & 0xFF;
-        final int n2 = n & 0x3;
-        final int n3 = 2;
-        int n4;
-        if (n2 != 0) {
-            n4 = n3;
-            if (n2 != 1) {
-                n4 = n3;
-                if (n2 != 2) {
-                    n4 = (a[1] & 0x3F);
-                }
-            }
-        }
-        else {
-            n4 = 1;
-        }
-        final int n5 = n >> 3;
-        final int n6 = n5 & 0x3;
-        int n7;
-        if (n5 >= 16) {
-            n7 = 2500 << n6;
-        }
-        else if (n5 >= 12) {
-            n7 = 10000 << (n6 & 0x1);
-        }
-        else if (n6 == 3) {
-            n7 = 60000;
-        }
-        else {
-            n7 = 10000 << n6;
-        }
-        return this.a(n4 * (long)n7);
+    public ynj(final znj a, final qnj b, final snj c, final onj d, final xnj e) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
     }
     
-    @EnsuresNonNullIf(expression = { "#3.format" }, result = false)
-    public final boolean d(final mwj mwj, final long n, final oir$a oir$a) throws ParserException {
-        final boolean f = f(mwj, ynj.n);
-        boolean b = false;
-        if (f) {
-            final byte[] copy = Arrays.copyOf(mwj.a, mwj.c);
-            final byte b2 = copy[9];
-            final List m = fk7.m(copy);
-            if (oir$a.a == null) {
-                b = true;
-            }
-            ri4.t(b);
-            final n$a n$a = new n$a();
-            n$a.k = "audio/opus";
-            n$a.x = (b2 & 0xFF);
-            n$a.y = 48000;
-            n$a.m = m;
-            oir$a.a = new n(n$a);
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
             return true;
         }
-        if (!f(mwj, ynj.o)) {
-            ri4.y((Object)oir$a.a);
+        if (!(o instanceof ynj)) {
             return false;
         }
-        ri4.y((Object)oir$a.a);
-        mwj.E(8);
-        final x8h b3 = vgx.b((List<String>)aed.r((Object[])vgx.c(mwj, false, false).a));
-        if (b3 == null) {
-            return true;
+        final ynj ynj = (ynj)o;
+        return e0e.a((Object)this.a, (Object)ynj.a) && e0e.a((Object)this.b, (Object)ynj.b) && e0e.a((Object)this.c, (Object)ynj.c) && e0e.a((Object)this.d, (Object)ynj.d) && e0e.a((Object)this.e, (Object)ynj.e);
+    }
+    
+    @Override
+    public final int hashCode() {
+        final znj a = this.a;
+        int n = 1;
+        int hashCode = 0;
+        int a2;
+        if (a == null) {
+            a2 = 0;
         }
-        final n$a n$a2 = new n$a(oir$a.a);
-        n$a2.i = b3.b(oir$a.a.L0);
-        oir$a.a = new n(n$a2);
-        return true;
+        else if ((a2 = (a.a ? 1 : 0)) != 0) {
+            a2 = 1;
+        }
+        final qnj b = this.b;
+        int hashCode2;
+        if (b == null) {
+            hashCode2 = 0;
+        }
+        else {
+            hashCode2 = b.hashCode();
+        }
+        final snj c = this.c;
+        int a3;
+        if (c == null) {
+            a3 = 0;
+        }
+        else if ((a3 = (c.a ? 1 : 0)) != 0) {
+            a3 = 1;
+        }
+        final onj d = this.d;
+        if (d == null) {
+            n = 0;
+        }
+        else {
+            final int a4 = d.a ? 1 : 0;
+            if (a4 == 0) {
+                n = a4;
+            }
+        }
+        final xnj e = this.e;
+        if (e != null) {
+            hashCode = e.hashCode();
+        }
+        return (((a2 * 31 + hashCode2) * 31 + a3) * 31 + n) * 31 + hashCode;
+    }
+    
+    @Override
+    public final String toString() {
+        final znj a = this.a;
+        final qnj b = this.b;
+        final snj c = this.c;
+        final onj d = this.d;
+        final xnj e = this.e;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("OpenbackSignals(openbackUnlockSignal=");
+        sb.append(a);
+        sb.append(", openbackDeviceDecisionsSignal=");
+        sb.append(b);
+        sb.append(", openbackHeadphonesSignal=");
+        sb.append(c);
+        sb.append(", openbackBatteryChargingStatus=");
+        sb.append(d);
+        sb.append(", openbackRingerVolumeSignal=");
+        sb.append(e);
+        sb.append(")");
+        return sb.toString();
     }
 }

@@ -1,39 +1,24 @@
-import java.util.Set;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public enum kph
+public final class kph extends fys implements fys$a
 {
-    D0, 
-    E0, 
-    F0, 
-    G0, 
-    H0, 
-    I0, 
-    J0, 
-    K0, 
-    L0, 
-    M0, 
-    N0;
+    public final iph j;
     
-    public static final Set<kph> O0;
-    public static final kph[] P0;
+    public kph(final String s, final long n, final b1p b1p, final kws kws, final long n2, final iph j, final boolean b, final pmh pmh) {
+        super(s, n, b1p, kws, n2, b, (c2t)null, pmh);
+        this.j = j;
+    }
     
-    static {
-        final kph kph;
-        final kph kph2;
-        final kph kph3;
-        final kph kph4;
-        final kph kph5;
-        final kph kph6;
-        final kph kph7;
-        final kph kph8;
-        final kph kph9;
-        final kph kph10;
-        final kph kph11;
-        P0 = new kph[] { kph, kph2, kph3, kph4, kph5, kph6, kph7, kph8, kph9, kph10, kph11 };
-        O0 = dnp.t((Object)kph5, (Object[])new kph[] { kph6, kph3, kph7, kph4, kph11 });
+    public final tvs.a a(final y4c y4c, final lsm lsm) {
+        final jph$a jph$a = new jph$a();
+        jph$a.p = this.j;
+        ((tvs.a)jph$a).c = ((yvs)this).c;
+        ((tvs.a)jph$a).f = super.e;
+        ((tvs.a)jph$a).a = ((yvs)this).b;
+        ((tvs.a)jph$a).n = super.h;
+        ((tvs.a)jph$a).o = super.i;
+        return (tvs.a)jph$a;
     }
 }

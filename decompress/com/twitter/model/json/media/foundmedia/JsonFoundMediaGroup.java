@@ -11,32 +11,33 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonFoundMediaGroup extends fih<kmb>
+public class JsonFoundMediaGroup extends tih<lnb>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     @JsonField
-    public List<mmb> c;
+    public List<nnb> c;
     @JsonField
-    public mmb d;
+    public nnb d;
     
+    @Override
     public final Object s() {
-        if (ikr.e((CharSequence)this.a)) {
-            i48.t("JsonFoundMediaGroup has no display name");
+        if (flr.e((CharSequence)this.a)) {
+            mqb.o("JsonFoundMediaGroup has no display name");
         }
-        else if (ikr.e((CharSequence)this.b)) {
-            i48.t("JsonFoundMediaGroup has no id");
+        else if (flr.e((CharSequence)this.b)) {
+            mqb.o("JsonFoundMediaGroup has no id");
         }
-        else if (fq4.t((Collection)this.c)) {
-            i48.t("JsonFoundMediaGroup has no thumbnail images");
+        else if (kr4.t((Collection)this.c)) {
+            mqb.o("JsonFoundMediaGroup has no thumbnail images");
         }
         else {
             if (this.d != null) {
-                return new kmb(this.a, this.b, mmb.a((List)this.c));
+                return new lnb(this.a, this.b, nnb.a((List)this.c));
             }
-            i48.t("JsonFoundMediaGroup has no original image");
+            mqb.o("JsonFoundMediaGroup has no original image");
         }
         return null;
     }

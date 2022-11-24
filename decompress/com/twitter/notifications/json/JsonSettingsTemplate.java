@@ -11,25 +11,44 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSettingsTemplate extends qhh<nqp>
+public class JsonSettingsTemplate extends eih<irp>
 {
     @JsonField
-    public nqp$d a;
+    public irp$d a;
     @JsonField
     public List<String> b;
     @JsonField
-    public List<nqp$b> c;
+    public List<irp$b> c;
     
-    public final n4j t() {
-        final nqp$a nqp$a = new nqp$a();
-        nqp$a.a = this.a;
-        nqp$a.b = this.b;
-        nqp$a.c = this.c;
-        return (n4j)nqp$a;
+    public final z4j t() {
+        final irp$a irp$a = new irp$a();
+        irp$a.a = this.a;
+        irp$a.b = this.b;
+        irp$a.c = this.c;
+        return (z4j)irp$a;
     }
     
     @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-    public static class JsonNotificationSettingSectionEntry extends qhh<nqp$c>
+    public static class JsonNotificationSettingSection extends eih<irp$b>
+    {
+        @JsonField
+        public String a;
+        @JsonField
+        public String b;
+        @JsonField
+        public List<irp$c> c;
+        
+        public final z4j t() {
+            final irp$b$a irp$b$a = new irp$b$a();
+            irp$b$a.a = this.a;
+            irp$b$a.b = this.b;
+            irp$b$a.c = this.c;
+            return (z4j)irp$b$a;
+        }
+    }
+    
+    @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
+    public static class JsonNotificationSettingSectionEntry extends eih<irp$c>
     {
         @JsonField
         public String a;
@@ -62,29 +81,29 @@ public class JsonSettingsTemplate extends qhh<nqp>
         @JsonField
         public boolean o;
         
-        public final n4j t() {
-            final nqp$c$a nqp$c$a = new nqp$c$a();
-            nqp$c$a.a = this.a;
-            nqp$c$a.b = this.b;
-            nqp$c$a.c = this.c;
-            nqp$c$a.d = this.d;
-            nqp$c$a.e = this.e;
-            nqp$c$a.f = this.f;
-            nqp$c$a.g = this.g;
-            nqp$c$a.h = this.h;
-            nqp$c$a.i = this.i;
-            nqp$c$a.j = this.j;
-            nqp$c$a.k = this.k;
-            nqp$c$a.l = this.l;
-            nqp$c$a.m = this.m;
-            nqp$c$a.n = this.n;
-            nqp$c$a.o = this.o;
-            return (n4j)nqp$c$a;
+        public final z4j t() {
+            final irp$c$a irp$c$a = new irp$c$a();
+            irp$c$a.a = this.a;
+            irp$c$a.b = this.b;
+            irp$c$a.c = this.c;
+            irp$c$a.d = this.d;
+            irp$c$a.e = this.e;
+            irp$c$a.f = this.f;
+            irp$c$a.g = this.g;
+            irp$c$a.h = this.h;
+            irp$c$a.i = this.i;
+            irp$c$a.j = this.j;
+            irp$c$a.k = this.k;
+            irp$c$a.l = this.l;
+            irp$c$a.m = this.m;
+            irp$c$a.n = this.n;
+            irp$c$a.o = this.o;
+            return (z4j)irp$c$a;
         }
     }
     
     @JsonObject
-    public static class JsonSettingsTemplateDoc extends qhh<nqp$d>
+    public static class JsonSettingsTemplateDoc extends eih<irp$d>
     {
         @JsonField
         public String a;
@@ -93,12 +112,12 @@ public class JsonSettingsTemplate extends qhh<nqp>
         @JsonField
         public String c;
         
-        public final n4j t() {
-            final nqp$d$a nqp$d$a = new nqp$d$a();
-            nqp$d$a.a = this.a;
-            nqp$d$a.b = this.b;
-            nqp$d$a.c = this.c;
-            return (n4j)nqp$d$a;
+        public final z4j t() {
+            final irp$d$a irp$d$a = new irp$d$a();
+            irp$d$a.a = this.a;
+            irp$d$a.b = this.b;
+            irp$d$a.c = this.c;
+            return (z4j)irp$d$a;
         }
     }
 }

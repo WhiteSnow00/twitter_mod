@@ -8,12 +8,12 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineNews extends aih<tzs>
+public class JsonTimelineNews extends tih<c1t>
 {
-    @JsonField(typeConverter = ffi.class)
+    @JsonField(typeConverter = zfi.class)
     public int a;
     @JsonField
-    public q7t b;
+    public c9t b;
     @JsonField
     public String c;
     @JsonField
@@ -21,21 +21,21 @@ public class JsonTimelineNews extends aih<tzs>
     @JsonField
     public String e;
     @JsonField(typeConverter = d.class)
-    public d4t f;
+    public o5t f;
     @JsonField
     public String g;
     @JsonField
-    public moj h;
+    public hpj h;
     
     @Override
     public final Object s() {
-        final tzs.a a = new tzs.a();
+        final c1t.a a = new c1t.a();
         a.a = this.a;
         a.b = this.c;
         a.f = this.d;
         a.c = this.b;
         a.d = this.e;
-        a.e = poa.V(this.f);
+        a.e = ix.w(this.f);
         a.g = this.g;
         a.h = this.h;
         return a.j();

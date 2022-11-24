@@ -17,68 +17,68 @@ import java.lang.ref.WeakReference;
 
 public class LifecycleCallback
 {
-    public final vaf D0;
+    public final rbf F0;
     
-    public LifecycleCallback(final vaf d0) {
-        this.D0 = d0;
+    public LifecycleCallback(final rbf f0) {
+        this.F0 = f0;
     }
     
-    public static vaf c(final daf daf) {
-        final Activity a = daf.a;
-        if (a instanceof cnb) {
-            final cnb cnb = (cnb)a;
-            final WeakHashMap d1 = usy.D1;
-            final WeakReference weakReference = d1.get(cnb);
-            Object o = null;
+    public static rbf c(final abf abf) {
+        final Activity a = abf.a;
+        if (a instanceof dob) {
+            final dob dob = (dob)a;
+            final WeakHashMap<dob, WeakReference<rty>> f1 = rty.F1;
+            final WeakReference weakReference = f1.get(dob);
+            rty rty = null;
             if (weakReference != null) {
-                if ((o = weakReference.get()) != null) {
-                    return (vaf)o;
+                if ((rty = (rty)weakReference.get()) != null) {
+                    return rty;
                 }
             }
             try {
-                final usy usy = (usy)cnb.P().H("SupportLifecycleFragmentImpl");
+                final rty rty2 = (rty)dob.P().H("SupportLifecycleFragmentImpl");
                 Label_0108: {
-                    if (usy != null) {
-                        o = usy;
-                        if (!((Fragment)usy).P0) {
+                    if (rty2 != null) {
+                        rty = rty2;
+                        if (!rty2.R0) {
                             break Label_0108;
                         }
                     }
-                    o = new usy();
-                    final a a2 = new a(cnb.P());
-                    a2.e(0, (Fragment)o, "SupportLifecycleFragmentImpl", 1);
+                    rty = new rty();
+                    final a a2 = new a(dob.P());
+                    a2.e(0, (Fragment)rty, "SupportLifecycleFragmentImpl", 1);
                     a2.j();
                 }
-                d1.put(cnb, new WeakReference(o));
-                return (vaf)o;
+                f1.put(dob, new WeakReference<rty>(rty));
+                return rty;
             }
             catch (final ClassCastException ex) {
                 throw new IllegalStateException("Fragment with tag SupportLifecycleFragmentImpl is not a SupportLifecycleFragmentImpl", ex);
             }
         }
         if (a instanceof Activity) {
-            final WeakHashMap g0 = tiy.G0;
-            final WeakReference weakReference2 = g0.get(a);
-            Object o2 = null;
+            final WeakHashMap<Activity, WeakReference<njy>> i0 = njy.I0;
+            final WeakReference weakReference2 = i0.get(a);
+            njy njy = null;
             if (weakReference2 != null) {
-                if ((o2 = weakReference2.get()) != null) {
-                    return (vaf)o2;
+                if ((njy = (njy)weakReference2.get()) != null) {
+                    return njy;
                 }
             }
             try {
-                final tiy tiy = (tiy)a.getFragmentManager().findFragmentByTag("LifecycleFragmentImpl");
+                final njy njy2 = (njy)a.getFragmentManager().findFragmentByTag("LifecycleFragmentImpl");
                 Label_0225: {
-                    if (tiy != null) {
-                        o2 = tiy;
-                        if (!((android.app.Fragment)tiy).isRemoving()) {
+                    if (njy2 != null) {
+                        njy = njy2;
+                        if (!njy2.isRemoving()) {
                             break Label_0225;
                         }
                     }
-                    o2 = new tiy();
-                    a.getFragmentManager().beginTransaction().add((android.app.Fragment)o2, "LifecycleFragmentImpl").commitAllowingStateLoss();
+                    njy = new njy();
+                    a.getFragmentManager().beginTransaction().add((android.app.Fragment)njy, "LifecycleFragmentImpl").commitAllowingStateLoss();
                 }
-                g0.put(a, new WeakReference(o2));
-                return (vaf)o2;
+                i0.put(a, new WeakReference<njy>(njy));
+                return njy;
             }
             catch (final ClassCastException ex2) {
                 throw new IllegalStateException("Fragment with tag LifecycleFragmentImpl is not a LifecycleFragmentImpl", ex2);
@@ -88,7 +88,7 @@ public class LifecycleCallback
     }
     
     @Keep
-    private static vaf getChimeraLifecycleFragmentImpl(final daf daf) {
+    private static rbf getChimeraLifecycleFragmentImpl(final abf abf) {
         throw new IllegalStateException("Method not available in SDK.");
     }
     
@@ -96,8 +96,8 @@ public class LifecycleCallback
     }
     
     public final Activity b() {
-        final Activity o0 = this.D0.o0();
-        eli.q(o0);
+        final Activity o0 = this.F0.o0();
+        iuk.C((Object)o0);
         return o0;
     }
     

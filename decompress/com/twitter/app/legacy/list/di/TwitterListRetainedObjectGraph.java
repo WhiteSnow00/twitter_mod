@@ -6,7 +6,7 @@ package com.twitter.app.legacy.list.di;
 
 import com.twitter.app.common.inject.retained.RetainedObjectGraph;
 
-@r4j
+@d5j
 public interface TwitterListRetainedObjectGraph extends RetainedObjectGraph
 {
 }

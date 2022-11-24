@@ -1,19 +1,37 @@
-import android.os.Parcel;
+import android.os.RemoteException;
 import android.os.Parcelable$Creator;
+import com.google.android.gms.maps.model.CameraPosition;
+import android.os.Parcel;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class yqz extends sd
+public abstract class yqz extends qiy implements aoz
 {
-    public static final Parcelable$Creator<yqz> CREATOR;
-    
-    static {
-        CREATOR = (Parcelable$Creator)new ctz();
+    public yqz() {
+        super("com.google.android.gms.maps.internal.IOnCameraChangeListener");
     }
     
-    public final void writeToParcel(final Parcel parcel, final int n) {
-        ri4.A0(parcel, ri4.x0(parcel, 20293));
+    public final boolean s(int a, final Parcel parcel, final Parcel parcel2) throws RemoteException {
+        if (a == 1) {
+            final Parcelable$Creator creator = CameraPosition.CREATOR;
+            a = coy.a;
+            Object o;
+            if (parcel.readInt() == 0) {
+                o = null;
+            }
+            else {
+                o = creator.createFromParcel(parcel);
+            }
+            final CameraPosition cameraPosition = (CameraPosition)o;
+            final n5w n5w = (n5w)((izz)this).a;
+            final x5c x5c = (x5c)n5w.G0;
+            x5c.b((yrb)n5w.H0);
+            x5c.c((x5c$a)null);
+            parcel2.writeNoException();
+            return true;
+        }
+        return false;
     }
 }

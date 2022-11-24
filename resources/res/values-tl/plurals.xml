@@ -238,7 +238,7 @@
     </plurals>
     <plurals name="member_count">
         <item quantity="one">%s Miyembro</item>
-        <item quantity="other">%s (na) Miyembro</item>
+        <item quantity="other">%s Miyembro</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minuto</item>
@@ -305,8 +305,8 @@
         <item quantity="other">%d pang iba</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super Follower</item>
-        <item quantity="other">Mga Super Follower</item>
+        <item quantity="one">Subscriber</item>
+        <item quantity="other">Mga Subscriber</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s (na) Gusto</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Sumasagot kay ﻿%1$s at %2$d pang iba﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Sumasagot kay ﻿%1$s at sa %2$d pa﻿. Makikita rin ng iba pang Super Follower ang sagot mo.</item>
+        <item quantity="other">Sumasagot kay ﻿%1$s at %2$d pang iba﻿. Makikita rin ng iba pang Subscriber ang sagot mo.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Sumasagot kay ﻿%1$s at sa %2$d pa﻿ sa ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Sumasagot kay ﻿%1$s %2$s at %3$d pang iba﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Sumasagot kina ﻿%1$s %2$s at sa %3$d pa﻿. Makikita rin ng iba pang Super Follower ang sagot mo.</item>
+        <item quantity="other">Sumasagot kay ﻿%1$s %2$s at %3$d sa iba pa﻿. Makikita rin ng iba pang Subscriber ang sagot mo.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Sumasagot kay ﻿%1$s %2$s at sa %3$d pa﻿ sa ﻿%4$s﻿</item>

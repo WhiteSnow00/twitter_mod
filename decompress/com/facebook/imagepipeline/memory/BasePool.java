@@ -14,33 +14,33 @@ import java.util.Objects;
 import java.util.Set;
 import android.util.SparseArray;
 
-public abstract class BasePool<V> implements fqk<V>
+public abstract class BasePool<V> implements ark<V>
 {
-    public final Class<?> C0;
-    public final f4h D0;
-    public final iqk E0;
-    public final SparseArray<rq2<V>> F0;
-    public final Set<V> G0;
-    public boolean H0;
-    public final BasePool.BasePool$a I0;
-    public final BasePool.BasePool$a J0;
-    public final jqk K0;
-    public boolean L0;
+    public final Class<?> F0;
+    public final x4h G0;
+    public final drk H0;
+    public final SparseArray<zq2<V>> I0;
+    public final Set<V> J0;
+    public boolean K0;
+    public final BasePool.BasePool$a L0;
+    public final BasePool.BasePool$a M0;
+    public final erk N0;
+    public boolean O0;
     
-    public BasePool(final f4h d0, final iqk e0, final jqk k0) {
-        this.C0 = this.getClass();
-        Objects.requireNonNull(d0);
-        this.D0 = d0;
-        Objects.requireNonNull(e0);
-        this.E0 = e0;
-        Objects.requireNonNull(k0);
-        this.K0 = k0;
-        this.F0 = (SparseArray<rq2<V>>)new SparseArray();
-        Objects.requireNonNull(e0);
+    public BasePool(final x4h g0, final drk h0, final erk n0) {
+        this.F0 = this.getClass();
+        Objects.requireNonNull(g0);
+        this.G0 = g0;
+        Objects.requireNonNull(h0);
+        this.H0 = h0;
+        Objects.requireNonNull(n0);
+        this.N0 = n0;
+        this.I0 = (SparseArray<zq2<V>>)new SparseArray();
+        Objects.requireNonNull(h0);
         this.r(new SparseIntArray(0));
-        this.G0 = Collections.newSetFromMap(new IdentityHashMap<V, Boolean>());
-        this.J0 = new BasePool.BasePool$a();
-        this.I0 = new BasePool.BasePool$a();
+        this.J0 = Collections.newSetFromMap(new IdentityHashMap<V, Boolean>());
+        this.M0 = new BasePool.BasePool$a();
+        this.L0 = new BasePool.BasePool$a();
     }
     
     public final void b(final V v) {
@@ -49,69 +49,69 @@ public abstract class BasePool<V> implements fqk<V>
         final int m = this.m(l);
         synchronized (this) {
             synchronized (this) {
-                final rq2 rq2 = (rq2)this.F0.get(l);
+                final zq2 zq2 = (zq2)this.I0.get(l);
                 monitorexit(this);
-                final boolean remove = this.G0.remove(v);
+                final boolean remove = this.J0.remove(v);
                 boolean b = false;
                 if (!remove) {
-                    dli.n((Class)this.C0, "release (free, value unrecognized) (object, size) = (%x, %s)", new Object[] { System.identityHashCode(v), l });
+                    fr0.o((Class)this.F0, "release (free, value unrecognized) (object, size) = (%x, %s)", new Object[] { System.identityHashCode(v), l });
                     this.i(v);
-                    this.K0.d();
+                    this.N0.d();
                 }
-                else if (rq2 != null && rq2.b() + rq2.e <= rq2.b && !this.p() && this.q(v)) {
-                    rq2.d((Object)v);
-                    this.J0.b(m);
-                    this.I0.a(m);
-                    this.K0.c();
-                    if (dli.H(2)) {
+                else if (zq2 != null && zq2.b() + zq2.e <= zq2.b && !this.p() && this.q(v)) {
+                    zq2.d(v);
+                    this.M0.b(m);
+                    this.L0.a(m);
+                    this.N0.c();
+                    if (fr0.I(2)) {
                         System.identityHashCode(v);
                     }
                 }
                 else {
-                    if (rq2 != null) {
-                        if (rq2.e > 0) {
+                    if (zq2 != null) {
+                        if (zq2.e > 0) {
                             b = true;
                         }
-                        ri4.w(b);
-                        --rq2.e;
+                        xd.M(b);
+                        --zq2.e;
                     }
-                    if (dli.H(2)) {
+                    if (fr0.I(2)) {
                         System.identityHashCode(v);
                     }
                     this.i(v);
-                    this.I0.a(m);
-                    this.K0.d();
+                    this.L0.a(m);
+                    this.N0.d();
                 }
                 this.s();
             }
         }
     }
     
-    public final void f(final d4h d4h) {
+    public final void f(final v4h v4h) {
         synchronized (this) {
-            Objects.requireNonNull(this.E0);
-            final ArrayList<rq2> list = new ArrayList<rq2>(this.F0.size());
+            Objects.requireNonNull(this.H0);
+            final ArrayList<zq2> list = new ArrayList<zq2>(this.I0.size());
             final SparseIntArray sparseIntArray = new SparseIntArray();
             final int n = 0;
-            for (int i = 0; i < this.F0.size(); ++i) {
-                final Object value = this.F0.valueAt(i);
+            for (int i = 0; i < this.I0.size(); ++i) {
+                final Object value = this.I0.valueAt(i);
                 Objects.requireNonNull(value);
-                final rq2 rq2 = (rq2)value;
-                if (rq2.b() > 0) {
-                    list.add(rq2);
+                final zq2 zq2 = (zq2)value;
+                if (zq2.b() > 0) {
+                    list.add(zq2);
                 }
-                sparseIntArray.put(this.F0.keyAt(i), rq2.e);
+                sparseIntArray.put(this.I0.keyAt(i), zq2.e);
             }
             this.r(sparseIntArray);
-            final BasePool.BasePool$a j0 = this.J0;
-            j0.a = 0;
-            j0.b = 0;
+            final BasePool.BasePool$a m0 = this.M0;
+            m0.a = 0;
+            m0.b = 0;
             this.s();
             monitorexit(this);
-            for (int k = n; k < list.size(); ++k) {
-                final rq2 rq3 = list.get(k);
+            for (int j = n; j < list.size(); ++j) {
+                final zq2 zq3 = list.get(j);
                 while (true) {
-                    final Object c = rq3.c();
+                    final Object c = zq3.c();
                     if (c == null) {
                         break;
                     }
@@ -127,64 +127,64 @@ public abstract class BasePool<V> implements fqk<V>
         synchronized (this) {
             final boolean p = this.p();
             final boolean b = false;
-            ri4.w(!p || this.J0.b == 0);
+            xd.M(!p || this.M0.b == 0);
             monitorexit(this);
-            n = this.k(n);
+            final int k = this.k(n);
             synchronized (this) {
-                final rq2<Object> j = this.j(n);
+                final zq2<V> j = this.j(k);
                 if (j != null) {
-                    final Object n2 = this.n(j);
+                    final Object n2 = this.n((zq2<Object>)j);
                     if (n2 != null) {
-                        ri4.w(this.G0.add((V)n2));
+                        xd.M(this.J0.add((V)n2));
                         n = this.m(this.l((V)n2));
-                        this.I0.b(n);
-                        this.J0.a(n);
-                        this.K0.h();
+                        this.L0.b(n);
+                        this.M0.a(n);
+                        this.N0.h();
                         this.s();
-                        if (dli.H(2)) {
+                        if (fr0.I(2)) {
                             System.identityHashCode(n2);
                         }
                         return (V)n2;
                     }
                 }
-                final int m = this.m(n);
-                if (this.h(m)) {
-                    this.I0.b(m);
+                n = this.m(k);
+                if (this.h(n)) {
+                    this.L0.b(n);
                     if (j != null) {
                         ++j.e;
                     }
                     monitorexit(this);
                     V g = null;
-                    Label_0265: {
+                    Label_0263: {
                         try {
-                            g = this.g(n);
-                            break Label_0265;
+                            g = this.g(k);
+                            break Label_0263;
                         }
                         finally {
                             synchronized (this) {
-                                this.I0.a(m);
-                                final rq2<V> i = this.j(n);
+                                this.L0.a(n);
+                                final zq2<V> i = this.j(k);
                                 if (i != null) {
                                     boolean b2 = b;
                                     if (i.e > 0) {
                                         b2 = true;
                                     }
-                                    ri4.w(b2);
+                                    xd.M(b2);
                                     --i.e;
                                 }
                                 monitorexit(this);
                                 final Throwable t;
-                                lux.i(t);
+                                lp7.s0(t);
                                 synchronized (this) {
-                                    ri4.w(this.G0.add(g));
+                                    xd.M(this.J0.add(g));
                                     synchronized (this) {
                                         if (this.p()) {
-                                            this.u(this.E0.b);
+                                            this.u(this.H0.b);
                                         }
                                         monitorexit(this);
-                                        this.K0.f();
+                                        this.N0.f();
                                         this.s();
-                                        if (dli.H(2)) {
+                                        if (fr0.I(2)) {
                                             System.identityHashCode(g);
                                         }
                                         return g;
@@ -194,29 +194,29 @@ public abstract class BasePool<V> implements fqk<V>
                         }
                     }
                 }
-                throw new BasePool.BasePool$PoolSizeViolationException(this.E0.a, this.I0.b, this.J0.b, m);
+                throw new BasePool.BasePool$PoolSizeViolationException(this.H0.a, this.L0.b, this.M0.b, n);
             }
         }
     }
     
     public final boolean h(final int n) {
         synchronized (this) {
-            if (this.L0) {
+            if (this.O0) {
                 return true;
             }
-            final iqk e0 = this.E0;
-            final int a = e0.a;
-            final int b = this.I0.b;
+            final drk h0 = this.H0;
+            final int a = h0.a;
+            final int b = this.L0.b;
             if (n > a - b) {
-                this.K0.g();
+                this.N0.g();
                 return false;
             }
-            final int b2 = e0.b;
-            if (n > b2 - (b + this.J0.b)) {
+            final int b2 = h0.b;
+            if (n > b2 - (b + this.M0.b)) {
                 this.u(b2 - n);
             }
-            if (n > a - (this.I0.b + this.J0.b)) {
-                this.K0.g();
+            if (n > a - (this.L0.b + this.M0.b)) {
+                this.N0.g();
                 return false;
             }
             return true;
@@ -225,18 +225,18 @@ public abstract class BasePool<V> implements fqk<V>
     
     public abstract void i(final V p0);
     
-    public final rq2<V> j(final int n) {
+    public final zq2<V> j(final int n) {
         synchronized (this) {
-            final rq2 rq2 = (rq2)this.F0.get(n);
-            if (rq2 == null && this.H0) {
-                if (dli.H(2)) {
-                    final int d0 = dli.D0;
+            final zq2 zq2 = (zq2)this.I0.get(n);
+            if (zq2 == null && this.K0) {
+                if (fr0.I(2)) {
+                    final int f0 = fr0.F0;
                 }
-                final rq2<V> t = this.t(n);
-                this.F0.put(n, (Object)t);
+                final zq2<V> t = this.t(n);
+                this.I0.put(n, (Object)t);
                 return t;
             }
-            return (rq2<V>)rq2;
+            return zq2;
         }
     }
     
@@ -246,26 +246,26 @@ public abstract class BasePool<V> implements fqk<V>
     
     public abstract int m(final int p0);
     
-    public V n(final rq2<V> rq2) {
+    public V n(final zq2<V> zq2) {
         synchronized (this) {
-            final Object c = rq2.c();
+            final V c = zq2.c();
             if (c != null) {
-                ++rq2.e;
+                ++zq2.e;
             }
-            return (V)c;
+            return c;
         }
     }
     
     public final void o() {
-        this.D0.a((e4h)this);
-        this.K0.e();
+        this.G0.a((w4h)this);
+        this.N0.e();
     }
     
     public final boolean p() {
         synchronized (this) {
-            final boolean b = this.I0.b + this.J0.b > this.E0.b;
+            final boolean b = this.L0.b + this.M0.b > this.H0.b;
             if (b) {
-                this.K0.b();
+                this.N0.b();
             }
             return b;
         }
@@ -278,78 +278,78 @@ public abstract class BasePool<V> implements fqk<V>
     
     public final void r(final SparseIntArray sparseIntArray) {
         synchronized (this) {
-            this.F0.clear();
-            final SparseIntArray c = this.E0.c;
+            this.I0.clear();
+            final SparseIntArray c = this.H0.c;
             if (c != null) {
                 for (int i = 0; i < c.size(); ++i) {
                     final int key = c.keyAt(i);
                     final int value = c.valueAt(i);
                     final int value2 = sparseIntArray.get(key, 0);
-                    final SparseArray<rq2<V>> f0 = this.F0;
+                    final SparseArray<zq2<V>> i2 = this.I0;
                     final int m = this.m(key);
-                    Objects.requireNonNull(this.E0);
-                    f0.put(key, (Object)new rq2(m, value, value2));
+                    Objects.requireNonNull(this.H0);
+                    i2.put(key, (Object)new zq2(m, value, value2));
                 }
-                this.H0 = false;
+                this.K0 = false;
             }
             else {
-                this.H0 = true;
+                this.K0 = true;
             }
         }
     }
     
     @SuppressLint({ "InvalidAccessToGuardedField" })
     public final void s() {
-        if (dli.H(2)) {
-            final int a = this.I0.a;
-            final int b = this.I0.b;
-            final int a2 = this.J0.a;
-            final int b2 = this.J0.b;
-            final int d0 = dli.D0;
+        if (fr0.I(2)) {
+            final int a = this.L0.a;
+            final int b = this.L0.b;
+            final int a2 = this.M0.a;
+            final int b2 = this.M0.b;
+            final int f0 = fr0.F0;
         }
     }
     
-    public rq2<V> t(int m) {
+    public zq2<V> t(int m) {
         m = this.m(m);
-        Objects.requireNonNull(this.E0);
-        return (rq2<V>)new rq2(m, Integer.MAX_VALUE, 0);
+        Objects.requireNonNull(this.H0);
+        return new zq2<V>(m, Integer.MAX_VALUE, 0);
     }
     
     public final void u(int n) {
         synchronized (this) {
-            final int b = this.I0.b;
-            final int b2 = this.J0.b;
+            final int b = this.L0.b;
+            final int b2 = this.M0.b;
             int i = Math.min(b + b2 - n, b2);
             if (i <= 0) {
                 return;
             }
-            if (dli.H(2)) {
-                dli.b0("trimToSize: TargetSize = %d; Initial Size = %d; Bytes to free = %d", (Object)n, (Object)(this.I0.b + this.J0.b), (Object)i);
+            if (fr0.I(2)) {
+                fr0.j0("trimToSize: TargetSize = %d; Initial Size = %d; Bytes to free = %d", (Object)n, (Object)(this.L0.b + this.M0.b), (Object)i);
             }
             this.s();
             Object value;
-            rq2 rq2;
+            zq2 zq2;
             Object c;
             int a;
-            for (n = 0; n < this.F0.size() && i > 0; ++n) {
-                value = this.F0.valueAt(n);
+            for (n = 0; n < this.I0.size() && i > 0; ++n) {
+                value = this.I0.valueAt(n);
                 Objects.requireNonNull(value);
-                rq2 = (rq2)value;
+                zq2 = (zq2)value;
                 while (i > 0) {
-                    c = rq2.c();
+                    c = zq2.c();
                     if (c == null) {
                         break;
                     }
                     this.i((V)c);
-                    a = rq2.a;
+                    a = zq2.a;
                     i -= a;
-                    this.J0.a(a);
+                    this.M0.a(a);
                 }
             }
             this.s();
-            if (dli.H(2)) {
-                n = this.I0.b;
-                n = this.J0.b;
+            if (fr0.I(2)) {
+                n = this.L0.b;
+                n = this.M0.b;
             }
         }
     }

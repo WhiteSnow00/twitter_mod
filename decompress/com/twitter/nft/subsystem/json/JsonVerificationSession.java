@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonVerificationSession extends fih<csw>
+public class JsonVerificationSession extends tih<rsw>
 {
     @JsonField(name = { "token" })
     public String a;
@@ -18,7 +18,8 @@ public class JsonVerificationSession extends fih<csw>
     @JsonField(name = { "bridge_url" })
     public String c;
     
+    @Override
     public final Object s() {
-        return new csw(this.a, this.b, this.c);
+        return new rsw(this.a, this.b, this.c);
     }
 }

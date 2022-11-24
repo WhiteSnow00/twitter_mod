@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Yeni Tweetler için bildirim alacaksın.</item>
-        <item>Yeni Süper Takipçilere özel Tweetler için bildirim alacaksın.</item>
+        <item>Yeni Abonelik Tweetleri için bildirim alacaksın.</item>
         <item>Yeni canlı video Tweetleri için bildirim alacaksın.</item>
         <item>Yeni Sohbet Odası Tweetleri için bildirim alacaksın.</item>
         <item>Bundan sonra yeni Tweetler için bildirim almayacaksın.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweetler</item>
-        <item>Süper Takipçilere özel Tweetler</item>
+        <item>Abonelik Tweetleri</item>
         <item>Canlı video</item>
         <item>Sohbet Odaları</item>
         <item>Yok</item>
     </array>
     <array name="account_notif_options_old">
         <item>Tüm Tweetler</item>
-        <item>Yalnızca Süper Takip Tweetleri</item>
+        <item>Aboneliğe Özel Tweetler</item>
         <item>Yalnızca canlı video</item>
         <item>Yalnızca Sohbet Odaları</item>
         <item>Kapalı</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Bu hesabın tüm Tweetleri için bildirim al.</item>
-        <item>Yalnızca Süper Takip Tweetleri için bildirim al.</item>
+        <item>Yalnızca Abonelik Tweetleri için bildirim al.</item>
         <item>Yalnızca canlı yayın için bildirim al.</item>
         <item>Yalnızca Sohbet Odaları için bildirim al</item>
         <item>Bu hesabın Tweetleri için bildirimleri kapat.</item>

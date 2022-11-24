@@ -1,32 +1,53 @@
-import com.google.android.gms.common.api.a$b;
-import com.google.android.gms.common.api.a$d;
-import com.google.android.gms.common.api.b$a;
-import android.content.Context;
-import com.google.android.gms.common.api.a;
-import com.google.android.gms.common.api.b;
+import android.os.RemoteException;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.common.api.Status;
+import android.os.Parcelable$Creator;
+import android.os.Parcel;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class n4y extends b<wcs>
+public abstract class n4y extends r2y implements u4y
 {
-    public static final a.a<q4y, wcs> k;
-    public static final a<wcs> l;
-    
-    static {
-        l = new a("ClientTelemetry.API", (a.a)(n4y.k = new l4y()), new a.g());
+    public n4y() {
+        super("com.google.android.gms.signin.internal.ISignInCallbacks");
     }
     
-    public n4y(final Context context, final wcs wcs) {
-        super(context, (com.google.android.gms.common.api.a<a$d>)n4y.l, (a$d)wcs, b$a.c);
-    }
-    
-    public final zas<Void> l(final vcs vcs) {
-        final dbs$a dbs$a = new dbs$a();
-        dbs$a.c = new bta[] { b3y.a };
-        dbs$a.b = false;
-        dbs$a.a = (jcm)new rdf((Object)vcs);
-        return this.k(2, (dbs<a$b, Void>)dbs$a.a());
+    @Override
+    public final boolean V1(final int n, final Parcel parcel, final Parcel parcel2) throws RemoteException {
+        switch (n) {
+            default: {
+                return false;
+            }
+            case 9: {
+                final b5y b5y = (b5y)u3y.a(parcel, b5y.CREATOR);
+                break;
+            }
+            case 8: {
+                ((u4y)this).K0((n5y)u3y.a(parcel, (Parcelable$Creator)n5y.CREATOR));
+                break;
+            }
+            case 7: {
+                final Status status = (Status)u3y.a(parcel, Status.CREATOR);
+                final GoogleSignInAccount googleSignInAccount = (GoogleSignInAccount)u3y.a(parcel, GoogleSignInAccount.CREATOR);
+                break;
+            }
+            case 6: {
+                final Status status2 = (Status)u3y.a(parcel, Status.CREATOR);
+                break;
+            }
+            case 4: {
+                final Status status3 = (Status)u3y.a(parcel, Status.CREATOR);
+                break;
+            }
+            case 3: {
+                final bi6 bi6 = (bi6)u3y.a(parcel, bi6.CREATOR);
+                final u1y u1y = (u1y)u3y.a(parcel, u1y.CREATOR);
+                break;
+            }
+        }
+        parcel2.writeNoException();
+        return true;
     }
 }

@@ -1,33 +1,23 @@
+import android.view.View;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jik
+public interface jik
 {
-    public static final a Companion;
-    public static final jik a;
+    public static final a Companion = a.a;
     
-    static {
-        Companion = new a();
-        a = new jik();
-    }
+    iik a(final bgg p0, final View p1, final rp8 p2, final float p3);
     
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || o instanceof jik;
-    }
-    
-    @Override
-    public final int hashCode() {
-        return super.hashCode();
-    }
-    
-    @Override
-    public final String toString() {
-        return "PlatformSpanStyle()";
-    }
+    boolean b();
     
     public static final class a
     {
+        public static final a a;
+        
+        static {
+            a = new a();
+        }
     }
 }

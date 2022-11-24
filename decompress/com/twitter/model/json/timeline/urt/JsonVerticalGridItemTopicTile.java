@@ -8,37 +8,37 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonVerticalGridItemTopicTile extends aih<isw>
+public class JsonVerticalGridItemTopicTile extends tih<qtw>
 {
     @JsonField
     public String a;
     @JsonField
-    public gxd b;
-    @JsonField(typeConverter = gsw.class)
+    public lxd b;
+    @JsonField(typeConverter = otw.class)
     public int c;
-    @JsonField(typeConverter = hsw.class)
+    @JsonField(typeConverter = ptw.class)
     public int d;
     @JsonField
-    public q7t e;
+    public c9t e;
     
     @Override
     public final Object s() {
         if (this.b != null) {
-            u4c.d().o(this.b);
+            y4c.d().o(this.b);
             this.a = this.b.a;
         }
-        isw isw;
-        if (pjr.g((CharSequence)this.a)) {
-            final isw$a isw$a = new isw$a();
-            isw$a.a = this.a;
-            isw$a.b = this.c;
-            isw$a.c = this.d;
-            isw$a.d = this.e;
-            isw = (isw)((h4j)isw$a).e();
+        qtw qtw;
+        if (flr.g((CharSequence)this.a)) {
+            final qtw$a qtw$a = new qtw$a();
+            qtw$a.a = this.a;
+            qtw$a.b = this.c;
+            qtw$a.c = this.d;
+            qtw$a.d = this.e;
+            qtw = (qtw)((z4j)qtw$a).e();
         }
         else {
-            isw = null;
+            qtw = null;
         }
-        return isw;
+        return qtw;
     }
 }

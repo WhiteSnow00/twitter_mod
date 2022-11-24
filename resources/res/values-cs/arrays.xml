@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Budete dostávat oznámení o nových tweetech.</item>
-        <item>Budete dostávat oznámení o nových tweetech určených jenom pro super-sledující.</item>
+        <item>Budete dostávat oznámení o nových tweetech určených jen pro Předplatitele.</item>
         <item>Budete dostávat oznámení o nových tweetech s živým videem.</item>
         <item>Budete dostávat oznámení o nových tweetech o Prostorech.</item>
         <item>Už nebudete dostávat oznámení o nových tweetech.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweety</item>
-        <item>Tweety jenom pro super-sledující</item>
+        <item>Tweety jen pro Předplatitele</item>
         <item>Živé video</item>
         <item>Prostory</item>
         <item>Žádné</item>
     </array>
     <array name="account_notif_options_old">
         <item>Všechny tweety</item>
-        <item>Jenom tweety pro super-sledující</item>
+        <item>Jen tweety pro Předplatitele</item>
         <item>Jenom živé video</item>
         <item>Jenom Prostory</item>
         <item>Vypnuto</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Dostávejte oznámení o všech tweetech tohoto účtu.</item>
-        <item>Budete dostávat oznámení jenom o tweetech pro super-sledující.</item>
+        <item>Dostávejte oznámení jen o tweetech pro Předplatitele.</item>
         <item>Budete dostávat oznámení jenom o živých vysíláních.</item>
         <item>Budete dostávat oznámení jenom o Prostorech.</item>
         <item>Vypne oznámení o tweetech od tohoto účtu.</item>

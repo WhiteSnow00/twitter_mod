@@ -1,39 +1,32 @@
-import android.view.View;
-import java.util.HashMap;
-import android.content.Context;
-import com.airbnb.lottie.LottieAnimationView;
-import java.util.concurrent.Callable;
+import android.view.animation.Interpolator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jdg implements Callable<eeg<kdg>>
+public abstract class jdg implements Interpolator
 {
-    public final /* synthetic */ String C0;
-    public final /* synthetic */ LottieAnimationView D0;
+    public final float[] a;
+    public final float b;
     
-    public jdg(final LottieAnimationView d0, final String c0) {
-        this.D0 = d0;
-        this.C0 = c0;
+    public jdg(final float[] a) {
+        this.a = a;
+        this.b = 1.0f / (a.length - 1);
     }
     
-    @Override
-    public final Object call() throws Exception {
-        final LottieAnimationView d0 = this.D0;
-        eeg<kdg> eeg;
-        if (d0.R0) {
-            final Context context = ((View)d0).getContext();
-            final String c0 = this.C0;
-            final HashMap a = mdg.a;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("asset_");
-            sb.append(c0);
-            eeg = mdg.b(context, c0, sb.toString());
+    public final float getInterpolation(float h) {
+        if (h >= 1.0f) {
+            return 1.0f;
         }
-        else {
-            eeg = mdg.b(((View)d0).getContext(), this.C0, null);
+        if (h <= 0.0f) {
+            return 0.0f;
         }
-        return eeg;
+        final float[] a = this.a;
+        final int min = Math.min((int)((a.length - 1) * h), a.length - 2);
+        final float n = (float)min;
+        final float b = this.b;
+        h = j98.h(n, b, h, b);
+        final float[] a2 = this.a;
+        return va.d(a2[min + 1], a2[min], h, a2[min]);
     }
 }

@@ -1,19 +1,44 @@
+import java.util.regex.Pattern;
+import android.os.Parcel;
+import android.os.Parcelable$Creator;
+import android.os.Parcelable;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dn9
+public final class dn9 implements Parcelable
 {
-    public final qm9 a;
-    public final sm9 b;
-    public final wm9 c;
+    public static final Parcelable$Creator<dn9> CREATOR;
+    public static final dn9 H0;
+    public final long F0;
+    public final String G0;
     
-    public dn9(final qm9 a, final sm9 b, final wm9 c) {
-        zzd.f((Object)a, "displayLocation");
-        zzd.f((Object)c, "dynamicAdInfo");
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    static {
+        H0 = new dn9(0L, null);
+        CREATOR = (Parcelable$Creator)new Parcelable$Creator<dn9>() {
+            public final Object createFromParcel(final Parcel parcel) {
+                return new dn9(parcel);
+            }
+            
+            public final Object[] newArray(final int n) {
+                return new dn9[n];
+            }
+        };
+    }
+    
+    public dn9(final long f0, final String g0) {
+        this.F0 = f0;
+        this.G0 = g0;
+    }
+    
+    public dn9(final Parcel parcel) {
+        this.F0 = parcel.readLong();
+        this.G0 = parcel.readString();
+    }
+    
+    public final int describeContents() {
+        return 0;
     }
     
     @Override
@@ -21,31 +46,30 @@ public final class dn9
         if (this == o) {
             return true;
         }
-        if (!(o instanceof dn9)) {
+        if (o == null || dn9.class != o.getClass()) {
             return false;
         }
         final dn9 dn9 = (dn9)o;
-        return zzd.a((Object)this.a, (Object)dn9.a) && zzd.a((Object)this.b, (Object)dn9.b) && zzd.a((Object)this.c, (Object)dn9.c);
+        if (this.F0 != dn9.F0) {
+            return false;
+        }
+        final String g0 = this.G0;
+        final String g2 = dn9.G0;
+        final Pattern a = flr.a;
+        return e0e.a((Object)g0, (Object)g2);
     }
     
     @Override
     public final int hashCode() {
-        return this.c.hashCode() + (this.b.hashCode() + this.a.hashCode() * 31) * 31;
+        return o5j.f((Object)this.G0) + o5j.d(this.F0) * 31;
     }
     
-    @Override
-    public final String toString() {
-        final qm9 a = this.a;
-        final sm9 b = this.b;
-        final wm9 c = this.c;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("DynamicAdMappingInfo(displayLocation=");
-        sb.append(a);
-        sb.append(", dynamicAdId=");
-        sb.append(b);
-        sb.append(", dynamicAdInfo=");
-        sb.append(c);
-        sb.append(")");
-        return sb.toString();
+    public final boolean isValid() {
+        return this.F0 != 0L;
+    }
+    
+    public final void writeToParcel(final Parcel parcel, final int n) {
+        parcel.writeLong(this.F0);
+        parcel.writeString(this.G0);
     }
 }

@@ -1,47 +1,51 @@
-import android.app.PendingIntent;
-import android.os.IInterface;
-import android.os.Bundle;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
+import android.os.Parcel;
+import com.google.android.gms.maps.model.CameraPosition;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class s9y extends zny<Boolean>
+public final class s9y implements Parcelable$Creator<CameraPosition>
 {
-    public final int d;
-    public final Bundle e;
-    public final bm1 f;
-    
-    public s9y(final bm1 f, final int d, final Bundle e) {
-        super(this.f = f);
-        this.d = d;
-        this.e = e;
-    }
-    
-    public final void a() {
-        if (this.d == 0) {
-            if (!this.e()) {
-                this.f.N(1, (IInterface)null);
-                this.d(new vg6(8, null, null));
+    public final Object createFromParcel(final Parcel parcel) {
+        final int w = SafeParcelReader.w(parcel);
+        float o = 0.0f;
+        LatLng latLng = null;
+        float o2 = 0.0f;
+        float o3 = 0.0f;
+        while (parcel.dataPosition() < w) {
+            final int int1 = parcel.readInt();
+            final char c = (char)int1;
+            if (c != '\u0002') {
+                if (c != '\u0003') {
+                    if (c != '\u0004') {
+                        if (c != '\u0005') {
+                            SafeParcelReader.v(parcel, int1);
+                        }
+                        else {
+                            o3 = SafeParcelReader.o(parcel, int1);
+                        }
+                    }
+                    else {
+                        o2 = SafeParcelReader.o(parcel, int1);
+                    }
+                }
+                else {
+                    o = SafeParcelReader.o(parcel, int1);
+                }
             }
-            return;
+            else {
+                latLng = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<LatLng>)LatLng.CREATOR);
+            }
         }
-        this.f.N(1, (IInterface)null);
-        final Bundle e = this.e;
-        PendingIntent pendingIntent;
-        if (e != null) {
-            pendingIntent = (PendingIntent)e.getParcelable("pendingIntent");
-        }
-        else {
-            pendingIntent = null;
-        }
-        this.d(new vg6(this.d, pendingIntent, null));
+        SafeParcelReader.j(parcel, w);
+        return new CameraPosition(latLng, o, o2, o3);
     }
     
-    public final void b() {
+    public final Object[] newArray(final int n) {
+        return new CameraPosition[n];
     }
-    
-    public abstract void d(final vg6 p0);
-    
-    public abstract boolean e();
 }

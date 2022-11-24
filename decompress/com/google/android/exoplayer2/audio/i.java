@@ -25,12 +25,12 @@ public final class i extends c
         this.i = 150000L;
         this.j = 20000L;
         this.k = 1024;
-        final byte[] f = imw.f;
+        final byte[] f = rnw.f;
         this.n = f;
         this.o = f;
     }
     
-    public final boolean b() {
+    public final boolean c() {
         return this.m;
     }
     
@@ -168,7 +168,7 @@ public final class i extends c
     public final void k() {
         this.m = false;
         this.r = 0;
-        final byte[] f = imw.f;
+        final byte[] f = rnw.f;
         this.n = f;
         this.o = f;
     }

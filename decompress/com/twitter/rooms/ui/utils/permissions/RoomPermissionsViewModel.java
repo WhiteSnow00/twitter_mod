@@ -10,43 +10,30 @@ import com.twitter.util.user.UserIdentifier;
 import kotlin.Metadata;
 import com.twitter.weaver.mvi.MviViewModel;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001¨\u0006\u0005" }, d2 = { "Lcom/twitter/rooms/ui/utils/permissions/RoomPermissionsViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lbun;", "Ld6o;", "Lb6o;", "feature.tfa.rooms.ui.utils.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
-public final class RoomPermissionsViewModel extends MviViewModel<bun, d6o, b6o>
+@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001¨\u0006\u0005" }, d2 = { "Lcom/twitter/rooms/ui/utils/permissions/RoomPermissionsViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lrun;", "Lw6o;", "Lu6o;", "feature.tfa.rooms.ui.utils.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
+public final class RoomPermissionsViewModel extends MviViewModel<run, w6o, u6o>
 {
-    public static final coe<Object>[] Q0;
-    public final UserIdentifier O0;
-    public final hyh P0;
+    public static final ape<Object>[] S0;
+    public final UserIdentifier Q0;
+    public final yyh R0;
     
     static {
-        Q0 = new coe[] { (coe)w9.f((Class)RoomPermissionsViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
+        S0 = new ape[] { (ape)lb0.h(RoomPermissionsViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
     }
     
-    public RoomPermissionsViewModel(final RoomPermissionsArgs roomPermissionsArgs, final mjo mjo, final vln vln, final UserIdentifier o0, final xbm xbm) {
-        czd.f((Object)roomPermissionsArgs, "args");
-        czd.f((Object)mjo, "utilsFragmentViewEventDispatcher");
-        czd.f((Object)vln, "guestActionsEventDispatcher");
-        czd.f((Object)o0, "userIdentifier");
-        czd.f((Object)xbm, "releaseCompletable");
-        Objects.requireNonNull(bun.Companion);
-        super((k9e)xbm, (jbx)new bun(roomPermissionsArgs.getPreviousView()));
-        this.O0 = o0;
-        this.P0 = ewj.n(this, (qsb)new qsb<jyh<d6o>, fzv>(this, vln, mjo) {
-            public final RoomPermissionsViewModel D0;
-            public final vln E0;
-            public final mjo F0;
-            
-            public final Object invoke(final Object o) {
-                final jyh jyh = (jyh)o;
-                czd.f((Object)jyh, "$this$weaver");
-                jyh.a(v9m.a((Class)d6o$c.class), (ftb)new a((go6)null));
-                jyh.a(v9m.a((Class)d6o$a.class), (ftb)new b(this.D0, (go6)null));
-                jyh.a(v9m.a((Class)d6o$b.class), (ftb)new c(this.D0, this.E0, this.F0, (go6)null));
-                return fzv.a;
-            }
-        });
+    public RoomPermissionsViewModel(final RoomPermissionsArgs roomPermissionsArgs, final eko eko, final nmn nmn, final UserIdentifier q0, final kcm kcm) {
+        e0e.f((Object)roomPermissionsArgs, "args");
+        e0e.f((Object)eko, "utilsFragmentViewEventDispatcher");
+        e0e.f((Object)nmn, "guestActionsEventDispatcher");
+        e0e.f((Object)q0, "userIdentifier");
+        e0e.f((Object)kcm, "releaseCompletable");
+        Objects.requireNonNull(run.Companion);
+        super((iae)kcm, (ccx)new run(roomPermissionsArgs.getPreviousView()));
+        this.Q0 = q0;
+        this.R0 = hfe.v((MviViewModel)this, (stb)new RoomPermissionsViewModel$a(this, nmn, eko));
     }
     
-    public final jyh<d6o> v() {
-        return (jyh<d6o>)this.P0.a((coe)RoomPermissionsViewModel.Q0[0]);
+    public final azh<w6o> v() {
+        return (azh<w6o>)this.R0.a((ape)RoomPermissionsViewModel.S0[0]);
     }
 }

@@ -10,23 +10,24 @@ import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonGiphyImages extends fih<y2c>
+public class JsonGiphyImages extends tih<a4c>
 {
     @JsonField(name = { "data" })
-    public List<x2c> a;
+    public List<z3c> a;
     @JsonField(name = { "pagination" })
-    public z2c b;
+    public b4c b;
     
+    @Override
     public final Object s() {
         final ArrayList a = this.a;
-        y2c y2c;
+        a4c a4c;
         if (a != null && this.b != null) {
-            y2c = new y2c((Object)rif.x((List)a), (Object)this.b);
+            a4c = new a4c((Object)ojf.x((List)a), (Object)this.b, 0);
         }
         else {
-            i48.t("JsonGiphyImages");
-            y2c = null;
+            mqb.o("JsonGiphyImages");
+            a4c = null;
         }
-        return y2c;
+        return a4c;
     }
 }

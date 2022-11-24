@@ -8,20 +8,20 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelinePlace extends aih<kvv>
+public class JsonTimelinePlace extends tih<qwv>
 {
     @JsonField
     public String a;
     
     @Override
     public final Object s() {
-        kvv kvv;
-        if (pjr.g((CharSequence)this.a)) {
-            kvv = new kvv(this.a);
+        qwv qwv;
+        if (flr.g((CharSequence)this.a)) {
+            qwv = new qwv(this.a);
         }
         else {
-            kvv = null;
+            qwv = null;
         }
-        return kvv;
+        return qwv;
     }
 }

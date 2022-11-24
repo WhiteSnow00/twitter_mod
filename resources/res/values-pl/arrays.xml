@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Będziesz otrzymywać powiadomienia o nowych Tweetach.</item>
-        <item>Będziesz otrzymywać powiadomienia o nowych Tweetach dla superobserwujących.</item>
+        <item>Będziesz otrzymywać powiadomienia o nowych Tweetach dla subskrybentów.</item>
         <item>Będziesz otrzymywać powiadomienia o nowych Tweetach z filmami na żywo.</item>
         <item>Będziesz otrzymywać powiadomienia o nowych Tweetach na temat Pokoi.</item>
         <item>Nie będziesz już otrzymywać powiadomień o nowych Tweetach.</item>
     </array>
     <array name="account_notif_options">
         <item>nowe Tweety</item>
-        <item>Tylko Tweety dla superobserwujących</item>
+        <item>Tweety dla subskrybentów</item>
         <item>Nagranie na żywo</item>
         <item>Pokoje</item>
         <item>Brak</item>
     </array>
     <array name="account_notif_options_old">
         <item>Wszystkie Tweety</item>
-        <item>Tylko Tweety dla superobserwujących</item>
+        <item>Tweety dla subskrybentów</item>
         <item>Tylko filmy na żywo</item>
         <item>Tylko Pokoje</item>
         <item>Wył.</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Otrzymuj powiadomienia o wszystkich Tweetach z tego konta.</item>
-        <item>Otrzymuj powiadomienia tylko o nowych Tweetach dla superobserwujących.</item>
+        <item>Będziesz otrzymywać powiadomienia o nowych Tweetach dla subskrybentów.</item>
         <item>Otrzymuj powiadomienia tylko o transmisjach na żywo.</item>
         <item>Otrzymuj tylko powiadomienia dotyczące Pokoi.</item>
         <item>Wyłącz powiadomienia o Tweetach z tego konta.</item>

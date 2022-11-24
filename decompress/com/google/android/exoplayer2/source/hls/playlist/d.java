@@ -32,7 +32,7 @@ public class d extends cmc
     }
     
     public d(final String s, final List<String> list, final List<d.d$b> list2, final List<d.d$a> list3, final List<d.d$a> list4, final List<d.d$a> list5, final List<d.d$a> list6, final n j, final List<n> list7, final boolean b, final Map<String, String> map, final List<b> list8) {
-        super(s, list, b);
+        super(s, (List)list, b);
         final ArrayList list9 = new ArrayList();
         for (int i = 0; i < list2.size(); ++i) {
             final Uri a = list2.get(i).a;
@@ -72,13 +72,13 @@ public class d extends cmc
         }
     }
     
-    public static <T> List<T> c(final List<T> list, final int n, final List<kir> list2) {
+    public static <T> List<T> c(final List<T> list, final int n, final List<akr> list2) {
         final ArrayList list3 = new ArrayList(list2.size());
         for (int i = 0; i < list.size(); ++i) {
             final Object value = list.get(i);
             for (int j = 0; j < list2.size(); ++j) {
-                final kir kir = list2.get(j);
-                if (kir.D0 == n && kir.E0 == i) {
+                final akr akr = list2.get(j);
+                if (akr.G0 == n && akr.H0 == i) {
                     list3.add(value);
                     break;
                 }
@@ -95,7 +95,6 @@ public class d extends cmc
         return new d("", Collections.emptyList(), Collections.singletonList(new d.d$b(parse, n$a.a(), (String)null, (String)null, (String)null, (String)null)), Collections.emptyList(), Collections.emptyList(), Collections.emptyList(), Collections.emptyList(), null, null, false, Collections.emptyMap(), Collections.emptyList());
     }
     
-    @Override
     public final Object a(final List list) {
         return new d(super.a, super.b, c(this.e, 0, list), Collections.emptyList(), c(this.g, 1, list), c(this.h, 2, list), Collections.emptyList(), this.j, this.k, super.c, this.l, this.m);
     }

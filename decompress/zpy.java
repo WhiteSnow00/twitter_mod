@@ -1,43 +1,60 @@
-import java.io.IOException;
+import android.os.LocaleList;
+import android.content.res.Configuration;
 import java.util.Collections;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.ArrayList;
+import android.os.Build$VERSION;
+import java.util.List;
+import java.util.Locale;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zpy implements p4j<o2z>
+public final class zpy
 {
-    public static final zpy a;
+    public final Context a;
     
-    static {
-        final zzz d0 = zzz.D0;
-        a = new zpy();
-        final dyz dyz = new dyz(1, d0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(dyz.annotationType(), dyz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final dyz dyz2 = new dyz(2, d0);
-        final HashMap hashMap2 = new HashMap();
-        hashMap2.put(dyz2.annotationType(), dyz2);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final dyz dyz3 = new dyz(3, d0);
-        final HashMap hashMap3 = new HashMap();
-        hashMap3.put(dyz3.annotationType(), dyz3);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
-        final dyz dyz4 = new dyz(4, d0);
-        final HashMap hashMap4 = new HashMap();
-        hashMap4.put(dyz4.annotationType(), dyz4);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap4));
-        final dyz dyz5 = new dyz(5, d0);
-        final HashMap hashMap5 = new HashMap();
-        jg9.w(dyz5, hashMap5, dyz5, hashMap5);
+    public zpy(final Context a) {
+        this.a = a;
     }
     
-    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final o2z o2z = (o2z)o;
-        final q4j q4j = (q4j)o2;
-        throw null;
+    public static String b(final Locale locale) {
+        final String value = String.valueOf(locale.getLanguage());
+        String concat;
+        if (locale.getCountry().isEmpty()) {
+            concat = "";
+        }
+        else {
+            final String value2 = String.valueOf(locale.getCountry());
+            if (value2.length() != 0) {
+                concat = "_".concat(value2);
+            }
+            else {
+                concat = new String("_");
+            }
+        }
+        final String value3 = String.valueOf(concat);
+        String concat2;
+        if (value3.length() != 0) {
+            concat2 = value.concat(value3);
+        }
+        else {
+            concat2 = new String(value);
+        }
+        return concat2;
+    }
+    
+    public final List<String> a() {
+        final Configuration configuration = this.a.getResources().getConfiguration();
+        if (Build$VERSION.SDK_INT >= 24) {
+            final LocaleList locales = configuration.getLocales();
+            final ArrayList list = new ArrayList<String>(locales.size());
+            for (int i = 0; i < locales.size(); ++i) {
+                list.add(b(locales.get(i)));
+            }
+            return (List<String>)list;
+        }
+        return Collections.singletonList(b(configuration.locale));
     }
 }

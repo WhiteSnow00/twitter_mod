@@ -1,148 +1,78 @@
-import java.util.Map;
-import tv.periscope.android.api.service.room.RoomGuestServiceApi;
-import java.math.BigInteger;
-import java.util.LinkedHashSet;
-import tv.periscope.android.api.service.hydra.model.guestservice.GuestServiceDeclineReasonRequest;
-import tv.periscope.android.api.service.hydra.model.guestservice.GuestServiceAllowDenyModificationRequest;
-import java.util.Objects;
-import tv.periscope.android.api.service.hydra.model.guestservice.GuestServiceAudiospaceSettingsModificationRequest;
-import tv.periscope.chatman.api.IdempotenceHeaderMapImpl;
-import tv.periscope.model.chat.Message;
+import com.twitter.weaver.mvi.MviViewModel;
+import com.twitter.rooms.model.helpers.RoomUserItem;
+import java.util.Set;
+import com.twitter.rooms.ui.core.consumptionpreview.RoomConsumptionPreviewViewModel;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class abn extends gue implements rtb<iln$a, oyv>
+public final class abn extends pue implements stb<dbn, vzv>
 {
-    public final /* synthetic */ dan C0;
+    public final RoomConsumptionPreviewViewModel F0;
+    public final boolean G0;
     
-    public abn(final dan c0) {
-        this.C0 = c0;
+    public abn(final RoomConsumptionPreviewViewModel f0, final boolean g0) {
+        this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(Object o) {
-        final iln$a iln$a = (iln$a)o;
-        if (iln$a instanceof iln$a$b) {
-            final dan c0 = this.C0;
-            final dvc e = c0.E;
-            if (e != null) {
-                e.a(((iln$a$b)iln$a).a, true, (otb)new ran(c0));
-            }
+        final dbn dbn = (dbn)o;
+        e0e.f((Object)dbn, "state");
+        final String c = dbn.c;
+        if (c == null || c.length() == 0) {
+            final RoomConsumptionPreviewViewModel f0 = this.F0;
+            final p9n$b p9n$b = new p9n$b(new Throwable("Expected a non empty broadcastId"));
+            final ape[] i1 = RoomConsumptionPreviewViewModel.i1;
+            ((MviViewModel)f0).V((Object)p9n$b);
         }
-        else if (iln$a instanceof iln$a$g) {
-            final dvc e2 = this.C0.E;
-            if (e2 != null) {
-                final String a = ((iln$a$g)iln$a).a;
-                zzd.f((Object)a, "userId");
-                e2.f(a);
-                e2.f.a(e2.b.l(a).G((fk6)new bor((rtb)new gvc(e2, a), 23), (fk6)new b5p((rtb)new hvc(e2, a), 14)));
-            }
+        else if (dbn.l) {
+            final RoomConsumptionPreviewViewModel f2 = this.F0;
+            final p9n$i p9n$i = new p9n$i(this.G0);
+            final ape[] i2 = RoomConsumptionPreviewViewModel.i1;
+            ((MviViewModel)f2).V((Object)p9n$i);
         }
-        else if (iln$a instanceof iln$a$j) {
-            final LinkedHashSet i = this.C0.I;
-            final iln$a$j iln$a$j = (iln$a$j)iln$a;
-            i.remove(iln$a$j.b);
-            this.C0.A.a(iln$a$j.b);
-            final BigInteger n = Message.N(r9i.e());
-            zzd.e((Object)n, "ntpForJson(Clock.currentMillis())");
-            final dan c2 = this.C0;
-            final rd6 c3 = c2.C;
-            final RoomGuestServiceApi r = c2.r;
-            final Map headerMap = IdempotenceHeaderMapImpl.Companion.create().getHeaderMap();
-            final dan c4 = this.C0;
-            final String b = c4.B;
-            final iu3 g = c4.G;
-            if (g != null) {
-                final String a2 = g.a();
-                if (a2 != null) {
-                    c3.a(r.setAudiospaceSettings(headerMap, new GuestServiceAudiospaceSettingsModificationRequest(b, a2, or4.m2((Iterable)this.C0.I), n, n)).I(this.C0.o).G((fk6)new ccj((rtb)san.C0, 9), (fk6)new aqi((rtb)tan.C0, 16)));
-                    final dan c5 = this.C0;
-                    final dvc e3 = c5.E;
-                    if (e3 != null) {
-                        final String a3 = iln$a$j.a;
-                        final iu3 g2 = c5.G;
-                        if (g2 != null) {
-                            e3.d(a3, g2);
-                        }
+        else {
+            final zps q = dbn.q;
+            if (q == null || q.c) {
+                final boolean g0 = this.G0;
+                if (g0 && dbn.u) {
+                    final RoomConsumptionPreviewViewModel f3 = this.F0;
+                    final String c2 = dbn.c;
+                    final Set<RoomUserItem> e = dbn.e;
+                    final Set<RoomUserItem> f4 = dbn.f;
+                    final Set<RoomUserItem> g2 = dbn.g;
+                    final int k = dbn.k;
+                    String o2 = dbn.o;
+                    if (o2 == null) {
+                        o2 = "";
                     }
+                    o = new p9n$e(c2, k6m.G0, (Set)e, (Set)f4, (Set)g2, k, o2, dbn.p);
+                    final ape[] i3 = RoomConsumptionPreviewViewModel.i1;
+                    ((MviViewModel)f3).V(o);
                 }
-            }
-        }
-        else if (iln$a instanceof iln$a$f) {
-            final iu3 g3 = this.C0.G;
-            if (g3 != null) {
-                final iln$a$f iln$a$f = (iln$a$f)iln$a;
-                final String a4 = iln$a$f.a;
-                final String b2 = iln$a$f.b;
-                final BigInteger n2 = Message.N(r9i.e());
-                zzd.e((Object)n2, "ntpForJson(Clock.currentMillis())");
-                this.C0.I.add(b2);
-                final son a5 = this.C0.A;
-                Objects.requireNonNull(a5);
-                zzd.f((Object)b2, "userId");
-                a5.b.onNext((Object)b2);
-                final String b3 = this.C0.B;
-                final String a6 = g3.a();
-                if (a6 != null) {
-                    final GuestServiceAudiospaceSettingsModificationRequest guestServiceAudiospaceSettingsModificationRequest = new GuestServiceAudiospaceSettingsModificationRequest(b3, a6, or4.m2((Iterable)this.C0.I), n2, n2);
-                    final dan c6 = this.C0;
-                    c6.C.a(c6.r.setAudiospaceSettings(IdempotenceHeaderMapImpl.Companion.create().getHeaderMap(), guestServiceAudiospaceSettingsModificationRequest).I(this.C0.o).G((fk6)new zgw((rtb)new uan(this.C0, a4), 8), (fk6)new hlx((rtb)van.C0, 11)));
-                }
-            }
-        }
-        else if (iln$a instanceof iln$a$c) {
-            final dan c7 = this.C0;
-            final iu3 g4 = c7.G;
-            if (g4 != null) {
-                final LinkedHashSet j = c7.I;
-                final iln$a$c iln$a$c = (iln$a$c)iln$a;
-                j.remove(iln$a$c.b);
-                this.C0.A.a(iln$a$c.b);
-                final BigInteger n3 = Message.N(r9i.e());
-                zzd.e((Object)n3, "ntpForJson(Clock.currentMillis())");
-                o = new(tv.periscope.android.api.service.hydra.model.guestservice.GuestServiceAudiospaceSettingsModificationRequest.class)();
-                final String b4 = this.C0.B;
-                final String a7 = g4.a();
-                if (a7 != null) {
-                    new GuestServiceAudiospaceSettingsModificationRequest(b4, a7, or4.m2((Iterable)this.C0.I), n3, n3);
-                    final dan c8 = this.C0;
-                    c8.C.a(c8.r.setAudiospaceSettings(IdempotenceHeaderMapImpl.Companion.create().getHeaderMap(), (GuestServiceAudiospaceSettingsModificationRequest)o).I(this.C0.o).G((fk6)new xol((rtb)wan.C0, 12), (fk6)new yhc((rtb)xan.C0, 16)));
-                }
-            }
-        }
-        else if (iln$a instanceof iln$a$h) {
-            final dan c9 = this.C0;
-            final iu3 g5 = c9.G;
-            if (g5 != null) {
-                final String b5 = c9.B;
-                final String a8 = g5.a();
-                if (a8 != null) {
-                    final iln$a$h iln$a$h = (iln$a$h)iln$a;
-                    final GuestServiceAllowDenyModificationRequest guestServiceAllowDenyModificationRequest = new GuestServiceAllowDenyModificationRequest(b5, a8, tdy.u0((Object)iln$a$h.b));
-                    this.C0.I.remove(iln$a$h.b);
-                    this.C0.A.a(iln$a$h.b);
-                    final BigInteger n4 = Message.N(r9i.e());
-                    zzd.e((Object)n4, "ntpForJson(Clock.currentMillis())");
-                    o = new(tv.periscope.android.api.service.hydra.model.guestservice.GuestServiceAudiospaceSettingsModificationRequest.class)();
-                    final String b6 = this.C0.B;
-                    final String a9 = g5.a();
-                    if (a9 != null) {
-                        new GuestServiceAudiospaceSettingsModificationRequest(b6, a9, or4.m2((Iterable)this.C0.I), n4, n4);
-                        final dan c10 = this.C0;
-                        c10.C.a(((n9q)new taq((ubq)c10.r.addTwitterUsersToDenyList(IdempotenceHeaderMapImpl.Companion.create().getHeaderMap(), guestServiceAllowDenyModificationRequest).I(this.C0.o), (qtb)new wpl((rtb)new yan(this.C0, (GuestServiceAudiospaceSettingsModificationRequest)o), 16))).G((fk6)new nol((rtb)zan.C0, 16), (fk6)new c5l((rtb)oan.C0, 5)));
+                else if (dbn.t && g0 && vjo.M()) {
+                    final RoomConsumptionPreviewViewModel f5 = this.F0;
+                    final String c3 = dbn.c;
+                    final Set<RoomUserItem> e2 = dbn.e;
+                    final Set<RoomUserItem> f6 = dbn.f;
+                    final Set<RoomUserItem> g3 = dbn.g;
+                    final int j = dbn.k;
+                    String o3 = dbn.o;
+                    if (o3 == null) {
+                        o3 = "";
                     }
+                    final p9n$e p9n$e = new p9n$e(c3, k6m.F0, (Set)e2, (Set)f6, (Set)g3, j, o3, dbn.p);
+                    final ape[] i4 = RoomConsumptionPreviewViewModel.i1;
+                    ((MviViewModel)f5).V((Object)p9n$e);
+                }
+                else {
+                    RoomConsumptionPreviewViewModel.W(this.F0, dbn.c, (Set)dbn.e, (Set)dbn.f, (Set)dbn.g, dbn.k, this.G0, dbn.o, dbn.p, dbn.t, dbn.C != null);
                 }
             }
         }
-        else if (iln$a instanceof iln$a$e) {
-            final String b7 = this.C0.B;
-            Objects.requireNonNull((iln$a$e)iln$a);
-            final GuestServiceDeclineReasonRequest guestServiceDeclineReasonRequest = new GuestServiceDeclineReasonRequest(b7, 0);
-            final dan c11 = this.C0;
-            c11.C.a(c11.r.updateDeclineReason(IdempotenceHeaderMapImpl.Companion.create().getHeaderMap(), guestServiceDeclineReasonRequest).I(this.C0.o).G((fk6)new ccj((rtb)pan.C0, 10), (fk6)new tst((rtb)qan.C0, 11)));
-        }
-        return oyv.a;
+        return vzv.a;
     }
 }

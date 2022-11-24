@@ -9,17 +9,17 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSettingsTemplateContainer extends qhh<oqp>
+public class JsonSettingsTemplateContainer extends eih<jrp>
 {
     @JsonField
-    public nqp a;
+    public irp a;
     @JsonField
     public String b;
     
-    public final n4j t() {
-        final oqp$a oqp$a = new oqp$a();
-        oqp$a.a = this.a;
-        oqp$a.b = this.b;
-        return (n4j)oqp$a;
+    public final z4j t() {
+        final jrp.a a = new jrp.a();
+        a.a = this.a;
+        a.b = this.b;
+        return a;
     }
 }

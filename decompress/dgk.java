@@ -1,43 +1,48 @@
-import com.twitter.profiles.scrollingheader.c$c;
-import android.app.Activity;
-import android.content.Context;
-import com.twitter.profiles.scrollingheader.c$d;
+import java.util.Set;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dgk extends eus implements c$d
+public enum dgk
 {
-    public final m4p t1;
+    H0("no_type", (Class<? extends bgk$a>)null), 
+    I0("dm_typing", (Class<? extends bgk$a>)gov.a.class), 
+    J0("dm_update", (Class<? extends bgk$a>)b59$a.class), 
+    K0("tweet_engagement", (Class<? extends bgk$a>)r0c$a.class), 
+    L0("live_content", (Class<? extends bgk$a>)r0c$a.class);
     
-    public dgk(final tcv tcv, final mws mws, final hss hss, final gh7<bo6> gh7, final gdf<cxs> gdf, final brb brb, final tod tod, final epi<cxs> epi, final Context context, final sc sc, final vxs vxs, final w0t w0t, final c3e<cxs> c3e, final xba<bo> xba, final udx udx, final efv efv) {
-        super(tcv, mws, hss, (gh7)gh7, (gdf)gdf, brb, tod, (epi)epi, sc, vxs, w0t, (c3e)c3e, (xba)xba, udx, efv);
-        this.t1 = m4p.d((Activity)((ucv)this).D0, ((ucv)this).Y0, ((vl1)super.f1).d("fragment_page_number"));
+    public static final Set<dgk> M0;
+    public static final Set<String> N0;
+    public static final dgk[] O0;
+    public final String F0;
+    public final Class<? extends bgk$a> G0;
+    
+    static {
+        int i = 0;
+        final dgk dgk2 = new dgk("config", (Class<? extends bgk$a>)zf6$a.class);
+        final dgk dgk3 = new dgk("subscriptions", kor.a.class);
+        final aop x = aop.x();
+        final dgk dgk;
+        x.q((Object[])new dgk[] { dgk, dgk2, dgk3 });
+        M0 = (Set)((z4j)x).e();
+        final aop x2 = aop.x();
+        for (dgk[] values = values(); i < values.length; ++i) {
+            final dgk dgk4 = values[i];
+            if (dgk4.G0 == r0c$a.class) {
+                x2.o((Object)dgk4.F0);
+            }
+        }
+        N0 = (Set)((z4j)x2).e();
     }
     
-    public final void O0(final n3e<cxs> n3e) {
-        super.O0((n3e)n3e);
-        this.t1.e();
+    public dgk(final String f0, final Class<? extends bgk$a> g0) {
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public final c$c Q() {
-        return (c$c)this.t1;
-    }
-    
-    public final void W0() {
-    }
-    
-    public final gdv$b l0(final gdv$b gdv$b) {
-        gdv$b.g = 2131624572;
-        gdv$b.a = "place_media";
-        final i2a$d b = gdv$b.b;
-        b.a = 2131625623;
-        b.b = 2131624856;
-        final g2a$a g2a$a = new g2a$a();
-        final nw6 a = tes.a;
-        g2a$a.a = (tes)new dkr(2131955448);
-        b.c = new i2a$e((g2a)((n4j)g2a$a).e());
-        return gdv$b;
+    @Override
+    public final String toString() {
+        return this.F0;
     }
 }

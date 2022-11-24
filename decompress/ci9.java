@@ -2,20 +2,17 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ci9 extends gue implements rtb<yi9, Boolean>
+public final class ci9 extends pue implements stb<rp8, hud>
 {
-    public static final ci9 C0;
+    public final zi9 F0;
     
-    static {
-        C0 = new ci9();
-    }
-    
-    public ci9() {
+    public ci9(final zi9 f0) {
+        this.F0 = f0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        zzd.f((Object)o, "it");
-        return Boolean.TRUE;
+        e0e.f((Object)o, "$this$offset");
+        return new hud(kqe.d(jb2.B0(((cjq<Number>)this.F0.a.e).getValue().floatValue()), 0));
     }
 }

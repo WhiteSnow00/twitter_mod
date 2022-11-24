@@ -1,25 +1,20 @@
-import java.util.Comparator;
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e11 extends gue implements rtb<g31, List<? extends d31>>
+public final class e11 extends pue implements stb<Long, idq<? extends h31>>
 {
-    public static final e11 C0;
+    public final d11 F0;
+    public final String G0;
     
-    static {
-        C0 = new e11();
-    }
-    
-    public e11() {
+    public e11(final d11 f0, final String g0) {
+        this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final g31 g31 = (g31)o;
-        zzd.f((Object)g31, "response");
-        return or4.f2((Iterable)g31.a, (Comparator)new d11());
+        e0e.f((Object)o, "it");
+        return ((tnm<String, Object, osc>)this.F0.c).S(this.G0);
     }
 }

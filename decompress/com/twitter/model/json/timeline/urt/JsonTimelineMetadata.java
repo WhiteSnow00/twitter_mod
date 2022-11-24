@@ -8,17 +8,17 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineMetadata extends aih<gzs>
+public class JsonTimelineMetadata extends tih<p0t>
 {
     @JsonField(name = { "title" })
     public String a;
     @JsonField(name = { "scribeConfig" })
-    public z3t b;
+    public j5t b;
     @JsonField(name = { "readerModeConfig" })
-    public r1t c;
+    public b3t c;
     
     @Override
     public final Object s() {
-        return new gzs(this.a, this.b, this.c);
+        return new p0t(this.a, this.b, this.c);
     }
 }

@@ -305,8 +305,8 @@
         <item quantity="other">其他 %d 人</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">超級跟隨者</item>
-        <item quantity="other">超級跟隨者</item>
+        <item quantity="one">訂閱者</item>
+        <item quantity="other">訂閱者</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s 個喜歡</item>
@@ -402,7 +402,7 @@
         <item quantity="other">回覆給 ﻿%1$s 和其他 %2$d 人﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">回覆給 ﻿%1$s 和其他 %2$d 人﻿。其他超級跟隨者也將看到你的回覆。</item>
+        <item quantity="other">回覆給 ﻿%1$s 和其他 %2$d 人﻿。其他訂閱者也將看到你的回覆。</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">回覆給 ﻿%3$s﻿ 中的 ﻿%1$s 和其他 %2$d 人﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">回覆給 ﻿%1$s %2$s 和其他 %3$d 人﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">回覆給 ﻿%1$s、%2$s 和其他 %3$d 人﻿。其他超級跟隨者也將看到你的回覆。</item>
+        <item quantity="other">回覆給 ﻿%1$s、%2$s 和其他 %3$d 人﻿。其他訂閱者也可看到你的回覆。</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">回覆給 ﻿%4$s﻿ 中的 ﻿%1$s、%2$s 和其他 %3$d 人﻿</item>

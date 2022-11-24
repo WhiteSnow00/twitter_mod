@@ -1,93 +1,72 @@
+import android.view.accessibility.CaptioningManager$CaptionStyle;
+import android.graphics.Typeface;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class ph3
 {
-    public final a a;
-    public final String b;
+    public static final ph3 g;
+    public final int a;
+    public final int b;
+    public final int c;
+    public final int d;
+    public final int e;
+    public final Typeface f;
     
-    public ph3(final a a, final String b) {
+    static {
+        g = new ph3(-1, -16777216, 0, 0, -1, null);
+    }
+    
+    public ph3(final int a, final int b, final int c, final int d, final int e, final Typeface f) {
         this.a = a;
         this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.f = f;
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof ph3)) {
-            return false;
-        }
-        final ph3 ph3 = (ph3)o;
-        return czd.a((Object)this.a, (Object)ph3.a) && czd.a((Object)this.b, (Object)ph3.b);
-    }
-    
-    @Override
-    public final int hashCode() {
-        final a a = this.a;
-        int hashCode;
-        if (a == null) {
-            hashCode = 0;
-        }
-        else {
-            hashCode = a.hashCode();
-        }
-        return this.b.hashCode() + hashCode * 31;
-    }
-    
-    @Override
-    public final String toString() {
-        final a a = this.a;
-        final String b = this.b;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("Card(legacy=");
-        sb.append(a);
-        sb.append(", rest_id=");
-        sb.append(b);
-        sb.append(")");
-        return sb.toString();
-    }
-    
-    public static final class a
-    {
-        public final String a;
-        public final l4f b;
-        
-        public a(final String a, final l4f b) {
-            this.a = a;
-            this.b = b;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
+    public static ph3 a(final CaptioningManager$CaptionStyle captioningManager$CaptionStyle) {
+        if (rnw.a >= 21) {
+            int foregroundColor;
+            if (captioningManager$CaptionStyle.hasForegroundColor()) {
+                foregroundColor = captioningManager$CaptionStyle.foregroundColor;
             }
-            if (!(o instanceof a)) {
-                return false;
+            else {
+                foregroundColor = -1;
             }
-            final a a = (a)o;
-            return czd.a((Object)this.a, (Object)a.a) && czd.a((Object)this.b, (Object)a.b);
+            int backgroundColor;
+            if (captioningManager$CaptionStyle.hasBackgroundColor()) {
+                backgroundColor = captioningManager$CaptionStyle.backgroundColor;
+            }
+            else {
+                backgroundColor = -16777216;
+            }
+            int windowColor;
+            if (captioningManager$CaptionStyle.hasWindowColor()) {
+                windowColor = captioningManager$CaptionStyle.windowColor;
+            }
+            else {
+                windowColor = 0;
+            }
+            int edgeType;
+            if (captioningManager$CaptionStyle.hasEdgeType()) {
+                edgeType = captioningManager$CaptionStyle.edgeType;
+            }
+            else {
+                edgeType = 0;
+            }
+            int edgeColor;
+            if (captioningManager$CaptionStyle.hasEdgeColor()) {
+                edgeColor = captioningManager$CaptionStyle.edgeColor;
+            }
+            else {
+                edgeColor = -1;
+            }
+            return new ph3(foregroundColor, backgroundColor, windowColor, edgeType, edgeColor, captioningManager$CaptionStyle.getTypeface());
         }
-        
-        @Override
-        public final int hashCode() {
-            return this.b.hashCode() + this.a.hashCode() * 31;
-        }
-        
-        @Override
-        public final String toString() {
-            final String a = this.a;
-            final l4f b = this.b;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("Legacy(__typename=");
-            sb.append(a);
-            sb.append(", legacyCard=");
-            sb.append(b);
-            sb.append(")");
-            return sb.toString();
-        }
+        return new ph3(captioningManager$CaptionStyle.foregroundColor, captioningManager$CaptionStyle.backgroundColor, 0, captioningManager$CaptionStyle.edgeType, captioningManager$CaptionStyle.edgeColor, captioningManager$CaptionStyle.getTypeface());
     }
 }

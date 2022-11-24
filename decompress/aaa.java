@@ -1,18 +1,16 @@
+import java.util.Map;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class aaa
+public final class aaa extends vxs
 {
-    static {
-        final baa.a companion = baa.Companion;
-    }
+    public Map<String, String> k;
     
-    public static baa a(final ica ica, final String s) {
-        return baa.Companion.a(ica, s);
-    }
-    
-    public static baa b(final String s, final String s2, final String s3) {
-        return baa.Companion.b(s, s2, s3);
+    public aaa(final aaa.aaa$a aaa$a) {
+        e0e.f((Object)aaa$a, "builder");
+        super((vxs$a)aaa$a);
+        this.k = aaa$a.k;
     }
 }

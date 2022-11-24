@@ -9,57 +9,57 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineModuleMetadata extends aih<mzs>
+public class JsonTimelineModuleMetadata extends tih<v0t>
 {
     @JsonField
-    public hzs a;
+    public q0t a;
     @JsonField
-    public kzs b;
+    public t0t b;
     @JsonField
-    public u8t c;
+    public gat c;
     
     @Override
     public final Object s() {
-        return new mzs(this.a, this.b, this.c);
+        return new v0t(this.a, this.b, this.c);
     }
     
     @JsonObject
-    public static class JsonTimelineModuleConversationMetadata extends aih<hzs>
+    public static class JsonTimelineModuleConversationMetadata extends tih<q0t>
     {
         @JsonField(name = { "allTweetIds" })
         public List<String> a;
         @JsonField
         public boolean b;
         @JsonField(typeConverter = d.class)
-        public d4t c;
+        public o5t c;
         
         @Override
         public final Object s() {
-            return new hzs(this.a, this.b, poa.V(this.c));
+            return new q0t((List)this.a, this.b, ix.w(this.c));
         }
     }
     
     @JsonObject
-    public static class JsonTimelineModuleGridCarouselMetadata extends aih<kzs>
+    public static class JsonTimelineModuleGridCarouselMetadata extends tih<t0t>
     {
         @JsonField
         public int a;
         
         @Override
         public final Object s() {
-            return new kzs(this.a);
+            return new t0t(this.a);
         }
     }
     
     @JsonObject
-    public static class JsonTimelineVerticalModuleMetadata extends aih<u8t>
+    public static class JsonTimelineVerticalModuleMetadata extends tih<gat>
     {
         @JsonField
         public boolean a;
         
         @Override
         public final Object s() {
-            return new u8t(this.a);
+            return new gat(this.a);
         }
     }
 }

@@ -18,7 +18,7 @@
     </plurals>
     <plurals name="community_member_count">
         <item quantity="one">%d člen komunity</item>
-        <item quantity="other">Počet členů Komunity: %d</item>
+        <item quantity="other">Počet členů komunity: %d</item>
     </plurals>
     <plurals name="community_moderator_count">
         <item quantity="one">%d moderátor</item>
@@ -311,8 +311,8 @@
         <item quantity="other">%d dalších</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super-sledující</item>
-        <item quantity="other">Super-sledující</item>
+        <item quantity="one">Předplatitel</item>
+        <item quantity="other">Předplatitelé</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">Lajky: %s</item>
@@ -408,7 +408,7 @@
         <item quantity="other">Odpověď uživateli ﻿%1$s a dalším %2$d ﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Odpovídáte uživateli ﻿%1$s a dalším %2$d﻿. Vaši odpověď uvidí také další super-sledující.</item>
+        <item quantity="other">Odpovídáte uživateli ﻿%1$s a %2$d dalším﻿. Vaši odpověď uvidí také další Předplatitelé.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Odpověď uživateli ﻿%1$s a dalším %2$d﻿ v Prostoru ﻿%3$s﻿</item>
@@ -417,7 +417,7 @@
         <item quantity="other">Odpověď uživatelům ﻿%1$s %2$s a dalším (%3$d) others﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Odpovídáte uživatelům ﻿%1$s, %2$s a dalším %3$d﻿. Vaši odpověď uvidí také další super-sledující.</item>
+        <item quantity="other">Odpovídáte uživatelům ﻿%1$s, %2$s a dalším %3$d﻿. Vaši odpověď uvidí také další Předplatitelé.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Odpověď uživatelům ﻿%1$s, %2$s a dalším %3$d﻿ v Prostoru ﻿%4$s﻿</item>

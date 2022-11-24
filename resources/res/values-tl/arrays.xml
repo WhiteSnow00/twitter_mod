@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Makakatanggap ka ng mga abiso para sa mga bagong Tweet.</item>
-        <item>Makakatanggap ka ng mga abiso para sa mga bagong Super Follower lang na Tweet.</item>
+        <item>Makakakuha ka ng mga abiso para sa bagong Subscription Tweet.</item>
         <item>Makakakuha ka ng mga abiso para sa mga bagong Live na video Tweet.</item>
         <item>Makakakuha ka ng mga abiso para sa mga bagong Tweet sa Spaces.</item>
         <item>Hindi ka na makakatanggap ng mga abiso para sa mga bagong Tweet.</item>
     </array>
     <array name="account_notif_options">
         <item>Mga Tweet</item>
-        <item>Mga Super Follower lang na Tweet</item>
+        <item>Mga Tweet para sa Subscription lang</item>
         <item>Live na video</item>
         <item>Spaces</item>
         <item>Wala</item>
     </array>
     <array name="account_notif_options_old">
         <item>Lahat ng Tweet</item>
-        <item>Mga Super Follower Lang na Tweet</item>
+        <item>Mga Subscription Tweet Lang</item>
         <item>Live na video lang</item>
         <item>Spaces lang</item>
         <item>Off</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Makakuha ng mga abiso para sa lahat ng Tweet ng account na ito.</item>
-        <item>Makatanggap ng mga abiso para lang sa mga Super Follow na Tweet.</item>
+        <item>Makakuha ng mga abiso para sa mga Subscription Tweet.</item>
         <item>Makakuha lang ng mga abiso para sa mga live na broadcast.</item>
         <item>Makakuha lang ng mga abiso para sa Spaces.</item>
         <item>I-off ang mga abiso para sa mga Tweet ng account na ito.</item>

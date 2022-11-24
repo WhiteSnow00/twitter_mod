@@ -2,21 +2,11 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dsn extends gue implements rtb<prn, Boolean>
+public final class dsn
 {
-    public static final dsn C0;
-    
-    static {
-        C0 = new dsn();
-    }
+    public final uv1<tki> a;
     
     public dsn() {
-        super(1);
-    }
-    
-    public final Object invoke(final Object o) {
-        final prn prn = (prn)o;
-        zzd.f((Object)prn, "it");
-        return prn.a;
+        this.a = (uv1<tki>)new uv1();
     }
 }

@@ -8,25 +8,25 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTileContentStandard extends aih<fps>
+public class JsonTileContentStandard extends tih<pqs>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     @JsonField
-    public wg1 c;
+    public vg1 c;
     
     @Override
     public final Object s() {
-        final fps.a a = new fps.a();
+        final pqs.a a = new pqs.a();
         a.a = this.a;
         a.b = this.b;
         a.c = this.c;
-        final fps fps = (fps)a.j();
-        if (fps == null) {
-            zi.A("title or supporting text or both are empty");
+        final pqs pqs = (pqs)a.j();
+        if (pqs == null) {
+            c0e.i("title or supporting text or both are empty");
         }
-        return fps;
+        return pqs;
     }
 }

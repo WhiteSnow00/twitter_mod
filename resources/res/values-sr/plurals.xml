@@ -308,8 +308,8 @@
         <item quantity="other">%d других</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Супер-пратилац</item>
-        <item quantity="other">Супер-пратиоци</item>
+        <item quantity="one">Претплатник</item>
+        <item quantity="other">Претплатници</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s свиђање</item>
@@ -405,7 +405,7 @@
         <item quantity="other">Одговор за ﻿%1$s и %2$d других﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Одговараш кориснику ﻿%1$s и %2$d других﻿. Твој одговор ће моћи да виде и други супер-пратиоци.</item>
+        <item quantity="other">Одговараш корисницима ﻿%1$s и још %2$d﻿. Одговор ће моћи да виде и други Претплатници.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Одговараш кориснику ﻿%1$s и %2$d других﻿ у Простору ﻿%3$s﻿</item>
@@ -414,7 +414,7 @@
         <item quantity="other">Одговор за ﻿%1$s, %2$s и %3$d других﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Одговараш корисницима ﻿%1$s, %2$s и %3$d других﻿. Твој одговор ће моћи да виде и други супер-пратиоци.</item>
+        <item quantity="other">Одговараш корисницима ﻿%1$s %2$s и још %3$d﻿. Одговор ће моћи да виде и други Претплатници.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Одговараш кориснику ﻿%1$s %2$s и %3$d других﻿ у Простору ﻿%4$s﻿</item>

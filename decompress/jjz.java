@@ -2,15 +2,11 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jjz
+public abstract class jjz
 {
-    @Override
-    public final boolean equals(final Object o) {
-        throw null;
-    }
+    public abstract int a();
     
-    @Override
-    public final int hashCode() {
-        throw null;
-    }
+    public abstract String b();
+    
+    public abstract boolean c();
 }

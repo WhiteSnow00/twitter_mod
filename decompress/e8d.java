@@ -1,142 +1,172 @@
-import android.graphics.Rect;
-import java.util.Iterator;
-import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.List;
+import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e8d implements f8d
+public final class e8d extends np1
 {
-    public final efk a;
-    public final zph b;
-    public final h8d c;
-    public final lyr<Boolean> d;
-    public y7d e;
-    public d8d f;
-    public g8d g;
-    public a8d h;
-    public bnb i;
-    public List<c8d> j;
-    public boolean k;
+    public String a;
+    public final d8d b;
     
-    public e8d(final zph b, final efk a, final lyr<Boolean> lyr) {
-        final nyr$a a2 = nyr.a;
+    public e8d(final String a, final d8d b) {
         this.b = b;
         this.a = a;
-        this.c = new h8d();
-        this.d = (lyr<Boolean>)a2;
     }
     
-    public final void a(final h8d h8d, final int n) {
-        if (this.k) {
-            final CopyOnWriteArrayList j = this.j;
-            if (j != null) {
-                if (!j.isEmpty()) {
-                    final Iterator iterator = this.j.iterator();
-                    while (iterator.hasNext()) {
-                        ((c8d)iterator.next()).a();
+    @Override
+    public final void h(String a, final String s, final boolean b) {
+        final d8d b2 = this.b;
+        if (b2 != null) {
+            a = this.a;
+            Objects.requireNonNull(s);
+            int n = -1;
+            final int hashCode = s.hashCode();
+            int n2 = 7;
+            switch (hashCode) {
+                case 2113652014: {
+                    if (!s.equals("LocalContentUriFetchProducer")) {
+                        break;
                     }
+                    n = 14;
+                    break;
+                }
+                case 2109593398: {
+                    if (!s.equals("PartialDiskCacheProducer")) {
+                        break;
+                    }
+                    n = 13;
+                    break;
+                }
+                case 1793127518: {
+                    if (!s.equals("LocalContentUriThumbnailFetchProducer")) {
+                        break;
+                    }
+                    n = 12;
+                    break;
+                }
+                case 1721672898: {
+                    if (!s.equals("DataFetchProducer")) {
+                        break;
+                    }
+                    n = 11;
+                    break;
+                }
+                case 1023071510: {
+                    if (!s.equals("PostprocessedBitmapMemoryCacheProducer")) {
+                        break;
+                    }
+                    n = 10;
+                    break;
+                }
+                case 1019542023: {
+                    if (!s.equals("LocalAssetFetchProducer")) {
+                        break;
+                    }
+                    n = 9;
+                    break;
+                }
+                case 957714404: {
+                    if (!s.equals("BitmapMemoryCacheProducer")) {
+                        break;
+                    }
+                    n = 8;
+                    break;
+                }
+                case 656304759: {
+                    if (!s.equals("DiskCacheProducer")) {
+                        break;
+                    }
+                    n = 7;
+                    break;
+                }
+                case 473552259: {
+                    if (!s.equals("VideoThumbnailProducer")) {
+                        break;
+                    }
+                    n = 6;
+                    break;
+                }
+                case -1224383234: {
+                    if (!s.equals("NetworkFetchProducer")) {
+                        break;
+                    }
+                    n = 5;
+                    break;
+                }
+                case -1307634203: {
+                    if (!s.equals("EncodedMemoryCacheProducer")) {
+                        break;
+                    }
+                    n = 4;
+                    break;
+                }
+                case -1579985851: {
+                    if (!s.equals("LocalFileFetchProducer")) {
+                        break;
+                    }
+                    n = 3;
+                    break;
+                }
+                case -1683996557: {
+                    if (!s.equals("LocalResourceFetchProducer")) {
+                        break;
+                    }
+                    n = 2;
+                    break;
+                }
+                case -1914072202: {
+                    if (!s.equals("BitmapMemoryCacheGetProducer")) {
+                        break;
+                    }
+                    n = 1;
+                    break;
+                }
+                case -1917159454: {
+                    if (!s.equals("QualifiedResourceFetchProducer")) {
+                        break;
+                    }
+                    n = 0;
+                    break;
                 }
             }
-        }
-    }
-    
-    public final void b(final h8d h8d, final int v) {
-        h8d.v = v;
-        if (this.k) {
-            final CopyOnWriteArrayList j = this.j;
-            if (j != null) {
-                if (!j.isEmpty()) {
-                    if (v == 3) {
-                        final anp f = ((tb)this.a).f;
-                        if (f != null && ((ke9)f).b() != null) {
-                            final Rect bounds = ((ke9)f).b().getBounds();
-                            this.c.s = bounds.width();
-                            this.c.t = bounds.height();
-                        }
+            while (true) {
+                switch (n) {
+                    default: {
+                        n2 = 1;
                     }
-                    final Iterator iterator = this.j.iterator();
-                    while (iterator.hasNext()) {
-                        ((c8d)iterator.next()).b();
+                    case 0:
+                    case 2:
+                    case 3:
+                    case 6:
+                    case 9:
+                    case 11:
+                    case 12:
+                    case 14: {
+                        b2.a(a, n2, b, s);
+                        break;
                     }
-                }
-            }
-        }
-    }
-    
-    public final void c(final boolean k) {
-        this.k = k;
-        if (k) {
-            if (this.h == null) {
-                this.h = new a8d(this.b, this.c, (f8d)this, (lyr)this.d);
-            }
-            if (this.g == null) {
-                this.g = new g8d(this.b, this.c);
-            }
-            if (this.f == null) {
-                this.f = new d8d(this.c, this);
-            }
-            final y7d e = this.e;
-            if (e == null) {
-                this.e = new y7d(((tb)this.a).h, (x7d)this.f);
-            }
-            else {
-                e.a = ((tb)this.a).h;
-            }
-            if (this.i == null) {
-                this.i = new bnb(new som[] { this.g, (som)this.e });
-            }
-            final d8d f = this.f;
-            if (f != null) {
-                this.a.E((x7d)f);
-            }
-            final a8d h = this.h;
-            if (h != null) {
-                final tmb e2 = ((tb)this.a).e;
-                synchronized (e2) {
-                    e2.C0.add(h);
-                }
-            }
-            final bnb i = this.i;
-            if (i != null) {
-                this.a.F((som)i);
-            }
-        }
-        else {
-            final d8d f2 = this.f;
-            Label_0327: {
-                if (f2 != null) {
-                    final efk a = this.a;
-                    synchronized (a) {
-                        final x7d e3 = a.E;
-                        if (e3 instanceof wmb) {
-                            final wmb wmb = (wmb)e3;
-                            synchronized (wmb) {
-                                wmb.a.remove(f2);
-                                break Label_0327;
-                            }
-                        }
-                        if (e3 == f2) {
-                            a.E = null;
-                        }
+                    case 7:
+                    case 13: {
+                        n2 = 3;
+                        continue;
+                    }
+                    case 5: {
+                        n2 = 2;
+                        continue;
+                    }
+                    case 4: {
+                        n2 = 4;
+                        continue;
+                    }
+                    case 1:
+                    case 8:
+                    case 10: {
+                        n2 = 5;
+                        continue;
                     }
                 }
-            }
-            final a8d h2 = this.h;
-            if (h2 != null) {
-                final tmb e4 = ((tb)this.a).e;
-                synchronized (e4) {
-                    final int index = e4.C0.indexOf(h2);
-                    if (index != -1) {
-                        e4.C0.remove(index);
-                    }
-                }
-            }
-            final bnb j = this.i;
-            if (j != null) {
-                this.a.K((som)j);
+                break;
             }
         }
     }

@@ -305,8 +305,8 @@
         <item quantity="other">%d més</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Superseguidor</item>
-        <item quantity="other">Superseguidors</item>
+        <item quantity="one">Subscriptor</item>
+        <item quantity="other">Subscriptors</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">A %s li agrada</item>
@@ -402,7 +402,7 @@
         <item quantity="other">En resposta a ﻿%1$s i a %2$d més﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">En resposta a l&apos;usuari ﻿%1$s i a %2$d usuaris més﻿. La teva resposta també serà visible per a altres superseguidors.</item>
+        <item quantity="other">En resposta a l&apos;usuari ﻿%1$s i a %2$d usuaris més﻿. La teva resposta també serà visible per a altres Subscriptors.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">En resposta a ﻿%1$s i a %2$d usuaris més﻿ a ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">En resposta a ﻿%1$s %2$s i a %3$d més﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">En resposta a l&apos;usuari ﻿%1$s %2$s i a %3$d usuaris més﻿. La teva resposta també serà visible per a altres superseguidors.</item>
+        <item quantity="other">En resposta a l&apos;usuari ﻿%1$s %2$s i a %3$d usuaris més﻿. La teva resposta també serà visible per a altres Subscriptors.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">En resposta a ﻿%1$s %2$s i a %3$d usuaris més﻿ a ﻿%4$s﻿</item>

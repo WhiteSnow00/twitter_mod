@@ -1,8 +1,14 @@
+import com.google.android.material.appbar.AppBarLayout;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface dyf
+public final class dyf
 {
-    boolean z0(final String p0);
+    public final AppBarLayout a;
+    
+    public dyf(final AppBarLayout a) {
+        this.a = a;
+    }
 }

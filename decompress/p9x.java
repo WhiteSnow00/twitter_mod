@@ -1,22 +1,14 @@
-import android.view.ViewGroup$MarginLayoutParams;
-import androidx.recyclerview.widget.RecyclerView$n;
-import android.view.View;
-import androidx.recyclerview.widget.RecyclerView$o;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class p9x implements RecyclerView$o
+public final class p9x
 {
-    public final void b(final View view) {
-    }
-    
-    public final void e(final View view) {
-        final RecyclerView$n recyclerView$n = (RecyclerView$n)view.getLayoutParams();
-        if (((ViewGroup$MarginLayoutParams)recyclerView$n).width == -1 && ((ViewGroup$MarginLayoutParams)recyclerView$n).height == -1) {
-            return;
-        }
-        throw new IllegalStateException("Pages must fill the whole ViewPager2 (use match_parent)");
+    public static final k9x a(final zaf<vn> zaf, final boolean b) {
+        e0e.f((Object)zaf, "<this>");
+        final n9x n9x = new n9x();
+        final e39 e39 = new e39();
+        e39.c(zaf.a().subscribe((rk6)new wj4((stb)new p9x$a(n9x, b, e39), 10)));
+        return (k9x)n9x;
     }
 }

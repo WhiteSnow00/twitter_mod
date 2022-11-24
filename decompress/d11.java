@@ -1,101 +1,69 @@
-import tv.periscope.android.api.PsRequest;
-import tv.periscope.chatman.api.IdempotenceHeaderMap;
-import tv.periscope.chatman.api.IdempotenceHeaderMapImpl;
-import tv.periscope.android.api.GetAudioSpaceMetaRequest;
-import tv.periscope.android.api.AuthedApiService;
-import com.twitter.util.user.UserIdentifier;
+import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class d11 extends enm<d11$a, p01, f1c>
+public final class d11 implements c11
 {
-    public final vtn E0;
-    public final UserIdentifier F0;
-    public final AuthedApiService G0;
-    public final xmp H0;
-    public final r2e I0;
+    public static final d11.d11$a Companion;
+    public final w01 a;
+    public final m11 b;
+    public final r11 c;
+    public final e39 d;
+    public final znl<Long> e;
+    public final uv1<List<e31>> f;
+    public String g;
     
-    public d11(final vtn e0, final UserIdentifier f0, final AuthedApiService g0, final xmp h0, final r2e i0) {
-        czd.f((Object)e0, "roomPeriscopeAuthenticator");
-        czd.f((Object)f0, "userIdentifier");
-        czd.f((Object)g0, "authedApiService");
-        czd.f((Object)h0, "sessionCache");
-        czd.f((Object)i0, "isSubscribedDataSource");
-        super((trc)null, 1, (rf8)null);
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = g0;
-        this.H0 = h0;
-        this.I0 = i0;
+    static {
+        Companion = new d11.d11$a();
     }
     
-    public static final eaq f(final d11 d11, final Object o) {
-        return d11.R(o);
+    public d11(final w01 a, final m11 b, final r11 c, final kcm kcm) {
+        e0e.f((Object)a, "addContentDataSource");
+        e0e.f((Object)b, "deleteContentDataSource");
+        e0e.f((Object)c, "fetchContentDataSource");
+        e0e.f((Object)kcm, "releaseCompletable");
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        final e39 d = new e39();
+        this.d = d;
+        this.e = (znl<Long>)new znl();
+        this.f = (uv1<List<e31>>)uv1.e((Object)h3a.F0);
+        kcm.i((sj)new vo0(d, 3));
     }
     
-    public final /* bridge */ eaq R(final Object o) {
-        return this.h((d11$a)o);
+    public final bbq<e31> a(final String s, final String s2) {
+        return (bbq<e31>)new ccq((idq)((tnm<w01.a, Object, osc>)this.a).S(new w01.a(s, s2)), (rk6)new xql((stb)new d11$c(this), 23));
     }
     
-    public final orc c(final Object o) {
-        final d11$a d11$a = (d11$a)o;
-        czd.f((Object)d11$a, "args");
-        return (orc)new f1c(d11$a.a, d11$a.b, this.F0);
+    public final yz5 b(final String s, final String s2) {
+        e0e.f((Object)s2, "sharingId");
+        return (yz5)new o06((idq)new ccq((idq)((tnm<m11$a, Object, osc>)this.b).S(new m11$a(s, s2)), (rk6)new ltt((stb)new d11$b(this), 14)));
     }
     
-    public final Object d(final orc orc) {
-        final f1c f1c = (f1c)orc;
-        czd.f((Object)f1c, "request");
-        final xrc t = ((orc)f1c).T();
-        czd.e((Object)t, "request.result");
-        if (!t.b) {
-            kbv kbv;
-            if ((kbv = (kbv)t.h) == null) {
-                kbv = new kbv(new hbv[] { new hbv(t.c) });
-            }
-            throw new d11.d11$b(kbv);
+    public final void c() {
+        this.e.onNext((Object)v7q.k());
+    }
+    
+    public final t5j<List<e31>> d(final String g) {
+        if (!e0e.a((Object)g, (Object)this.g)) {
+            this.d.a();
+            this.f.onNext((Object)h3a.F0);
+            this.g = g;
+            final e39 d = this.d;
+            final t5j map = t5j.merge((fbj)t5j.interval(0L, 30L, TimeUnit.SECONDS), (fbj)this.e).flatMapSingle((rtb)new kzf((stb)new e11(this, g), 15)).map((rtb)new wsn((stb)g11.F0, 7));
+            final h11 h11 = new h11((Object)this.f);
+            e0e.e((Object)map, "map { response -> respon\u2026ending { it.updatedAt } }");
+            d.c(znr.f(map, (stb)i11.F0, (stb)h11, 2));
         }
-        final p01 p = (p01)t.g;
-        if (p != null) {
-            return p;
-        }
-        throw new IllegalStateException("No AudioSpace response object".toString());
+        return (t5j<List<e31>>)this.f;
     }
     
-    public final eaq<p01> h(final d11$a d11$a) {
-        czd.f((Object)d11$a, "args");
-        return (eaq<p01>)this.E0.b().p((psb)new k1i((qsb)new qsb<w3k.b, lcq<? extends p01>>(this, d11$a) {
-            public final d11 D0;
-            public final d11$a E0;
-            
-            public final Object invoke(final Object o) {
-                final w3k.b b = (w3k.b)o;
-                czd.f((Object)b, "results");
-                eaq eaq;
-                if (b.b.f()) {
-                    eaq = eaq.n((Throwable)b.b.c());
-                }
-                else if (djo.u()) {
-                    eaq = d11.f(this.D0, this.E0);
-                }
-                else {
-                    final GetAudioSpaceMetaRequest getAudioSpaceMetaRequest = new GetAudioSpaceMetaRequest(this.E0.a, (Integer)null, (Integer)null, 6, (rf8)null);
-                    final String b2 = this.D0.H0.b();
-                    if (b2 == null) {
-                        eaq = eaq.n((Throwable)new IllegalStateException("User is not authenticated for Periscope"));
-                    }
-                    else {
-                        ((PsRequest)getAudioSpaceMetaRequest).cookie = b2;
-                        final d11 d0 = this.D0;
-                        final AuthedApiService g0 = d0.G0;
-                        final wmp d2 = d0.H0.d();
-                        eaq = g0.getAudioSpace(getAudioSpaceMetaRequest, d2 != null && d2.a(), (IdempotenceHeaderMap)IdempotenceHeaderMapImpl.Companion.create()).p((psb)new s4i((qsb)new f11(this.D0, this.E0), 21));
-                    }
-                }
-                return eaq;
-            }
-        }, 18)).f((ucq)this.E0.c());
+    public final void e() {
+        this.g = null;
+        this.d.a();
     }
 }

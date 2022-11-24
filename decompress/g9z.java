@@ -2,9 +2,13 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class g9z extends akz implements ooz
+public final class g9z extends zkz implements npz
 {
     public g9z() {
-        super((clz)k9z.s());
+        super((bmz)j9z.w());
+    }
+    
+    public g9z(final yru yru) {
+        super((bmz)j9z.w());
     }
 }

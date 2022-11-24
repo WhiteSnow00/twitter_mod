@@ -6,17 +6,17 @@ package com.twitter.android.topics.peek.di.view;
 
 import android.view.View;
 
-public final class b extends gue implements rtb<View, okx<? super hus, qcw, zot>>
+public final class b extends pue implements stb<View, xlx<? super qvs, sdw, hqt>>
 {
-    public final /* synthetic */ bpt C0;
+    public final jqt F0;
     
-    public b(final bpt c0) {
-        this.C0 = c0;
+    public b(final jqt f0) {
+        this.F0 = f0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        zzd.f((Object)o, "it");
-        return this.C0;
+        e0e.f((Object)o, "it");
+        return this.F0;
     }
 }

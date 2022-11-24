@@ -2,45 +2,22 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hnj
+public final class hnj implements gnj
 {
-    public final w2j a;
-    public final long b;
+    public final omv<Long, uxi> a;
     
-    public hnj(final w2j a, final long b) {
-        this.a = a;
-        this.b = b;
+    public hnj(final qmv qmv, final hg6<Long, uxi> hg6, final kcm kcm) {
+        e0e.f((Object)qmv, "repositoryManager");
+        e0e.f((Object)hg6, "repositoryConfiguration");
+        e0e.f((Object)kcm, "releaseCompletable");
+        final de6 de6 = new de6();
+        final omv a = qmv.a((hg6)hg6);
+        e0e.e((Object)a, "repositoryManager.getRep\u2026(repositoryConfiguration)");
+        this.a = (omv<Long, uxi>)a;
+        kcm.i((sj)new tdv(de6, 14));
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof hnj)) {
-            return false;
-        }
-        final hnj hnj = (hnj)o;
-        return this.a == hnj.a && this.b == hnj.b;
-    }
-    
-    @Override
-    public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final long b = this.b;
-        return hashCode * 31 + (int)(b ^ b >>> 32);
-    }
-    
-    @Override
-    public final String toString() {
-        final w2j a = this.a;
-        final long b = this.b;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("OpenbackRingerVolumeSignal(operator=");
-        sb.append(a);
-        sb.append(", volume=");
-        sb.append(b);
-        sb.append(")");
-        return sb.toString();
+    public final void a(final long n, final uxi uxi) {
+        this.a.e((Object)n, (Object)uxi).D();
     }
 }

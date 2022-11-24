@@ -11,7 +11,7 @@ import kotlin.Metadata;
 public final class MatrixKt
 {
     public static final Mat3 inverse(final Mat3 mat3) {
-        czd.f((Object)mat3, "m");
+        e0e.f((Object)mat3, "m");
         final float x = mat3.getX().getX();
         final float y = mat3.getX().getY();
         final float z = mat3.getX().getZ();
@@ -25,11 +25,11 @@ public final class MatrixKt
         final float n2 = z2 * x3 - x2 * z3;
         final float n3 = x2 * y3 - y2 * x3;
         final float n4 = z * n3 + (y * n2 + x * n);
-        return Mat3.Companion.of(n / n4, n2 / n4, n3 / n4, jxa.o(y, z3, z * y3, n4), jxa.o(z, x3, z3 * x, n4), jxa.o(y3, x, x3 * y, n4), jxa.o(z, y2, y * z2, n4), jxa.o(z2, x, z * x2, n4), jxa.o(y, x2, x * y2, n4));
+        return Mat3.Companion.of(n / n4, n2 / n4, n3 / n4, j98.h(y, z3, z * y3, n4), j98.h(z, x3, z3 * x, n4), j98.h(y3, x, x3 * y, n4), j98.h(z, y2, y * z2, n4), j98.h(z2, x, z * x2, n4), j98.h(y, x2, x * y2, n4));
     }
     
     public static final Mat4 inverse(final Mat4 mat4) {
-        czd.f((Object)mat4, "m");
+        e0e.f((Object)mat4, "m");
         final Mat4 mat5 = new Mat4(null, null, null, (Float4)null, 15, null);
         final float n = mat4.getW().getW() * mat4.getZ().getZ();
         final float n2 = mat4.getZ().getW() * mat4.getW().getZ();
@@ -107,67 +107,68 @@ public final class MatrixKt
     }
     
     public static final Mat4 lookAt(final Float3 float3, final Float3 float4, final Float3 float5) {
-        czd.f((Object)float3, "eye");
-        czd.f((Object)float4, "target");
-        czd.f((Object)float5, "up");
+        e0e.f((Object)float3, "eye");
+        e0e.f((Object)float4, "target");
+        e0e.f((Object)float5, "up");
         return lookTowards(float3, new Float3(float4.getX() - float3.getX(), float4.getY() - float3.getY(), float4.getZ() - float3.getZ()), float5);
     }
     
     public static Mat4 lookAt$default(final Float3 float3, final Float3 float4, Float3 float5, final int n, final Object o) {
         if ((n & 0x4) != 0x0) {
-            float5 = new Float3(0.0f, 0.0f, 1.0f, 3, (rf8)null);
+            float5 = new Float3(0.0f, 0.0f, 1.0f, 3, null);
         }
         return lookAt(float3, float4, float5);
     }
     
     public static final Mat4 lookTowards(final Float3 float3, Float3 normalize, Float3 normalize2) {
-        czd.f((Object)float3, "eye");
-        czd.f((Object)normalize, "forward");
-        czd.f((Object)normalize2, "up");
+        e0e.f((Object)float3, "eye");
+        e0e.f((Object)normalize, "forward");
+        e0e.f((Object)normalize2, "up");
         normalize = VectorKt.normalize(normalize);
-        normalize2 = VectorKt.normalize(new Float3(normalize2.getZ() * normalize.getY() - normalize2.getY() * normalize.getZ(), normalize2.getX() * normalize.getZ() - normalize2.getZ() * normalize.getX(), normalize2.getY() * normalize.getX() - normalize2.getX() * normalize.getY()));
-        return new Mat4(new Float4(normalize2, 0.0f, 2, (rf8)null), new Float4(VectorKt.normalize(new Float3(normalize.getZ() * normalize2.getY() - normalize.getY() * normalize2.getZ(), normalize.getX() * normalize2.getZ() - normalize.getZ() * normalize2.getX(), normalize.getY() * normalize2.getX() - normalize.getX() * normalize2.getY())), 0.0f, 2, (rf8)null), new Float4(normalize.unaryMinus(), 0.0f, 2, (rf8)null), new Float4(float3, 1.0f));
+        final Float3 normalize3 = VectorKt.normalize(new Float3(normalize2.getZ() * normalize.getY() - normalize2.getY() * normalize.getZ(), normalize2.getX() * normalize.getZ() - normalize2.getZ() * normalize.getX(), normalize2.getY() * normalize.getX() - normalize2.getX() * normalize.getY()));
+        normalize2 = VectorKt.normalize(new Float3(normalize.getZ() * normalize3.getY() - normalize.getY() * normalize3.getZ(), normalize.getX() * normalize3.getZ() - normalize.getZ() * normalize3.getX(), normalize.getY() * normalize3.getX() - normalize.getX() * normalize3.getY()));
+        return new Mat4(new Float4(normalize3, 0.0f, 2, null), new Float4(normalize2, 0.0f, 2, null), new Float4(normalize.unaryMinus(), 0.0f, 2, null), new Float4(float3, 1.0f));
     }
     
     public static Mat4 lookTowards$default(final Float3 float3, final Float3 float4, Float3 float5, final int n, final Object o) {
         if ((n & 0x4) != 0x0) {
-            float5 = new Float3(0.0f, 0.0f, 1.0f, 3, (rf8)null);
+            float5 = new Float3(0.0f, 0.0f, 1.0f, 3, null);
         }
         return lookTowards(float3, float4, float5);
     }
     
     public static final Mat4 normal(final Mat4 mat4) {
-        czd.f((Object)mat4, "m");
+        e0e.f((Object)mat4, "m");
         final Float4 x = mat4.getX();
         final Float3 float3 = new Float3(x.getX(), x.getY(), x.getZ());
-        final float g = zjf.g(float3, float3.getZ(), sde.c(float3, float3.getY(), float3.getX() * float3.getX()));
+        final float e = bng.e(float3, float3.getZ(), ang.b(float3, float3.getY(), float3.getX() * float3.getX()));
         final Float4 y = mat4.getY();
         final Float3 float4 = new Float3(y.getX(), y.getY(), y.getZ());
-        final float g2 = zjf.g(float4, float4.getZ(), sde.c(float4, float4.getY(), float4.getX() * float4.getX()));
+        final float e2 = bng.e(float4, float4.getZ(), ang.b(float4, float4.getY(), float4.getX() * float4.getX()));
         final Float4 z = mat4.getZ();
         final Float3 float5 = new Float3(z.getX(), z.getY(), z.getZ());
-        final Float3 float6 = new Float3(g, g2, zjf.g(float5, float5.getZ(), sde.c(float5, float5.getY(), float5.getX() * float5.getX())));
+        final Float3 float6 = new Float3(e, e2, bng.e(float5, float5.getZ(), ang.b(float5, float5.getY(), float5.getX() * float5.getX())));
         return scale(new Float3(1.0f / float6.getX(), 1.0f / float6.getY(), 1.0f / float6.getZ())).times(mat4);
     }
     
     public static final Mat4 ortho(final float n, final float n2, final float n3, final float n4, final float n5, final float n6) {
-        final Float4 float4 = new Float4(2.0f / (n2 - 1.0f), 0.0f, 0.0f, 0.0f, 14, (rf8)null);
+        final Float4 float4 = new Float4(2.0f / (n2 - 1.0f), 0.0f, 0.0f, 0.0f, 14, null);
         final float n7 = n4 - n3;
-        final Float4 float5 = new Float4(0.0f, 2.0f / n7, 0.0f, 0.0f, 13, (rf8)null);
+        final Float4 float5 = new Float4(0.0f, 2.0f / n7, 0.0f, 0.0f, 13, null);
         final float n8 = n6 - n5;
-        return new Mat4(float4, float5, new Float4(0.0f, 0.0f, -2.0f / n8, 0.0f, 11, (rf8)null), new Float4(-(n2 + n) / (n2 - n), -(n4 + n3) / n7, -(n6 + n5) / n8, 1.0f));
+        return new Mat4(float4, float5, new Float4(0.0f, 0.0f, -2.0f / n8, 0.0f, 11, null), new Float4(-(n2 + n) / (n2 - n), -(n4 + n3) / n7, -(n6 + n5) / n8, 1.0f));
     }
     
     public static final Mat4 perspective(float n, final float n2, float n3, final float n4) {
-        n = 1.0f / (float)Math.tan(0.017453292f * n * 0.5f);
-        final float n5 = n4 - n3;
-        final float n6 = (n4 + n3) / n5;
-        n3 = 2.0f * n4 * n3 / n5;
-        return new Mat4(new Float4(n / n2, 0.0f, 0.0f, 0.0f, 14, (rf8)null), new Float4(0.0f, n, 0.0f, 0.0f, 13, (rf8)null), new Float4(0.0f, 0.0f, n6, 1.0f, 3, (rf8)null), new Float4(0.0f, 0.0f, -n3, 0.0f, 11, (rf8)null));
+        final float n5 = 1.0f / (float)Math.tan(0.017453292f * n * 0.5f);
+        final float n6 = n4 - n3;
+        n = (n4 + n3) / n6;
+        n3 = 2.0f * n4 * n3 / n6;
+        return new Mat4(new Float4(n5 / n2, 0.0f, 0.0f, 0.0f, 14, null), new Float4(0.0f, n5, 0.0f, 0.0f, 13, null), new Float4(0.0f, 0.0f, n, 1.0f, 3, null), new Float4(0.0f, 0.0f, -n3, 0.0f, 11, null));
     }
     
     public static final Quaternion quaternion(final Mat4 mat4) {
-        czd.f((Object)mat4, "m");
+        e0e.f((Object)mat4, "m");
         final float n = mat4.getZ().getZ() + (mat4.getY().getY() + mat4.getX().getX());
         Quaternion quaternion;
         if (n > 0.0f) {
@@ -190,16 +191,16 @@ public final class MatrixKt
     }
     
     public static final Mat4 rotation(float n, float n2, float n3, final RotationsOrder rotationsOrder) {
-        czd.f((Object)rotationsOrder, "order");
+        e0e.f((Object)rotationsOrder, "order");
         final double n4 = n;
-        final float n5 = (float)Math.cos(n4);
-        n = (float)Math.sin(n4);
+        n = (float)Math.cos(n4);
+        final float n5 = (float)Math.sin(n4);
         final double n6 = n2;
         final float n7 = (float)Math.cos(n6);
         n2 = (float)Math.sin(n6);
         final double n8 = n3;
-        final float n9 = (float)Math.cos(n8);
-        n3 = (float)Math.sin(n8);
+        n3 = (float)Math.cos(n8);
+        final float n9 = (float)Math.sin(n8);
         Mat4 mat4 = null;
         switch (WhenMappings.$EnumSwitchMapping$0[rotationsOrder.ordinal()]) {
             default: {
@@ -207,48 +208,48 @@ public final class MatrixKt
             }
             case 6: {
                 final Mat4.Companion companion = Mat4.Companion;
-                final float n10 = n5 * n9;
+                final float n10 = n * n3;
                 final float n11 = -n7;
-                final float n12 = n9 * n;
-                mat4 = companion.of(n10 - n * n2 * n3, n11 * n, n12 * n2 + n5 * n3, 0.0f, n5 * n2 * n3 + n12, n5 * n7, n * n3 - n10 * n2, 0.0f, n11 * n3, n2, n7 * n9, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+                final float n12 = n3 * n5;
+                mat4 = companion.of(n10 - n5 * n2 * n9, n11 * n5, n12 * n2 + n * n9, 0.0f, n * n2 * n9 + n12, n * n7, n5 * n9 - n10 * n2, 0.0f, n11 * n9, n2, n7 * n3, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
                 break;
             }
             case 5: {
                 final Mat4.Companion companion2 = Mat4.Companion;
-                final float n13 = n9 * n;
-                final float n14 = n5 * n9;
-                mat4 = companion2.of(n5 * n7, n5 * n2 * n3 - n13, n14 * n2 + n * n3, 0.0f, n7 * n, n * n2 * n3 + n14, n13 * n2 - n5 * n3, 0.0f, -n2, n3 * n7, n7 * n9, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+                final float n13 = n3 * n5;
+                final float n14 = n * n3;
+                mat4 = companion2.of(n * n7, n * n2 * n9 - n13, n14 * n2 + n5 * n9, 0.0f, n7 * n5, n5 * n2 * n9 + n14, n13 * n2 - n * n9, 0.0f, -n2, n9 * n7, n7 * n3, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
                 break;
             }
             case 4: {
                 final Mat4.Companion companion3 = Mat4.Companion;
-                final float n15 = n5 * n9;
-                final float n16 = n9 * n;
+                final float n15 = n * n3;
+                final float n16 = n3 * n5;
                 final float n17 = -n7;
-                mat4 = companion3.of(n5 * n7, n * n3 - n15 * n2, n5 * n2 * n3 + n16, 0.0f, n2, n9 * n7, n17 * n3, 0.0f, n17 * n, n16 * n2 + n5 * n3, n15 - n * n2 * n3, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+                mat4 = companion3.of(n * n7, n5 * n9 - n15 * n2, n * n2 * n9 + n16, 0.0f, n2, n3 * n7, n17 * n9, 0.0f, n17 * n5, n16 * n2 + n * n9, n15 - n5 * n2 * n9, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
                 break;
             }
             case 3: {
                 final Mat4.Companion companion4 = Mat4.Companion;
-                final float n18 = n5 * n9;
-                final float n19 = n9 * n;
-                mat4 = companion4.of(n * n2 * n3 + n18, n19 * n2 - n5 * n3, n7 * n, 0.0f, n7 * n3, n9 * n7, -n2, 0.0f, n5 * n2 * n3 - n19, n * n3 + n18 * n2, n5 * n7, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+                final float n18 = n * n3;
+                final float n19 = n3 * n5;
+                mat4 = companion4.of(n5 * n2 * n9 + n18, n19 * n2 - n * n9, n7 * n5, 0.0f, n7 * n9, n3 * n7, -n2, 0.0f, n * n2 * n9 - n19, n5 * n9 + n18 * n2, n * n7, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
                 break;
             }
             case 2: {
                 final Mat4.Companion companion5 = Mat4.Companion;
                 final float n20 = -n7;
-                final float n21 = n9 * n;
-                final float n22 = n9 * n5;
-                mat4 = companion5.of(n7 * n9, n20 * n3, n2, 0.0f, n21 * n2 + n5 * n3, n22 - n * n2 * n3, n20 * n, 0.0f, n * n3 - n22 * n2, n2 * n5 * n3 + n21, n5 * n7, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+                final float n21 = n3 * n5;
+                final float n22 = n3 * n;
+                mat4 = companion5.of(n7 * n3, n20 * n9, n2, 0.0f, n21 * n2 + n * n9, n22 - n5 * n2 * n9, n20 * n5, 0.0f, n5 * n9 - n22 * n2, n2 * n * n9 + n21, n * n7, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
                 break;
             }
             case 1: {
                 final Mat4.Companion companion6 = Mat4.Companion;
                 final float n23 = -n2;
-                final float n24 = n5 * n9;
-                final float n25 = n9 * n;
-                mat4 = companion6.of(n7 * n9, n23, n7 * n3, 0.0f, n24 * n2 + n * n3, n5 * n7, n5 * n2 * n3 - n25, 0.0f, n25 * n2 - n5 * n3, n7 * n, n * n2 * n3 + n24, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+                final float n24 = n * n3;
+                final float n25 = n3 * n5;
+                mat4 = companion6.of(n7 * n3, n23, n7 * n9, 0.0f, n24 * n2 + n5 * n9, n * n7, n * n2 * n9 - n25, 0.0f, n25 * n2 - n * n9, n7 * n5, n5 * n2 * n9 + n24, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
                 break;
             }
         }
@@ -256,28 +257,28 @@ public final class MatrixKt
     }
     
     public static final Mat4 rotation(final Float3 float3, float n) {
-        czd.f((Object)float3, "axis");
+        e0e.f((Object)float3, "axis");
         final float x = float3.getX();
         final float y = float3.getY();
         final float z = float3.getZ();
         final double n2 = n * 0.017453292f;
         final float n3 = (float)Math.cos(n2);
         final float n4 = (float)Math.sin(n2);
-        final float n5 = 1.0f - n3;
+        n = 1.0f - n3;
         final Mat4.Companion companion = Mat4.Companion;
-        n = x * y * n5;
+        final float n5 = x * y * n;
         final float n6 = z * n4;
-        final float n7 = x * z * n5;
+        final float n7 = x * z * n;
         final float n8 = y * n4;
-        final float n9 = y * z * n5;
+        final float n9 = y * z * n;
         final float n10 = x * n4;
-        return companion.of(x * x * n5 + n3, n - n6, n7 + n8, 0.0f, n + n6, y * y * n5 + n3, n9 - n10, 0.0f, n7 - n8, n9 + n10, z * z * n5 + n3, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
+        return companion.of(x * x * n + n3, n5 - n6, n7 + n8, 0.0f, n5 + n6, y * y * n + n3, n9 - n10, 0.0f, n7 - n8, n9 + n10, z * z * n + n3, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f);
     }
     
     public static final Mat4 rotation(Float3 copy$default, final RotationsOrder rotationsOrder) {
-        czd.f((Object)copy$default, "d");
-        czd.f((Object)rotationsOrder, "order");
-        copy$default = Float3.copy$default(copy$default, 0.0f, 0.0f, 0.0f, 7, (Object)null);
+        e0e.f((Object)copy$default, "d");
+        e0e.f((Object)rotationsOrder, "order");
+        copy$default = Float3.copy$default(copy$default, 0.0f, 0.0f, 0.0f, 7, null);
         copy$default.setX(copy$default.getX() * 0.017453292f);
         copy$default.setY(copy$default.getY() * 0.017453292f);
         copy$default.setZ(copy$default.getZ() * 0.017453292f);
@@ -315,7 +316,7 @@ public final class MatrixKt
     }
     
     public static final Mat4 rotation(final Mat4 mat4) {
-        czd.f((Object)mat4, "m");
+        e0e.f((Object)mat4, "m");
         final Float4 x = mat4.getX();
         final Float3 normalize = VectorKt.normalize(new Float3(x.getX(), x.getY(), x.getZ()));
         final Float4 y = mat4.getY();
@@ -324,10 +325,10 @@ public final class MatrixKt
         return new Mat4(normalize, normalize2, VectorKt.normalize(new Float3(z.getX(), z.getY(), z.getZ())), null, 8, null);
     }
     
-    public static final Mat4 rotation(final Quaternion quaternion) {
-        czd.f((Object)quaternion, "quaternion");
-        final Quaternion normalize = QuaternionKt.normalize(quaternion);
-        return new Mat4(new Float4(1.0f - (normalize.getZ() * normalize.getZ() + normalize.getY() * normalize.getY()) * 2.0f, (normalize.getW() * normalize.getZ() + normalize.getY() * normalize.getX()) * 2.0f, (normalize.getZ() * normalize.getX() - normalize.getW() * normalize.getY()) * 2.0f, 0.0f, 8, (rf8)null), new Float4((normalize.getY() * normalize.getX() - normalize.getW() * normalize.getZ()) * 2.0f, 1.0f - (normalize.getZ() * normalize.getZ() + normalize.getX() * normalize.getX()) * 2.0f, (normalize.getW() * normalize.getX() + normalize.getZ() * normalize.getY()) * 2.0f, 0.0f, 8, (rf8)null), new Float4((normalize.getW() * normalize.getY() + normalize.getZ() * normalize.getX()) * 2.0f, (normalize.getZ() * normalize.getY() - normalize.getW() * normalize.getX()) * 2.0f, 1.0f - (normalize.getY() * normalize.getY() + normalize.getX() * normalize.getX()) * 2.0f, 0.0f, 8, (rf8)null), null, 8, null);
+    public static final Mat4 rotation(Quaternion normalize) {
+        e0e.f((Object)normalize, "quaternion");
+        normalize = QuaternionKt.normalize(normalize);
+        return new Mat4(new Float4(1.0f - (normalize.getZ() * normalize.getZ() + normalize.getY() * normalize.getY()) * 2.0f, (normalize.getW() * normalize.getZ() + normalize.getY() * normalize.getX()) * 2.0f, (normalize.getZ() * normalize.getX() - normalize.getW() * normalize.getY()) * 2.0f, 0.0f, 8, null), new Float4((normalize.getY() * normalize.getX() - normalize.getW() * normalize.getZ()) * 2.0f, 1.0f - (normalize.getZ() * normalize.getZ() + normalize.getX() * normalize.getX()) * 2.0f, (normalize.getW() * normalize.getX() + normalize.getZ() * normalize.getY()) * 2.0f, 0.0f, 8, null), new Float4((normalize.getW() * normalize.getY() + normalize.getZ() * normalize.getX()) * 2.0f, (normalize.getZ() * normalize.getY() - normalize.getW() * normalize.getX()) * 2.0f, 1.0f - (normalize.getY() * normalize.getY() + normalize.getX() * normalize.getX()) * 2.0f, 0.0f, 8, null), null, 8, null);
     }
     
     public static Mat4 rotation$default(float n, float n2, float n3, RotationsOrder zyx, final int n4, final Object o) {
@@ -354,46 +355,46 @@ public final class MatrixKt
     }
     
     public static final Mat4 scale(final Float3 float3) {
-        czd.f((Object)float3, "s");
-        return new Mat4(new Float4(float3.getX(), 0.0f, 0.0f, 0.0f, 14, (rf8)null), new Float4(0.0f, float3.getY(), 0.0f, 0.0f, 13, (rf8)null), new Float4(0.0f, 0.0f, float3.getZ(), 0.0f, 11, (rf8)null), null, 8, null);
+        e0e.f((Object)float3, "s");
+        return new Mat4(new Float4(float3.getX(), 0.0f, 0.0f, 0.0f, 14, null), new Float4(0.0f, float3.getY(), 0.0f, 0.0f, 13, null), new Float4(0.0f, 0.0f, float3.getZ(), 0.0f, 11, null), null, 8, null);
     }
     
     public static final Mat4 scale(final Mat4 mat4) {
-        czd.f((Object)mat4, "m");
+        e0e.f((Object)mat4, "m");
         final Float4 x = mat4.getX();
         final Float3 float3 = new Float3(x.getX(), x.getY(), x.getZ());
-        final float n = (float)Math.sqrt(zjf.g(float3, float3.getZ(), sde.c(float3, float3.getY(), float3.getX() * float3.getX())));
+        final float n = (float)Math.sqrt(bng.e(float3, float3.getZ(), ang.b(float3, float3.getY(), float3.getX() * float3.getX())));
         final Float4 y = mat4.getY();
         final Float3 float4 = new Float3(y.getX(), y.getY(), y.getZ());
-        final float n2 = (float)Math.sqrt(zjf.g(float4, float4.getZ(), sde.c(float4, float4.getY(), float4.getX() * float4.getX())));
+        final float n2 = (float)Math.sqrt(bng.e(float4, float4.getZ(), ang.b(float4, float4.getY(), float4.getX() * float4.getX())));
         final Float4 z = mat4.getZ();
         final Float3 float5 = new Float3(z.getX(), z.getY(), z.getZ());
-        return scale(new Float3(n, n2, (float)Math.sqrt(zjf.g(float5, float5.getZ(), sde.c(float5, float5.getY(), float5.getX() * float5.getX())))));
+        return scale(new Float3(n, n2, (float)Math.sqrt(bng.e(float5, float5.getZ(), ang.b(float5, float5.getY(), float5.getX() * float5.getX())))));
     }
     
     public static final Mat4 translation(final Float3 float3) {
-        czd.f((Object)float3, "t");
+        e0e.f((Object)float3, "t");
         return new Mat4(null, null, null, new Float4(float3, 1.0f), 7, null);
     }
     
     public static final Mat4 translation(final Mat4 mat4) {
-        czd.f((Object)mat4, "m");
+        e0e.f((Object)mat4, "m");
         final Float4 w = mat4.getW();
         return translation(new Float3(w.getX(), w.getY(), w.getZ()));
     }
     
     public static final Mat2 transpose(final Mat2 mat2) {
-        czd.f((Object)mat2, "m");
+        e0e.f((Object)mat2, "m");
         return new Mat2(new Float2(mat2.getX().getX(), mat2.getY().getX()), new Float2(mat2.getX().getY(), mat2.getY().getY()));
     }
     
     public static final Mat3 transpose(final Mat3 mat3) {
-        czd.f((Object)mat3, "m");
+        e0e.f((Object)mat3, "m");
         return new Mat3(new Float3(mat3.getX().getX(), mat3.getY().getX(), mat3.getZ().getX()), new Float3(mat3.getX().getY(), mat3.getY().getY(), mat3.getZ().getY()), new Float3(mat3.getX().getZ(), mat3.getY().getZ(), mat3.getZ().getZ()));
     }
     
     public static final Mat4 transpose(final Mat4 mat4) {
-        czd.f((Object)mat4, "m");
+        e0e.f((Object)mat4, "m");
         return new Mat4(new Float4(mat4.getX().getX(), mat4.getY().getX(), mat4.getZ().getX(), mat4.getW().getX()), new Float4(mat4.getX().getY(), mat4.getY().getY(), mat4.getZ().getY(), mat4.getW().getY()), new Float4(mat4.getX().getZ(), mat4.getY().getZ(), mat4.getZ().getZ(), mat4.getW().getZ()), new Float4(mat4.getX().getW(), mat4.getY().getW(), mat4.getZ().getW(), mat4.getW().getW()));
     }
     

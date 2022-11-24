@@ -8,9 +8,9 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 import kotlin.Metadata;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005" }, d2 = { "Lcom/twitter/notifications/json/JsonQuoteTweetPush;", "Lfih;", "Llvl;", "<init>", "()V", "subsystem.tfa.notifications.json.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
+@Metadata(bv = {}, d1 = { "\u0000\u0010\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\b\u0012\u0004\u0012\u00020\u00020\u0001B\u0007¢\u0006\u0004\b\u0003\u0010\u0004¨\u0006\u0005" }, d2 = { "Lcom/twitter/notifications/json/JsonQuoteTweetPush;", "Ltih;", "Luvl;", "<init>", "()V", "subsystem.tfa.notifications.json.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
 @JsonObject
-public final class JsonQuoteTweetPush extends fih<lvl>
+public final class JsonQuoteTweetPush extends tih<uvl>
 {
     @JsonField(name = { "author_name" })
     public String a;
@@ -25,7 +25,8 @@ public final class JsonQuoteTweetPush extends fih<lvl>
     @JsonField(name = { "created_at" })
     public long f;
     
+    @Override
     public final Object s() {
-        return new lvl(this.a, this.b, this.c, this.d, this.e, this.f);
+        return new uvl(this.a, this.b, this.c, this.d, this.e, this.f);
     }
 }

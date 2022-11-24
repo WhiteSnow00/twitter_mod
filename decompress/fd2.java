@@ -1,24 +1,19 @@
-import android.view.View;
+import com.twitter.ui.tweet.inlineactions.InlineActionBar;
+import com.twitter.ui.view.AsyncView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fd2 extends ste implements qsb<View, ilx<? super nc2, lc2, kc2>>
+public final class fd2 extends jvb implements stb<AsyncView<InlineActionBar>, lod>
 {
-    public static final fd2 D0;
-    
-    static {
-        D0 = new fd2();
-    }
-    
-    public fd2() {
-        super(1);
+    public fd2(final Object o) {
+        super(1, o, (Class)lod$d.class, "create", "create(Lcom/twitter/ui/view/AsyncView;)Lcom/twitter/tweetview/core/ui/actionbar/InlineActionBarViewDelegate;", 0);
     }
     
     public final Object invoke(final Object o) {
-        final View view = (View)o;
-        czd.f((Object)view, "it");
-        return new x2g(view);
+        final AsyncView asyncView = (AsyncView)o;
+        e0e.f((Object)asyncView, "p0");
+        return ((lod$d)((ea3)this).receiver).a(asyncView);
     }
 }

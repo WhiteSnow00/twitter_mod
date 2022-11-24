@@ -6,34 +6,34 @@ package com.twitter.business.linkconfiguration;
 
 import com.twitter.weaver.mvi.MviViewModel;
 
-@sa8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$5", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
-public final class i extends p0s implements ftb<eef$e, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$5", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
+public final class i extends l1s implements hub<bff$e, mp6<? super vzv>, Object>
 {
-    public final LinkModuleConfigurationViewModel D0;
+    public final LinkModuleConfigurationViewModel F0;
     
-    public i(final LinkModuleConfigurationViewModel d0, final go6<? super i> go6) {
-        this.D0 = d0;
-        super(2, (go6)go6);
+    public i(final LinkModuleConfigurationViewModel f0, final mp6<? super i> mp6) {
+        this.F0 = f0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new i(this.D0, (go6<? super i>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new i(this.F0, (mp6<? super i>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final i i = (i)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final i i = (i)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         i.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final hc4 s0 = this.D0.S0;
-        s0.a(nza.j1(s0.b, (String)null, "clear_data", 10));
-        final hc4 s2 = this.D0.S0;
-        s2.a(nza.f1(s2.b, (String)null, "clear_data", 10));
-        ((MviViewModel)this.D0).V((Object)cef$e.a);
-        return fzv.a;
+        jb2.M0(o);
+        final kd4 u0 = this.F0.U0;
+        u0.a(shw.R(u0.b, (String)null, "clear_data", 10));
+        final kd4 u2 = this.F0.U0;
+        u2.a(shw.L(u2.b, (String)null, "clear_data", 10));
+        ((MviViewModel)this.F0).V((Object)zef$e.a);
+        return vzv.a;
     }
 }

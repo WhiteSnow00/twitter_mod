@@ -311,8 +311,8 @@
         <item quantity="other">‏%d נוספים</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">‏עוקב-על</item>
-        <item quantity="other">‏עוקבי-על</item>
+        <item quantity="one">‏מנוי</item>
+        <item quantity="other">‏מנויים</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">‏סימון %s כאהוב</item>
@@ -408,7 +408,7 @@
         <item quantity="other">‏בתשובה ל-﻿‏%1$s ול-%2$d אחרים﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">‏בתשובה ל-﻿%1$s ול-%2$d נוספים﻿. התשובה שלך תהיה גלויה גם לעוקבי-על אחרים.</item>
+        <item quantity="other">‏בתשובה ל-﻿%1$s, ול-%2$d נוספים﻿. התשובה שלך תהיה גלויה גם למנויים אחרים.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">‏בתשובה ל-﻿%1$s ול-%2$d משתמשים נוספים﻿ ב-﻿%3$s﻿</item>
@@ -417,7 +417,7 @@
         <item quantity="other">‏בתשובה ל-﻿%1$s %2$s ולעוד %3$d נוספים﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">‏בתשובה ל-﻿%1$s, ל-%2$s ול-%3$d נוספים﻿. התשובה שלך תהיה גלויה גם לעוקבי-על אחרים.</item>
+        <item quantity="other">‏בתשובה ל-﻿%1$s %2$s, ול-%3$d נוספים﻿. התשובה שלך תהיה גלויה גם למנויים אחרים.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">‏בתשובה ל-﻿%1$s %2$s ול-%3$d משתמשים נוספים﻿ ב-﻿%4$s﻿</item>

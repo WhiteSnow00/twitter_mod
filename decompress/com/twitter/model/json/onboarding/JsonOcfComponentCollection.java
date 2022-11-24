@@ -10,30 +10,31 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOcfComponentCollection extends fih<x06>
+public class JsonOcfComponentCollection extends tih<d26>
 {
     @JsonField
-    public List<wqp> a;
+    public List<rrp> a;
     @JsonField
-    public List<wqp> b;
+    public List<rrp> b;
     @JsonField
-    public List<wqp> c;
+    public List<rrp> c;
     @JsonField
-    public List<wqp> d;
+    public List<rrp> d;
     @JsonField
-    public List<wqp> e;
+    public List<rrp> e;
     
+    @Override
     public final /* bridge */ Object s() {
         return this.t();
     }
     
-    public final x06 t() {
-        final x06$a x06$a = new x06$a();
-        x06$a.a = this.a;
-        x06$a.b = this.b;
-        x06$a.c = this.c;
-        x06$a.d = this.d;
-        x06$a.e = this.e;
-        return (x06)((n4j)x06$a).e();
+    public final d26 t() {
+        final d26.a a = new d26.a();
+        a.a = this.a;
+        a.b = this.b;
+        a.c = this.c;
+        a.d = this.d;
+        a.e = this.e;
+        return (d26)a.e();
     }
 }

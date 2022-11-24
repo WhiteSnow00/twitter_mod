@@ -11,12 +11,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonWeb3Wallets extends fih<ulx>
+public class JsonWeb3Wallets extends tih<kmx>
 {
     @JsonField
     public List<Web3Wallet> a;
     
+    @Override
     public final Object s() {
-        return new ulx(this.a);
+        return new kmx(this.a);
     }
 }

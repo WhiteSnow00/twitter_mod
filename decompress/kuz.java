@@ -2,7 +2,11 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface kuz
+public final class kuz extends kyy
 {
-    boolean a();
+    public final rcs a;
+    
+    public kuz(final rcs a) {
+        this.a = a;
+    }
 }

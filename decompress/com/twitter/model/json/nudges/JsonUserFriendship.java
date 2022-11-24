@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonUserFriendship extends fih<qbw>
+public class JsonUserFriendship extends tih<gcw>
 {
     @JsonField
     public String a;
@@ -23,7 +23,8 @@ public class JsonUserFriendship extends fih<qbw>
     @JsonField
     public List<String> e;
     
+    @Override
     public final Object s() {
-        return new qbw(this.a, this.b, (long)this.c, this.d, (List)this.e);
+        return new gcw(this.a, this.b, (long)this.c, this.d, (List)this.e);
     }
 }

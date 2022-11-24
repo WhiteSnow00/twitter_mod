@@ -301,8 +301,8 @@
         <item quantity="other">%d பேர்</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">சிறப்புப் பின்தொடர்பவர்</item>
-        <item quantity="other">சிறப்புப் பின்தொடர்பவர்கள்</item>
+        <item quantity="one">சப்ஸ்கிரைபர்</item>
+        <item quantity="other">சப்ஸ்கிரைபர்ஸ்</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s விருப்பம்</item>
@@ -341,7 +341,7 @@
         <item quantity="other">﻿%1$s மற்றும் %2$d நபர்களுக்கான பதிலில்﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s மற்றும் %2$d நபர்களுக்குப்﻿ பதிலளிக்கிறீர்கள். உங்கள் பதில் பிற சிறப்புப் பின்தொடர்பவர்களுக்கும் புலப்படும்.</item>
+        <item quantity="other">﻿%1$s மற்றும் %2$d பேருக்குப்﻿ பதிலளிக்கிறீர்கள். உங்கள் பதில் பிற சப்ஸ்கிரைபர்ஸுக்கும் புலப்படும்.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%3$s﻿ -இல் ﻿%1$s மற்றும் %2$d நபர்களுக்குப் பதிலளிக்கிறது</item>
@@ -350,7 +350,7 @@
         <item quantity="other">﻿%1$s %2$s மற்றும் %3$d பிறருக்கான﻿ பதிலில்</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s %2$s மற்றும் %3$d நபர்களுக்குப்﻿ பதிலளிக்கிறீர்கள். உங்கள் பதில் பிற சிறப்புப் பின்தொடர்பவர்களுக்கும் புலப்படும்.</item>
+        <item quantity="other">﻿%1$s %2$s மற்றும் %3$d பேருக்குப்﻿ பதிலளிக்கிறீர்கள். உங்கள் பதில் பிற சப்ஸ்கிரைபர்ஸுக்கும் புலப்படும்.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%4$s﻿ -இல் ﻿%1$s %2$s மற்றும் %3$d நபர்களுக்குப்﻿ பதிலளிக்கிறது</item>

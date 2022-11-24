@@ -305,8 +305,8 @@
         <item quantity="other">‏%d نفر دیگر</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">‏سوپردنبال‌کننده</item>
-        <item quantity="other">‏سوپردنبال‌کننده</item>
+        <item quantity="one">‏مشترک</item>
+        <item quantity="other">‏مشترک</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">‏%s مورد پسندیده شده</item>
@@ -402,7 +402,7 @@
         <item quantity="other">‏در حال پاسخ به ﻿%1$s و %2$d نفر دیگر﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">‏در پاسخ به ﻿%1$s و %2$d نفر دیگر﻿. پاسخ شما را سوپردنبال‌کننده‌های دیگر هم خواهند دید.</item>
+        <item quantity="other">‏در پاسخ به ﻿%1$s و %2$d نفر دیگر﻿. پاسخ شما را «مشترک‌های» دیگر هم خواهند دید.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">‏در پاسخ به ﻿%1$s و %2$d نفر دیگر﻿ در ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">‏در حال پاسخ به ﻿%1$s %2$s و %3$d نفر دیگر﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">‏در پاسخ به ﻿%1$s %2$s و %3$d نفر دیگر﻿. پاسخ شما را سوپردنبال‌کننده‌های دیگر هم خواهند دید.</item>
+        <item quantity="other">‏در پاسخ به ﻿%1$s %2$s و %3$d نفر دیگر﻿. پاسخ شما را «مشترک‌های» دیگر هم خواهند دید.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">‏در پاسخ به ﻿%1$s %2$s و %3$d نفر دیگر﻿ در ﻿%4$s﻿</item>

@@ -2,26 +2,24 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class yof implements oj
+public final class yof implements pcj<Object>
 {
-    public final apf D0;
-    public final ll3 E0;
-    public final ztf F0;
+    public Object F0;
+    public final ycs G0;
+    public final Object H0;
+    public final yub I0;
+    public final i3h J0;
     
-    public yof(final apf d0, final ll3 e0, final ztf f0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = f0;
+    public yof(final ycs g0, final Object h0, final yub i0, final i3h j0) {
+        this.G0 = g0;
+        this.H0 = h0;
+        this.I0 = i0;
+        this.J0 = j0;
+        this.F0 = null;
     }
     
-    public final void run() {
-        final apf d0 = this.D0;
-        final ll3 e0 = this.E0;
-        final ztf f0 = this.F0;
-        czd.f((Object)d0, "this$0");
-        czd.f((Object)e0, "$nextItem");
-        czd.f((Object)f0, "$metadataSnapshot");
-        d0.H0.e(1.0f, true);
-        d0.m(e0, f0);
+    @Override
+    public final void c(final Object o) {
+        ((tsx)this.G0).a((Runnable)new yof$a(this, o));
     }
 }

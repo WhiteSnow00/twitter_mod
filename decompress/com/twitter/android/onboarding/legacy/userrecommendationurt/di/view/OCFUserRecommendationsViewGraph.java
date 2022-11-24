@@ -7,10 +7,10 @@ package com.twitter.android.onboarding.legacy.userrecommendationurt.di.view;
 import java.util.Set;
 import com.twitter.app.common.timeline.di.view.BaseTimelineViewGraph;
 
-@l4j
+@d5j
 public interface OCFUserRecommendationsViewGraph extends BaseTimelineViewGraph
 {
-    b5j<Boolean> P();
+    t5j<Boolean> P();
     
-    b5j<Set<Long>> y();
+    t5j<Set<Long>> y();
 }

@@ -1,30 +1,26 @@
-import com.twitter.android.liveevent.reminders.a;
+import java.util.Objects;
+import com.twitter.android.liveevent.landing.refresh.a;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout$h;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gxf
+public final class gxf implements SwipeRefreshLayout$h
 {
-    public final axf a;
-    public final cxf b;
-    public final a c;
-    public final cwf d;
-    public final ixf e;
-    public final m29 f;
-    public final m29 g;
-    public hxf h;
-    public qof i;
+    public final a F0;
     
-    public gxf(final cwf d, final axf a, final cxf b, final a c, final ixf e, final ibm ibm) {
-        this.f = new m29();
-        this.g = new m29();
-        this.h = (hxf)hxf.R;
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.e = e;
-        this.d = d;
-        ibm.i((rj)new zut((Object)this, 1));
+    public gxf(final a f0) {
+        this.F0 = f0;
+    }
+    
+    public final void a() {
+        final a f0 = this.F0;
+        f0.a.a();
+        f0.c.a.l0();
+        final com.twitter.android.liveevent.landing.scribe.a b = f0.b;
+        final String f2 = f0.f;
+        Objects.requireNonNull(b);
+        b.o(dda.g("live_event_timeline", "", "", "", "pull_to_refresh"), (d1p)b.m(f2));
     }
 }

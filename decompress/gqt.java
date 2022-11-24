@@ -1,22 +1,20 @@
-import android.app.Dialog;
-import com.twitter.onboarding.ocf.analytics.OcfEventReporter;
+import java.util.Objects;
+import android.os.Bundle;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gqt implements mw8
+public final class gqt extends nvs<kqt>
 {
-    public final OcfEventReporter C0;
+    public static final gqt.gqt$a Companion;
     
-    public gqt(final eqt eqt, final OcfEventReporter c0) {
-        this.C0 = c0;
+    static {
+        Companion = new gqt.gqt$a();
     }
     
-    @Override
-    public final void l0(final Dialog dialog, final int n, final int n2) {
-        if (n2 == -1 && n == 1) {
-            this.C0.b(new zf4(new String[] { "onboarding", "topics_selector", null, "prompt", "dismiss" }), (String)null);
-        }
+    public gqt(final Bundle bundle) {
+        Objects.requireNonNull(kqt.Companion);
+        super(bundle, (nmp)kqt.k);
     }
 }

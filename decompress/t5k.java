@@ -1,154 +1,68 @@
-import retrofit2.Response;
-import tv.periscope.retrofit.RetrofitException;
-import retrofit2.HttpException;
-import android.util.Log;
-import tv.periscope.android.event.ApiEvent;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.concurrent.Callable;
+import com.twitter.util.user.UserIdentifier;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class t5k
+public final class t5k implements li2, n4k$a
 {
-    public final u9a a;
-    public a b;
-    public c c;
-    public b d;
-    public d e;
-    public final Set<String> f;
+    public final Context a;
+    public final dsb b;
+    public final tsc c;
+    public final x3c d;
+    public final h6k e;
+    public final de6 f;
+    public UserIdentifier g;
     
-    public t5k(final u9a a) {
-        czd.f((Object)a, "eventBus");
-        this.a = a;
-        this.f = new LinkedHashSet();
+    public t5k(final Context context, final tsc c) {
+        final dsb b = new dsb();
+        final x3c n = xi4.n();
+        this.a = context.getApplicationContext();
+        this.b = b;
+        this.c = c;
+        this.d = n;
+        this.e = i6k.a(UserIdentifier.UNDEFINED, (String)null);
+        this.f = new de6();
     }
     
-    public final void a(final String s) {
-        czd.f((Object)s, "requestId");
-        this.f.add(s);
+    public final boolean a(final String s) {
+        return this.b.f(flr.o(s, -1L), 1);
     }
     
-    public final void b(final b d) {
-        czd.f((Object)d, "publishCallback");
-        this.d = d;
-        this.a.i((Object)this);
+    public final boolean b(final String s) {
+        return this.b.f(flr.o(s, -1L), 4);
     }
     
-    public final void c() {
-        this.f.clear();
-        this.a.k((Object)this);
-        this.b = null;
-        this.e = null;
-        this.c = null;
+    public final void c(final UserIdentifier userIdentifier) {
+        final tdw tdw = new tdw((fhw)kbv.d2(userIdentifier));
+        this.g = userIdentifier;
+        this.e.c = userIdentifier;
+        ((HashMap)this.b.F0).clear();
+        this.f.e();
+        this.f.a(t5j.fromCallable((Callable)new ofw((Object)tdw, 6)).subscribeOn((bxo)this.d.F0).observeOn((bxo)this.d.G0).subscribe((rk6)new a3x((Object)this, 8)));
+        this.f.a(t5j.fromCallable((Callable)new k5d(tdw, 6)).subscribeOn((bxo)this.d.F0).observeOn((bxo)this.d.G0).subscribe((rk6)new ec2((Object)this, 24)));
     }
     
-    public final void onEventMainThread(final ApiEvent apiEvent) {
-        czd.f((Object)apiEvent, "event");
-        if (!this.f.contains(apiEvent.b)) {
-            return;
-        }
-        this.f.remove(apiEvent.b);
-        final int ordinal = ((Enum)apiEvent.a).ordinal();
-        final HttpException ex = null;
-        final HttpException ex2 = null;
-        if (ordinal != 37) {
-            if (ordinal != 38) {
-                if (ordinal != 98) {
-                    Log.d("onEventMainThread", ((Enum)apiEvent.a).name());
-                }
-                else if (apiEvent.d()) {
-                    final l5m l5m = (l5m)apiEvent.d;
-                    czd.c((Object)l5m);
-                    final c c = this.c;
-                    if (c != null) {
-                        c.a(l5m);
-                    }
-                }
-                else {
-                    final c c2 = this.c;
-                    if (c2 != null) {
-                        final RetrofitException e = apiEvent.e;
-                        HttpException ex3 = ex2;
-                        if (e != null) {
-                            final Response d0 = e.D0;
-                            ex3 = ex2;
-                            if (d0 != null) {
-                                ex3 = new HttpException(d0);
-                            }
-                        }
-                        c2.b(ex3);
-                    }
-                }
-            }
-            else if (apiEvent.d()) {
-                final b d2 = this.d;
-                if (d2 != null) {
-                    d2.a();
-                }
-            }
-        }
-        else if (apiEvent.d()) {
-            final v47 v47 = (v47)apiEvent.d;
-            czd.c((Object)v47);
-            if (v47.b().U() != null && !ikr.g((CharSequence)v47.d().a())) {
-                final d e2 = this.e;
-                if (e2 != null) {
-                    e2.a(v47);
-                }
-            }
-            else {
-                final a b = this.b;
-                if (b != null) {
-                    b.a(v47);
-                }
-            }
-        }
-        else {
-            final RetrofitException e3 = apiEvent.e;
-            HttpException ex4 = ex;
-            if (e3 != null) {
-                final Response d3 = e3.D0;
-                ex4 = ex;
-                if (d3 != null) {
-                    ex4 = new HttpException(d3);
-                }
-            }
-            final d e4 = this.e;
-            if (e4 != null) {
-                e4.b(ex4);
-            }
-            final a b2 = this.b;
-            if (b2 != null) {
-                b2.b(ex4);
-            }
-        }
+    public final void d(final qdw qdw) {
+        this.c(qdw.k());
     }
     
-    public interface a
-    {
-        void a(final v47 p0);
-        
-        void b(final HttpException p0);
+    public final void e(final String s) {
+        final long o = flr.o(s, -1L);
+        this.b.k(o, 4);
+        this.c.f(new b22(this.a, this.g, o, (gjl)null, 3));
+        final h6k e = this.e;
+        sbw.b(e.b.a(e.c, dda.g(e.a, "composition", "periscope", "user_modal", "unblock"), (d1p)null));
     }
     
-    public interface b
-    {
-        void a();
-    }
-    
-    public interface c
-    {
-        void a(final l5m p0);
-        
-        void b(final HttpException p0);
-    }
-    
-    public interface d
-    {
-        void a(final v47 p0);
-        
-        void b(final HttpException p0);
+    public final void f(final String s) {
+        final long o = flr.o(s, -1L);
+        this.b.j(o, 4);
+        this.c.f(new b22(this.a, this.g, o, (gjl)null, 1));
+        final h6k e = this.e;
+        sbw.b(e.b.a(e.c, dda.g(e.a, "composition", "periscope", "chat_carousel", "block"), (d1p)null));
     }
 }

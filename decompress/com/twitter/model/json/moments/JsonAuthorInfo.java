@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonAuthorInfo extends fih<t51>
+public class JsonAuthorInfo extends tih<a61>
 {
     @JsonField
     public long a;
@@ -22,7 +22,8 @@ public class JsonAuthorInfo extends fih<t51>
     @JsonField
     public String e;
     
+    @Override
     public final Object s() {
-        return new t51(this.a, this.b, this.c, this.d, this.e);
+        return new a61(this.a, this.b, this.c, this.d, this.e);
     }
 }

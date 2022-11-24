@@ -2,7 +2,9 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface vf1
+public abstract class vf1
 {
-    p0u a(final String p0);
+    public abstract Iterable<sca> a();
+    
+    public abstract byte[] b();
 }

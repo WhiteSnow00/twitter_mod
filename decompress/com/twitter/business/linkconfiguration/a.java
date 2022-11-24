@@ -6,33 +6,33 @@ package com.twitter.business.linkconfiguration;
 
 import com.twitter.weaver.mvi.MviViewModel;
 
-@sa8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$10", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
-public final class a extends p0s implements ftb<eef$g, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$10", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
+public final class a extends l1s implements hub<bff$g, mp6<? super vzv>, Object>
 {
-    public final LinkModuleConfigurationViewModel D0;
+    public final LinkModuleConfigurationViewModel F0;
     
-    public a(final LinkModuleConfigurationViewModel d0, final go6<? super a> go6) {
-        this.D0 = d0;
-        super(2, (go6)go6);
+    public a(final LinkModuleConfigurationViewModel f0, final mp6<? super a> mp6) {
+        this.F0 = f0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new a(this.D0, (go6<? super a>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new a(this.F0, (mp6<? super a>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final a a = (a)this.create(o, (go6<?>)o2);
-        final fzv a2 = fzv.a;
+        final a a = (a)this.create(o, (mp6<?>)o2);
+        final vzv a2 = vzv.a;
         a.invokeSuspend(a2);
         return a2;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final LinkModuleConfigurationViewModel d0 = this.D0;
-        final cef$a cef$a = new cef$a(false, 3);
-        final coe[] e1 = LinkModuleConfigurationViewModel.e1;
-        ((MviViewModel)d0).V((Object)cef$a);
-        return fzv.a;
+        jb2.M0(o);
+        final LinkModuleConfigurationViewModel f0 = this.F0;
+        final zef$a zef$a = new zef$a(false, 3);
+        final ape[] g1 = LinkModuleConfigurationViewModel.g1;
+        ((MviViewModel)f0).V((Object)zef$a);
+        return vzv.a;
     }
 }

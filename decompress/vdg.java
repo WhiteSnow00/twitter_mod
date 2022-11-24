@@ -1,19 +1,24 @@
-import android.graphics.Bitmap;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class vdg
 {
-    public final int a;
-    public final int b;
-    public final String c;
-    public Bitmap d;
+    public static final vdg b;
+    public final cfg<String, udg> a;
     
-    public vdg(final int a, final int b, final String s, final String c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    static {
+        b = new vdg();
+    }
+    
+    public vdg() {
+        this.a = new cfg<String, udg>(20);
+    }
+    
+    public final void a(final String s, final udg udg) {
+        if (s == null) {
+            return;
+        }
+        this.a.d(s, udg);
     }
 }

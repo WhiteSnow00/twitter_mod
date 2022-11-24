@@ -1,27 +1,56 @@
 import android.content.Intent;
-import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class fo<I, O>
+public final class fo
 {
-    public abstract Intent a(final Context p0, final I p1);
+    public final int a;
+    public final int b;
+    public final Intent c;
     
-    public a<O> b(final Context context, final I n) {
-        zzd.f((Object)context, "context");
-        return null;
+    public fo(final int a, final int b, final Intent c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public abstract O c(final int p0, final Intent p1);
-    
-    public static final class a<T>
-    {
-        public final T a;
-        
-        public a(final T a) {
-            this.a = a;
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
         }
+        if (!(o instanceof fo)) {
+            return false;
+        }
+        final fo fo = (fo)o;
+        return this.a == fo.a && this.b == fo.b && e0e.a((Object)this.c, (Object)fo.c);
+    }
+    
+    @Override
+    public final int hashCode() {
+        final int a = this.a;
+        final int b = this.b;
+        final Intent c = this.c;
+        int hashCode;
+        if (c == null) {
+            hashCode = 0;
+        }
+        else {
+            hashCode = c.hashCode();
+        }
+        return (a * 31 + b) * 31 + hashCode;
+    }
+    
+    @Override
+    public final String toString() {
+        final int a = this.a;
+        final int b = this.b;
+        final Intent c = this.c;
+        final StringBuilder g = xnf.g("ActivityResult(requestCode=", a, ", resultCode=", b, ", data=");
+        g.append(c);
+        g.append(")");
+        return g.toString();
     }
 }

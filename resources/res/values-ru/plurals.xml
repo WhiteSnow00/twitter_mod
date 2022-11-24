@@ -311,8 +311,8 @@
         <item quantity="other">еще: %d</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Суперчитатель</item>
-        <item quantity="other">Суперчитатели</item>
+        <item quantity="one">Подписчик</item>
+        <item quantity="other">Подписчики</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">Нравится %s</item>
@@ -408,7 +408,7 @@
         <item quantity="other">В ответ ﻿%1$s и еще %2$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Вы отвечаете ﻿%1$s и еще %2$d пользователям﻿. Ваш ответ также будет виден другим суперчитателям.</item>
+        <item quantity="other">Вы отвечаете ﻿%1$s и еще %2$d пользователям﻿. Ваш ответ также будет виден другим подписчикам.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">В ответ ﻿%1$s и еще %2$d чел.﻿ в ﻿%3$s﻿</item>
@@ -417,7 +417,7 @@
         <item quantity="other">В ответ ﻿%1$s, %2$s и еще %3$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Вы отвечаете ﻿%1$s, %2$s и еще %3$d пользователям﻿. Ваш ответ также будет виден другим суперчитателям.</item>
+        <item quantity="other">Вы отвечаете ﻿%1$s, %2$s и еще %3$d пользователям﻿. Ваш ответ также будет виден другим подписчикам.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">В ответ ﻿%1$s %2$s и еще %3$d чел.﻿ в ﻿%4$s﻿</item>

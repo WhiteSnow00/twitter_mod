@@ -1,42 +1,35 @@
-import java.lang.annotation.Annotation;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
-import java.util.HashMap;
+import android.os.RemoteException;
+import android.os.Bundle;
+import android.os.Parcel;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kqy implements j4j<s2z>
+public abstract class kqy extends bmy implements oqy
 {
-    public static final kqy a;
+    public kqy() {
+        super("com.google.android.gms.measurement.api.internal.IEventHandlerProxy");
+    }
     
-    static {
-        final ozz c0 = ozz.C0;
-        a = new kqy();
-        final rxz rxz = new rxz(1, c0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(((Annotation)rxz).annotationType(), rxz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final rxz rxz2 = new rxz(2, c0);
-        final HashMap hashMap2 = new HashMap();
-        hashMap2.put(((Annotation)rxz2).annotationType(), rxz2);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
-        final rxz rxz3 = new rxz(3, c0);
-        final HashMap hashMap3 = new HashMap();
-        hashMap3.put(((Annotation)rxz3).annotationType(), rxz3);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
-        final rxz rxz4 = new rxz(4, c0);
-        final HashMap hashMap4 = new HashMap();
-        hashMap4.put(((Annotation)rxz4).annotationType(), rxz4);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap4));
-        final rxz rxz5 = new rxz(5, c0);
-        final HashMap hashMap5 = new HashMap();
-        hashMap5.put(((Annotation)rxz5).annotationType(), rxz5);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap5));
-        final rxz rxz6 = new rxz(6, c0);
-        final HashMap hashMap6 = new HashMap();
-        sbl.m(rxz6, hashMap6, rxz6, hashMap6);
+    public final boolean s(int e, final Parcel parcel, final Parcel parcel2) throws RemoteException {
+        if (e != 1) {
+            if (e != 2) {
+                return false;
+            }
+            e = ((cxy)this).e();
+            parcel2.writeNoException();
+            parcel2.writeInt(e);
+        }
+        else {
+            final String string = parcel.readString();
+            final String string2 = parcel.readString();
+            final Bundle bundle = (Bundle)emy.a(parcel, Bundle.CREATOR);
+            final long long1 = parcel.readLong();
+            emy.b(parcel);
+            ((cxy)this).E(string, string2, bundle, long1);
+            parcel2.writeNoException();
+        }
+        return true;
     }
 }

@@ -7,21 +7,21 @@ package com.twitter.android.topics.peek.di.view;
 import com.twitter.android.topics.peek.activity.TopicPeekActivity;
 import android.view.View;
 
-public final class a extends gue implements rtb<View, okx<? super wot, tot, sot>>
+public final class a extends pue implements stb<View, xlx<? super eqt, bqt, aqt>>
 {
-    public final /* synthetic */ TopicPeekActivity C0;
-    public final /* synthetic */ fw8 D0;
-    public final /* synthetic */ xqa<String, nca, xot> E0;
+    public final TopicPeekActivity F0;
+    public final ww8 G0;
+    public final cra<String, dda, fqt> H0;
     
-    public a(final TopicPeekActivity c0, final fw8 d0, final xqa<String, nca, xot> e0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
+    public a(final TopicPeekActivity f0, final ww8 g0, final cra<String, dda, fqt> h0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        zzd.f((Object)o, "<anonymous parameter 0>");
-        return new uot(this.C0, this.D0, (xqa)this.E0);
+        e0e.f((Object)o, "<anonymous parameter 0>");
+        return new cqt(this.F0, this.G0, (cra)this.H0);
     }
 }

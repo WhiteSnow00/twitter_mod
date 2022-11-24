@@ -2,20 +2,25 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zs9 extends ste implements qsb<jw8, fzv>
+public final class zs9 extends k5j<ys9>
 {
-    public static final zs9 D0;
+    public static final zs9 b;
     
     static {
-        D0 = new zs9();
+        b = new zs9();
     }
     
-    public zs9() {
-        super(1);
+    public final Object d(final rmp rmp, final int n) {
+        e0e.f((Object)rmp, "input");
+        return new ys9(rmp.z(), rmp.z(), rmp.A());
     }
     
-    public final Object invoke(final Object o) {
-        czd.f((Object)o, "it");
-        return fzv.a;
+    public final void f(final smp smp, final Object o) {
+        final ys9 ys9 = (ys9)o;
+        e0e.f((Object)smp, "output");
+        e0e.f((Object)ys9, "info");
+        smp.z(ys9.a);
+        smp.z(ys9.b);
+        smp.A(ys9.c);
     }
 }

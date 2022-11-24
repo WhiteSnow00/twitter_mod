@@ -9,23 +9,23 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTileContentScoreCard extends aih<eps>
+public class JsonTileContentScoreCard extends tih<oqs>
 {
     @JsonField
-    public jxo a;
+    public uyo a;
     
     @Override
     public final Object s() {
-        final eps$a eps$a = new eps$a();
-        eps$a.a = this.a;
-        eps eps;
-        if ((eps = (eps)((h4j)eps$a).j()) == null) {
+        final oqs$a oqs$a = new oqs$a();
+        oqs$a.a = this.a;
+        oqs oqs;
+        if ((oqs = (oqs)((z4j)oqs$a).j()) == null) {
             final StringBuilder sb = new StringBuilder();
             sb.append(JsonTileContentScoreCard.class.getName());
             sb.append(" parsed error.");
-            e9a.d((Throwable)new InvalidJsonFormatException(sb.toString()));
-            eps = null;
+            r9a.d((Throwable)new InvalidJsonFormatException(sb.toString()));
+            oqs = null;
         }
-        return eps;
+        return oqs;
     }
 }

@@ -9,14 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonThemeData extends fih<als>
+public class JsonThemeData extends tih<sls>
 {
     @JsonField
     public int a;
     @JsonField
     public int b;
     
+    @Override
     public final Object s() {
-        return new als(this.a | 0xFF000000, 0xFF000000 | this.b);
+        return new sls(this.a | 0xFF000000, 0xFF000000 | this.b);
     }
 }

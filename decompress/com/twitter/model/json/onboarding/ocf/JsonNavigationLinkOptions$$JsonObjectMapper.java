@@ -12,64 +12,64 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonNavigationLinkOptions$$JsonObjectMapper extends JsonMapper<JsonNavigationLinkOptions>
 {
-    public static JsonNavigationLinkOptions _parse(final tge tge) throws IOException {
+    public static JsonNavigationLinkOptions _parse(final qhe qhe) throws IOException {
         final JsonNavigationLinkOptions jsonNavigationLinkOptions = new JsonNavigationLinkOptions();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonNavigationLinkOptions, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonNavigationLinkOptions, d, qhe);
+            qhe.m0();
         }
         return jsonNavigationLinkOptions;
     }
     
-    public static void _serialize(final JsonNavigationLinkOptions jsonNavigationLinkOptions, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonNavigationLinkOptions jsonNavigationLinkOptions, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         if (jsonNavigationLinkOptions.d != null) {
-            LoganSquare.typeConverterFor((Class)vsr.class).serialize((Object)jsonNavigationLinkOptions.d, "count_subtask_data_reference", true, afe);
+            LoganSquare.typeConverterFor((Class)ttr.class).serialize((Object)jsonNavigationLinkOptions.d, "count_subtask_data_reference", true, yfe);
         }
         final ArrayList a = jsonNavigationLinkOptions.a;
         if (a != null) {
-            final Iterator a2 = br.A(afe, "label_conditional_text", a);
-            while (a2.hasNext()) {
-                final dym dym = a2.next();
-                if (dym != null) {
-                    LoganSquare.typeConverterFor((Class)dym.class).serialize((Object)dym, "lslocallabel_conditional_textElement", false, afe);
+            final Iterator e = d10.E(yfe, "label_conditional_text", a);
+            while (e.hasNext()) {
+                final uym uym = e.next();
+                if (uym != null) {
+                    LoganSquare.typeConverterFor((Class)uym.class).serialize((Object)uym, "lslocallabel_conditional_textElement", false, yfe);
                 }
             }
-            afe.f();
+            yfe.f();
         }
-        afe.T("max_enable_count", (int)jsonNavigationLinkOptions.c);
-        afe.T("min_enable_count", (int)jsonNavigationLinkOptions.b);
+        yfe.T("max_enable_count", (int)jsonNavigationLinkOptions.c);
+        yfe.T("min_enable_count", (int)jsonNavigationLinkOptions.b);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonNavigationLinkOptions jsonNavigationLinkOptions, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonNavigationLinkOptions jsonNavigationLinkOptions, final String s, final qhe qhe) throws IOException {
         if ("count_subtask_data_reference".equals(s)) {
-            jsonNavigationLinkOptions.d = (vsr)LoganSquare.typeConverterFor((Class)vsr.class).parse(tge);
+            jsonNavigationLinkOptions.d = (ttr)LoganSquare.typeConverterFor((Class)ttr.class).parse(qhe);
         }
         else {
             final boolean equals = "label_conditional_text".equals(s);
             final Integer n = null;
             final Integer n2 = null;
             if (equals) {
-                if (tge.e() == vie.N0) {
+                if (qhe.e() == rje.P0) {
                     final ArrayList a = new ArrayList();
-                    while (tge.h0() != vie.O0) {
-                        final dym dym = (dym)LoganSquare.typeConverterFor((Class)dym.class).parse(tge);
-                        if (dym != null) {
-                            a.add(dym);
+                    while (qhe.i0() != rje.Q0) {
+                        final uym uym = (uym)LoganSquare.typeConverterFor((Class)uym.class).parse(qhe);
+                        if (uym != null) {
+                            a.add(uym);
                         }
                     }
                     jsonNavigationLinkOptions.a = a;
@@ -80,40 +80,40 @@ public final class JsonNavigationLinkOptions$$JsonObjectMapper extends JsonMappe
             }
             else if ("max_enable_count".equals(s)) {
                 Integer value;
-                if (tge.e() == vie.V0) {
+                if (qhe.e() == rje.X0) {
                     value = n2;
                 }
                 else {
-                    value = tge.y();
+                    value = qhe.z();
                 }
                 jsonNavigationLinkOptions.c = value;
             }
             else if ("min_enable_count".equals(s)) {
                 Integer value2;
-                if (tge.e() == vie.V0) {
+                if (qhe.e() == rje.X0) {
                     value2 = n;
                 }
                 else {
-                    value2 = tge.y();
+                    value2 = qhe.z();
                 }
                 jsonNavigationLinkOptions.b = value2;
             }
         }
     }
     
-    public JsonNavigationLinkOptions parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonNavigationLinkOptions parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonNavigationLinkOptions jsonNavigationLinkOptions, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonNavigationLinkOptions, afe, b);
+    public void serialize(final JsonNavigationLinkOptions jsonNavigationLinkOptions, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonNavigationLinkOptions, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonNavigationLinkOptions)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonNavigationLinkOptions)o, yfe, b);
     }
 }

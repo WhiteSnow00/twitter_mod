@@ -2,20 +2,16 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class a0s extends ste implements qsb<fhp, fzv>
+public final class a0s implements zzr<Object>
 {
-    public static final a0s D0;
-    
-    static {
-        D0 = new a0s();
-    }
+    public final Object a;
     
     public a0s() {
-        super(1);
+        this.a = Boolean.FALSE;
     }
     
-    public final Object invoke(final Object o) {
-        czd.f((Object)o, "$this$semantics");
-        return fzv.a;
+    @Override
+    public final Object get() {
+        return this.a;
     }
 }

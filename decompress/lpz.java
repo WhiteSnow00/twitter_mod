@@ -1,38 +1,42 @@
-import android.os.RemoteException;
-import android.os.Parcelable$Creator;
-import com.google.android.gms.maps.model.CameraPosition;
-import android.os.Parcel;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class lpz extends fhy implements nmz
+public final class lpz implements uoz
 {
-    public lpz() {
-        super("com.google.android.gms.maps.internal.IOnCameraChangeListener");
+    public qml<x1u<byte[]>> a;
+    public final qml<x1u<byte[]>> b;
+    public final rnz c;
+    
+    public lpz(final Context context, final rnz c) {
+        this.c = c;
+        final h73 e = h73.e;
+        e2u.b(context);
+        final a2u c2 = e2u.a().c((k4a)e);
+        if (h73.d.contains(new v4a("json"))) {
+            this.a = new lxe((qml<Object>)new xkz(c2));
+        }
+        this.b = new lxe((qml<Object>)new jpz(c2));
     }
     
-    @Override
-    public final boolean s(int a, final Parcel parcel, final Parcel parcel2) throws RemoteException {
-        if (a == 1) {
-            final Parcelable$Creator creator = CameraPosition.CREATOR;
-            a = smy.a;
-            Object o;
-            if (parcel.readInt() == 0) {
-                o = null;
-            }
-            else {
-                o = creator.createFromParcel(parcel);
-            }
-            final CameraPosition cameraPosition = (CameraPosition)o;
-            final se8 se8 = (se8)((xxz)this).a;
-            final t5c t5c = (t5c)se8.D0;
-            t5c.b((xaz)se8.E0);
-            t5c.c((t5c$a)null);
-            parcel2.writeNoException();
-            return true;
+    public static vaa<byte[]> b(final rnz rnz, final dpz dpz) {
+        final int a = rnz.a();
+        if (dpz.c != 0) {
+            return new za1<byte[]>((Object)dpz.a(a), zzk.F0);
         }
-        return false;
+        return new za1<byte[]>((Object)dpz.a(a), zzk.G0);
+    }
+    
+    public final void a(final dpz dpz) {
+        if (this.c.a() == 0) {
+            final lxe a = this.a;
+            if (a != null) {
+                ((x1u)a.get()).a((vaa)b(this.c, dpz));
+            }
+            return;
+        }
+        this.b.get().a((vaa)b(this.c, dpz));
     }
 }

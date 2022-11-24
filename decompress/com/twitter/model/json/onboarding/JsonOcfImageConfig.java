@@ -9,17 +9,18 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOcfImageConfig extends fih<pdj>
+public class JsonOcfImageConfig extends tih<cej>
 {
     @JsonField
-    public odj a;
-    @JsonField(typeConverter = w7d.class)
+    public bej a;
+    @JsonField(typeConverter = y8d.class)
     public int b;
     
+    @Override
     public final Object s() {
-        final pdj$a pdj$a = new pdj$a();
-        pdj$a.a = this.a;
-        pdj$a.b = this.b;
-        return ((n4j)pdj$a).e();
+        final cej.a a = new cej.a();
+        a.a = this.a;
+        a.b = this.b;
+        return a.e();
     }
 }

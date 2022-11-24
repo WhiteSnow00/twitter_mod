@@ -1,33 +1,12 @@
-import java.lang.ref.WeakReference;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class zjz extends vdz
+public abstract class zjz
 {
-    public static final WeakReference<byte[]> d;
-    public WeakReference<byte[]> c;
+    public abstract kkz a(final Object p0);
     
-    static {
-        d = new WeakReference<byte[]>(null);
-    }
+    public abstract void b(final Object p0);
     
-    public zjz(final byte[] array) {
-        super(array);
-        this.c = zjz.d;
-    }
-    
-    public abstract byte[] D1();
-    
-    public final byte[] U0() {
-        synchronized (this) {
-            byte[] d1;
-            if ((d1 = this.c.get()) == null) {
-                d1 = this.D1();
-                this.c = new WeakReference<byte[]>(d1);
-            }
-            return d1;
-        }
-    }
+    public abstract boolean c(final kpz p0);
 }

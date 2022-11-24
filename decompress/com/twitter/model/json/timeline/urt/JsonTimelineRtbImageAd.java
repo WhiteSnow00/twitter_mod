@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineRtbImageAd extends aih<v3t>
+public class JsonTimelineRtbImageAd extends tih<f5t>
 {
     @JsonField
     public String a;
@@ -17,37 +17,37 @@ public class JsonTimelineRtbImageAd extends aih<v3t>
     @JsonField
     public String c;
     @JsonField
-    public q7t d;
+    public c9t d;
     @JsonField
     public String e;
     @JsonField
-    public v7d f;
+    public b8d f;
     @JsonField
     public JsonPromotedContentUrt g;
     
     @Override
     public final Object s() {
-        final q7t d = this.d;
+        final c9t d = this.d;
         String b;
-        if (d instanceof zdf) {
-            b = ((zdf)d).b;
+        if (d instanceof ief) {
+            b = ((ief)d).b;
         }
         else {
             b = null;
         }
-        final hil g = (hil)fih.b((aih)this.g);
-        final v3t$a v3t$a = new v3t$a();
-        v3t$a.a = this.a;
-        v3t$a.b = this.c;
-        v3t$a.c = this.b;
-        v3t$a.d = b;
-        v3t$a.e = this.e;
-        v3t$a.g = g;
-        v3t$a.f = this.f;
-        final v3t v3t = (v3t)((h4j)v3t$a).j();
-        if (v3t == null) {
-            zi.A("A JsonTimelineRtbAd must have a valid creativeId, landingUrl, promotedMetadata, and impressionId.");
+        final gjl g = yih.b(this.g);
+        final f5t.a a = new f5t.a();
+        a.a = this.a;
+        a.b = this.c;
+        a.c = this.b;
+        a.d = b;
+        a.e = this.e;
+        a.g = g;
+        a.f = this.f;
+        final f5t f5t = (f5t)a.j();
+        if (f5t == null) {
+            c0e.i("A JsonTimelineRtbAd must have a valid creativeId, landingUrl, promotedMetadata, and impressionId.");
         }
-        return v3t;
+        return f5t;
     }
 }

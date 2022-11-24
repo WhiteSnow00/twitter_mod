@@ -6,18 +6,9 @@ package com.twitter.android.liveevent.di.dock;
 
 import kotlin.Metadata;
 
+@d5j
 @Metadata(bv = {}, d1 = { "\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\bg\u0018\u0000 \u00022\u00020\u0001:\u0002\u0003\u0004¨\u0006\u0005\u00c0\u0006\u0003" }, d2 = { "Lcom/twitter/android/liveevent/di/dock/LiveEventVodDockObjectGraph;", "Lcom/twitter/android/liveevent/di/dock/LiveEventAbsDockObjectGraph;", "Companion", "a", "b", "subsystem.tfa.liveevent.core.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
-@l4j
 public interface LiveEventVodDockObjectGraph extends LiveEventAbsDockObjectGraph
 {
-    public static final b Companion = b.a;
-    
-    public static final class b
-    {
-        public static final /* synthetic */ b a;
-        
-        static {
-            a = new b();
-        }
-    }
+    public static final LiveEventVodDockObjectGraph.LiveEventVodDockObjectGraph$b Companion = LiveEventVodDockObjectGraph.LiveEventVodDockObjectGraph$b.a;
 }

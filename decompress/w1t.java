@@ -1,51 +1,32 @@
+import android.view.View;
+import android.widget.TextView;
+import android.view.ViewGroup;
+import com.twitter.media.ui.image.AspectRatioFrameLayout;
+import android.widget.ImageView;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class w1t
+public final class w1t extends sl8
 {
-    public static final w1t.w1t$a c;
-    public final String a;
-    public final String b;
+    public final ImageView G0;
+    public final AspectRatioFrameLayout H0;
+    public final ViewGroup I0;
+    public final TextView J0;
+    public final TextView K0;
+    public final TextView L0;
+    public bhk M0;
+    public vgk N0;
+    public efv O0;
     
-    static {
-        c = new w1t.w1t$a();
-    }
-    
-    public w1t(final String a, final String b) {
-        czd.f((Object)a, "timelineKey");
-        this.a = a;
-        this.b = b;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof w1t)) {
-            return false;
-        }
-        final w1t w1t = (w1t)o;
-        return czd.a((Object)this.a, (Object)w1t.a) && czd.a((Object)this.b, (Object)w1t.b);
-    }
-    
-    @Override
-    public final int hashCode() {
-        final int hashCode = this.a.hashCode();
-        final String b = this.b;
-        int hashCode2;
-        if (b == null) {
-            hashCode2 = 0;
-        }
-        else {
-            hashCode2 = b.hashCode();
-        }
-        return hashCode * 31 + hashCode2;
-    }
-    
-    @Override
-    public final String toString() {
-        return zh8.o("TimelineQuery(timelineKey=", this.a, ", timelineContext=", this.b, ")");
+    public w1t(final View view) {
+        super(view);
+        this.H0 = (AspectRatioFrameLayout)view.findViewById(2131429408);
+        this.G0 = (ImageView)view.findViewById(2131429405);
+        this.I0 = (ViewGroup)view.findViewById(2131429409);
+        this.J0 = (TextView)view.findViewById(2131429427);
+        this.K0 = (TextView)view.findViewById(2131429428);
+        this.L0 = (TextView)view.findViewById(2131429429);
     }
 }

@@ -8,17 +8,18 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonOcfRichTextQuantityPair extends fih<dym>
+public class JsonOcfRichTextQuantityPair extends tih<uym>
 {
     @JsonField
     public int a;
     @JsonField
     public JsonOcfRichText b;
     
+    @Override
     public final Object s() {
         final int a = this.a;
-        final cej s = JsonOcfRichText.s(this.b);
-        jee.l((Object)s);
-        return new dym(a, s);
+        final pej s = JsonOcfRichText.s(this.b);
+        vmw.g((Object)s);
+        return new uym(a, s);
     }
 }

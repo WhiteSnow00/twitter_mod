@@ -2,16 +2,17 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class bxs extends gzm
+public final class bxs implements mwv<fic>
 {
-    public bxs(final gew gew) {
-        super(gew);
+    public final String F0;
+    
+    public bxs(final String f0) {
+        this.F0 = f0;
     }
     
-    public final void o(final nws nws, final exs exs) {
-        final boolean b = nws.k() && nws.c().t;
-        if (nws.f() != null && !b && this.i((Object)nws.d())) {
-            exs.b(nws);
-        }
+    public final Object b(final y4c y4c, final lsm lsm) {
+        final fic.a a = new fic.a();
+        a.a = y4c.f(this.F0);
+        return a.j();
     }
 }

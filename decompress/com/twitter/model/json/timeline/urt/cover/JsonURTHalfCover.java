@@ -9,24 +9,24 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTHalfCover extends aih<oov>
+public class JsonURTHalfCover extends tih<ypv>
 {
-    @JsonField(name = { "displayType", "halfCoverDisplayType" }, typeConverter = unv.class)
+    @JsonField(name = { "displayType", "halfCoverDisplayType" }, typeConverter = epv.class)
     public int a;
     @JsonField
-    public xwm b;
+    public fym b;
     @JsonField
-    public snv c;
+    public cpv c;
     @JsonField
-    public xwm d;
+    public fym d;
     @JsonField
-    public snv e;
+    public cpv e;
     @JsonField
-    public List<lnv> f;
+    public List<vov> f;
     @JsonField
-    public eov g;
+    public opv g;
     @JsonField
-    public vnv h;
+    public fpv h;
     @JsonField
     public boolean i;
     
@@ -36,16 +36,16 @@ public class JsonURTHalfCover extends aih<oov>
     
     @Override
     public final Object s() {
-        final oov.a a = new oov.a();
-        a.c = this.a;
-        a.a = this.b;
-        a.b = this.c;
-        a.d = this.d;
-        a.e = this.e;
-        a.f = this.f;
-        a.g = this.h;
-        a.i = this.i;
-        a.h = this.g;
-        return a.j();
+        final ypv$a ypv$a = new ypv$a();
+        ypv$a.c = this.a;
+        ypv$a.a = this.b;
+        ypv$a.b = this.c;
+        ypv$a.d = this.d;
+        ypv$a.e = this.e;
+        ypv$a.f = this.f;
+        ypv$a.g = this.h;
+        ypv$a.i = this.i;
+        ypv$a.h = this.g;
+        return ((z4j)ypv$a).j();
     }
 }

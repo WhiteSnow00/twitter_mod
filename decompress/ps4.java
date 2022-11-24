@@ -6,51 +6,61 @@ import java.util.Objects;
 
 public final class ps4
 {
-    public static final dlo a;
+    public static final lml<os4> a;
     
     static {
-        final ks0 a2 = ks0.a;
-        final ks0$k d = ks0.d;
-        final float n = 0;
-        final k77$b companion = k77.Companion;
-        Objects.requireNonNull(dx.Companion);
-        a = (dlo)poa.y0(2, (nub)ps4$a.C0, n, companion.a((dx$b)dx$a.n));
+        ps4.a = (gbr)ef6.d((ptb)ps4$a.F0);
     }
     
-    public static final gqg a(final ks0$l ks0$l, final dx$b dx$b, final m76 m76) {
-        zzd.f((Object)ks0$l, "verticalArrangement");
-        m76.x(1089876336);
-        final ea6$b a = ea6.a;
-        m76.x(511388516);
-        final boolean p3 = m76.P((Object)ks0$l);
-        final boolean p4 = m76.P((Object)dx$b);
-        final Object y = m76.y();
-        Object o = null;
-        Label_0157: {
-            if (!(p3 | p4)) {
-                Objects.requireNonNull(m76.Companion);
-                if ((o = y) != m76$a.b) {
-                    break Label_0157;
-                }
-            }
-            final ks0 a2 = ks0.a;
-            Object o2 = null;
-            Label_0148: {
-                if (zzd.a((Object)ks0$l, (Object)ks0.d)) {
-                    Objects.requireNonNull(dx.Companion);
-                    if (zzd.a((Object)dx$b, (Object)dx$a.n)) {
-                        o2 = ps4.a;
-                        break Label_0148;
-                    }
-                }
-                o2 = poa.y0(2, (nub)new qs4(ks0$l), ks0$l.a(), k77.Companion.a(dx$b));
-            }
-            m76.p(o2);
-            o = o2;
+    public static final long a(final os4 os4, long n) {
+        e0e.f((Object)os4, "$this$contentColorFor");
+        if (sr4.c(n, os4.h())) {
+            n = os4.e();
         }
-        m76.O();
-        final gqg gqg = (gqg)o;
-        m76.O();
-        return gqg;
+        else if (sr4.c(n, os4.i())) {
+            n = os4.e();
+        }
+        else if (sr4.c(n, os4.j())) {
+            n = os4.f();
+        }
+        else if (sr4.c(n, os4.k())) {
+            n = os4.f();
+        }
+        else if (sr4.c(n, os4.a())) {
+            n = os4.c();
+        }
+        else if (sr4.c(n, os4.l())) {
+            n = os4.g();
+        }
+        else if (sr4.c(n, os4.b())) {
+            n = os4.d();
+        }
+        else {
+            Objects.requireNonNull(sr4.Companion);
+            n = sr4.g;
+        }
+        return n;
+    }
+    
+    public static final long b(long n, final d86 d86) {
+        final sa6$b a = sa6.a;
+        n = a((os4)d86.m((df6)ps4.a), n);
+        Objects.requireNonNull(sr4.Companion);
+        if (n == sr4.g) {
+            n = ((sr4)d86.m((df6)yl6.a)).a;
+        }
+        return n;
+    }
+    
+    public static final long c(final os4 os4) {
+        e0e.f((Object)os4, "<this>");
+        long n;
+        if (os4.m()) {
+            n = os4.h();
+        }
+        else {
+            n = os4.l();
+        }
+        return n;
     }
 }

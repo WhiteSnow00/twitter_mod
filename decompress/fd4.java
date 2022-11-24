@@ -1,34 +1,21 @@
-import com.twitter.util.user.UserIdentifier;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fd4
+public final class fd4 implements qxs<ed4, exs>
 {
-    public static final a Companion;
-    public final UserIdentifier a;
-    public final String b;
+    public final fd4.fd4$a a;
     
-    static {
-        Companion = new a();
-    }
-    
-    public fd4(final UserIdentifier a, final String b) {
-        zzd.f((Object)a, "userIdentifier");
-        zzd.f((Object)b, "page");
+    public fd4(final fd4.fd4$a a) {
         this.a = a;
-        this.b = b;
     }
     
-    public final void a(final nca nca) {
-        final zf4 zf4 = new zf4(nca);
-        zf4.r = this.a;
-        final int a = w4j.a;
-        saw.b((okm)zf4);
-    }
-    
-    public static final class a
-    {
+    @Override
+    public final xtd a(final mxs mxs, final Object o) {
+        final ed4 ed4 = (ed4)mxs;
+        final exs exs = (exs)o;
+        e0e.f((Object)ed4, "instruction");
+        e0e.f((Object)exs, "requestContext");
+        return (xtd)new ed4$a(this.a.a(exs));
     }
 }

@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Riceverai notifiche per i nuovi Tweet.</item>
-        <item>Riceverai notifiche per i Tweet riservati ai superfollower.</item>
+        <item>Riceverai notifiche per i nuovi Tweet per abbonati.</item>
         <item>Riceverai notifiche per i nuovi Tweet correlati a video in diretta.</item>
         <item>Riceverai notifiche per i nuovi Tweet correlati agli spazi.</item>
         <item>Non riceverai più notifiche per i nuovi Tweet.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweet</item>
-        <item>Tweet riservati ai superfollower</item>
+        <item>Tweet solo per abbonati</item>
         <item>Video in diretta</item>
         <item>Spazi</item>
         <item>No</item>
     </array>
     <array name="account_notif_options_old">
         <item>Tutti i Tweet</item>
-        <item>Solo Tweet per superfollower</item>
+        <item>Tweet solo per abbonati</item>
         <item>Solo video in diretta</item>
         <item>Solo spazi</item>
         <item>No</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Ricevi notifiche per tutti i Tweet di questo account.</item>
-        <item>Ricevi notifiche solo per i Tweet riservati ai superfollower.</item>
+        <item>Ricevi notifiche solo per i Tweet per abbonati.</item>
         <item>Ricevi notifiche solo per le trasmissioni in diretta.</item>
         <item>Ricevi notifiche solo per gli spazi.</item>
         <item>Disattiva le notifiche per i Tweet di questo account.</item>

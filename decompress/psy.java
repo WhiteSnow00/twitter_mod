@@ -1,33 +1,36 @@
-import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
-import android.os.Parcel;
-import android.os.Parcelable$Creator;
+import java.lang.annotation.Annotation;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class psy implements Parcelable$Creator<pny>
+public final class psy implements b5j<m5z>
 {
-    public final Object createFromParcel(final Parcel parcel) {
-        final int w = SafeParcelReader.w(parcel);
-        String e = null;
-        int r = 0;
-        while (parcel.dataPosition() < w) {
-            final int int1 = parcel.readInt();
-            final char c = (char)int1;
-            if (c != '\u0001') {
-                if (c != '\u0002') {
-                    SafeParcelReader.v(parcel, int1);
-                }
-                else {
-                    r = SafeParcelReader.r(parcel, int1);
-                }
-            }
-            else {
-                e = SafeParcelReader.e(parcel, int1);
-            }
-        }
-        SafeParcelReader.j(parcel, w);
-        return new pny(e, r);
+    public static final psy a;
+    
+    static {
+        final z000 f0 = z000.F0;
+        a = new psy();
+        final czz czz = new czz(1, f0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(((Annotation)czz).annotationType(), czz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final czz czz2 = new czz(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final czz czz3 = new czz(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        ehk.g(czz3, hashMap3, czz3, hashMap3);
+    }
+    
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final m5z m5z = (m5z)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

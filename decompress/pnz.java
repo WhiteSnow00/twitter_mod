@@ -1,47 +1,35 @@
-import java.util.Iterator;
-import java.util.Map;
+import java.util.List;
+import java.util.Collection;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pnz
+public final class pnz extends unz
 {
-    public static final void a(final Object o, final Object o2) {
-        final mnz mnz = (mnz)o;
-        final knz knz = (knz)o2;
-        if (!mnz.isEmpty()) {
-            final Iterator iterator = mnz.entrySet().iterator();
-            if (iterator.hasNext()) {
-                final Map.Entry entry = (Map.Entry)iterator.next();
-                entry.getKey();
-                entry.getValue();
-                throw null;
-            }
-        }
+    public final void a(final Object o, final long n) {
+        ((qmz)hsz.j(o, n)).c();
     }
     
-    public static final Object b(final Object o, final Object o2) {
-        final mnz mnz = (mnz)o;
-        final mnz mnz2 = (mnz)o2;
-        mnz mnz3 = mnz;
-        if (!mnz2.isEmpty()) {
-            mnz mnz4 = mnz;
-            if (!mnz.C0) {
-                if (mnz.isEmpty()) {
-                    mnz4 = new mnz();
+    public final void b(final Object o, final Object o2, final long n) {
+        final qmz qmz = (qmz)hsz.j(o, n);
+        final qmz qmz2 = (qmz)hsz.j(o2, n);
+        final int size = ((List)qmz).size();
+        final int size2 = ((List)qmz2).size();
+        Object w = qmz;
+        if (size > 0) {
+            w = qmz;
+            if (size2 > 0) {
+                w = qmz;
+                if (!qmz.d()) {
+                    w = qmz.W(size2 + size);
                 }
-                else {
-                    mnz4 = new mnz(mnz);
-                }
-            }
-            mnz4.c();
-            mnz3 = mnz4;
-            if (!mnz2.isEmpty()) {
-                mnz4.putAll(mnz2);
-                mnz3 = mnz4;
+                ((List)w).addAll((Collection)qmz2);
             }
         }
-        return mnz3;
+        if (size <= 0) {
+            w = qmz2;
+        }
+        hsz.r(o, n, w);
     }
 }

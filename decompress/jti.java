@@ -1,47 +1,49 @@
-import java.util.Iterator;
-import java.util.List;
+import com.twitter.util.InvalidDataException;
+import android.net.Uri;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jti extends ste implements qsb<bo6, lsi>
+public final class jti implements iti
 {
-    public final lsi D0;
+    public final Context a;
+    public final PackageManager b;
+    public final gn c;
     
-    public jti(final lsi d0) {
-        this.D0 = d0;
-        super(1);
+    public jti(final Context a, final PackageManager b, final gn c) {
+        e0e.f((Object)a, "context");
+        e0e.f((Object)b, "packageManager");
+        e0e.f((Object)c, "activityArgsIntentFactory");
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public final Object invoke(Object next) {
-        final bo6 bo6 = (bo6)next;
-        czd.f((Object)bo6, "quotedTweet");
-        final lsi d0 = this.D0;
-        final String h = bo6.h();
-        final String m = bo6.M();
-        final String e = bo6.E();
-        final String a = bo6.A();
-        final Iterable f = bo6.f();
-        czd.e((Object)f, "quotedTweet.allMediaEntities");
-        final Iterator iterator = ((y6a)f).iterator();
-        while (true) {
-            while (iterator.hasNext()) {
-                next = iterator.next();
-                if (((dtg)next).T0 == dtg.c.F0) {
-                    final dtg dtg = (dtg)next;
-                    String r0;
-                    if (dtg != null) {
-                        r0 = dtg.R0;
-                    }
-                    else {
-                        r0 = null;
-                    }
-                    return lsi.a(d0, 0L, null, null, null, null, null, null, null, false, new lvl(h, m, e, a, r0, bo6.D0.N0), -1, 491519);
-                }
+    public final Object a(final Object o) {
+        final bti bti = (bti)o;
+        e0e.f((Object)bti, "notificationInfo");
+        Intent intent;
+        if ((intent = bti.J) == null) {
+            Intent setPackage = new Intent("android.intent.action.VIEW").setData(Uri.parse(bti.j)).setPackage(this.a.getPackageName());
+            if (setPackage.resolveActivity(this.b) == null) {
+                setPackage = null;
             }
-            next = null;
-            continue;
+            intent = setPackage;
+            if (setPackage == null) {
+                r9a.d((Throwable)new InvalidDataException(mqb.l("Invalid uri: ", bti.j)));
+                intent = this.e();
+            }
         }
+        return intent;
+    }
+    
+    public final Intent e() {
+        final Intent setPackage = this.c.a(this.a, (cn)fgg.a(pgg.N0)).putExtra("notif_triggered_intent", true).setPackage(m61.a);
+        e0e.e((Object)setPackage, "activityArgsIntentFactor\u2026tPackage(Authority.get())");
+        return setPackage;
     }
 }

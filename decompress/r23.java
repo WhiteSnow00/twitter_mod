@@ -1,7 +1,4 @@
-import com.google.i18n.phonenumbers.NumberParseException;
-import java.util.Objects;
-import android.telephony.PhoneNumberUtils;
-import android.content.Context;
+import com.twitter.profilemodules.model.business.HourMinute;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -9,54 +6,54 @@ import android.content.Context;
 
 public final class r23
 {
-    public final xbk a;
-    public final Context b;
+    public final HourMinute a;
+    public final HourMinute b;
     
-    public r23(final xbk a, final Context b) {
-        zzd.f((Object)a, "phoneNumberUtilProvider");
-        zzd.f((Object)b, "context");
+    public r23(final HourMinute a, final HourMinute b) {
         this.a = a;
         this.b = b;
     }
     
-    public final String a(final int n, String s, final boolean b, String string) {
-        zzd.f((Object)s, "phoneNumber");
-        zzd.f((Object)string, "isoString");
-        final String normalizeNumber = PhoneNumberUtils.normalizeNumber(s);
-        zzd.e((Object)normalizeNumber, "normalizeNumber(phoneNumber)");
-        if (normalizeNumber.length() == 0) {
-            s = this.b.getString(2131955704);
-            zzd.e((Object)s, "{\n            context.ge\u2026number_subtext)\n        }");
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof r23)) {
+            return false;
+        }
+        final r23 r23 = (r23)o;
+        return e0e.a((Object)this.a, (Object)r23.a) && e0e.a((Object)this.b, (Object)r23.b);
+    }
+    
+    @Override
+    public final int hashCode() {
+        final HourMinute a = this.a;
+        int hashCode = 0;
+        int hashCode2;
+        if (a == null) {
+            hashCode2 = 0;
         }
         else {
-            Objects.requireNonNull(this.a);
-            final wbk i = wbk.i();
-            zzd.e((Object)i, "phoneNumberUtilProvider.get()");
-            try {
-                final jck y = i.y((CharSequence)s, string);
-                int n2;
-                if (b) {
-                    n2 = 2;
-                }
-                else {
-                    n2 = 3;
-                }
-                string = (s = i.e(y, n2));
-            }
-            catch (final NumberParseException ex) {
-                string = s;
-                if (b) {
-                    final StringBuilder sb = new StringBuilder();
-                    sb.append("+");
-                    sb.append(n);
-                    sb.append(" ");
-                    sb.append(s);
-                    string = sb.toString();
-                }
-                s = string;
-            }
-            zzd.e((Object)s, "{\n            val util =\u2026)\n            }\n        }");
+            hashCode2 = a.hashCode();
         }
-        return s;
+        final HourMinute b = this.b;
+        if (b != null) {
+            hashCode = b.hashCode();
+        }
+        return hashCode2 * 31 + hashCode;
+    }
+    
+    @Override
+    public final String toString() {
+        final HourMinute a = this.a;
+        final HourMinute b = this.b;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("BusinessOpenTimesRegularSlotInput(open=");
+        sb.append(a);
+        sb.append(", close=");
+        sb.append(b);
+        sb.append(")");
+        return sb.toString();
     }
 }

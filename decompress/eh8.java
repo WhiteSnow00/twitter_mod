@@ -1,71 +1,81 @@
-import java.util.concurrent.Callable;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.Executor;
-import java.util.Set;
-import android.content.Context;
+import java.util.Map;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class eh8 implements fic, gic
+public final class eh8 implements q0f
 {
-    public static final int f = 0;
-    public final eml<hic> a;
-    public final Context b;
-    public final eml<q8w> c;
-    public final Set<eic> d;
-    public final Executor e;
+    public final l9r<q0f> a;
     
-    public eh8(final Context b, final String s, final Set<eic> d, final eml<q8w> c) {
-        final ah8 a = new ah8(b, s);
-        final ThreadPoolExecutor e = new ThreadPoolExecutor(0, 1, 30L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(), (ThreadFactory)dh8.D0);
-        this.a = (eml<hic>)a;
-        this.d = d;
-        this.e = e;
-        this.c = c;
-        this.b = b;
+    public eh8(final l9r<? extends q0f> a) {
+        this.a = (l9r<q0f>)a;
     }
     
     public final int a() {
-        synchronized (this) {
-            final long currentTimeMillis = System.currentTimeMillis();
-            final hic hic = this.a.get();
-            synchronized (hic) {
-                final boolean g = hic.g(currentTimeMillis);
-                monitorexit(hic);
-                if (g) {
-                    synchronized (hic) {
-                        final String d = hic.d(System.currentTimeMillis());
-                        hic.a.edit().putString("last-used-date", d).commit();
-                        hic.f(d);
-                        return 3;
-                    }
-                }
-                return 1;
+        return ((q0f)this.a.getValue()).a();
+    }
+    
+    public final Object b(final int n) {
+        return ((q0f)this.a.getValue()).b(n);
+    }
+    
+    public final void e(final int n, d86 h, final int n2) {
+        h = h.h(1633511187);
+        int n4;
+        if ((n2 & 0xE) == 0x0) {
+            int n3;
+            if (h.d(n)) {
+                n3 = 4;
             }
+            else {
+                n3 = 2;
+            }
+            n4 = (n3 | n2);
+        }
+        else {
+            n4 = n2;
+        }
+        int n5 = n4;
+        if ((n2 & 0x70) == 0x0) {
+            int n6;
+            if (h.P((Object)this)) {
+                n6 = 32;
+            }
+            else {
+                n6 = 16;
+            }
+            n5 = (n4 | n6);
+        }
+        if ((n5 & 0x5B) == 0x12 && h.i()) {
+            h.H();
+        }
+        else {
+            final sa6$b a = sa6.a;
+            ((q0f)this.a.getValue()).e(n, h, n5 & 0xE);
+        }
+        final gyo k = h.k();
+        if (k != null) {
+            k.a((hub)new hub<d86, Integer, vzv>(this, n, n2) {
+                public final eh8 F0;
+                public final int G0;
+                public final int H0;
+                
+                public final Object invoke(final Object o, final Object o2) {
+                    final d86 d86 = (d86)o;
+                    ((Number)o2).intValue();
+                    this.F0.e(this.G0, d86, this.H0 | 0x1);
+                    return vzv.a;
+                }
+            });
         }
     }
     
-    @Override
-    public final ubs<String> b() {
-        if (vew.a(this.b) ^ true) {
-            return ucs.e("");
-        }
-        return ucs.c(this.e, (Callable<String>)new ch8((Object)this, 0));
+    public final Map<Object, Integer> f() {
+        return ((q0f)this.a.getValue()).f();
     }
     
-    public final ubs<Void> c() {
-        if (this.d.size() <= 0) {
-            return ucs.e((Void)null);
-        }
-        if (vew.a(this.b) ^ true) {
-            return ucs.e((Void)null);
-        }
-        return ucs.c(this.e, (Callable<Void>)new bh8((Object)this, 0));
+    public final Object g(final int n) {
+        return ((q0f)this.a.getValue()).g(n);
     }
 }

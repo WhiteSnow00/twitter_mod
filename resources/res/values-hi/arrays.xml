@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>आपको नए ट्वीट्स के लिए सूचनाएं मिलेंगी.</item>
-        <item>नए सुपर फ़ॉलोअर केवल ट्वीट्स करते हैं, इसके लिए आपको सूचनाएं मिलेंगी.</item>
+        <item>आपको नए सब्सक्रिप्शन ट्वीट्स के लिए सूचनाएं मिलेंगी.</item>
         <item>आपको नए लाइव वीडियो ट्वीट्स के लिए सूचनाएं मिलेंगी.</item>
         <item>आपको नए Spaces ट्वीट्स के लिए सूचनाएं मिलेंगी.</item>
         <item>अब आप नए ट्वीट्स के लिए सूचनाएं प्राप्त नहीं करेंगे.</item>
     </array>
     <array name="account_notif_options">
         <item>ट्वीट्स</item>
-        <item>सुपर फ़ॉलोअर केवल ट्वीट्स करते हैं</item>
+        <item>केवल सब्सक्रिप्शन ट्वीट्स</item>
         <item>लाइव वीडियो</item>
         <item>Spaces</item>
         <item>कोई नहीं</item>
     </array>
     <array name="account_notif_options_old">
         <item>सभी ट्वीट्स</item>
-        <item>केवल सुपर फ़ॉलोज़ ट्वीट्स</item>
+        <item>केवल सब्सक्रिप्शन ट्वीट्स</item>
         <item>केवल लाइव वीडियो</item>
         <item>केवल Spaces</item>
         <item>बंद</item>
     </array>
     <array name="account_notif_subtitles">
         <item>इस खाते के सभी ट्वीट्स के लिए सूचनाएं प्राप्त करें.</item>
-        <item>केवल सुपर फ़ॉलोज़ ट्वीट्स के लिए सूचनाएं पाएं.</item>
+        <item>केवल सब्सक्रिप्शन ट्वीट्स के लिए सूचनाएं पाएं.</item>
         <item>केवल लाइव प्रसारण के लिए सूचनाएं प्राप्त करें.</item>
         <item>केवल Spaces के लिए सूचनाएं प्राप्त करें.</item>
         <item>इस खाते के ट्वीट्स के लिए सूचनाएं बंद करें.</item>

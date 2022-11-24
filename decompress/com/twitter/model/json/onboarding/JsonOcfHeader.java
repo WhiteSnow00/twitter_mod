@@ -9,18 +9,19 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOcfHeader extends fih<oej>
+public class JsonOcfHeader extends tih<afj>
 {
     @JsonField
     public JsonOcfRichText a;
     @JsonField
     public JsonOcfRichText b;
     @JsonField
-    public pdj c;
+    public cej c;
     @JsonField
-    public cgv d;
+    public qgv d;
     
+    @Override
     public final Object s() {
-        return new oej(JsonOcfRichText.s(this.a), JsonOcfRichText.s(this.b), this.c, this.d);
+        return new afj(JsonOcfRichText.s(this.a), JsonOcfRichText.s(this.b), this.c, this.d);
     }
 }

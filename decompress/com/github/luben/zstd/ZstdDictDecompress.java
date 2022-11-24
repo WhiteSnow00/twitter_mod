@@ -32,6 +32,10 @@ public class ZstdDictDecompress extends SharedDictBase
     
     private native void init(final byte[] p0, final int p1, final int p2);
     
+    public /* bridge */ void close() {
+        super.close();
+    }
+    
     public void doClose() {
         if (this.nativePtr != 0L) {
             this.free();

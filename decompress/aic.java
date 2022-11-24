@@ -1,111 +1,202 @@
-import java.util.Objects;
-import java.util.ArrayList;
-import android.widget.RemoteViews;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class aic implements bpl
+public final class aic implements rk6
 {
-    public final ipl<a70> a;
-    public final ipl<n40> b;
-    public final ipl<k40> c;
+    public final int F0;
+    public final stb G0;
     
-    public aic(final ipl<a70> a, final ipl<n40> b, final ipl<k40> c) {
-        zzd.f((Object)a, "pushLayoutTextViewBinder");
-        zzd.f((Object)b, "pushLayoutImageViewBinder");
-        zzd.f((Object)c, "pushLayoutImageRgbViewBinder");
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    public aic(final stb g0, final int f0) {
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public final b5j<RemoteViews> a(final n5s<?, ?> n5s) {
-        final g40 g40 = (g40)n5s;
-        final RemoteViews remoteViews = new RemoteViews(l61.a, 2131625000);
-        final ArrayList list = new ArrayList();
-        final a70 a70 = (a70)g40.g(g40.f1);
-        if (a70 != null) {
-            list.add(this.a.a(2131432073, remoteViews, (Object)a70));
-        }
-        final a70 a71 = (a70)g40.g(g40.g1);
-        if (a71 != null) {
-            list.add(this.a.a(2131429724, remoteViews, (Object)a71));
-        }
-        final a70 a72 = (a70)g40.g(g40.h1);
-        if (a72 != null) {
-            list.add(this.a.a(2131428987, remoteViews, (Object)a72));
-        }
-        final a70 a73 = (a70)g40.g(g40.i1);
-        if (a73 != null) {
-            list.add(this.a.a(2131428986, remoteViews, (Object)a73));
-        }
-        final a70 a74 = (a70)g40.g(g40.j1);
-        if (a74 != null) {
-            list.add(this.a.a(2131431918, remoteViews, (Object)a74));
-        }
-        final a70 a75 = (a70)g40.g(g40.l1);
-        if (a75 != null) {
-            list.add(this.a.a(2131431919, remoteViews, (Object)a75));
-        }
-        final a70 a76 = (a70)g40.g(g40.k1);
-        if (a76 != null) {
-            list.add(this.a.a(2131431923, remoteViews, (Object)a76));
-        }
-        final a70 a77 = (a70)g40.g(g40.m1);
-        if (a77 != null) {
-            list.add(this.a.a(2131431924, remoteViews, (Object)a77));
-        }
-        final n40 n40 = (n40)g40.g(g40.n1);
-        if (n40 != null) {
-            list.add(this.b.a(2131431915, remoteViews, (Object)n40));
-        }
-        final n40 n41 = (n40)g40.g(g40.o1);
-        if (n41 != null) {
-            list.add(this.b.a(2131431920, remoteViews, (Object)n41));
-        }
-        final k40 k40 = (k40)g40.g(g40.p1);
-        if (k40 != null) {
-            list.add(this.c.a(2131431916, remoteViews, (Object)k40));
-        }
-        final k40 k41 = (k40)g40.g(g40.q1);
-        if (k41 != null) {
-            list.add(this.c.a(2131431921, remoteViews, (Object)k41));
-        }
-        final a70 a78 = (a70)g40.g(g40.r1);
-        if (a78 != null) {
-            list.add(this.a.a(2131428981, remoteViews, (Object)a78));
-        }
-        final a70 a79 = (a70)g40.g(g40.s1);
-        if (a79 != null) {
-            list.add(this.a.a(2131432034, remoteViews, (Object)a79));
-        }
-        final b5j doOnError = b5j.combineLatest((Iterable)list, (qtb)new uii((rtb)new rtb<Object[], RemoteViews>() {
-            public final Object invoke(final Object o) {
-                zzd.f((Object)o, "it");
-                return remoteViews;
+    public final void accept(final Object o) {
+        switch (this.F0) {
+            default: {
+                final stb g0 = this.G0;
+                e0e.f((Object)g0, "$tmp0");
+                g0.invoke(o);
+                return;
             }
-        }, 3)).doOnNext((fk6)new oc6((rtb)new rtb<RemoteViews, oyv>() {
-            public final /* synthetic */ aic C0;
-            
-            public final Object invoke(final Object o) {
-                final RemoteViews remoteViews = (RemoteViews)o;
-                Objects.requireNonNull(this.C0);
-                k1b.b("head_to_head_expanded", "create_view");
-                return oyv.a;
+            case 28: {
+                final stb g2 = this.G0;
+                e0e.f((Object)g2, "$tmp0");
+                g2.invoke(o);
+                return;
             }
-        }, 23)).doOnError((fk6)new xja((rtb)new rtb<Throwable, oyv>() {
-            public final /* synthetic */ aic C0;
-            
-            public final Object invoke(final Object o) {
-                final Throwable t = (Throwable)o;
-                Objects.requireNonNull(this.C0);
-                k1b.b("head_to_head_expanded", "create_view_error");
-                return oyv.a;
+            case 27: {
+                final stb g3 = this.G0;
+                e0e.f((Object)g3, "$tmp0");
+                g3.invoke(o);
+                return;
             }
-        }, 26));
-        zzd.e((Object)doOnError, "override fun createView(\u2026eate_view_error\") }\n    }");
-        return (b5j<RemoteViews>)doOnError;
+            case 26: {
+                final stb g4 = this.G0;
+                final rpr$g companion = rpr.Companion;
+                e0e.f((Object)g4, "$tmp0");
+                g4.invoke(o);
+                return;
+            }
+            case 25: {
+                final stb g5 = this.G0;
+                e0e.f((Object)g5, "$tmp0");
+                g5.invoke(o);
+                return;
+            }
+            case 24: {
+                final stb g6 = this.G0;
+                e0e.f((Object)g6, "$tmp0");
+                g6.invoke(o);
+                return;
+            }
+            case 23: {
+                final stb g7 = this.G0;
+                e0e.f((Object)g7, "$tmp0");
+                g7.invoke(o);
+                return;
+            }
+            case 22: {
+                final stb g8 = this.G0;
+                final lmw$b companion2 = lmw.Companion;
+                e0e.f((Object)g8, "$tmp0");
+                g8.invoke(o);
+                return;
+            }
+            case 21: {
+                final stb g9 = this.G0;
+                e0e.f((Object)g9, "$tmp0");
+                g9.invoke(o);
+                return;
+            }
+            case 20: {
+                final stb g10 = this.G0;
+                final n7n.n7n$c companion3 = n7n.Companion;
+                e0e.f((Object)g10, "$tmp0");
+                g10.invoke(o);
+                return;
+            }
+            case 19: {
+                final stb g11 = this.G0;
+                e0e.f((Object)g11, "$tmp0");
+                g11.invoke(o);
+                return;
+            }
+            case 18: {
+                final stb g12 = this.G0;
+                e0e.f((Object)g12, "$tmp0");
+                g12.invoke(o);
+                return;
+            }
+            case 17: {
+                final stb g13 = this.G0;
+                e0e.f((Object)g13, "$tmp0");
+                g13.invoke(o);
+                return;
+            }
+            case 16: {
+                final stb g14 = this.G0;
+                e0e.f((Object)g14, "$tmp0");
+                g14.invoke(o);
+                return;
+            }
+            case 15: {
+                final stb g15 = this.G0;
+                e0e.f((Object)g15, "$tmp0");
+                g15.invoke(o);
+                return;
+            }
+            case 14: {
+                final stb g16 = this.G0;
+                e0e.f((Object)g16, "$tmp0");
+                g16.invoke(o);
+                return;
+            }
+            case 13: {
+                final stb g17 = this.G0;
+                e0e.f((Object)g17, "$tmp0");
+                g17.invoke(o);
+                return;
+            }
+            case 12: {
+                final stb g18 = this.G0;
+                e0e.f((Object)g18, "$tmp0");
+                g18.invoke(o);
+                return;
+            }
+            case 11: {
+                final stb g19 = this.G0;
+                e0e.f((Object)g19, "$tmp0");
+                g19.invoke(o);
+                return;
+            }
+            case 10: {
+                final stb g20 = this.G0;
+                final int y2 = tln.y2;
+                e0e.f((Object)g20, "$tmp0");
+                g20.invoke(o);
+                return;
+            }
+            case 9: {
+                final stb g21 = this.G0;
+                e0e.f((Object)g21, "$tmp0");
+                g21.invoke(o);
+                return;
+            }
+            case 8: {
+                final stb g22 = this.G0;
+                e0e.f((Object)g22, "$tmp0");
+                g22.invoke(o);
+                return;
+            }
+            case 7: {
+                final stb g23 = this.G0;
+                e0e.f((Object)g23, "$tmp0");
+                g23.invoke(o);
+                return;
+            }
+            case 6: {
+                final stb g24 = this.G0;
+                e0e.f((Object)g24, "$tmp0");
+                g24.invoke(o);
+                return;
+            }
+            case 5: {
+                final stb g25 = this.G0;
+                e0e.f((Object)g25, "$tmp0");
+                g25.invoke(o);
+                return;
+            }
+            case 4: {
+                final stb g26 = this.G0;
+                e0e.f((Object)g26, "$tmp0");
+                g26.invoke(o);
+                return;
+            }
+            case 3: {
+                final stb g27 = this.G0;
+                e0e.f((Object)g27, "$tmp0");
+                g27.invoke(o);
+                return;
+            }
+            case 2: {
+                final stb g28 = this.G0;
+                e0e.f((Object)g28, "$tmp0");
+                g28.invoke(o);
+                return;
+            }
+            case 1: {
+                final stb g29 = this.G0;
+                e0e.f((Object)g29, "$tmp0");
+                g29.invoke(o);
+                return;
+            }
+            case 0: {
+                final stb g30 = this.G0;
+                e0e.f((Object)g30, "$tmp0");
+                g30.invoke(o);
+            }
+        }
     }
 }

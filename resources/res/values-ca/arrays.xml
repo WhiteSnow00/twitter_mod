@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Rebràs notificacions de tuits nous.</item>
-        <item>Rebràs notificacions de nous tuits exclusius per a superseguidors.</item>
+        <item>Rebràs notificacions de tuits per a Subscriptors.</item>
         <item>Rebràs notificacions de nous tuits amb vídeos en directe.</item>
         <item>Rebràs notificacions de nous tuits sobre Espais.</item>
         <item>Ja no rebràs notificacions de tuits nous.</item>
     </array>
     <array name="account_notif_options">
         <item>Tuits</item>
-        <item>Tuits exclusius per a superseguidors</item>
+        <item>Tuits exclusius per a Subscriptors</item>
         <item>Vídeo en directe</item>
         <item>Espais</item>
         <item>Cap</item>
     </array>
     <array name="account_notif_options_old">
         <item>Tots els tuits</item>
-        <item>Tuits exclusius per a superseguidors</item>
+        <item>Tuits exclusius per a Subscriptors</item>
         <item>Només vídeo en directe</item>
         <item>Només Espais</item>
         <item>Desactivades</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Rep notificacions per a tots els tuits del compte.</item>
-        <item>Rep notificacions de nous tuits exclusius per a superseguidors.</item>
+        <item>Rep notificacions només de tuits exclusius per a Subscriptors.</item>
         <item>Rep notificacions només per a emissions en directe.</item>
         <item>Rep notificacions només per als Espais.</item>
         <item>Desactiva les notificacions per als tuits del compte.</item>

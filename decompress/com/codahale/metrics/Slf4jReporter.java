@@ -12,12 +12,16 @@ import java.util.concurrent.TimeUnit;
 public class Slf4jReporter extends ScheduledReporter
 {
     private final Slf4jReporter.Slf4jReporter$LoggerProxy loggerProxy;
-    private final llg marker;
+    private final cmg marker;
     
-    private Slf4jReporter(final MetricRegistry metricRegistry, final Slf4jReporter.Slf4jReporter$LoggerProxy loggerProxy, final llg marker, final TimeUnit timeUnit, final TimeUnit timeUnit2, final MetricFilter metricFilter) {
+    private Slf4jReporter(final MetricRegistry metricRegistry, final Slf4jReporter.Slf4jReporter$LoggerProxy loggerProxy, final cmg marker, final TimeUnit timeUnit, final TimeUnit timeUnit2, final MetricFilter metricFilter) {
         super(metricRegistry, "logger-reporter", metricFilter, timeUnit, timeUnit2);
         this.loggerProxy = loggerProxy;
         this.marker = marker;
+    }
+    
+    public Slf4jReporter(final MetricRegistry metricRegistry, final Slf4jReporter.Slf4jReporter$LoggerProxy slf4jReporter$LoggerProxy, final cmg cmg, final TimeUnit timeUnit, final TimeUnit timeUnit2, final MetricFilter metricFilter, final Slf4jReporter$1 slf4jReporter$1) {
+        this(metricRegistry, slf4jReporter$LoggerProxy, cmg, timeUnit, timeUnit2, metricFilter);
     }
     
     public static Slf4jReporter.Slf4jReporter$Builder forRegistry(final MetricRegistry metricRegistry) {
@@ -47,9 +51,9 @@ public class Slf4jReporter extends ScheduledReporter
     }
     
     public String getRateUnit() {
-        final StringBuilder g = w48.g("events/");
-        g.append(super.getRateUnit());
-        return g.toString();
+        final StringBuilder f = ehk.f("events/");
+        f.append(super.getRateUnit());
+        return f.toString();
     }
     
     public void report(final SortedMap<String, Gauge> sortedMap, final SortedMap<String, Counter> sortedMap2, final SortedMap<String, Histogram> sortedMap3, final SortedMap<String, Meter> sortedMap4, final SortedMap<String, Timer> sortedMap5) {

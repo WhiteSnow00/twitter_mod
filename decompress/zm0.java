@@ -1,103 +1,112 @@
-import java.nio.charset.Charset;
+import android.os.BaseBundle;
 import java.util.List;
-import java.util.ArrayList;
-import java.nio.ByteBuffer;
+import android.os.Trace;
+import java.util.Iterator;
+import androidx.startup.StartupException;
+import android.os.Bundle;
+import java.util.HashMap;
+import java.util.HashSet;
+import android.content.Context;
+import java.util.Set;
+import java.util.Map;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zm0 extends fb
+public final class zm0
 {
-    public final x8h m0(final h9h h9h, final ByteBuffer byteBuffer) {
-        final byte value = byteBuffer.get();
-        x8h x8h = null;
-        if (value == 116) {
-            final rgx rgx = new rgx(byteBuffer.array(), byteBuffer.limit());
-            rgx.m(12);
-            final int g = rgx.g(12);
-            final int d = rgx.d();
-            rgx.m(44);
-            rgx.n(rgx.g(12));
-            rgx.m(16);
-            final ArrayList list = new ArrayList();
-            while (rgx.d() < d + g - 4) {
-                rgx.m(48);
-                final int g2 = rgx.g(8);
-                rgx.m(4);
-                final int n = rgx.d() + rgx.g(12);
-                String s2;
-                String s = s2 = null;
-                while (rgx.d() < n) {
-                    final int g3 = rgx.g(8);
-                    final int g4 = rgx.g(8);
-                    final int n2 = rgx.d() + g4;
-                    String s3;
-                    String s4;
-                    if (g3 == 2) {
-                        final int g5 = rgx.g(16);
-                        rgx.m(8);
-                        s3 = s;
-                        s4 = s2;
-                        if (g5 == 3) {
-                            while (true) {
-                                s3 = s;
-                                s4 = s2;
-                                if (rgx.d() >= n2) {
-                                    break;
-                                }
-                                final int g6 = rgx.g(8);
-                                final Charset a = au3.a;
-                                final byte[] array = new byte[g6];
-                                rgx.i(array, g6);
-                                final String s5 = new String(array, a);
-                                final int g7 = rgx.g(8);
-                                int n3 = 0;
-                                while (true) {
-                                    s = s5;
-                                    if (n3 >= g7) {
-                                        break;
-                                    }
-                                    rgx.n(rgx.g(8));
-                                    ++n3;
-                                }
-                            }
-                        }
-                    }
-                    else {
-                        s3 = s;
-                        s4 = s2;
-                        if (g3 == 21) {
-                            final Charset a2 = au3.a;
-                            final byte[] array2 = new byte[g4];
-                            rgx.i(array2, g4);
-                            s4 = new String(array2, a2);
-                            s3 = s;
-                        }
-                    }
-                    rgx.k(n2 * 8);
-                    s = s3;
-                    s2 = s4;
+    public static volatile zm0 d;
+    public static final Object e;
+    public final Map<Class<?>, Object> a;
+    public final Set<Class<? extends jnd<?>>> b;
+    public final Context c;
+    
+    static {
+        e = new Object();
+    }
+    
+    public zm0(final Context context) {
+        this.c = context.getApplicationContext();
+        this.b = new HashSet();
+        this.a = new HashMap();
+    }
+    
+    public static zm0 c(final Context context) {
+        if (zm0.d == null) {
+            synchronized (zm0.e) {
+                if (zm0.d == null) {
+                    zm0.d = new zm0(context);
                 }
-                rgx.k(n * 8);
-                if (s != null && s2 != null) {
-                    String concat;
-                    if (s2.length() != 0) {
-                        concat = s.concat(s2);
-                    }
-                    else {
-                        concat = new String(s);
-                    }
-                    list.add(new ym0(g2, concat));
-                }
-            }
-            if (list.isEmpty()) {
-                x8h = x8h;
-            }
-            else {
-                x8h = new x8h((List)list);
             }
         }
-        return x8h;
+        return zm0.d;
+    }
+    
+    public final void a(final Bundle bundle) {
+        final String string = this.c.getString(2131951962);
+        if (bundle != null) {
+            try {
+                final HashSet<Class<?>> set = new HashSet<Class<?>>();
+                for (final String s : ((BaseBundle)bundle).keySet()) {
+                    if (string.equals(((BaseBundle)bundle).getString(s, (String)null))) {
+                        final Class<?> forName = Class.forName(s);
+                        if (!jnd.class.isAssignableFrom(forName)) {
+                            continue;
+                        }
+                        this.b.add(forName);
+                    }
+                }
+                final Iterator iterator2 = this.b.iterator();
+                while (iterator2.hasNext()) {
+                    this.b((Class<? extends jnd<?>>)iterator2.next(), set);
+                }
+            }
+            catch (final ClassNotFoundException ex) {
+                throw new StartupException((Throwable)ex);
+            }
+        }
+    }
+    
+    public final <T> T b(final Class<? extends jnd<?>> clazz, final Set<Class<?>> set) {
+        Label_0013: {
+            if (!awt.a()) {
+                break Label_0013;
+            }
+            try {
+                Trace.beginSection(clazz.getSimpleName());
+                if (!set.contains(clazz)) {
+                    if (!this.a.containsKey(clazz)) {
+                        set.add(clazz);
+                        try {
+                            final jnd jnd = (jnd)clazz.getDeclaredConstructor((Class<?>[])new Class[0]).newInstance(new Object[0]);
+                            final List b = jnd.b();
+                            if (!b.isEmpty()) {
+                                for (final Class clazz2 : b) {
+                                    if (!this.a.containsKey(clazz2)) {
+                                        this.b(clazz2, set);
+                                    }
+                                }
+                            }
+                            final Object a = jnd.a(this.c);
+                            set.remove(clazz);
+                            this.a.put(clazz, a);
+                            final Throwable value;
+                            return (T)value;
+                        }
+                        finally {
+                            final Throwable value;
+                            throw new StartupException(value);
+                        }
+                    }
+                    final Throwable value = this.a.get(clazz);
+                    return (T)value;
+                }
+                throw new IllegalStateException(String.format("Cannot initialize %s. Cycle detected.", clazz.getName()));
+            }
+            finally {
+                Trace.endSection();
+            }
+        }
     }
 }

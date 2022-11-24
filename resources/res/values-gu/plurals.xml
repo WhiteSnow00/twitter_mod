@@ -301,8 +301,8 @@
         <item quantity="other">%d અન્યો</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">સુપર અનુયાયી</item>
-        <item quantity="other">સુપર અનુયાયી</item>
+        <item quantity="one">સબ્સ્ક્રાઇબર</item>
+        <item quantity="other">સબ્સ્ક્રાઇબર્સ</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%sલાઈકસ</item>
@@ -341,7 +341,7 @@
         <item quantity="other">﻿%1$s અને %2$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s અને %2$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યા છો. તમારો પ્રત્યુતર અન્ય સુપર અનુયાયીઓને પણ દેખાશે.</item>
+        <item quantity="other">﻿%1$s અને %2$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યા છો. તમારો પ્રત્યુતર અન્ય સબ્સ્ક્રાઇબર્સને પણ દેખાશે.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%3$s﻿માં ﻿%1$s અને %2$d અન્ય લોકો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>
@@ -350,7 +350,7 @@
         <item quantity="other">﻿%1$s %2$s અને %3$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s %2$s અને %3$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યા છો. તમારો પ્રત્યુતર અન્ય સુપર અનુયાયીઓને પણ દેખાશે.</item>
+        <item quantity="other">﻿%1$s %2$s અને %3$d અન્યો﻿ને પ્રત્યુતર આપી રહ્યા છો. તમારો પ્રત્યુતર અન્ય સબ્સ્ક્રાઈબર્સને પણ દેખાશે.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%4$s﻿માં ﻿%1$s %2$s અને %3$d અન્ય લોકો﻿ને પ્રત્યુતર આપી રહ્યાં છે</item>

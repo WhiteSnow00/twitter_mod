@@ -1,20 +1,18 @@
+import com.twitter.util.user.UserIdentifier;
+import android.content.res.Resources;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pz7 extends ste implements qsb<rhh$a<wz7$c$b>, fzv>
+public final class pz7 implements bra<b4e<hy7$d, xz7$a>>
 {
-    public final hz7 D0;
-    
-    public pz7(final hz7 d0) {
-        this.D0 = d0;
-        super(1);
-    }
-    
-    public final Object invoke(final Object o) {
-        final rhh$a rhh$a = (rhh$a)o;
-        czd.f((Object)rhh$a, "$this$watchType");
-        rhh$a.c(new foe[] { (foe)nz7.D0 }, (qsb)new oz7(this.D0));
-        return fzv.a;
+    public static b4e<hy7$d, xz7$a> a(final Resources resources, final jh7 jh7, final UserIdentifier userIdentifier, final znl<h08> znl) {
+        final iz7 iz7 = (iz7)lp7.m0((Class)iz7.class);
+        e0e.f((Object)resources, "resources");
+        e0e.f((Object)jh7, "dmCardViewFactory");
+        e0e.f((Object)userIdentifier, "currentUser");
+        e0e.f((Object)znl, "pageViewIntentSubject");
+        return (b4e<hy7$d, xz7$a>)new xz7(resources, jh7, userIdentifier, (stb)new ty7(znl));
     }
 }

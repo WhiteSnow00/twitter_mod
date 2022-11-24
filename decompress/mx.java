@@ -2,12 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class mx extends wsm
+public interface mx extends wqg
 {
-    public final float c;
+    qni E();
     
-    public mx(final float n, final float n2, final float c) {
-        super(n, n2);
-        this.c = c;
-    }
+    lx d();
+    
+    mx i();
+    
+    void q();
+    
+    void q0();
+    
+    void requestLayout();
+    
+    boolean u();
+    
+    void z(final stb<? super mx, vzv> p0);
 }

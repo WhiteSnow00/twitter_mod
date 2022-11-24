@@ -14,19 +14,20 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonGraphQlGetBroadcastsResponse extends fih<j1c>
+public class JsonGraphQlGetBroadcastsResponse extends tih<j2c>
 {
     @JsonField
     public List<b> a;
     
+    @Override
     public final Object s() {
         Object o;
         if (this.a != null) {
-            final Map a = xth.a(0);
+            final Map a = nuh.a(0);
             for (final b b : this.a) {
-                ((HashMap<String, ynj>)a).put(b.w(), new ynj((Object)b));
+                ((HashMap<String, noj>)a).put(b.w(), new noj((Object)b));
             }
-            o = new j1c(a, xth.a(0));
+            o = new j2c(a, nuh.a(0));
         }
         else {
             o = null;

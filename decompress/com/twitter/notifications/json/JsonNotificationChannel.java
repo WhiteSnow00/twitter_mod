@@ -8,13 +8,13 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public final class JsonNotificationChannel extends fih<upi>
+public final class JsonNotificationChannel extends tih<kqi>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
-    @JsonField(typeConverter = bge.class)
+    @JsonField(typeConverter = yge.class)
     public int c;
     @JsonField
     public String d;
@@ -22,10 +22,11 @@ public final class JsonNotificationChannel extends fih<upi>
     public boolean e;
     @JsonField
     public boolean f;
-    @JsonField(typeConverter = ege.class)
-    public xpi g;
+    @JsonField(typeConverter = bhe.class)
+    public nqi g;
     
+    @Override
     public final Object s() {
-        return new upi(this.a, this.b, this.c, this.d, this.e, this.f, this.g);
+        return new kqi(this.a, this.b, this.c, this.d, this.e, this.f, this.g);
     }
 }

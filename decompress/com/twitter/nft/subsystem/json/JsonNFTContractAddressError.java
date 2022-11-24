@@ -9,12 +9,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNFTContractAddressError extends fih<o0i$b>
+public class JsonNFTContractAddressError extends tih<f1i.b>
 {
     @JsonField
     public String a;
     
+    @Override
     public final Object s() {
-        return new o0i$b(this.a);
+        return new f1i.b(this.a);
     }
 }

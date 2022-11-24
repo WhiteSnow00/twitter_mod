@@ -1,32 +1,21 @@
-import android.os.Looper;
+import android.content.Context;
+import java.util.ArrayList;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zlz extends h1z
+public final class zlz extends mze<jjz, dkz>
 {
-    public jmy E0;
-    public final xlz F0;
-    public final vlz G0;
-    public final aiq H0;
-    
-    public zlz(final y7z y7z) {
-        super(y7z);
-        this.F0 = new xlz(this);
-        this.G0 = new vlz(this);
-        this.H0 = new aiq(this);
-    }
-    
     @Override
-    public final boolean j() {
-        return false;
-    }
-    
-    public final void k() {
-        this.g();
-        if (this.E0 == null) {
-            this.E0 = new jmy(Looper.getMainLooper());
+    public final Object a(final Object o) {
+        final jjz jjz = (jjz)o;
+        final rch c = rch.c();
+        final Context b = rch.c().b();
+        final ArrayList list = new ArrayList();
+        if (jjz.c()) {
+            list.add(new alz(b));
         }
+        return new dkz(c.b(), (qyp)c.a(qyp.class), jjz.b());
     }
 }

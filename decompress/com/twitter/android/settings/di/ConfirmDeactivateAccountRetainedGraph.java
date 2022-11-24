@@ -7,10 +7,10 @@ package com.twitter.android.settings.di;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@r4j
+@d5j
 public interface ConfirmDeactivateAccountRetainedGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
-    @r4j
+    @d5j
     public interface ConfirmDeactivateAccountViewGraph extends TwitterFragmentActivityViewObjectGraph
     {
     }

@@ -8,12 +8,12 @@ import tv.periscope.model.NarrowcastSpaceType;
 import java.util.List;
 import java.util.Map;
 
-public final class g extends gue implements rtb<f6n, f6n>
+public final class g extends pue implements stb<l7n, l7n>
 {
-    public static final g C0;
+    public static final g F0;
     
     static {
-        C0 = new g();
+        F0 = new g();
     }
     
     public g() {
@@ -21,8 +21,8 @@ public final class g extends gue implements rtb<f6n, f6n>
     }
     
     public final Object invoke(final Object o) {
-        final f6n f6n = (f6n)o;
-        zzd.f((Object)f6n, "$this$setState");
-        return f6n.l(f6n, false, null, null, false, null, null, null, null, null, false, null, null, false, null, false, false, null, null, 0, null, null, null, null, null, null, false, false, null, false, false, false, false, false, false, null, null, false, false, 0, false, null, false, 0, false, false, false, false, false, false, null, false, false, -2049, 4194303);
+        final l7n l7n = (l7n)o;
+        e0e.f((Object)l7n, "$this$setState");
+        return l7n.l(l7n, false, (ci6)null, (wah)null, false, (r31)null, (im)null, (String)null, (Long)null, (String)null, false, (lrp)null, (mrn)null, false, (Map)null, false, false, (String)null, (List)null, 0, (wjt)null, (wjt)null, (yh5)null, (String)null, (wjt)null, (wjt)null, false, false, (faw)null, false, false, false, false, false, false, (List)null, (Long)null, false, false, 0, false, (NarrowcastSpaceType)null, false, 0, false, false, false, false, false, false, (kmu)null, false, false, -2049, 4194303);
     }
 }

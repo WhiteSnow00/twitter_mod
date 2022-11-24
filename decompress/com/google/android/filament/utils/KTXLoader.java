@@ -53,28 +53,28 @@ public final class KTXLoader
     private final native boolean nGetSphericalHarmonics(final Buffer p0, final int p1, final float[] p2);
     
     public final IndirectLight createIndirectLight(final Engine engine, final Buffer buffer, final Options options) {
-        czd.f((Object)engine, "engine");
-        czd.f((Object)buffer, "buffer");
-        czd.f((Object)options, "options");
+        e0e.f((Object)engine, "engine");
+        e0e.f((Object)buffer, "buffer");
+        e0e.f((Object)options, "options");
         return new IndirectLight(this.nCreateIndirectLight(engine.getNativeObject(), buffer, buffer.remaining(), options.getSrgb()));
     }
     
     public final Skybox createSkybox(final Engine engine, final Buffer buffer, final Options options) {
-        czd.f((Object)engine, "engine");
-        czd.f((Object)buffer, "buffer");
-        czd.f((Object)options, "options");
+        e0e.f((Object)engine, "engine");
+        e0e.f((Object)buffer, "buffer");
+        e0e.f((Object)options, "options");
         return new Skybox(this.nCreateSkybox(engine.getNativeObject(), buffer, buffer.remaining(), options.getSrgb()));
     }
     
     public final Texture createTexture(final Engine engine, final Buffer buffer, final Options options) {
-        czd.f((Object)engine, "engine");
-        czd.f((Object)buffer, "buffer");
-        czd.f((Object)options, "options");
+        e0e.f((Object)engine, "engine");
+        e0e.f((Object)buffer, "buffer");
+        e0e.f((Object)options, "options");
         return new Texture(this.nCreateKTXTexture(engine.getNativeObject(), buffer, buffer.remaining(), options.getSrgb()));
     }
     
     public final float[] getSphericalHarmonics(final Buffer buffer) {
-        czd.f((Object)buffer, "buffer");
+        e0e.f((Object)buffer, "buffer");
         final float[] array = new float[27];
         float[] array2;
         if (this.nGetSphericalHarmonics(buffer, buffer.remaining(), array)) {

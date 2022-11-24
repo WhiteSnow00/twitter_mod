@@ -12,10 +12,10 @@ import android.net.Uri;
 import android.util.AttributeSet;
 import android.content.Context;
 
-public class SimpleDraweeView extends m0c
+public class SimpleDraweeView extends o0c
 {
-    public static lyr<? extends ub> J0;
-    public ub I0;
+    public static zzr<? extends tb> M0;
+    public tb L0;
     
     public SimpleDraweeView(final Context context) {
         super(context);
@@ -34,17 +34,17 @@ public class SimpleDraweeView extends m0c
     
     public final void f(final Context context, AttributeSet obtainStyledAttributes) {
         try {
-            srb.b();
+            rrb.b();
             if (((View)this).isInEditMode()) {
                 this.getTopLevelDrawable().setVisible(true, false);
                 this.getTopLevelDrawable().invalidateSelf();
             }
             else {
-                ri4.s((Object)SimpleDraweeView.J0, (Object)"SimpleDraweeView was not initialized!");
-                this.I0 = (ub)SimpleDraweeView.J0.get();
+                xd.K(SimpleDraweeView.M0, "SimpleDraweeView was not initialized!");
+                this.L0 = (tb)SimpleDraweeView.M0.get();
             }
             if (obtainStyledAttributes != null) {
-                obtainStyledAttributes = (AttributeSet)context.obtainStyledAttributes(obtainStyledAttributes, vqb.G0);
+                obtainStyledAttributes = (AttributeSet)context.obtainStyledAttributes(obtainStyledAttributes, b1b.X0);
                 try {
                     if (((TypedArray)obtainStyledAttributes).hasValue(2)) {
                         this.g(Uri.parse(((TypedArray)obtainStyledAttributes).getString(2)));
@@ -67,40 +67,38 @@ public class SimpleDraweeView extends m0c
             }
         }
         finally {
-            srb.b();
+            rrb.b();
         }
     }
     
     public final void g(final Uri uri) {
-        final ub i0 = this.I0;
-        i0.c = null;
-        final ffk f = ((ffk)i0).f(uri);
-        ((ub)f).j = this.getController();
-        this.setController((ie9)((ub)f).a());
+        final tb l0 = this.L0;
+        l0.c = null;
+        final yfk f = ((yfk)l0).f(uri);
+        ((tb)f).j = this.getController();
+        this.setController((te9)((tb)f).a());
     }
     
-    public ub getControllerBuilder() {
-        return this.I0;
+    public tb getControllerBuilder() {
+        return this.L0;
     }
     
     public void setActualImageResource(final int n) {
-        final Uri a = o5w.a;
+        final Uri a = o6w.a;
         this.g(new Uri$Builder().scheme("res").path(String.valueOf(n)).build());
     }
     
     public void setImageRequest(final a d) {
-        final ub i0 = this.I0;
-        i0.d = d;
-        i0.j = this.getController();
-        this.setController((ie9)i0.a());
+        final tb l0 = this.L0;
+        l0.d = (REQUEST)d;
+        l0.j = this.getController();
+        this.setController((te9)l0.a());
     }
     
-    @Override
     public void setImageResource(final int imageResource) {
         super.setImageResource(imageResource);
     }
     
-    @Override
     public void setImageURI(final Uri uri) {
         this.g(uri);
     }

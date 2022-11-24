@@ -1,50 +1,94 @@
-import android.os.Bundle;
-import android.app.Activity;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lgj extends rn
+public final class lgj<N> implements tr0<N>
 {
-    public final Activity C0;
-    public final Bundle D0;
+    public final tr0<N> a;
+    public final int b;
+    public int c;
     
-    public lgj(final Activity c0, final Bundle d0) {
-        zzd.f((Object)c0, "activity");
-        zzd.f((Object)d0, "outState");
-        this.C0 = c0;
-        this.D0 = d0;
+    public lgj(final tr0<N> a, final int b) {
+        e0e.f((Object)a, "applier");
+        this.a = a;
+        this.b = b;
     }
     
-    public final Activity a() {
-        return this.C0;
+    public final N b() {
+        return (N)this.a.b();
     }
     
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
+    public final void c(final int n, final int n2, final int n3) {
+        int b;
+        if (this.c == 0) {
+            b = this.b;
         }
-        if (!(o instanceof lgj)) {
-            return false;
+        else {
+            b = 0;
         }
-        final lgj lgj = (lgj)o;
-        return zzd.a((Object)this.C0, (Object)lgj.C0) && zzd.a((Object)this.D0, (Object)lgj.D0);
+        this.a.c(n + b, n2 + b, n3);
     }
     
-    public final int hashCode() {
-        return this.D0.hashCode() + this.C0.hashCode() * 31;
+    public final void clear() {
+        sa6.d("Clear is not valid on OffsetApplier".toString());
+        throw null;
     }
     
-    public final String toString() {
-        final Activity c0 = this.C0;
-        final Bundle d0 = this.D0;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("OnActivitySavedInstanceState(activity=");
-        sb.append(c0);
-        sb.append(", outState=");
-        sb.append(d0);
-        sb.append(")");
-        return sb.toString();
+    public final void d(final int n, final int n2) {
+        final tr0<N> a = this.a;
+        int b;
+        if (this.c == 0) {
+            b = this.b;
+        }
+        else {
+            b = 0;
+        }
+        a.d(n + b, n2);
+    }
+    
+    public final void e(final int n, final N n2) {
+        final tr0<N> a = this.a;
+        int b;
+        if (this.c == 0) {
+            b = this.b;
+        }
+        else {
+            b = 0;
+        }
+        a.e(n + b, (Object)n2);
+    }
+    
+    public final void f() {
+    }
+    
+    public final void g(final int n, final N n2) {
+        final tr0<N> a = this.a;
+        int b;
+        if (this.c == 0) {
+            b = this.b;
+        }
+        else {
+            b = 0;
+        }
+        a.g(n + b, (Object)n2);
+    }
+    
+    public final void h(final N n) {
+        ++this.c;
+        this.a.h((Object)n);
+    }
+    
+    public final void i() {
+    }
+    
+    public final void j() {
+        final int c = this.c;
+        if (c > 0) {
+            this.c = c - 1;
+            this.a.j();
+            return;
+        }
+        sa6.d("OffsetApplier up called with no corresponding down".toString());
+        throw null;
     }
 }

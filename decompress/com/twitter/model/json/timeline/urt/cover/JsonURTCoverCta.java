@@ -9,39 +9,39 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTCoverCta extends aih<snv>
+public class JsonURTCoverCta extends tih<cpv>
 {
     @JsonField
     public String a;
     @JsonField
-    public snv$a b;
+    public cpv$a b;
     @JsonField
-    public List<lnv> c;
+    public List<vov> c;
     @JsonField
-    public qzo d;
-    @JsonField(typeConverter = q53.class)
+    public b1p d;
+    @JsonField(typeConverter = a63.class)
     public int e;
-    @JsonField(typeConverter = wke.class)
-    public uov f;
+    @JsonField(typeConverter = cle.class)
+    public dqv f;
     
     @Override
     public final Object s() {
-        if (pjr.g((CharSequence)this.a)) {
-            final snv$a b = this.b;
+        if (flr.g((CharSequence)this.a)) {
+            final cpv$a b = this.b;
             if (b != null) {
                 final String a = this.a;
                 Object o;
                 if ((o = this.c) == null) {
-                    o = v2a.C0;
+                    o = h3a.F0;
                 }
-                final qzo d = this.d;
+                final b1p d = this.d;
                 final int e = this.e;
-                uov f = this.f;
-                final uov d2 = uov.D0;
-                if (f == null) {
-                    f = d2;
+                final dqv f = this.f;
+                dqv g0 = dqv.G0;
+                if (f != null) {
+                    g0 = f;
                 }
-                return new snv(a, b, (List)o, d, e, f);
+                return new cpv(a, b, (List)o, d, e, g0);
             }
         }
         return null;

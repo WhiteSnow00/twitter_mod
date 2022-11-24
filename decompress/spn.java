@@ -1,71 +1,83 @@
+import androidx.recyclerview.widget.RecyclerView$c0;
+import android.widget.TextView;
+import android.view.ViewGroup;
+import android.content.Context;
 import android.view.View;
-import androidx.appcompat.widget.AppCompatEditText;
-import java.util.Set;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Collection;
-import java.util.ArrayList;
+import com.twitter.media.ui.image.UserImageView;
+import com.twitter.ui.components.text.legacy.TypefacesTextView;
+import android.view.View$OnClickListener;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class spn extends ste implements qsb<wpn, fzv>
+public final class spn extends b4e<qpn, vpn>
 {
-    public final ipn D0;
+    public final znl<opn> d;
     
-    public spn(final ipn d0) {
-        this.D0 = d0;
-        super(1);
+    public spn(final znl<opn> d) {
+        e0e.f((Object)d, "clickSubject");
+        super((Class)qpn.class);
+        this.d = d;
     }
     
-    public final Object invoke(final Object o) {
-        final wpn wpn = (wpn)o;
-        czd.f((Object)wpn, "$this$distinct");
-        if (ikr.g((CharSequence)((AppCompatEditText)this.D0.M0).getText())) {
-            final String string = this.D0.Q0.getString(2131954480, new Object[] { ((AppCompatEditText)this.D0.M0).getText() });
-            czd.e((Object)string, "resources.getString(R.st\u2026s_returned, searchString)");
-            ((View)this.D0.J0).announceForAccessibility((CharSequence)string);
-        }
-        if (wpn.f.isEmpty()) {
-            ((View)this.D0.K0).setAlpha(0.25f);
-            ((View)this.D0.K0).setEnabled(false);
-        }
-        else {
-            ((View)this.D0.K0).setAlpha(1.0f);
-            ((View)this.D0.K0).setEnabled(true);
-        }
-        if (!wpn.h) {
-            ipn.a(this.D0, wpn.c);
+    public final void k(final n8x n8x, final Object o, final kcm kcm) {
+        final vpn vpn = (vpn)n8x;
+        final qpn qpn = (qpn)o;
+        e0e.f((Object)vpn, "viewHolder");
+        e0e.f((Object)qpn, "item");
+        ((TextView)vpn.Z0).setText((CharSequence)qpn.a.b);
+        final TypefacesTextView a1 = vpn.a1;
+        final boolean c = qpn.c;
+        int visibility = 0;
+        String text;
+        if (c) {
+            text = qpn.a.c;
         }
         else {
-            final List g = wpn.g;
-            final ArrayList list = new ArrayList<String>(iq4.H((Iterable)g, 10));
-            final Iterator iterator = g.iterator();
-            while (iterator.hasNext()) {
-                list.add(((zon)iterator.next()).a.a);
-            }
-            final Set f = wpn.f;
-            final ArrayList list2 = new ArrayList<String>(iq4.H((Iterable)f, 10));
-            final Iterator iterator2 = f.iterator();
-            while (iterator2.hasNext()) {
-                list2.add(((uon)iterator2.next()).a);
-            }
-            if (!ikr.g((CharSequence)((AppCompatEditText)this.D0.M0).getText()) && wpn.b == gpn.G0) {
-                final List c = wpn.c;
-                final ArrayList<zon> list3 = new ArrayList<zon>();
-                for (final Object next : c) {
-                    if (!list.contains(((zon)next).a.a)) {
-                        list3.add((zon)next);
-                    }
-                }
-                ipn.a(this.D0, ipn.b(this.D0, list, wpn.i, mq4.x0((Collection)wpn.g, (Iterable)list3), list2));
-            }
-            else {
-                final ipn d0 = this.D0;
-                ipn.a(d0, ipn.b(d0, list, wpn.i, wpn.c, list2));
-            }
+            text = ((RecyclerView$c0)vpn).F0.getContext().getString(2131955471, new Object[] { qpn.a.c });
         }
-        return fzv.a;
+        ((TextView)a1).setText((CharSequence)text);
+        final String d = qpn.a.d;
+        final beq$a companion = beq.Companion;
+        final int dimensionPixelSize = ((View)vpn.b1).getContext().getResources().getDimensionPixelSize(2131165321);
+        final hpj hpj = new hpj(d, companion.b(dimensionPixelSize, dimensionPixelSize));
+        final UserImageView b1 = vpn.b1;
+        if (qpn.a.e) {
+            b1.setShape((tsp)new emo());
+        }
+        else {
+            b1.setShape((tsp)xi4.H0);
+        }
+        vpn.b1.J(hpj);
+        final boolean b2 = qpn.b;
+        final View c2 = vpn.c1;
+        if (!b2) {
+            visibility = 8;
+        }
+        c2.setVisibility(visibility);
+        final Context context = vpn.d1.getContext();
+        e0e.e((Object)context, "container.context");
+        final int b3 = b1b.B(context, 2130969095);
+        final Context context2 = vpn.d1.getContext();
+        e0e.e((Object)context2, "container.context");
+        int b4 = b1b.B(context2, 2130969036);
+        final View d2 = vpn.d1;
+        if (b2) {
+            b4 = b3;
+        }
+        d2.setBackgroundColor(b4);
+        if (qpn.c) {
+            vpn.getHeldView().setOnClickListener((View$OnClickListener)new ugc((Object)vpn, (Object)this, (Object)qpn, 4));
+        }
+        else {
+            vpn.d1.setBackgroundColor(b3);
+        }
+    }
+    
+    public final n8x l(final ViewGroup viewGroup) {
+        final View x = m51.x(viewGroup, "parent", 2131624652, viewGroup, false);
+        e0e.e((Object)x, "view");
+        return (n8x)new vpn(x);
     }
 }

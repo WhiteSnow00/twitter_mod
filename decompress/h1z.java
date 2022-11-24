@@ -2,33 +2,18 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class h1z extends lwy
+public final class h1z extends cvy
 {
-    public boolean D0;
+    public final int c;
+    public final long d;
+    public final String e;
+    public final String f;
     
-    public h1z(y7z c0) {
-        super(c0);
-        c0 = super.C0;
-        ++c0.g1;
+    public h1z(final int n, final String s, final int c, final long d, final String e, final String f) {
+        super(n, s);
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.f = f;
     }
-    
-    public final void h() {
-        if (this.D0) {
-            return;
-        }
-        throw new IllegalStateException("Not initialized");
-    }
-    
-    public final void i() {
-        if (!this.D0) {
-            if (!this.j()) {
-                super.C0.f();
-                this.D0 = true;
-            }
-            return;
-        }
-        throw new IllegalStateException("Can't initialize twice");
-    }
-    
-    public abstract boolean j();
 }

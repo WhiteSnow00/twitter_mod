@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Du erhältst nun Mitteilungen für neue Tweets.</item>
-        <item>Du erhältst nun Mitteilungen für neue Tweets nur für Super-Follower*innen.</item>
+        <item>Du erhältst nun Mitteilungen für neue Abonnement-Tweets.</item>
         <item>Du erhältst nun Mitteilungen für neue Live-Video-Tweets.</item>
         <item>Du erhältst nun Mitteilungen für neue Spaces-Tweets.</item>
         <item>Du erhältst keine Mitteilungen mehr für neue Tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Tweets nur für Super-Follower*innen</item>
+        <item>Tweets nur mit Abonnement</item>
         <item>Live-Video</item>
         <item>Spaces</item>
         <item>Keine</item>
     </array>
     <array name="account_notif_options_old">
         <item>Alle Tweets</item>
-        <item>Nur Super-Follower-Tweets</item>
+        <item>Nur Abonnement-Tweets</item>
         <item>Nur Live-Video</item>
         <item>Nur Spaces</item>
         <item>Aus</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Mitteilungen für alle Tweets dieses Accounts erhalten.</item>
-        <item>Mitteilungen für Tweets nur für Super-Follower*innen erhalten.</item>
+        <item>Erhalte Mitteilungen nur für Abonnement-Tweets.</item>
         <item>Mitteilungen nur für Live-Broadcasts erhalten.</item>
         <item>Mitteilungen nur für Spaces erhalten.</item>
         <item>Mitteilungen für die Tweets dieses Accounts deaktivieren.</item>

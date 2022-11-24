@@ -1,92 +1,59 @@
+import android.view.View;
+import android.view.ViewGroup;
+import java.util.Objects;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class i2t implements k1t
+public final class i2t extends b4e<h2t, n2t>
 {
-    public static final rlp<i2t> o;
-    public String b;
-    public String c;
-    public String d;
-    public String e;
-    public String f;
-    public jov g;
-    public jov h;
-    public z1t i;
-    public z1t j;
-    public long k;
-    public long l;
-    public int m;
-    public boolean n;
+    public final pcm d;
+    public final ocm e;
+    public final oys f;
     
-    static {
-        i2t.o = new i2t.i2t$b();
+    public i2t(final pcm d, final ocm e, final oys f) {
+        super((Class)h2t.class);
+        this.d = d;
+        this.e = e;
+        this.f = f;
     }
     
-    public i2t(final a a) {
-        this.b = a.a;
-        this.c = a.b;
-        this.d = a.c;
-        this.e = a.d;
-        this.f = a.e;
-        this.g = a.f;
-        this.h = a.g;
-        this.n = a.m;
-        this.i = a.h;
-        this.j = a.i;
-        this.k = a.j;
-        this.l = a.k;
-        this.m = a.l;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        boolean b = true;
-        if (this == o) {
-            return true;
+    public final void k(final n8x n8x, final Object o, final kcm kcm) {
+        final n2t n2t = (n2t)n8x;
+        final h2t h2t = (h2t)o;
+        Objects.requireNonNull(n2t);
+        final d2t a = h2t.k.a;
+        if (a instanceof c3t) {
+            final int a2 = o5j.a;
+            final c3t c3t = (c3t)a;
+            final pcm h0 = n2t.H0;
+            final d1p d = n2t.I0.d((vxs)h2t, Integer.valueOf(n2t.J0));
+            Objects.requireNonNull(h0);
+            n2t.G0.a.n((rk6)new m2t((Object)n2t, (Object)c3t, (Object)new f0t((Object)h0, (Object)c3t, (Object)h2t, (Object)d, 1), 0));
         }
-        if (o != null && i2t.class == o.getClass()) {
-            final int a = c5j.a;
-            final i2t i2t = (i2t)o;
-            if (!c5j.a((Object)this.b, (Object)i2t.b) || !c5j.a((Object)this.c, (Object)i2t.c) || !c5j.a((Object)this.d, (Object)i2t.d) || !c5j.a((Object)this.e, (Object)i2t.e) || !c5j.a((Object)this.f, (Object)i2t.f) || !c5j.a((Object)this.g, (Object)i2t.g) || !c5j.a((Object)this.h, (Object)i2t.h) || this.n != i2t.n || this.m != i2t.m) {
-                b = false;
-            }
-            return b;
+        else {
+            n2t.G0.a.a();
         }
-        return false;
     }
     
-    @Override
-    public final int hashCode() {
-        return c5j.n((Object)this.b, (Object)this.c, (Object)this.d, (Object)this.e, (Object)this.f, (Object)this.g, (Object)this.h, (Object)this.n, (Object)this.m);
+    public final n8x l(final ViewGroup viewGroup) {
+        final View w = m51.w(viewGroup, 2131624580, viewGroup, false);
+        return (n8x)new n2t(w, new wcm(w), this.d, this.e);
     }
     
-    public static final class a extends n4j<i2t>
+    public final void m(final n8x n8x, final Object o) {
+        final n2t n2t = (n2t)n8x;
+        final h2t h2t = (h2t)o;
+        if (h2t.j != null && h2t.k() && !h2t.c().t) {
+            this.f.b(h2t);
+        }
+    }
+    
+    public static final class a extends b4e$a<h2t>
     {
-        public String a;
-        public String b;
-        public String c;
-        public String d;
-        public String e;
-        public jov f;
-        public jov g;
-        public z1t h;
-        public z1t i;
-        public long j;
-        public long k;
-        public int l;
-        public boolean m;
-        
-        public a() {
-            this.m = false;
-        }
-        
-        public final Object i() {
-            return new i2t(this);
-        }
-        
-        public final boolean l() {
-            return ikr.g((CharSequence)this.a) && ikr.g((CharSequence)this.c) && ikr.g((CharSequence)this.d) && ikr.g((CharSequence)this.e) && this.f != null && this.g != null;
+        public a(final mxe<i2t> mxe) {
+            super((Class)h2t.class, (mxe)mxe);
         }
     }
 }

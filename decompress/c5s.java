@@ -1,153 +1,180 @@
-import android.database.Cursor;
-import java.util.ArrayList;
-import java.util.List;
+import android.content.Intent;
+import android.content.Context;
+import android.content.IntentFilter;
+import android.content.BroadcastReceiver;
+import java.io.IOException;
+import android.net.NetworkInfo;
+import android.net.ConnectivityManager;
+import android.os.Build$VERSION;
+import android.util.Log;
+import android.annotation.SuppressLint;
+import android.os.PowerManager;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.ThreadPoolExecutor;
+import com.google.firebase.messaging.FirebaseMessaging;
+import android.os.PowerManager$WakeLock;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class c5s implements b5s
+public final class c5s implements Runnable
 {
-    public final gcn a;
-    public final o7a<a5s> b;
-    public final c5s$b c;
-    public final c5s$c d;
+    public final long F0;
+    public final PowerManager$WakeLock G0;
+    public final FirebaseMessaging H0;
     
-    public c5s(final gcn a) {
-        this.a = a;
-        this.b = new c5s$a(a);
-        this.c = new hxp(a) {
-            @Override
-            public final String c() {
-                return "DELETE FROM SystemIdInfo where work_spec_id=? AND generation=?";
-            }
-        };
-        this.d = new hxp(a) {
-            @Override
-            public final String c() {
-                return "DELETE FROM SystemIdInfo where work_spec_id=?";
-            }
-        };
+    @SuppressLint({ "InvalidWakeLockTag" })
+    public c5s(final FirebaseMessaging h0, final long f0) {
+        new ThreadPoolExecutor(0, 1, 30L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(), (ThreadFactory)new h7i("firebase-iid-executor"));
+        this.H0 = h0;
+        this.F0 = f0;
+        (this.G0 = ((PowerManager)h0.d.getSystemService("power")).newWakeLock(1, "fiid-sync")).setReferenceCounted(false);
     }
     
-    public final void a(final wqx wqx) {
-        this.g(wqx.a, wqx.b);
+    public static boolean a() {
+        return Log.isLoggable("FirebaseMessaging", 3) || (Build$VERSION.SDK_INT == 23 && Log.isLoggable("FirebaseMessaging", 3));
     }
     
-    public final List<String> b() {
-        final q1o c = q1o.c("SELECT DISTINCT work_spec_id FROM SystemIdInfo", 0);
-        this.a.b();
-        final Cursor b = he7.b(this.a, (wyr)c, false);
-        try {
-            final ArrayList list = new ArrayList<String>(b.getCount());
-            while (b.moveToNext()) {
-                String string;
-                if (b.isNull(0)) {
-                    string = null;
-                }
-                else {
-                    string = b.getString(0);
-                }
-                list.add(string);
-            }
-            return (List<String>)list;
-        }
-        finally {
-            b.close();
-            c.release();
-        }
-    }
-    
-    public final a5s c(final wqx wqx) {
-        zzd.f((Object)wqx, "id");
-        return this.f(wqx.a, wqx.b);
-    }
-    
-    public final void d(final a5s a5s) {
-        this.a.b();
-        this.a.c();
-        try {
-            ((o7a)this.b).f((Object)a5s);
-            this.a.q();
-        }
-        finally {
-            this.a.l();
-        }
-    }
-    
-    public final void e(final String s) {
-        this.a.b();
-        final yyr a = this.d.a();
-        if (s == null) {
-            ((vyr)a).c3(1);
+    public final boolean b() {
+        final ConnectivityManager connectivityManager = (ConnectivityManager)this.H0.d.getSystemService("connectivity");
+        NetworkInfo activeNetworkInfo;
+        if (connectivityManager != null) {
+            activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         }
         else {
-            ((vyr)a).Y1(1, s);
+            activeNetworkInfo = null;
         }
-        this.a.c();
-        try {
-            a.j0();
-            this.a.q();
-        }
-        finally {
-            this.a.l();
-            this.d.d(a);
-        }
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
     
-    public final a5s f(String string, int b) {
-        final q1o c = q1o.c("SELECT * FROM SystemIdInfo WHERE work_spec_id=? AND generation=?", 2);
-        if (string == null) {
-            c.c3(1);
-        }
-        else {
-            c.Y1(1, string);
-        }
-        c.u2(2, (long)b);
-        this.a.b();
-        final gcn a = this.a;
-        a5s a5s = null;
-        final String s = null;
-        final Cursor b2 = he7.b(a, (wyr)c, false);
+    public final boolean c() throws IOException {
+        final boolean b = true;
         try {
-            final int b3 = ea7.b(b2, "work_spec_id");
-            b = ea7.b(b2, "generation");
-            final int b4 = ea7.b(b2, "system_id");
-            if (b2.moveToFirst()) {
-                if (b2.isNull(b3)) {
-                    string = s;
-                }
-                else {
-                    string = b2.getString(b3);
-                }
-                a5s = new a5s(string, b2.getInt(b), b2.getInt(b4));
+            if (this.H0.a() == null) {
+                Log.e("FirebaseMessaging", "Token retrieval failed: null");
+                return false;
             }
-            return a5s;
+            if (Log.isLoggable("FirebaseMessaging", 3)) {
+                Log.d("FirebaseMessaging", "Token successfully retrieved");
+            }
+            return true;
         }
-        finally {
-            b2.close();
-            c.release();
+        catch (final SecurityException ex) {
+            Log.w("FirebaseMessaging", "Token retrieval failed with SecurityException. Will retry token retrieval");
+            return false;
+        }
+        catch (final IOException ex2) {
+            final String message = ex2.getMessage();
+            int n = b ? 1 : 0;
+            if (!"SERVICE_NOT_AVAILABLE".equals(message)) {
+                n = (b ? 1 : 0);
+                if (!"INTERNAL_SERVER_ERROR".equals(message)) {
+                    if ("InternalServerError".equals(message)) {
+                        n = (b ? 1 : 0);
+                    }
+                    else {
+                        n = 0;
+                    }
+                }
+            }
+            if (n != 0) {
+                final StringBuilder f = ehk.f("Token retrieval failed: ");
+                f.append(ex2.getMessage());
+                f.append(". Will retry token retrieval");
+                Log.w("FirebaseMessaging", f.toString());
+                return false;
+            }
+            if (ex2.getMessage() == null) {
+                Log.w("FirebaseMessaging", "Token retrieval failed without exception message. Will retry token retrieval");
+                return false;
+            }
+            throw ex2;
         }
     }
     
-    public final void g(final String s, final int n) {
-        this.a.b();
-        final yyr a = this.c.a();
-        if (s == null) {
-            ((vyr)a).c3(1);
+    @SuppressLint({ "WakelockTimeout" })
+    @Override
+    public final void run() {
+        Label_0023: {
+            if (!qnp.a().c(this.H0.d)) {
+                break Label_0023;
+            }
+            this.G0.acquire();
+            try {
+                while (true) {
+                    try {
+                        this.H0.f(true);
+                        if (!this.H0.k.d()) {
+                            this.H0.f(false);
+                            if (qnp.a().c(this.H0.d)) {
+                                this.G0.release();
+                            }
+                            return;
+                        }
+                        if (qnp.a().b(this.H0.d) && !this.b()) {
+                            new a(this).a();
+                            if (qnp.a().c(this.H0.d)) {
+                                this.G0.release();
+                            }
+                            return;
+                        }
+                        if (this.c()) {
+                            this.H0.f(false);
+                        }
+                        else {
+                            this.H0.h(this.F0);
+                        }
+                        if (qnp.a().c(this.H0.d)) {
+                            this.G0.release();
+                        }
+                    }
+                    finally {
+                        if (qnp.a().c(this.H0.d)) {
+                            this.G0.release();
+                        }
+                        continue;
+                    }
+                    break;
+                }
+            }
+            catch (final IOException ex) {}
         }
-        else {
-            ((vyr)a).Y1(1, s);
+    }
+    
+    public static final class a extends BroadcastReceiver
+    {
+        public c5s a;
+        
+        public a(final c5s a) {
+            this.a = a;
         }
-        ((vyr)a).u2(2, (long)n);
-        this.a.c();
-        try {
-            a.j0();
-            this.a.q();
+        
+        public final void a() {
+            if (c5s.a()) {
+                Log.d("FirebaseMessaging", "Connectivity change received registered");
+            }
+            this.a.H0.d.registerReceiver((BroadcastReceiver)this, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
         }
-        finally {
-            this.a.l();
-            this.c.d(a);
+        
+        public final void onReceive(final Context context, final Intent intent) {
+            final c5s a = this.a;
+            if (a == null) {
+                return;
+            }
+            if (!a.b()) {
+                return;
+            }
+            if (c5s.a()) {
+                Log.d("FirebaseMessaging", "Connectivity changed. Starting background sync.");
+            }
+            final c5s a2 = this.a;
+            a2.H0.b((Runnable)a2, 0L);
+            this.a.H0.d.unregisterReceiver((BroadcastReceiver)this);
+            this.a = null;
         }
     }
 }

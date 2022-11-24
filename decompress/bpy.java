@@ -2,16 +2,16 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class bpy implements fzy
+public final class bpy implements c0z
 {
-    public static final bpy D0;
+    public static final bpy F0;
     
     static {
-        D0 = new bpy();
+        F0 = new bpy();
     }
     
     public final Object a() {
-        final qzy c = uzy.c;
-        return (int)tsz.E0.b().t();
+        final n0z c = s0z.c;
+        return ((pvz)ovz.G0.F0.a()).a();
     }
 }

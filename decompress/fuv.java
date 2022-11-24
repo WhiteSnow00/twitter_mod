@@ -1,17 +1,16 @@
-import java.util.List;
-import com.twitter.util.user.UserIdentifier;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface fuv
+public final class fuv implements sj
 {
-    long a(final long p0);
+    public final e39 F0;
     
-    void b(final long p0);
+    public fuv(final e39 f0) {
+        this.F0 = f0;
+    }
     
-    void c(final UserIdentifier p0, final List<Long> p1);
-    
-    long d(final long p0);
+    public final void run() {
+        this.F0.a();
+    }
 }

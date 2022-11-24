@@ -1,61 +1,40 @@
-import android.os.IBinder;
-import android.app.PendingIntent;
-import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
-import android.os.Parcel;
-import android.os.Parcelable$Creator;
+import java.lang.annotation.Annotation;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class eky implements Parcelable$Creator<aky>
+public final class eky implements b5j<jcy>
 {
-    public final Object createFromParcel(final Parcel parcel) {
-        final int w = SafeParcelReader.w(parcel);
-        qjy qjy = null;
-        Object o;
-        Object q = o = null;
-        Object q3;
-        Object q2 = q3 = o;
-        int r = 1;
-        while (parcel.dataPosition() < w) {
-            final int int1 = parcel.readInt();
-            switch ((char)int1) {
-                default: {
-                    SafeParcelReader.v(parcel, int1);
-                    continue;
-                }
-                case '\u0006': {
-                    q3 = SafeParcelReader.q(parcel, int1);
-                    continue;
-                }
-                case '\u0005': {
-                    q2 = SafeParcelReader.q(parcel, int1);
-                    continue;
-                }
-                case '\u0004': {
-                    o = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<PendingIntent>)PendingIntent.CREATOR);
-                    continue;
-                }
-                case '\u0003': {
-                    q = SafeParcelReader.q(parcel, int1);
-                    continue;
-                }
-                case '\u0002': {
-                    qjy = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<qjy>)qjy.CREATOR);
-                    continue;
-                }
-                case '\u0001': {
-                    r = SafeParcelReader.r(parcel, int1);
-                    continue;
-                }
-            }
-        }
-        SafeParcelReader.j(parcel, w);
-        return new aky(r, qjy, (IBinder)q, (PendingIntent)o, (IBinder)q2, (IBinder)q3);
+    public static final eky a;
+    
+    static {
+        final z000 f0 = z000.F0;
+        a = new eky();
+        final czz czz = new czz(1, f0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(((Annotation)czz).annotationType(), czz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final czz czz2 = new czz(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final czz czz3 = new czz(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        hashMap3.put(((Annotation)czz3).annotationType(), czz3);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
+        final czz czz4 = new czz(4, f0);
+        final HashMap hashMap4 = new HashMap();
+        ehk.g(czz4, hashMap4, czz4, hashMap4);
     }
     
-    public final Object[] newArray(final int n) {
-        return new aky[n];
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final jcy jcy = (jcy)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

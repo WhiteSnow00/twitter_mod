@@ -4,4 +4,13 @@
 
 public final class cdz
 {
+    @Override
+    public final boolean equals(final Object o) {
+        throw null;
+    }
+    
+    @Override
+    public final int hashCode() {
+        throw null;
+    }
 }

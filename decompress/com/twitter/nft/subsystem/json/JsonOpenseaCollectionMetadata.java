@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject;
 import com.twitter.nft.subsystem.model.NFTOpenseaCollectionMetadata;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOpenseaCollectionMetadata extends fih<NFTOpenseaCollectionMetadata>
+public class JsonOpenseaCollectionMetadata extends tih<NFTOpenseaCollectionMetadata>
 {
     @JsonField(name = { "banner_image_url" })
     public String a;
@@ -31,6 +31,7 @@ public class JsonOpenseaCollectionMetadata extends fih<NFTOpenseaCollectionMetad
     @JsonField(name = { "verified" })
     public Boolean i;
     
+    @Override
     public final Object s() {
         return new NFTOpenseaCollectionMetadata(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i);
     }

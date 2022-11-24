@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTSportsEvent extends aih<dqv>
+public class JsonURTSportsEvent extends tih<krv>
 {
     @JsonField
     public String a;
@@ -20,23 +20,23 @@ public class JsonURTSportsEvent extends aih<dqv>
     @JsonField
     public String d;
     @JsonField
-    public List<dqv$b> e;
+    public List<krv$b> e;
     @JsonField
     public Long f;
     @JsonField
     public String g;
     @JsonField
-    public q7t h;
+    public c9t h;
     
     @Override
     public final Object s() {
-        final dqv$a dqv$a = new dqv$a();
-        dqv$a.a = this.a;
-        dqv$a.f = this.b;
-        dqv$a.g = this.c;
-        dqv$a.b = this.d;
-        dqv$a.c = this.e;
-        dqv$a.d = this.f;
+        final krv$a krv$a = new krv$a();
+        krv$a.a = this.a;
+        krv$a.f = this.b;
+        krv$a.g = this.c;
+        krv$a.b = this.d;
+        krv$a.c = this.e;
+        krv$a.d = this.f;
         final String g = this.g;
         String e = null;
         Label_0146: {
@@ -64,13 +64,13 @@ public class JsonURTSportsEvent extends aih<dqv>
             }
             e = "UNDEFINED";
         }
-        dqv$a.e = e;
-        dqv$a.h = this.h;
-        return ((h4j)dqv$a).e();
+        krv$a.e = e;
+        krv$a.h = this.h;
+        return ((z4j)krv$a).e();
     }
     
     @JsonObject
-    public static class JsonSportsParticipant extends aih<dqv$b>
+    public static class JsonSportsParticipant extends tih<krv$b>
     {
         @JsonField
         public String a;
@@ -87,14 +87,14 @@ public class JsonURTSportsEvent extends aih<dqv>
         
         @Override
         public final Object s() {
-            final dqv$b$b dqv$b$b = new dqv$b$b();
-            dqv$b$b.a = this.a;
-            dqv$b$b.b = this.b;
-            dqv$b$b.c = this.c;
-            dqv$b$b.d = this.d;
-            dqv$b$b.e = this.e;
-            dqv$b$b.f = this.f;
-            return ((h4j)dqv$b$b).e();
+            final krv$b$b krv$b$b = new krv$b$b();
+            krv$b$b.a = this.a;
+            krv$b$b.b = this.b;
+            krv$b$b.c = this.c;
+            krv$b$b.d = this.d;
+            krv$b$b.e = this.e;
+            krv$b$b.f = this.f;
+            return ((z4j)krv$b$b).e();
         }
     }
 }

@@ -10739,7 +10739,6 @@
         <item name="protectedColor">@color/white</item>
         <item name="timestampColor">@color/white_opacity_75</item>
         <item name="usernameColor">@color/white_opacity_75</item>
-        <item name="verifiedColor">@color/white</item>
     </style>
     <style name="TweetHeaderView.ProfilePreviewPrompt" parent="@style/TweetHeaderView">
         <item name="nameColor">?attr/coreColorPrimaryText</item>
@@ -11040,7 +11039,7 @@
     </style>
     <style name="TwitterBase.Dim" parent="@style/PaletteDim">
         <item name="coreColorAudioRecordingBg">#33794bc4</item>
-        <item name="coreColorBadgeVerified">?attr/abstractColorText</item>
+        <item name="coreColorBadgeVerified">@color/twitter_blue</item>
         <item name="coreColorButtonNeutralFill">#ff243447</item>
         <item name="coreColorComposerOverflowTextHighlight">@color/destructive_red</item>
         <item name="coreColorDeepGray30">#4d8899a6</item>
@@ -11076,7 +11075,7 @@
     </style>
     <style name="TwitterBase.LightsOut" parent="@style/PaletteLightsOut">
         <item name="coreColorAudioRecordingBg">#33794bc4</item>
-        <item name="coreColorBadgeVerified">?attr/abstractColorText</item>
+        <item name="coreColorBadgeVerified">@color/twitter_blue</item>
         <item name="coreColorButtonNeutralFill">?attr/abstractColorFadedGray</item>
         <item name="coreColorComposerOverflowTextHighlight">@color/destructive_red</item>
         <item name="coreColorDeepGray30">#4d7c838a</item>
@@ -11112,7 +11111,7 @@
     </style>
     <style name="TwitterBase.Standard" parent="@style/PaletteStandard">
         <item name="coreColorAudioRecordingBg">@color/purple_50</item>
-        <item name="coreColorBadgeVerified">?attr/colorPrimary</item>
+        <item name="coreColorBadgeVerified">@color/twitter_blue</item>
         <item name="coreColorButtonNeutralFill">?attr/abstractColorFadedGray</item>
         <item name="coreColorComposerOverflowTextHighlight">@color/destructive_red_opacity_20</item>
         <item name="coreColorDeepGray30">#4d657786</item>

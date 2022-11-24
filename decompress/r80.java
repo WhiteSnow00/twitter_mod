@@ -4,11 +4,11 @@
 
 public final class r80
 {
-    public static nhe$a a;
-    public static nhe$a b;
+    public static jie.a a;
+    public static jie.a b;
     
     static {
-        r80.a = nhe$a.a(new String[] { "a" });
-        r80.b = nhe$a.a(new String[] { "fc", "sc", "sw", "t" });
+        r80.a = jie.a.a("a");
+        r80.b = jie.a.a("fc", "sc", "sw", "t");
     }
 }

@@ -305,8 +305,8 @@
         <item quantity="other">อีก %d คน</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">ผู้ติดตามพิเศษ</item>
-        <item quantity="other">ผู้ติดตามพิเศษ</item>
+        <item quantity="one">สมาชิก</item>
+        <item quantity="other">สมาชิก</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s ชื่นชอบ</item>
@@ -402,7 +402,7 @@
         <item quantity="other">กำลังตอบกลับถึง ﻿%1$s และอีก %2$d คน﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">ตอบกลับถึง ﻿%1$s และอีก %2$d คน﻿ ผู้ติดตามพิเศษคนอื่นๆ จะมองเห็นการตอบกลับของคุณเช่นกัน</item>
+        <item quantity="other">ตอบกลับถึง ﻿%1$s และอีก %2$d คน﻿ สมาชิกคนอื่นๆ จะมองเห็นการตอบกลับของคุณเช่นกัน</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">กำลังตอบกลับถึง ﻿%1$s และอีก %2$d คน﻿ ใน ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">กำลังตอบกลับถึง ﻿%1$s %2$s และอีก%3$d คน﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">ตอบกลับถึง ﻿%1$s %2$s และอีก %3$d คน﻿ ผู้ติดตามพิเศษคนอื่นๆ จะมองเห็นการตอบกลับของคุณเช่นกัน</item>
+        <item quantity="other">ตอบกลับถึง ﻿%1$s %2$s และอีก %3$d คน﻿ สมาชิกคนอื่นๆ จะมองเห็นการตอบกลับของคุณเช่นกัน</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">กำลังตอบกลับถึง ﻿%1$s %2$s และอีก %3$d คน﻿ ใน ﻿%4$s﻿</item>

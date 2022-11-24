@@ -7,56 +7,56 @@ package com.twitter.app.settings.search;
 import kotlin.Metadata;
 import com.twitter.weaver.mvi.MviViewModel;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001¨\u0006\u0005" }, d2 = { "Lcom/twitter/app/settings/search/SettingsSearchToolbarViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lmqp;", "Lhqp;", "Lcqp;", "feature.tfa.settings.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
-public final class SettingsSearchToolbarViewModel extends MviViewModel<mqp, hqp, cqp>
+@Metadata(bv = {}, d1 = { "\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b\u0007\u0018\u00002\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001¨\u0006\u0005" }, d2 = { "Lcom/twitter/app/settings/search/SettingsSearchToolbarViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lhrp;", "Lcrp;", "Lxqp;", "feature.tfa.settings.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
+public final class SettingsSearchToolbarViewModel extends MviViewModel<hrp, crp, xqp>
 {
-    public static final coe<Object>[] Q0;
-    public final dpp O0;
-    public final hyh P0;
+    public static final ape<Object>[] S0;
+    public final ypp Q0;
+    public final yyh R0;
     
     static {
-        Q0 = new coe[] { (coe)w9.f((Class)SettingsSearchToolbarViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
+        S0 = new ape[] { (ape)lb0.h(SettingsSearchToolbarViewModel.class, "intents", "getIntents()Lcom/twitter/weaver/mvi/dsl/MviIntentTransformerBuilder;", 0) };
     }
     
-    public SettingsSearchToolbarViewModel(final xbm xbm, final r8x r8x, final dpp o0) {
-        czd.f((Object)xbm, "releaseCompletable");
-        czd.f((Object)r8x, "viewLifecycle");
-        czd.f((Object)o0, "searchController");
-        super((k9e)xbm, (jbx)new mqp(null, false, 3, null));
-        this.O0 = o0;
-        final h5j doOnSubscribe = o0.d.distinctUntilChanged().doOnSubscribe((lj6)new ft1((qsb)new SettingsSearchToolbarViewModel$a(this), 15));
-        czd.e((Object)doOnSubscribe, "searchController.searchS\u2026enKeyboard)\n            }");
-        this.B(doOnSubscribe, (qsb)new SettingsSearchToolbarViewModel$b(this));
-        MviViewModel.M((MviViewModel)this, r8x.d(), (String)null, (jrx)null, (ftb)new ftb<tmi, go6<? super fzv>, Object>(this, null) {
-            public final SettingsSearchToolbarViewModel D0;
+    public SettingsSearchToolbarViewModel(final kcm kcm, final k9x k9x, final ypp q0) {
+        e0e.f((Object)kcm, "releaseCompletable");
+        e0e.f((Object)k9x, "viewLifecycle");
+        e0e.f((Object)q0, "searchController");
+        super((iae)kcm, (ccx)new hrp((String)null, false, 3, (wg8)null));
+        this.Q0 = q0;
+        final t5j doOnSubscribe = q0.d.distinctUntilChanged().doOnSubscribe((rk6)new aoa((stb)new SettingsSearchToolbarViewModel$a(this), 13));
+        e0e.e((Object)doOnSubscribe, "searchController.searchS\u2026enKeyboard)\n            }");
+        this.B(doOnSubscribe, (stb)new SettingsSearchToolbarViewModel$b(this));
+        MviViewModel.M((MviViewModel)this, k9x.d(), (String)null, (asx)null, (hub)new hub<kni, mp6<? super vzv>, Object>(this, null) {
+            public final SettingsSearchToolbarViewModel F0;
             
-            public final go6<fzv> create(final Object o, final go6<?> go6) {
-                return (go6<fzv>)new ftb<tmi, go6<? super fzv>, Object>(this.D0, go6) {
-                    public final SettingsSearchToolbarViewModel D0;
+            public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+                return (mp6<vzv>)new hub<kni, mp6<? super vzv>, Object>(this.F0, mp6) {
+                    public final SettingsSearchToolbarViewModel F0;
                 };
             }
             
             public final Object invoke(final Object o, final Object o2) {
-                final ftb<tmi, go6<? super fzv>, Object> ftb = (ftb<tmi, go6<? super fzv>, Object>)this.create(o, (go6<?>)o2);
-                final fzv a = fzv.a;
-                ftb.invokeSuspend(a);
+                final hub<kni, mp6<? super vzv>, Object> hub = (hub<kni, mp6<? super vzv>, Object>)this.create(o, (mp6<?>)o2);
+                final vzv a = vzv.a;
+                hub.invokeSuspend(a);
                 return a;
             }
             
             public final Object invokeSuspend(final Object o) {
-                b1n.u(o);
-                final SettingsSearchToolbarViewModel d0 = this.D0;
-                final cqp.a a = cqp.a.a;
-                final coe<Object>[] q0 = SettingsSearchToolbarViewModel.Q0;
-                d0.V((Object)a);
-                this.D0.Q((qsb)SettingsSearchToolbarViewModel$c$a.D0);
-                return fzv.a;
+                jb2.M0(o);
+                final SettingsSearchToolbarViewModel f0 = this.F0;
+                final xqp$a a = xqp$a.a;
+                final ape<Object>[] s0 = SettingsSearchToolbarViewModel.S0;
+                f0.V((Object)a);
+                this.F0.Q((stb)SettingsSearchToolbarViewModel$c$a.F0);
+                return vzv.a;
             }
         }, 3, (Object)null);
-        this.P0 = ewj.n(this, (qsb)new SettingsSearchToolbarViewModel$d(this));
+        this.R0 = hfe.v((MviViewModel)this, (stb)new SettingsSearchToolbarViewModel$d(this));
     }
     
-    public final jyh<hqp> v() {
-        return (jyh<hqp>)this.P0.a((coe)SettingsSearchToolbarViewModel.Q0[0]);
+    public final azh<crp> v() {
+        return (azh<crp>)this.R0.a((ape)SettingsSearchToolbarViewModel.S0[0]);
     }
 }

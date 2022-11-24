@@ -2,11 +2,23 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ghe
+public final class ghe extends gfe
 {
-    public final int a;
+    public static final ghe a;
     
-    public ghe(final int a) {
-        this.a = a;
+    static {
+        a = new ghe();
+    }
+    
+    @Deprecated
+    public ghe() {
+    }
+    
+    public final boolean equals(final Object o) {
+        return this == o || o instanceof ghe;
+    }
+    
+    public final int hashCode() {
+        return ghe.class.hashCode();
     }
 }

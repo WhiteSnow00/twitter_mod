@@ -1,67 +1,36 @@
-import java.util.Map;
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
+import android.os.BaseBundle;
+import java.util.Iterator;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.Context;
+import com.google.android.play.core.install.InstallState;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class bjy extends sey
+public final class bjy extends loy<InstallState>
 {
-    @NullableDecl
-    public final Object D0;
-    public int E0;
-    public final ljy F0;
-    
-    public bjy(final ljy f0, final int e0) {
-        this.F0 = f0;
-        this.D0 = f0.F0[e0];
-        this.E0 = e0;
+    public bjy(final Context context) {
+        super(new h4a("AppUpdateListenerRegistry"), new IntentFilter("com.google.android.play.core.install.ACTION_INSTALL_STATUS"), context);
     }
     
-    public final void a() {
-        final int e0 = this.E0;
-        if (e0 != -1 && e0 < this.F0.size() && ffz.I0(this.D0, this.F0.F0[this.E0])) {
+    @Override
+    public final void a(final Context context, final Intent intent) {
+        if (!context.getPackageName().equals(intent.getStringExtra("package.name"))) {
+            super.a.i("ListenerRegistryBroadcastReceiver received broadcast for third party app: %s", intent.getStringExtra("package.name"));
             return;
         }
-        final ljy f0 = this.F0;
-        final Object d0 = this.D0;
-        final Object m0 = ljy.M0;
-        this.E0 = f0.g(d0);
-    }
-    
-    @NullableDecl
-    public final Object getKey() {
-        return this.D0;
-    }
-    
-    @NullableDecl
-    public final Object getValue() {
-        final Map a = this.F0.a();
-        if (a != null) {
-            return a.get(this.D0);
+        super.a.i("List of extras in received intent:", new Object[0]);
+        for (final String s : ((BaseBundle)intent.getExtras()).keySet()) {
+            super.a.i("Key: %s; value: %s", s, ((BaseBundle)intent.getExtras()).get(s));
         }
-        this.a();
-        final int e0 = this.E0;
-        if (e0 == -1) {
-            return null;
-        }
-        return this.F0.G0[e0];
-    }
-    
-    public final Object setValue(final Object o) {
-        final Map a = this.F0.a();
-        if (a != null) {
-            return a.put(this.D0, o);
-        }
-        this.a();
-        final int e0 = this.E0;
-        if (e0 == -1) {
-            this.F0.put(this.D0, o);
-            return null;
-        }
-        final Object[] g0 = this.F0.G0;
-        final Object o2 = g0[e0];
-        g0[e0] = o;
-        return o2;
+        final h4a a = super.a;
+        a.i("List of extras in received intent needed by fromUpdateIntent:", new Object[0]);
+        a.i("Key: %s; value: %s", "install.status", intent.getIntExtra("install.status", 0));
+        a.i("Key: %s; value: %s", "error.code", intent.getIntExtra("error.code", 0));
+        final z9y z9y = new z9y(intent.getIntExtra("install.status", 0), intent.getLongExtra("bytes.downloaded", 0L), intent.getLongExtra("total.bytes.to.download", 0L), intent.getIntExtra("error.code", 0), intent.getStringExtra("package.name"));
+        super.a.i("ListenerRegistryBroadcastReceiver.onReceive: %s", z9y);
+        ((loy<z9y>)this).c(z9y);
     }
 }

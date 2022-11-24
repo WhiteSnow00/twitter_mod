@@ -9,47 +9,48 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonMomentCoverMedia extends fih<aph>
+public class JsonMomentCoverMedia extends tih<pph>
 {
     @JsonField
     public long a;
     @JsonField
-    public jph b;
+    public yph b;
     @JsonField
     public JsonRenderData c;
     @JsonField
-    public kph d;
+    public zph d;
     
+    @Override
     public final /* bridge */ Object s() {
         return this.t();
     }
     
-    public final aph t() {
-        final aph$a aph$a = new aph$a();
-        aph$a.a = this.a;
-        final jph b = this.b;
-        aph$a.b = b;
+    public final pph t() {
+        final pph.a a = new pph.a();
+        a.a = this.a;
+        final yph b = this.b;
+        a.b = b;
         final JsonRenderData c = this.c;
-        l67 c2;
+        q77 c2;
         if (c != null && b != null) {
-            final edq b2 = b.b;
-            final l67$a a = c.a;
-            if (a == null) {
-                final l67$a l67$a = new l67$a();
-                l67$a.f = c.c;
-                c2 = (l67)((n4j)l67$a).e();
+            final beq b2 = b.b;
+            final q77.a a2 = c.a;
+            if (a2 == null) {
+                final q77.a a3 = new q77.a();
+                a3.f = c.c;
+                c2 = (q77)a3.e();
             }
             else {
-                a.e = b2;
-                a.f = c.c;
-                c2 = (l67)((n4j)a).e();
+                a2.e = b2;
+                a2.f = c.c;
+                c2 = (q77)a2.e();
             }
         }
         else {
             c2 = null;
         }
-        aph$a.c = c2;
-        aph$a.d = this.d;
-        return (aph)((n4j)aph$a).e();
+        a.c = c2;
+        a.d = this.d;
+        return (pph)a.e();
     }
 }

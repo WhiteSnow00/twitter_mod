@@ -14,7 +14,7 @@ import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTMessageImage extends aih<dpv>
+public class JsonURTMessageImage extends tih<lqv>
 {
     @JsonField
     public List<JsonMediaSizeVariant> a;
@@ -26,29 +26,29 @@ public class JsonURTMessageImage extends aih<dpv>
         final ArrayList a = this.a;
         Object o = null;
         if (a == null) {
-            xpa.p("JsonURTMessageImage has no images");
+            mqb.o("JsonURTMessageImage has no images");
         }
         else {
-            final ijf h = ijf.H();
+            final ojf h = ojf.H();
             for (final JsonMediaSizeVariant jsonMediaSizeVariant : this.a) {
                 final String a2 = jsonMediaSizeVariant.a;
                 if (a2 != null) {
-                    h.p((Object)new szg(a2, jsonMediaSizeVariant.b, jsonMediaSizeVariant.c));
+                    h.p((Object)new l0h(a2, jsonMediaSizeVariant.b, jsonMediaSizeVariant.c));
                 }
             }
             final String b = this.b;
             if (b != null) {
                 try {
-                    o = new dpv((List)((h4j)h).e(), new bpv(Color.parseColor(b)));
+                    o = new lqv((List)((z4j)h).e(), new jqv(Color.parseColor(b)));
                 }
                 catch (final IllegalArgumentException ex) {
-                    final StringBuilder g = w48.g("Invalid background color: ");
-                    g.append(ex.getMessage());
-                    e9a.d((Throwable)new InvalidJsonFormatException(g.toString()));
+                    final StringBuilder f = ehk.f("Invalid background color: ");
+                    f.append(ex.getMessage());
+                    r9a.d((Throwable)new InvalidJsonFormatException(f.toString()));
                 }
             }
             else {
-                o = new dpv((List)((h4j)h).e(), (bpv)null);
+                o = new lqv((List)((z4j)h).e(), (jqv)null);
             }
         }
         return o;

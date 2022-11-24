@@ -23,25 +23,43 @@ public class JvmAttributeGaugeSet implements MetricSet
         this.runtime = runtime;
     }
     
-    public static /* synthetic */ RuntimeMXBean access$000(final JvmAttributeGaugeSet set) {
+    public static RuntimeMXBean access$000(final JvmAttributeGaugeSet set) {
         return set.runtime;
     }
     
     public Map<String, Metric> getMetrics() {
         final HashMap hashMap = new HashMap();
-        hashMap.put("name", new Gauge<String>() {
+        hashMap.put("name", new Gauge<String>(this) {
+            public final JvmAttributeGaugeSet this$0;
+            
+            public /* bridge */ Object getValue() {
+                return this.getValue();
+            }
+            
             public String getValue() {
-                return JvmAttributeGaugeSet.access$000(JvmAttributeGaugeSet.this).getName();
+                return JvmAttributeGaugeSet.access$000(this.this$0).getName();
             }
         });
-        hashMap.put("vendor", new Gauge<String>() {
+        hashMap.put("vendor", new Gauge<String>(this) {
+            public final JvmAttributeGaugeSet this$0;
+            
+            public /* bridge */ Object getValue() {
+                return this.getValue();
+            }
+            
             public String getValue() {
-                return String.format(Locale.US, "%s %s %s (%s)", JvmAttributeGaugeSet.access$000(JvmAttributeGaugeSet.this).getVmVendor(), JvmAttributeGaugeSet.access$000(JvmAttributeGaugeSet.this).getVmName(), JvmAttributeGaugeSet.access$000(JvmAttributeGaugeSet.this).getVmVersion(), JvmAttributeGaugeSet.access$000(JvmAttributeGaugeSet.this).getSpecVersion());
+                return String.format(Locale.US, "%s %s %s (%s)", JvmAttributeGaugeSet.access$000(this.this$0).getVmVendor(), JvmAttributeGaugeSet.access$000(this.this$0).getVmName(), JvmAttributeGaugeSet.access$000(this.this$0).getVmVersion(), JvmAttributeGaugeSet.access$000(this.this$0).getSpecVersion());
             }
         });
-        hashMap.put("uptime", new Gauge<Long>() {
+        hashMap.put("uptime", new Gauge<Long>(this) {
+            public final JvmAttributeGaugeSet this$0;
+            
             public Long getValue() {
-                return JvmAttributeGaugeSet.access$000(JvmAttributeGaugeSet.this).getUptime();
+                return JvmAttributeGaugeSet.access$000(this.this$0).getUptime();
+            }
+            
+            public /* bridge */ Object getValue() {
+                return this.getValue();
             }
         });
         return (Map<String, Metric>)Collections.unmodifiableMap((Map<?, ?>)hashMap);

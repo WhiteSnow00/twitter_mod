@@ -6,8 +6,8 @@ package com.twitter.app.profiles.di.view;
 
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 
-@r4j
+@d5j
 public interface ProfileSheetViewObjectGraph extends ViewObjectGraph
 {
-    xdl b();
+    lel b();
 }

@@ -2,21 +2,29 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class rj8<A, Res> extends kp1<A, Res>
+public final class rj8
 {
-    public rj8(final Class<Res> clazz) {
-        super((Class)clazz, (String)null);
+    public static final rj8 f;
+    public final gah a;
+    public final hc4 b;
+    public final wsh c;
+    public final wsh d;
+    public final wsh e;
+    
+    static {
+        f = new rj8();
     }
     
-    public rj8(final Class<Res> clazz, final String s) {
-        super((Class)clazz, s);
+    public rj8() {
+        final gah a = new gah();
+        this.a = a;
+        final hc4 b = new hc4();
+        this.b = b;
+        this.c = new wsh("/com/google/i18n/phonenumbers/data/PhoneNumberMetadataProto");
+        new dby((eah)b, a, (u9h)new le6());
+        this.d = new wsh("/com/google/i18n/phonenumbers/data/ShortNumberMetadataProto");
+        final dby dby = new dby((eah)b, a, (u9h)new fkg((fkg$a)new dkg()));
+        this.e = new wsh("/com/google/i18n/phonenumbers/data/PhoneNumberAlternateFormatsProto");
+        final dby dby2 = new dby((eah)b, a, (u9h)new fkg((fkg$a)new ekg()));
     }
-    
-    public final qrc f(final A a) {
-        final rbv rbv = new rbv();
-        this.i((qrc.a)rbv, a);
-        return ((qrc.a)rbv).k();
-    }
-    
-    public abstract void i(final qrc.a p0, final A p1);
 }

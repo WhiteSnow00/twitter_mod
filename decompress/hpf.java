@@ -1,49 +1,56 @@
-import java.io.IOException;
-import java.util.Objects;
+import android.view.View;
+import java.util.List;
+import android.view.ViewStub;
+import android.view.ViewGroup;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hpf
+public final class hpf implements gra
 {
-    public static final alp<hpf> b;
-    public final String a;
+    public final dtf a;
+    public final jzw b;
+    public final o69 c;
+    public final iqf d;
+    public final apf e;
     
-    static {
-        hpf.b = new b();
+    public hpf(final dtf a, final jzw b, final o69 c, final iqf d, final apf e) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
     }
     
-    public hpf(final hpf$a hpf$a) {
-        this.a = hpf$a.a;
-    }
-    
-    @Override
-    public final boolean equals(final Object o) {
-        return this == o || (o != null && hpf.class == o.getClass() && Objects.equals(this.a, ((hpf)o).a));
-    }
-    
-    @Override
-    public final int hashCode() {
-        return Objects.hash(this.a);
-    }
-    
-    public static final class b extends js2<hpf, hpf$a>
-    {
-        public b() {
-            super(0);
+    public final Object a(final Object o) {
+        final dtf a = this.a;
+        final jzw b = this.b;
+        final o69 c = this.c;
+        final iqf d = this.d;
+        final apf e = this.e;
+        final ViewGroup viewGroup = (ViewGroup)o;
+        e0e.f((Object)a, "$chromeFeatures");
+        e0e.f((Object)b, "$videoDockController");
+        e0e.f((Object)c, "$dockEventDispatcher");
+        e0e.f((Object)d, "$stateCoordinator");
+        e0e.f((Object)e, "$accessibilityUtils");
+        e0e.f((Object)viewGroup, "viewGroup");
+        final ojf h = ojf.H();
+        h.p((Object)new n3g(viewGroup));
+        if (ita.b().b("live_event_multi_video_auto_advance_dock_enabled", false)) {
+            h.p((Object)new axf(b).f(viewGroup));
+            final View viewById = ((View)viewGroup).findViewById(2131429832);
+            e0e.e((Object)viewById, "viewGroup.findViewById(R\u2026event_video_auto_advance)");
+            final zpf zpf = new zpf((ViewStub)viewById);
+            final long h2 = ita.b().h("live_event_multi_video_auto_advance_transition_duration_seconds", 5L);
+            final bxo j = iqs.j();
+            e0e.e((Object)j, "mainThread()");
+            h.p((Object)new xpf(zpf, c, new rpf(a, d), new fqf(h2, j, (gqf)zpf, e), b, new wyw((bn9)bn9.a)));
         }
-        
-        public final void f(final flp flp, final Object o) throws IOException {
-            flp.G(((hpf)o).a);
+        else {
+            h.p((Object)new j69(b));
         }
-        
-        public final h4j g() {
-            return (h4j)new hpf$a();
-        }
-        
-        public final void h(final elp elp, final h4j h4j, final int n) throws IOException, ClassNotFoundException {
-            ((hpf$a)h4j).a = elp.I();
-        }
+        return new ha4((List)((z4j)h).e());
     }
 }

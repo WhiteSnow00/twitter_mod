@@ -2,10 +2,29 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class f8l implements ud2
+public final class f8l
 {
-    public final boolean a(final sv1 sv1) {
-        zzd.f((Object)sv1, "event");
-        return zzd.a((Object)"profile", or4.I1(sv1.u()));
+    public static final a Companion;
+    public int a;
+    public int b;
+    public boolean c;
+    public dsb d;
+    public qgv e;
+    public boolean f;
+    public boolean g;
+    public boolean h;
+    public dwg i;
+    
+    static {
+        Companion = new a();
+    }
+    
+    public f8l() {
+        this.d = new dsb(6);
+        this.h = (ma7.A() ^ true);
+    }
+    
+    public static final class a
+    {
     }
 }

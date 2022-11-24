@@ -1,171 +1,147 @@
 import java.util.Objects;
+import java.io.IOException;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class enl
+public final class enl extends iy1
 {
-    public static final a Companion;
-    public final uiw a;
-    public y0k b;
-    public g0r c;
-    public g0r d;
-    public g0r e;
-    public g0r f;
-    
-    static {
-        Companion = new a();
+    public enl(final tat tat, final long n, final long n2) {
+        super((iy1$d)new iy1$b(), (iy1$f)new a(tat), n, n + 1L, 0L, n2, 188L, 1000);
     }
     
-    public enl(final uiw a) {
-        czd.f((Object)a, "tracer");
-        this.a = a;
+    public static int g(final byte[] array, final int n) {
+        return (array[n + 3] & 0xFF) | ((array[n] & 0xFF) << 24 | (array[n + 1] & 0xFF) << 16 | (array[n + 2] & 0xFF) << 8);
     }
     
-    public static final enl a() {
-        return enl.Companion.a();
-    }
-    
-    public final void b() {
-        final y0k c = uiw.c(this.a, "pull-to-refresh-home", (vvt$b)null, 2, 30);
-        this.b = c;
-        this.c = (g0r)uiw.a(this.a, "network-request", c);
-        this.d = (g0r)uiw.a(this.a, "process-response", this.b);
-        this.e = (g0r)uiw.a(this.a, "hydration", this.b);
-        this.f = (g0r)uiw.a(this.a, "rendering", this.b);
-    }
-    
-    public final void c(final int n) {
-        monitorenter(this);
-        Label_0244: {
-            Label_0239: {
-                Label_0207: {
-                    Label_0190: {
-                        Label_0173: {
-                            Label_0156: {
-                                Label_0139: {
-                                    Label_0122: {
-                                        Label_0105: {
-                                            try {
-                                                da8.m(n, "event");
-                                                if (n == 0) {
-                                                    throw null;
-                                                }
-                                                switch (n - 1) {
-                                                    default: {
-                                                        break Label_0239;
-                                                    }
-                                                    case 8: {
-                                                        this.d(oir.H0);
-                                                        break Label_0239;
-                                                    }
-                                                    case 7: {
-                                                        break;
-                                                    }
-                                                    case 6: {
-                                                        break Label_0105;
-                                                    }
-                                                    case 5: {
-                                                        break Label_0122;
-                                                    }
-                                                    case 4: {
-                                                        break Label_0139;
-                                                    }
-                                                    case 3: {
-                                                        break Label_0156;
-                                                    }
-                                                    case 2: {
-                                                        break Label_0173;
-                                                    }
-                                                    case 1: {
-                                                        break Label_0190;
-                                                    }
-                                                    case 0: {
-                                                        break Label_0207;
-                                                    }
-                                                }
-                                            }
-                                            finally {
-                                                break Label_0244;
-                                            }
-                                            final g0r f = this.f;
-                                            if (f != null) {
-                                                f.stop();
-                                            }
-                                            this.d(oir.F0);
-                                            break Label_0239;
-                                        }
-                                        final g0r f2 = this.f;
-                                        if (f2 != null) {
-                                            f2.start();
-                                        }
-                                        break Label_0239;
-                                    }
-                                    final g0r e = this.e;
-                                    if (e != null) {
-                                        e.stop();
-                                    }
-                                    break Label_0239;
-                                }
-                                final g0r e2 = this.e;
-                                if (e2 != null) {
-                                    e2.start();
-                                }
-                                break Label_0239;
-                            }
-                            final g0r d = this.d;
-                            if (d != null) {
-                                d.stop();
-                            }
-                            break Label_0239;
-                        }
-                        final g0r d2 = this.d;
-                        if (d2 != null) {
-                            d2.start();
-                        }
-                        break Label_0239;
-                    }
-                    final g0r c = this.c;
-                    if (c != null) {
-                        c.stop();
-                    }
-                    break Label_0239;
-                }
-                this.b();
-                final y0k b = this.b;
-                if (b != null) {
-                    b.start();
-                }
-                final g0r c2 = this.c;
-                if (c2 != null) {
-                    c2.start();
-                }
-            }
-            monitorexit(this);
-            return;
-        }
-        monitorexit(this);
-    }
-    
-    public final void d(final oir oir) {
-        synchronized (this) {
-            final y0k b = this.b;
-            if (b != null) {
-                ((z0k)b.a).U(oir);
-            }
-            this.b = null;
-            this.c = null;
-            this.d = null;
-            this.f = null;
-        }
-    }
-    
-    public static final class a
+    public static final class a implements iy1$f
     {
-        public final enl a() {
-            Objects.requireNonNull(tmc.Companion);
-            return ((tmc)nfw.Companion.a().c((Class)tmc.class)).z0();
+        public final tat a;
+        public final gxj b;
+        
+        public a(final tat a) {
+            this.a = a;
+            this.b = new gxj();
+        }
+        
+        public final iy1$e a(final roa roa, final long n) throws IOException {
+            final long position = roa.getPosition();
+            final int n2 = (int)Math.min(20000L, roa.getLength() - position);
+            this.b.A(n2);
+            roa.n(this.b.a, 0, n2);
+            final gxj b = this.b;
+            int b2 = -1;
+            long n3 = -9223372036854775807L;
+            int n4 = -1;
+            iy1$e iy1$e;
+            while (true) {
+                final int c = b.c;
+                final int b3 = b.b;
+                if (c - b3 >= 4) {
+                    if (enl.g(b.a, b3) != 442) {
+                        b.E(1);
+                    }
+                    else {
+                        b.E(4);
+                        final long c2 = gnl.c(b);
+                        int b4 = n4;
+                        long b5 = n3;
+                        if (c2 != -9223372036854775807L) {
+                            b5 = this.a.b(c2);
+                            if (b5 > n) {
+                                if (n3 == -9223372036854775807L) {
+                                    iy1$e = iy1$e.a(b5, position);
+                                    break;
+                                }
+                                iy1$e = iy1$e.b(position + n4);
+                                break;
+                            }
+                            else {
+                                if (100000L + b5 > n) {
+                                    iy1$e = iy1$e.b(position + b.b);
+                                    break;
+                                }
+                                b4 = b.b;
+                            }
+                        }
+                        final int c3 = b.c;
+                        Label_0495: {
+                            if (c3 - b.b < 10) {
+                                b.D(c3);
+                            }
+                            else {
+                                b.E(9);
+                                final int n5 = b.t() & 0x7;
+                                if (b.c - b.b < n5) {
+                                    b.D(c3);
+                                }
+                                else {
+                                    b.E(n5);
+                                    final int c4 = b.c;
+                                    final int b6 = b.b;
+                                    if (c4 - b6 < 4) {
+                                        b.D(c3);
+                                    }
+                                    else {
+                                        if (enl.g(b.a, b6) == 443) {
+                                            b.E(4);
+                                            final int y = b.y();
+                                            if (b.c - b.b < y) {
+                                                b.D(c3);
+                                                break Label_0495;
+                                            }
+                                            b.E(y);
+                                        }
+                                        while (true) {
+                                            final int c5 = b.c;
+                                            final int b7 = b.b;
+                                            if (c5 - b7 < 4) {
+                                                break;
+                                            }
+                                            final int g = enl.g(b.a, b7);
+                                            if (g == 442) {
+                                                break;
+                                            }
+                                            if (g == 441) {
+                                                break;
+                                            }
+                                            if (g >>> 8 != 1) {
+                                                break;
+                                            }
+                                            b.E(4);
+                                            if (b.c - b.b < 2) {
+                                                b.D(c3);
+                                                break;
+                                            }
+                                            b.D(Math.min(b.c, b.b + b.y()));
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        b2 = b.b;
+                        n4 = b4;
+                        n3 = b5;
+                    }
+                }
+                else {
+                    if (n3 != -9223372036854775807L) {
+                        iy1$e = iy1$e.c(n3, position + b2);
+                        break;
+                    }
+                    iy1$e = iy1$e.d;
+                    break;
+                }
+            }
+            return iy1$e;
+        }
+        
+        public final void b() {
+            final gxj b = this.b;
+            final byte[] f = rnw.f;
+            Objects.requireNonNull(b);
+            b.B(f, f.length);
         }
     }
 }

@@ -1,10 +1,18 @@
-import kotlin.Metadata;
+import android.graphics.drawable.Drawable;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-@Metadata(bv = {}, d1 = { "\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\u00020\u0001B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0004" }, d2 = { "Lnop;", "Lrnd;", "<init>", "()V", "feature.tfa.settings.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
-public final class nop extends rnd
+public interface nop extends ve9
 {
+    void a(final float p0, final boolean p1);
+    
+    void b();
+    
+    void d(final Drawable p0, final float p1, final boolean p2);
+    
+    void e();
+    
+    void f(final Drawable p0);
 }

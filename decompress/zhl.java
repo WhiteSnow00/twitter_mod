@@ -2,7 +2,12 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface zhl
+public final class zhl
 {
-    void a();
+    public static final zhl a;
+    public static final float b;
+    
+    static {
+        b = 4;
+    }
 }

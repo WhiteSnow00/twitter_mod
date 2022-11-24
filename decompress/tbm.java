@@ -1,29 +1,29 @@
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class tbm
+public final class tbm extends tvs implements cuw
 {
-    public final sog<anm<?, ?>, anm<?, ?>> a;
-    public final Map<fas, nnl<anm<?, ?>>> b;
+    public final sbm q;
     
-    public tbm(final sog<anm<?, ?>, anm<?, ?>> a) {
-        czd.f((Object)a, "dataSource");
-        this.a = a;
-        this.b = new LinkedHashMap();
+    public tbm(final a a) {
+        super((tvs.a)a, 24);
+        final sbm p = a.p;
+        vmw.g((Object)p);
+        this.q = p;
     }
     
-    public final nnl<anm<?, ?>> a(final String s) {
-        final LinkedHashMap b = this.b;
-        final fas fas = new fas(s);
-        Object value;
-        if ((value = b.get(fas)) == null) {
-            value = new nnl();
-            b.put(fas, value);
+    public static final class a extends tvs.a<tbm, a>
+    {
+        public sbm p;
+        
+        public final Object i() {
+            return new tbm(this);
         }
-        return (nnl<anm<?, ?>>)value;
+        
+        @Override
+        public final boolean k() {
+            return super.k() && this.p != null;
+        }
     }
 }

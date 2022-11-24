@@ -1,35 +1,23 @@
-import com.twitter.util.user.UserIdentifier;
-import android.content.Context;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class c6c extends hpv
+public final class c6c implements vrd
 {
-    public final g7c E1;
+    public static final c6c.c6c$b Companion;
+    public static final k5j<c6c> e;
+    public final String b;
+    public final String c;
+    public final String d;
     
-    public c6c(final Context context, final UserIdentifier userIdentifier, final int n, final yov yov, final String s, final pqv pqv, final vav vav, final g7c e1) {
-        super(context, userIdentifier, userIdentifier, 26, n, yov, s, pqv, vav);
-        this.E1 = e1;
+    static {
+        Companion = new c6c.c6c$b();
+        c6c.e = new c6c$a();
     }
     
-    public final g7c r0() {
-        return this.E1;
-    }
-    
-    @Override
-    public final boolean y0() {
-        return false;
-    }
-    
-    @Override
-    public final boolean z0() {
-        final int l1 = super.l1;
-        boolean b = true;
-        if (l1 != 1) {
-            b = (l1 == 2 && b);
-        }
-        return b;
+    public c6c(final String b, final String c, final String d) {
+        this.b = b;
+        this.c = c;
+        this.d = d;
     }
 }

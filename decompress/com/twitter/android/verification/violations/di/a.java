@@ -6,30 +6,30 @@ package com.twitter.android.verification.violations.di;
 
 import android.view.View;
 
-public final class a extends gue implements rtb<View, okx>
+public final class a extends pue implements stb<View, xlx>
 {
-    public final /* synthetic */ de6 C0;
-    public final /* synthetic */ de6 D0;
-    public final /* synthetic */ tqm E0;
-    public final /* synthetic */ nw8 F0;
-    public final /* synthetic */ w7t G0;
-    public final /* synthetic */ ibm H0;
-    public final /* synthetic */ z7x I0;
+    public final pe6 F0;
+    public final pe6 G0;
+    public final zrm H0;
+    public final ex8 I0;
+    public final i9t J0;
+    public final kcm K0;
+    public final k9x L0;
     
-    public a(final de6 c0, final de6 d0, final tqm e0, final nw8 f0, final w7t g0, final ibm h0, final z7x i0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
+    public a(final pe6 f0, final pe6 g0, final zrm h0, final ex8 i0, final i9t j0, final kcm k0, final k9x l0) {
         this.F0 = f0;
         this.G0 = g0;
         this.H0 = h0;
         this.I0 = i0;
+        this.J0 = j0;
+        this.K0 = k0;
+        this.L0 = l0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
         final View view = (View)o;
-        zzd.f((Object)view, "view");
-        return new yqw(view, this.C0, this.D0, this.E0, this.F0, this.G0, this.H0, this.I0);
+        e0e.f((Object)view, "view");
+        return new hsw(view, this.F0, this.G0, this.H0, this.I0, this.J0, this.K0, this.L0);
     }
 }

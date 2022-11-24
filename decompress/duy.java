@@ -1,107 +1,62 @@
-import java.util.Arrays;
+import android.os.Bundle;
+import java.util.Objects;
+import android.app.Activity;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class duy
+public final class duy extends uwy
 {
-    public final int a;
-    public int b;
-    public Object c;
+    public final int J0;
+    public final Object K0;
+    public final Object L0;
     
-    public duy() {
-        this.a = 2;
-        synchronized (ws3.a) {
-            final ks0 b = ws3.b;
-            final boolean empty = b.isEmpty();
-            final char[] array = null;
-            Object removeLast;
-            if (empty) {
-                removeLast = null;
+    public duy(final fzy k0, final Activity l0) {
+        this.J0 = 2;
+        this.K0 = k0;
+        this.L0 = l0;
+        super(k0.F0, true);
+    }
+    
+    public duy(final jzy k0, final bmy l0, final int j0) {
+        this.J0 = j0;
+        this.K0 = k0;
+        this.L0 = l0;
+        super(k0, true);
+    }
+    
+    @Override
+    public final void a() {
+        switch (this.J0) {
+            default: {
+                final npy f = ((fzy)this.K0).F0.f;
+                Objects.requireNonNull(f, "null reference");
+                f.onActivityDestroyed((l3d)new p5j(this.L0), super.G0);
+                return;
             }
-            else {
-                removeLast = b.removeLast();
+            case 1: {
+                final npy f2 = ((jzy)this.K0).f;
+                Objects.requireNonNull(f2, "null reference");
+                f2.registerOnMeasurementEventListener((oqy)this.L0);
+                return;
             }
-            final char[] array2 = (char[])removeLast;
-            char[] array3 = array;
-            if (array2 != null) {
-                ws3.c -= array2.length;
-                array3 = array2;
-            }
-            monitorexit(ws3.a);
-            char[] array4;
-            if ((array4 = array3) == null) {
-                array4 = new char[128];
-            }
-            this(array4);
-        }
-    }
-    
-    public duy(final int b, final String c) {
-        this.a = 0;
-        this.b = b;
-        this.c = c;
-    }
-    
-    public duy(final char[] c) {
-        this.a = 2;
-        this.c = c;
-    }
-    
-    public final void a(final long n) {
-        this.b(String.valueOf(n));
-    }
-    
-    public final void b(final String s) {
-        czd.f((Object)s, "string");
-        final int length = s.length();
-        this.c(length);
-        s.getChars(0, s.length(), (char[])this.c, this.b);
-        this.b += length;
-    }
-    
-    public final void c(final int n) {
-        this.d(this.b, n);
-    }
-    
-    public final int d(final int n, int n2) {
-        final int n3 = n2 + n;
-        final Object c = this.c;
-        if (((char[])c).length <= n3) {
-            final char[] array = (char[])c;
-            final int n4 = n * 2;
-            if ((n2 = n3) < n4) {
-                n2 = n4;
-            }
-            final char[] copy = Arrays.copyOf(array, n2);
-            czd.e((Object)copy, "copyOf(this, newSize)");
-            this.c = copy;
-        }
-        return n;
-    }
-    
-    public final void e() {
-        final ws3 a = ws3.a;
-        final char[] array = (char[])this.c;
-        czd.f((Object)array, "array");
-        synchronized (a) {
-            final int c = ws3.c;
-            if (array.length + c < ws3.d) {
-                ws3.c = c + array.length;
-                ws3.b.addLast((Object)array);
+            case 0: {
+                final npy f3 = ((jzy)this.K0).f;
+                Objects.requireNonNull(f3, "null reference");
+                f3.getGmpAppId((aqy)this.L0);
             }
         }
     }
     
     @Override
-    public final String toString() {
-        switch (this.a) {
+    public final void b() {
+        switch (this.J0) {
             default: {
-                return super.toString();
+                return;
             }
-            case 2: {
-                return new String((char[])this.c, 0, this.b);
+            case 0: {
+                ((yny)this.L0).m(null);
             }
         }
     }

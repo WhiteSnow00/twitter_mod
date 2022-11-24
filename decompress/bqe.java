@@ -1,365 +1,212 @@
-import android.os.BaseBundle;
-import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import java.util.Collections;
-import androidx.fragment.app.p;
-import java.lang.reflect.Method;
-import com.google.android.play.core.internal.zzbx;
-import java.io.File;
-import java.io.IOException;
-import java.nio.ByteOrder;
-import java.nio.ByteBuffer;
-import android.util.Pair;
-import java.io.RandomAccessFile;
-import android.content.Context;
-import android.view.View;
-import com.twitter.rooms.model.PodcastEpisode;
-import com.twitter.rooms.subsystem.api.models.StationTrack$TrackData;
-import java.util.List;
-import android.view.KeyEvent;
-import java.util.Objects;
-import java.util.ArrayList;
-import android.graphics.Rect;
-import android.graphics.Path;
 import android.graphics.PointF;
+import java.util.List;
+import java.util.concurrent.ConcurrentMap;
+import java.util.Iterator;
+import java.util.Collection;
+import java.util.Collections;
+import android.os.IInterface;
+import android.os.IBinder;
+import android.os.Parcel;
+import java.util.Objects;
+import tv.periscope.android.api.service.payman.PaymanService;
+import j$.util.concurrent.ConcurrentHashMap;
+import java.util.HashMap;
+import java.util.ArrayList;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class bqe implements bjy, pyy, u16
+public final class bqe implements u80, kdm, dsy, g100, g3d
 {
-    public static final int[] C0;
-    public static final int[] D0;
+    public final int F0;
+    public Object G0;
     
-    public static PointF c(final PointF pointF, final PointF pointF2, final float n) {
-        final float x = pointF.x;
-        final float x2 = pointF2.x;
-        final double n2 = (x - x2) * n;
-        final float y = pointF.y;
-        final float y2 = pointF2.y;
-        return new PointF((float)(x2 + n2), (float)(y2 + (double)((y - y2) * n)));
+    public bqe(final int n) {
+        this.F0 = 11;
+        this.G0 = new ArrayList(n);
     }
     
-    public static final int d(final Comparable comparable, final Comparable comparable2) {
-        if (comparable == comparable2) {
-            return 0;
+    public bqe(final int f0, final j98 j98) {
+        this.F0 = f0;
+        if (f0 != 12) {
+            this.G0 = new HashMap();
+            return;
         }
-        if (comparable == null) {
-            return -1;
-        }
-        if (comparable2 == null) {
-            return 1;
-        }
-        return comparable.compareTo(comparable2);
+        this.G0 = new ConcurrentHashMap();
     }
     
-    public static final int e(final Object o, final Object o2, final rtb... array) {
-        if (array.length > 0) {
-            return f(o, o2, array);
-        }
-        throw new IllegalArgumentException("Failed requirement.".toString());
+    public bqe(final igt g0) {
+        this.F0 = 9;
+        e0e.f((Object)g0, "toaster");
+        this.G0 = g0;
     }
     
-    public static final int f(final Object o, final Object o2, final rtb[] array) {
-        for (final rtb rtb : array) {
-            final int d = d((Comparable)rtb.invoke(o), (Comparable)rtb.invoke(o2));
-            if (d != 0) {
-                return d;
-            }
-        }
-        return 0;
+    public bqe(final Object g0, final int f0) {
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public static void g(final Path path, final Rect rect) {
-        h(path, rect, 6, 0.6f);
+    public bqe(final n2s g0) {
+        this.F0 = 7;
+        e0e.f((Object)g0, "swipeToLatestRepo");
+        this.G0 = g0;
     }
     
-    public static void h(final Path path, final Rect rect, int i, final float n) {
-        final ArrayList list = new ArrayList();
-        final float n2 = (float)Math.min(rect.width(), rect.height());
-        final float n3 = n2 / 2.0f;
-        final float n4 = n2 * n / 18.0f;
-        for (int j = 0; j < i; ++j) {
-            final double n5 = j * 360.0 / i;
-            final double n6 = rect.centerX();
-            final double n7 = n4 + n3;
-            list.add(new PointF((float)(Math.cos(Math.toRadians(n5)) * n7 + n6), (float)(Math.sin(Math.toRadians(n5)) * n7 + rect.centerY())));
-        }
-        path.rewind();
-        list.add(list.get(0));
-        list.add(list.get(1));
-        final PointF c = c(list.get(list.size() - 1), list.get(0), n);
-        path.moveTo(c.x, c.y);
-        i = 1;
-        while (i < list.size() - 1) {
-            final PointF pointF = list.get(i - 1);
-            final PointF pointF2 = list.get(i);
-            ++i;
-            final PointF pointF3 = list.get(i);
-            final PointF c2 = c(pointF, pointF2, n);
-            path.lineTo(c2.x, c2.y);
-            final PointF c3 = c(pointF3, pointF2, n);
-            final float x = pointF2.x;
-            final float y = pointF2.y;
-            path.cubicTo(x, y, x, y, c3.x, c3.y);
-        }
+    public bqe(final PaymanService g0) {
+        this.F0 = 13;
+        e0e.f((Object)g0, "paymanService");
+        this.G0 = g0;
     }
     
-    public static xm9 i() {
-        final int a = an9.a;
-        Objects.requireNonNull(bn9.Companion);
-        return ((bn9)((v4j)jr0.Companion.a()).B((Class)bn9.class)).Z();
+    public final /* bridge */ Object a() {
+        return new bjy(((zhz)this.G0).b());
     }
     
-    public static final f6j j(final glq glq, final h2d h2d) {
-        zzd.f((Object)glq, "<this>");
-        return (f6j)new f2d(glq, h2d);
+    public final void a() {
+        final x100 x100 = (x100)this.G0;
+        Objects.requireNonNull(x100);
+        x100.a("split-install-errors", (g100)new v4c((Object)x100));
     }
     
-    public static final long k(final KeyEvent keyEvent) {
-        return x3j.e(keyEvent.getKeyCode());
-    }
-    
-    public static final StationTrack$TrackData l(final List list, int n) {
-        zzd.f((Object)list, "<this>");
-        final int size = list.size();
-        final int n2 = 0;
-        int n3;
-        if (n == size - 1) {
-            n3 = 0;
-        }
-        else {
-            n3 = n + 1;
-        }
-        final StationTrack$TrackData stationTrack$TrackData = null;
-        final String s = null;
-        StationTrack$TrackData stationTrack$TrackData2 = stationTrack$TrackData;
-        if (n3 != n) {
-            final hvt hvt = list.get(n3);
-            ++n3;
-            zzd.f((Object)hvt, "<this>");
-            final Object j = fk7.J(hvt);
-            if (j instanceof PodcastEpisode) {
-                stationTrack$TrackData2 = new StationTrack$TrackData(((PodcastEpisode)j).getShow().getArtUrl(), yvt.C0, n3);
-            }
-            else {
-                stationTrack$TrackData2 = stationTrack$TrackData;
-                if (j instanceof v21) {
-                    final v21 v21 = (v21)j;
-                    zzd.f((Object)v21, "<this>");
-                    final xl2 b = xl2.b(v21.i);
-                    zzd.e((Object)b, "safeValueOf(this.state)");
-                    n = n2;
-                    Label_0175: {
-                        if (v21.J) {
-                            if (b != xl2.F0) {
-                                n = n2;
-                                if (b != xl2.G0) {
-                                    break Label_0175;
-                                }
-                            }
-                            n = 1;
-                        }
-                    }
-                    yvt yvt;
-                    if (n != 0) {
-                        yvt = yvt.E0;
-                    }
-                    else {
-                        yvt = yvt.D0;
-                    }
-                    final w21 o = v21.O;
-                    String b2 = s;
-                    if (o != null) {
-                        b2 = o.b();
-                    }
-                    stationTrack$TrackData2 = new StationTrack$TrackData(b2, yvt, n3);
+    public final void accept(Object obtain, final Object o) {
+        switch (this.F0) {
+            case 3: {
+                final wty wty = (wty)obtain;
+                final rcs rcs = (rcs)o;
+                final u7z u7z = (u7z)((gm1)wty).D();
+                final r9y r9y = new r9y(null, null);
+                final kuz kuz = new kuz(rcs);
+                obtain = Parcel.obtain();
+                ((Parcel)obtain).writeInterfaceToken(u7z.b);
+                final int a = xoy.a;
+                ((Parcel)obtain).writeInt(1);
+                r9y.writeToParcel((Parcel)obtain, 0);
+                ((Parcel)obtain).writeStrongBinder((IBinder)kuz);
+                final Parcel obtain2 = Parcel.obtain();
+                try {
+                    u7z.a.transact(1, (Parcel)obtain, obtain2, 0);
+                    obtain2.readException();
+                    return;
                 }
+                finally {
+                    ((Parcel)obtain).recycle();
+                    obtain2.recycle();
+                }
+                break;
             }
         }
-        return stationTrack$TrackData2;
+        final a7y a7y = (a7y)this.G0;
+        final b7y b7y = (b7y)obtain;
+        final rcs rcs2 = (rcs)o;
+        Objects.requireNonNull(a7y);
+        final z6y z6y = new z6y(rcs2);
+        final t6y t6y = (t6y)((gm1)b7y).D();
+        final String k = a7y.k;
+        final Parcel s = t6y.s();
+        n7y.c(s, (IInterface)z6y);
+        s.writeString(k);
+        t6y.x(2, s);
     }
     
-    public static q6 m() {
-        final int a = r6.a;
-        Objects.requireNonNull(t6.Companion);
-        return ((t6)((v4j)jr0.Companion.a()).B((Class)t6.class)).Z3();
+    public final void b(final Object o) {
+        ((ArrayList)this.G0).add(o);
     }
     
-    public static final int n(final KeyEvent keyEvent) {
-        final int action = keyEvent.getAction();
-        int n = 1;
-        if (action != 0) {
-            if (action != 1) {
-                Objects.requireNonNull(aqe.Companion);
-                n = 0;
+    public final void c(Object o) {
+        if (o == null) {
+            return;
+        }
+        if (o instanceof Object[]) {
+            final Object[] array = (Object[])o;
+            if (array.length > 0) {
+                o = this.G0;
+                ((ArrayList)o).ensureCapacity(((ArrayList)o).size() + array.length);
+                Collections.addAll((Collection<? super Object>)this.G0, array);
             }
-            else {
-                Objects.requireNonNull(aqe.Companion);
+        }
+        else if (o instanceof Collection) {
+            ((ArrayList)this.G0).addAll((Collection)o);
+        }
+        else if (o instanceof Iterable) {
+            final Iterator iterator = ((Iterable)o).iterator();
+            while (iterator.hasNext()) {
+                o = iterator.next();
+                ((ArrayList)this.G0).add(o);
             }
         }
         else {
-            Objects.requireNonNull(aqe.Companion);
-            n = 2;
+            if (!(o instanceof Iterator)) {
+                final StringBuilder f = ehk.f("Don't know how to spread ");
+                f.append(o.getClass());
+                throw new UnsupportedOperationException(f.toString());
+            }
+            final Iterator iterator2 = (Iterator)o;
+            while (iterator2.hasNext()) {
+                ((ArrayList)this.G0).add(iterator2.next());
+            }
         }
-        return n;
     }
     
-    public static boolean o() {
-        return dta.c().b("af_ui_chirp_enabled", false);
-    }
-    
-    public static final boolean p(final KeyEvent keyEvent) {
-        zzd.f((Object)keyEvent, "$this$isCtrlPressed");
-        return keyEvent.isCtrlPressed();
-    }
-    
-    public static final boolean q() {
-        return dta.b().b("vibe_composer_enabled", false);
-    }
-    
-    public static final boolean r() {
-        return dta.b().b("vibe_tweet_context_enabled", false);
-    }
-    
-    public static final void s(final View view, final otb otb) {
-        zzd.f((Object)view, "<this>");
-        zzd.f((Object)otb, "evaluateStringRes");
-        p5x.z(view, (wf)new be4(otb));
-    }
-    
-    public static boolean t(final Context context, final float n) {
-        return (int)n >= context.getResources().getDimensionPixelSize(2131165839);
-    }
-    
-    public static Context w(final Context context) {
-        final Context applicationContext = context.getApplicationContext();
-        if (applicationContext != null) {
-            return applicationContext;
+    public final float d(final Object o, final String s) {
+        if (!((HashMap)this.G0).containsKey(o)) {
+            return Float.NaN;
         }
-        return context;
-    }
-    
-    public static Pair x(final RandomAccessFile randomAccessFile, int i) throws IOException {
-        final long length = randomAccessFile.length();
-        if (length < 22L) {
-            return null;
-        }
-        final ByteBuffer allocate = ByteBuffer.allocate((int)Math.min(i, -22L + length) + 22);
-        allocate.order(ByteOrder.LITTLE_ENDIAN);
-        final long n = length - allocate.capacity();
-        randomAccessFile.seek(n);
-        randomAccessFile.readFully(allocate.array(), allocate.arrayOffset(), allocate.capacity());
-        y(allocate);
-        i = allocate.capacity();
-        Label_0168: {
-            if (i >= 22) {
-                final int n2 = i - 22;
-                int min;
-                int n3;
-                for (min = Math.min(n2, 65535), i = 0; i < min; ++i) {
-                    n3 = n2 - i;
-                    if (allocate.getInt(n3) == 101010256 && (char)allocate.getShort(n3 + 20) == i) {
-                        i = n3;
-                        break Label_0168;
-                    }
+        final HashMap hashMap = ((HashMap)this.G0).get(o);
+        if (hashMap != null) {
+            if (hashMap.containsKey(s)) {
+                final float[] array = (float[])hashMap.get(s);
+                if (array == null) {
+                    return Float.NaN;
+                }
+                if (array.length > 0) {
+                    return array[0];
                 }
             }
-            i = -1;
         }
-        if (i == -1) {
-            return null;
-        }
-        allocate.position(i);
-        final ByteBuffer slice = allocate.slice();
-        slice.order(ByteOrder.LITTLE_ENDIAN);
-        return Pair.create((Object)slice, (Object)(n + i));
+        return Float.NaN;
     }
     
-    public static void y(final ByteBuffer byteBuffer) {
-        if (byteBuffer.order() == ByteOrder.LITTLE_ENDIAN) {
-            return;
+    public final pag e(final String s) {
+        otr otr;
+        if ((otr = (otr)((ConcurrentMap)this.G0).get(s)) == null) {
+            otr = new otr(s);
+            final otr otr2 = ((ConcurrentMap)this.G0).putIfAbsent(s, otr);
+            if (otr2 != null) {
+                otr = otr2;
+            }
         }
-        throw new IllegalArgumentException("ByteBuffer byte order must be little endian");
+        return (pag)otr;
     }
     
-    public Object a() {
-        final azy c = fzy.c;
-        return fsz.D0.b().C();
+    public final boolean f() {
+        final int size = ((List)this.G0).size();
+        boolean b = false;
+        if (size == 1) {
+            b = b;
+            if (((List)this.G0).get(0).c()) {
+                b = true;
+            }
+        }
+        return b;
     }
     
-    public boolean b(Object class1, final File file, final File file2) {
-        class1 = class1.getClass();
-        final Method h = k3j.H((Class)class1, "optimizedPathFor", new Class[] { File.class, File.class });
-        try {
-            return new File(String.class.cast(h.invoke(null, file, file2))).exists();
+    public final wm1 g() {
+        if (((List)this.G0).get(0).c()) {
+            return (wm1)new kpk((List<zre<PointF>>)this.G0);
         }
-        catch (final Exception ex) {
-            throw new zzbx(String.format("Failed to invoke static method %s on type %s", "optimizedPathFor", class1), ex);
-        }
+        return (wm1)new j0k((List)this.G0);
     }
     
-    public Object n0(final o16 o16) {
-        final rrm rrm = (rrm)o16;
-        return new yjz((vmz)rrm.f((Class)vmz.class), (yfa)rrm.f((Class)yfa.class));
+    public final List h() {
+        return (List)this.G0;
     }
     
-    public void u(final String b, final String b2, final String s, final p p4) {
-        zzd.f((Object)b, "title");
-        zzd.f((Object)b2, "summary");
-        zzd.f((Object)s, "eventPage");
-        zzd.f((Object)p4, "fragmentManager");
-        final xur$a xur$a = new xur$a();
-        final qur$a qur$a = new qur$a();
-        qur$a.b = b2;
-        qur$a.c = 2131954550;
-        xur$a.i = Collections.singletonList(((h4j)qur$a).e());
-        xur$a.h = nca.Companion.e(s, "", "disabled_engagement_education_sheet", "", "impression");
-        ((u92$a)xur$a).b = b;
-        final int a = w4j.a;
-        ((u92$a)xur$a).f = true;
-        final xur$b j = xur.j;
-        final Bundle w = zi.w("twitter:id", 500);
-        yvj.k(w, "serializer_fragment_arg", ((h4j)xur$a).e(), (alp)j);
-        if (((BaseBundle)w).containsKey("twitter:id")) {
-            final our our = new our();
-            ((Fragment)our).N1(w);
-            ((cl1)our).e2(p4, "summary_sheet_dialog");
-            return;
-        }
-        throw new Fragment.InstantiationException("Missing fragment id", null);
+    public final int i() {
+        return ((ArrayList)this.G0).size();
     }
     
-    public void v(final gob gob) {
-        zzd.f((Object)gob, "activity");
-        final qur$a qur$a = new qur$a();
-        qur$a.a = ((Context)gob).getString(2131957364);
-        qur$a.b = ((Context)gob).getString(2131957359);
-        final qur qur = (qur)((h4j)qur$a).e();
-        final qur$a qur$a2 = new qur$a();
-        qur$a2.a = ((Context)gob).getString(2131957365);
-        qur$a2.b = ((Context)gob).getString(2131957360);
-        final qur qur2 = (qur)((h4j)qur$a2).e();
-        final qur$a qur$a3 = new qur$a();
-        qur$a3.a = ((Context)gob).getString(2131957366);
-        qur$a3.b = ((Context)gob).getString(2131957361);
-        final qur qur3 = (qur)((h4j)qur$a3).e();
-        final xur$a xur$a = new xur$a();
-        xur$a.i = tdy.v0((Object[])new qur[] { qur, qur2, qur3 });
-        ((u92$a)xur$a).f = false;
-        final int a = w4j.a;
-        ((u92$a)xur$a).b = ((Context)gob).getString(2131957363);
-        final fw8 fw8 = new fw8(gob.Q(), "summary_sheet_dialog");
-        final xur$b j = xur.j;
-        final Bundle w = zi.w("twitter:id", 500);
-        yvj.k(w, "serializer_fragment_arg", ((h4j)xur$a).e(), (alp)j);
-        if (((BaseBundle)w).containsKey("twitter:id")) {
-            final our our = new our();
-            ((Fragment)our).N1(w);
-            fw8.a((cl1)our);
-            return;
-        }
-        throw new Fragment.InstantiationException("Missing fragment id", null);
+    public final Object[] j(final Object[] array) {
+        return ((ArrayList)this.G0).toArray(array);
     }
 }

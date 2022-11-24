@@ -8,20 +8,20 @@ import java.util.Map;
 import java.util.Set;
 import java.util.List;
 
-public final class e extends ste implements qsb<wpn, wpn>
+public final class e extends pue implements stb<mqn, mqn>
 {
-    public final List<zon> D0;
-    public final Set<uon> E0;
+    public final List<qpn> F0;
+    public final Set<lpn> G0;
     
-    public e(final List<zon> d0, final Set<uon> e0) {
-        this.D0 = d0;
-        this.E0 = e0;
+    public e(final List<qpn> f0, final Set<lpn> g0) {
+        this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final wpn wpn = (wpn)o;
-        czd.f((Object)wpn, "$this$setState");
-        return wpn.l(wpn, (gpn)null, (List)this.D0, (Integer)null, false, (Set)this.E0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
+        final mqn mqn = (mqn)o;
+        e0e.f((Object)mqn, "$this$setState");
+        return mqn.l(mqn, (xpn)null, (List)this.F0, (Integer)null, false, (Set)this.G0, (List)null, false, (Set)null, (Map)null, (String)null, (String)null, (String)null, (String)null, (String)null, (Long)null, false, 0, 262107);
     }
 }

@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNotificationAction extends fih<hpi>
+public class JsonNotificationAction extends tih<ypi>
 {
     @JsonField
     public String a;
@@ -19,25 +19,26 @@ public class JsonNotificationAction extends fih<hpi>
     @JsonField
     public String c;
     
+    @Override
     public final Object s() {
         Object o;
-        if (ikr.e((CharSequence)this.a)) {
-            i48.t("Notification action missing id");
+        if (flr.e((CharSequence)this.a)) {
+            mqb.o("Notification action missing id");
             o = null;
         }
         else {
-            final hpi.a a = new hpi.a();
-            final String a2 = this.a;
-            czd.f((Object)a2, "type");
-            Objects.requireNonNull(hpi.Companion);
+            final ypi$a ypi$a = new ypi$a();
+            final String a = this.a;
+            e0e.f((Object)a, "type");
+            Objects.requireNonNull(ypi.Companion);
             Integer n;
-            if ((n = hpi.k.get(a2)) == null) {
+            if ((n = ypi.k.get(a)) == null) {
                 n = 0;
             }
-            a.a = n.intValue();
-            a.b = this.b;
-            a.c = this.c;
-            o = a.j();
+            ypi$a.a = n.intValue();
+            ypi$a.b = this.b;
+            ypi$a.c = this.c;
+            o = ((z4j)ypi$a).j();
         }
         return o;
     }

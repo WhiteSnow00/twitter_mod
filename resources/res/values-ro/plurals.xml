@@ -308,8 +308,8 @@
         <item quantity="other">încă %d</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super-urmăritor</item>
-        <item quantity="other">Super-urmăritori</item>
+        <item quantity="one">Abonat</item>
+        <item quantity="other">Abonați</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s apreciere</item>
@@ -405,7 +405,7 @@
         <item quantity="other">Răspuns către ﻿%1$s și alte %2$d persoane﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Le răspunzi lui ﻿%1$s și altor %2$d﻿. Răspunsul tău va fi vizibil și altor Super-urmăritori.</item>
+        <item quantity="other">Le răspunzi utilizatorilor ﻿%1$s și altor %2$d﻿. Răspunsul tău va fi vizibil și altor Abonați.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Răspuns către ﻿%1$s și altor %2$d﻿ în ﻿%3$s﻿</item>
@@ -414,7 +414,7 @@
         <item quantity="other">Răspuns către ﻿%1$s %2$s și încă %3$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Le răspunzi lui ﻿%1$s %2$s și altor%3$d﻿. Răspunsul tău va fi vizibil și altor Super-urmăritori.</item>
+        <item quantity="other">Le răspunzi utilizatorilor ﻿%1$s %2$sși altor %3$d﻿. Răspunsul tău va fi vizibil și altor Abonați.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Răspuns către ﻿%1$s %2$s și altor %3$d﻿ în ﻿%4$s﻿</item>

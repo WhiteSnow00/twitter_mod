@@ -301,8 +301,8 @@
         <item quantity="other">अन्य %d</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">सुपर फॉलोअर</item>
-        <item quantity="other">सुपर फॉलोअर्स</item>
+        <item quantity="one">सदस्य</item>
+        <item quantity="other">सदस्य</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s पसंत करा</item>
@@ -341,7 +341,7 @@
         <item quantity="other">﻿%1$s आणि अन्य %2$d जणांना﻿ प्रत्युत्तर देत आहे</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s आणि अन्य %2$d ﻿ जणांना प्रत्युत्तर देत आहे. आपले प्रत्युत्तर अन्य सुपर फॉलोअर्सना देखील दिसेल.</item>
+        <item quantity="other">﻿%1$s आणि अन्य %2$d जणांना﻿ प्रत्युत्तर देत आहे. आपले प्रत्युत्तर अन्य सदस्यांना देखील दिसेल.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%3$s﻿ मध्ये ﻿%1$s आणि अन्य %2$dजणांना﻿ प्रत्युत्तर देत आहे</item>
@@ -350,7 +350,7 @@
         <item quantity="other">﻿%1$s %2$s आणि अन्य %3$d ﻿ जणांना प्रत्युत्तर देत आहे</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s %2$s आणि अन्य%3$d जणांना﻿ प्रत्युत्तर देत आहे. आपले प्रत्युत्तर अन्य सुपर फॉलोअर्सना देखील दिसेल.</item>
+        <item quantity="other">﻿%1$s %2$s आणि अन्य%3$d जणांना﻿ प्रत्युत्तर देत आहे. आपले प्रत्युत्तर अन्य सदस्यांना देखील दिसेल.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%4$s﻿ मध्ये ﻿%1$s %2$sआणि अन्य %3$d जणांना﻿ प्रत्युत्तर देत आहे</item>

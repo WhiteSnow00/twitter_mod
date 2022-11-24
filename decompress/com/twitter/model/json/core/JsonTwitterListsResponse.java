@@ -10,14 +10,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTwitterListsResponse extends fih<idv>
+public class JsonTwitterListsResponse extends tih<wdv>
 {
     @JsonField
     public String a;
     @JsonField
-    public List<scv> b;
+    public List<gdv> b;
     
+    @Override
     public final Object s() {
-        return new idv(gdd.g((List)this.b), this.a);
+        return new wdv(ged.g((List)this.b), this.a);
     }
 }

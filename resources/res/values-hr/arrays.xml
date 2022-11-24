@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Primat ćete obavijesti o novim tweetovima.</item>
-        <item>Primat ćete obavijesti samo o novim tweetovima super korisnika.</item>
+        <item>Primat ćete obavijesti o novim tweetovima za pretplatnike.</item>
         <item>Primat ćete obavijesti o novim tweetovima s videozapisima uživo.</item>
         <item>Primat ćete obavijesti o novim tweetovima u Prostorima.</item>
         <item>Više nećete primati obavijesti o novim tweetovima.</item>
     </array>
     <array name="account_notif_options">
         <item>tweetova</item>
-        <item>Samo tweetovi super korisnika</item>
+        <item>Tweetovi samo za pretplatnike</item>
         <item>Videoprijenos uživo</item>
         <item>Prostori</item>
         <item>Ništa</item>
     </array>
     <array name="account_notif_options_old">
         <item>Svi tweetovi</item>
-        <item>Samo tweetovi super korisnika</item>
+        <item>Tweetovi samo za pretplatnike</item>
         <item>Samo videozapis uživo</item>
         <item>Samo Prostori</item>
         <item>Isključeno</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Primajte obavijesti o svim tweetovima za taj račun.</item>
-        <item>Primat ćete obavijesti samo o tweetovima super korisnika.</item>
+        <item>Primajte obavijesti samo o tweetovima za pretplatnike.</item>
         <item>Obavijesti primajte samo za emitiranja uživo.</item>
         <item>Primajte obavijesti samo za Prostore.</item>
         <item>Isključite obavijesti o tweetovima za taj račun.</item>

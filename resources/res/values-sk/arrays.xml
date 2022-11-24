@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Budete dostávať notifikácie o nových Tweetoch.</item>
-        <item>Budete dostávať notifikácie o nových Tweetoch len pre supersledujúcich.</item>
+        <item>Budete dostávať notifikácie len o predplatiteľských Tweetoch.</item>
         <item>Budete dostávať notifikácie o nových Tweetoch s videom naživo.</item>
         <item>Budete dostávať notifikácie o nových Tweetoch s Priestormi.</item>
         <item>Nebudete už dostávať notifikácie o nových Tweetoch.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweety</item>
-        <item>Tweety len pre supersledujúcich</item>
+        <item>Len predplatiteľské Tweety</item>
         <item>Video naživo</item>
         <item>Priestory</item>
         <item>Žiadne</item>
     </array>
     <array name="account_notif_options_old">
         <item>Všetky Tweety</item>
-        <item>Iba Tweety pre supersledujúcich</item>
+        <item>Len predplatiteľské Tweety</item>
         <item>Iba videá naživo</item>
         <item>Iba Priestory</item>
         <item>Vypnúť</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Získavajte notifikácie o všetkých Tweetoch tohto účtu.</item>
-        <item>Dostávajte notifikácie len o Tweetoch pre supersledujúcich.</item>
+        <item>Dostávajte notifikácie len o predplatiteľských Tweetoch.</item>
         <item>Dostávajte notifikácie len o vysielaniach naživo.</item>
         <item>Dostávajte notifikácie iba o Priestoroch.</item>
         <item>Vypnite notifikácie o Tweetoch tohto účtu.</item>

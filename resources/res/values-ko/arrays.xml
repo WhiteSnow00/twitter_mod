@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>새 트윗 관련 알림을 받게 됩니다.</item>
-        <item>새 슈퍼 팔로워 전용 트윗에 대한 알림을 받게 됩니다.</item>
+        <item>새로운 구독자 전용 트윗이 게시되면 알림을 받게 됩니다.</item>
         <item>새 실시간 동영상 트윗에 대한 알림을 받게 됩니다.</item>
         <item>새 스페이스 트윗에 대한 알림을 받게 됩니다.</item>
         <item>새 트윗에 대한 알림을 더 이상 받지 않게 됩니다.</item>
     </array>
     <array name="account_notif_options">
         <item>트윗</item>
-        <item>슈퍼 팔로워 전용 트윗</item>
+        <item>구독자 전용 트윗</item>
         <item>실시간 동영상</item>
         <item>스페이스</item>
         <item>없음</item>
     </array>
     <array name="account_notif_options_old">
         <item>모든 트윗</item>
-        <item>슈퍼 팔로우 트윗만</item>
+        <item>구독 트윗만</item>
         <item>실시간 동영상만</item>
         <item>스페이스만</item>
         <item>끄기</item>
     </array>
     <array name="account_notif_subtitles">
         <item>이 계정의 모든 트윗에 대한 알림을 받습니다.</item>
-        <item>슈퍼 팔로우 트윗에 대한 알림만 받습니다.</item>
+        <item>구독자용 트윗에 대해서만 알림을 받게 됩니다.</item>
         <item>실시간 생방송에 대해서만 알림을 받습니다.</item>
         <item>스페이스에 대해서만 알림을 받습니다.</item>
         <item>이 계정의 트윗에 대한 알림을 받지 않습니다.</item>

@@ -1,26 +1,31 @@
-import java.lang.annotation.Annotation;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
-import java.util.HashMap;
+import java.util.concurrent.Executor;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lty implements j4j<m6z>
+public final class lty<ResultT> implements n7z<ResultT>
 {
-    public static final lty a;
+    public final Executor a;
+    public final Object b;
+    public final xij c;
     
-    static {
-        final ozz c0 = ozz.C0;
-        a = new lty();
-        final rxz rxz = new rxz(1, c0);
-        final HashMap hashMap = new HashMap();
-        hashMap.put(((Annotation)rxz).annotationType(), rxz);
-        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
-        final rxz rxz2 = new rxz(2, c0);
-        final HashMap hashMap2 = new HashMap();
-        sbl.m(rxz2, hashMap2, rxz2, hashMap2);
+    public lty(final Executor a, final xij c) {
+        this.b = new Object();
+        this.a = a;
+        this.c = c;
+    }
+    
+    @Override
+    public final void a(final crz crz) {
+        if (!crz.b()) {
+            synchronized (this.b) {
+                if (this.c == null) {
+                    return;
+                }
+                monitorexit(this.b);
+                this.a.execute((Runnable)new txz((Object)this, (Object)crz, 2, (j98)null));
+            }
+        }
     }
 }

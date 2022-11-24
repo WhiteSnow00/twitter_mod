@@ -2,13 +2,22 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class yli implements gso
+public final class yli<T> extends cj4<T>
 {
-    public final void a(final String s, final String s2) {
-        czd.f((Object)s, "userId");
-        czd.f((Object)s2, "password");
+    public yli(final T t, final asm<T> asm, final c c, final Throwable t2) {
+        super(t, asm, c, t2);
     }
     
-    public final void cancel() {
+    @Override
+    public final cj4<T> a() {
+        return this;
+    }
+    
+    public final Object clone() throws CloneNotSupportedException {
+        return this;
+    }
+    
+    @Override
+    public final void close() {
     }
 }

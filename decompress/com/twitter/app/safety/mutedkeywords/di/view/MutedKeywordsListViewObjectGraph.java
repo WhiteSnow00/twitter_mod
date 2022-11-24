@@ -6,7 +6,7 @@ package com.twitter.app.safety.mutedkeywords.di.view;
 
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 
-@r4j
+@d5j
 public interface MutedKeywordsListViewObjectGraph extends TwitterFragmentActivityViewObjectGraph
 {
 }

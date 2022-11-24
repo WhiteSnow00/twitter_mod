@@ -6,7 +6,7 @@ package com.twitter.app.settings.developer.di.view;
 
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 
-@r4j
+@d5j
 public interface ScribeDebuggingViewObjectGraph extends ViewObjectGraph
 {
 }

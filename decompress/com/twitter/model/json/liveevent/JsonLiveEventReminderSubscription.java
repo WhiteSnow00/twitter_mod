@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonLiveEventReminderSubscription extends fih<vwf>
+public class JsonLiveEventReminderSubscription extends tih<qxf>
 {
     @JsonField
     public Boolean a;
@@ -18,11 +18,12 @@ public class JsonLiveEventReminderSubscription extends fih<vwf>
     @JsonField
     public String c;
     
+    @Override
     public final Object s() {
-        final vwf$a vwf$a = new vwf$a();
-        vwf$a.a = z3u.b(this.a);
-        vwf$a.b = z3u.b(this.b);
-        vwf$a.c = this.c;
-        return ((n4j)vwf$a).e();
+        final qxf$a qxf$a = new qxf$a();
+        qxf$a.a = s4u.b(this.a);
+        qxf$a.b = s4u.b(this.b);
+        qxf$a.c = this.c;
+        return ((z4j)qxf$a).e();
     }
 }

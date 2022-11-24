@@ -1,50 +1,40 @@
-import java.util.List;
+import java.util.Objects;
+import java.io.Serializable;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class bwm implements xq<xvm$e>
+public final class bwm<T> extends apj<T> implements Serializable
 {
-    public static final bwm a;
-    public static final List<String> b;
+    public final apj<? super T> F0;
     
-    static {
-        a = new bwm();
-        b = s9i.s("terms_of_service_url", "privacy_policy_url");
+    public bwm(final apj<? super T> f0) {
+        Objects.requireNonNull(f0);
+        this.F0 = f0;
     }
     
-    public final void a(final ale ale, final fa7 fa7, final Object o) {
-        final xvm$e xvm$e = (xvm$e)o;
-        czd.f((Object)ale, "writer");
-        czd.f((Object)fa7, "customScalarAdapters");
-        czd.f((Object)xvm$e, "value");
-        ale.z1("terms_of_service_url");
-        final ar$g a = ar.a;
-        a.a(ale, fa7, (Object)xvm$e.a);
-        ale.z1("privacy_policy_url");
-        a.a(ale, fa7, (Object)xvm$e.b);
+    public final <S extends T> apj<S> b() {
+        return (apj<S>)this.F0;
     }
     
-    public final Object b(final ohe ohe, final fa7 fa7) {
-        czd.f((Object)ohe, "reader");
-        czd.f((Object)fa7, "customScalarAdapters");
-        Object o = null;
-        String s = null;
-        while (true) {
-            final int j3 = ohe.j3((List)bwm.b);
-            if (j3 != 0) {
-                if (j3 != 1) {
-                    break;
-                }
-                s = (String)ar.a.b(ohe, fa7);
-            }
-            else {
-                o = ar.a.b(ohe, fa7);
-            }
-        }
-        czd.c(o);
-        czd.c((Object)s);
-        return new xvm$e((String)o, s);
+    public final int compare(final T t, final T t2) {
+        return this.F0.compare((Object)t2, (Object)t);
+    }
+    
+    public final boolean equals(final Object o) {
+        return o == this || (o instanceof bwm && this.F0.equals(((bwm)o).F0));
+    }
+    
+    public final int hashCode() {
+        return -this.F0.hashCode();
+    }
+    
+    public final String toString() {
+        final String value = String.valueOf(this.F0);
+        final StringBuilder sb = new StringBuilder(value.length() + 10);
+        sb.append(value);
+        sb.append(".reverse()");
+        return sb.toString();
     }
 }

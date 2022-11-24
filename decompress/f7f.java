@@ -1,14 +1,37 @@
-import java.util.Map;
+import com.twitter.util.user.UserIdentifier;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class f7f implements gow
+public final class f7f implements fgw
 {
-    public final Map<String, Boolean> c() {
-        final hlv b = dta.b();
-        zzd.e((Object)b, "getAdditionalVariables$lambda$0");
-        return vkg.p1(vkg.k1(new gvj[] { new gvj((Object)"includeHasBirdwatchNotes", (Object)b.b("birdwatch_consumption_enabled", false)), new gvj((Object)"includeVoiceInfo", (Object)b.b("android_audio_voice_info_consumption_enabled", false)), new gvj((Object)"include_tweet_quick_promote_eligibility", (Object)ck1.m()), new gvj((Object)"includeUnmentionInfo", (Object)b.b("dont_mention_me_view_api_enabled", false)), new gvj((Object)"includeTrustedFriendsFields", (Object)b.b("trusted_friends_api_enabled", false)), new gvj((Object)"includeUnifiedCard", (Object)b.b("graphql_unified_card_enabled", false)) }), vkg.k1(new gvj[] { new gvj((Object)"include_has_nft", (Object)b.b("creator_android_nft_avatar_gql_include_enabled", false)), new gvj((Object)"include_viewer_quick_promote_eligibility", (Object)ck1.m()), new gvj((Object)"includeSpaceDeviceFollowing", (Object)b.b("android_audio_spaces_device_follow_api_enabled", false)), new gvj((Object)"includeUserType", (Object)b.b("signupless_include_user_type", false)) }));
+    public final int F0;
+    public final dgw G0;
+    
+    public f7f(final dgw g0, final int f0) {
+        this.F0 = f0;
+        this.G0 = g0;
+    }
+    
+    public final Object get(final Object o) {
+        switch (this.F0) {
+            default: {
+                final dgw g0 = this.G0;
+                final UserIdentifier userIdentifier = (UserIdentifier)o;
+                e0e.f((Object)g0, "$userObjectGraphProvider");
+                e0e.f((Object)userIdentifier, "userIdentifier");
+                return ((oes)g0.e(userIdentifier, (Class)oes.class)).g8();
+            }
+            case 2: {
+                return ((swi)this.G0.e((UserIdentifier)o, (Class)swi.class)).K1();
+            }
+            case 1: {
+                return ((zm2)this.G0.e((UserIdentifier)o, (Class)zm2.class)).v6();
+            }
+            case 0: {
+                return ((h7f)this.G0.e((UserIdentifier)o, (Class)h7f.class)).o();
+            }
+        }
     }
 }

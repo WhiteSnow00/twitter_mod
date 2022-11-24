@@ -305,8 +305,8 @@
         <item quantity="other">%d kişi daha</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Süper Takipçi</item>
-        <item quantity="other">Süper Takipçiler</item>
+        <item quantity="one">Abone</item>
+        <item quantity="other">Aboneler</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s Beğeni</item>
@@ -402,7 +402,7 @@
         <item quantity="other">﻿%1$s ve diğer %2$d kişiye﻿ yanıt olarak</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s ve başka %2$d kullanıcıya﻿ yanıt veriyorsun. Yanıtın ayrıca diğer Süper Takipçilere de görünür olacak.</item>
+        <item quantity="other">%1$s﻿ ve %2$d kullanıcıya﻿ daha yanıt veriyorsun. Yanıtın diğer Abonelere de görünür olacak.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%3$s﻿ sohbet odasındaki ﻿%1$s ve %2$d diğer﻿ kullanıcıya yanıt olarak</item>
@@ -411,7 +411,7 @@
         <item quantity="other">﻿%1$s %2$s ve diğer %3$d kişiye﻿ yanıt olarak</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s %2$s ve başka %3$d kullanıcıya﻿ yanıt veriyorsun. Yanıtın ayrıca diğer Süper Takipçilere de görünür olacak.</item>
+        <item quantity="other">﻿%1$s %2$s ve %3$d kullanıcıya﻿ daha yanıt veriyorsun. Yanıtın diğer Abonelere de görünür olacak.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%4$s﻿ sohbet odasındaki ﻿%1$s, %2$s ve %3$d diğer﻿ kullanıcıya yanıt olarak</item>

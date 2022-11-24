@@ -242,7 +242,7 @@
     </plurals>
     <plurals name="member_count">
         <item quantity="one">%s użytkownik</item>
-        <item quantity="other">%s użytkowników</item>
+        <item quantity="other">%s członków</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d minuta</item>
@@ -311,8 +311,8 @@
         <item quantity="other">%d innych użytkowników</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Superobserwujący</item>
-        <item quantity="other">Superobserwujący</item>
+        <item quantity="one">Subskrybent</item>
+        <item quantity="other">Subskrybenci</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s raz polubiony</item>
@@ -408,7 +408,7 @@
         <item quantity="other">W odpowiedzi do ﻿%1$s i jeszcze %2$d osób﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Odpowiadasz ﻿%1$s i %2$d innych użytkowników﻿. Twoja odpowiedź będzie widoczna dla innych superobserwujących.</item>
+        <item quantity="other">Odpowiadasz ﻿%1$s i %2$d innych użytkowników﻿. Twoja odpowiedź będzie widoczna dla innych subskrybentów.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">W odpowiedzi do ﻿%1$s i %2$d others﻿ w ﻿%3$s﻿</item>
@@ -417,7 +417,7 @@
         <item quantity="other">W odpowiedzi do ﻿%1$s, %2$s i %3$d innych osób﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Odpowiadasz ﻿%1$s %2$s i %3$d innych użytkowników﻿. Twoja odpowiedź będzie widoczna dla innych superobserwujących.</item>
+        <item quantity="other">Odpowiadasz ﻿%1$s %2$s i %3$d innych użytkowników﻿. Twoja odpowiedź będzie widoczna dla innych Subskrybentów.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">W odpowiedzi do ﻿%1$s %2$s i %3$d innych użytkowników﻿ w ﻿%4$s﻿</item>

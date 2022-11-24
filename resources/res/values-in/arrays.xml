@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Anda akan mendapatkan notifikasi untuk Tweet baru saja.</item>
-        <item>Anda akan mendapatkan notifikasi untuk Tweet baru khusus Pelanggan Super Follow.</item>
+        <item>Anda akan mendapatkan notifikasi untuk Tweet Langganan baru.</item>
         <item>Anda akan mendapatkan notifikasi untuk Tweet video Langsung.</item>
         <item>Anda akan mendapatkan notifikasi untuk Tweet Spaces baru.</item>
         <item>Anda tidak akan mendapatkan notifikasi lagi untuk Tweet baru.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweet</item>
-        <item>Tweet khusus Pelanggan Super Follow</item>
+        <item>Tweet khusus Langganan</item>
         <item>Video langsung</item>
         <item>Spaces</item>
         <item>Tidak ada</item>
     </array>
     <array name="account_notif_options_old">
         <item>Semua Tweet</item>
-        <item>Tweet khusus Super Follow</item>
+        <item>Tweet khusus Langganan</item>
         <item>Hanya video langsung</item>
         <item>Hanya Spaces</item>
         <item>Nonaktif</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Dapatkan notifikasi untuk semua Tweet akun ini.</item>
-        <item>Dapatkan notifikasi untuk Tweet Super Follow saja.</item>
+        <item>Dapatkan notifikasi untuk Tweet Langganan saja.</item>
         <item>Dapatkan notifikasi hanya untuk siaran langsung.</item>
         <item>Dapatkan notifikasi tentang Spaces saja.</item>
         <item>Nonaktifkan notifikasi untuk Tweet akun ini.</item>

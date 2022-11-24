@@ -11,92 +11,100 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonFeatureConfig$$JsonObjectMapper extends JsonMapper<JsonFeatureConfig>
 {
-    public static JsonFeatureConfig _parse(final khe khe) throws IOException {
+    public static JsonFeatureConfig _parse(final qhe qhe) throws IOException {
         final JsonFeatureConfig jsonFeatureConfig = new JsonFeatureConfig();
-        if (khe.e() == null) {
-            khe.i0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (khe.e() != lje.K0) {
-            khe.m0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (khe.i0() != lje.L0) {
-            final String d = khe.d();
-            khe.i0();
-            parseField(jsonFeatureConfig, d, khe);
-            khe.m0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonFeatureConfig, d, qhe);
+            qhe.m0();
         }
         return jsonFeatureConfig;
     }
     
-    public static void _serialize(final JsonFeatureConfig jsonFeatureConfig, final tfe tfe, final boolean b) throws IOException {
+    public static void _serialize(final JsonFeatureConfig jsonFeatureConfig, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            tfe.r0();
+            yfe.r0();
         }
-        tfe.u0("deeplink", jsonFeatureConfig.g);
+        yfe.u0("deeplink", jsonFeatureConfig.g);
         final String[] f = jsonFeatureConfig.f;
         if (f != null) {
-            tfe.i("feature_switches");
-            tfe.q0();
+            yfe.i("feature_switches");
+            yfe.q0();
             for (int length = f.length, i = 0; i < length; ++i) {
-                tfe.s0(f[i]);
+                yfe.s0(f[i]);
             }
-            tfe.f();
+            yfe.f();
         }
-        tfe.u0("icon", jsonFeatureConfig.a);
-        tfe.u0("icon_alt_text", jsonFeatureConfig.b);
-        tfe.e("is_labs_feature", jsonFeatureConfig.e);
-        tfe.u0("summary", jsonFeatureConfig.c);
-        tfe.u0("title", jsonFeatureConfig.d);
+        yfe.u0("icon", jsonFeatureConfig.a);
+        yfe.u0("icon_alt_text", jsonFeatureConfig.b);
+        yfe.e("is_labs_feature", jsonFeatureConfig.e);
+        yfe.u0("summary", jsonFeatureConfig.c);
+        yfe.u0("title", jsonFeatureConfig.d);
         if (b) {
-            tfe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonFeatureConfig jsonFeatureConfig, String t, final khe khe) throws IOException {
+    public static void parseField(final JsonFeatureConfig jsonFeatureConfig, String t, final qhe qhe) throws IOException {
         if ("deeplink".equals(t)) {
-            jsonFeatureConfig.g = khe.T((String)null);
+            jsonFeatureConfig.g = qhe.T((String)null);
         }
         else if ("feature_switches".equals(t)) {
-            if (khe.e() != lje.M0) {
+            if (qhe.e() != rje.P0) {
                 Objects.requireNonNull(jsonFeatureConfig);
-                zzd.f((Object)null, "<set-?>");
+                e0e.f((Object)null, "<set-?>");
                 throw null;
             }
             final ArrayList list = new ArrayList();
-            while (khe.i0() != lje.N0) {
-                t = khe.T((String)null);
+            while (qhe.i0() != rje.Q0) {
+                t = qhe.T((String)null);
                 if (t != null) {
                     list.add(t);
                 }
             }
             final String[] f = list.toArray(new String[list.size()]);
             Objects.requireNonNull(jsonFeatureConfig);
-            zzd.f((Object)f, "<set-?>");
+            e0e.f((Object)f, "<set-?>");
             jsonFeatureConfig.f = f;
         }
         else if ("icon".equals(t)) {
-            jsonFeatureConfig.a = khe.T((String)null);
+            jsonFeatureConfig.a = qhe.T((String)null);
         }
         else if ("icon_alt_text".equals(t)) {
-            jsonFeatureConfig.b = khe.T((String)null);
+            jsonFeatureConfig.b = qhe.T((String)null);
         }
         else if ("is_labs_feature".equals(t)) {
-            jsonFeatureConfig.e = khe.k();
+            jsonFeatureConfig.e = qhe.l();
         }
         else if ("summary".equals(t)) {
-            jsonFeatureConfig.c = khe.T((String)null);
+            jsonFeatureConfig.c = qhe.T((String)null);
         }
         else if ("title".equals(t)) {
-            jsonFeatureConfig.d = khe.T((String)null);
+            jsonFeatureConfig.d = qhe.T((String)null);
         }
     }
     
-    public JsonFeatureConfig parse(final khe khe) throws IOException {
-        return _parse(khe);
+    public JsonFeatureConfig parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public void serialize(final JsonFeatureConfig jsonFeatureConfig, final tfe tfe, final boolean b) throws IOException {
-        _serialize(jsonFeatureConfig, tfe, b);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
+    }
+    
+    public void serialize(final JsonFeatureConfig jsonFeatureConfig, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonFeatureConfig, yfe, b);
+    }
+    
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonFeatureConfig)o, yfe, b);
     }
 }

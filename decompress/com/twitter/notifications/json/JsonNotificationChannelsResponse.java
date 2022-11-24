@@ -9,14 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public final class JsonNotificationChannelsResponse extends fih<iqi>
+public final class JsonNotificationChannelsResponse extends tih<yqi>
 {
     @JsonField
-    public wpi a;
+    public mqi a;
     @JsonField
-    public List<upi> b;
+    public List<kqi> b;
     
+    @Override
     public final Object s() {
-        return new iqi(this.a, (List)this.b);
+        return new yqi(this.a, this.b);
     }
 }

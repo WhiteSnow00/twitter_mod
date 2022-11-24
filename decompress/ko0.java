@@ -4,22 +4,34 @@
 
 public final class ko0
 {
-    public final a a;
-    public final b b;
-    public final c c;
-    public final Boolean d;
+    public static final b Companion;
+    public static final nmp<ko0> o;
+    public final d a;
+    public final String b;
+    public final String c;
+    public final String d;
     public final String e;
-    public final Boolean f;
-    public final Boolean g;
-    public final String h;
-    public final d i;
-    public final String j;
-    public final e k;
-    public final ai3 l;
+    public final String f;
+    public final String g;
+    public final vxl h;
+    public final long i;
+    public final s4u j;
+    public final s4u k;
+    public final s4u l;
     public final String m;
-    public final String n;
+    public final long n;
     
-    public ko0(final a a, final b b, final c c, final Boolean d, final String e, final Boolean f, final Boolean g, final String h, final d i, final String j, final e k, final ai3 l, final String m, final String n) {
+    static {
+        Companion = new b();
+        ko0.o = new ko0.ko0$c();
+    }
+    
+    public ko0(final d a, final String b, final String c, final String d, final String e, final String f, final String g, final vxl h, final long i, final s4u j, final s4u k, final s4u l, final String m, final long n) {
+        e0e.f((Object)a, "type");
+        e0e.f((Object)h, "ratings");
+        e0e.f((Object)j, "isFree");
+        e0e.f((Object)k, "isEditorsChoice");
+        e0e.f((Object)l, "hasInAppPurchases");
         this.a = a;
         this.b = b;
         this.c = c;
@@ -45,369 +57,185 @@ public final class ko0
             return false;
         }
         final ko0 ko0 = (ko0)o;
-        return czd.a((Object)this.a, (Object)ko0.a) && czd.a((Object)this.b, (Object)ko0.b) && czd.a((Object)this.c, (Object)ko0.c) && czd.a((Object)this.d, (Object)ko0.d) && czd.a((Object)this.e, (Object)ko0.e) && czd.a((Object)this.f, (Object)ko0.f) && czd.a((Object)this.g, (Object)ko0.g) && czd.a((Object)this.h, (Object)ko0.h) && czd.a((Object)this.i, (Object)ko0.i) && czd.a((Object)this.j, (Object)ko0.j) && czd.a((Object)this.k, (Object)ko0.k) && this.l == ko0.l && czd.a((Object)this.m, (Object)ko0.m) && czd.a((Object)this.n, (Object)ko0.n);
+        return this.a == ko0.a && e0e.a((Object)this.b, (Object)ko0.b) && e0e.a((Object)this.c, (Object)ko0.c) && e0e.a((Object)this.d, (Object)ko0.d) && e0e.a((Object)this.e, (Object)ko0.e) && e0e.a((Object)this.f, (Object)ko0.f) && e0e.a((Object)this.g, (Object)ko0.g) && e0e.a((Object)this.h, (Object)ko0.h) && this.i == ko0.i && this.j == ko0.j && this.k == ko0.k && this.l == ko0.l && e0e.a((Object)this.m, (Object)ko0.m) && this.n == ko0.n;
     }
     
     @Override
     public final int hashCode() {
-        final a a = this.a;
+        final int d = brg.d(this.b, this.a.hashCode() * 31, 31);
+        final String c = this.c;
         int hashCode = 0;
         int hashCode2;
-        if (a == null) {
+        if (c == null) {
             hashCode2 = 0;
         }
         else {
-            hashCode2 = a.hashCode();
+            hashCode2 = c.hashCode();
         }
-        final b b = this.b;
+        final String d2 = this.d;
         int hashCode3;
-        if (b == null) {
+        if (d2 == null) {
             hashCode3 = 0;
         }
         else {
-            hashCode3 = b.hashCode();
+            hashCode3 = d2.hashCode();
         }
-        final c c = this.c;
+        final int d3 = brg.d(this.e, ((d + hashCode2) * 31 + hashCode3) * 31, 31);
+        final String f = this.f;
         int hashCode4;
-        if (c == null) {
+        if (f == null) {
             hashCode4 = 0;
         }
         else {
-            hashCode4 = c.hashCode();
+            hashCode4 = f.hashCode();
         }
-        final Boolean d = this.d;
+        final String g = this.g;
         int hashCode5;
-        if (d == null) {
+        if (g == null) {
             hashCode5 = 0;
         }
         else {
-            hashCode5 = d.hashCode();
+            hashCode5 = g.hashCode();
         }
-        final int f = hmg.f(this.e, (((hashCode2 * 31 + hashCode3) * 31 + hashCode4) * 31 + hashCode5) * 31, 31);
-        final Boolean f2 = this.f;
-        int hashCode6;
-        if (f2 == null) {
-            hashCode6 = 0;
-        }
-        else {
-            hashCode6 = f2.hashCode();
-        }
-        final Boolean g = this.g;
-        int hashCode7;
-        if (g == null) {
-            hashCode7 = 0;
-        }
-        else {
-            hashCode7 = g.hashCode();
-        }
-        final String h = this.h;
-        int hashCode8;
-        if (h == null) {
-            hashCode8 = 0;
-        }
-        else {
-            hashCode8 = h.hashCode();
-        }
-        final d i = this.i;
-        int hashCode9;
-        if (i == null) {
-            hashCode9 = 0;
-        }
-        else {
-            hashCode9 = i.hashCode();
-        }
-        final String j = this.j;
-        int hashCode10;
-        if (j == null) {
-            hashCode10 = 0;
-        }
-        else {
-            hashCode10 = j.hashCode();
-        }
-        final e k = this.k;
-        int hashCode11;
-        if (k == null) {
-            hashCode11 = 0;
-        }
-        else {
-            hashCode11 = k.hashCode();
-        }
-        final int hashCode12 = this.l.hashCode();
+        final int hashCode6 = this.h.hashCode();
+        final long i = this.i;
+        final int n = (int)(i ^ i >>> 32);
+        final int hashCode7 = this.j.hashCode();
+        final int hashCode8 = this.k.hashCode();
+        final int hashCode9 = this.l.hashCode();
         final String m = this.m;
-        int hashCode13;
-        if (m == null) {
-            hashCode13 = 0;
+        if (m != null) {
+            hashCode = m.hashCode();
         }
-        else {
-            hashCode13 = m.hashCode();
-        }
-        final String n = this.n;
-        if (n != null) {
-            hashCode = n.hashCode();
-        }
-        return ((hashCode12 + ((((((f + hashCode6) * 31 + hashCode7) * 31 + hashCode8) * 31 + hashCode9) * 31 + hashCode10) * 31 + hashCode11) * 31) * 31 + hashCode13) * 31 + hashCode;
+        final long n2 = this.n;
+        return ((hashCode9 + (hashCode8 + (hashCode7 + ((hashCode6 + ((d3 + hashCode4) * 31 + hashCode5) * 31) * 31 + n) * 31) * 31) * 31) * 31 + hashCode) * 31 + (int)(n2 ^ n2 >>> 32);
     }
     
     @Override
     public final String toString() {
-        final a a = this.a;
-        final b b = this.b;
-        final c c = this.c;
-        final Boolean d = this.d;
+        final d a = this.a;
+        final String b = this.b;
+        final String c = this.c;
+        final String d = this.d;
         final String e = this.e;
-        final Boolean f = this.f;
-        final Boolean g = this.g;
-        final String h = this.h;
-        final d i = this.i;
-        final String j = this.j;
-        final e k = this.k;
-        final ai3 l = this.l;
+        final String f = this.f;
+        final String g = this.g;
+        final vxl h = this.h;
+        final long i = this.i;
+        final s4u j = this.j;
+        final s4u k = this.k;
+        final s4u l = this.l;
         final String m = this.m;
-        final String n = this.n;
+        final long n = this.n;
         final StringBuilder sb = new StringBuilder();
-        sb.append("AppStoreData(app_icon_media_results=");
+        sb.append("AppStoreData(type=");
         sb.append(a);
-        sb.append(", category=");
-        sb.append(b);
-        sb.append(", description=");
-        sb.append(c);
-        sb.append(", has_in_app_purchases=");
-        sb.append(d);
         sb.append(", id=");
-        sb.append(e);
-        sb.append(", is_editors_choice=");
-        sb.append(f);
-        sb.append(", is_free=");
-        sb.append(g);
-        sb.append(", num_installs=");
-        sb.append(h);
-        sb.append(", ratings=");
-        sb.append(i);
-        sb.append(", size_bytes=");
-        sb.append(j);
-        sb.append(", title=");
-        sb.append(k);
-        sb.append(", type=");
-        sb.append(l);
+        sb.append(b);
         sb.append(", url=");
-        return mb0.C(sb, m, ", url_resolved=", n, ")");
+        jba.s(sb, c, ", urlResolved=", d, ", title=");
+        jba.s(sb, e, ", description=", f, ", category=");
+        sb.append(g);
+        sb.append(", ratings=");
+        sb.append(h);
+        sb.append(", numInstalls=");
+        sb.append(i);
+        sb.append(", isFree=");
+        sb.append(j);
+        sb.append(", isEditorsChoice=");
+        sb.append(k);
+        sb.append(", hasInAppPurchases=");
+        sb.append(l);
+        ffe.q(sb, ", iconUrl=", m, ", sizeBytes=");
+        return ang.c(sb, n, ")");
     }
     
-    public static final class a
+    public static final class a extends z4j<ko0>
     {
-        public final String a;
-        public final rg0 b;
+        public d a;
+        public String b;
+        public String c;
+        public String d;
+        public String e;
+        public String f;
+        public String g;
+        public vxl h;
+        public long i;
+        public s4u j;
+        public s4u k;
+        public s4u l;
+        public String m;
+        public long n;
         
-        public a(final String a, final rg0 b) {
-            this.a = a;
+        public a() {
+            this(null, null, null, null, null, null, null, null, 0L, null, null, null, null, 0L, 16383, null);
+        }
+        
+        public a(final d d, final String s, final String s2, final String s3, final String s4, final String s5, final String s6, final vxl vxl, final long n, final s4u s4u, final s4u s4u2, final s4u s4u3, final String s7, final long n2, final int n3, final wg8 wg8) {
+            final s4u f0 = s4u.F0;
+            final d i0 = d.I0;
+            final vxl h = (vxl)((z4j)new vxl$a(0.0f, 0L, 3, (wg8)null)).e();
+            this.a = i0;
+            this.b = null;
+            this.c = null;
+            this.d = null;
+            this.e = null;
+            this.f = null;
+            this.g = null;
+            this.h = h;
+            this.i = 0L;
+            this.j = f0;
+            this.k = f0;
+            this.l = f0;
+            this.m = null;
+            this.n = 0L;
+        }
+        
+        public final Object i() {
+            final d a = this.a;
+            final String b = this.b;
+            e0e.c((Object)b);
+            final String c = this.c;
+            final String d = this.d;
+            final String e = this.e;
+            e0e.c((Object)e);
+            return new ko0(a, b, c, d, e, this.f, this.g, this.h, this.i, this.j, this.k, this.l, this.m, this.n);
+        }
+        
+        public final boolean k() {
+            return this.a != ko0.d.I0 && flr.g((CharSequence)this.b);
+        }
+        
+        public final a o(final String b) {
+            e0e.f((Object)b, "id");
             this.b = b;
+            return this;
         }
         
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof a)) {
-                return false;
-            }
-            final a a = (a)o;
-            return czd.a((Object)this.a, (Object)a.a) && czd.a((Object)this.b, (Object)a.b);
+        public final a p(final String e) {
+            e0e.f((Object)e, "title");
+            this.e = e;
+            return this;
         }
         
-        @Override
-        public final int hashCode() {
-            return this.b.hashCode() + this.a.hashCode() * 31;
-        }
-        
-        @Override
-        public final String toString() {
-            final String a = this.a;
-            final rg0 b = this.b;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("App_icon_media_results(__typename=");
-            sb.append(a);
-            sb.append(", apiMediaResults=");
-            sb.append(b);
-            sb.append(")");
-            return sb.toString();
+        public final a q(final d a) {
+            e0e.f((Object)a, "type");
+            this.a = a;
+            return this;
         }
     }
     
     public static final class b
     {
-        public final String a;
-        public final rx8 b;
-        
-        public b(final String a, final rx8 b) {
-            this.a = a;
-            this.b = b;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof b)) {
-                return false;
-            }
-            final b b = (b)o;
-            return czd.a((Object)this.a, (Object)b.a) && czd.a((Object)this.b, (Object)b.b);
-        }
-        
-        @Override
-        public final int hashCode() {
-            return this.b.hashCode() + this.a.hashCode() * 31;
-        }
-        
-        @Override
-        public final String toString() {
-            final String a = this.a;
-            final rx8 b = this.b;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("Category(__typename=");
-            sb.append(a);
-            sb.append(", directionalStringElement=");
-            sb.append(b);
-            sb.append(")");
-            return sb.toString();
-        }
     }
     
-    public static final class c
+    public enum d
     {
-        public final String a;
-        public final rx8 b;
+        F0, 
+        G0, 
+        H0, 
+        I0;
         
-        public c(final String a, final rx8 b) {
-            this.a = a;
-            this.b = b;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof c)) {
-                return false;
-            }
-            final c c = (c)o;
-            return czd.a((Object)this.a, (Object)c.a) && czd.a((Object)this.b, (Object)c.b);
-        }
-        
-        @Override
-        public final int hashCode() {
-            return this.b.hashCode() + this.a.hashCode() * 31;
-        }
-        
-        @Override
-        public final String toString() {
-            final String a = this.a;
-            final rx8 b = this.b;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("Description(__typename=");
-            sb.append(a);
-            sb.append(", directionalStringElement=");
-            sb.append(b);
-            sb.append(")");
-            return sb.toString();
-        }
-    }
-    
-    public static final class d
-    {
-        public final String a;
-        public final Double b;
-        
-        public d(final String a, final Double b) {
-            this.a = a;
-            this.b = b;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof d)) {
-                return false;
-            }
-            final d d = (d)o;
-            return czd.a((Object)this.a, (Object)d.a) && czd.a((Object)this.b, (Object)d.b);
-        }
-        
-        @Override
-        public final int hashCode() {
-            final String a = this.a;
-            int hashCode = 0;
-            int hashCode2;
-            if (a == null) {
-                hashCode2 = 0;
-            }
-            else {
-                hashCode2 = a.hashCode();
-            }
-            final Double b = this.b;
-            if (b != null) {
-                hashCode = b.hashCode();
-            }
-            return hashCode2 * 31 + hashCode;
-        }
-        
-        @Override
-        public final String toString() {
-            final String a = this.a;
-            final Double b = this.b;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("Ratings(count=");
-            sb.append(a);
-            sb.append(", star=");
-            sb.append(b);
-            sb.append(")");
-            return sb.toString();
-        }
-    }
-    
-    public static final class e
-    {
-        public final String a;
-        public final rx8 b;
-        
-        public e(final String a, final rx8 b) {
-            this.a = a;
-            this.b = b;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof e)) {
-                return false;
-            }
-            final e e = (e)o;
-            return czd.a((Object)this.a, (Object)e.a) && czd.a((Object)this.b, (Object)e.b);
-        }
-        
-        @Override
-        public final int hashCode() {
-            return this.b.hashCode() + this.a.hashCode() * 31;
-        }
-        
-        @Override
-        public final String toString() {
-            final String a = this.a;
-            final rx8 b = this.b;
-            final StringBuilder sb = new StringBuilder();
-            sb.append("Title(__typename=");
-            sb.append(a);
-            sb.append(", directionalStringElement=");
-            sb.append(b);
-            sb.append(")");
-            return sb.toString();
-        }
+        public static final d[] J0;
     }
 }

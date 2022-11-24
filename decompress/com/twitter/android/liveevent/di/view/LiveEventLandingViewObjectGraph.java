@@ -7,18 +7,18 @@ package com.twitter.android.liveevent.di.view;
 import com.twitter.android.liveevent.landing.scribe.a;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 
-@l4j
+@d5j
 public interface LiveEventLandingViewObjectGraph extends TwitterFragmentActivityViewObjectGraph
 {
-    vxf Q3();
+    cyf Q3();
     
-    gyf S6();
+    nyf S6();
     
     a W1();
     
-    iyf b2();
+    pyf b2();
     
-    ym c2();
+    bn c2();
     
-    ryf g4();
+    yyf g4();
 }

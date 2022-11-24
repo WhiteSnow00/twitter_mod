@@ -20,18 +20,18 @@ import android.content.Context;
 @Deprecated
 public class FabTransformationScrimBehavior extends ExpandableTransformationBehavior
 {
-    public final krh c;
-    public final krh d;
+    public final zrh c;
+    public final zrh d;
     
     public FabTransformationScrimBehavior() {
-        this.c = new krh(75L);
-        this.d = new krh(0L);
+        this.c = new zrh(75L);
+        this.d = new zrh(0L);
     }
     
     public FabTransformationScrimBehavior(final Context context, final AttributeSet set) {
         super(context, set);
-        this.c = new krh(75L);
-        this.d = new krh(0L);
+        this.c = new zrh(75L);
+        this.d = new zrh(0L);
     }
     
     public final boolean c(final CoordinatorLayout coordinatorLayout, final View view, final View view2) {
@@ -45,12 +45,12 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
     public final AnimatorSet u(final View view, final View view2, final boolean b, final boolean b2) {
         final ArrayList list = new ArrayList();
         new ArrayList();
-        krh krh;
+        zrh zrh;
         if (b) {
-            krh = this.c;
+            zrh = this.c;
         }
         else {
-            krh = this.d;
+            zrh = this.d;
         }
         ObjectAnimator objectAnimator;
         if (b) {
@@ -62,10 +62,10 @@ public class FabTransformationScrimBehavior extends ExpandableTransformationBeha
         else {
             objectAnimator = ObjectAnimator.ofFloat((Object)view2, View.ALPHA, new float[] { 0.0f });
         }
-        krh.a((Animator)objectAnimator);
+        zrh.a((Animator)objectAnimator);
         list.add(objectAnimator);
         final AnimatorSet set = new AnimatorSet();
-        af8.G(set, (List)list);
+        w9y.r(set, list);
         ((Animator)set).addListener((Animator$AnimatorListener)new FabTransformationScrimBehavior$a(b, view2));
         return set;
     }

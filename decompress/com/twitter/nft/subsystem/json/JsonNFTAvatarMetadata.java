@@ -9,14 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNFTAvatarMetadata extends fih<c0i>
+public class JsonNFTAvatarMetadata extends tih<t0i>
 {
     @JsonField(name = { "nft" })
-    public b4i a;
+    public u4i a;
     @JsonField(name = { "collection_metadata" })
-    public tlx b;
+    public jmx b;
     
+    @Override
     public final Object s() {
-        return new c0i(this.a, this.b);
+        return new t0i(this.a, this.b);
     }
 }

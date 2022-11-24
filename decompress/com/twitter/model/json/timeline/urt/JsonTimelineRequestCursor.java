@@ -8,14 +8,14 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineRequestCursor extends aih<spv>
+public class JsonTimelineRequestCursor extends tih<zqv>
 {
     @JsonField(name = { "value" })
     public String a;
-    @JsonField(name = { "cursorType" }, typeConverter = da7.class)
+    @JsonField(name = { "cursorType" }, typeConverter = na7.class)
     public int b;
     @JsonField(name = { "displayTreatment" })
-    public q97 c;
+    public aa7 c;
     
     @Override
     public final Object s() {
@@ -23,7 +23,7 @@ public class JsonTimelineRequestCursor extends aih<spv>
         if (b != -1) {
             final String a = this.a;
             if (a != null) {
-                return new spv(this.a, this.b, (long)w4j.h((Object)a, (Object)b, (Object)this.c), this.c);
+                return new zqv(this.a, this.b, (long)o5j.h((Object)a, (Object)b, (Object)this.c), this.c);
             }
         }
         return null;

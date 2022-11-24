@@ -1,57 +1,77 @@
+import android.text.Layout$Alignment;
+import android.graphics.Paint;
+import android.text.Layout;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wkd implements ebp
+public final class wkd
 {
-    public final long[] a;
-    public final long[] b;
-    public final long c;
-    public final boolean d;
-    
-    public wkd(final long[] a, final long[] b, final long c) {
-        ri4.k(a.length == b.length);
-        final int length = b.length;
-        final boolean d = length > 0;
-        this.d = d;
-        if (d && b[0] > 0L) {
-            final int n = length + 1;
-            final long[] a2 = new long[n];
-            this.a = a2;
-            final long[] b2 = new long[n];
-            this.b = b2;
-            System.arraycopy(a, 0, a2, 1, length);
-            System.arraycopy(b, 0, b2, 1, length);
+    public static final float a(final Layout layout, int n, final Paint paint) {
+        e0e.f((Object)layout, "<this>");
+        e0e.f((Object)paint, "paint");
+        final float lineLeft = layout.getLineLeft(n);
+        if (pjs.b(layout, n) && layout.getParagraphDirection(n) == 1 && lineLeft < 0.0f) {
+            final float n2 = paint.measureText("\u2026") + (layout.getPrimaryHorizontal(layout.getEllipsisStart(n) + layout.getLineStart(n)) - lineLeft);
+            final Layout$Alignment paragraphAlignment = layout.getParagraphAlignment(n);
+            if (paragraphAlignment == null) {
+                n = -1;
+            }
+            else {
+                n = a.a[((Enum)paragraphAlignment).ordinal()];
+            }
+            float n3;
+            float n4;
+            if (n == 1) {
+                n3 = Math.abs(lineLeft);
+                n4 = (layout.getWidth() - n2) / 2.0f;
+            }
+            else {
+                n3 = Math.abs(lineLeft);
+                n4 = layout.getWidth() - n2;
+            }
+            return n4 + n3;
         }
-        else {
-            this.a = a;
-            this.b = b;
-        }
-        this.c = c;
+        return 0.0f;
     }
     
-    public final ebp$a d(final long n) {
-        if (!this.d) {
-            final gbp c = gbp.c;
-            return new ebp$a(c, c);
+    public static final float b(final Layout layout, final int n, final Paint paint) {
+        e0e.f((Object)layout, "<this>");
+        e0e.f((Object)paint, "paint");
+        if (pjs.b(layout, n)) {
+            final int paragraphDirection = layout.getParagraphDirection(n);
+            int n2 = -1;
+            if (paragraphDirection == -1 && layout.getWidth() < layout.getLineRight(n)) {
+                final float n3 = paint.measureText("\u2026") + (layout.getLineRight(n) - layout.getPrimaryHorizontal(layout.getEllipsisStart(n) + layout.getLineStart(n)));
+                final Layout$Alignment paragraphAlignment = layout.getParagraphAlignment(n);
+                if (paragraphAlignment != null) {
+                    n2 = a.a[((Enum)paragraphAlignment).ordinal()];
+                }
+                float n4;
+                float n5;
+                if (n2 == 1) {
+                    n4 = layout.getWidth() - layout.getLineRight(n);
+                    n5 = (layout.getWidth() - n3) / 2.0f;
+                }
+                else {
+                    n4 = layout.getWidth() - layout.getLineRight(n);
+                    n5 = layout.getWidth() - n3;
+                }
+                return n4 - n5;
+            }
         }
-        int f = imw.f(this.b, n, true);
-        final long[] b = this.b;
-        final long n2 = b[f];
-        final long[] a = this.a;
-        final gbp gbp = new gbp(n2, a[f]);
-        if (n2 != n && f != b.length - 1) {
-            ++f;
-            return new ebp$a(gbp, new gbp(b[f], a[f]));
-        }
-        return new ebp$a(gbp, gbp);
+        return 0.0f;
     }
     
-    public final boolean f() {
-        return this.d;
-    }
-    
-    public final long h() {
-        return this.c;
+    public final class a
+    {
+        public static final int[] a;
+        
+        static {
+            final int[] a2 = new int[Layout$Alignment.values().length];
+            a2[((Enum)Layout$Alignment.ALIGN_CENTER).ordinal()] = 1;
+            a = a2;
+        }
     }
 }

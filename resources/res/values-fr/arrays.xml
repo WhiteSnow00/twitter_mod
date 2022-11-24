@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Vous recevrez des notifications pour les nouveaux Tweets.</item>
-        <item>Vous recevrez des notifications pour les nouveaux Tweets réservés aux Super Followers.</item>
+        <item>Vous recevrez des notifications pour les nouveaux Tweets réservés aux Superabonnés.</item>
         <item>Vous recevrez des notifications pour les nouveaux Tweets sur les vidéos en direct.</item>
         <item>Vous recevrez des notifications pour les nouveaux Tweets sur les Espaces.</item>
         <item>Vous ne recevrez plus de notifications pour les nouveaux Tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Tweets pour les Super Followers uniquement</item>
+        <item>Tweets réservés aux Superabonnés</item>
         <item>Vidéo en direct</item>
         <item>Espaces</item>
         <item>Aucune</item>
     </array>
     <array name="account_notif_options_old">
         <item>Tous les Tweets</item>
-        <item>Uniquement les Tweets Super Follows</item>
+        <item>Tweets du Superabonnement uniquement</item>
         <item>Seulement les vidéos en direct</item>
         <item>Uniquement les Espaces</item>
         <item>Désactivé</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Recevez des notifications pour tous les Tweets de ce compte.</item>
-        <item>Recevez des notifications pour les nouveaux Tweets Super Follows.</item>
+        <item>Recevez des notifications uniquement pour les Tweets réservés aux Superabonnés.</item>
         <item>Recevez des notifications uniquement pour les diffusions en direct.</item>
         <item>Recevez des notifications uniquement pour les Espaces.</item>
         <item>Désactivez les notifications pour les Tweets de ce compte.</item>

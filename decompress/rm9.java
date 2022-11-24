@@ -2,15 +2,7 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class rm9 implements qm9
+public interface rm9<T> extends w0b<T>
 {
-    public final /* synthetic */ s1 b;
-    
-    public rm9(final s1 b) {
-        this.b = b;
-    }
-    
-    public final String f() {
-        return this.b.f();
-    }
+     <V extends lc0> uqw<V> a(final liv<T, V> p0);
 }

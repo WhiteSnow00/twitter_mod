@@ -5,14 +5,14 @@ import android.content.Context;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wa1 extends t57
+public final class wa1 extends c67
 {
     public final Context a;
-    public final mi4 b;
-    public final mi4 c;
+    public final si4 b;
+    public final si4 c;
     public final String d;
     
-    public wa1(final Context a, final mi4 b, final mi4 c, final String d) {
+    public wa1(final Context a, final si4 b, final si4 c, final String d) {
         Objects.requireNonNull(a, "Null applicationContext");
         this.a = a;
         Objects.requireNonNull(b, "Null wallClock");
@@ -23,30 +23,35 @@ public final class wa1 extends t57
         this.d = d;
     }
     
+    @Override
     public final Context a() {
         return this.a;
     }
     
+    @Override
     public final String b() {
         return this.d;
     }
     
-    public final mi4 c() {
+    @Override
+    public final si4 c() {
         return this.c;
     }
     
-    public final mi4 d() {
+    @Override
+    public final si4 d() {
         return this.b;
     }
     
+    @Override
     public final boolean equals(final Object o) {
         boolean b = true;
         if (o == this) {
             return true;
         }
-        if (o instanceof t57) {
-            final t57 t57 = (t57)o;
-            if (!this.a.equals(t57.a()) || !this.b.equals(t57.d()) || !this.c.equals(t57.c()) || !this.d.equals(t57.b())) {
+        if (o instanceof c67) {
+            final c67 c67 = (c67)o;
+            if (!this.a.equals(c67.a()) || !this.b.equals(c67.d()) || !this.c.equals(c67.c()) || !this.d.equals(c67.b())) {
                 b = false;
             }
             return b;
@@ -54,18 +59,20 @@ public final class wa1 extends t57
         return false;
     }
     
+    @Override
     public final int hashCode() {
         return (((this.a.hashCode() ^ 0xF4243) * 1000003 ^ this.b.hashCode()) * 1000003 ^ this.c.hashCode()) * 1000003 ^ this.d.hashCode();
     }
     
+    @Override
     public final String toString() {
-        final StringBuilder g = w48.g("CreationContext{applicationContext=");
-        g.append(this.a);
-        g.append(", wallClock=");
-        g.append(this.b);
-        g.append(", monotonicClock=");
-        g.append(this.c);
-        g.append(", backendName=");
-        return hi.I(g, this.d, "}");
+        final StringBuilder f = ehk.f("CreationContext{applicationContext=");
+        f.append(this.a);
+        f.append(", wallClock=");
+        f.append(this.b);
+        f.append(", monotonicClock=");
+        f.append(this.c);
+        f.append(", backendName=");
+        return m51.y(f, this.d, "}");
     }
 }

@@ -6,34 +6,34 @@ package com.twitter.business.moduleconfiguration.businessinfo.address;
 
 import com.twitter.weaver.mvi.MviViewModel;
 
-@gb8(c = "com.twitter.business.moduleconfiguration.businessinfo.address.BusinessAddressViewModel$intents$2$8", f = "BusinessAddressViewModel.kt", l = {}, m = "invokeSuspend")
-public final class j extends xzr implements gub<st2$h, ap6<? super oyv>, Object>
+@vb8(c = "com.twitter.business.moduleconfiguration.businessinfo.address.BusinessAddressViewModel$intents$2$8", f = "BusinessAddressViewModel.kt", l = {}, m = "invokeSuspend")
+public final class j extends l1s implements hub<cu2$h, mp6<? super vzv>, Object>
 {
-    public final /* synthetic */ qt2 C0;
-    public final /* synthetic */ BusinessAddressViewModel D0;
+    public final au2 F0;
+    public final BusinessAddressViewModel G0;
     
-    public j(final qt2 c0, final BusinessAddressViewModel d0, final ap6<? super j> ap6) {
-        this.C0 = c0;
-        this.D0 = d0;
-        super(2, (ap6)ap6);
+    public j(final au2 f0, final BusinessAddressViewModel g0, final mp6<? super j> mp6) {
+        this.F0 = f0;
+        this.G0 = g0;
+        super(2, (mp6)mp6);
     }
     
-    public final ap6<oyv> create(final Object o, final ap6<?> ap6) {
-        return (ap6<oyv>)new j(this.C0, this.D0, (ap6<? super j>)ap6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new j(this.F0, this.G0, (mp6<? super j>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final j j = (j)this.create(o, (ap6<?>)o2);
-        final oyv a = oyv.a;
+        final j j = (j)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         j.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        kq9.b1(o);
-        this.C0.a(qt2.c);
-        final BusinessAddressViewModel d0 = this.D0;
-        ((MviViewModel)d0).V((Object)new pt2$a(d0.P0));
-        return oyv.a;
+        jb2.M0(o);
+        this.F0.a(au2.c);
+        final BusinessAddressViewModel g0 = this.G0;
+        ((MviViewModel)g0).V((Object)new zt2$a(g0.S0));
+        return vzv.a;
     }
 }

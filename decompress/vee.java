@@ -1,11 +1,36 @@
-import com.google.gson.JsonParseException;
-import java.lang.reflect.Type;
+import java.util.Map;
+import java.io.IOException;
+import java.io.Writer;
+import java.io.StringWriter;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface vee<T>
+public final class vee
 {
-    T a(final afe p0, final Type p1, final Object p2) throws JsonParseException;
+    public final wee a;
+    
+    public vee(final wee a) {
+        this.a = a;
+    }
+    
+    public final String a(final Object o) {
+        final StringWriter stringWriter = new StringWriter();
+        try {
+            this.b(o, stringWriter);
+            return stringWriter.toString();
+        }
+        catch (final IOException ex) {
+            return stringWriter.toString();
+        }
+    }
+    
+    public final void b(final Object o, final Writer writer) throws IOException {
+        final wee a = this.a;
+        final nle nle = new nle(writer, a.a, a.b, (b5j<Object>)a.c, a.d);
+        nle.g(o);
+        nle.i();
+        nle.b.flush();
+    }
 }

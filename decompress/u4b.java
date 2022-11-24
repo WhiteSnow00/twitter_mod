@@ -2,15 +2,15 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class u4b implements rj
+public final class u4b implements sj
 {
-    public final /* synthetic */ m29 C0;
+    public final e39 F0;
     
-    public u4b(final m29 c0) {
-        this.C0 = c0;
+    public u4b(final e39 f0) {
+        this.F0 = f0;
     }
     
     public final void run() {
-        this.C0.a();
+        this.F0.a();
     }
 }

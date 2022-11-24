@@ -6,9 +6,9 @@ package com.google.android.gms.common;
 
 public final class GooglePlayServicesNotAvailableException extends Exception
 {
-    public final int D0;
+    public final int F0;
     
-    public GooglePlayServicesNotAvailableException(final int d0) {
-        this.D0 = d0;
+    public GooglePlayServicesNotAvailableException(final int f0) {
+        this.F0 = f0;
     }
 }

@@ -9,15 +9,16 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonDateInterval extends fih<q98>
+public class JsonDateInterval extends tih<ua8>
 {
     @JsonField
-    public o98 a;
+    public sa8 a;
     @JsonField
-    public o98 b;
+    public sa8 b;
     
+    @Override
     public final Object s() {
-        final q98.a a = new q98.a();
+        final ua8.a a = new ua8.a();
         a.a = this.a;
         a.b = this.b;
         return a.e();

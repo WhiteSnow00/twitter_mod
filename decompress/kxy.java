@@ -1,56 +1,51 @@
-import android.os.Handler;
-import android.os.IInterface;
-import android.os.IBinder;
-import android.content.ComponentName;
-import android.content.ServiceConnection;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kxy implements ServiceConnection
+public final class kxy implements b5j<vsy>
 {
-    public final int D0;
-    public final bm1 E0;
+    public static final kxy a;
     
-    public kxy(final bm1 e0, final int d0) {
-        this.E0 = e0;
-        this.D0 = d0;
+    static {
+        final vry f0 = vry.F0;
+        a = new kxy();
+        final cry cry = new cry(1, f0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(cry.annotationType(), cry);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final cry cry2 = new cry(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(cry2.annotationType(), cry2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final cry cry3 = new cry(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        hashMap3.put(cry3.annotationType(), cry3);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
+        final cry cry4 = new cry(4, f0);
+        final HashMap hashMap4 = new HashMap();
+        hashMap4.put(cry4.annotationType(), cry4);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap4));
+        final cry cry5 = new cry(5, f0);
+        final HashMap hashMap5 = new HashMap();
+        hashMap5.put(cry5.annotationType(), cry5);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap5));
+        final cry cry6 = new cry(6, f0);
+        final HashMap hashMap6 = new HashMap();
+        hashMap6.put(cry6.annotationType(), cry6);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap6));
+        final cry cry7 = new cry(7, f0);
+        final HashMap hashMap7 = new HashMap();
+        awg.i(cry7, hashMap7, cry7, hashMap7);
     }
     
-    public final void onServiceConnected(final ComponentName componentName, final IBinder binder) {
-        final bm1 e0 = this.E0;
-        if (binder == null) {
-            bm1.K(e0);
-            return;
-        }
-        synchronized (e0.P0) {
-            final bm1 e2 = this.E0;
-            final IInterface queryLocalInterface = binder.queryLocalInterface("com.google.android.gms.common.internal.IGmsServiceBroker");
-            Object q0;
-            if (queryLocalInterface != null && queryLocalInterface instanceof a2d) {
-                q0 = queryLocalInterface;
-            }
-            else {
-                q0 = new lay(binder);
-            }
-            e2.Q0 = (a2d)q0;
-            monitorexit(e0.P0);
-            final bm1 e3 = this.E0;
-            final int d0 = this.D0;
-            final uiy n0 = e3.N0;
-            ((Handler)n0).sendMessage(((Handler)n0).obtainMessage(7, d0, -1, (Object)new t6z(e3, 0)));
-        }
-    }
-    
-    public final void onServiceDisconnected(ComponentName componentName) {
-        componentName = (ComponentName)this.E0.P0;
-        synchronized (componentName) {
-            final bm1 e0 = this.E0;
-            e0.Q0 = null;
-            monitorexit(componentName);
-            componentName = (ComponentName)e0.N0;
-            ((Handler)componentName).sendMessage(((Handler)componentName).obtainMessage(6, this.D0, 1));
-        }
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final vsy vsy = (vsy)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

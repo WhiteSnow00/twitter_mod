@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonFocusRects extends fih<oeb>
+public class JsonFocusRects extends tih<pfb>
 {
     @JsonField
     public int a;
@@ -27,16 +27,17 @@ public class JsonFocusRects extends fih<oeb>
         this.d = -1;
     }
     
+    @Override
     public final /* bridge */ Object s() {
         return this.t();
     }
     
-    public final oeb t() {
-        final oeb$a oeb$a = new oeb$a();
-        oeb$a.a = this.a;
-        oeb$a.b = this.b;
-        oeb$a.c = this.c;
-        oeb$a.d = this.d;
-        return (oeb)((n4j)oeb$a).e();
+    public final pfb t() {
+        final pfb.a a = new pfb.a();
+        a.a = this.a;
+        a.b = this.b;
+        a.c = this.c;
+        a.d = this.d;
+        return (pfb)a.e();
     }
 }

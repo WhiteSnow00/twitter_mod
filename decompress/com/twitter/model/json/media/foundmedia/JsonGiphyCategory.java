@@ -8,24 +8,25 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonGiphyCategory extends fih<w2c>
+public class JsonGiphyCategory extends tih<y3c>
 {
     @JsonField(name = { "name" })
     public String a;
     @JsonField(name = { "name_encoded" })
     public String b;
     @JsonField(name = { "gif" })
-    public x2c c;
+    public z3c c;
     
+    @Override
     public final Object s() {
-        w2c w2c;
+        y3c y3c;
         if (this.a != null && this.b != null && this.c != null) {
-            w2c = new w2c();
+            y3c = new y3c();
         }
         else {
-            i48.t("JsonGiphyCategory");
-            w2c = null;
+            mqb.o("JsonGiphyCategory");
+            y3c = null;
         }
-        return w2c;
+        return y3c;
     }
 }

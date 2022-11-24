@@ -8,32 +8,32 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonUnhydratedTweetAttachedTopicFollowPrompt extends aih<d6t>
+public class JsonUnhydratedTweetAttachedTopicFollowPrompt extends tih<p7t>
 {
     @JsonField
-    public xwm a;
+    public fym a;
     @JsonField
-    public zcu b;
+    public feu b;
     @JsonField
-    public qzo c;
+    public b1p c;
     @JsonField
-    public cvs d;
+    public kws d;
     
     @Override
     public final Object s() {
-        final xwm a = this.a;
+        final fym a = this.a;
         Object o;
         if (a == null) {
-            zi.A("A JsonTweetAttachedTopicFollowPrompt must have a non-null description");
+            c0e.i("A JsonTweetAttachedTopicFollowPrompt must have a non-null description");
             o = null;
         }
         else {
-            final d6t.a a2 = new d6t.a();
-            a2.a = (xwm<xes>)a;
-            a2.b = this.b;
-            a2.c = this.c;
-            a2.d = this.d;
-            o = a2.e();
+            final p7t$a p7t$a = new p7t$a();
+            p7t$a.a = a;
+            p7t$a.b = this.b;
+            p7t$a.c = this.c;
+            p7t$a.d = this.d;
+            o = ((z4j)p7t$a).e();
         }
         return o;
     }

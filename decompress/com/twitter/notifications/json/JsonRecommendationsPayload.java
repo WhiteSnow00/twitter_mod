@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonRecommendationsPayload extends fih<i4m>
+public class JsonRecommendationsPayload extends tih<u4m>
 {
     @JsonField(name = { "impression_id" })
     public String a;
@@ -25,6 +25,7 @@ public class JsonRecommendationsPayload extends fih<i4m>
     @JsonField(name = { "media_url" })
     public String g;
     
+    @Override
     public final Object s() {
         final String a = this.a;
         final String b = this.b;
@@ -39,6 +40,6 @@ public class JsonRecommendationsPayload extends fih<i4m>
         if (g == null) {
             g = "";
         }
-        return new i4m(a, b, c, d, e, f, g);
+        return new u4m(a, b, c, d, e, f, g);
     }
 }

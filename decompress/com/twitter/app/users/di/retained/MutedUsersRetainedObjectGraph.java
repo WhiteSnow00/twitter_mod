@@ -6,7 +6,7 @@ package com.twitter.app.users.di.retained;
 
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@r4j
+@d5j
 public interface MutedUsersRetainedObjectGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
 }

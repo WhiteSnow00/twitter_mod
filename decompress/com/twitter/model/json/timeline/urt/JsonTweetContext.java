@@ -9,32 +9,32 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTweetContext extends aih<meu>
+public class JsonTweetContext extends tih<ufu>
 {
     @JsonField(name = { "contextType" })
-    public yde a;
+    public cee a;
     @JsonField
     public String b;
     @JsonField
     public List<String> c;
     @JsonField
-    public q7t d;
+    public c9t d;
     
     @Override
     public final Object s() {
-        final yde a = this.a;
-        meu meu;
+        final cee a = this.a;
+        ufu ufu;
         if (a != null) {
-            final meu$a meu$a = new meu$a();
-            meu$a.a = a.a;
-            meu$a.b = this.b;
-            meu$a.c = this.c;
-            meu$a.d = this.d;
-            meu = (meu)((h4j)meu$a).j();
+            final ufu.a a2 = new ufu.a();
+            a2.a = a.a;
+            a2.b = this.b;
+            a2.c = this.c;
+            a2.d = this.d;
+            ufu = (ufu)a2.j();
         }
         else {
-            meu = null;
+            ufu = null;
         }
-        return meu;
+        return ufu;
     }
 }

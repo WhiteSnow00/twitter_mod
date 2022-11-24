@@ -12,7 +12,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonGiphyImage extends fih<x2c>
+public class JsonGiphyImage extends tih<z3c>
 {
     public static final String[] d;
     public static final String[] e;
@@ -28,6 +28,7 @@ public class JsonGiphyImage extends fih<x2c>
         e = new String[] { "fixed_height_small", "fixed_width_small", "fixed_height_downsampled", "fixed_width_downsampled" };
     }
     
+    @Override
     public final Object s() {
         final String a = this.a;
         final Object o = null;
@@ -40,11 +41,11 @@ public class JsonGiphyImage extends fih<x2c>
                 final JsonMediaSizeVariant jsonMediaSizeVariant = this.c.get(d[i]);
                 if (jsonMediaSizeVariant != null) {
                     final int b = jsonMediaSizeVariant.b;
-                    sparseArray.put(b, (Object)new Pair((Object)edq.g(b, jsonMediaSizeVariant.c), (Object)jsonMediaSizeVariant.a));
+                    sparseArray.put(b, (Object)new Pair((Object)beq.g(b, jsonMediaSizeVariant.c), (Object)jsonMediaSizeVariant.a));
                 }
             }
             if (sparseArray.size() == 0) {
-                i48.t("JsonGiphyImage has no still image");
+                mqb.o("JsonGiphyImage has no still image");
                 o2 = o;
             }
             else {
@@ -71,24 +72,24 @@ public class JsonGiphyImage extends fih<x2c>
                     s = a2;
                 }
                 if (s == null) {
-                    i48.t("JsonGiphyImage has no thumbnail");
+                    mqb.o("JsonGiphyImage has no thumbnail");
                     o2 = o;
                 }
                 else {
                     final JsonMediaSizeVariant jsonMediaSizeVariant3 = this.c.get("original");
                     if (jsonMediaSizeVariant3 == null) {
-                        i48.t("JsonGiphyImage has original image");
+                        mqb.o("JsonGiphyImage has original image");
                         o2 = o;
                     }
                     else {
-                        edq.g(jsonMediaSizeVariant3.b, jsonMediaSizeVariant3.c);
-                        o2 = new Object();
+                        beq.g(jsonMediaSizeVariant3.b, jsonMediaSizeVariant3.c);
+                        o2 = new z3c();
                     }
                 }
             }
         }
         else {
-            i48.t("JsonGiphyImage has no id, url, or images");
+            mqb.o("JsonGiphyImage has no id, url, or images");
             o2 = o;
         }
         return o2;

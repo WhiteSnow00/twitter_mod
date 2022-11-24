@@ -62,7 +62,7 @@ public class MetricRegistry implements MetricSet
                 }
             }
         }
-        throw new IllegalArgumentException(l7k.c(s, " is already used for a different type of metric"));
+        throw new IllegalArgumentException(mqb.l(s, " is already used for a different type of metric"));
     }
     
     public static String name(final Class<?> clazz, final String... array) {
@@ -95,9 +95,9 @@ public class MetricRegistry implements MetricSet
         }
         else {
             if (!(metric instanceof Timer)) {
-                final StringBuilder g = w48.g("Unknown metric type: ");
-                g.append(metric.getClass());
-                throw new IllegalArgumentException(g.toString());
+                final StringBuilder f = ehk.f("Unknown metric type: ");
+                f.append(metric.getClass());
+                throw new IllegalArgumentException(f.toString());
             }
             metricRegistryListener.onTimerAdded(s, (Timer)metric);
         }
@@ -118,9 +118,9 @@ public class MetricRegistry implements MetricSet
         }
         else {
             if (!(metric instanceof Timer)) {
-                final StringBuilder g = w48.g("Unknown metric type: ");
-                g.append(metric.getClass());
-                throw new IllegalArgumentException(g.toString());
+                final StringBuilder f = ehk.f("Unknown metric type: ");
+                f.append(metric.getClass());
+                throw new IllegalArgumentException(f.toString());
             }
             metricRegistryListener.onTimerRemoved(s);
         }
@@ -228,7 +228,7 @@ public class MetricRegistry implements MetricSet
         }
         else {
             if (this.metrics.putIfAbsent(s, t) != null) {
-                throw new IllegalArgumentException(zi.y("A metric named ", s, " already exists"));
+                throw new IllegalArgumentException(c0e.h("A metric named ", s, " already exists"));
             }
             this.onMetricAdded(s, t);
         }

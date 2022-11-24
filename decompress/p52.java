@@ -1,19 +1,49 @@
-import kotlin.Metadata;
+import android.view.Menu;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-@Metadata(bv = {}, d1 = { "\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\b\u0007\u0018\u00002\u00020\u0001:\u0001\u0004B\u0007¢\u0006\u0004\b\u0002\u0010\u0003¨\u0006\u0005" }, d2 = { "Lp52;", "Le92;", "<init>", "()V", "a", "feature.tfa.bookmarks.implementation_release" }, k = 1, mv = { 1, 7, 1 })
-public final class p52 extends e92
+public final class p52 implements abi
 {
-    public static final p52.p52$a Companion;
+    public final q52 F0;
+    public final de6 G0;
     
-    static {
-        Companion = new p52.p52$a();
+    public p52(final q52 f0, final kcm kcm) {
+        e0e.f((Object)f0, "navigationDelegate");
+        e0e.f((Object)kcm, "releaseCompletable");
+        this.F0 = f0;
+        final de6 g0 = new de6();
+        kcm.i((sj)new o52(g0, 0));
+        this.G0 = g0;
     }
     
-    public p52() {
-        ((nv8)this).c2(2132017486);
+    public final boolean N2(final zai zai, final Menu menu) {
+        e0e.f((Object)zai, "navComponent");
+        e0e.f((Object)menu, "menu");
+        zai.z(2131689536, menu);
+        zai.setTitle(this.F0.e);
+        this.a(this.F0.d, menu);
+        final q52 f0 = this.F0;
+        this.G0.a(t5j.merge((fbj)f0.a, (fbj)f0.c).doOnNext((rk6)new z7w((Object)this, (Object)menu, (Object)zai, 1)).subscribe());
+        return true;
+    }
+    
+    public final void a(final r62$d r62$d, final Menu menu) {
+        final boolean b = r62$d instanceof r62$d.g;
+        boolean visible = true;
+        final boolean visible2 = b && !e0e.a((Object)((r62$d.g)r62$d).b, (Object)"0");
+        final boolean visible3 = r62$d instanceof r62$d.d;
+        if (!b || !e0e.a((Object)((r62$d.g)r62$d).b, (Object)"0")) {
+            visible = false;
+        }
+        menu.findItem(2131430021).setVisible(visible2);
+        menu.findItem(2131430004).setVisible(visible3);
+        menu.findItem(2131430005).setVisible(visible);
+    }
+    
+    public final int d2(final zai zai) {
+        e0e.f((Object)zai, "navComponent");
+        return 2;
     }
 }

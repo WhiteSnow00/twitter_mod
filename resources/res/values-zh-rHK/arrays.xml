@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>你將收到新推文的通知。</item>
-        <item>你將收到僅限新超級跟隨者的推文通知。</item>
+        <item>你將收到新訂閱推文的通知。</item>
         <item>你將收到新直播視訊推文的通知。</item>
         <item>你將收到新音訊空間推文的通知。</item>
         <item>你將不再收到新推文的通知。</item>
     </array>
     <array name="account_notif_options">
         <item>推文</item>
-        <item>僅限超級跟隨者的推文</item>
+        <item>僅限訂閱推文</item>
         <item>直播視訊</item>
         <item>音訊空間</item>
         <item>無</item>
     </array>
     <array name="account_notif_options_old">
         <item>所有推文</item>
-        <item>僅限超級跟隨推文</item>
+        <item>僅限訂閱推文</item>
         <item>僅限直播視訊</item>
         <item>僅限音訊空間</item>
         <item>關閉</item>
     </array>
     <array name="account_notif_subtitles">
         <item>收到此帳戶中所有推文的通知。</item>
-        <item>僅收到超級跟隨推文的通知。</item>
+        <item>僅收到訂閱推文的通知。</item>
         <item>僅收到直播的通知。</item>
         <item>僅收到音訊空間的通知。</item>
         <item>關閉此帳戶推文的通知。</item>

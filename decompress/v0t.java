@@ -2,46 +2,47 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class v0t extends kus implements usw
+public final class v0t
 {
-    public final t0t q;
+    public static final nmp<v0t> d;
+    public final q0t a;
+    public final t0t b;
+    public final gat c;
     
-    public v0t(final a a) {
-        super((kus.a)a, 43);
-        final t0t p = a.p;
-        pf8.r(p);
-        this.q = p;
+    static {
+        v0t.d = new v0t.v0t$b();
     }
     
-    public final a x() {
-        final a a = new a(this);
-        a.p = this.q;
-        return a;
+    public v0t(final q0t a, final t0t b, final gat c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public static final class a extends kus.a<v0t, a>
-    {
-        public t0t p;
-        
-        public a() {
+    public v0t(final v0t.v0t$a v0t$a) {
+        this.a = v0t$a.a;
+        this.b = v0t$a.b;
+        this.c = v0t$a.c;
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        boolean b = true;
+        if (this == o) {
+            return true;
         }
-        
-        public a(final kus kus) {
-            super(kus);
+        if (o != null && v0t.class == o.getClass()) {
+            final v0t v0t = (v0t)o;
+            if (!o5j.a((Object)this.a, (Object)v0t.a) || !o5j.a((Object)this.b, (Object)v0t.b) || !o5j.a((Object)this.c, (Object)v0t.c)) {
+                b = false;
+            }
+            return b;
         }
-        
-        public final Object i() {
-            return new v0t(this);
-        }
-        
-        @Override
-        public final boolean l() {
-            return super.l() && this.p != null;
-        }
-        
-        public final a o(final t0t p) {
-            this.p = p;
-            return this;
-        }
+        return false;
+    }
+    
+    @Override
+    public final int hashCode() {
+        return o5j.h((Object)this.a, (Object)this.b, (Object)this.c);
     }
 }

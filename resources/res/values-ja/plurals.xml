@@ -237,8 +237,8 @@
         <item quantity="other">%d人タグ付けされています</item>
     </plurals>
     <plurals name="member_count">
-        <item quantity="one">%s メンバー</item>
-        <item quantity="other">%s メンバー</item>
+        <item quantity="one">%s 人のメンバー</item>
+        <item quantity="other">%s 人のメンバー</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d分</item>
@@ -305,8 +305,8 @@
         <item quantity="other">他%d人</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">スーパーフォロワー</item>
-        <item quantity="other">スーパーフォロワー</item>
+        <item quantity="one">サブスクライバー</item>
+        <item quantity="other">サブスクライバー</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">いいね %s</item>
@@ -402,7 +402,7 @@
         <item quantity="other">返信先: ﻿%1$sさん、他%2$d人﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">返信先: ﻿%1$sさん、他%2$d人﻿。返信は他のスーパーフォロワーにも表示されます。</item>
+        <item quantity="other">返信先: ﻿%1$sさん、他%2$d人﻿。返信は他のサブスクライバーにも表示されます。</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">返信先: ﻿%3$s﻿の﻿%1$sさんと他%2$d人﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">返信先: ﻿%1$sさん、%2$sさん、他%3$d人﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">返信先: ﻿%1$sさん、%2$sさん、他%3$d人﻿。返信は他のスーパーフォロワーにも表示されます。</item>
+        <item quantity="other">返信先: ﻿%1$sさん、%2$sさん、他%3$d人﻿。返信は他のサブスクライバーにも表示されます。</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">返信先: ﻿%4$s﻿の﻿%1$sさん、%2$sさん、他%3$d人﻿</item>

@@ -1,89 +1,104 @@
-import java.util.Iterator;
-import com.google.android.gms.internal.measurement.zzd;
-import java.util.List;
-import java.util.Collections;
-import java.util.concurrent.Callable;
+import java.io.IOException;
+import java.util.Arrays;
+import java.io.InputStream;
+import java.io.FilterInputStream;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jny
+public final class jny extends FilterInputStream
 {
-    public final m2z a;
-    public z6z b;
-    public final gay c;
-    public final b100 d;
+    public final qwy F0;
+    public byte[] G0;
+    public long H0;
+    public boolean I0;
+    public boolean J0;
     
-    public jny() {
-        final m2z a = new m2z();
-        this.a = a;
-        this.b = a.b.c();
-        this.c = new gay();
-        this.d = new b100();
-        a.d.a("internal.registerCallback", (Callable)new mby((Object)this, 1));
-        a.d.a("internal.eventLogger", (Callable)new xhy((Object)this, 0));
+    public jny(final InputStream inputStream) {
+        super(inputStream);
+        this.F0 = new qwy();
+        this.G0 = new byte[4096];
+        this.I0 = false;
+        this.J0 = false;
     }
     
-    public final void a(final q9z q9z) throws zzd {
-        try {
-            this.b = this.a.b.c();
-            if (!(this.a.a(this.b, (eaz[])q9z.u().toArray(new eaz[0])) instanceof vby)) {
-                for (final k9z k9z : q9z.s().v()) {
-                    final List u = k9z.u();
-                    final String t = k9z.t();
-                    final Iterator iterator2 = u.iterator();
-                    while (iterator2.hasNext()) {
-                        final pey a = this.a.a(this.b, new eaz[] { (eaz)iterator2.next() });
-                        if (!(a instanceof udy)) {
-                            throw new IllegalArgumentException("Invalid rule definition");
-                        }
-                        final z6z b = this.b;
-                        lcy lcy;
-                        if (!b.i(t)) {
-                            lcy = null;
-                        }
-                        else {
-                            final pey f = b.f(t);
-                            if (!(f instanceof lcy)) {
-                                throw new IllegalStateException("Invalid function name: ".concat(String.valueOf(t)));
-                            }
-                            lcy = (lcy)f;
-                        }
-                        if (lcy == null) {
-                            throw new IllegalStateException("Rule function is undefined: ".concat(String.valueOf(t)));
-                        }
-                        lcy.a(this.b, (List)Collections.singletonList(a));
-                    }
-                }
-                return;
+    public final v1z a() throws IOException {
+        if (this.H0 > 0L) {
+            byte[] g0;
+            do {
+                g0 = this.G0;
+            } while (this.read(g0, 0, g0.length) != -1);
+        }
+        if (this.I0 || this.J0) {
+            return (v1z)new mmy((String)null, -1L, -1, false, false, (byte[])null);
+        }
+        if (!this.c(30)) {
+            this.I0 = true;
+            return this.F0.b();
+        }
+        final v1z b = this.F0.b();
+        final mmy mmy = (mmy)b;
+        if (mmy.e) {
+            this.J0 = true;
+            return b;
+        }
+        if (mmy.b == 4294967295L) {
+            throw new vqy("Files bigger than 4GiB are not supported.");
+        }
+        final int n = this.F0.f - 30;
+        final long n2 = n;
+        int length = this.G0.length;
+        if (n2 > length) {
+            int n3;
+            do {
+                n3 = (length += length);
+            } while (n3 < n2);
+            this.G0 = Arrays.copyOf(this.G0, n3);
+        }
+        if (!this.c(n)) {
+            this.I0 = true;
+            return this.F0.b();
+        }
+        final v1z b2 = this.F0.b();
+        this.H0 = ((mmy)b2).b;
+        return b2;
+    }
+    
+    public final int b(final byte[] array, final int n, final int n2) throws IOException {
+        return Math.max(0, super.read(array, n, n2));
+    }
+    
+    public final boolean c(final int n) throws IOException {
+        final int b = this.b(this.G0, 0, n);
+        if (b != n) {
+            final int n2 = n - b;
+            if (this.b(this.G0, b, n2) != n2) {
+                this.F0.a(this.G0, 0, b);
+                return false;
             }
-            throw new IllegalStateException("Program loading failed");
         }
-        finally {
-            final Throwable t2;
-            throw new zzd(t2);
-        }
+        this.F0.a(this.G0, 0, n);
+        return true;
     }
     
-    public final void b(final String s, final Callable callable) {
-        this.a.d.a(s, callable);
+    @Override
+    public final int read(final byte[] array) throws IOException {
+        return this.read(array, 0, array.length);
     }
     
-    public final boolean c(final x9y a) throws zzd {
-        try {
-            final gay c = this.c;
-            c.a = a;
-            c.b = a.a();
-            c.c.clear();
-            this.a.c.h("runtime.counter", (pey)new jcy(Double.valueOf(0.0)));
-            this.d.a(this.b.c(), this.c);
-            final gay c2 = this.c;
-            return (c2.b.equals((Object)c2.a) ^ true) || (this.c.c.isEmpty() ^ true);
+    @Override
+    public final int read(final byte[] array, int n, int b) throws IOException {
+        final long h0 = this.H0;
+        if (h0 > 0L && !this.I0) {
+            b = this.b(array, n, (int)Math.min(h0, b));
+            this.H0 -= b;
+            if ((n = b) == 0) {
+                this.I0 = true;
+                n = 0;
+            }
+            return n;
         }
-        finally {
-            final Throwable t;
-            throw new zzd(t);
-        }
+        return -1;
     }
 }

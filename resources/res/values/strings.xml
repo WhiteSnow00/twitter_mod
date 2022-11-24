@@ -927,7 +927,7 @@
     <string name="collab_search_clear">Clear</string>
     <string name="collab_search_hint">Search for a person or brand</string>
     <string name="collab_search_label">Invite a CoTweeter</string>
-    <string name="com.crashlytics.android.build_id">3d9a958780ee485bb532981c955bf9c3</string>
+    <string name="com.crashlytics.android.build_id">ed10a705baff4cdfb5ddea298550c566</string>
     <string name="comma_separator">, </string>
     <string name="commerce_shop_component_content_description">%1$s shop</string>
     <string name="common_google_play_services_enable_button">Enable</string>

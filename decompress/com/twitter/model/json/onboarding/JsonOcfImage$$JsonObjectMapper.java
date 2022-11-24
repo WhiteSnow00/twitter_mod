@@ -10,59 +10,59 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfImage$$JsonObjectMapper extends JsonMapper<JsonOcfImage>
 {
-    public static JsonOcfImage _parse(final tge tge) throws IOException {
+    public static JsonOcfImage _parse(final qhe qhe) throws IOException {
         final JsonOcfImage jsonOcfImage = new JsonOcfImage();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfImage, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfImage, d, qhe);
+            qhe.m0();
         }
         return jsonOcfImage;
     }
     
-    public static void _serialize(final JsonOcfImage jsonOcfImage, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfImage jsonOcfImage, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         if (jsonOcfImage.a != null) {
-            LoganSquare.typeConverterFor((Class)z6d.class).serialize((Object)jsonOcfImage.a, "image_info", true, afe);
+            LoganSquare.typeConverterFor((Class)b8d.class).serialize((Object)jsonOcfImage.a, "image_info", true, yfe);
         }
-        afe.t0("placeholder", jsonOcfImage.b);
+        yfe.u0("placeholder", jsonOcfImage.b);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfImage jsonOcfImage, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfImage jsonOcfImage, final String s, final qhe qhe) throws IOException {
         if ("image_info".equals(s)) {
-            jsonOcfImage.a = (z6d)LoganSquare.typeConverterFor((Class)z6d.class).parse(tge);
+            jsonOcfImage.a = (b8d)LoganSquare.typeConverterFor((Class)b8d.class).parse(qhe);
         }
         else if ("placeholder".equals(s)) {
-            jsonOcfImage.b = tge.T((String)null);
+            jsonOcfImage.b = qhe.T((String)null);
         }
     }
     
-    public JsonOcfImage parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfImage parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfImage jsonOcfImage, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfImage, afe, b);
+    public void serialize(final JsonOcfImage jsonOcfImage, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfImage, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfImage)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfImage)o, yfe, b);
     }
 }

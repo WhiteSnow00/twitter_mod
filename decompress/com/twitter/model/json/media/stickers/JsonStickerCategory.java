@@ -11,52 +11,53 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonStickerCategory extends fih<bir>
+public class JsonStickerCategory extends tih<xir>
 {
     @JsonField
     public long a;
     @JsonField
     public String b;
     @JsonField
-    public bhr c;
+    public xhr c;
     @JsonField
     public long d;
     @JsonField
-    public List<eir> e;
+    public List<ajr> e;
     @JsonField
     public String f;
     @JsonField
     public String g;
-    @JsonField(typeConverter = iie.class)
+    @JsonField(typeConverter = eje.class)
     public Date h;
-    @JsonField(typeConverter = iie.class)
+    @JsonField(typeConverter = eje.class)
     public Date i;
     
+    @Override
     public final Object s() {
         final long a = this.a;
         if (a == 0L) {
-            i48.t("JsonStickerCategory must have an annotation id");
+            mqb.o("JsonStickerCategory must have an annotation id");
         }
         else {
             final long d = this.d;
             if (d != 0L) {
-                final List g = gdd.g((List)this.e);
+                final List g = ged.g((List)this.e);
                 String b;
                 if ((b = this.b) == null) {
                     b = "";
                 }
-                final bhr c = this.c;
+                final xhr c = this.c;
                 final boolean equals = "promoted".equals(this.f);
                 final String g2 = this.g;
                 final Date h = this.h;
                 final Date i = this.i;
-                rqs c2;
+                krs c2;
                 if (h == null) {
                     if (i == null) {
-                        c2 = rqs.c;
+                        c2 = krs.c;
                     }
                     else {
-                        c2 = new rqs(0L, i.getTime());
+                        c2 = new krs(0L, i.getTime());
                     }
                 }
                 else {
@@ -68,11 +69,11 @@ public class JsonStickerCategory extends fih<bir>
                     else {
                         time2 = i.getTime();
                     }
-                    c2 = new rqs(time, time2);
+                    c2 = new krs(time, time2);
                 }
-                return new bir(d, a, g, b, c, 0, equals, g2, c2);
+                return new xir(d, a, g, b, c, 0, equals, g2, c2);
             }
-            i48.t("JsonStickerCategory must have an id");
+            mqb.o("JsonStickerCategory must have an id");
         }
         return null;
     }

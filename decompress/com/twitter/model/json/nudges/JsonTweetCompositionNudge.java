@@ -9,19 +9,20 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTweetCompositionNudge extends fih<bfu>
+public class JsonTweetCompositionNudge extends tih<qfu>
 {
     @JsonField
-    public b0j.b a;
+    public o0j$b a;
     
+    @Override
     public final Object s() {
-        final b0j.b a = this.a;
+        final o0j$b a = this.a;
         Object o;
         if (a == null) {
             o = null;
         }
         else {
-            o = new bfu(a);
+            o = new qfu(a);
         }
         return o;
     }

@@ -1,37 +1,23 @@
-import java.util.Objects;
+import com.twitter.ui.user.UserView;
+import com.twitter.util.user.UserIdentifier;
+import androidx.fragment.app.p;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gpx extends gue implements jub<jkh, m76, Integer, jkh>
+public final class gpx extends w9t
 {
-    public gpx() {
-        super(3);
+    public gpx(final Context context, final p p10, final oc1 oc1, final tsc tsc, final UserIdentifier userIdentifier, final dsb dsb, final fci fci, final sfv sfv, final glq glq, final nlq nlq) {
+        super(context, p10, oc1, tsc, userIdentifier, dsb, fci, (y81)null, sfv, true, false, glq, nlq);
     }
     
-    public final Object h0(Object o, Object y, final Object o2) {
-        final jkh jkh = (jkh)o;
-        final m76 m76 = (m76)y;
-        lf.x((Number)o2, jkh, "$this$composed", m76, 359872873);
-        final ea6$b a = ea6.a;
-        final epx c = epx.Companion.c(m76);
-        m76.x(1157296644);
-        final boolean p3 = m76.P((Object)c);
-        y = m76.y();
-        Label_0106: {
-            if (!p3) {
-                Objects.requireNonNull(m76.Companion);
-                if ((o = y) != m76$a.b) {
-                    break Label_0106;
-                }
-            }
-            o = new hsd((tox)c.c);
-            m76.p(o);
-        }
-        m76.O();
-        final hsd hsd = (hsd)o;
-        m76.O();
-        return hsd;
+    public final void i(final UserView userView) {
+        this.h(userView, super.a, "user", "follow");
+    }
+    
+    public final void j(final UserView userView) {
+        this.h(userView, super.a, "user", "unfollow");
     }
 }

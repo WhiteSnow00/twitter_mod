@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Je ontvangt meldingen voor nieuwe Tweets.</item>
-        <item>Je ontvangt meldingen voor nieuwe Tweets alleen voor Supervolgers.</item>
+        <item>Je ontvangt meldingen voor nieuwe Abonnemententweets.</item>
         <item>Je ontvangt meldingen voor nieuwe live-videotweets.</item>
         <item>Je ontvangt meldingen voor nieuwe Tweets over Spaces.</item>
         <item>Je ontvangt geen meldingen meer voor nieuwe Tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Tweets alleen voor Supervolgers</item>
+        <item>Uitsluitend Abonnemententweets</item>
         <item>Live-video</item>
         <item>Spaces</item>
         <item>Geen</item>
     </array>
     <array name="account_notif_options_old">
         <item>Alle Tweets</item>
-        <item>Alleen Tweets voor Supervolgers</item>
+        <item>Uitsluitend Abonnemententweets</item>
         <item>Alleen live-video</item>
         <item>Alleen Spaces</item>
         <item>Uit</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Meldingen ontvangen voor alle Tweets van dit account.</item>
-        <item>Krijg alleen meldingen voor Tweets voor Supervolgers.</item>
+        <item>Ontvang uitsluitend meldingen voor Abonnemententweets.</item>
         <item>Alleen meldingen ontvangen voor live-uitzendingen.</item>
         <item>Krijg alleen meldingen voor Spaces.</item>
         <item>Meldingen uitschakelen voor alle Tweets van dit account.</item>

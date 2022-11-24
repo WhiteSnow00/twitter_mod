@@ -1,20 +1,12 @@
-import androidx.viewpager.widget.ViewPager;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class iyf extends ste implements qsb<fzv, ViewPager>
+public interface iyf extends gr0
 {
-    public final jyf D0;
+    rl2 D3();
     
-    public iyf(final jyf d0) {
-        this.D0 = d0;
-        super(1);
-    }
+    di2 k1();
     
-    public final Object invoke(final Object o) {
-        czd.f((Object)o, "it");
-        return this.D0.b;
-    }
+    sh2 n2();
 }

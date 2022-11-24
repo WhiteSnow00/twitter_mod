@@ -8,30 +8,30 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineInterestTopic extends aih<kws>
+public class JsonTimelineInterestTopic extends tih<sxs>
 {
     @JsonField
     public String a;
     @JsonField
-    public gxd b;
-    @JsonField(typeConverter = vlt.class)
+    public lxd b;
+    @JsonField(typeConverter = ent.class)
     public int c;
-    @JsonField(typeConverter = jlt.class)
+    @JsonField(typeConverter = smt.class)
     public int d;
     
     @Override
     public final Object s() {
         if (this.b != null) {
-            u4c.d().o(this.b);
+            y4c.d().o(this.b);
             this.a = this.b.a;
         }
-        kws kws;
-        if (pjr.g((CharSequence)this.a)) {
-            kws = new kws(this.a, this.c, this.d);
+        sxs sxs;
+        if (flr.g((CharSequence)this.a)) {
+            sxs = new sxs(this.a, this.c, this.d);
         }
         else {
-            kws = null;
+            sxs = null;
         }
-        return kws;
+        return sxs;
     }
 }

@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSruResponse extends fih<z4r>
+public class JsonSruResponse extends tih<y5r>
 {
     @JsonField
     public long a;
@@ -20,9 +20,10 @@ public class JsonSruResponse extends fih<z4r>
     @JsonField
     public JsonProcessingInfo d;
     
+    @Override
     public final Object s() {
         final JsonProcessingInfo d = this.d;
-        z4r z4r;
+        y5r y5r;
         if (d == null) {
             final long a = this.a;
             int n;
@@ -32,11 +33,11 @@ public class JsonSruResponse extends fih<z4r>
             else {
                 n = 0;
             }
-            z4r = new z4r(a, n, 0, 0, null);
+            y5r = new y5r(a, n, 0, 0, null);
         }
         else {
-            z4r = new z4r(this.a, d.a, d.b, d.c, d.d);
+            y5r = new y5r(this.a, d.a, d.b, d.c, d.d);
         }
-        return z4r;
+        return y5r;
     }
 }

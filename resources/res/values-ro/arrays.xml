@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Vei primi notificări pentru Tweeturile noi.</item>
-        <item>Vei primi notificări pentru Tweeturile destinate doar Super-urmăritorilor.</item>
+        <item>Vei primi notificări pentru Tweeturile noi pentru Abonați.</item>
         <item>Vei primi notificări pentru Tweeturile noi cu videoclipuri în direct.</item>
         <item>Vei primi notificări pentru Tweeturile noi cu Spații.</item>
         <item>Nu vei mai primi notificări pentru Tweeturile noi.</item>
     </array>
     <array name="account_notif_options">
         <item>(de) Tweeturi</item>
-        <item>Tweeturi doar de la Super-urmăritor</item>
+        <item>Tweeturi doar pentru Abonați</item>
         <item>Videoclip în direct</item>
         <item>Spații</item>
         <item>Niciuna</item>
     </array>
     <array name="account_notif_options_old">
         <item>Toate Tweeturile</item>
-        <item>Doar Tweeturile de la Super-urmăritori</item>
+        <item>Doar Tweeturi pentru Abonați</item>
         <item>Doar videoclipuri în direct</item>
         <item>Doar Spații</item>
         <item>Dezactivat</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Primește notificări pentru toate Tweeturile acestui cont.</item>
-        <item>Primește notificări doar pentru Tweeturile de la Super-urmăritori.</item>
+        <item>Primești notificări doar pentru Tweeturile pentru Abonați.</item>
         <item>Primește notificări doar pentru transmisiunile în direct.</item>
         <item>Primește notificări doar pentru Spații.</item>
         <item>Dezactivează notificările pentru Tweeturile de la acest cont.</item>

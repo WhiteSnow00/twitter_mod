@@ -311,8 +311,8 @@
         <item quantity="other">ďalší (%d)</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Supersledujúci</item>
-        <item quantity="other">Supersledujúci</item>
+        <item quantity="one">Predplatiteľ</item>
+        <item quantity="other">Predplatitelia</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s označenie „Páči sa mi to“</item>
@@ -408,7 +408,7 @@
         <item quantity="other">Odpovedáte používateľovi ﻿%1$s a %2$d ďalším﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Odpovedáte používateľovi ﻿%1$s a ďalším %2$d﻿. Vaša odpoveď sa bude zobrazovať aj ostatným supersledujúcim.</item>
+        <item quantity="other">Odpovedáte používateľovi ﻿%1$s a %2$d ďalším﻿. Vašu odpoveď budú vidieť aj ďalší Predplatitelia.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Odpovedáte používateľovi ﻿%1$s a %2$d ďalším﻿ v Priestore ﻿%3$s﻿</item>
@@ -417,7 +417,7 @@
         <item quantity="other">Odpovedáte používateľom ﻿%1$s, %2$s a %3$d ďalším﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Odpovedáte používateľovi ﻿%1$s %2$s a %3$d ďalším﻿. Vaša odpoveď sa bude zobrazovať aj ostatným supersledujúcim.</item>
+        <item quantity="other">Odpovedáte používateľom ﻿%1$s %2$s a %3$d ďalším﻿. Vašu odpoveď budú vidieť aj ďalší predplatitelia.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Odpovedáte používateľom ﻿%1$s, %2$s a %3$d ďalším﻿ v Priestore ﻿%4$s﻿</item>

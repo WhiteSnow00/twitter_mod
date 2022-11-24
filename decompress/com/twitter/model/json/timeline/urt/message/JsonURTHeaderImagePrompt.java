@@ -8,30 +8,30 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTHeaderImagePrompt extends aih<gqv>
+public class JsonURTHeaderImagePrompt extends tih<nrv>
 {
     @JsonField
     public String a;
     @JsonField
-    public xwm b;
+    public fym b;
     @JsonField
     public String c;
     @JsonField
-    public xwm d;
+    public fym d;
     @JsonField
-    public dpv e;
+    public lqv e;
     @JsonField
-    public fpv f;
+    public nqv f;
     @JsonField
-    public fpv g;
+    public nqv g;
     @JsonField
-    public apv h;
+    public iqv h;
     
     @Override
     public final Object s() {
         Object o;
         if (this.e == null) {
-            xpa.p("JsonURTHeaderImagePrompt has no image");
+            mqb.o("JsonURTHeaderImagePrompt has no image");
             o = null;
         }
         else {
@@ -39,7 +39,7 @@ public class JsonURTHeaderImagePrompt extends aih<gqv>
             if ((a = this.a) == null) {
                 a = "";
             }
-            o = new gqv(a, this.c, this.f, this.g, this.e, this.h, this.b, this.d);
+            o = new nrv(a, this.c, this.f, this.g, this.e, this.h, this.b, this.d);
         }
         return o;
     }

@@ -8,21 +8,21 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonUrlNavigateBehavior extends aih<snv$d>
+public class JsonUrlNavigateBehavior extends tih<cpv.d>
 {
     @JsonField
-    public q7t a;
+    public c9t a;
     
     @Override
     public final Object s() {
-        final q7t a = this.a;
-        snv$d snv$d;
+        final c9t a = this.a;
+        Object o;
         if (a != null) {
-            snv$d = new snv$d(a);
+            o = new cpv.d(a);
         }
         else {
-            snv$d = null;
+            o = null;
         }
-        return snv$d;
+        return o;
     }
 }

@@ -1,49 +1,201 @@
+import java.util.Map;
+import java.util.List;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class g90 extends gue implements jub<za0, m76, Integer, oyv>
+public final class g90 implements zqg
 {
-    public final /* synthetic */ j90<Object> C0;
-    public final /* synthetic */ Object D0;
-    public final /* synthetic */ lub<za0, Object, m76, Integer, oyv> E0;
-    public final /* synthetic */ int F0;
-    public final /* synthetic */ uhq<Object> G0;
+    public final h90<?> a;
     
-    public g90(final j90<Object> c0, final Object d0, final lub<? super za0, Object, ? super m76, ? super Integer, oyv> e0, final int f0, final uhq<Object> g0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = (lub<za0, Object, m76, Integer, oyv>)e0;
-        this.F0 = f0;
-        this.G0 = g0;
-        super(3);
+    public g90(final h90<?> a) {
+        this.a = a;
     }
     
-    public final Object h0(final Object o, final Object o2, final Object o3) {
-        final za0 za0 = (za0)o;
-        final m76 m76 = (m76)o2;
-        final int intValue = ((Number)o3).intValue();
-        zzd.f((Object)za0, "$this$AnimatedVisibility");
-        int n = intValue;
-        if ((intValue & 0xE) == 0x0) {
-            int n2;
-            if (m76.P((Object)za0)) {
-                n2 = 4;
-            }
-            else {
-                n2 = 2;
-            }
-            n = (intValue | n2);
-        }
-        if ((n & 0x5B) == 0x12 && m76.i()) {
-            m76.H();
+    @Override
+    public final int a(final b0e b0e, final List<? extends jzd> list, int intValue) {
+        e0e.f((Object)b0e, "<this>");
+        final Integer n = (Integer)glp.D0(glp.B0(rr4.s1((Iterable)list), (stb)new g90$b(intValue)));
+        if (n != null) {
+            intValue = n;
         }
         else {
-            final ea6$b a = ea6.a;
-            jgw.c((Object)za0, (rtb)new f90((uhq)this.G0, this.D0, (j90)this.C0), m76);
-            this.C0.d.put(this.D0, ((ab0)za0).a);
-            this.E0.I((Object)za0, this.D0, (Object)m76, (Object)((n & 0xE) | (this.F0 >> 9 & 0x380)));
+            intValue = 0;
         }
-        return oyv.a;
+        return intValue;
+    }
+    
+    @Override
+    public final arg b(final crg crg, final List<? extends wqg> list, long f) {
+        e0e.f((Object)crg, "$this$measure");
+        e0e.f((Object)list, "measurables");
+        int size = list.size();
+        final khk[] array = new khk[size];
+        final int size2 = list.size();
+        final int n = 0;
+        int n2 = 0;
+        khk khk;
+        while (true) {
+            khk = null;
+            h90$a h90$a = null;
+            boolean b = true;
+            if (n2 >= size2) {
+                break;
+            }
+            final wqg wqg = list.get(n2);
+            final Object m = ((jzd)wqg).m();
+            if (m instanceof h90$a) {
+                h90$a = (h90$a)m;
+            }
+            if (h90$a == null || !h90$a.F0) {
+                b = false;
+            }
+            if (b) {
+                array[n2] = wqg.W(f);
+            }
+            ++n2;
+        }
+        for (int size3 = list.size(), i = 0; i < size3; ++i) {
+            final wqg wqg2 = list.get(i);
+            if (array[i] == null) {
+                array[i] = wqg2.W(f);
+            }
+        }
+        khk khk2;
+        if (size == 0) {
+            khk2 = null;
+        }
+        else {
+            khk khk3 = array[0];
+            final int n3 = size - 1;
+            if (n3 == 0) {
+                khk2 = khk3;
+            }
+            else {
+                int f2;
+                if (khk3 != null) {
+                    f2 = khk3.F0;
+                }
+                else {
+                    f2 = 0;
+                }
+                final gud j = ((iud)new kud(1, n3)).j();
+                int n4 = f2;
+                while (true) {
+                    khk2 = khk3;
+                    if (!((jud)j).H0) {
+                        break;
+                    }
+                    final khk khk4 = array[j.a()];
+                    int f3;
+                    if (khk4 != null) {
+                        f3 = khk4.F0;
+                    }
+                    else {
+                        f3 = 0;
+                    }
+                    if (n4 >= f3) {
+                        continue;
+                    }
+                    khk3 = khk4;
+                    n4 = f3;
+                }
+            }
+        }
+        int f4;
+        if (khk2 != null) {
+            f4 = khk2.F0;
+        }
+        else {
+            f4 = 0;
+        }
+        khk khk5;
+        if (size == 0) {
+            khk5 = khk;
+        }
+        else {
+            khk khk6 = array[0];
+            if (--size == 0) {
+                khk5 = khk6;
+            }
+            else {
+                int g0;
+                if (khk6 != null) {
+                    g0 = khk6.G0;
+                }
+                else {
+                    g0 = 0;
+                }
+                final gud k = ((iud)new kud(1, size)).j();
+                int n5 = g0;
+                while (true) {
+                    khk5 = khk6;
+                    if (!((jud)k).H0) {
+                        break;
+                    }
+                    final khk khk7 = array[k.a()];
+                    int g2;
+                    if (khk7 != null) {
+                        g2 = khk7.G0;
+                    }
+                    else {
+                        g2 = 0;
+                    }
+                    if (n5 >= g2) {
+                        continue;
+                    }
+                    khk6 = khk7;
+                    n5 = g2;
+                }
+            }
+        }
+        int g3 = n;
+        if (khk5 != null) {
+            g3 = khk5.G0;
+        }
+        final h90<?> a = this.a;
+        f = shw.f(f4, g3);
+        ((cjq<nud>)a.c).setValue(new nud(f));
+        return crg.J(f4, g3, (Map)m3a.F0, (stb)new g90$c(array, this, f4, g3));
+    }
+    
+    @Override
+    public final int c(final b0e b0e, final List<? extends jzd> list, int intValue) {
+        e0e.f((Object)b0e, "<this>");
+        final Integer n = (Integer)glp.D0(glp.B0(rr4.s1((Iterable)list), (stb)new g90$e(intValue)));
+        if (n != null) {
+            intValue = n;
+        }
+        else {
+            intValue = 0;
+        }
+        return intValue;
+    }
+    
+    @Override
+    public final int d(final b0e b0e, final List<? extends jzd> list, int intValue) {
+        e0e.f((Object)b0e, "<this>");
+        final Integer n = (Integer)glp.D0(glp.B0(rr4.s1((Iterable)list), (stb)new g90$a(intValue)));
+        if (n != null) {
+            intValue = n;
+        }
+        else {
+            intValue = 0;
+        }
+        return intValue;
+    }
+    
+    @Override
+    public final int e(final b0e b0e, final List<? extends jzd> list, int intValue) {
+        e0e.f((Object)b0e, "<this>");
+        final Integer n = (Integer)glp.D0(glp.B0(rr4.s1((Iterable)list), (stb)new g90$d(intValue)));
+        if (n != null) {
+            intValue = n;
+        }
+        else {
+            intValue = 0;
+        }
+        return intValue;
     }
 }

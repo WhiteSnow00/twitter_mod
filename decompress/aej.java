@@ -1,28 +1,32 @@
+import java.util.Map;
+import java.util.Locale;
+import java.util.LinkedHashMap;
+import java.util.Objects;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class aej extends rj8<xyo, pmi>
+public final class aej extends wkr<zdj>
 {
     public aej() {
-        super(pmi.class, "ocf_open_link_callback_path");
-    }
-    
-    public final int g() {
-        return 1;
-    }
-    
-    @Override
-    public final void i(final qrc.a a, final Object o) {
-        final xyo xyo = (xyo)o;
-        final StringBuilder g = w48.g("/1.1/onboarding/");
-        g.append(xyo.a);
-        a.b.append(g.toString());
-        final int a2 = w4j.a;
-        a.e = xrc$b.F0;
-        final Long b = xyo.b;
-        if (b != null) {
-            a.c("timestampMs", b);
+        final zdj h0 = zdj.H0;
+        Objects.requireNonNull(zdj.Companion);
+        final zdj[] values = zdj.values();
+        int e;
+        if ((e = vmw.E(values.length)) < 16) {
+            e = 16;
         }
+        final LinkedHashMap linkedHashMap = new LinkedHashMap(e);
+        for (int i = 0; i < values.length; ++i) {
+            final zdj zdj = values[i];
+            final String name = ((Enum)zdj).name();
+            final Locale english = Locale.ENGLISH;
+            e0e.e((Object)english, "ENGLISH");
+            final String lowerCase = name.toLowerCase(english);
+            e0e.e((Object)lowerCase, "this as java.lang.String).toLowerCase(locale)");
+            linkedHashMap.put((Object)lowerCase, (Object)zdj);
+        }
+        super((Object)h0, (Map)linkedHashMap);
     }
 }

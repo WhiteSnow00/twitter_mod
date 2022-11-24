@@ -2,25 +2,11 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e1p
+public interface e1p<T extends d1p>
 {
-    public static final alp<e1p> b;
-    public final String a;
+    void a(final T p0, final long p1);
     
-    static {
-        e1p.b = new e1p.e1p$b();
-    }
+    void b(final T p0, final long p1);
     
-    public e1p(final a a) {
-        this.a = a.a;
-    }
-    
-    public static final class a extends h4j<e1p>
-    {
-        public String a;
-        
-        public final Object i() {
-            return new e1p(this);
-        }
-    }
+    void c(final T p0, final long p1);
 }

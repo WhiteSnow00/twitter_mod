@@ -1,46 +1,24 @@
+import java.util.Map;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class g4u extends y4j<e4u>
+public final class g4u<K, V> extends a4u<K, V, Map.Entry<K, V>>
 {
-    public static final g4u b;
-    public static final rlp<String> c;
+    public final x8k I0;
     
-    static {
-        b = new g4u();
-        g4u.c = lw6.f;
+    public g4u(final x8k i0) {
+        e0e.f((Object)i0, "parentIterator");
+        this.I0 = i0;
     }
     
-    public g4u() {
-        super(2);
-    }
-    
-    public final Object d(final vlp vlp, final int n) {
-        czd.f((Object)vlp, "input");
-        final long y = vlp.y();
-        final String a = vlp.A();
-        czd.e((Object)a, "input.readNotNullString()");
-        final long y2 = vlp.y();
-        if (n < 1) {
-            vlp.y();
-        }
-        if (n < 2) {
-            vlp.s();
-        }
-        final Object z = vlp.z((rlp)g4u.c);
-        czd.e(z, "input.readNotNullObject(MetadataSerializer)");
-        final String s = (String)z;
-        if (n < 1) {
-            vlp.y();
-        }
-        return new e4u(y, a, y2, s);
-    }
-    
-    public final void f(final wlp wlp, final Object o) {
-        final e4u e4u = (e4u)o;
-        czd.f((Object)wlp, "output");
-        czd.f((Object)e4u, "entry");
-        wlp.y(e4u.c).E(e4u.d).y(e4u.e).A((Object)e4u.f, (rlp)g4u.c);
+    @Override
+    public final Object next() {
+        final int h0 = super.H0 + 2;
+        super.H0 = h0;
+        final x8k i0 = this.I0;
+        final Object[] f0 = super.F0;
+        return new quh(i0, f0[h0 - 2], f0[h0 - 1]);
     }
 }

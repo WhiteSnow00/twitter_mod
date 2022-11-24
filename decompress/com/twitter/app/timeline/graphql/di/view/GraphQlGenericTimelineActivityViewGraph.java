@@ -6,7 +6,7 @@ package com.twitter.app.timeline.graphql.di.view;
 
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 
-@r4j
+@d5j
 public interface GraphQlGenericTimelineActivityViewGraph extends TwitterFragmentActivityViewObjectGraph
 {
 }

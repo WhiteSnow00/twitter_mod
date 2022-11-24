@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonFeatureSwitchesImpression extends fih<ysa>
+public class JsonFeatureSwitchesImpression extends tih<gua>
 {
     @JsonField
     public String a;
@@ -18,12 +18,13 @@ public class JsonFeatureSwitchesImpression extends fih<ysa>
     @JsonField
     public Integer c;
     
+    @Override
     public final Object s() {
         final String a = this.a;
         if (a != null && this.b != null) {
             final Integer c = this.c;
             if (c != null) {
-                return new ysa(a, (int)c, this.b);
+                return new gua(a, (int)c, this.b);
             }
         }
         return null;

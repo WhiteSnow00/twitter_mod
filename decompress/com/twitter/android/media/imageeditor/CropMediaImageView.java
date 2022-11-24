@@ -18,49 +18,46 @@ import com.twitter.media.ui.image.MediaImageView;
 
 public class CropMediaImageView extends MediaImageView
 {
-    public final CroppableImageView o1;
-    public a p1;
+    public final CroppableImageView r1;
+    public CropMediaImageView.CropMediaImageView$a s1;
     
     public CropMediaImageView(final Context context, final AttributeSet set) {
         super(context, set, 0, (ImageView)View.inflate(context, 2131624226, (ViewGroup)null), true);
-        this.o1 = this.getImageView();
+        this.r1 = this.getImageView();
     }
     
-    public a getCropState() {
-        return new a(((MultiTouchImageView)this.o1).getImageRotation(), ((MultiTouchImageView)this.o1).getNormalizedImageSelection());
+    public CropMediaImageView.CropMediaImageView$a getCropState() {
+        return new CropMediaImageView.CropMediaImageView$a(((MultiTouchImageView)this.r1).getImageRotation(), ((MultiTouchImageView)this.r1).getNormalizedImageSelection());
+    }
+    
+    public /* bridge */ View getImageView() {
+        return (View)this.getImageView();
+    }
+    
+    public /* bridge */ ImageView getImageView() {
+        return (ImageView)this.getImageView();
     }
     
     public CroppableImageView getImageView() {
         return (CroppableImageView)super.getImageView();
     }
     
-    public final void i(final x8d x8d, final Drawable drawable) {
-        super.i(x8d, drawable);
-        this.o1.setShowCrop(true);
-        final a p2 = this.p1;
-        if (p2 != null) {
-            ((MultiTouchImageView)this.o1).setImageSelection(p2.b);
-            this.o1.setRotation(this.p1.a);
+    public final void i(final d9d d9d, final Drawable drawable) {
+        super.i(d9d, drawable);
+        this.r1.setShowCrop(true);
+        final CropMediaImageView.CropMediaImageView$a s1 = this.s1;
+        if (s1 != null) {
+            ((MultiTouchImageView)this.r1).setImageSelection(s1.b);
+            this.r1.setRotation(this.s1.a);
         }
-        if (!this.o1.e1) {
+        if (!this.r1.h1) {
             final AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
             ((Animation)alphaAnimation).setDuration(200L);
-            ((View)this.o1).startAnimation((Animation)alphaAnimation);
+            ((View)this.r1).startAnimation((Animation)alphaAnimation);
         }
     }
     
     public void setZoomDisabled(final boolean zoomDisabled) {
-        ((MultiTouchImageView)this.o1).setZoomDisabled(zoomDisabled);
-    }
-    
-    public static final class a
-    {
-        public final int a;
-        public final abm b;
-        
-        public a(final int a, final abm b) {
-            this.a = a;
-            this.b = b;
-        }
+        ((MultiTouchImageView)this.r1).setZoomDisabled(zoomDisabled);
     }
 }

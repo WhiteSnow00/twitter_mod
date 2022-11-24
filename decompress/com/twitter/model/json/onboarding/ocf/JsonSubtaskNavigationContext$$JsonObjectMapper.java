@@ -10,63 +10,63 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonSubtaskNavigationContext$$JsonObjectMapper extends JsonMapper<JsonSubtaskNavigationContext>
 {
-    public static final ysr SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER;
+    public static final wtr SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER;
     
     static {
-        SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER = new ysr();
+        SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER = new wtr();
     }
     
-    public static JsonSubtaskNavigationContext _parse(final tge tge) throws IOException {
+    public static JsonSubtaskNavigationContext _parse(final qhe qhe) throws IOException {
         final JsonSubtaskNavigationContext jsonSubtaskNavigationContext = new JsonSubtaskNavigationContext();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonSubtaskNavigationContext, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonSubtaskNavigationContext, d, qhe);
+            qhe.m0();
         }
         return jsonSubtaskNavigationContext;
     }
     
-    public static void _serialize(final JsonSubtaskNavigationContext jsonSubtaskNavigationContext, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonSubtaskNavigationContext jsonSubtaskNavigationContext, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
-        ((StringBasedTypeConverter)JsonSubtaskNavigationContext$$JsonObjectMapper.SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER).serialize((Object)jsonSubtaskNavigationContext.a, "action", true, afe);
-        afe.t0("text", jsonSubtaskNavigationContext.b);
+        ((StringBasedTypeConverter)JsonSubtaskNavigationContext$$JsonObjectMapper.SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER).serialize((Object)jsonSubtaskNavigationContext.a, "action", true, yfe);
+        yfe.u0("text", jsonSubtaskNavigationContext.b);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonSubtaskNavigationContext jsonSubtaskNavigationContext, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonSubtaskNavigationContext jsonSubtaskNavigationContext, final String s, final qhe qhe) throws IOException {
         if ("action".equals(s)) {
-            jsonSubtaskNavigationContext.a = (int)((StringBasedTypeConverter)JsonSubtaskNavigationContext$$JsonObjectMapper.SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER).parse(tge);
+            jsonSubtaskNavigationContext.a = (int)((StringBasedTypeConverter)JsonSubtaskNavigationContext$$JsonObjectMapper.SUBTASK_NAVIGATION_CONTEXT_ACTION_TYPE_CONVERTER).parse(qhe);
         }
         else if ("text".equals(s)) {
-            jsonSubtaskNavigationContext.b = tge.T((String)null);
+            jsonSubtaskNavigationContext.b = qhe.T((String)null);
         }
     }
     
-    public JsonSubtaskNavigationContext parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonSubtaskNavigationContext parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonSubtaskNavigationContext jsonSubtaskNavigationContext, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonSubtaskNavigationContext, afe, b);
+    public void serialize(final JsonSubtaskNavigationContext jsonSubtaskNavigationContext, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonSubtaskNavigationContext, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonSubtaskNavigationContext)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonSubtaskNavigationContext)o, yfe, b);
     }
 }

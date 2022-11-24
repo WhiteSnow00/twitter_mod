@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Du får meddelelser om nye tweets.</item>
-        <item>Du får kun meddelelser om nye Super-følger-Tweets.</item>
+        <item>Du vil modtage meddelelser om abonnement-Tweets.</item>
         <item>Du får meddelelser om nye Tweets med direkte video.</item>
         <item>Du får meddelelser om nye Tweets i Rum.</item>
         <item>Du modtager ikke længere meddelelser om nye Tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Kun Super-følger-Tweets</item>
+        <item>Tweets kun for abonnement</item>
         <item>Direkte video</item>
         <item>Rum</item>
         <item>Ingen</item>
     </array>
     <array name="account_notif_options_old">
         <item>Alle Tweets</item>
-        <item>Kun Super-følger-Tweets</item>
+        <item>Kun abonnement-Tweets</item>
         <item>Kun direkte video</item>
         <item>Kun Rum</item>
         <item>Fra</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Få meddelelser om alle Tweets fra denne konto.</item>
-        <item>Få kun meddelelser om Super-følger-Tweets.</item>
+        <item>Modtag kun meddelelser om abonnement-Tweets.</item>
         <item>Få kun meddelelser om direkte udsendelser.</item>
         <item>Få kun meddelelser om Rum.</item>
         <item>Deaktiver meddelelser om Tweets fra denne konto.</item>

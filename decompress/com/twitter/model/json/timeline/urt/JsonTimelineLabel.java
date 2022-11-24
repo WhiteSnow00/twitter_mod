@@ -8,17 +8,17 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineLabel extends aih<nxs>
+public class JsonTimelineLabel extends tih<xys>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     @JsonField(name = { "labelUrl", "url" })
-    public q7t c;
+    public c9t c;
     @JsonField
     public boolean d;
-    @JsonField(name = { "labelDisplayType", "displayType" }, typeConverter = ite.class)
+    @JsonField(name = { "labelDisplayType", "displayType" }, typeConverter = qte.class)
     public int e;
     
     public JsonTimelineLabel() {
@@ -27,13 +27,13 @@ public class JsonTimelineLabel extends aih<nxs>
     
     @Override
     public final Object s() {
-        nxs nxs;
-        if (!pjr.e((CharSequence)this.a) && this.e != -1) {
-            nxs = new nxs(this.a, this.b, this.c, this.d, this.e);
+        xys xys;
+        if (!flr.e((CharSequence)this.a) && this.e != -1) {
+            xys = new xys(this.a, this.b, this.c, this.d, this.e);
         }
         else {
-            nxs = null;
+            xys = null;
         }
-        return nxs;
+        return xys;
     }
 }

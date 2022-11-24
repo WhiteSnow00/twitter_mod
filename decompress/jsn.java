@@ -2,19 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jsn extends kkl
+public final class jsn extends pue implements stb<esn$a, Boolean>
 {
-    public static final jsn D0;
+    public static final jsn F0;
     
     static {
-        D0 = new jsn();
+        F0 = new jsn();
     }
     
     public jsn() {
-        super((Class)qsn.class, "nudgeType", "getNudgeType()Lcom/twitter/rooms/audiospace/nudge/RoomNudgeType;", 0);
+        super(1);
     }
     
-    public final Object get(final Object o) {
-        return ((qsn)o).a;
+    public final Object invoke(final Object o) {
+        final esn$a esn$a = (esn$a)o;
+        e0e.f((Object)esn$a, "it");
+        return esn$a instanceof esn$a$d;
     }
 }

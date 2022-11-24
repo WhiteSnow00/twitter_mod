@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineCard extends aih<wrs>
+public class JsonTimelineCard extends tih<hts>
 {
     @JsonField
     public String a;
@@ -19,7 +19,7 @@ public class JsonTimelineCard extends aih<wrs>
     public String c;
     @JsonField(name = { "subtext", "cardSubtext" })
     public String d;
-    @JsonField(typeConverter = jj3.class)
+    @JsonField(typeConverter = sj3.class)
     public int e;
     
     public JsonTimelineCard() {
@@ -30,17 +30,17 @@ public class JsonTimelineCard extends aih<wrs>
     public final Object s() {
         final JsonGraphQlCard b = this.b;
         if (b != null) {
-            final tj3 a = b.a;
+            final ck3 a = b.a;
             if (a != null) {
                 this.a = a.b;
-                final u4c.a d = u4c.d();
-                final tj3 a2 = this.b.a;
+                final y4c.y4c$a d = y4c.d();
+                final ck3 a2 = this.b.a;
                 d.r();
-                ((sjg)d.d).w((Object)a2.b, (Object)a2);
+                ((kkg)d.d).w((Object)a2.b, (Object)a2);
             }
         }
         Object o;
-        if (pjr.e((CharSequence)this.a)) {
+        if (flr.e((CharSequence)this.a)) {
             o = null;
         }
         else {
@@ -55,7 +55,7 @@ public class JsonTimelineCard extends aih<wrs>
             if (d2 != null) {
                 s = d2;
             }
-            o = new wrs(a3, s2, s, this.e);
+            o = new hts(a3, s2, s, this.e);
         }
         return o;
     }

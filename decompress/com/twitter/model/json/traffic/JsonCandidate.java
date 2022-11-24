@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonCandidate extends aih<lg3>
+public class JsonCandidate extends tih<ug3>
 {
     @JsonField
     public String a;
@@ -21,13 +21,13 @@ public class JsonCandidate extends aih<lg3>
     
     @Override
     public final Object s() {
-        lg3 lg3;
-        if (!pjr.e((CharSequence)this.a) && !pjr.e((CharSequence)this.b)) {
-            lg3 = new lg3(this.a, this.b, ged.c((Map)this.c));
+        ug3 ug3;
+        if (!flr.e((CharSequence)this.a) && !flr.e((CharSequence)this.b)) {
+            ug3 = new ug3(this.a, this.b, ked.c((Map)this.c));
         }
         else {
-            lg3 = null;
+            ug3 = null;
         }
-        return lg3;
+        return ug3;
     }
 }

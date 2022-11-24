@@ -8,32 +8,32 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTCompactPrompt extends aih<eqv>
+public class JsonURTCompactPrompt extends tih<lrv>
 {
     @JsonField(name = { "headerText", "compactHeaderText" })
     public String a;
     @JsonField(name = { "bodyText", "compactBodyText" })
     public String b;
     @JsonField(name = { "primaryButtonAction", "compactPrimaryButtonAction" })
-    public fpv c;
+    public nqv c;
     @JsonField(name = { "secondaryButtonAction", "compactSecondaryButtonAction" })
-    public fpv d;
+    public nqv d;
     @JsonField(name = { "action", "compactAction" })
-    public apv e;
+    public iqv e;
     @JsonField(name = { "headerRichText", "compactHeaderRichText" })
-    public xwm f;
+    public fym f;
     @JsonField(name = { "bodyRichText", "compactBodyRichText" })
-    public xwm g;
+    public fym g;
     
     @Override
     public final Object s() {
         Object o;
         if (this.a == null) {
-            xpa.p("JsonURTCompactPrompt has no titleText");
+            mqb.o("JsonURTCompactPrompt has no titleText");
             o = null;
         }
         else {
-            o = new eqv(this.a, this.b, this.c, this.d, this.e, this.f, this.g);
+            o = new lrv(this.a, this.b, this.c, this.d, this.e, this.f, this.g);
         }
         return o;
     }

@@ -12,72 +12,72 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfRichText$$JsonObjectMapper extends JsonMapper<JsonOcfRichText>
 {
-    public static final pjs TEXT_SIZE_TYPE_CONVERTER;
-    public static final ujs TEXT_STYLE_TYPE_CONVERTER;
+    public static final hks TEXT_SIZE_TYPE_CONVERTER;
+    public static final mks TEXT_STYLE_TYPE_CONVERTER;
     
     static {
-        TEXT_STYLE_TYPE_CONVERTER = new ujs();
-        TEXT_SIZE_TYPE_CONVERTER = new pjs();
+        TEXT_STYLE_TYPE_CONVERTER = new mks();
+        TEXT_SIZE_TYPE_CONVERTER = new hks();
     }
     
-    public static JsonOcfRichText _parse(final tge tge) throws IOException {
+    public static JsonOcfRichText _parse(final qhe qhe) throws IOException {
         final JsonOcfRichText jsonOcfRichText = new JsonOcfRichText();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfRichText, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfRichText, d, qhe);
+            qhe.m0();
         }
         return jsonOcfRichText;
     }
     
-    public static void _serialize(final JsonOcfRichText jsonOcfRichText, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfRichText jsonOcfRichText, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         final ArrayList b2 = jsonOcfRichText.b;
         if (b2 != null) {
-            final Iterator a = br.A(afe, "entities", b2);
-            while (a.hasNext()) {
-                final JsonOcfEntity jsonOcfEntity = a.next();
+            final Iterator e = d10.E(yfe, "entities", b2);
+            while (e.hasNext()) {
+                final JsonOcfEntity jsonOcfEntity = e.next();
                 if (jsonOcfEntity != null) {
-                    JsonOcfEntity$$JsonObjectMapper._serialize(jsonOcfEntity, afe, true);
+                    JsonOcfEntity$$JsonObjectMapper._serialize(jsonOcfEntity, yfe, true);
                 }
             }
-            afe.f();
+            yfe.f();
         }
-        ((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_SIZE_TYPE_CONVERTER).serialize((Object)jsonOcfRichText.e, "size", true, afe);
-        ((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_STYLE_TYPE_CONVERTER).serialize((Object)jsonOcfRichText.d, "style", true, afe);
+        ((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_SIZE_TYPE_CONVERTER).serialize((Object)jsonOcfRichText.e, "size", true, yfe);
+        ((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_STYLE_TYPE_CONVERTER).serialize((Object)jsonOcfRichText.d, "style", true, yfe);
         final ArrayList c = jsonOcfRichText.c;
         if (c != null) {
-            final Iterator a2 = br.A(afe, "styling_ranges", c);
-            while (a2.hasNext()) {
-                final JsonOcfStylingRange jsonOcfStylingRange = a2.next();
+            final Iterator e2 = d10.E(yfe, "styling_ranges", c);
+            while (e2.hasNext()) {
+                final JsonOcfStylingRange jsonOcfStylingRange = e2.next();
                 if (jsonOcfStylingRange != null) {
-                    JsonOcfStylingRange$$JsonObjectMapper._serialize(jsonOcfStylingRange, afe, true);
+                    JsonOcfStylingRange$$JsonObjectMapper._serialize(jsonOcfStylingRange, yfe, true);
                 }
             }
-            afe.f();
+            yfe.f();
         }
-        afe.t0("text", jsonOcfRichText.a);
+        yfe.u0("text", jsonOcfRichText.a);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfRichText jsonOcfRichText, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfRichText jsonOcfRichText, final String s, final qhe qhe) throws IOException {
         if ("entities".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList b = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final JsonOcfEntity parse = JsonOcfEntity$$JsonObjectMapper._parse(tge);
+                while (qhe.i0() != rje.Q0) {
+                    final JsonOcfEntity parse = JsonOcfEntity$$JsonObjectMapper._parse(qhe);
                     if (parse != null) {
                         b.add(parse);
                     }
@@ -89,16 +89,16 @@ public final class JsonOcfRichText$$JsonObjectMapper extends JsonMapper<JsonOcfR
             }
         }
         else if ("size".equals(s)) {
-            jsonOcfRichText.e = (int)((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_SIZE_TYPE_CONVERTER).parse(tge);
+            jsonOcfRichText.e = (int)((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_SIZE_TYPE_CONVERTER).parse(qhe);
         }
         else if ("style".equals(s)) {
-            jsonOcfRichText.d = (int)((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_STYLE_TYPE_CONVERTER).parse(tge);
+            jsonOcfRichText.d = (int)((StringBasedTypeConverter)JsonOcfRichText$$JsonObjectMapper.TEXT_STYLE_TYPE_CONVERTER).parse(qhe);
         }
         else if ("styling_ranges".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList c = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final JsonOcfStylingRange parse2 = JsonOcfStylingRange$$JsonObjectMapper._parse(tge);
+                while (qhe.i0() != rje.Q0) {
+                    final JsonOcfStylingRange parse2 = JsonOcfStylingRange$$JsonObjectMapper._parse(qhe);
                     if (parse2 != null) {
                         c.add(parse2);
                     }
@@ -110,23 +110,23 @@ public final class JsonOcfRichText$$JsonObjectMapper extends JsonMapper<JsonOcfR
             }
         }
         else if ("text".equals(s)) {
-            jsonOcfRichText.a = tge.T((String)null);
+            jsonOcfRichText.a = qhe.T((String)null);
         }
     }
     
-    public JsonOcfRichText parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfRichText parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfRichText jsonOcfRichText, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfRichText, afe, b);
+    public void serialize(final JsonOcfRichText jsonOcfRichText, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfRichText, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfRichText)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfRichText)o, yfe, b);
     }
 }

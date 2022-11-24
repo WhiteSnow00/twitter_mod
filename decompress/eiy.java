@@ -1,68 +1,34 @@
-import java.util.Map;
-import java.util.List;
-import android.os.Bundle;
+import android.util.Log;
+import com.google.android.gms.common.api.c$c;
+import com.google.android.gms.common.api.c$b;
+import android.os.Looper;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class eiy extends jsy
+public final class eiy extends qlz
 {
-    public final egz a;
+    public final mgy n1;
     
-    public eiy(final egz a) {
-        this.a = a;
+    public eiy(final Context context, final Looper looper, final c$b c$b, final c$c c$c, final lh4 lh4) {
+        super(context, looper, c$b, c$c, lh4);
+        this.n1 = new mgy(context, super.m1);
     }
     
-    public final long c() {
-        return this.a.c();
-    }
-    
-    public final String h() {
-        return this.a.h();
-    }
-    
-    public final String j() {
-        return this.a.j();
-    }
-    
-    public final String k() {
-        return this.a.k();
-    }
-    
-    public final String m() {
-        return this.a.m();
-    }
-    
-    public final void n(final String s, final String s2, final Bundle bundle) {
-        this.a.n(s, s2, bundle);
-    }
-    
-    public final void o(final String s) {
-        this.a.o(s);
-    }
-    
-    public final void p(final String s) {
-        this.a.p(s);
-    }
-    
-    public final int q(final String s) {
-        return this.a.q(s);
-    }
-    
-    public final List r(final String s, final String s2) {
-        return this.a.r(s, s2);
-    }
-    
-    public final Map s(final String s, final String s2, final boolean b) {
-        return this.a.s(s, s2, b);
-    }
-    
-    public final void t(final Bundle bundle) {
-        this.a.t(bundle);
-    }
-    
-    public final void u(final String s, final String s2, final Bundle bundle) {
-        this.a.u(s, s2, bundle);
+    public final void o() {
+        synchronized (this.n1) {
+            if (((gm1)this).b()) {
+                try {
+                    this.n1.a();
+                    this.n1.c();
+                }
+                catch (final Exception ex) {
+                    Log.e("LocationClientImpl", "Client disconnected before listeners could be cleaned up", (Throwable)ex);
+                }
+            }
+            super.o();
+        }
     }
 }

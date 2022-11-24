@@ -1,93 +1,51 @@
 import java.util.List;
+import android.graphics.PointF;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kpk
+public final class kpk extends ase<PointF>
 {
-    public final long a;
-    public final long b;
-    public final long c;
-    public final long d;
-    public final boolean e;
-    public final float f;
-    public final int g;
-    public final boolean h;
-    public final List<jkc> i;
-    public final long j;
+    public final PointF i;
     
-    public kpk(final long a, final long b, final long c, final long d, final boolean e, final float f, final int g, final boolean h, final List i, final long j, final rf8 rf8) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-        this.g = g;
-        this.h = h;
-        this.i = i;
-        this.j = j;
+    public kpk(final List<zre<PointF>> list) {
+        super((List)list);
+        this.i = new PointF();
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof kpk)) {
-            return false;
-        }
-        final kpk kpk = (kpk)o;
-        return gpk.a(this.a, kpk.a) && this.b == kpk.b && wfj.b(this.c, kpk.c) && wfj.b(this.d, kpk.d) && this.e == kpk.e && czd.a((Object)this.f, (Object)kpk.f) && this.g == kpk.g && this.h == kpk.h && czd.a((Object)this.i, (Object)kpk.i) && wfj.b(this.j, kpk.j);
+    public final Object g(final zre zre, final float n) {
+        return this.l(zre, n, n, n);
     }
     
-    @Override
-    public final int hashCode() {
-        final long a = this.a;
-        final int n = (int)(a ^ a >>> 32);
-        final long b = this.b;
-        final int n2 = (int)(b ^ b >>> 32);
-        final int f = wfj.f(this.c);
-        final int f2 = wfj.f(this.d);
-        final int e = this.e ? 1 : 0;
-        final int n3 = 1;
-        int n4 = e;
-        if (e != 0) {
-            n4 = 1;
-        }
-        final int g = c0.g(this.f, ((f2 + (f + (n * 31 + n2) * 31) * 31) * 31 + n4) * 31, 31);
-        final int g2 = this.g;
-        int h = this.h ? 1 : 0;
-        if (h != 0) {
-            h = n3;
-        }
-        return wfj.f(this.j) + sde.d((List)this.i, ((g + g2) * 31 + h) * 31, 31);
+    public final /* bridge */ Object h(final zre zre, final float n, final float n2, final float n3) {
+        return this.l(zre, n, n2, n3);
     }
     
-    @Override
-    public final String toString() {
-        final StringBuilder j = fu8.j("PointerInputEventData(id=");
-        j.append((Object)gpk.b(this.a));
-        j.append(", uptime=");
-        j.append(this.b);
-        j.append(", positionOnScreen=");
-        j.append((Object)wfj.j(this.c));
-        j.append(", position=");
-        j.append((Object)wfj.j(this.d));
-        j.append(", down=");
-        j.append(this.e);
-        j.append(", pressure=");
-        j.append(this.f);
-        j.append(", type=");
-        j.append((Object)tpk.a(this.g));
-        j.append(", issuesEnterExit=");
-        j.append(this.h);
-        j.append(", historical=");
-        j.append(this.i);
-        j.append(", scrollDelta=");
-        j.append((Object)wfj.j(this.j));
-        j.append(')');
-        return j.toString();
+    public final PointF l(final zre<PointF> zre, float n, float d, final float n2) {
+        final PointF b = zre.b;
+        if (b != null) {
+            final PointF c = zre.c;
+            if (c != null) {
+                final PointF pointF = b;
+                final PointF pointF2 = c;
+                final seg e = ((wm1)this).e;
+                if (e != null) {
+                    zre.h.floatValue();
+                    ((wm1)this).e();
+                    final PointF pointF3 = (PointF)e.d(pointF, pointF2);
+                    if (pointF3 != null) {
+                        return pointF3;
+                    }
+                }
+                final PointF i = this.i;
+                n = pointF.x;
+                d = va.d(pointF2.x, n, d, n);
+                n = pointF.y;
+                i.set(d, (pointF2.y - n) * n2 + n);
+                return this.i;
+            }
+        }
+        throw new IllegalStateException("Missing values for keyframe.");
     }
 }

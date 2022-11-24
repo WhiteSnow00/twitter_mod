@@ -2,26 +2,25 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class rhz implements Runnable
+public final class rhz
 {
-    public final sgz D0;
-    public final long E0;
-    public final whz F0;
+    public final String a;
+    public final String b;
+    public final long c;
+    public boolean d;
+    public final boolean e;
+    public final long f;
     
-    public rhz(final whz f0, final sgz d0, final long e0) {
-        this.F0 = f0;
-        this.D0 = d0;
-        this.E0 = e0;
+    public rhz(final String s, final String s2, final long n) {
+        this(s, s2, n, false, 0L);
     }
     
-    @Override
-    public final void run() {
-        this.F0.m(this.D0, false, this.E0);
-        final whz f0 = this.F0;
-        f0.H0 = null;
-        final glz z = ((pbz)f0).D0.z();
-        ((axy)z).g();
-        z.h();
-        z.t((Runnable)new wkz((Object)z, (Object)null, 2, (da8)null));
+    public rhz(final String a, final String b, final long c, final boolean e, final long f) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = false;
+        this.e = e;
+        this.f = f;
     }
 }

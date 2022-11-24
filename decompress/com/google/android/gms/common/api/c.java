@@ -24,28 +24,28 @@ import java.util.Set;
 @Deprecated
 public abstract class c
 {
-    public static final Set<c> D0;
+    public static final Set<c> F0;
     
     static {
-        D0 = Collections.newSetFromMap(new WeakHashMap<c, Boolean>());
+        F0 = Collections.newSetFromMap(new WeakHashMap<c, Boolean>());
     }
     
-    public static Set<c> g() {
-        final Set<c> d0 = c.D0;
-        synchronized (d0) {
-            return d0;
+    public static Set<c> d() {
+        final Set<c> f0 = c.F0;
+        synchronized (f0) {
+            return f0;
         }
     }
     
     public abstract void a();
     
-    public abstract void c();
+    public abstract void b();
     
-    public <A extends com.google.android.gms.common.api.a.b, T extends com.google.android.gms.common.api.internal.a<? extends psm, A>> T f(final T t) {
+    public <A extends com.google.android.gms.common.api.a.b, T extends com.google.android.gms.common.api.internal.a<? extends etm, A>> T c(final T t) {
         throw new UnsupportedOperationException();
     }
     
-    public <C extends a$f> C h(final com.google.android.gms.common.api.a.c<C> p0) {
+    public <C extends a$f> C e(final com.google.android.gms.common.api.a.c<C> p0) {
         // 
         // This method could not be decompiled.
         // 
@@ -81,19 +81,19 @@ public abstract class c
         throw new IllegalStateException("An error occurred while decompiling this method.");
     }
     
-    public Looper i() {
+    public Looper f() {
         throw new UnsupportedOperationException();
     }
     
-    public abstract boolean j();
+    public abstract boolean g();
     
-    public abstract boolean k();
+    public abstract boolean h();
     
-    public boolean l(final j6q j6q) {
+    public boolean i(final f7q f7q) {
         throw new UnsupportedOperationException();
     }
     
-    public void m() {
+    public void j() {
         throw new UnsupportedOperationException();
     }
     
@@ -104,25 +104,25 @@ public abstract class c
         public final Set<Scope> b;
         public String c;
         public String d;
-        public final Map<com.google.android.gms.common.api.a<?>, w1y> e;
+        public final Map<com.google.android.gms.common.api.a<?>, q2y> e;
         public final Context f;
         public final Map<com.google.android.gms.common.api.a<?>, com.google.android.gms.common.api.a.d> g;
         public int h;
         public Looper i;
-        public p4c j;
-        public a$a<? extends z3y, l6q> k;
+        public r5c j;
+        public a$a<? extends t4y, h7q> k;
         public final ArrayList<c$b> l;
         public final ArrayList<c$c> m;
         
         public a(final Context f) {
             this.a = new HashSet();
             this.b = new HashSet();
-            this.e = new ts0();
-            this.g = new ts0();
+            this.e = new ws0();
+            this.g = new ws0();
             this.h = -1;
-            final int c = p4c.c;
-            this.j = p4c.e;
-            this.k = s3y.a;
+            final int c = r5c.c;
+            this.j = r5c.e;
+            this.k = m4y.a;
             this.l = new ArrayList<c$b>();
             this.m = new ArrayList<c$c>();
             this.f = f;
@@ -132,10 +132,10 @@ public abstract class c
         }
         
         public final a a(final com.google.android.gms.common.api.a<Object> a) {
-            eli.r(a, "Api must not be null");
-            ((d8q<com.google.android.gms.common.api.a<Object>, Object>)this.g).put(a, null);
+            iuk.D((Object)a, (Object)"Api must not be null");
+            this.g.put((Object)a, (Object)null);
             final com.google.android.gms.common.api.a.a$a<?, Object> a2 = a.a;
-            eli.r(a2, "Base client builder must not be null");
+            iuk.D((Object)a2, (Object)"Base client builder must not be null");
             final List a3 = ((com.google.android.gms.common.api.a.e)a2).a();
             this.b.addAll(a3);
             this.a.addAll(a3);
@@ -143,43 +143,43 @@ public abstract class c
         }
         
         public final c b() {
-            eli.i(((d8q)this.g).isEmpty() ^ true, "must call addApi() to add at least one API");
-            l6q d0 = l6q.D0;
-            final ts0 g = this.g;
-            final com.google.android.gms.common.api.a c = s3y.c;
-            if (((d8q)g).containsKey(c)) {
-                d0 = ((d8q<K, l6q>)this.g).getOrDefault(c, null);
+            iuk.q(this.g.isEmpty() ^ true, (Object)"must call addApi() to add at least one API");
+            h7q f0 = h7q.F0;
+            final ws0 g = this.g;
+            final com.google.android.gms.common.api.a<h7q> c = m4y.c;
+            if (g.containsKey((Object)c)) {
+                f0 = (h7q)this.g.getOrDefault((Object)c, (Object)null);
             }
-            final gg4 gg4 = new gg4((Account)null, (Set)this.a, (Map)this.e, this.c, this.d, d0);
-            final Map d2 = gg4.d;
-            final ts0 ts0 = new ts0();
-            final ts0 ts2 = new ts0();
-            final ArrayList list = new ArrayList();
-            final Iterator iterator = ((ts0$c)this.g.keySet()).iterator();
+            final lh4 lh4 = new lh4((Account)null, (Set)this.a, (Map)this.e, this.c, this.d, f0);
+            final Map d = lh4.d;
+            final ws0<com.google.android.gms.common.api.a<?>, Boolean> ws0 = new ws0<com.google.android.gms.common.api.a<?>, Boolean>();
+            final ws0<Object, Object> ws2 = new ws0<Object, Object>();
+            final ArrayList<i6y> list = new ArrayList<i6y>();
+            final Iterator iterator = ((ws0$c)this.g.keySet()).iterator();
             com.google.android.gms.common.api.a a = null;
             while (true) {
                 final boolean hasNext = iterator.hasNext();
                 boolean b = false;
                 if (hasNext) {
                     final com.google.android.gms.common.api.a a2 = iterator.next();
-                    final Object orDefault = ((d8q<K, Object>)this.g).getOrDefault(a2, null);
-                    if (d2.get(a2) != null) {
+                    final Object orDefault = this.g.getOrDefault((Object)a2, (Object)null);
+                    if (d.get(a2) != null) {
                         b = true;
                     }
-                    ((d8q<com.google.android.gms.common.api.a, Boolean>)ts0).put(a2, Boolean.valueOf(b));
-                    final o5y o5y = new o5y(a2, b);
-                    list.add(o5y);
+                    ws0.put((Object)a2, (Object)b);
+                    final i6y i6y = new i6y((com.google.android.gms.common.api.a)a2, b);
+                    list.add(i6y);
                     final a$a<?, O> a3 = a2.a;
                     Objects.requireNonNull((a$a)a3, "null reference");
-                    final a$f c2 = ((a$a)a3).c(this.f, this.i, gg4, orDefault, (c$b)o5y, (c$c)o5y);
-                    ((d8q<com.google.android.gms.common.api.a.a$g<?>, a$f>)ts2).put(a2.b, c2);
+                    final a$f c2 = ((a$a)a3).c(this.f, this.i, lh4, orDefault, (c$b)i6y, (c$c)i6y);
+                    ws2.put((Object)a2.b, (Object)c2);
                     if (!c2.d()) {
                         continue;
                     }
                     if (a != null) {
                         final String c3 = a2.c;
                         final String c4 = a.c;
-                        throw new IllegalStateException(ta0.z(new StringBuilder(String.valueOf(c3).length() + 21 + String.valueOf(c4).length()), c3, " cannot be used with ", c4));
+                        throw new IllegalStateException(wa0.y(new StringBuilder(String.valueOf(c3).length() + 21 + String.valueOf(c4).length()), c3, " cannot be used with ", c4));
                     }
                     a = a2;
                 }
@@ -191,13 +191,13 @@ public abstract class c
                             throw new IllegalStateException(String.format("Must not set scopes in GoogleApiClient.Builder when using %s. Set account in GoogleSignInOptions.Builder instead.", c5));
                         }
                     }
-                    final d2y d2y = new d2y(this.f, (Lock)new ReentrantLock(), this.i, gg4, this.j, (a$a)this.k, (Map)ts0, (List)this.l, (List)this.m, (Map)ts2, this.h, d2y.p((Iterable)ts2.values(), true), list);
-                    final Set<c> d3 = com.google.android.gms.common.api.c.D0;
-                    synchronized (d3) {
-                        d3.add((c)d2y);
-                        monitorexit(d3);
+                    final x2y x2y = new x2y(this.f, new ReentrantLock(), this.i, lh4, this.j, (a$a<? extends t4y, h7q>)this.k, ws0, this.l, this.m, (Map<com.google.android.gms.common.api.a.c<?>, a$f>)ws2, this.h, x2y.m((Iterable<a$f>)ws2.values(), true), list);
+                    final Set<c> f2 = com.google.android.gms.common.api.c.F0;
+                    synchronized (f2) {
+                        f2.add(x2y);
+                        monitorexit(f2);
                         if (this.h < 0) {
-                            return (c)d2y;
+                            return x2y;
                         }
                         LifecycleCallback.c(null);
                         throw null;

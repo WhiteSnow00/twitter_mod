@@ -305,8 +305,8 @@
         <item quantity="other">%d anderen</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Supervolger</item>
-        <item quantity="other">Supervolgers</item>
+        <item quantity="one">Abonnee</item>
+        <item quantity="other">Abonnees</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s vind-ik-leuk</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Als antwoord op ﻿%1$s en %2$d anderen﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Je antwoordt op ﻿%1$s en %2$d anderen﻿. Je antwoord is ook zichtbaar voor andere Supervolgers.</item>
+        <item quantity="other">Je antwoordt op ﻿%1$s en %2$d anderen﻿. Je antwoord is ook zichtbaar voor andere Abonnees.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Als antwoord op ﻿%1$s en %2$d anderen﻿ in ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Als antwoord op ﻿%1$s, %2$s en %3$d anderen﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Je antwoordt op ﻿%1$s %2$s en %3$d anderen﻿. Je antwoord is ook zichtbaar voor andere Supervolgers.</item>
+        <item quantity="other">Je antwoordt op ﻿%1$s %2$s en %3$d anderen﻿. Je antwoord is ook zichtbaar voor andere Abonnees.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Als antwoord op ﻿%1$s %2$s en %3$d anderen﻿ in ﻿%4$s﻿</item>

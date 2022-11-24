@@ -4,33 +4,33 @@
 
 package com.twitter.brandedlikepreview;
 
-@sa8(c = "com.twitter.brandedlikepreview.BrandedLikePreviewViewModel$intents$2$3", f = "BrandedLikePreviewViewModel.kt", l = {}, m = "invokeSuspend")
-public final class c extends p0s implements ftb<lc2$e, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.brandedlikepreview.BrandedLikePreviewViewModel$intents$2$3", f = "BrandedLikePreviewViewModel.kt", l = {}, m = "invokeSuspend")
+public final class c extends l1s implements hub<yc2$e, mp6<? super vzv>, Object>
 {
-    public final BrandedLikePreviewViewModel D0;
+    public final BrandedLikePreviewViewModel F0;
     
-    public c(final BrandedLikePreviewViewModel d0, final go6<? super c> go6) {
-        this.D0 = d0;
-        super(2, (go6)go6);
+    public c(final BrandedLikePreviewViewModel f0, final mp6<? super c> mp6) {
+        this.F0 = f0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new c(this.D0, (go6<? super c>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new c(this.F0, (mp6<? super c>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final c c = (c)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final c c = (c)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         c.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final BrandedLikePreviewViewModel d0 = this.D0;
-        final c$a d2 = c$a.D0;
-        final coe<Object>[] s0 = BrandedLikePreviewViewModel.S0;
-        d0.Q((qsb)d2);
-        return fzv.a;
+        jb2.M0(o);
+        final BrandedLikePreviewViewModel f0 = this.F0;
+        final c$a f2 = c$a.F0;
+        final ape<Object>[] u0 = BrandedLikePreviewViewModel.U0;
+        f0.Q((stb)f2);
+        return vzv.a;
     }
 }

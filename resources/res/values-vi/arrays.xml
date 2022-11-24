@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Bạn sẽ nhận thông báo cho những Tweet mới.</item>
-        <item>Bạn sẽ nhận thông báo cho chỉ những Tweet mới của Người siêu theo dõi.</item>
+        <item>Bạn sẽ nhận được thông báo cho các Tweet thuê bao mới.</item>
         <item>Bạn sẽ nhận thông báo cho những Tweet video Trực tuyến mới.</item>
         <item>Bạn sẽ nhận thông báo cho những Tweet Spaces mới.</item>
         <item>Bạn sẽ không còn nhận thông báo cho những Tweet mới nữa.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweet</item>
-        <item>Chỉ các Tweet của Người siêu theo dõi</item>
+        <item>Tweet chỉ dành cho thuê bao</item>
         <item>Video trực tuyến</item>
         <item>Spaces</item>
         <item>Không có</item>
     </array>
     <array name="account_notif_options_old">
         <item>Tất cả Tweet</item>
-        <item>Chỉ các Tweet Super Follows</item>
+        <item>Chỉ Tweet thuê bao</item>
         <item>Chỉ video trực tuyến</item>
         <item>Chỉ Spaces</item>
         <item>Tắt</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Nhận thông báo cho tất cả các Tweet của tài khoản.</item>
-        <item>Nhận thông báo chỉ cho những Tweet Super Follows.</item>
+        <item>Chỉ nhận thông báo các Tweet thuê bao.</item>
         <item>Chỉ nhận thông báo đối với các nguồn phát trực tuyến.</item>
         <item>Nhận thông báo chỉ cho Spaces.</item>
         <item>Tắt thông báo cho các Tweet của tài khoản này.</item>

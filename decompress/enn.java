@@ -1,42 +1,45 @@
-import com.twitter.weaver.mvi.MviViewModel;
-import com.twitter.rooms.ui.core.history.RoomHistoryManagementViewModel$b;
-import com.twitter.rooms.ui.core.history.RoomHistoryManagementViewModel;
+import java.util.Iterator;
+import java.util.List;
+import tv.periscope.android.api.PsAudioSpace;
+import java.util.ArrayList;
+import tv.periscope.android.api.PsCreatedSpacesHistoryResponse;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-@sa8(c = "com.twitter.rooms.ui.core.history.RoomHistoryManagementViewModel$updateAudioSpaceItem$1$1", f = "RoomHistoryManagementViewModel.kt", l = {}, m = "invokeSuspend")
-public final class enn extends p0s implements ftb<p01, go6<? super fzv>, Object>
+public final class enn extends pue implements stb<PsCreatedSpacesHistoryResponse, b67>
 {
-    public Object D0;
-    public final RoomHistoryManagementViewModel E0;
+    public static final enn F0;
     
-    public enn(final RoomHistoryManagementViewModel e0, final go6<? super enn> go6) {
-        this.E0 = e0;
-        super(2, (go6)go6);
+    static {
+        F0 = new enn();
     }
     
-    public final go6<fzv> create(final Object d0, final go6<?> go6) {
-        final enn enn = new enn(this.E0, (go6<? super enn>)go6);
-        enn.D0 = d0;
-        return (go6<fzv>)enn;
+    public enn() {
+        super(1);
     }
     
-    public final Object invoke(final Object o, final Object o2) {
-        final enn enn = (enn)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
-        enn.invokeSuspend(a);
-        return a;
-    }
-    
-    public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final p01 p = (p01)this.D0;
-        final RoomHistoryManagementViewModel e0 = this.E0;
-        final enn$a enn$a = new enn$a(p, e0);
-        final RoomHistoryManagementViewModel$b companion = RoomHistoryManagementViewModel.Companion;
-        ((MviViewModel)e0).T((qsb)enn$a);
-        return fzv.a;
+    public final Object invoke(final Object o) {
+        final PsCreatedSpacesHistoryResponse psCreatedSpacesHistoryResponse = (PsCreatedSpacesHistoryResponse)o;
+        e0e.f((Object)psCreatedSpacesHistoryResponse, "response");
+        final String cursor = psCreatedSpacesHistoryResponse.getCursor();
+        final List audiospaces = psCreatedSpacesHistoryResponse.getAudiospaces();
+        ArrayList list2;
+        if (audiospaces != null) {
+            final ArrayList list = new ArrayList(nr4.d1((Iterable)audiospaces, 10));
+            final Iterator iterator = audiospaces.iterator();
+            while (true) {
+                list2 = list;
+                if (!iterator.hasNext()) {
+                    break;
+                }
+                list.add((Object)dnl.l((PsAudioSpace)iterator.next(), false));
+            }
+        }
+        else {
+            list2 = null;
+        }
+        return new b67(cursor, (List)list2);
     }
 }

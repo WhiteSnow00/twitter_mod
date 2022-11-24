@@ -8,19 +8,19 @@ import java.io.Serializable;
 
 public final class dsb implements Serializable
 {
-    public static final alp<dsb> D0;
-    public final Map<Long, Integer> C0;
+    public static final nmp<dsb> G0;
+    public final Map<Long, Integer> F0;
     
     static {
-        dsb.D0 = new dsb.dsb$a();
+        dsb.G0 = new dsb.dsb$a();
     }
     
     public dsb() {
-        this.C0 = (tth$a)tth.a(0);
+        this.F0 = (nuh$a)nuh.a(0);
     }
     
     public dsb(final int n) {
-        this.C0 = (tth$a)tth.a(n);
+        this.F0 = (nuh$a)nuh.a(n);
     }
     
     public final void a(final long n) {
@@ -32,25 +32,25 @@ public final class dsb implements Serializable
     }
     
     public final boolean c(final long n) {
-        return ((HashMap)this.C0).containsKey(n);
+        return ((HashMap)this.F0).containsKey(n);
     }
     
     public final boolean d(final long n, final int n2) {
-        final Integer n3 = ((HashMap<K, Integer>)this.C0).get(n);
+        final Integer n3 = ((HashMap<K, Integer>)this.F0).get(n);
         return n3 != null && n3 == n2;
     }
     
     public final Integer e(final long n) {
-        return ((HashMap<K, Integer>)this.C0).get(n);
+        return ((HashMap<K, Integer>)this.F0).get(n);
     }
     
     public final boolean f(final long n, final int n2) {
-        final Integer n3 = ((HashMap<K, Integer>)this.C0).get(n);
+        final Integer n3 = ((HashMap<K, Integer>)this.F0).get(n);
         return n3 != null && (n3 & n2) != 0x0;
     }
     
     public final void g(final long n, final int n2) {
-        ((HashMap<Long, Integer>)this.C0).put(Long.valueOf(n), Integer.valueOf(n2));
+        ((HashMap<Long, Integer>)this.F0).put(Long.valueOf(n), Integer.valueOf(n2));
     }
     
     public final void h(final long n) {
@@ -61,8 +61,8 @@ public final class dsb implements Serializable
         this.k(n, 8192);
     }
     
-    public final void j(final long n, int l0) {
-        final Integer n2 = ((HashMap<K, Integer>)this.C0).get(n);
+    public final void j(final long n, int d0) {
+        final Integer n2 = ((HashMap<K, Integer>)this.F0).get(n);
         int intValue;
         if (n2 == null) {
             intValue = 0;
@@ -70,12 +70,12 @@ public final class dsb implements Serializable
         else {
             intValue = n2;
         }
-        l0 = tdy.L0(intValue, l0);
-        ((HashMap<Long, Integer>)this.C0).put(Long.valueOf(n), Integer.valueOf(l0));
+        d0 = fbx.d0(intValue, d0);
+        ((HashMap<Long, Integer>)this.F0).put(Long.valueOf(n), Integer.valueOf(d0));
     }
     
-    public final void k(final long n, int y0) {
-        final Integer n2 = ((HashMap<K, Integer>)this.C0).get(n);
+    public final void k(final long n, int j0) {
+        final Integer n2 = ((HashMap<K, Integer>)this.F0).get(n);
         int intValue;
         if (n2 == null) {
             intValue = 0;
@@ -83,8 +83,8 @@ public final class dsb implements Serializable
         else {
             intValue = n2;
         }
-        y0 = tdy.Y0(intValue, y0);
-        ((HashMap<Long, Integer>)this.C0).put(Long.valueOf(n), Integer.valueOf(y0));
+        j0 = fbx.j0(intValue, j0);
+        ((HashMap<Long, Integer>)this.F0).put(Long.valueOf(n), Integer.valueOf(j0));
     }
     
     public final void l(final long n, int n2) {
@@ -113,23 +113,23 @@ public final class dsb implements Serializable
         }
     }
     
-    public final void m(final vo6 vo6) {
-        this.l(vo6.w(), vo6.n());
+    public final void m(final hp6 hp6) {
+        this.l(hp6.w(), hp6.n());
     }
     
-    public final void n(final hfv hfv) {
-        this.l(hfv.C0, hfv.H1);
-        if (tdy.Y(hfv.H1)) {
-            this.j(hfv.C0, 4);
+    public final void n(final qgv qgv) {
+        this.l(qgv.F0, qgv.K1);
+        if (fbx.E(qgv.K1)) {
+            this.j(qgv.F0, 4);
         }
         else {
-            this.k(hfv.C0, 4);
+            this.k(qgv.F0, 4);
         }
-        if (tdy.k0(hfv.H1)) {
-            this.b(hfv.C0);
+        if (fbx.N(qgv.K1)) {
+            this.b(qgv.F0);
         }
         else {
-            this.i(hfv.C0);
+            this.i(qgv.F0);
         }
     }
     

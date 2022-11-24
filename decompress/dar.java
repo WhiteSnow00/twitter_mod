@@ -1,7 +1,35 @@
+import j$.util.function.Consumer$VivifiedWrapper;
+import j$.util.Iterator$_CC;
+import j$.util.function.Consumer;
+import java.util.Map;
+import java.util.Iterator;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface dar
+public final class dar<K, V> extends bar<K, V> implements Iterator<V>, koe, j$.util.Iterator
 {
+    public dar(final ljq<K, V> ljq, final Iterator<? extends Map.Entry<? extends K, ? extends V>> iterator) {
+        e0e.f((Object)ljq, "map");
+        e0e.f((Object)iterator, "iterator");
+        super((ljq)ljq, (Iterator)iterator);
+    }
+    
+    public final void forEachRemaining(final Consumer consumer) {
+        Iterator$_CC.$default$forEachRemaining((Iterator)this, consumer);
+    }
+    
+    public final void forEachRemaining(final java.util.function.Consumer consumer) {
+        Iterator$_CC.$default$forEachRemaining((Iterator)this, Consumer$VivifiedWrapper.convert(consumer));
+    }
+    
+    public final V next() {
+        final Map.Entry j0 = super.J0;
+        if (j0 != null) {
+            this.a();
+            return j0.getValue();
+        }
+        throw new IllegalStateException();
+    }
 }

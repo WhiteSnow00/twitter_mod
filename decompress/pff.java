@@ -1,22 +1,15 @@
-import com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pff extends ste implements qsb<LinkModuleConfigurationViewModel.b, LinkModuleConfigurationViewModel.b>
+public final class pff extends jvb implements ptb<vzv>
 {
-    public final LinkModuleConfigurationViewModel D0;
-    
-    public pff(final LinkModuleConfigurationViewModel d0) {
-        this.D0 = d0;
-        super(1);
+    public pff(final Object o) {
+        super(0, o, (Class)yef.class, "discardConfirmationPressed", "discardConfirmationPressed()V", 0);
     }
     
-    public final Object invoke(final Object o) {
-        czd.f((Object)o, "$this$setState");
-        final LinkModuleConfigurationViewModel d0 = this.D0;
-        final oef o2 = d0.O0;
-        return new LinkModuleConfigurationViewModel.b(o2.a(d0.c1.getCta()), o2.b(d0.c1.getUrl()), d0.c1.hasMandatoryData(), 25);
+    public final Object invoke() {
+        ((yef)((ea3)this).receiver).a.onNext((Object)bff$g.a);
+        return vzv.a;
     }
 }

@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSubtaskDataReference extends fih<vsr>
+public class JsonSubtaskDataReference extends tih<ttr>
 {
     public static final Map<String, Integer> c;
     @JsonField
@@ -19,7 +19,7 @@ public class JsonSubtaskDataReference extends fih<vsr>
     public String b;
     
     static {
-        final qjg t = qjg.t();
+        final kkg t = kkg.t();
         t.w((Object)"phone_number", (Object)1);
         t.w((Object)"email", (Object)4);
         final Integer value = 3;
@@ -31,9 +31,10 @@ public class JsonSubtaskDataReference extends fih<vsr>
         t.w((Object)"selected_image", (Object)7);
         t.w((Object)"country_code", (Object)8);
         t.w((Object)"topic_follow_count", (Object)9);
-        c = (Map)((n4j)t).e();
+        c = (Map)((z4j)t).e();
     }
     
+    @Override
     public final Object s() {
         final Integer n = JsonSubtaskDataReference.c.get(this.b);
         Object o;
@@ -41,7 +42,7 @@ public class JsonSubtaskDataReference extends fih<vsr>
             o = null;
         }
         else {
-            o = new vsr(this.a, n);
+            o = new ttr(this.a, n);
         }
         return o;
     }

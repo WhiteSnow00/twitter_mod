@@ -6,33 +6,33 @@ package com.twitter.android.explore.settings;
 
 import com.twitter.weaver.mvi.MviViewModel;
 
-@gb8(c = "com.twitter.android.explore.settings.ExploreSettingsViewModel$1$2", f = "ExploreSettingsViewModel.kt", l = {}, m = "invokeSuspend")
-public final class b extends xzr implements rtb<ap6<? super oyv>, Object>
+@vb8(c = "com.twitter.android.explore.settings.ExploreSettingsViewModel$1$2", f = "ExploreSettingsViewModel.kt", l = {}, m = "invokeSuspend")
+public final class b extends l1s implements stb<mp6<? super vzv>, Object>
 {
-    public final /* synthetic */ ExploreSettingsViewModel C0;
+    public final ExploreSettingsViewModel F0;
     
-    public b(final ExploreSettingsViewModel c0, final ap6<? super b> ap6) {
-        this.C0 = c0;
-        super(1, (ap6)ap6);
+    public b(final ExploreSettingsViewModel f0, final mp6<? super b> mp6) {
+        this.F0 = f0;
+        super(1, (mp6)mp6);
     }
     
-    public final ap6<oyv> create(final ap6<?> ap6) {
-        return (ap6<oyv>)new b(this.C0, (ap6<? super b>)ap6);
+    public final mp6<vzv> create(final mp6<?> mp6) {
+        return (mp6<vzv>)new b(this.F0, (mp6<? super b>)mp6);
     }
     
     public final Object invoke(final Object o) {
-        final b b = (b)this.create((ap6<?>)o);
-        final oyv a = oyv.a;
+        final b b = (b)this.create((mp6<?>)o);
+        final vzv a = vzv.a;
         b.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        kq9.b1(o);
-        final ExploreSettingsViewModel c0 = this.C0;
-        final b$a c2 = b$a.C0;
-        final soe[] p = ExploreSettingsViewModel.P0;
-        ((MviViewModel)c0).Q((rtb)c2);
-        return oyv.a;
+        jb2.M0(o);
+        final ExploreSettingsViewModel f0 = this.F0;
+        final stb<dna, dna> f2 = (stb<dna, dna>)b$a.F0;
+        final ape[] s0 = ExploreSettingsViewModel.S0;
+        ((MviViewModel)f0).Q((stb)f2);
+        return vzv.a;
     }
 }

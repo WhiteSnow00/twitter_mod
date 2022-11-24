@@ -305,8 +305,8 @@
         <item quantity="other">%d másik felhasználó</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Kiemelt követő</item>
-        <item quantity="other">Kiemelt követők</item>
+        <item quantity="one">Előfizető</item>
+        <item quantity="other">Előfizetők</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s kedvelés</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Válasz ﻿%1$s és %2$d másik felhasználónak﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Válasz ﻿%1$s és %2$d másik felhasználónak﻿. A válaszodat más Kiemelt követők is látni fogják.</item>
+        <item quantity="other">Válasz ﻿%1$s és %2$d másik felhasználónak﻿. A válaszodat más előfizetők is látni fogják.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Válasz ﻿%1$s és %2$d másik felhasználónak ﻿ itt: ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Válasz ﻿%1$s, %2$s és %3$d másik felhasználónak﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Válasz ﻿%1$s, %2$s és %3$d másik felhasználónak﻿. A válaszodat más Kiemelt követők is látni fogják.</item>
+        <item quantity="other">Válasz ﻿%1$s, %2$s és %3$d másik felhasználónak﻿. A válaszodat más Előfizetők is látni fogják.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Válasz ﻿%1$s %2$s és %3$d másik felhasználónak﻿ itt: ﻿%4$s﻿</item>

@@ -238,7 +238,7 @@
     </plurals>
     <plurals name="member_count">
         <item quantity="one">%s Thành viên</item>
-        <item quantity="other">%s Thành viên</item>
+        <item quantity="other">%s thành viên</item>
     </plurals>
     <plurals name="minutes">
         <item quantity="one">%d phút</item>
@@ -305,8 +305,8 @@
         <item quantity="other">%d người khác</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Người siêu theo dõi</item>
-        <item quantity="other">Người siêu theo dõi</item>
+        <item quantity="one">Người đăng ký</item>
+        <item quantity="other">Người đăng ký</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s Thích</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Đang trả lời ﻿%1$s và %2$d người khác﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Trả lời ﻿%1$s và %2$d﻿ khác. Những Người siêu theo dõi khác cũng sẽ nhìn thấy trả lời của bạn.</item>
+        <item quantity="other">Trả lời ﻿%1$s và %2$d ﻿ khác. Những Người đăng ký khác cũng sẽ nhìn thấy trả lời của bạn.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Đang trả lời ﻿%1$s và %2$d người khác ﻿ trong ﻿%3$s uFEFF</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Đang trả lời ﻿%1$s %2$s và %3$d người khác﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Trả lời ﻿%1$s %2$s và %3$d ﻿ khác. Những Người siêu theo dõi khác cũng sẽ nhìn thấy trả lời của bạn.</item>
+        <item quantity="other">Trả lời ﻿%1$s %2$s và %3$d ﻿ khác. Những Người đăng ký khác cũng sẽ nhìn thấy trả lời của bạn.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Đang trả lời ﻿%1$s %2$s và %3$d người khác ﻿ trong ﻿%4$s uFEFF</item>

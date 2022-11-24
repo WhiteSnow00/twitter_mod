@@ -2,11 +2,13 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface pk6 extends qfw
+public interface pk6<T>
 {
-    sj6 D1();
+    void a();
     
-    ek6 d7();
+    void b(final float p0);
     
-    i1g w2();
+    void c(final T p0, final int p1);
+    
+    void d(final Throwable p0);
 }

@@ -1,35 +1,27 @@
+import java.util.Objects;
+import com.twitter.util.user.UserIdentifier;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class wg1
 {
-    public static final alp<wg1> d;
-    public static final mnv e;
-    public static final mnv f;
-    public final mnv a;
-    public final mnv b;
-    public final String c;
+    public static final nmp<wg1> d;
+    public final UserIdentifier a;
+    public final String b;
+    public final int c;
     
     static {
         wg1.d = new wg1.wg1$a();
-        e = mnv.D0;
-        f = mnv.O0;
     }
     
-    public wg1(mnv b, final mnv mnv, final String c) {
-        final mnv e = wg1.e;
-        mnv a = b;
-        if (b == null) {
-            a = e;
-        }
-        this.a = a;
-        final mnv f = wg1.f;
-        if ((b = mnv) == null) {
-            b = f;
-        }
-        this.b = b;
-        this.c = c;
+    public wg1(final b b) {
+        this.a = b.a;
+        final String b2 = b.b;
+        vmw.g((Object)b2);
+        this.b = b2;
+        this.c = b.c;
     }
     
     @Override
@@ -40,7 +32,7 @@ public final class wg1
         }
         if (o != null && wg1.class == o.getClass()) {
             final wg1 wg1 = (wg1)o;
-            if (!w4j.a((Object)this.a, (Object)wg1.a) || !w4j.a((Object)this.b, (Object)wg1.b) || !w4j.a((Object)this.c, (Object)wg1.c)) {
+            if (this.c != wg1.c || !this.a.equals((Object)wg1.a) || !this.b.equals(wg1.b)) {
                 b = false;
             }
             return b;
@@ -50,6 +42,34 @@ public final class wg1
     
     @Override
     public final int hashCode() {
-        return w4j.h((Object)this.a, (Object)this.b, (Object)this.c);
+        return Objects.hash(this.a, this.b, this.c);
+    }
+    
+    @Override
+    public final String toString() {
+        final StringBuilder f = ehk.f("BadgeCount{userIdentifier=");
+        f.append(this.a);
+        f.append(", badgeCountType='");
+        go9.r(f, this.b, '\'', ", count=");
+        return gwl.x(f, this.c, '}');
+    }
+    
+    public static final class b extends z4j<wg1>
+    {
+        public UserIdentifier a;
+        public String b;
+        public int c;
+        
+        public b() {
+            this.a = UserIdentifier.UNDEFINED;
+        }
+        
+        public final Object i() {
+            return new wg1(this);
+        }
+        
+        public final boolean k() {
+            return this.b != null && this.c >= 0;
+        }
     }
 }

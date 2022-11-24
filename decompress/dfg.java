@@ -2,19 +2,15 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dfg extends ste implements qsb<fhp, fzv>
+public final class dfg implements apw<zz6.a<Object, Object>>
 {
-    public final m8r<wfj> D0;
+    public final apw F0;
     
-    public dfg(final m8r<wfj> d0) {
-        this.D0 = d0;
-        super(1);
+    public dfg(final apw f0) {
+        this.F0 = f0;
     }
     
-    public final Object invoke(final Object o) {
-        final fhp fhp = (fhp)o;
-        czd.f((Object)fhp, "$this$semantics");
-        fhp.e((ehp<cfg>)hfg.a, new cfg((m8r)this.D0));
-        return fzv.a;
+    public final int b(final Object o) {
+        return this.F0.b((Object)((zz6.a)o).b.h());
     }
 }

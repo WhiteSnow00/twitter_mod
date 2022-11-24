@@ -1,13 +1,19 @@
+import java.util.Arrays;
+import com.google.android.gms.common.api.a;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class l8y implements ujj
+public final class l8y implements d
 {
-    public final /* synthetic */ Object C0;
+    @Override
+    public final boolean equals(final Object o) {
+        return o instanceof l8y;
+    }
     
-    public final void b(final Object o) {
-        final Void void1 = (Void)o;
-        ((ebs)((l8y)this.C0).C0).a.y();
+    @Override
+    public final int hashCode() {
+        return Arrays.hashCode(new Object[] { l8y.class });
     }
 }

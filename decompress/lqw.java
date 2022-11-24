@@ -2,52 +2,26 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lqw<V extends kc0> implements fqw<V>
+public final class lqw extends pue implements hub<d86, Integer, vzv>
 {
-    public final int a;
-    public final int b;
-    public final jp9 c;
-    public final gqw<V> d;
+    public final mub<Float, Float, d86, Integer, vzv> F0;
+    public final kqw G0;
     
-    public lqw(final int a, final int b, final jp9 c) {
-        czd.f((Object)c, "easing");
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = (gqw<V>)new gqw((g6b)new s6b(a, b, c));
+    public lqw(final mub<? super Float, ? super Float, ? super d86, ? super Integer, vzv> f0, final kqw g0) {
+        this.F0 = (mub<Float, Float, d86, Integer, vzv>)f0;
+        this.G0 = g0;
+        super(2);
     }
     
-    public final boolean a() {
-        return false;
-    }
-    
-    public final int b() {
-        return this.b;
-    }
-    
-    public final int c() {
-        return this.a;
-    }
-    
-    public final kc0 d(final kc0 kc0, final kc0 kc2, final kc0 kc3) {
-        return oqf.a((bqw)this, kc0, kc2, kc3);
-    }
-    
-    public final V e(final long n, final V v, final V v2, final V v3) {
-        czd.f((Object)v, "initialValue");
-        czd.f((Object)v2, "targetValue");
-        czd.f((Object)v3, "initialVelocity");
-        return (V)this.d.e(n, (kc0)v, (kc0)v2, (kc0)v3);
-    }
-    
-    public final V f(final long n, final V v, final V v2, final V v3) {
-        czd.f((Object)v, "initialValue");
-        czd.f((Object)v2, "targetValue");
-        czd.f((Object)v3, "initialVelocity");
-        return (V)this.d.f(n, (kc0)v, (kc0)v2, (kc0)v3);
-    }
-    
-    public final long g(final kc0 kc0, final kc0 kc2, final kc0 kc3) {
-        return hee.a((fqw)this, kc0, kc2, kc3);
+    public final Object invoke(final Object o, final Object o2) {
+        final d86 d86 = (d86)o;
+        if ((((Number)o2).intValue() & 0xB) == 0x2 && d86.i()) {
+            d86.H();
+        }
+        else {
+            final sa6$b a = sa6.a;
+            this.F0.I((Object)this.G0.M0.g, (Object)this.G0.M0.h, (Object)d86, (Object)0);
+        }
+        return vzv.a;
     }
 }

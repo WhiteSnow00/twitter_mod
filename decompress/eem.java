@@ -1,37 +1,50 @@
+import android.os.BaseBundle;
+import android.os.Parcel;
+import java.util.Iterator;
+import java.util.Map;
+import android.os.Bundle;
+import android.os.Parcelable$Creator;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class eem extends enm<fem, msm<g42, kbv>, afm>
+public final class eem extends sd
 {
-    public eem() {
-        super((trc)null, 1, (rf8)null);
+    public static final Parcelable$Creator<eem> CREATOR;
+    public Bundle F0;
+    public Map<String, String> G0;
+    
+    static {
+        CREATOR = (Parcelable$Creator)new fem();
     }
     
-    public final orc c(final Object o) {
-        final fem fem = (fem)o;
-        czd.f((Object)fem, "args");
-        return (orc)new afm(fem.a, fem.b);
+    public eem(final Bundle f0) {
+        this.F0 = f0;
     }
     
-    public final Object d(final orc orc) {
-        final afm afm = (afm)orc;
-        czd.f((Object)afm, "request");
-        final xrc t = ((orc)afm).T();
-        czd.e((Object)t, "request.result");
-        msm msm;
-        if (t.b) {
-            final Object g = t.g;
-            czd.c(g);
-            msm = msm.e(g);
-        }
-        else {
-            kbv kbv;
-            if ((kbv = (kbv)t.h) == null) {
-                kbv = new kbv(new hbv[] { new hbv(t.c) });
+    public final Map<String, String> p() {
+        if (this.G0 == null) {
+            final Bundle f0 = this.F0;
+            final ws0 g0 = new ws0();
+            for (final String s : ((BaseBundle)f0).keySet()) {
+                final Object value = ((BaseBundle)f0).get(s);
+                if (value instanceof String) {
+                    final String s2 = (String)value;
+                    if (s.startsWith("google.") || s.startsWith("gcm.") || s.equals("from") || s.equals("message_type") || s.equals("collapse_key")) {
+                        continue;
+                    }
+                    g0.put((Object)s, (Object)s2);
+                }
             }
-            msm = msm.a((Object)kbv);
+            this.G0 = g0;
         }
-        return msm;
+        return this.G0;
+    }
+    
+    public final void writeToParcel(final Parcel parcel, int x1) {
+        x1 = xd.x1(parcel, 20293);
+        xd.g1(parcel, 2, this.F0);
+        xd.B1(parcel, x1);
     }
 }

@@ -8,23 +8,23 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTweetReactiveTrigger extends aih<ozl.b>
+public class JsonTweetReactiveTrigger extends tih<n0m.b>
 {
-    @JsonField(typeConverter = jke.class)
-    public ozl$b$a a;
+    @JsonField(typeConverter = pke.class)
+    public n0m$b$a a;
     @JsonField
-    public j1t b;
+    public s2t b;
     
     @Override
     public final Object s() {
-        final j1t b = this.b;
-        ozl ozl;
+        final s2t b = this.b;
+        n0m n0m;
         if (b != null) {
-            ozl = new ozl.b(this.a, b);
+            n0m = new n0m.b(this.a, b);
         }
         else {
-            ozl = null;
+            n0m = null;
         }
-        return ozl;
+        return n0m;
     }
 }

@@ -1,34 +1,36 @@
-import java.util.concurrent.ExecutionException;
-import android.os.ParcelFileDescriptor$AutoCloseInputStream;
-import android.os.ParcelFileDescriptor;
-import java.io.InputStream;
+import java.lang.annotation.Annotation;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fmy
+public final class fmy implements b5j<dhy>
 {
-    public final oqy<w000> a;
+    public static final fmy a;
     
-    public fmy(final oqy<w000> a) {
-        this.a = a;
+    static {
+        final z000 f0 = z000.F0;
+        a = new fmy();
+        final czz czz = new czz(1, f0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(((Annotation)czz).annotationType(), czz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final czz czz2 = new czz(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final czz czz3 = new czz(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        ehk.g(czz3, hashMap3, czz3, hashMap3);
     }
     
-    public final InputStream a(final int n, final String s, final String s2, final int n2) {
-        final dqz b = ((w000)this.a.a()).b(n, s, s2, n2);
-        try {
-            final ParcelFileDescriptor parcelFileDescriptor = (ParcelFileDescriptor)xa8.d(b);
-            if (parcelFileDescriptor != null && parcelFileDescriptor.getFileDescriptor() != null) {
-                return (InputStream)new ParcelFileDescriptor$AutoCloseInputStream(parcelFileDescriptor);
-            }
-            throw new xpy(String.format("Corrupted ParcelFileDescriptor, session %s packName %s sliceId %s, chunkNumber %s", n, s, s2, n2), n);
-        }
-        catch (final InterruptedException ex) {
-            throw new xpy("Extractor was interrupted while waiting for chunk file.", (Exception)ex, n);
-        }
-        catch (final ExecutionException ex2) {
-            throw new xpy(String.format("Error opening chunk file, session %s packName %s sliceId %s, chunkNumber %s", n, s, s2, n2), (Exception)ex2, n);
-        }
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final dhy dhy = (dhy)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

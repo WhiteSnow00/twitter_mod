@@ -2,6 +2,6 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class thz
+public abstract class thz extends oiz
 {
 }

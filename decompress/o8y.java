@@ -1,27 +1,37 @@
-import android.os.Build$VERSION;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
+import android.os.Parcel;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class o8y
+public final class o8y implements Parcelable$Creator<i7q>
 {
-    public static final int a;
-    
-    static {
-        final int sdk_INT = Build$VERSION.SDK_INT;
-        int a2 = 33554432;
-        Label_0059: {
-            if (sdk_INT < 31) {
-                if (sdk_INT >= 30) {
-                    final String codename = Build$VERSION.CODENAME;
-                    if (codename.length() == 1 && codename.charAt(0) >= 'S' && codename.charAt(0) <= 'Z') {
-                        break Label_0059;
-                    }
+    public final Object createFromParcel(final Parcel parcel) {
+        final int w = SafeParcelReader.w(parcel);
+        String e = null;
+        String e2 = null;
+        while (parcel.dataPosition() < w) {
+            final int int1 = parcel.readInt();
+            final char c = (char)int1;
+            if (c != '\u0001') {
+                if (c != '\u0002') {
+                    SafeParcelReader.v(parcel, int1);
                 }
-                a2 = 0;
+                else {
+                    e2 = SafeParcelReader.e(parcel, int1);
+                }
+            }
+            else {
+                e = SafeParcelReader.e(parcel, int1);
             }
         }
-        a = a2;
+        SafeParcelReader.j(parcel, w);
+        return new i7q(e, e2);
+    }
+    
+    public final /* bridge */ Object[] newArray(final int n) {
+        return new i7q[n];
     }
 }

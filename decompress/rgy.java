@@ -1,88 +1,54 @@
-import java.util.Iterator;
-import java.util.Collection;
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
-import java.util.Set;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class rgy<E> extends qfy<E> implements Set<E>
+public final class rgy
 {
-    public static final int F0 = 0;
-    @NullableDecl
-    public transient yey<E> E0;
+    public final String a;
+    public final String b;
+    public final long c;
+    public final long d;
+    public final long e;
+    public final long f;
+    public final long g;
+    public final Long h;
+    public final Long i;
+    public final Long j;
+    public final Boolean k;
     
-    public static int m(int n) {
-        final int max = Math.max(n, 2);
-        n = 1;
-        if (max < 751619276) {
-            for (n = Integer.highestOneBit(max - 1) << 1; n * 0.7 < max; n <<= 1) {}
-            return n;
-        }
-        if (max >= 1073741824) {
-            n = 0;
-        }
-        if (n != 0) {
-            return 1073741824;
-        }
-        throw new IllegalArgumentException("collection too large");
+    public rgy(final String a, final String b, final long c, final long d, final long e, final long f, final long g, final Long h, final Long i, final Long j, final Boolean k) {
+        iuk.z(a);
+        iuk.z(b);
+        final boolean b2 = true;
+        iuk.p(c >= 0L);
+        iuk.p(d >= 0L);
+        iuk.p(e >= 0L);
+        iuk.p(g >= 0L && b2);
+        this.a = a;
+        this.b = b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.f = f;
+        this.g = g;
+        this.h = h;
+        this.i = i;
+        this.j = j;
+        this.k = k;
     }
     
-    @Override
-    public final boolean equals(@NullableDecl final Object o) {
-        boolean b = true;
-        if (o == this) {
-            return true;
+    public final rgy a(final Long n, final Long n2, Boolean b) {
+        if (b != null && !b) {
+            b = null;
         }
-        if (o instanceof rgy && this.n() && ((rgy)o).n() && this.hashCode() != o.hashCode()) {
-            return false;
-        }
-        if (this == o) {
-            return b;
-        }
-        while (true) {
-            if (!(o instanceof Set)) {
-                break Label_0096;
-            }
-            final Set set = (Set)o;
-            try {
-                if (this.size() != set.size() || !this.containsAll(set)) {
-                    b = false;
-                }
-                return b;
-            }
-            catch (final NullPointerException | ClassCastException ex) {
-                continue;
-            }
-            break;
-        }
+        return new rgy(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, n, n2, b);
     }
     
-    @Override
-    public int hashCode() {
-        final Iterator<E> iterator = this.iterator();
-        int n = 0;
-        while (iterator.hasNext()) {
-            final E next = iterator.next();
-            int hashCode;
-            if (next != null) {
-                hashCode = next.hashCode();
-            }
-            else {
-                hashCode = 0;
-            }
-            n = ~(~(n + hashCode));
-        }
-        return n;
+    public final rgy b(final long n, final long n2) {
+        return new rgy(this.a, this.b, this.c, this.d, this.e, this.f, n, n2, this.i, this.j, this.k);
     }
     
-    @Override
-    public Iterator iterator() {
-        return this.g();
-    }
-    
-    public boolean n() {
-        return this instanceof phy;
+    public final rgy c(final long n) {
+        return new rgy(this.a, this.b, this.c, this.d, this.e, n, this.g, this.h, this.i, this.j, this.k);
     }
 }

@@ -6,91 +6,91 @@ package com.twitter.business.linkconfiguration;
 
 import com.twitter.weaver.mvi.MviViewModel;
 import java.util.List;
-import com.twitter.business.model.listselection.BusinessListSelectionData;
+import com.twitter.business.model.listselection.BusinessListSelectionData$LinkModuleCallToActionLabel;
 import kotlin.NoWhenBranchMatchedException;
 import java.util.ArrayList;
 import java.util.Objects;
 
-@sa8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$2", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
-public final class f extends p0s implements ftb<eef$b, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$2", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
+public final class f extends l1s implements hub<bff$b, mp6<? super vzv>, Object>
 {
-    public final LinkModuleConfigurationViewModel D0;
+    public final LinkModuleConfigurationViewModel F0;
     
-    public f(final LinkModuleConfigurationViewModel d0, final go6<? super f> go6) {
-        this.D0 = d0;
-        super(2, (go6)go6);
+    public f(final LinkModuleConfigurationViewModel f0, final mp6<? super f> mp6) {
+        this.F0 = f0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new f(this.D0, (go6<? super f>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new f(this.F0, (mp6<? super f>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final f f = (f)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final f f = (f)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         f.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(Object o) {
-        b1n.u(o);
-        final def q0 = this.D0.Q0;
-        Objects.requireNonNull(q0);
-        final af4 af4 = new af4(def.c);
-        ((u0p)af4).r = q0.a;
-        final int a = c5j.a;
-        cbw.b((elm)af4);
-        final LinkModuleConfigurationViewModel d0 = this.D0;
-        Objects.requireNonNull(d0);
-        final d93[] values = d93.values();
+        jb2.M0(o);
+        final aff s0 = this.F0.S0;
+        Objects.requireNonNull(s0);
+        final fg4 fg4 = new fg4(aff.c);
+        ((o1p)fg4).r = s0.a;
+        final int a = o5j.a;
+        sbw.b((tlm)fg4);
+        final LinkModuleConfigurationViewModel f0 = this.F0;
+        Objects.requireNonNull(f0);
+        final v93[] values = v93.values();
         final ArrayList list = new ArrayList();
-        for (final d93 d2 : values) {
-            final String a2 = d0.P0.a(d2);
+        for (final v93 v93 : values) {
+            final String a2 = f0.R0.a(v93);
             if (a2 != null) {
-                Objects.requireNonNull(d0.V0);
-                f93 f93 = null;
-                switch (((Enum)d2).ordinal()) {
+                Objects.requireNonNull(f0.X0);
+                x93 x93 = null;
+                switch (((Enum)v93).ordinal()) {
                     default: {
                         throw new NoWhenBranchMatchedException();
                     }
                     case 8: {
-                        f93 = f93.L0;
+                        x93 = x93.N0;
                         break;
                     }
                     case 7: {
-                        f93 = f93.K0;
+                        x93 = x93.M0;
                         break;
                     }
                     case 6: {
-                        f93 = f93.J0;
+                        x93 = x93.L0;
                         break;
                     }
                     case 5: {
-                        f93 = f93.I0;
+                        x93 = x93.K0;
                         break;
                     }
                     case 4: {
-                        f93 = f93.H0;
+                        x93 = x93.J0;
                         break;
                     }
                     case 3: {
-                        f93 = f93.G0;
+                        x93 = x93.I0;
                         break;
                     }
                     case 2: {
-                        f93 = f93.F0;
+                        x93 = x93.H0;
                         break;
                     }
                     case 1: {
-                        f93 = f93.E0;
+                        x93 = x93.G0;
                         break;
                     }
                     case 0: {
-                        f93 = f93.D0;
+                        x93 = x93.F0;
                         break;
                     }
                 }
-                o = new BusinessListSelectionData.LinkModuleCallToActionLabel(a2, f93);
+                o = new BusinessListSelectionData$LinkModuleCallToActionLabel(a2, x93);
             }
             else {
                 o = null;
@@ -99,7 +99,7 @@ public final class f extends p0s implements ftb<eef$b, go6<? super fzv>, Object>
                 list.add(o);
             }
         }
-        ((MviViewModel)d0).V((Object)new cef$b((List)list));
-        return fzv.a;
+        ((MviViewModel)f0).V((Object)new zef$b((List)list));
+        return vzv.a;
     }
 }

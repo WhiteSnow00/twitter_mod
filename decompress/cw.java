@@ -8,33 +8,33 @@ import java.util.List;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cw extends oer
+public final class cw extends fgr
 {
-    public final List<jsi> c;
+    public final List<bti> c;
     
-    public cw(final jsi jsi, final List<jsi> c) {
-        super(jsi);
+    public cw(final bti bti, final List<bti> c) {
+        super(bti);
         this.c = c;
     }
     
-    public final List<iqi> c(final Context context) {
-        final ced$b d0 = ced.D0;
-        final int a = w4j.a;
-        return (List<iqi>)d0;
+    public final List<cri> c(final Context context) {
+        final ged$b g0 = ged.G0;
+        final int a = o5j.a;
+        return (List<cri>)g0;
     }
     
     public final List<Long> d() {
-        return new l5e((Iterable)this.c, (kub)qwv.d).t3();
+        return new t5e((Iterable)this.c, (lub)cje.D).t3();
     }
     
     public final int f() {
         return 2131231779;
     }
     
-    public final rqi g(final Context context) {
-        final oqi oqi = new oqi();
-        for (final jsi jsi : this.c) {
-            final String i = jsi.i;
+    public final lri g(final Context context) {
+        final iri iri = new iri();
+        for (final bti bti : this.c) {
+            final String i = bti.i;
             String s = "";
             String s2;
             if ((s2 = i) == null) {
@@ -43,22 +43,22 @@ public final class cw extends oer
             final StringBuilder sb = new StringBuilder();
             sb.append(s2);
             sb.append('\u2007');
-            final String e = jsi.e;
+            final String e = bti.e;
             if (e != null) {
                 s = e;
             }
             sb.append(s);
             final SpannableString spannableString = new SpannableString((CharSequence)sb.toString());
             spannableString.setSpan((Object)new ForegroundColorSpan(context.getResources().getColor(17170437)), 0, s2.length(), 33);
-            oqi.e.add(mqi.d((CharSequence)spannableString));
+            iri.e.add(gri.d((CharSequence)spannableString));
         }
-        oqi.k((CharSequence)this.h());
-        ((rqi)oqi).b = mqi.d(this.i(context));
-        return (rqi)oqi;
+        iri.k((CharSequence)this.h());
+        ((lri)iri).b = gri.d((CharSequence)this.i(context));
+        return (lri)iri;
     }
     
     public final String h() {
-        return pjr.l(this.e());
+        return flr.l(this.e());
     }
     
     public final String i(final Context context) {

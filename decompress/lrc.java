@@ -1,17 +1,21 @@
-import java.io.IOException;
-import java.io.InputStream;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface lrc
+@vb8(c = "androidx.compose.foundation.HoverableKt$hoverable$2", f = "Hoverable.kt", l = { 70 }, m = "invoke$emitExit")
+public final class lrc extends op6
 {
-    boolean h();
+    public fvh F0;
+    public Object G0;
+    public int H0;
     
-    void m(final int p0, final InputStream p1, final int p2, final String p3, final String p4) throws IOException;
+    public lrc(final mp6<? super lrc> mp6) {
+        super((mp6)mp6);
+    }
     
-    void p(final bsc p0);
-    
-    bsm x();
+    public final Object invokeSuspend(final Object g0) {
+        this.G0 = g0;
+        this.H0 |= Integer.MIN_VALUE;
+        return mrc.b((fvh)null, (iuh)null, (mp6)this);
+    }
 }

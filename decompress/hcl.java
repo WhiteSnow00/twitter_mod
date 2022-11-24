@@ -4,13 +4,4 @@
 
 public interface hcl
 {
-    void a();
-    
-    boolean b();
-    
-    void c();
-    
-    void d();
-    
-    void j();
 }

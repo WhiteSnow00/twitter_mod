@@ -7,41 +7,41 @@ package com.twitter.business.linkconfiguration;
 import com.twitter.weaver.mvi.MviViewModel;
 import java.util.Objects;
 
-@sa8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$1", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
-public final class e extends p0s implements ftb<eef$k, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.business.linkconfiguration.LinkModuleConfigurationViewModel$intents$2$1", f = "LinkModuleConfigurationViewModel.kt", l = {}, m = "invokeSuspend")
+public final class e extends l1s implements hub<bff$k, mp6<? super vzv>, Object>
 {
-    public final LinkModuleConfigurationViewModel D0;
+    public final LinkModuleConfigurationViewModel F0;
     
-    public e(final LinkModuleConfigurationViewModel d0, final go6<? super e> go6) {
-        this.D0 = d0;
-        super(2, (go6)go6);
+    public e(final LinkModuleConfigurationViewModel f0, final mp6<? super e> mp6) {
+        this.F0 = f0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new e(this.D0, (go6<? super e>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new e(this.F0, (mp6<? super e>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final e e = (e)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final e e = (e)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         e.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final def q0 = this.D0.Q0;
-        Objects.requireNonNull(q0);
-        final af4 af4 = new af4(def.b);
-        ((u0p)af4).r = q0.a;
-        final int a = c5j.a;
-        cbw.b((elm)af4);
-        final LinkModuleConfigurationViewModel d0 = this.D0;
+        jb2.M0(o);
+        final aff s0 = this.F0.S0;
+        Objects.requireNonNull(s0);
+        final fg4 fg4 = new fg4(aff.b);
+        ((o1p)fg4).r = s0.a;
+        final int a = o5j.a;
+        sbw.b((tlm)fg4);
+        final LinkModuleConfigurationViewModel f0 = this.F0;
         String url;
-        if ((url = d0.c1.getUrl()) == null) {
+        if ((url = f0.e1.getUrl()) == null) {
             url = "";
         }
-        ((MviViewModel)d0).V((Object)new cef$d(url, this.D0.c1.getCta()));
-        return fzv.a;
+        ((MviViewModel)f0).V((Object)new zef$d(url, this.F0.e1.getCta()));
+        return vzv.a;
     }
 }

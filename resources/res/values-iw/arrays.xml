@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>‏תקבל הודעות על ציוצים חדשים.</item>
-        <item>‏תקבל הודעות על ציוצים חדשים של עוקבי-על בלבד.</item>
+        <item>‏תקבל הודעות על ציוצים חדשים למנויים.</item>
         <item>‏תקבל הודעות על ציוצים חדשים של וידאו בשידור חי.</item>
         <item>‏תקבל הודעות על ציוצים חדשים של מקומות.</item>
         <item>‏לא יוצגו לך יותר הודעות על ציוצים חדשים.</item>
     </array>
     <array name="account_notif_options">
         <item>‏ציוצים</item>
-        <item>‏ציוצים של עוקבי-על בלבד</item>
+        <item>‏ציוצי מינוי בלבד</item>
         <item>‏וידאו בשידור חי</item>
         <item>‏מקומות</item>
         <item>‏ללא</item>
     </array>
     <array name="account_notif_options_old">
         <item>‏כל הציוצים</item>
-        <item>‏ציוצים של מעקבי-על בלבד</item>
+        <item>‏רק ציוצי מינוי</item>
         <item>‏רק וידאו בשידור חי</item>
         <item>‏רק מקומות</item>
         <item>‏כבוי</item>
     </array>
     <array name="account_notif_subtitles">
         <item>‏קבל התראות עבור כל הציוצים של חשבון זה.</item>
-        <item>‏קבל הודעות על ציוצים של מעקבי-על בלבד.</item>
+        <item>‏קבל הודעות רק על ציוצי מינוי.</item>
         <item>‏קבל הודעות רק עבור שידורים חיים.</item>
         <item>‏קבל הודעות רק על מקומות</item>
         <item>‏בטל הודעות לציוצים של חשבון זה.</item>

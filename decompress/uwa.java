@@ -4,17 +4,17 @@
 
 public class uwa
 {
-    public final dk6<z3a> a;
-    public final q0l b;
+    public final pk6<l4a> a;
+    public final n1l b;
     public long c;
     
-    public uwa(final dk6<z3a> a, final q0l b) {
+    public uwa(final pk6<l4a> a, final n1l b) {
         this.a = a;
         this.b = b;
         this.c = 0L;
     }
     
-    public final u0l a() {
+    public final r1l a() {
         return this.b.i();
     }
 }

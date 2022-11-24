@@ -1,58 +1,36 @@
-import java.util.ListIterator;
-import java.util.Iterator;
-import java.util.Objects;
-import java.util.List;
-import java.io.Serializable;
-import java.util.RandomAccess;
-import java.util.AbstractList;
+import java.lang.annotation.Annotation;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class rly<F, T> extends AbstractList<T> implements RandomAccess, Serializable
+public final class rly implements b5j<wfy>
 {
-    public final List<F> D0;
-    public final fzz<? super F, ? extends T> E0;
+    public static final rly a;
     
-    public rly(final List<F> d0, final fzz<? super F, ? extends T> e0) {
-        Objects.requireNonNull(d0);
-        this.D0 = d0;
-        this.E0 = e0;
+    static {
+        final z000 f0 = z000.F0;
+        a = new rly();
+        final czz czz = new czz(1, f0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(((Annotation)czz).annotationType(), czz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final czz czz2 = new czz(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final czz czz3 = new czz(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        ehk.g(czz3, hashMap3, czz3, hashMap3);
     }
     
-    @Override
-    public final void clear() {
-        this.D0.clear();
-    }
-    
-    @Override
-    public final T get(final int n) {
-        return (T)this.E0.b((Object)this.D0.get(n));
-    }
-    
-    @Override
-    public final boolean isEmpty() {
-        return this.D0.isEmpty();
-    }
-    
-    @Override
-    public final Iterator<T> iterator() {
-        return this.listIterator();
-    }
-    
-    @Override
-    public final ListIterator<T> listIterator(final int n) {
-        return (ListIterator<T>)new nly(this, this.D0.listIterator(n));
-    }
-    
-    @Override
-    public final T remove(final int n) {
-        return (T)this.E0.b((Object)this.D0.remove(n));
-    }
-    
-    @Override
-    public final int size() {
-        return this.D0.size();
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final wfy wfy = (wfy)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

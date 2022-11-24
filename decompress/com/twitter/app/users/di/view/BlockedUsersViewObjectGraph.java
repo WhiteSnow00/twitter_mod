@@ -6,7 +6,7 @@ package com.twitter.app.users.di.view;
 
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 
-@r4j
+@d5j
 public interface BlockedUsersViewObjectGraph extends TwitterFragmentActivityViewObjectGraph
 {
 }

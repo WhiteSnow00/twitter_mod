@@ -9,69 +9,69 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfScribeConfig$$JsonObjectMapper extends JsonMapper<JsonOcfScribeConfig>
 {
-    public static JsonOcfScribeConfig _parse(final tge tge) throws IOException {
+    public static JsonOcfScribeConfig _parse(final qhe qhe) throws IOException {
         final JsonOcfScribeConfig jsonOcfScribeConfig = new JsonOcfScribeConfig();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfScribeConfig, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfScribeConfig, d, qhe);
+            qhe.m0();
         }
         return jsonOcfScribeConfig;
     }
     
-    public static void _serialize(final JsonOcfScribeConfig jsonOcfScribeConfig, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfScribeConfig jsonOcfScribeConfig, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
-        afe.t0("action", jsonOcfScribeConfig.e);
-        afe.t0("component", jsonOcfScribeConfig.c);
-        afe.t0("element", jsonOcfScribeConfig.d);
-        afe.t0("page", jsonOcfScribeConfig.a);
-        afe.t0("section", jsonOcfScribeConfig.b);
+        yfe.u0("action", jsonOcfScribeConfig.e);
+        yfe.u0("component", jsonOcfScribeConfig.c);
+        yfe.u0("element", jsonOcfScribeConfig.d);
+        yfe.u0("page", jsonOcfScribeConfig.a);
+        yfe.u0("section", jsonOcfScribeConfig.b);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfScribeConfig jsonOcfScribeConfig, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfScribeConfig jsonOcfScribeConfig, final String s, final qhe qhe) throws IOException {
         if ("action".equals(s)) {
-            jsonOcfScribeConfig.e = tge.T((String)null);
+            jsonOcfScribeConfig.e = qhe.T((String)null);
         }
         else if ("component".equals(s)) {
-            jsonOcfScribeConfig.c = tge.T((String)null);
+            jsonOcfScribeConfig.c = qhe.T((String)null);
         }
         else if ("element".equals(s)) {
-            jsonOcfScribeConfig.d = tge.T((String)null);
+            jsonOcfScribeConfig.d = qhe.T((String)null);
         }
         else if ("page".equals(s)) {
-            jsonOcfScribeConfig.a = tge.T((String)null);
+            jsonOcfScribeConfig.a = qhe.T((String)null);
         }
         else if ("section".equals(s)) {
-            jsonOcfScribeConfig.b = tge.T((String)null);
+            jsonOcfScribeConfig.b = qhe.T((String)null);
         }
     }
     
-    public JsonOcfScribeConfig parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfScribeConfig parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfScribeConfig jsonOcfScribeConfig, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfScribeConfig, afe, b);
+    public void serialize(final JsonOcfScribeConfig jsonOcfScribeConfig, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfScribeConfig, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfScribeConfig)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfScribeConfig)o, yfe, b);
     }
 }

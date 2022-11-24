@@ -1,20 +1,16 @@
-import android.animation.Animator;
-import com.google.android.material.transformation.ExpandableTransformationBehavior;
-import android.animation.AnimatorListenerAdapter;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cha extends AnimatorListenerAdapter
+public final class cha implements wzr
 {
-    public final ExpandableTransformationBehavior D0;
+    public final cxt F0;
     
-    public cha(final ExpandableTransformationBehavior d0) {
-        this.D0 = d0;
+    public cha(final cxt f0) {
+        this.F0 = f0;
     }
     
-    public final void onAnimationEnd(final Animator animator) {
-        this.D0.b = null;
+    public final Object get() {
+        return this.F0;
     }
 }

@@ -1,303 +1,320 @@
+import java.util.Arrays;
+import android.graphics.Bitmap;
+import android.text.Layout$Alignment;
+import android.text.Html;
+import android.text.TextUtils;
+import android.util.Log;
+import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.ArrayList;
+import java.util.regex.Pattern;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dnr
+public final class dnr extends paq
 {
-    public static final a Companion;
-    public final Long a;
-    public final Integer b;
-    public final Integer c;
-    public final Integer d;
-    public final Boolean e;
-    public final String f;
-    public final String g;
-    public final String h;
-    public final String i;
-    public final Integer j;
-    public final Boolean k;
-    public final Boolean l;
-    public final String m;
-    public final String n;
-    public final Boolean o;
-    public final String p;
-    public final String q;
-    public final String r;
-    public final String s;
-    public final String t;
-    public final String u;
+    public static final Pattern o;
+    public static final Pattern p;
+    public final StringBuilder m;
+    public final ArrayList<String> n;
     
     static {
-        Companion = new a();
+        o = Pattern.compile("\\s*((?:(\\d+):)?(\\d+):(\\d+)(?:,(\\d+))?)\\s*-->\\s*((?:(\\d+):)?(\\d+):(\\d+)(?:,(\\d+))?)\\s*");
+        p = Pattern.compile("\\{\\\\.*?\\}");
     }
     
     public dnr() {
-        this(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 2097151);
+        this.m = new StringBuilder();
+        this.n = new ArrayList<String>();
     }
     
-    public dnr(final Long a, final Integer b, final Integer c, final Integer d, final Boolean e, final String f, final String g, final String h, final String i, final Integer j, final Boolean k, final Boolean l, final String m, final String n, final Boolean o, final String p21, final String q, final String r, final String s, final String t, final String u) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-        this.g = g;
-        this.h = h;
-        this.i = i;
-        this.j = j;
-        this.k = k;
-        this.l = l;
-        this.m = m;
-        this.n = n;
-        this.o = o;
-        this.p = p21;
-        this.q = q;
-        this.r = r;
-        this.s = s;
-        this.t = t;
-        this.u = u;
+    public static float k(final int n) {
+        if (n == 0) {
+            return 0.08f;
+        }
+        if (n == 1) {
+            return 0.5f;
+        }
+        if (n == 2) {
+            return 0.92f;
+        }
+        throw new IllegalArgumentException();
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof dnr)) {
-            return false;
-        }
-        final dnr dnr = (dnr)o;
-        return zzd.a((Object)this.a, (Object)dnr.a) && zzd.a((Object)this.b, (Object)dnr.b) && zzd.a((Object)this.c, (Object)dnr.c) && zzd.a((Object)this.d, (Object)dnr.d) && zzd.a((Object)this.e, (Object)dnr.e) && zzd.a((Object)this.f, (Object)dnr.f) && zzd.a((Object)this.g, (Object)dnr.g) && zzd.a((Object)this.h, (Object)dnr.h) && zzd.a((Object)this.i, (Object)dnr.i) && zzd.a((Object)this.j, (Object)dnr.j) && zzd.a((Object)this.k, (Object)dnr.k) && zzd.a((Object)this.l, (Object)dnr.l) && zzd.a((Object)this.m, (Object)dnr.m) && zzd.a((Object)this.n, (Object)dnr.n) && zzd.a((Object)this.o, (Object)dnr.o) && zzd.a((Object)this.p, (Object)dnr.p) && zzd.a((Object)this.q, (Object)dnr.q) && zzd.a((Object)this.r, (Object)dnr.r) && zzd.a((Object)this.s, (Object)dnr.s) && zzd.a((Object)this.t, (Object)dnr.t) && zzd.a((Object)this.u, (Object)dnr.u);
-    }
-    
-    @Override
-    public final int hashCode() {
-        final Long a = this.a;
-        int hashCode = 0;
-        int hashCode2;
-        if (a == null) {
-            hashCode2 = 0;
+    public static long l(final Matcher matcher, final int n) {
+        final String group = matcher.group(n + 1);
+        long n2;
+        if (group != null) {
+            n2 = Long.parseLong(group) * 60L * 60L * 1000L;
         }
         else {
-            hashCode2 = a.hashCode();
+            n2 = 0L;
         }
-        final Integer b = this.b;
-        int hashCode3;
-        if (b == null) {
-            hashCode3 = 0;
+        final String group2 = matcher.group(n + 2);
+        Objects.requireNonNull(group2);
+        final long long1 = Long.parseLong(group2);
+        final String group3 = matcher.group(n + 3);
+        Objects.requireNonNull(group3);
+        final long n3 = Long.parseLong(group3) * 1000L + (long1 * 60L * 1000L + n2);
+        final String group4 = matcher.group(n + 4);
+        long n4 = n3;
+        if (group4 != null) {
+            n4 = n3 + Long.parseLong(group4);
         }
-        else {
-            hashCode3 = b.hashCode();
-        }
-        final Integer c = this.c;
-        int hashCode4;
-        if (c == null) {
-            hashCode4 = 0;
-        }
-        else {
-            hashCode4 = c.hashCode();
-        }
-        final Integer d = this.d;
-        int hashCode5;
-        if (d == null) {
-            hashCode5 = 0;
-        }
-        else {
-            hashCode5 = d.hashCode();
-        }
-        final Boolean e = this.e;
-        int hashCode6;
-        if (e == null) {
-            hashCode6 = 0;
-        }
-        else {
-            hashCode6 = e.hashCode();
-        }
-        final String f = this.f;
-        int hashCode7;
-        if (f == null) {
-            hashCode7 = 0;
-        }
-        else {
-            hashCode7 = f.hashCode();
-        }
-        final String g = this.g;
-        int hashCode8;
-        if (g == null) {
-            hashCode8 = 0;
-        }
-        else {
-            hashCode8 = g.hashCode();
-        }
-        final String h = this.h;
-        int hashCode9;
-        if (h == null) {
-            hashCode9 = 0;
-        }
-        else {
-            hashCode9 = h.hashCode();
-        }
-        final String i = this.i;
-        int hashCode10;
-        if (i == null) {
-            hashCode10 = 0;
-        }
-        else {
-            hashCode10 = i.hashCode();
-        }
-        final Integer j = this.j;
-        int hashCode11;
-        if (j == null) {
-            hashCode11 = 0;
-        }
-        else {
-            hashCode11 = j.hashCode();
-        }
-        final Boolean k = this.k;
-        int hashCode12;
-        if (k == null) {
-            hashCode12 = 0;
-        }
-        else {
-            hashCode12 = k.hashCode();
-        }
-        final Boolean l = this.l;
-        int hashCode13;
-        if (l == null) {
-            hashCode13 = 0;
-        }
-        else {
-            hashCode13 = l.hashCode();
-        }
-        final String m = this.m;
-        int hashCode14;
-        if (m == null) {
-            hashCode14 = 0;
-        }
-        else {
-            hashCode14 = m.hashCode();
-        }
-        final String n = this.n;
-        int hashCode15;
-        if (n == null) {
-            hashCode15 = 0;
-        }
-        else {
-            hashCode15 = n.hashCode();
-        }
-        final Boolean o = this.o;
-        int hashCode16;
-        if (o == null) {
-            hashCode16 = 0;
-        }
-        else {
-            hashCode16 = o.hashCode();
-        }
-        final String p = this.p;
-        int hashCode17;
-        if (p == null) {
-            hashCode17 = 0;
-        }
-        else {
-            hashCode17 = p.hashCode();
-        }
-        final String q = this.q;
-        int hashCode18;
-        if (q == null) {
-            hashCode18 = 0;
-        }
-        else {
-            hashCode18 = q.hashCode();
-        }
-        final String r = this.r;
-        int hashCode19;
-        if (r == null) {
-            hashCode19 = 0;
-        }
-        else {
-            hashCode19 = r.hashCode();
-        }
-        final String s = this.s;
-        int hashCode20;
-        if (s == null) {
-            hashCode20 = 0;
-        }
-        else {
-            hashCode20 = s.hashCode();
-        }
-        final String t = this.t;
-        int hashCode21;
-        if (t == null) {
-            hashCode21 = 0;
-        }
-        else {
-            hashCode21 = t.hashCode();
-        }
-        final String u = this.u;
-        if (u != null) {
-            hashCode = u.hashCode();
-        }
-        return (((((((((((((((((((hashCode2 * 31 + hashCode3) * 31 + hashCode4) * 31 + hashCode5) * 31 + hashCode6) * 31 + hashCode7) * 31 + hashCode8) * 31 + hashCode9) * 31 + hashCode10) * 31 + hashCode11) * 31 + hashCode12) * 31 + hashCode13) * 31 + hashCode14) * 31 + hashCode15) * 31 + hashCode16) * 31 + hashCode17) * 31 + hashCode18) * 31 + hashCode19) * 31 + hashCode20) * 31 + hashCode21) * 31 + hashCode;
+        return n4 * 1000L;
     }
     
     @Override
-    public final String toString() {
-        final Long a = this.a;
-        final Integer b = this.b;
-        final Integer c = this.c;
-        final Integer d = this.d;
-        final Boolean e = this.e;
-        final String f = this.f;
-        final String g = this.g;
-        final String h = this.h;
-        final String i = this.i;
-        final Integer j = this.j;
-        final Boolean k = this.k;
-        final Boolean l = this.l;
-        final String m = this.m;
-        final String n = this.n;
-        final Boolean o = this.o;
-        final String p = this.p;
-        final String q = this.q;
-        final String r = this.r;
-        final String s = this.s;
-        final String t = this.t;
-        final String u = this.u;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("SubscriptionScribeDetails(draftId=");
-        sb.append(a);
-        sb.append(", undoTweetPeriod=");
-        sb.append(b);
-        sb.append(", undoCount=");
-        sb.append(c);
-        sb.append(", numberOfTweets=");
-        sb.append(d);
-        sb.append(", isReply=");
-        sb.append(e);
-        sb.append(", referringPage=");
-        sb.append(f);
-        sb.append(", carouselItemTitle=");
-        mag.m(sb, g, ", subscriptionErrorMessage=", h, ", endReason=");
-        sb.append(i);
-        sb.append(", sessionDurationInSeconds=");
-        sb.append(j);
-        sb.append(", subscriptionEnabled=");
-        sb.append(k);
-        sb.append(", userHasTwitterBlueClaim=");
-        sb.append(l);
-        sb.append(", appIconId=");
-        mag.m(sb, m, ", updateReason=", n, ", success=");
-        sb.append(o);
-        sb.append(", productFeatureId=");
-        sb.append(p);
-        sb.append(", productFeatureSettingsElement=");
-        mag.m(sb, q, ", productFeatureSettingsValue=", r, ", surface=");
-        mag.m(sb, s, ", surfaces=", t, ", errorMessage=");
-        return hi.I(sb, u, ")");
-    }
-    
-    public static final class a
-    {
+    public final fur j(byte[] array, int i, final boolean b) {
+        final ArrayList list = new ArrayList();
+        final byte[] array2 = (Object)new fcg(0, (j98)null);
+        final gxj gxj = new gxj(array, i);
+        array = array2;
+        while (true) {
+            Object o = gxj.f();
+            if (o == null) {
+                break;
+            }
+            if (((String)o).length() == 0) {
+                continue;
+            }
+            try {
+                Integer.parseInt((String)o);
+                o = gxj.f();
+                if (o == null) {
+                    Log.w("SubripDecoder", "Unexpected end");
+                    break;
+                }
+                final Matcher matcher = dnr.o.matcher((CharSequence)o);
+                if (matcher.matches()) {
+                    ((fcg)(Object)array).a(l(matcher, 1));
+                    ((fcg)(Object)array).a(l(matcher, 6));
+                    this.m.setLength(0);
+                    this.n.clear();
+                    for (String s = gxj.f(); !TextUtils.isEmpty((CharSequence)s); s = gxj.f()) {
+                        if (this.m.length() > 0) {
+                            this.m.append("<br>");
+                        }
+                        final StringBuilder m = this.m;
+                        o = this.n;
+                        final String trim = s.trim();
+                        final StringBuilder sb = new StringBuilder(trim);
+                        final Matcher matcher2 = dnr.p.matcher(trim);
+                        i = 0;
+                        while (matcher2.find()) {
+                            final String group = matcher2.group();
+                            ((ArrayList<String>)o).add(group);
+                            final int n = matcher2.start() - i;
+                            final int length = group.length();
+                            sb.replace(n, n + length, "");
+                            i += length;
+                        }
+                        m.append(sb.toString());
+                    }
+                    o = Html.fromHtml(this.m.toString());
+                    while (true) {
+                        String s2;
+                        v87 v87;
+                        int n2;
+                        for (i = 0; i < this.n.size(); ++i) {
+                            s2 = this.n.get(i);
+                            if (s2.matches("\\{\\\\an[1-9]\\}")) {
+                                if (s2 == null) {
+                                    v87 = new v87((CharSequence)o, (Layout$Alignment)null, (Layout$Alignment)null, (Bitmap)null, -3.4028235E38f, Integer.MIN_VALUE, Integer.MIN_VALUE, -3.4028235E38f, Integer.MIN_VALUE, Integer.MIN_VALUE, -3.4028235E38f, -3.4028235E38f, -3.4028235E38f, false, -16777216, Integer.MIN_VALUE, 0.0f);
+                                }
+                                else {
+                                    Label_0635: {
+                                        switch (s2.hashCode()) {
+                                            case -685620462: {
+                                                if (s2.equals("{\\an9}")) {
+                                                    i = 5;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620493: {
+                                                if (s2.equals("{\\an8}")) {
+                                                    i = 8;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620524: {
+                                                if (s2.equals("{\\an7}")) {
+                                                    i = 2;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620555: {
+                                                if (s2.equals("{\\an6}")) {
+                                                    i = 4;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620586: {
+                                                if (s2.equals("{\\an5}")) {
+                                                    i = 7;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620617: {
+                                                if (s2.equals("{\\an4}")) {
+                                                    i = 1;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620648: {
+                                                if (s2.equals("{\\an3}")) {
+                                                    i = 3;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620679: {
+                                                if (s2.equals("{\\an2}")) {
+                                                    i = 6;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                            case -685620710: {
+                                                if (s2.equals("{\\an1}")) {
+                                                    i = 0;
+                                                    break Label_0635;
+                                                }
+                                                break;
+                                            }
+                                        }
+                                        i = -1;
+                                    }
+                                    if (i != 0 && i != 1 && i != 2) {
+                                        if (i != 3 && i != 4 && i != 5) {
+                                            n2 = 1;
+                                        }
+                                        else {
+                                            n2 = 2;
+                                        }
+                                    }
+                                    else {
+                                        n2 = 0;
+                                    }
+                                    Label_0911: {
+                                        switch (s2.hashCode()) {
+                                            case -685620462: {
+                                                if (s2.equals("{\\an9}")) {
+                                                    i = 5;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620493: {
+                                                if (s2.equals("{\\an8}")) {
+                                                    i = 4;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620524: {
+                                                if (s2.equals("{\\an7}")) {
+                                                    i = 3;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620555: {
+                                                if (s2.equals("{\\an6}")) {
+                                                    i = 8;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620586: {
+                                                if (s2.equals("{\\an5}")) {
+                                                    i = 7;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620617: {
+                                                if (s2.equals("{\\an4}")) {
+                                                    i = 6;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620648: {
+                                                if (s2.equals("{\\an3}")) {
+                                                    i = 2;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620679: {
+                                                if (s2.equals("{\\an2}")) {
+                                                    i = 1;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                            case -685620710: {
+                                                if (s2.equals("{\\an1}")) {
+                                                    i = 0;
+                                                    break Label_0911;
+                                                }
+                                                break;
+                                            }
+                                        }
+                                        i = -1;
+                                    }
+                                    if (i != 0 && i != 1 && i != 2) {
+                                        if (i != 3 && i != 4 && i != 5) {
+                                            i = 1;
+                                        }
+                                        else {
+                                            i = 0;
+                                        }
+                                    }
+                                    else {
+                                        i = 2;
+                                    }
+                                    v87 = new v87((CharSequence)o, (Layout$Alignment)null, (Layout$Alignment)null, (Bitmap)null, k(i), 0, i, k(n2), n2, Integer.MIN_VALUE, -3.4028235E38f, -3.4028235E38f, -3.4028235E38f, false, -16777216, Integer.MIN_VALUE, 0.0f);
+                                }
+                                list.add(v87);
+                                list.add(v87.W0);
+                                continue Label_1100;
+                            }
+                        }
+                        s2 = null;
+                        continue;
+                    }
+                }
+                String concat;
+                if (((String)o).length() != 0) {
+                    concat = "Skipping invalid timing: ".concat((String)o);
+                }
+                else {
+                    concat = new String("Skipping invalid timing: ");
+                }
+                Log.w("SubripDecoder", concat);
+            }
+            catch (final NumberFormatException ex) {
+                String concat2;
+                if (((String)o).length() != 0) {
+                    concat2 = "Skipping invalid index: ".concat((String)o);
+                }
+                else {
+                    concat2 = new String("Skipping invalid index: ");
+                }
+                Log.w("SubripDecoder", concat2);
+            }
+            Label_1100:;
+        }
+        return (fur)new enr(list.toArray(new v87[0]), Arrays.copyOf((long[])((fcg)(Object)array).b, ((fcg)(Object)array).a));
     }
 }

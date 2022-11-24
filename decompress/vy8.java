@@ -1,34 +1,61 @@
-import com.twitter.util.user.UserIdentifier;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class vy8 extends enm<String, msm<uy8, hbv>, wy8>
+public final class vy8 implements zq<ty8.a>
 {
-    public final UserIdentifier E0;
+    public static final vy8 a;
+    public static final List<String> b;
     
-    public vy8(final UserIdentifier e0) {
-        this.E0 = e0;
+    static {
+        a = new vy8();
+        b = shw.x0((Object)"__typename");
     }
     
-    public final orc c(final Object o) {
-        return (orc)new wy8(this.E0, (String)o);
+    @Override
+    public final void a(final yle yle, final lb7 lb7, final Object o) {
+        final ty8.a a = (ty8.a)o;
+        e0e.f((Object)yle, "writer");
+        e0e.f((Object)lb7, "customScalarAdapters");
+        e0e.f((Object)a, "value");
+        yle.A1("__typename");
+        cr.a.a(yle, lb7, a.a);
+        final my8 b = a.b;
+        if (b != null) {
+            oy8.a.d(yle, lb7, b);
+        }
+        final skw c = a.c;
+        if (c != null) {
+            vkw.a.d(yle, lb7, c);
+        }
     }
     
-    public final Object d(final orc orc) {
-        final wy8 wy8 = (wy8)orc;
-        final uy8 j1 = wy8.j1;
-        msm msm;
-        if (j1 != null) {
-            jee.l((Object)j1);
-            msm = msm.e((Object)j1);
+    @Override
+    public final Object b(final kie kie, final lb7 lb7) {
+        e0e.f((Object)kie, "reader");
+        e0e.f((Object)lb7, "customScalarAdapters");
+        skw c = null;
+        String s = null;
+        while (kie.k3((List)vy8.b) == 0) {
+            s = (String)cr.a.b(kie, lb7);
         }
-        else {
-            final hbv k1 = wy8.k1;
-            jee.l((Object)k1);
-            msm = msm.a((Object)k1);
+        if (s != null) {
+            my8 c2;
+            if (eg8.J(eg8.w0("User"), lb7.F0.a(), s, lb7.F0)) {
+                kie.H();
+                c2 = oy8.a.c(kie, lb7);
+            }
+            else {
+                c2 = null;
+            }
+            if (eg8.J(eg8.w0("UserUnavailable"), lb7.F0.a(), s, lb7.F0)) {
+                kie.H();
+                c = vkw.a.c(kie, lb7);
+            }
+            return new ty8.a(s, c2, c);
         }
-        return msm;
+        throw new IllegalStateException("__typename was not found".toString());
     }
 }

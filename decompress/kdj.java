@@ -1,31 +1,18 @@
+import com.twitter.util.user.UserIdentifier;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class kdj
+public final class kdj implements ouk
 {
-    public static final alp<kdj> c;
-    public final jdj a;
-    public final int b;
+    public final long F0;
     
-    static {
-        kdj.c = new kdj.kdj$b();
+    public kdj(final long f0) {
+        this.F0 = f0;
     }
     
-    public kdj(final a a) {
-        final jdj a2 = a.a;
-        pf8.r(a2);
-        this.a = a2;
-        this.b = a.b;
-    }
-    
-    public static final class a extends h4j<kdj>
-    {
-        public jdj a;
-        public int b;
-        
-        public final Object i() {
-            return new kdj(this);
-        }
+    public final boolean test(final Object o) {
+        return ((UserIdentifier)o).getId() == this.F0;
     }
 }

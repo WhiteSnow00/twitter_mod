@@ -8,29 +8,28 @@ import java.util.Arrays;
 
 public final class d0 extends y
 {
-    public static final f$a<d0> F0;
-    public final boolean D0;
-    public final boolean E0;
+    public static final f$a<d0> I0;
+    public final boolean G0;
+    public final boolean H0;
     
     static {
-        d0.F0 = h71.G0;
+        d0.I0 = h71.J0;
     }
     
     public d0() {
-        this.D0 = false;
-        this.E0 = false;
+        this.G0 = false;
+        this.H0 = false;
     }
     
-    public d0(final boolean e0) {
-        this.D0 = true;
-        this.E0 = e0;
+    public d0(final boolean h0) {
+        this.G0 = true;
+        this.H0 = h0;
     }
     
     public static String a(final int n) {
         return Integer.toString(n, 36);
     }
     
-    @Override
     public final boolean equals(final Object o) {
         final boolean b = o instanceof d0;
         final boolean b2 = false;
@@ -39,17 +38,16 @@ public final class d0 extends y
         }
         final d0 d0 = (d0)o;
         boolean b3 = b2;
-        if (this.E0 == d0.E0) {
+        if (this.H0 == d0.H0) {
             b3 = b2;
-            if (this.D0 == d0.D0) {
+            if (this.G0 == d0.G0) {
                 b3 = true;
             }
         }
         return b3;
     }
     
-    @Override
     public final int hashCode() {
-        return Arrays.hashCode(new Object[] { this.D0, this.E0 });
+        return Arrays.hashCode(new Object[] { this.G0, this.H0 });
     }
 }

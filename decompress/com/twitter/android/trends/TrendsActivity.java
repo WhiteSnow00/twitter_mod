@@ -4,6 +4,6 @@
 
 package com.twitter.android.trends;
 
-public class TrendsActivity extends vmd
+public class TrendsActivity extends vnd
 {
 }

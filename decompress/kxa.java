@@ -10,30 +10,30 @@ import android.os.Parcelable$Creator;
 public final class kxa extends sd
 {
     public static final Parcelable$Creator<kxa> CREATOR;
-    public final String C0;
+    public final String F0;
     
     static {
-        CREATOR = (Parcelable$Creator)new cwz();
+        CREATOR = (Parcelable$Creator)new nxz();
     }
     
-    public kxa(final String c0) {
-        Objects.requireNonNull(c0, "null reference");
-        this.C0 = c0;
+    public kxa(final String f0) {
+        Objects.requireNonNull(f0, "null reference");
+        this.F0 = f0;
     }
     
     @Override
     public final boolean equals(final Object o) {
-        return o instanceof kxa && this.C0.equals(((kxa)o).C0);
+        return o instanceof kxa && this.F0.equals(((kxa)o).F0);
     }
     
     @Override
     public final int hashCode() {
-        return Arrays.hashCode(new Object[] { this.C0 });
+        return Arrays.hashCode(new Object[] { this.F0 });
     }
     
-    public final void writeToParcel(final Parcel parcel, int x0) {
-        x0 = ri4.x0(parcel, 20293);
-        ri4.s0(parcel, 2, this.C0);
-        ri4.A0(parcel, x0);
+    public final void writeToParcel(final Parcel parcel, int x1) {
+        x1 = xd.x1(parcel, 20293);
+        xd.s1(parcel, 2, this.F0);
+        xd.B1(parcel, x1);
     }
 }

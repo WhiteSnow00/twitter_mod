@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class en1 implements org
+public abstract class en1 implements gsg
 {
     public final long b;
     public final long c;

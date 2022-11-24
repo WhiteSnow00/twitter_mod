@@ -1,38 +1,100 @@
-import java.util.Objects;
-import android.os.Handler;
+import com.google.android.exoplayer2.n;
+import java.util.Collections;
+import com.google.android.exoplayer2.n$a;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ym9 extends jzg
+public final class ym9 implements bz9
 {
-    public final xm9 I0;
-    public boolean J0;
+    public final List<kbu$a> a;
+    public final vwt[] b;
+    public boolean c;
+    public int d;
+    public int e;
+    public long f;
     
-    public ym9(final d3 d3) {
-        final xm9 i = bqe.i();
-        super(d3);
-        this.I0 = i;
+    public ym9(final List<kbu$a> a) {
+        this.a = a;
+        this.b = new vwt[a.size()];
+        this.f = -9223372036854775807L;
     }
     
-    public final Handler i(final pcc pcc) {
-        Objects.requireNonNull((b2)pcc);
-        return d2.M0;
-    }
-    
-    public final void r() {
-        ((zi1)this).l((Class)wah.class, (cw1)new o41((Object)this, 1), 0);
-        ((zi1)this).l((Class)csg.class, (cw1)new q41((Object)this, 1), 0);
-        ((zi1)this).l((Class)adq.class, (cw1)new m41((Object)this, 1), 0);
-    }
-    
-    public final void s(final j6 j6) {
-        if (rez.u(super.H0)) {
-            final i1 b = j6.b;
-            if (b instanceof k1) {
-                this.I0.b((k1)b);
+    public final void a(final gxj gxj) {
+        if (this.c) {
+            if (this.d == 2 && !this.b(gxj, 32)) {
+                return;
             }
+            final int d = this.d;
+            int i = 0;
+            if (d == 1 && !this.b(gxj, 0)) {
+                return;
+            }
+            final int b = gxj.b;
+            final int n = gxj.c - b;
+            for (vwt[] b2 = this.b; i < b2.length; ++i) {
+                final vwt vwt = b2[i];
+                gxj.D(b);
+                vwt.d(gxj, n);
+            }
+            this.e += n;
         }
+    }
+    
+    public final boolean b(final gxj gxj, final int n) {
+        if (gxj.c - gxj.b == 0) {
+            return false;
+        }
+        if (gxj.t() != n) {
+            this.c = false;
+        }
+        --this.d;
+        return this.c;
+    }
+    
+    public final void c() {
+        this.c = false;
+        this.f = -9223372036854775807L;
+    }
+    
+    public final void d(final voa voa, final kbu$d kbu$d) {
+        for (int i = 0; i < this.b.length; ++i) {
+            final kbu$a kbu$a = this.a.get(i);
+            kbu$d.a();
+            final vwt r = voa.r(kbu$d.c(), 3);
+            final n$a n$a = new n$a();
+            n$a.a = kbu$d.b();
+            n$a.k = "application/dvbsubs";
+            n$a.m = Collections.singletonList(kbu$a.b);
+            n$a.c = kbu$a.a;
+            r.e(new n(n$a));
+            this.b[i] = r;
+        }
+    }
+    
+    public final void e() {
+        if (this.c) {
+            if (this.f != -9223372036854775807L) {
+                final vwt[] b = this.b;
+                for (int length = b.length, i = 0; i < length; ++i) {
+                    b[i].b(this.f, 1, this.e, 0, (vwt$a)null);
+                }
+            }
+            this.c = false;
+        }
+    }
+    
+    public final void f(final long f, final int n) {
+        if ((n & 0x4) == 0x0) {
+            return;
+        }
+        this.c = true;
+        if (f != -9223372036854775807L) {
+            this.f = f;
+        }
+        this.e = 0;
+        this.d = 2;
     }
 }

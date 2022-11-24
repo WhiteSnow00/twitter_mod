@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonProfessionalCategory extends fih<g4l>
+public class JsonProfessionalCategory extends tih<v4l>
 {
     @JsonField
     public String a;
@@ -17,21 +17,22 @@ public class JsonProfessionalCategory extends fih<g4l>
     @JsonField
     public Boolean c;
     
+    @Override
     public final /* bridge */ Object s() {
         return this.t();
     }
     
-    public final g4l t() {
-        if (ikr.e((CharSequence)this.a)) {
+    public final v4l t() {
+        if (flr.e((CharSequence)this.a)) {
             return null;
         }
-        final g4l$a g4l$a = new g4l$a();
+        final v4l$a v4l$a = new v4l$a();
         final String a = this.a;
-        czd.f((Object)a, "name");
-        g4l$a.a = a;
-        g4l$a.b = this.b;
+        e0e.f((Object)a, "name");
+        v4l$a.a = a;
+        v4l$a.b = this.b;
         final Boolean c = this.c;
-        g4l$a.c.b((Object)g4l$a, g4l$a.d[0], (Object)(c == null || c));
-        return (g4l)((n4j)g4l$a).e();
+        v4l$a.c.b((Object)v4l$a, v4l$a.d[0], (Object)(c == null || c));
+        return (v4l)((z4j)v4l$a).e();
     }
 }

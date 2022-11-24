@@ -1,40 +1,36 @@
-import java.util.Map;
-import java.util.Iterator;
-import java.util.AbstractCollection;
+import android.os.RemoteException;
+import android.os.Parcel;
+import android.os.IBinder;
+import android.os.IInterface;
+import android.os.Binder;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class piy extends AbstractCollection
+public class piy extends Binder implements IInterface
 {
-    public final /* synthetic */ uiy C0;
-    
-    public piy(final uiy c0) {
-        this.C0 = c0;
+    public piy(final String s) {
+        this.attachInterface((IInterface)this, s);
     }
     
-    @Override
-    public final void clear() {
-        this.C0.clear();
+    public final IBinder asBinder() {
+        return (IBinder)this;
     }
     
-    @Override
-    public final Iterator iterator() {
-        final uiy c0 = this.C0;
-        final Map a = c0.a();
-        Object iterator;
-        if (a != null) {
-            iterator = a.values().iterator();
+    public final boolean onTransact(final int n, final Parcel parcel, final Parcel parcel2, final int n2) throws RemoteException {
+        boolean onTransact;
+        if (n > 16777215) {
+            onTransact = super.onTransact(n, parcel, parcel2, n2);
         }
         else {
-            iterator = new zfy(c0);
+            parcel.enforceInterface(this.getInterfaceDescriptor());
+            onTransact = false;
         }
-        return (Iterator)iterator;
+        return onTransact || this.s(n, parcel);
     }
     
-    @Override
-    public final int size() {
-        return this.C0.size();
+    public boolean s(final int n, final Parcel parcel) throws RemoteException {
+        throw null;
     }
 }

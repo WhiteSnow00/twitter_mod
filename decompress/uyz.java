@@ -1,8 +1,37 @@
+import java.io.File;
+import android.content.Context;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface uyz<F, T>
+public final class uyz
 {
-    T g(final F p0);
+    public final Context a;
+    
+    public uyz(final Context a) {
+        this.a = a;
+    }
+    
+    public static long a(final File file) {
+        if (!file.isDirectory()) {
+            return file.length();
+        }
+        final File[] listFiles = file.listFiles();
+        long n2;
+        long n = n2 = 0L;
+        if (listFiles != null) {
+            final int length = listFiles.length;
+            int n3 = 0;
+            while (true) {
+                n2 = n;
+                if (n3 >= length) {
+                    break;
+                }
+                n += a(listFiles[n3]);
+                ++n3;
+            }
+        }
+        return n2;
+    }
 }

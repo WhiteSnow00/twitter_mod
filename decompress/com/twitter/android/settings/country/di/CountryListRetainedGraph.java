@@ -7,10 +7,10 @@ package com.twitter.android.settings.country.di;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@r4j
+@d5j
 public interface CountryListRetainedGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
-    @r4j
+    @d5j
     public interface CountryListViewGraph extends TwitterFragmentActivityViewObjectGraph
     {
     }

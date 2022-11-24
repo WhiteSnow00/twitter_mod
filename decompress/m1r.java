@@ -1,61 +1,65 @@
-import java.util.Collections;
-import java.util.ArrayList;
-import android.os.Parcel;
-import java.util.List;
-import android.os.Parcelable$Creator;
+import android.util.SparseArray;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class m1r extends i1r
+public final class m1r<V>
 {
-    public static final Parcelable$Creator<m1r> CREATOR;
-    public final List<m1r.m1r$c> C0;
+    public int a;
+    public final SparseArray<V> b;
+    public final qk6<V> c;
     
-    static {
-        CREATOR = (Parcelable$Creator)new m1r$a();
+    public m1r(final qk6<V> qk6) {
+        final y2r n0 = y2r.N0;
+        this.b = (SparseArray<V>)new SparseArray();
+        this.c = (qk6<V>)n0;
+        this.a = -1;
     }
     
-    public m1r(final Parcel parcel) {
-        final int int1 = parcel.readInt();
-        final ArrayList list = new ArrayList<m1r.m1r$c>(int1);
-        for (int i = 0; i < int1; ++i) {
-            list.add(new m1r.m1r$c(parcel));
+    public final void a(final int n, final V v) {
+        final int a = this.a;
+        final boolean b = false;
+        if (a == -1) {
+            omi.p(this.b.size() == 0);
+            this.a = 0;
         }
-        this.C0 = Collections.unmodifiableList((List<? extends m1r.m1r$c>)list);
-    }
-    
-    public m1r(final List<m1r.m1r$c> list) {
-        this.C0 = Collections.unmodifiableList((List<? extends m1r.m1r$c>)list);
-    }
-    
-    public final void writeToParcel(final Parcel parcel, int i) {
-        final int size = this.C0.size();
-        parcel.writeInt(size);
-        m1r.m1r$c m1r$c;
-        int size2;
-        int j;
-        m1r.m1r$b m1r$b;
-        for (i = 0; i < size; ++i) {
-            m1r$c = this.C0.get(i);
-            parcel.writeLong(m1r$c.a);
-            parcel.writeByte((byte)(byte)(m1r$c.b ? 1 : 0));
-            parcel.writeByte((byte)(byte)(m1r$c.c ? 1 : 0));
-            parcel.writeByte((byte)(byte)(m1r$c.d ? 1 : 0));
-            size2 = m1r$c.f.size();
-            parcel.writeInt(size2);
-            for (j = 0; j < size2; ++j) {
-                m1r$b = m1r$c.f.get(j);
-                parcel.writeInt(m1r$b.a);
-                parcel.writeLong(m1r$b.b);
+        if (this.b.size() > 0) {
+            final SparseArray<V> b2 = this.b;
+            final int key = b2.keyAt(b2.size() - 1);
+            boolean b3 = b;
+            if (n >= key) {
+                b3 = true;
             }
-            parcel.writeLong(m1r$c.e);
-            parcel.writeByte((byte)(byte)(m1r$c.g ? 1 : 0));
-            parcel.writeLong(m1r$c.h);
-            parcel.writeInt(m1r$c.i);
-            parcel.writeInt(m1r$c.j);
-            parcel.writeInt(m1r$c.k);
+            omi.m(b3);
+            if (key == n) {
+                final qk6<V> c = this.c;
+                final SparseArray<V> b4 = this.b;
+                c.accept(b4.valueAt(b4.size() - 1));
+            }
         }
+        this.b.append(n, (Object)v);
+    }
+    
+    public final V b(final int n) {
+        if (this.a == -1) {
+            this.a = 0;
+        }
+        while (true) {
+            final int a = this.a;
+            if (a <= 0 || n >= this.b.keyAt(a)) {
+                break;
+            }
+            --this.a;
+        }
+        while (this.a < this.b.size() - 1 && n >= this.b.keyAt(this.a + 1)) {
+            ++this.a;
+        }
+        return (V)this.b.valueAt(this.a);
+    }
+    
+    public final V c() {
+        final SparseArray<V> b = this.b;
+        return (V)b.valueAt(b.size() - 1);
     }
 }

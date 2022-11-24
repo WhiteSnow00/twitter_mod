@@ -2,14 +2,14 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jra<T>
+public final class jra
 {
-    public final T a;
-    public final jub<gub<? super m76, ? super Integer, oyv>, m76, Integer, oyv> b;
+    public final float a;
+    public final w0b<Float> b;
     
-    public jra(final T a, final jub<? super gub<? super m76, ? super Integer, oyv>, ? super m76, ? super Integer, oyv> b) {
+    public jra(final float a, final w0b<Float> b) {
         this.a = a;
-        this.b = (jub<gub<? super m76, ? super Integer, oyv>, m76, Integer, oyv>)b;
+        this.b = b;
     }
     
     @Override
@@ -21,29 +21,21 @@ public final class jra<T>
             return false;
         }
         final jra jra = (jra)o;
-        return zzd.a((Object)this.a, (Object)jra.a) && zzd.a((Object)this.b, (Object)jra.b);
+        return e0e.a((Object)this.a, (Object)jra.a) && e0e.a((Object)this.b, (Object)jra.b);
     }
     
     @Override
     public final int hashCode() {
-        final T a = this.a;
-        int hashCode;
-        if (a == null) {
-            hashCode = 0;
-        }
-        else {
-            hashCode = a.hashCode();
-        }
-        return this.b.hashCode() + hashCode * 31;
+        return this.b.hashCode() + Float.floatToIntBits(this.a) * 31;
     }
     
     @Override
     public final String toString() {
-        final StringBuilder g = w48.g("FadeInFadeOutAnimationItem(key=");
-        g.append(this.a);
-        g.append(", transition=");
-        g.append(this.b);
-        g.append(')');
-        return g.toString();
+        final StringBuilder f = ehk.f("Fade(alpha=");
+        f.append(this.a);
+        f.append(", animationSpec=");
+        f.append(this.b);
+        f.append(')');
+        return f.toString();
     }
 }

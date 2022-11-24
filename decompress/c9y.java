@@ -1,49 +1,31 @@
-import android.app.PendingIntent;
-import android.os.IInterface;
-import android.os.Bundle;
+import com.google.android.gms.auth.api.credentials.Credential;
+import com.google.android.gms.common.internal.safeparcel.SafeParcelReader;
+import android.os.Parcel;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class c9y extends jny<Boolean>
+public final class c9y implements Parcelable$Creator<a9y>
 {
-    public final int d;
-    public final Bundle e;
-    public final /* synthetic */ fm1 f;
-    
-    public c9y(final fm1 f, final int d, final Bundle e) {
-        this.f = f;
-        super(f);
-        this.d = d;
-        this.e = e;
-    }
-    
-    public final void a() {
-        if (this.d == 0) {
-            if (!this.e()) {
-                this.f.N(1, null);
-                this.d(new ph6(8, (PendingIntent)null, (String)null));
+    public final Object createFromParcel(final Parcel parcel) {
+        final int w = SafeParcelReader.w(parcel);
+        Credential credential = null;
+        while (parcel.dataPosition() < w) {
+            final int int1 = parcel.readInt();
+            if ((char)int1 != '\u0001') {
+                SafeParcelReader.v(parcel, int1);
             }
-            return;
+            else {
+                credential = SafeParcelReader.d(parcel, int1, (android.os.Parcelable$Creator<Credential>)Credential.CREATOR);
+            }
         }
-        this.f.N(1, null);
-        final Bundle e = this.e;
-        PendingIntent pendingIntent;
-        if (e != null) {
-            pendingIntent = (PendingIntent)e.getParcelable("pendingIntent");
-        }
-        else {
-            pendingIntent = null;
-        }
-        this.d(new ph6(this.d, pendingIntent, (String)null));
+        SafeParcelReader.j(parcel, w);
+        return new a9y(credential);
     }
     
-    @Override
-    public final void b() {
+    public final /* bridge */ Object[] newArray(final int n) {
+        return new a9y[n];
     }
-    
-    public abstract void d(final ph6 p0);
-    
-    public abstract boolean e();
 }

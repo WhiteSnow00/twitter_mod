@@ -8,21 +8,21 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTCoverImage extends aih<vnv>
+public class JsonURTCoverImage extends tih<fpv>
 {
     @JsonField
-    public szg a;
-    @JsonField(typeConverter = wov.class)
+    public l0h a;
+    @JsonField(typeConverter = fqv.class)
     public int b;
-    @JsonField(typeConverter = vov.class)
+    @JsonField(typeConverter = eqv.class)
     public int c;
     
     @Override
     public final Object s() {
-        final vnv$a vnv$a = new vnv$a();
-        vnv$a.a = this.a;
-        vnv$a.b = this.b;
-        vnv$a.c = this.c;
-        return ((h4j)vnv$a).j();
+        final fpv.a a = new fpv.a();
+        a.a = this.a;
+        a.b = this.b;
+        a.c = this.c;
+        return a.j();
     }
 }

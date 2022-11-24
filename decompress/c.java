@@ -4,10 +4,10 @@
 
 public final class c extends Error
 {
-    public static final int D0 = 0;
+    public static final int F0 = 0;
     
     public c(final c$a$a c$a$a, final long n) {
-        super(jg9.s("Application Not Responding for at least ", n, " ms."), (Throwable)c$a$a);
+        super(k5b.m("Application Not Responding for at least ", n, " ms."), (Throwable)c$a$a);
     }
     
     public static String a(final Thread thread) {

@@ -1,41 +1,30 @@
-import android.os.Parcel;
-import android.os.Parcelable$Creator;
+import android.net.Uri;
+import android.os.Parcelable;
+import android.os.Bundle;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hzf extends cbu
+public final class hzf extends tt2
 {
-    public static final Parcelable$Creator<hzf> CREATOR;
-    public final String E0;
-    public final hil F0;
+    public final gzf F0;
     
-    static {
-        CREATOR = (Parcelable$Creator)new hzf$a();
-    }
-    
-    public hzf(final Parcel parcel) {
-        super(parcel);
-        final String string = parcel.readString();
-        pf8.q(string);
-        this.E0 = string;
-        this.F0 = (hil)parcel.readValue(hil.class.getClassLoader());
-    }
-    
-    public hzf(final vo6 vo6, final String e0, final hil f0) {
-        super(vo6);
-        this.E0 = e0;
+    public hzf(final gzf f0) {
         this.F0 = f0;
     }
     
-    public final o0v d() {
-        return (o0v)new kzf(super.C0, this.E0, this.F0);
+    public final void a(final Bundle bundle) {
+        final gzf f0 = this.F0;
+        f0.U0 = null;
+        final ysj x = ((zsj)f0.P0).x();
+        if (x != null) {
+            bundle.putParcelable("current_selected_page_uri", (Parcelable)x.a);
+            this.F0.U0 = x.a;
+        }
     }
     
-    public final void writeToParcel(final Parcel parcel, final int n) {
-        super.writeToParcel(parcel, n);
-        parcel.writeString(this.E0);
-        parcel.writeValue((Object)this.F0);
+    public final void v(final Parcelable parcelable) {
+        this.F0.U0 = (Uri)((Bundle)parcelable).getParcelable("current_selected_page_uri");
     }
 }

@@ -30,6 +30,10 @@ public class ConsoleReporter extends ScheduledReporter
         (this.dateFormat = DateFormat.getDateTimeInstance(3, 2, locale)).setTimeZone(timeZone);
     }
     
+    public ConsoleReporter(final MetricRegistry metricRegistry, final PrintStream printStream, final Locale locale, final Clock clock, final TimeZone timeZone, final TimeUnit timeUnit, final TimeUnit timeUnit2, final MetricFilter metricFilter, final ConsoleReporter$1 consoleReporter$1) {
+        this(metricRegistry, printStream, locale, clock, timeZone, timeUnit, timeUnit2, metricFilter);
+    }
+    
     public static ConsoleReporter.ConsoleReporter$Builder forRegistry(final MetricRegistry metricRegistry) {
         return new ConsoleReporter.ConsoleReporter$Builder(metricRegistry, (ConsoleReporter$1)null);
     }

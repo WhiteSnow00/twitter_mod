@@ -2,12 +2,7 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jd9
+public interface jd9
 {
-    public rtb<? super sl6, oyv> a;
-    
-    public jd9(final rtb<? super sl6, oyv> a) {
-        zzd.f((Object)a, "block");
-        this.a = a;
-    }
+    Object a(final jvh p0, final hub<? super qc9, ? super mp6<? super vzv>, ?> p1, final mp6<? super vzv> p2);
 }

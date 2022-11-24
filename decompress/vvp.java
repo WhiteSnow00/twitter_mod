@@ -1,48 +1,67 @@
-import java.util.Objects;
-import android.content.Context;
-import java.util.List;
+import android.util.Size;
+import android.net.Uri;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class vvp extends ste implements qsb<List<vei>, fzv>
+public final class vvp implements ccx
 {
-    public final List<qo7> D0;
-    public final awp E0;
-    public final us7 F0;
-    public final ftb<tj7, Context, fzv> G0;
+    public final long a;
+    public final Uri b;
+    public final Size c;
     
-    public vvp(final List<? extends qo7> d0, final awp e0, final us7 f0, final ftb<? super tj7, ? super Context, fzv> g0) {
-        this.D0 = (List<qo7>)d0;
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = (ftb<tj7, Context, fzv>)g0;
-        super(1);
+    public vvp(final long a) {
+        this.a = a;
+        this.b = null;
+        this.c = null;
     }
     
-    public final Object invoke(final Object o) {
-        final List list = (List)o;
-        if (this.D0.size() == 1 && list.size() == 1) {
-            final awp e0 = this.E0;
-            final qo7 qo7 = (qo7)mq4.g0((List)this.D0);
-            final String e2 = ((vei)mq4.g0(list)).e();
-            Objects.requireNonNull(e0);
-            qo7 qo8 = qo7;
-            if (e2 != null) {
-                final qo7.a a = new qo7.a(qo7);
-                a.d = e2;
-                qo8 = (qo7)a.e();
-            }
-            final awp e3 = this.E0;
-            awp.a(this.E0, qo8.a, e3.g.b(qo8, this.F0, e3.a), this.G0);
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof vvp)) {
+            return false;
+        }
+        final vvp vvp = (vvp)o;
+        return this.a == vvp.a && e0e.a((Object)this.b, (Object)vvp.b) && e0e.a((Object)this.c, (Object)vvp.c);
+    }
+    
+    @Override
+    public final int hashCode() {
+        final long a = this.a;
+        final int n = (int)(a ^ a >>> 32);
+        final Uri b = this.b;
+        int hashCode = 0;
+        int hashCode2;
+        if (b == null) {
+            hashCode2 = 0;
         }
         else {
-            awp.a(this.E0, null, this.E0.g.a(this.F0), this.G0);
+            hashCode2 = b.hashCode();
         }
-        final xul e4 = this.E0.e;
-        czd.e((Object)list, "responses");
-        e4.b(list);
-        return fzv.a;
+        final Size c = this.c;
+        if (c != null) {
+            hashCode = c.hashCode();
+        }
+        return (n * 31 + hashCode2) * 31 + hashCode;
+    }
+    
+    @Override
+    public final String toString() {
+        final long a = this.a;
+        final Uri b = this.b;
+        final Size c = this.c;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("ShareSheetState(tweetId=");
+        sb.append(a);
+        sb.append(", uri=");
+        sb.append(b);
+        sb.append(", size=");
+        sb.append(c);
+        sb.append(")");
+        return sb.toString();
     }
 }

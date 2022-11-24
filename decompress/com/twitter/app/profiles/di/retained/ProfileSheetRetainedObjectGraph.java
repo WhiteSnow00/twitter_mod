@@ -6,7 +6,7 @@ package com.twitter.app.profiles.di.retained;
 
 import com.twitter.app.common.inject.retained.RetainedObjectGraph;
 
-@r4j
+@d5j
 public interface ProfileSheetRetainedObjectGraph extends RetainedObjectGraph
 {
 }

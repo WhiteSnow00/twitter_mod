@@ -11,7 +11,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNFTOpenseaNFTMetadata extends fih<h4i>
+public class JsonNFTOpenseaNFTMetadata extends tih<a5i>
 {
     @JsonField(name = { "name" })
     public String a;
@@ -30,9 +30,10 @@ public class JsonNFTOpenseaNFTMetadata extends fih<h4i>
     @JsonField(name = { "collection" })
     public NFTCollection h;
     @JsonField(name = { "traits" })
-    public List<knj> i;
+    public List<aoj> i;
     
+    @Override
     public final Object s() {
-        return new h4i(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, (List)this.i);
+        return new a5i(this.a, this.b, this.c, this.d, this.e, this.f, this.g, this.h, this.i);
     }
 }

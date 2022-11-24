@@ -6,12 +6,12 @@ package com.twitter.rooms.ui.core.consumptionpreview;
 
 import tv.periscope.android.api.service.hydra.model.guestservice.GuestServiceJoinResponse;
 
-public final class b extends gue implements jub<GuestServiceJoinResponse, t01, x21, i3u<? extends GuestServiceJoinResponse, ? extends t01, ? extends x21>>
+public final class b extends pue implements kub<GuestServiceJoinResponse, v01, z21, q4u<? extends GuestServiceJoinResponse, ? extends v01, ? extends z21>>
 {
-    public static final b C0;
+    public static final b F0;
     
     static {
-        C0 = new b();
+        F0 = new b();
     }
     
     public b() {
@@ -20,20 +20,20 @@ public final class b extends gue implements jub<GuestServiceJoinResponse, t01, x
     
     public final Object h0(final Object o, final Object o2, final Object o3) {
         final GuestServiceJoinResponse guestServiceJoinResponse = (GuestServiceJoinResponse)o;
-        final t01 t01 = (t01)o2;
-        final x21 x21 = (x21)o3;
-        zzd.f((Object)guestServiceJoinResponse, "joinResponse");
-        zzd.f((Object)t01, "audioSpace");
-        zzd.f((Object)x21, "participants");
-        i3u i3u;
-        if (oio.u()) {
-            final x21 b = t01.b;
-            zzd.c((Object)b);
-            i3u = new i3u((Object)guestServiceJoinResponse, (Object)t01, (Object)b);
+        final v01 v01 = (v01)o2;
+        final z21 z21 = (z21)o3;
+        e0e.f((Object)guestServiceJoinResponse, "joinResponse");
+        e0e.f((Object)v01, "audioSpace");
+        e0e.f((Object)z21, "participants");
+        q4u q4u;
+        if (vjo.u()) {
+            final z21 b = v01.b;
+            e0e.c((Object)b);
+            q4u = new q4u((Object)guestServiceJoinResponse, (Object)v01, (Object)b);
         }
         else {
-            i3u = new i3u((Object)guestServiceJoinResponse, (Object)t01, (Object)x21);
+            q4u = new q4u((Object)guestServiceJoinResponse, (Object)v01, (Object)z21);
         }
-        return i3u;
+        return q4u;
     }
 }

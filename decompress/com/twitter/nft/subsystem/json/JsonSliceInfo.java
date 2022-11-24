@@ -9,14 +9,15 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSliceInfo extends fih<teq>
+public class JsonSliceInfo extends tih<qfq>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     
+    @Override
     public final Object s() {
-        return new teq(this.a, this.b);
+        return new qfq(this.a, this.b);
     }
 }

@@ -1,20 +1,23 @@
+import android.view.View;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jjo extends kkl
+public final class jjo extends pue implements stb<awj<? extends View, ? extends Long>, vzv>
 {
-    public static final jjo D0;
+    public final zio F0;
+    public final njo G0;
     
-    static {
-        D0 = new jjo();
+    public jjo(final zio f0, final njo g0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        super(1);
     }
     
-    public jjo() {
-        super((Class)ljo.class, "shownView", "getShownView()Lcom/twitter/rooms/fragmentsheet_utils/ShownView;", 0);
-    }
-    
-    public final Object get(final Object o) {
-        return ((ljo)o).a;
+    public final Object invoke(final Object o) {
+        final awj awj = (awj)o;
+        wtn.c(this.F0.k, wjt.J0, new wtn$b("", 2131958397), (View)this.G0.d1, "TAG_ROOM_CREATION_SHEET_FRAGMENT", 0, 1, 0, 80);
+        return vzv.a;
     }
 }

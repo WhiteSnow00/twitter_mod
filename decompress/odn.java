@@ -1,20 +1,36 @@
+import android.view.View;
+import android.widget.TextView;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class odn extends kkl
+public final class odn implements xlx<rdn, Object, mdn>
 {
-    public static final odn D0;
+    public final TextView F0;
+    public final fih<rdn> G0;
     
-    static {
-        D0 = new odn();
+    public odn(final View view) {
+        e0e.f((Object)view, "rootView");
+        final View viewById = view.findViewById(2131428610);
+        e0e.e((Object)viewById, "rootView.findViewById(R.id.decline_description)");
+        this.F0 = (TextView)viewById;
+        this.G0 = (fih<rdn>)ma7.S((stb)new odn$b(this, view));
     }
     
-    public odn() {
-        super((Class)vdn.class, "searchList", "getSearchList()Ljava/util/List;", 0);
+    public final void T(final ccx ccx) {
+        final rdn rdn = (rdn)ccx;
+        e0e.f((Object)rdn, "state");
+        this.G0.b((Object)rdn);
     }
     
-    public final Object get(final Object o) {
-        return ((vdn)o).c;
+    public final void r(final Object o) {
+        e0e.f((Object)o, "effect");
+    }
+    
+    public final t5j<Object> w() {
+        final t5j empty = t5j.empty();
+        e0e.e((Object)empty, "empty()");
+        return (t5j<Object>)empty;
     }
 }

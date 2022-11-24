@@ -1,40 +1,40 @@
+import java.lang.annotation.Annotation;
 import java.io.IOException;
-import java.nio.MappedByteBuffer;
-import java.nio.ByteBuffer;
-import java.security.MessageDigest;
-import java.nio.channels.FileChannel;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class bsy implements any
+public final class bsy implements b5j<n4z>
 {
-    public final FileChannel a;
-    public final long b;
-    public final long c;
+    public static final bsy a;
     
-    public bsy(final FileChannel a, final long b, final long c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    static {
+        final z000 f0 = z000.F0;
+        a = new bsy();
+        final czz czz = new czz(1, f0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(((Annotation)czz).annotationType(), czz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final czz czz2 = new czz(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final czz czz3 = new czz(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        hashMap3.put(((Annotation)czz3).annotationType(), czz3);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap3));
+        final czz czz4 = new czz(4, f0);
+        final HashMap hashMap4 = new HashMap();
+        ehk.g(czz4, hashMap4, czz4, hashMap4);
     }
     
-    @Override
-    public final long a() {
-        return this.c;
-    }
-    
-    @Override
-    public final void b(final MessageDigest[] array, final long n, int i) throws IOException {
-        final MappedByteBuffer map = this.a.map(FileChannel.MapMode.READ_ONLY, this.b + n, i);
-        map.load();
-        int length;
-        MessageDigest messageDigest;
-        for (length = array.length, i = 0; i < length; ++i) {
-            messageDigest = array[i];
-            map.position(0);
-            messageDigest.update(map);
-        }
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final n4z n4z = (n4z)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

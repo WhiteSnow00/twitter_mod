@@ -9,14 +9,14 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOcfEntity extends qfe
+public class JsonOcfEntity extends nge
 {
     @JsonField
     public int a;
     @JsonField
     public int b;
     @JsonField(name = { "navigation_link" })
-    public ssv c;
+    public dtv c;
     @JsonField
-    public vsr d;
+    public ttr d;
 }

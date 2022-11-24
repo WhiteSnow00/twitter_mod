@@ -1,41 +1,71 @@
-import java.util.Objects;
+import android.content.res.Resources;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pgt extends gue implements jub<jkh, m76, Integer, jkh>
+public final class pgt implements txm<gdv, cym>
 {
-    public final /* synthetic */ boolean C0;
-    public final /* synthetic */ boolean D0;
-    public final /* synthetic */ ozm E0;
-    public final /* synthetic */ rtb<Boolean, oyv> F0;
+    public final Resources F0;
+    public final ajh G0;
     
-    public pgt(final boolean c0, final boolean d0, final ozm e0, final rtb<? super Boolean, oyv> f0) {
-        this.C0 = c0;
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = (rtb<Boolean, oyv>)f0;
-        super(3);
+    public pgt(final Resources f0, final ajh g0) {
+        e0e.f((Object)f0, "resources");
+        e0e.f((Object)g0, "modelReader");
+        this.F0 = f0;
+        this.G0 = g0;
     }
     
-    public final Object h0(Object c, Object y, final Object o) {
-        final jkh jkh = (jkh)c;
-        final m76 m76 = (m76)y;
-        lf.x((Number)o, jkh, "$this$composed", m76, 290332169);
-        final ea6$b a = ea6.a;
-        final jkh.a companion = jkh.Companion;
-        final boolean c2 = this.C0;
-        m76.x(-492369756);
-        y = m76.y();
-        Objects.requireNonNull(m76.Companion);
-        c = y;
-        if (y == m76$a.b) {
-            c = bl0.c(m76);
+    public final awj R(final uxm uxm) {
+        final cym cym = (cym)uxm;
+        e0e.f((Object)cym, "<this>");
+        final ajh g0 = this.G0;
+        final zsl$a zsl$a = new zsl$a();
+        ((lp1$a)zsl$a).t(ttl.c("lists_ev_id"), new Object[] { cym.b });
+        final gdv b = (gdv)g0.d((Class)nof.class, (zsl)((z4j)zsl$a).e(), (Class)gdv.class);
+        final cym.a a = new cym.a();
+        a.a = cym.b;
+        a.b = b;
+        return new awj(a.e(), (Object)b);
+    }
+    
+    public final String m(final Object o) {
+        final gdv gdv = (gdv)o;
+        int n;
+        if (gdv.G0) {
+            n = 2131957259;
         }
-        m76.O();
-        final jkh a2 = qgt.a((jkh)companion, c2, (oth)c, (fld)m76.m((re6)hld.a), this.D0, this.E0, (rtb)this.F0);
-        m76.O();
-        return a2;
+        else {
+            n = 2131957252;
+        }
+        final String string = this.F0.getString(n, new Object[] { gdv.P0 });
+        e0e.e((Object)string, "resources.getString(id, list.listName)");
+        return string;
+    }
+    
+    public final dqv t(final Object o) {
+        dqv dqv;
+        if (((gdv)o).G0) {
+            dqv = dqv.K0;
+        }
+        else {
+            dqv = dqv.L0;
+        }
+        return dqv;
+    }
+    
+    public final String w(final Object o) {
+        final gdv gdv = (gdv)o;
+        final Resources f0 = this.F0;
+        int n;
+        if (gdv.G0) {
+            n = 2131957260;
+        }
+        else {
+            n = 2131957253;
+        }
+        final String string = f0.getString(n, new Object[] { gdv.P0 });
+        e0e.e((Object)string, "resources.getString(\n   \u2026  list.listName\n        )");
+        return string;
     }
 }

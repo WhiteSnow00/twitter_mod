@@ -8,22 +8,23 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonFoundMediaOrigin extends fih<pmb>
+public class JsonFoundMediaOrigin extends tih<qnb>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
     
+    @Override
     public final Object s() {
         final String a = this.a;
         if (a != null) {
             final String b = this.b;
             if (b != null) {
-                return new pmb(a, b);
+                return new qnb(a, b);
             }
         }
-        i48.t("JsonFoundMediaOrigin has no provider or id");
+        mqb.o("JsonFoundMediaOrigin has no provider or id");
         return null;
     }
 }

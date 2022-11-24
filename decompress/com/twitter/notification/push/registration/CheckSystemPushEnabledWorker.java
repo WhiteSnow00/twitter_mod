@@ -24,91 +24,91 @@ import androidx.work.Worker;
 public final class CheckSystemPushEnabledWorker extends Worker
 {
     public static final CheckSystemPushEnabledWorker.CheckSystemPushEnabledWorker$a Companion;
-    public static final vba J0;
-    public final Context I0;
+    public static final dda L0;
+    public final Context K0;
     
     static {
         Companion = new CheckSystemPushEnabledWorker.CheckSystemPushEnabledWorker$a();
-        J0 = new vba("jobs", "", "workmanager", "notifications", "check_system_push");
+        L0 = new dda("jobs", "", "workmanager", "notifications", "check_system_push");
     }
     
-    public CheckSystemPushEnabledWorker(final Context i0, final WorkerParameters workerParameters) {
-        czd.f((Object)i0, "context");
-        czd.f((Object)workerParameters, "workerParams");
-        super(i0, workerParameters);
-        this.I0 = i0;
+    public CheckSystemPushEnabledWorker(final Context k0, final WorkerParameters workerParameters) {
+        e0e.f((Object)k0, "context");
+        e0e.f((Object)workerParameters, "workerParams");
+        super(k0, workerParameters);
+        this.K0 = k0;
     }
     
     public final c$a g() {
-        cbw.b((elm)new af4(CheckSystemPushEnabledWorker.J0));
-        final Context i0 = this.I0;
-        final qqm e0 = new qqm();
-        if (!vew.a(i0)) {
-            e0.n((Object)0);
+        sbw.b((tlm)new fg4(CheckSystemPushEnabledWorker.L0));
+        final Context k0 = this.K0;
+        final erm<Integer> g0 = new erm<Integer>();
+        if (!lfw.a(k0)) {
+            g0.n(0);
             Log.e("PackageManagerCompat", "User is in locked direct boot mode");
         }
         else {
-            final PackageManager packageManager = i0.getPackageManager();
+            final PackageManager packageManager = k0.getPackageManager();
             final int sdk_INT = Build$VERSION.SDK_INT;
             final boolean b = sdk_INT >= 30;
             final boolean b2 = sdk_INT >= 23 && sdk_INT < 30;
-            final boolean b3 = lrj.a(packageManager) != null;
+            final boolean b3 = asj.a(packageManager) != null;
             if (!b && (!b2 || !b3)) {
-                e0.n((Object)1);
+                g0.n(1);
             }
             else {
-                final int targetSdkVersion = i0.getApplicationInfo().targetSdkVersion;
+                final int targetSdkVersion = k0.getApplicationInfo().targetSdkVersion;
                 if (targetSdkVersion < 30) {
-                    e0.n((Object)0);
+                    g0.n(0);
                     Log.e("PackageManagerCompat", "Target SDK version below API 30");
                 }
                 else {
                     int n = 4;
                     if (sdk_INT >= 31) {
-                        if (lrj$a.a(i0)) {
+                        if (asj$a.a(k0)) {
                             if (targetSdkVersion >= 31) {
                                 n = 5;
                             }
-                            e0.n((Object)n);
+                            g0.n(n);
                         }
                         else {
-                            e0.n((Object)2);
+                            g0.n(2);
                         }
                     }
                     else if (sdk_INT == 30) {
-                        if (!lrj$a.a(i0)) {
+                        if (!asj$a.a(k0)) {
                             n = 2;
                         }
-                        e0.n((Object)n);
+                        g0.n(n);
                     }
                     else {
-                        final y1w y1w = new y1w(i0);
-                        ((qd)e0).e((Runnable)new r20((Object)y1w, 1), (Executor)Executors.newSingleThreadExecutor());
-                        if (y1w.G0) {
+                        final n2w n2w = new n2w(k0);
+                        g0.e((Runnable)new r20((Object)n2w, 1), (Executor)Executors.newSingleThreadExecutor());
+                        if (n2w.I0) {
                             throw new IllegalStateException("Each UnusedAppRestrictionsBackportServiceConnection can only be bound once.");
                         }
-                        y1w.G0 = true;
-                        y1w.E0 = (qqm<Integer>)e0;
-                        i0.bindService(new Intent("android.support.unusedapprestrictions.action.CustomUnusedAppRestrictionsBackportService").setPackage(lrj.a(i0.getPackageManager())), (ServiceConnection)y1w, 1);
+                        n2w.I0 = true;
+                        n2w.G0 = g0;
+                        k0.bindService(new Intent("android.support.unusedapprestrictions.action.CustomUnusedAppRestrictionsBackportService").setPackage(asj.a(k0.getPackageManager())), (ServiceConnection)n2w, 1);
                     }
                 }
             }
         }
-        final bev r1 = m1f.d().R1();
-        czd.e((Object)r1, "get().twitterNotificationManager");
+        final pev r1 = m58.m().R1();
+        e0e.e((Object)r1, "get().twitterNotificationManager");
         final boolean l = r1.l();
         final Iterator iterator = UserIdentifier.Companion.b().iterator();
         while (iterator.hasNext()) {
-            w9i.W(l, (UserIdentifier)iterator.next());
+            lai.r(l, (UserIdentifier)iterator.next());
         }
         final UserIdentifier c = UserIdentifier.Companion.c();
         if (c.isRegularUser()) {
-            w9i.V((smf)e0, c);
+            lai.q((pnf)g0, c);
         }
         if (c.isLoggedOutUser()) {
             final UserIdentifier logged_OUT = UserIdentifier.LOGGED_OUT;
-            w9i.W(l, logged_OUT);
-            w9i.V((smf)e0, logged_OUT);
+            lai.r(l, logged_OUT);
+            lai.q((pnf)g0, logged_OUT);
         }
         return (c$a)new c$a$c();
     }

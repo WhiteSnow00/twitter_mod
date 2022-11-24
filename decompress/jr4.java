@@ -1,66 +1,125 @@
-import java.util.Objects;
+import java.util.Iterator;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jr4
+public final class jr4 extends wxv
 {
-    public static final zll<ir4> a;
+    public final List<List<zwv>> b;
     
-    static {
-        jr4.a = (iar)xd6.d((nsb)jr4$a.D0);
+    public jr4(final List<? extends List<? extends zwv>> b) {
+        this.b = (List<List<zwv>>)b;
     }
     
-    public static final long a(final ir4 ir4, long n) {
-        czd.f((Object)ir4, "$this$contentColorFor");
-        if (nq4.c(n, ir4.h())) {
-            n = ir4.e();
-        }
-        else if (nq4.c(n, ir4.i())) {
-            n = ir4.e();
-        }
-        else if (nq4.c(n, ir4.j())) {
-            n = ir4.f();
-        }
-        else if (nq4.c(n, ir4.k())) {
-            n = ir4.f();
-        }
-        else if (nq4.c(n, ir4.a())) {
-            n = ir4.c();
-        }
-        else if (nq4.c(n, ir4.l())) {
-            n = ir4.g();
-        }
-        else if (nq4.c(n, ir4.b())) {
-            n = ir4.d();
-        }
-        else {
-            Objects.requireNonNull(nq4.Companion);
-            n = nq4.g;
-        }
-        return n;
+    public final List<zwv> a() {
+        return nr4.e1((Iterable)this.b);
     }
     
-    public static final long b(long n, final x66 x66) {
-        final n96$b a = n96.a;
-        n = a((ir4)x66.m((wd6)jr4.a), n);
-        Objects.requireNonNull(nq4.Companion);
-        if (n == nq4.g) {
-            n = ((nq4)x66.m((wd6)sk6.a)).a;
-        }
-        return n;
+    public final boolean equals(final Object o) {
+        return this == o || (o instanceof jr4 && e0e.a((Object)this.b, (Object)((jr4)o).b));
     }
     
-    public static final long c(final ir4 ir4) {
-        czd.f((Object)ir4, "<this>");
-        long n;
-        if (ir4.m()) {
-            n = ir4.h();
+    public final int hashCode() {
+        return this.b.hashCode();
+    }
+    
+    public final String toString() {
+        final StringBuilder sb = new StringBuilder();
+        final Iterator<Object> iterator = this.b.iterator();
+        int n = 0;
+        while (iterator.hasNext()) {
+            final List next = iterator.next();
+            if (n < 0) {
+                shw.U0();
+                throw null;
+            }
+            final List list = next;
+            sb.append("[");
+            final Iterator iterator2 = list.iterator();
+            int n2 = 0;
+            while (iterator2.hasNext()) {
+                final Object next2 = iterator2.next();
+                if (n2 < 0) {
+                    shw.U0();
+                    throw null;
+                }
+                sb.append(((zwv)next2).getName());
+                if (n2 < shw.F((List)list)) {
+                    sb.append(" + ");
+                }
+                ++n2;
+            }
+            sb.append("]");
+            if (n < shw.F((List)this.b)) {
+                sb.append(" + ");
+            }
+            ++n;
         }
-        else {
-            n = ir4.l();
+        final String string = sb.toString();
+        e0e.e((Object)string, "sb.toString()");
+        return string;
+    }
+    
+    public static final class a extends z4j<jr4>
+    {
+        public List<? extends List<? extends zwv>> a;
+        
+        public final Object i() {
+            final List<? extends List<? extends zwv>> a = this.a;
+            e0e.c((Object)a);
+            return new jr4(a);
         }
-        return n;
+        
+        public final boolean k() {
+            final List<? extends List<? extends zwv>> a = this.a;
+            if (a == null) {
+                return false;
+            }
+            e0e.c((Object)a);
+            final Iterator<Object> iterator = (Iterator<Object>)a.iterator();
+            while (iterator.hasNext()) {
+                if (iterator.next().isEmpty()) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+    
+    public static final class b extends ss2<jr4, a>
+    {
+        public static final b c;
+        
+        static {
+            c = new b();
+        }
+        
+        public b() {
+            super(0);
+        }
+        
+        public final void f(final smp smp, final Object o) {
+            final jr4 jr4 = (jr4)o;
+            e0e.f((Object)smp, "output");
+            e0e.f((Object)jr4, "layout");
+            ((k5j)new ar4$a((nmp)new ar4$a((nmp)zwv.a))).c(smp, (Object)jr4.b);
+            final int a = o5j.a;
+        }
+        
+        public final z4j g() {
+            return new a();
+        }
+        
+        public final void h(final rmp rmp, final z4j z4j, final int n) {
+            final a a = (a)z4j;
+            e0e.f((Object)rmp, "input");
+            e0e.f((Object)a, "builder");
+            final Object a2 = ((k5j)new ar4$a((nmp)new ar4$a((nmp)zwv.a))).a(rmp);
+            vmw.g(a2);
+            e0e.e(a2, "input.readNotNullObject(\u2026          )\n            )");
+            a.a = (List<? extends List<? extends zwv>>)a2;
+        }
     }
 }

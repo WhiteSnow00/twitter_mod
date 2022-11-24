@@ -1,72 +1,122 @@
-import android.view.View;
-import android.widget.TextView;
+import java.util.concurrent.TimeUnit;
+import com.twitter.app.di.app.DaggerTwApplOG$yy;
 import java.util.Objects;
+import com.twitter.app.di.app.DaggerTwApplOG$xy;
+import com.twitter.model.liveevent.LiveEventConfiguration;
+import tv.periscope.model.b;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wqf implements ij3, vqf$a
+public final class wqf implements xzf
 {
-    public final wqf.wqf$a D0;
-    public final vqf E0;
-    public gbh F0;
+    public final b a;
+    public final hp6 b;
+    public final bn9 c;
     
-    public wqf(final wqf.wqf$a d0, final vqf e0) {
-        this.D0 = d0;
-        Objects.requireNonNull(this.E0 = e0);
-        e0.c = (vqf$a)this;
+    public wqf(final b a, final hp6 b, final bn9 c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public final void b(final jqf jqf) {
-        v68.P(this.D0.a, jqf.e);
-        final wqf.wqf$a d0 = this.D0;
-        v68.P(d0.b, jqf.d);
-        d0.c.k(8);
-        final int n = 0;
-        d0.d = false;
-        final gbh f0 = this.F0;
-        Label_0113: {
-            if (f0 == null) {
-                final gbh g = jqf.g;
-                if (g != null) {
-                    this.F0 = g;
-                    this.D0.a(g);
-                    break Label_0113;
-                }
-            }
-            if (f0 != null) {
-                this.D0.a(f0);
-            }
-        }
-        final wqf.wqf$a d2 = this.D0;
-        final boolean b = ((View)d2.b).getVisibility() == 0;
-        int dimensionPixelSize = n;
-        if (!b) {
-            if (d2.d) {
-                dimensionPixelSize = n;
+    public final boolean a() {
+        return true;
+    }
+    
+    public final ufv b(final LiveEventConfiguration liveEventConfiguration) {
+        return ih2.a(this.getId(), liveEventConfiguration.eventId);
+    }
+    
+    public final ezw c(final long n, final cwf e, final LiveEventConfiguration f, final lzw g) {
+        final DaggerTwApplOG$xy daggerTwApplOG$xy = (DaggerTwApplOG$xy)((duf)cgw.a().c((Class)duf.class)).P5();
+        Objects.requireNonNull(daggerTwApplOG$xy);
+        final Long value = n;
+        Objects.requireNonNull(value);
+        daggerTwApplOG$xy.h = value;
+        daggerTwApplOG$xy.d = (xzf)this;
+        Objects.requireNonNull(f);
+        daggerTwApplOG$xy.f = f;
+        Objects.requireNonNull(e);
+        daggerTwApplOG$xy.e = e;
+        daggerTwApplOG$xy.g = g;
+        daggerTwApplOG$xy.c = (h1)this.g(n);
+        return ((DaggerTwApplOG$yy)daggerTwApplOG$xy.a()).h();
+    }
+    
+    public final cyw$a d(final boolean b) {
+        final cyw$a cyw$a = new cyw$a();
+        cyw$a.c = (ulk)r1n.N0;
+        Object d;
+        if (this.a.m0() / (float)this.a.u() > 1.0f) {
+            if (b) {
+                d = tkr.M0;
             }
             else {
-                dimensionPixelSize = ((View)d2.a).getResources().getDimensionPixelSize(2131166074);
+                d = tkr.L0;
             }
         }
-        final TextView a = d2.a;
-        a.setPaddingRelative(((View)a).getPaddingStart(), dimensionPixelSize, ((View)d2.a).getPaddingEnd(), ((View)d2.a).getPaddingBottom());
+        else if (b) {
+            d = tkr.K0;
+        }
+        else {
+            d = tkr.J0;
+        }
+        cyw$a.d = (j7x)d;
+        cyw$a.a = (h1)this.e();
+        cyw$a.k = this.c;
+        return cyw$a;
     }
     
-    public final void j() {
-        final vqf e0 = this.E0;
-        final tqf d0 = tqf.D0;
-        Objects.requireNonNull(e0);
-        e0.c = (vqf$a)d0;
+    public final je8 e() {
+        return this.g(0L);
     }
     
-    public final void k() {
-        this.E0.b.a();
+    @Override
+    public final boolean equals(final Object o) {
+        boolean b = true;
+        if (this == o) {
+            return true;
+        }
+        if (o != null && wqf.class == o.getClass()) {
+            final wqf wqf = (wqf)o;
+            if (!this.a.equals(wqf.a) || !o5j.a((Object)this.b, (Object)wqf.b)) {
+                b = false;
+            }
+            return b;
+        }
+        return false;
     }
     
-    public final void l(final m9i m9i) {
-        final vqf e0 = this.E0;
-        e0.b.c((t19)((h5j)((wgm)e0.a).D0).distinctUntilChanged().subscribeWith((ccj)new sqf(e0)));
+    public final float f() {
+        float n;
+        if (this.a.F()) {
+            n = Float.MAX_VALUE;
+        }
+        else {
+            final b a = this.a;
+            final TimeUnit seconds = TimeUnit.SECONDS;
+            n = (float)a.l();
+        }
+        return n;
+    }
+    
+    public final je8 g(final long d) {
+        final rh2$b rh2$b = new rh2$b();
+        rh2$b.c = this.a;
+        rh2$b.a = this.b;
+        rh2$b.d = d;
+        rh2$b.b = false;
+        return (je8)((z4j)rh2$b).e();
+    }
+    
+    public final String getId() {
+        return this.a.w();
+    }
+    
+    @Override
+    public final int hashCode() {
+        return o5j.f((Object)this.b) + this.a.hashCode() * 31;
     }
 }

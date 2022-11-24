@@ -11,4 +11,8 @@ public abstract class RatioGauge implements Gauge<Double>
     public Double getValue() {
         return this.getRatio().getValue();
     }
+    
+    public /* bridge */ Object getValue() {
+        return this.getValue();
+    }
 }

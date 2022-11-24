@@ -9,34 +9,34 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTInlinePrompt extends aih<iqv>
+public class JsonURTInlinePrompt extends tih<prv>
 {
     @JsonField(name = { "headerText", "inlineHeaderText" })
     public String a;
     @JsonField(name = { "headerRichText", "inlineHeaderRichText" })
-    public xwm b;
+    public fym b;
     @JsonField(name = { "bodyText", "inlineBodyText" })
     public String c;
     @JsonField(name = { "bodyRichText", "inlineBodyRichText" })
-    public xwm d;
+    public fym d;
     @JsonField(name = { "primaryButtonAction", "inlinePrimaryButtonAction" })
-    public fpv e;
+    public nqv e;
     @JsonField(name = { "secondaryButtonAction", "inlineSecondaryButtonAction" })
-    public fpv f;
+    public nqv f;
     @JsonField(name = { "socialContext", "inlineSocialContext" }, typeConverter = d.class)
-    public d4t g;
+    public o5t g;
     @JsonField(name = { "userFacepile", "inlineTimelineUserFacepile" })
-    public m8t h;
+    public y9t h;
     
     @Override
     public final Object s() {
         Object o;
         if (this.a == null && this.b == null) {
-            xpa.p("JsonURTInlinePrompt has no title text");
+            mqb.o("JsonURTInlinePrompt has no title text");
             o = null;
         }
         else {
-            o = new iqv(this.a, this.c, this.e, this.f, this.b, this.d, poa.V(this.g), this.h);
+            o = new prv(this.a, this.c, this.e, this.f, this.b, this.d, ix.w(this.g), this.h);
         }
         return o;
     }

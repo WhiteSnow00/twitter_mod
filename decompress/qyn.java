@@ -1,20 +1,20 @@
+import java.util.List;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class qyn extends kkl
+public final class qyn
 {
-    public static final qyn D0;
-    
-    static {
-        D0 = new qyn();
-    }
+    public final znl<a> a;
+    public final znl<List<qgv>> b;
     
     public qyn() {
-        super((Class)d0o.class, "startTime", "getStartTime()Ljava/lang/Long;", 0);
+        this.a = (znl<a>)new znl();
+        this.b = (znl<List<qgv>>)new znl();
     }
     
-    public final Object get(final Object o) {
-        return ((d0o)o).m;
+    public abstract static class a
+    {
     }
 }

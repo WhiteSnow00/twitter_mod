@@ -1,47 +1,81 @@
-import java.util.Map;
-import com.twitter.util.user.UserIdentifier;
-import androidx.fragment.app.p;
-import android.content.Context;
+import java.lang.reflect.Method;
+import android.app.Notification;
+import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pri extends ajt
+public final class pri implements rk6
 {
-    public static final String[] I0;
+    public final int F0;
+    public final Object G0;
+    public final Object H0;
+    public final Object I0;
+    public final Object J0;
     
-    static {
-        I0 = new String[] { "not_followed_filter" };
+    public pri(final Object g0, final Object h0, final Object i0, final Object j0, final int f0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
+        this.I0 = i0;
+        this.J0 = j0;
     }
     
-    public pri(final Context context, final adw adw, final p p3) {
-        super(context, adw, p3);
-    }
-    
-    public final Map<String, mra> d(final UserIdentifier userIdentifier) {
-        final kdd$b d0 = kdd.D0;
-        final int a = c5j.a;
-        return (Map<String, mra>)d0;
-    }
-    
-    public final vit$b h(final String s) {
-        if ("not_followed_filter".equals(s)) {
-            final Context d0 = super.D0;
-            final String string = d0.getString(2131955464);
-            final int l1 = vit.L1;
-            final vit$b vit$b = new vit$b(d0, string);
-            vit$b.b(2131955465);
-            vit$b.d = (vit$c)this;
-            vit$b.a(0);
-            return vit$b;
+    public final void accept(Object o) {
+        switch (this.F0) {
+            default: {
+                final dju dju = (dju)this.G0;
+                final mxe mxe = (mxe)this.H0;
+                final igd igd = (igd)this.I0;
+                final igt igt = (igt)this.J0;
+                final yjh yjh = (yjh)o;
+                Objects.requireNonNull(dju);
+                if (yjh.b) {
+                    ((xdu)dju).i.a(((t5j)((liu)mxe.get()).b).subscribe((rk6)new d2p((Object)dju, (Object)yjh, (Object)igd, 4)));
+                }
+                else {
+                    igt.c(2131959173, 0);
+                }
+                return;
+            }
+            case 0: {
+                final rri rri = (rri)this.G0;
+                final bti bti = (bti)this.H0;
+                final Notification notification = (Notification)this.I0;
+                final iwi iwi = (iwi)this.J0;
+                final Integer n = (Integer)o;
+                Objects.requireNonNull(rri);
+                final int intValue = n;
+                final int intValue2 = bti.F.a;
+                Notification notification2;
+                try {
+                    final Object value = notification.getClass().getDeclaredField("extraNotification").get(notification);
+                    final Method declaredMethod = value.getClass().getDeclaredMethod("setMessageCount", Integer.TYPE);
+                    if (intValue != intValue2) {
+                        declaredMethod.invoke(value, intValue2);
+                    }
+                    else {
+                        declaredMethod.invoke(value, 1);
+                    }
+                    notification2 = notification;
+                }
+                catch (final Exception ex) {
+                    notification2 = null;
+                }
+                if (notification2 != null) {
+                    final fg4 fg4 = new fg4(new String[] { "app:badge:update:xiaomi:success" });
+                    ((o1p)fg4).A();
+                    sbw.b((tlm)fg4);
+                }
+                else {
+                    o = new fg4(new String[] { "app:badge:update:xiaomi:failure" });
+                    ((o1p)o).A();
+                    sbw.b((tlm)o);
+                    notification2 = notification;
+                }
+                rri.h(iwi, bti, notification2);
+            }
         }
-        final IllegalStateException ex = new IllegalStateException(hmg.h("Couldn't create tooltip from Tooltip Name : ", s));
-        m8a.d((Throwable)ex);
-        throw ex;
-    }
-    
-    public final String[] i() {
-        return pri.I0;
     }
 }

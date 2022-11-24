@@ -1,28 +1,37 @@
-import android.widget.RemoteViews;
-import android.support.v4.media.session.MediaSessionCompat$Token;
+import com.twitter.util.user.UserIdentifier;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class pqi extends rqi
+public final class pqi implements oqi
 {
-    public int[] e;
-    public MediaSessionCompat$Token f;
+    public final tsc a;
+    public final zgv b;
     
-    public pqi() {
-        this.e = null;
+    public pqi(final tsc a, final zgv b) {
+        e0e.f((Object)a, "httpRequestController");
+        e0e.f((Object)b, "userManager");
+        this.a = a;
+        this.b = b;
     }
     
-    public final void b(final npi npi) {
-        jqi.d(((sqi)npi).b, jqi.b(jqi.a(), this.e, this.f));
+    @Override
+    public final long a(final UserIdentifier userIdentifier) {
+        e0e.f((Object)userIdentifier, "userIdentifier");
+        return this.b.g(userIdentifier).getUser().O1;
     }
     
-    public final RemoteViews g() {
-        return null;
-    }
-    
-    public final RemoteViews h() {
-        return null;
+    @Override
+    public final bbq<Long> b(final qgv qgv) {
+        final long o1 = qgv.O1;
+        bbq bbq;
+        if (o1 == 0L) {
+            bbq = this.a.a(new q74(qgv.f())).w((rtb)new x2i((stb)new pqi$a(qgv), 4));
+        }
+        else {
+            bbq = bbq.v((Object)o1);
+        }
+        return (bbq<Long>)bbq;
     }
 }

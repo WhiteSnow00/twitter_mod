@@ -9,12 +9,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonNFTUnverifiedWallet extends fih<d6i$a>
+public class JsonNFTUnverifiedWallet extends tih<w6i.a>
 {
     @JsonField
     public String a;
     
+    @Override
     public final Object s() {
-        return new d6i$a(this.a);
+        return new w6i.a(this.a);
     }
 }

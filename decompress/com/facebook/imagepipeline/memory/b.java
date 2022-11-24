@@ -7,42 +7,45 @@ package com.facebook.imagepipeline.memory;
 import android.util.SparseIntArray;
 import java.util.Objects;
 
-public abstract class b extends BasePool<w3h>
+public abstract class b extends BasePool<n4h>
 {
-    public final int[] N0;
+    public final int[] P0;
     
-    public b(final g4h g4h, final rqk rqk, final sqk sqk) {
-        super(g4h, rqk, sqk);
-        final SparseIntArray c = rqk.c;
+    public b(final x4h x4h, final drk drk, final erk erk) {
+        super(x4h, drk, erk);
+        final SparseIntArray c = drk.c;
         Objects.requireNonNull(c);
-        this.N0 = new int[c.size()];
+        this.P0 = new int[c.size()];
         int n = 0;
         while (true) {
-            final int[] n2 = this.N0;
-            if (n >= n2.length) {
+            final int[] p3 = this.P0;
+            if (n >= p3.length) {
                 break;
             }
-            n2[n] = c.keyAt(n);
+            p3[n] = c.keyAt(n);
             ++n;
         }
         this.o();
     }
     
+    @Override
     public /* bridge */ Object g(final int n) {
         return this.v(n);
     }
     
+    @Override
     public final void i(final Object o) {
-        final w3h w3h = (w3h)o;
-        Objects.requireNonNull(w3h);
-        w3h.close();
+        final n4h n4h = (n4h)o;
+        Objects.requireNonNull(n4h);
+        n4h.close();
     }
     
+    @Override
     public final int k(final int n) {
         if (n > 0) {
-            for (final int n3 : this.N0) {
-                if (n3 >= n) {
-                    return n3;
+            for (final int n2 : this.P0) {
+                if (n2 >= n) {
+                    return n2;
                 }
             }
             return n;
@@ -50,21 +53,24 @@ public abstract class b extends BasePool<w3h>
         throw new BasePool$InvalidSizeException((Object)n);
     }
     
+    @Override
     public final int l(final Object o) {
-        final w3h w3h = (w3h)o;
-        Objects.requireNonNull(w3h);
-        return w3h.getSize();
+        final n4h n4h = (n4h)o;
+        Objects.requireNonNull(n4h);
+        return n4h.getSize();
     }
     
+    @Override
     public final int m(final int n) {
         return n;
     }
     
+    @Override
     public final boolean q(final Object o) {
-        final w3h w3h = (w3h)o;
-        Objects.requireNonNull(w3h);
-        return w3h.isClosed() ^ true;
+        final n4h n4h = (n4h)o;
+        Objects.requireNonNull(n4h);
+        return n4h.isClosed() ^ true;
     }
     
-    public abstract w3h v(final int p0);
+    public abstract n4h v(final int p0);
 }

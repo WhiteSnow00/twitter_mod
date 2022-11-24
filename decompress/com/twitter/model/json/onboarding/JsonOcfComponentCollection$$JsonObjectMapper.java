@@ -12,96 +12,96 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfComponentCollection$$JsonObjectMapper extends JsonMapper<JsonOcfComponentCollection>
 {
-    public static JsonOcfComponentCollection _parse(final tge tge) throws IOException {
+    public static JsonOcfComponentCollection _parse(final qhe qhe) throws IOException {
         final JsonOcfComponentCollection collection = new JsonOcfComponentCollection();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(collection, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(collection, d, qhe);
+            qhe.m0();
         }
         return collection;
     }
     
-    public static void _serialize(final JsonOcfComponentCollection collection, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfComponentCollection collection, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         final ArrayList d = collection.d;
         if (d != null) {
-            final Iterator a = br.A(afe, "content_footer_components", d);
-            while (a.hasNext()) {
-                final wqp wqp = a.next();
-                if (wqp != null) {
-                    LoganSquare.typeConverterFor((Class)wqp.class).serialize((Object)wqp, "lslocalcontent_footer_componentsElement", false, afe);
+            final Iterator e = d10.E(yfe, "content_footer_components", d);
+            while (e.hasNext()) {
+                final rrp rrp = e.next();
+                if (rrp != null) {
+                    LoganSquare.typeConverterFor((Class)rrp.class).serialize((Object)rrp, "lslocalcontent_footer_componentsElement", false, yfe);
                 }
             }
-            afe.f();
+            yfe.f();
         }
         final ArrayList b2 = collection.b;
         if (b2 != null) {
-            final Iterator a2 = br.A(afe, "content_header_components", b2);
-            while (a2.hasNext()) {
-                final wqp wqp2 = a2.next();
-                if (wqp2 != null) {
-                    LoganSquare.typeConverterFor((Class)wqp.class).serialize((Object)wqp2, "lslocalcontent_header_componentsElement", false, afe);
+            final Iterator e2 = d10.E(yfe, "content_header_components", b2);
+            while (e2.hasNext()) {
+                final rrp rrp2 = e2.next();
+                if (rrp2 != null) {
+                    LoganSquare.typeConverterFor((Class)rrp.class).serialize((Object)rrp2, "lslocalcontent_header_componentsElement", false, yfe);
                 }
             }
-            afe.f();
+            yfe.f();
         }
         final ArrayList c = collection.c;
         if (c != null) {
-            final Iterator a3 = br.A(afe, "footer_components", c);
-            while (a3.hasNext()) {
-                final wqp wqp3 = a3.next();
-                if (wqp3 != null) {
-                    LoganSquare.typeConverterFor((Class)wqp.class).serialize((Object)wqp3, "lslocalfooter_componentsElement", false, afe);
+            final Iterator e3 = d10.E(yfe, "footer_components", c);
+            while (e3.hasNext()) {
+                final rrp rrp3 = e3.next();
+                if (rrp3 != null) {
+                    LoganSquare.typeConverterFor((Class)rrp.class).serialize((Object)rrp3, "lslocalfooter_componentsElement", false, yfe);
                 }
             }
-            afe.f();
+            yfe.f();
         }
-        final ArrayList a4 = collection.a;
-        if (a4 != null) {
-            final Iterator a5 = br.A(afe, "header_components", a4);
-            while (a5.hasNext()) {
-                final wqp wqp4 = a5.next();
-                if (wqp4 != null) {
-                    LoganSquare.typeConverterFor((Class)wqp.class).serialize((Object)wqp4, "lslocalheader_componentsElement", false, afe);
+        final ArrayList a = collection.a;
+        if (a != null) {
+            final Iterator e4 = d10.E(yfe, "header_components", a);
+            while (e4.hasNext()) {
+                final rrp rrp4 = e4.next();
+                if (rrp4 != null) {
+                    LoganSquare.typeConverterFor((Class)rrp.class).serialize((Object)rrp4, "lslocalheader_componentsElement", false, yfe);
                 }
             }
-            afe.f();
+            yfe.f();
         }
-        final ArrayList e = collection.e;
-        if (e != null) {
-            final Iterator a6 = br.A(afe, "pinned_footer_components", e);
-            while (a6.hasNext()) {
-                final wqp wqp5 = a6.next();
-                if (wqp5 != null) {
-                    LoganSquare.typeConverterFor((Class)wqp.class).serialize((Object)wqp5, "lslocalpinned_footer_componentsElement", false, afe);
+        final ArrayList e5 = collection.e;
+        if (e5 != null) {
+            final Iterator e6 = d10.E(yfe, "pinned_footer_components", e5);
+            while (e6.hasNext()) {
+                final rrp rrp5 = e6.next();
+                if (rrp5 != null) {
+                    LoganSquare.typeConverterFor((Class)rrp.class).serialize((Object)rrp5, "lslocalpinned_footer_componentsElement", false, yfe);
                 }
             }
-            afe.f();
+            yfe.f();
         }
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfComponentCollection collection, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfComponentCollection collection, final String s, final qhe qhe) throws IOException {
         if ("content_footer_components".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList d = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final wqp wqp = (wqp)LoganSquare.typeConverterFor((Class)wqp.class).parse(tge);
-                    if (wqp != null) {
-                        d.add(wqp);
+                while (qhe.i0() != rje.Q0) {
+                    final rrp rrp = (rrp)LoganSquare.typeConverterFor((Class)rrp.class).parse(qhe);
+                    if (rrp != null) {
+                        d.add(rrp);
                     }
                 }
                 collection.d = d;
@@ -111,12 +111,12 @@ public final class JsonOcfComponentCollection$$JsonObjectMapper extends JsonMapp
             }
         }
         else if ("content_header_components".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList b = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final wqp wqp2 = (wqp)LoganSquare.typeConverterFor((Class)wqp.class).parse(tge);
-                    if (wqp2 != null) {
-                        b.add(wqp2);
+                while (qhe.i0() != rje.Q0) {
+                    final rrp rrp2 = (rrp)LoganSquare.typeConverterFor((Class)rrp.class).parse(qhe);
+                    if (rrp2 != null) {
+                        b.add(rrp2);
                     }
                 }
                 collection.b = b;
@@ -126,12 +126,12 @@ public final class JsonOcfComponentCollection$$JsonObjectMapper extends JsonMapp
             }
         }
         else if ("footer_components".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList c = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final wqp wqp3 = (wqp)LoganSquare.typeConverterFor((Class)wqp.class).parse(tge);
-                    if (wqp3 != null) {
-                        c.add(wqp3);
+                while (qhe.i0() != rje.Q0) {
+                    final rrp rrp3 = (rrp)LoganSquare.typeConverterFor((Class)rrp.class).parse(qhe);
+                    if (rrp3 != null) {
+                        c.add(rrp3);
                     }
                 }
                 collection.c = c;
@@ -141,12 +141,12 @@ public final class JsonOcfComponentCollection$$JsonObjectMapper extends JsonMapp
             }
         }
         else if ("header_components".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList a = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final wqp wqp4 = (wqp)LoganSquare.typeConverterFor((Class)wqp.class).parse(tge);
-                    if (wqp4 != null) {
-                        a.add(wqp4);
+                while (qhe.i0() != rje.Q0) {
+                    final rrp rrp4 = (rrp)LoganSquare.typeConverterFor((Class)rrp.class).parse(qhe);
+                    if (rrp4 != null) {
+                        a.add(rrp4);
                     }
                 }
                 collection.a = a;
@@ -156,12 +156,12 @@ public final class JsonOcfComponentCollection$$JsonObjectMapper extends JsonMapp
             }
         }
         else if ("pinned_footer_components".equals(s)) {
-            if (tge.e() == vie.N0) {
+            if (qhe.e() == rje.P0) {
                 final ArrayList e = new ArrayList();
-                while (tge.h0() != vie.O0) {
-                    final wqp wqp5 = (wqp)LoganSquare.typeConverterFor((Class)wqp.class).parse(tge);
-                    if (wqp5 != null) {
-                        e.add(wqp5);
+                while (qhe.i0() != rje.Q0) {
+                    final rrp rrp5 = (rrp)LoganSquare.typeConverterFor((Class)rrp.class).parse(qhe);
+                    if (rrp5 != null) {
+                        e.add(rrp5);
                     }
                 }
                 collection.e = e;
@@ -172,19 +172,19 @@ public final class JsonOcfComponentCollection$$JsonObjectMapper extends JsonMapp
         }
     }
     
-    public JsonOcfComponentCollection parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfComponentCollection parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfComponentCollection collection, final afe afe, final boolean b) throws IOException {
-        _serialize(collection, afe, b);
+    public void serialize(final JsonOcfComponentCollection collection, final yfe yfe, final boolean b) throws IOException {
+        _serialize(collection, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfComponentCollection)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfComponentCollection)o, yfe, b);
     }
 }

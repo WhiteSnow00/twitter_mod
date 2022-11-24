@@ -2,19 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class agh extends kkl
+public final class agh extends pue implements stb<yfh, Boolean>
 {
-    public static final agh D0;
+    public static final agh F0;
     
     static {
-        D0 = new agh();
+        F0 = new agh();
     }
     
     public agh() {
-        super((Class)tgh.class, "url", "getUrl()Ljava/lang/String;", 0);
+        super(1);
     }
     
-    public final Object get(final Object o) {
-        return ((tgh)o).e;
+    public final Object invoke(final Object o) {
+        final yfh yfh = (yfh)o;
+        e0e.f((Object)yfh, "it");
+        return yfh.b ^ true;
     }
 }

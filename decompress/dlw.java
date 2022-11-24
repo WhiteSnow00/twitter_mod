@@ -1,34 +1,46 @@
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
+import com.twitter.business.features.mobileappmodule.model.MobileAppUrlsByStore;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dlw extends gue implements rtb<List<hfv>, oyv>
+public final class dlw
 {
-    public final /* synthetic */ clw C0;
+    public final String a;
+    public final MobileAppUrlsByStore b;
     
-    public dlw(final clw c0) {
-        this.C0 = c0;
-        super(1);
+    public dlw(final String a, final MobileAppUrlsByStore b) {
+        this.a = a;
+        this.b = b;
     }
     
-    public final Object invoke(final Object o) {
-        final List list = (List)o;
-        zzd.e((Object)list, "users");
-        final clw c0 = this.C0;
-        for (final hfv hfv : list) {
-            final reg<Long, clw.a> d = c0.d;
-            final long c2 = hfv.C0;
-            Boolean b;
-            if ((b = hfv.A1) == null) {
-                b = Boolean.FALSE;
-            }
-            zzd.e((Object)b, "it.hasNFTAvatar ?: false");
-            ((HashMap<Long, clw.a>)d).put(Long.valueOf(c2), new clw.a(b));
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
         }
-        return oyv.a;
+        if (!(o instanceof dlw)) {
+            return false;
+        }
+        final dlw dlw = (dlw)o;
+        return e0e.a((Object)this.a, (Object)dlw.a) && e0e.a((Object)this.b, (Object)dlw.b);
+    }
+    
+    @Override
+    public final int hashCode() {
+        return this.b.hashCode() + this.a.hashCode() * 31;
+    }
+    
+    @Override
+    public final String toString() {
+        final String a = this.a;
+        final MobileAppUrlsByStore b = this.b;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("UserUpdateMobileAppModuleParams(moduleId=");
+        sb.append(a);
+        sb.append(", mobileAppUrlsByStore=");
+        sb.append(b);
+        sb.append(")");
+        return sb.toString();
     }
 }

@@ -8,8 +8,8 @@ import kotlinx.serialization.descriptors.SerialDescriptor;
 import kotlin.Metadata;
 import com.twitter.app.common.args.ContentViewArgs;
 
-@flp
-@Metadata(bv = {}, d1 = { "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0002\b\u0007\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u0000 $2\u00020\u0001:\u0002%$B!\b\u0007\u0012\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000b¢\u0006\u0004\b\u001e\u0010\u001fB/\b\u0017\u0012\u0006\u0010 \u001a\u00020\u0013\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u000b\u0012\b\u0010\"\u001a\u0004\u0018\u00010!¢\u0006\u0004\b\u001e\u0010#J!\u0010\b\u001a\u00020\u00072\u0006\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005H\u00c7\u0001J\u000b\u0010\n\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u0012\u0010\f\u001a\u0004\u0018\u00010\u000bH\u00c6\u0003¢\u0006\u0004\b\f\u0010\rJ(\u0010\u0010\u001a\u00020\u00002\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000bH\u00c6\u0001¢\u0006\u0004\b\u0010\u0010\u0011J\t\u0010\u0012\u001a\u00020\tH\u00d6\u0001J\t\u0010\u0014\u001a\u00020\u0013H\u00d6\u0001J\u0013\u0010\u0018\u001a\u00020\u00172\b\u0010\u0016\u001a\u0004\u0018\u00010\u0015H\u00d6\u0003R\u0019\u0010\u000e\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u000e\u0010\u0019\u001a\u0004\b\u001a\u0010\u001bR\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u000b8\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u001c\u001a\u0004\b\u001d\u0010\r¨\u0006&" }, d2 = { "Lcom/twitter/brandedlikepreview/BrandedLikePreviewContentViewArgs;", "Lcom/twitter/app/common/args/ContentViewArgs;", "self", "Lxc6;", "output", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "serialDesc", "Lfzv;", "write$Self", "", "component1", "", "component2", "()Ljava/lang/Long;", "animationPath", "tweetId", "copy", "(Ljava/lang/String;Ljava/lang/Long;)Lcom/twitter/brandedlikepreview/BrandedLikePreviewContentViewArgs;", "toString", "", "hashCode", "", "other", "", "equals", "Ljava/lang/String;", "getAnimationPath", "()Ljava/lang/String;", "Ljava/lang/Long;", "getTweetId", "<init>", "(Ljava/lang/String;Ljava/lang/Long;)V", "seen1", "Lhlp;", "serializationConstructorMarker", "(ILjava/lang/String;Ljava/lang/Long;Lhlp;)V", "Companion", "$serializer", "feature.tfa.branded-like-preview.api_release" }, k = 1, mv = { 1, 7, 1 })
+@bmp
+@Metadata(bv = {}, d1 = { "\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\t\n\u0002\b\u0007\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0087\b\u0018\u0000 $2\u00020\u0001:\u0002%$B!\b\u0007\u0012\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000b¢\u0006\u0004\b\u001e\u0010\u001fB/\b\u0017\u0012\u0006\u0010 \u001a\u00020\u0013\u0012\b\u0010\u000e\u001a\u0004\u0018\u00010\t\u0012\b\u0010\u000f\u001a\u0004\u0018\u00010\u000b\u0012\b\u0010\"\u001a\u0004\u0018\u00010!¢\u0006\u0004\b\u001e\u0010#J!\u0010\b\u001a\u00020\u00072\u0006\u0010\u0002\u001a\u00020\u00002\u0006\u0010\u0004\u001a\u00020\u00032\u0006\u0010\u0006\u001a\u00020\u0005H\u00c7\u0001J\u000b\u0010\n\u001a\u0004\u0018\u00010\tH\u00c6\u0003J\u0012\u0010\f\u001a\u0004\u0018\u00010\u000bH\u00c6\u0003¢\u0006\u0004\b\f\u0010\rJ(\u0010\u0010\u001a\u00020\u00002\n\b\u0002\u0010\u000e\u001a\u0004\u0018\u00010\t2\n\b\u0002\u0010\u000f\u001a\u0004\u0018\u00010\u000bH\u00c6\u0001¢\u0006\u0004\b\u0010\u0010\u0011J\t\u0010\u0012\u001a\u00020\tH\u00d6\u0001J\t\u0010\u0014\u001a\u00020\u0013H\u00d6\u0001J\u0013\u0010\u0018\u001a\u00020\u00172\b\u0010\u0016\u001a\u0004\u0018\u00010\u0015H\u00d6\u0003R\u0019\u0010\u000e\u001a\u0004\u0018\u00010\t8\u0006¢\u0006\f\n\u0004\b\u000e\u0010\u0019\u001a\u0004\b\u001a\u0010\u001bR\u0019\u0010\u000f\u001a\u0004\u0018\u00010\u000b8\u0006¢\u0006\f\n\u0004\b\u000f\u0010\u001c\u001a\u0004\b\u001d\u0010\r¨\u0006&" }, d2 = { "Lcom/twitter/brandedlikepreview/BrandedLikePreviewContentViewArgs;", "Lcom/twitter/app/common/args/ContentViewArgs;", "self", "Lee6;", "output", "Lkotlinx/serialization/descriptors/SerialDescriptor;", "serialDesc", "Lvzv;", "write$Self", "", "component1", "", "component2", "()Ljava/lang/Long;", "animationPath", "tweetId", "copy", "(Ljava/lang/String;Ljava/lang/Long;)Lcom/twitter/brandedlikepreview/BrandedLikePreviewContentViewArgs;", "toString", "", "hashCode", "", "other", "", "equals", "Ljava/lang/String;", "getAnimationPath", "()Ljava/lang/String;", "Ljava/lang/Long;", "getTweetId", "<init>", "(Ljava/lang/String;Ljava/lang/Long;)V", "seen1", "Ldmp;", "serializationConstructorMarker", "(ILjava/lang/String;Ljava/lang/Long;Ldmp;)V", "Companion", "$serializer", "feature.tfa.branded-like-preview.api_release" }, k = 1, mv = { 1, 7, 1 })
 public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
 {
     public static final BrandedLikePreviewContentViewArgs.BrandedLikePreviewContentViewArgs$Companion Companion;
@@ -24,7 +24,7 @@ public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
         this(null, null, 3, null);
     }
     
-    public BrandedLikePreviewContentViewArgs(final int n, final String animationPath, final Long tweetId, final hlp hlp) {
+    public BrandedLikePreviewContentViewArgs(final int n, final String animationPath, final Long tweetId, final dmp dmp) {
         if ((n & 0x0) == 0x0) {
             if ((n & 0x1) == 0x0) {
                 this.animationPath = null;
@@ -40,7 +40,7 @@ public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
             }
             return;
         }
-        blz.a0(n, 0, BrandedLikePreviewContentView.BrandedLikePreviewContentViewArgs$$serializer.INSTANCE.getDescriptor());
+        shw.V0(n, 0, BrandedLikePreviewContentView.BrandedLikePreviewContentViewArgs$$serializer.INSTANCE.getDescriptor());
         throw null;
     }
     
@@ -53,7 +53,7 @@ public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
         this.tweetId = tweetId;
     }
     
-    public BrandedLikePreviewContentViewArgs(String s, Long n, final int n2, final rf8 rf8) {
+    public BrandedLikePreviewContentViewArgs(String s, Long n, final int n2, final wg8 wg8) {
         if ((n2 & 0x1) != 0x0) {
             s = null;
         }
@@ -73,11 +73,11 @@ public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
         return brandedLikePreviewContentViewArgs.copy(animationPath, tweetId);
     }
     
-    public static final void write$Self(final BrandedLikePreviewContentViewArgs brandedLikePreviewContentViewArgs, final xc6 xc6, final SerialDescriptor serialDescriptor) {
-        czd.f((Object)brandedLikePreviewContentViewArgs, "self");
-        czd.f((Object)xc6, "output");
-        czd.f((Object)serialDescriptor, "serialDesc");
-        final boolean z = xc6.z(serialDescriptor);
+    public static final void write$Self(final BrandedLikePreviewContentViewArgs brandedLikePreviewContentViewArgs, final ee6 ee6, final SerialDescriptor serialDescriptor) {
+        e0e.f((Object)brandedLikePreviewContentViewArgs, "self");
+        e0e.f((Object)ee6, "output");
+        e0e.f((Object)serialDescriptor, "serialDesc");
+        final boolean z = ee6.z(serialDescriptor);
         final int n = 0;
         boolean b = false;
         Label_0052: {
@@ -90,11 +90,11 @@ public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
             b = true;
         }
         if (b) {
-            xc6.y(serialDescriptor, 0, (jlp)gkr.a, (Object)brandedLikePreviewContentViewArgs.animationPath);
+            ee6.y(serialDescriptor, 0, (fmp)dlr.a, (Object)brandedLikePreviewContentViewArgs.animationPath);
         }
         int n2 = 0;
         Label_0096: {
-            if (!xc6.z(serialDescriptor)) {
+            if (!ee6.z(serialDescriptor)) {
                 n2 = n;
                 if (brandedLikePreviewContentViewArgs.tweetId == null) {
                     break Label_0096;
@@ -103,7 +103,7 @@ public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
             n2 = 1;
         }
         if (n2 != 0) {
-            xc6.y(serialDescriptor, 1, (jlp)ccg.a, (Object)brandedLikePreviewContentViewArgs.tweetId);
+            ee6.y(serialDescriptor, 1, (fmp)wcg.a, (Object)brandedLikePreviewContentViewArgs.tweetId);
         }
     }
     
@@ -128,7 +128,7 @@ public final class BrandedLikePreviewContentViewArgs implements ContentViewArgs
             return false;
         }
         final BrandedLikePreviewContentViewArgs brandedLikePreviewContentViewArgs = (BrandedLikePreviewContentViewArgs)o;
-        return czd.a((Object)this.animationPath, (Object)brandedLikePreviewContentViewArgs.animationPath) && czd.a((Object)this.tweetId, (Object)brandedLikePreviewContentViewArgs.tweetId);
+        return e0e.a((Object)this.animationPath, (Object)brandedLikePreviewContentViewArgs.animationPath) && e0e.a((Object)this.tweetId, (Object)brandedLikePreviewContentViewArgs.tweetId);
     }
     
     public final String getAnimationPath() {

@@ -12,57 +12,43 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTopicList extends fih<not>
+public class JsonTopicList extends tih<fpt>
 {
     @JsonField
     public int a;
     @JsonField
     public long[] b;
     @JsonField
-    public Map<String, JsonTopic> c;
+    public Map<String, JsonTopicList.JsonTopicList$JsonTopic> c;
     
+    @Override
     public final Object s() {
-        final rif h = rif.H();
+        final ojf h = ojf.H();
         final long[] b = this.b;
         if (b != null) {
             for (int length = b.length, i = 0; i < length; ++i) {
-                final skt t = this.t(b[i]);
+                final jlt t = this.t(b[i]);
                 if (t != null) {
                     h.p((Object)t);
                 }
             }
         }
-        return new not(this.a, (List)((n4j)h).e());
+        return new fpt(this.a, (List)((z4j)h).e());
     }
     
-    public final skt t(final long n) {
+    public final jlt t(final long n) {
         final HashMap c = this.c;
         if (c != null) {
-            final JsonTopic jsonTopic = c.get(String.valueOf(n));
-            if (jsonTopic != null) {
-                final rif h = rif.H();
-                final long[] d = jsonTopic.d;
+            final JsonTopicList.JsonTopicList$JsonTopic jsonTopicList$JsonTopic = c.get(String.valueOf(n));
+            if (jsonTopicList$JsonTopic != null) {
+                final ojf h = ojf.H();
+                final long[] d = jsonTopicList$JsonTopic.d;
                 for (int length = d.length, i = 0; i < length; ++i) {
                     h.p((Object)this.t(d[i]));
                 }
-                return new skt((List)((n4j)h).e());
+                return new jlt((List)((z4j)h).e());
             }
         }
         return null;
-    }
-    
-    @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-    public static class JsonTopic extends qfe
-    {
-        @JsonField
-        public String a;
-        @JsonField
-        public long b;
-        @JsonField
-        public String c;
-        @JsonField
-        public long[] d;
-        @JsonField
-        public String e;
     }
 }

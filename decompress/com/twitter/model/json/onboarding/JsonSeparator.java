@@ -9,13 +9,14 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSeparator extends fih<vjp>
+public class JsonSeparator extends tih<rkp>
 {
     @JsonField
     public JsonOcfRichText a;
     
+    @Override
     public final Object s() {
-        final vjp.a a = new vjp.a();
+        final rkp.a a = new rkp.a();
         a.a = JsonOcfRichText.s(this.a);
         return a.e();
     }

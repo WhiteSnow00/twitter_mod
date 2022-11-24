@@ -1,4 +1,7 @@
-import java.util.Objects;
+import j$.util.DesugarTimeZone;
+import java.util.TimeZone;
+import java.util.Calendar;
+import java.util.concurrent.atomic.AtomicReference;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -6,98 +9,62 @@ import java.util.Objects;
 
 public final class lnw
 {
-    public static final a c;
-    public final b a;
-    public final xdj b;
+    public static AtomicReference<nrs> a;
     
     static {
-        c = new a();
+        lnw.a = new AtomicReference<nrs>();
     }
     
-    public lnw(final b a, final xdj b) {
-        zzd.f((Object)a, "messageType");
-        zzd.f((Object)b, "text");
-        this.a = a;
-        this.b = b;
+    public static long a(final long timeInMillis) {
+        final Calendar e = e(null);
+        e.setTimeInMillis(timeInMillis);
+        return b(e).getTimeInMillis();
     }
     
-    @Override
-    public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof lnw)) {
-            return false;
-        }
-        final lnw lnw = (lnw)o;
-        return this.a == lnw.a && zzd.a((Object)this.b, (Object)lnw.b);
+    public static Calendar b(Calendar e) {
+        final Calendar e2 = e(e);
+        e = e(null);
+        e.set(e2.get(1), e2.get(2), e2.get(5));
+        return e;
     }
     
-    @Override
-    public final int hashCode() {
-        return this.b.hashCode() + this.a.hashCode() * 31;
+    public static TimeZone c() {
+        return DesugarTimeZone.getTimeZone("UTC");
     }
     
-    @Override
-    public final String toString() {
-        final b a = this.a;
-        final xdj b = this.b;
-        final StringBuilder sb = new StringBuilder();
-        sb.append("ValidationMessage(messageType=");
-        sb.append(a);
-        sb.append(", text=");
-        sb.append(b);
-        sb.append(")");
-        return sb.toString();
+    public static Calendar d() {
+        nrs c;
+        if ((c = lnw.a.get()) == null) {
+            c = nrs.c;
+        }
+        final TimeZone b = c.b;
+        Calendar calendar;
+        if (b == null) {
+            calendar = Calendar.getInstance();
+        }
+        else {
+            calendar = Calendar.getInstance(b);
+        }
+        final Long a = c.a;
+        if (a != null) {
+            calendar.setTimeInMillis(a);
+        }
+        calendar.set(11, 0);
+        calendar.set(12, 0);
+        calendar.set(13, 0);
+        calendar.set(14, 0);
+        calendar.setTimeZone(c());
+        return calendar;
     }
     
-    public static final class a extends s4j<lnw>
-    {
-        public final Object d(final elp elp, final int n) {
-            zzd.f((Object)elp, "input");
-            Objects.requireNonNull(lnw.b.Companion);
-            final Object b = elp.B((alp)lnw.b.D0);
-            zzd.e(b, "readNotNullObject(Type.SERIALIZER)");
-            final b b2 = (b)b;
-            final Object b3 = elp.B((alp)xdj.J0);
-            zzd.e(b3, "readNotNullObject(OcfRichText.SERIALIZER)");
-            return new lnw(b2, (xdj)b3);
+    public static Calendar e(final Calendar calendar) {
+        final Calendar instance = Calendar.getInstance(c());
+        if (calendar == null) {
+            instance.clear();
         }
-        
-        public final void f(final flp flp, final Object o) {
-            final lnw lnw = (lnw)o;
-            zzd.f((Object)flp, "output");
-            zzd.f((Object)lnw, "validationMessage");
-            final b a = lnw.a;
-            Objects.requireNonNull(lnw.b.Companion);
-            ((s4j)lnw.b.D0).c(flp, (Object)a);
-            final int a2 = w4j.a;
-            flp.C((Object)lnw.b, (alp)xdj.J0);
+        else {
+            instance.setTimeInMillis(calendar.getTimeInMillis());
         }
-    }
-    
-    public enum b
-    {
-        public static final a Companion;
-        public static final alp<b> D0;
-        
-        E0("unknown"), 
-        F0("mismatch");
-        
-        public final String C0;
-        
-        static {
-            Companion = new a();
-            final hx6$h a = hx6.a;
-            b.D0 = new ix6((Class)b.class);
-        }
-        
-        public b(final String c0) {
-            this.C0 = c0;
-        }
-        
-        public static final class a
-        {
-        }
+        return instance;
     }
 }

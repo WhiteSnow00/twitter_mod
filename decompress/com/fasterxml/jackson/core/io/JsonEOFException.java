@@ -8,7 +8,7 @@ import com.fasterxml.jackson.core.JsonParseException;
 
 public class JsonEOFException extends JsonParseException
 {
-    public JsonEOFException(final khe khe, final String s) {
-        super(khe, s);
+    public JsonEOFException(final qhe qhe, final String s) {
+        super(qhe, s);
     }
 }

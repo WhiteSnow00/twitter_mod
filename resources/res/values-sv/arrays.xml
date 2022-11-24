@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Du får notiser om nya Tweets.</item>
-        <item>Du får notiser om nya Tweets enbart till superföljare.</item>
+        <item>Du får notiser om nya prenumerations-Tweets.</item>
         <item>Du får notiser om nya livevideotweets.</item>
         <item>Du får notiser om nya områdestweets.</item>
         <item>Du får inte längre notiser om nya Tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Tweets enbart för superföljare</item>
+        <item>Tweets som bara är tillgängliga via prenumeration</item>
         <item>Livevideo</item>
         <item>Områden</item>
         <item>Inget</item>
     </array>
     <array name="account_notif_options_old">
         <item>Alla Tweets</item>
-        <item>Bara superföljartweets</item>
+        <item>Endast prenumerations-Tweets</item>
         <item>Bara livevideo</item>
         <item>Enbart områden</item>
         <item>Av</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Få notiser om alla Tweets från detta konto.</item>
-        <item>Få notiser om Tweets enbart till superföljare.</item>
+        <item>Få notiser endast om nya prenumerations-Tweets.</item>
         <item>Få notiser endast om livesändningar.</item>
         <item>Få notiser enbart om områden.</item>
         <item>Stäng av notiser om detta kontos Tweets.</item>

@@ -4,23 +4,23 @@
 
 package com.twitter.rooms.ui.utils.profile;
 
-public final class r implements orc$a<hs8>
+public final class r implements osc$a<nt8>
 {
-    public final RoomProfileViewModel D0;
+    public final RoomProfileViewModel F0;
     
-    public r(final RoomProfileViewModel d0) {
-        this.D0 = d0;
+    public r(final RoomProfileViewModel f0) {
+        this.F0 = f0;
     }
     
-    public final void a(final wv0 wv0) {
+    public final void a(final aw0 aw0) {
     }
     
-    public final void b(final wv0 wv0) {
-        if (((orc)wv0).T().b) {
-            vjo.G(this.D0.T0, "user_profile", "", "user", "unfollow", null, 48);
+    public final void b(final aw0 aw0) {
+        if (((osc)aw0).T().b) {
+            oko.G(this.F0.V0, "user_profile", "", "user", "unfollow", (ufv)null, 48);
         }
     }
     
-    public final void c(final wv0 wv0, final boolean b) {
+    public final void c(final aw0 aw0, final boolean b) {
     }
 }

@@ -1,10 +1,24 @@
-import com.twitter.util.user.UserIdentifier;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface w8g<T extends t8g>
+public abstract class w8g
 {
-    T a(final UserIdentifier p0, final String p1);
+    public abstract Integer a();
+    
+    public abstract long b();
+    
+    public abstract long c();
+    
+    public abstract edi d();
+    
+    public abstract byte[] e();
+    
+    public abstract String f();
+    
+    public abstract long g();
+    
+    public abstract static class a
+    {
+    }
 }

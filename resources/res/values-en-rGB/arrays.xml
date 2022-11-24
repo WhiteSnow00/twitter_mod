@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>You&apos;ll get notifications for new Tweets.</item>
-        <item>You&apos;ll get notifications for new Super Follower only Tweets.</item>
+        <item>You’ll get notifications for new Subscription Tweets.</item>
         <item>You&apos;ll get notifications for new Live video Tweets.</item>
         <item>You&apos;ll get notifications for new Spaces Tweets.</item>
         <item>You&apos;ll no longer get notifications for new Tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Super Follower only Tweets</item>
+        <item>Subscription only Tweets</item>
         <item>Live video</item>
         <item>Spaces</item>
         <item>None</item>
     </array>
     <array name="account_notif_options_old">
         <item>All Tweets</item>
-        <item>Only Super Follows Tweets</item>
+        <item>Only Subscription Tweets</item>
         <item>Only live video</item>
         <item>Only Spaces</item>
         <item>Off</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Get notifications for all of this account’s Tweets.</item>
-        <item>Get notifications only for Super Follows Tweets.</item>
+        <item>Get notifications only for Subscription Tweets.</item>
         <item>Get notifications only for live broadcasts.</item>
         <item>Get notifications only for Spaces.</item>
         <item>Turn off notifications for this account’s Tweets.</item>

@@ -4,6 +4,7 @@
 
 package com.twitter.model.json.media.foundmedia;
 
+import android.util.SparseArray;
 import java.util.Collection;
 import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonField;
@@ -11,49 +12,50 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonFoundMediaItem extends fih<nmb>
+public class JsonFoundMediaItem extends tih<onb>
 {
     @JsonField
-    public qmb a;
+    public rnb a;
     @JsonField
     public String b;
     @JsonField
     public String c;
     @JsonField
-    public pmb d;
+    public qnb d;
     @JsonField
     public String e;
     @JsonField
-    public List<mmb> f;
+    public List<nnb> f;
     @JsonField
-    public mmb g;
+    public nnb g;
     @JsonField
     public String h;
     
+    @Override
     public final Object s() {
         if (this.a == null) {
-            i48.t("JsonFoundMediaItem has no provider");
+            mqb.o("JsonFoundMediaItem has no provider");
         }
-        else if (ikr.e((CharSequence)this.b)) {
-            i48.t("JsonFoundMediaItem has no item type");
+        else if (flr.e((CharSequence)this.b)) {
+            mqb.o("JsonFoundMediaItem has no item type");
         }
-        else if (ikr.e((CharSequence)this.c)) {
-            i48.t("JsonFoundMediaItem has no id");
+        else if (flr.e((CharSequence)this.c)) {
+            mqb.o("JsonFoundMediaItem has no id");
         }
         else if (this.d == null) {
-            i48.t("JsonFoundMediaItem has no foundMediaOrigin");
+            mqb.o("JsonFoundMediaItem has no foundMediaOrigin");
         }
-        else if (ikr.e((CharSequence)this.e)) {
-            i48.t("JsonFoundMediaItem has no url");
+        else if (flr.e((CharSequence)this.e)) {
+            mqb.o("JsonFoundMediaItem has no url");
         }
-        else if (fq4.t((Collection)this.f)) {
-            i48.t("JsonFoundMediaItem has no thumbnail images");
+        else if (kr4.t((Collection)this.f)) {
+            mqb.o("JsonFoundMediaItem has no thumbnail images");
         }
         else {
             if (this.g != null) {
-                return new nmb(this.a, this.b, this.c, this.d, this.e, mmb.a((List)this.f), this.g, this.h);
+                return new onb(this.a, this.b, this.c, this.d, this.e, (SparseArray<nnb>)nnb.a((List)this.f), this.g, this.h);
             }
-            i48.t("JsonFoundMediaItem has no original image");
+            mqb.o("JsonFoundMediaItem has no original image");
         }
         return null;
     }

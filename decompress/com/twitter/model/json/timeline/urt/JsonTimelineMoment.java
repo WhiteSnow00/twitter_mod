@@ -8,16 +8,16 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineMoment extends aih<ozs>
+public class JsonTimelineMoment extends tih<x0t>
 {
     @JsonField
     public String a;
     @JsonField
     public String b;
-    @JsonField(typeConverter = woh.class)
+    @JsonField(typeConverter = qph.class)
     public int c;
     @JsonField(typeConverter = d.class)
-    public d4t d;
+    public o5t d;
     
     public JsonTimelineMoment() {
         this.c = 1;
@@ -25,11 +25,11 @@ public class JsonTimelineMoment extends aih<ozs>
     
     @Override
     public final Object s() {
-        final ozs.a a = new ozs.a();
+        final x0t.a a = new x0t.a();
         a.a = this.a;
         a.b = this.b;
         a.c = this.c;
-        a.d = poa.V(this.d);
+        a.d = ix.w(this.d);
         return a.j();
     }
 }

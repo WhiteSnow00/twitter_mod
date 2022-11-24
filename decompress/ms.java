@@ -1,32 +1,53 @@
-import java.util.Objects;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ms
+public enum ms
 {
-    public static final a Companion;
+    G0('R'), 
+    @Deprecated
+    H0('1'), 
+    @Deprecated
+    I0('2'), 
+    J0('A'), 
+    K0('S'), 
+    L0('C'), 
+    M0('D'), 
+    N0('Z'), 
+    O0('X'), 
+    P0('N'), 
+    Q0('O');
+    
+    public static final Map<Character, ms> R0;
+    public static final ms[] S0;
+    public final char F0;
     
     static {
-        Companion = new a();
+        int i = 0;
+        final HashMap hashMap = new HashMap();
+        for (ms[] values = values(); i < values.length; ++i) {
+            final ms ms = values[i];
+            hashMap.put(ms.F0, ms);
+        }
+        R0 = Collections.unmodifiableMap((Map<?, ?>)hashMap);
     }
     
-    public static final class a
-    {
-        public static final String a(final a a, final String s, final boolean b) {
-            Objects.requireNonNull(a);
-            String c;
-            if (s != null) {
-                c = s;
-                if (b) {
-                    c = l7k.c(s, ",");
-                }
-            }
-            else {
-                c = null;
-            }
-            return c;
+    public ms(final char f0) {
+        this.F0 = f0;
+    }
+    
+    public static ms b(final char c) {
+        final ms ms = ms.R0.get(c);
+        if (ms != null) {
+            return ms;
         }
+        final StringBuilder sb = new StringBuilder();
+        sb.append("invalid field character: ");
+        sb.append(c);
+        throw new IllegalArgumentException(sb.toString());
     }
 }

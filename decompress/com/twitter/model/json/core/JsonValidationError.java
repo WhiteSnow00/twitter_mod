@@ -9,16 +9,17 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonValidationError extends fih<fow>
+public class JsonValidationError extends tih<uow>
 {
     @JsonField(name = { "code" })
     public Integer a;
     @JsonField(name = { "reason" })
     public String b;
     @JsonField(name = { "context" })
-    public List<pn6> c;
+    public List<vo6> c;
     
+    @Override
     public final Object s() {
-        return new fow(this.a, this.b, this.c);
+        return new uow(this.a, this.b, this.c);
     }
 }

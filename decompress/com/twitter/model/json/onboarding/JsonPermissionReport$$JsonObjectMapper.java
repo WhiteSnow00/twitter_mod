@@ -13,89 +13,89 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonPermissionReport$$JsonObjectMapper extends JsonMapper<JsonPermissionReport>
 {
-    public static JsonPermissionReport _parse(final tge tge) throws IOException {
+    public static JsonPermissionReport _parse(final qhe qhe) throws IOException {
         final JsonPermissionReport jsonPermissionReport = new JsonPermissionReport();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonPermissionReport, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonPermissionReport, d, qhe);
+            qhe.m0();
         }
         return jsonPermissionReport;
     }
     
-    public static void _serialize(final JsonPermissionReport jsonPermissionReport, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonPermissionReport jsonPermissionReport, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         final Map<String, JsonNotificationChannel> k = jsonPermissionReport.k;
         if (k != null) {
-            afe.i("androidChannelSettings");
-            afe.q0();
+            yfe.i("androidChannelSettings");
+            yfe.r0();
             for (final Map.Entry<String, JsonNotificationChannel> entry : k.entrySet()) {
-                if (sde.e((String)entry.getKey(), afe, (Map.Entry)entry) == null) {
-                    afe.j();
+                if (qee.r((String)entry.getKey(), yfe, (Map.Entry)entry) == null) {
+                    yfe.j();
                 }
                 else {
                     if (entry.getValue() == null) {
                         continue;
                     }
-                    JsonNotificationChannel$$JsonObjectMapper._serialize(entry.getValue(), afe, true);
+                    JsonNotificationChannel$$JsonObjectMapper._serialize(entry.getValue(), yfe, true);
                 }
             }
-            afe.h();
+            yfe.h();
         }
-        afe.t0("clientApplicationId", jsonPermissionReport.d);
-        afe.t0("clientVersion", jsonPermissionReport.e);
-        afe.t0("deviceId", jsonPermissionReport.b);
+        yfe.u0("clientApplicationId", jsonPermissionReport.d);
+        yfe.u0("clientVersion", jsonPermissionReport.e);
+        yfe.u0("deviceId", jsonPermissionReport.b);
         if (jsonPermissionReport.i != null) {
-            LoganSquare.typeConverterFor((Class)yfd.class).serialize((Object)jsonPermissionReport.i, "inAppPermissionState", true, afe);
+            LoganSquare.typeConverterFor((Class)ygd.class).serialize((Object)jsonPermissionReport.i, "inAppPermissionState", true, yfe);
         }
         final Map<String, String> j = jsonPermissionReport.j;
         if (j != null) {
-            afe.i("metadata");
-            afe.q0();
+            yfe.i("metadata");
+            yfe.r0();
             for (final Map.Entry entry2 : j.entrySet()) {
-                if (sde.e((String)entry2.getKey(), afe, (Map.Entry)entry2) == null) {
-                    afe.j();
+                if (qee.r((String)entry2.getKey(), yfe, (Map.Entry)entry2) == null) {
+                    yfe.j();
                 }
                 else {
-                    afe.r0((String)entry2.getValue());
+                    yfe.s0((String)entry2.getValue());
                 }
             }
-            afe.h();
+            yfe.h();
         }
-        afe.t0("osVersion", jsonPermissionReport.f);
-        afe.t0("permissionName", jsonPermissionReport.c);
+        yfe.u0("osVersion", jsonPermissionReport.f);
+        yfe.u0("permissionName", jsonPermissionReport.c);
         if (jsonPermissionReport.h != null) {
-            LoganSquare.typeConverterFor((Class)z5s.class).serialize((Object)jsonPermissionReport.h, "systemPermissionState", true, afe);
+            LoganSquare.typeConverterFor((Class)t6s.class).serialize((Object)jsonPermissionReport.h, "systemPermissionState", true, yfe);
         }
-        afe.t0("timestampInMs", jsonPermissionReport.g);
-        afe.t0("userId", jsonPermissionReport.a);
+        yfe.u0("timestampInMs", jsonPermissionReport.g);
+        yfe.u0("userId", jsonPermissionReport.a);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonPermissionReport jsonPermissionReport, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonPermissionReport jsonPermissionReport, final String s, final qhe qhe) throws IOException {
         if ("androidChannelSettings".equals(s)) {
-            if (tge.e() == vie.L0) {
+            if (qhe.e() == rje.N0) {
                 final HashMap k = new HashMap();
-                while (tge.h0() != vie.M0) {
-                    final String j = tge.j();
-                    tge.h0();
-                    if (tge.e() == vie.V0) {
+                while (qhe.i0() != rje.O0) {
+                    final String j = qhe.j();
+                    qhe.i0();
+                    if (qhe.e() == rje.X0) {
                         k.put(j, null);
                     }
                     else {
-                        k.put(j, JsonNotificationChannel$$JsonObjectMapper._parse(tge));
+                        k.put(j, JsonNotificationChannel$$JsonObjectMapper._parse(qhe));
                     }
                 }
                 jsonPermissionReport.k = k;
@@ -105,28 +105,28 @@ public final class JsonPermissionReport$$JsonObjectMapper extends JsonMapper<Jso
             }
         }
         else if ("clientApplicationId".equals(s)) {
-            jsonPermissionReport.d = tge.T((String)null);
+            jsonPermissionReport.d = qhe.T((String)null);
         }
         else if ("clientVersion".equals(s)) {
-            jsonPermissionReport.e = tge.T((String)null);
+            jsonPermissionReport.e = qhe.T((String)null);
         }
         else if ("deviceId".equals(s)) {
-            jsonPermissionReport.b = tge.T((String)null);
+            jsonPermissionReport.b = qhe.T((String)null);
         }
         else if ("inAppPermissionState".equals(s)) {
-            jsonPermissionReport.i = (yfd)LoganSquare.typeConverterFor((Class)yfd.class).parse(tge);
+            jsonPermissionReport.i = (ygd)LoganSquare.typeConverterFor((Class)ygd.class).parse(qhe);
         }
         else if ("metadata".equals(s)) {
-            if (tge.e() == vie.L0) {
+            if (qhe.e() == rje.N0) {
                 final HashMap i = new HashMap();
-                while (tge.h0() != vie.M0) {
-                    final String l = tge.j();
-                    tge.h0();
-                    if (tge.e() == vie.V0) {
+                while (qhe.i0() != rje.O0) {
+                    final String l = qhe.j();
+                    qhe.i0();
+                    if (qhe.e() == rje.X0) {
                         i.put(l, null);
                     }
                     else {
-                        i.put(l, tge.T((String)null));
+                        i.put(l, qhe.T((String)null));
                     }
                 }
                 jsonPermissionReport.j = i;
@@ -136,35 +136,35 @@ public final class JsonPermissionReport$$JsonObjectMapper extends JsonMapper<Jso
             }
         }
         else if ("osVersion".equals(s)) {
-            jsonPermissionReport.f = tge.T((String)null);
+            jsonPermissionReport.f = qhe.T((String)null);
         }
         else if ("permissionName".equals(s)) {
-            jsonPermissionReport.c = tge.T((String)null);
+            jsonPermissionReport.c = qhe.T((String)null);
         }
         else if ("systemPermissionState".equals(s)) {
-            jsonPermissionReport.h = (z5s)LoganSquare.typeConverterFor((Class)z5s.class).parse(tge);
+            jsonPermissionReport.h = (t6s)LoganSquare.typeConverterFor((Class)t6s.class).parse(qhe);
         }
         else if ("timestampInMs".equals(s)) {
-            jsonPermissionReport.g = tge.T((String)null);
+            jsonPermissionReport.g = qhe.T((String)null);
         }
         else if ("userId".equals(s)) {
-            jsonPermissionReport.a = tge.T((String)null);
+            jsonPermissionReport.a = qhe.T((String)null);
         }
     }
     
-    public JsonPermissionReport parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonPermissionReport parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonPermissionReport jsonPermissionReport, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonPermissionReport, afe, b);
+    public void serialize(final JsonPermissionReport jsonPermissionReport, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonPermissionReport, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonPermissionReport)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonPermissionReport)o, yfe, b);
     }
 }

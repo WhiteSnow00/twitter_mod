@@ -2,19 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ay7 extends ste implements qsb<ex7$h, fzv>
+public final class ay7 extends pue implements stb<qgv, String>
 {
-    public final nnl<u08> D0;
+    public static final ay7 F0;
     
-    public ay7(final nnl<u08> d0) {
-        this.D0 = d0;
+    static {
+        F0 = new ay7();
+    }
+    
+    public ay7() {
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final ex7$h ex7$h = (ex7$h)o;
-        czd.f((Object)ex7$h, "it");
-        this.D0.onNext((Object)new u08$c(ex7$h));
-        return fzv.a;
+        final qgv qgv = (qgv)o;
+        e0e.f((Object)qgv, "user");
+        return qgv.c();
     }
 }

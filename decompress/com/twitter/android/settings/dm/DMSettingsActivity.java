@@ -4,6 +4,6 @@
 
 package com.twitter.android.settings.dm;
 
-public class DMSettingsActivity extends vmd
+public class DMSettingsActivity extends vnd
 {
 }

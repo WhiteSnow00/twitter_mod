@@ -10,63 +10,68 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonButton extends aih<b43> implements odc, ude
+public class JsonButton extends tih<l43> implements qdc, yde
 {
     @JsonField(name = { "destination" })
     public String a;
     @JsonField(typeConverter = JsonButton.JsonButton$c.class)
-    public b43$d b;
+    public l43$d b;
     @JsonField(name = { "type", "button_type" }, typeConverter = JsonButton.JsonButton$a.class)
-    public b43$b c;
+    public l43$b c;
     @JsonField(typeConverter = JsonButton.JsonButton$b.class)
-    public t77$a d;
+    public c87$a d;
     @JsonField
     public JsonTextContent e;
     @JsonField(typeConverter = JsonButton.JsonButton$d.class)
-    public b43$e f;
+    public l43$e f;
     @JsonField
     public boolean g;
-    @JsonField(typeConverter = bwv.class)
-    public wr8 h;
+    @JsonField(typeConverter = ixv.class)
+    public ls8 h;
     
     public JsonButton() {
-        this.b = b43$d.D0;
-        this.c = b43$b.C0;
-        this.d = t77$a.D0;
-        this.f = b43$e.C0;
+        this.b = l43$d.G0;
+        this.c = l43$b.F0;
+        this.d = c87$a.G0;
+        this.f = l43$e.F0;
     }
     
     public final String k() {
         return this.a;
     }
     
-    public final void n(final wr8 h) {
+    public final void n(final ls8 h) {
         this.h = h;
     }
     
-    public final b43 t() {
-        final b43$b c = this.c;
-        if (c == b43$b.D0) {
-            final la7.a a = new la7.a();
+    @Override
+    public final /* bridge */ Object s() {
+        return this.t();
+    }
+    
+    public final l43 t() {
+        final l43$b c = this.c;
+        if (c == l43$b.G0) {
+            final va7$a va7$a = new va7$a();
             final JsonTextContent e = this.e;
-            pf8.r(e);
-            a.f = e.a;
-            a.g = this.e.b;
-            a.p(this.b);
-            ((uvv)a).a = this.h;
-            a.o(this.c);
-            a.d = this.g;
-            return (b43)((h4j)a).j();
+            vmw.g((Object)e);
+            va7$a.f = e.a;
+            va7$a.g = this.e.b;
+            ((l43.a)va7$a).p(this.b);
+            ((axv)va7$a).a = this.h;
+            ((l43.a)va7$a).o(this.c);
+            ((l43.a)va7$a).d = this.g;
+            return (l43)((z4j)va7$a).j();
         }
-        if (c == b43$b.E0) {
-            final t77$b t77$b = new t77$b();
-            t77$b.r(this.d);
-            ((b43$a)t77$b).p(this.b);
-            ((uvv)t77$b).a = this.h;
-            ((b43$a)t77$b).o(this.c);
-            ((b43$a)t77$b).q(this.f);
-            ((b43$a)t77$b).d = this.g;
-            return (b43)((h4j)t77$b).j();
+        if (c == l43$b.H0) {
+            final c87$b c87$b = new c87$b();
+            c87$b.r(this.d);
+            ((l43.a)c87$b).p(this.b);
+            ((axv)c87$b).a = this.h;
+            ((l43.a)c87$b).o(this.c);
+            ((l43.a)c87$b).q(this.f);
+            ((l43.a)c87$b).d = this.g;
+            return (l43)((z4j)c87$b).j();
         }
         return null;
     }

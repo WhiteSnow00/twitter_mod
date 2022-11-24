@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonUrlData extends aih<r5w>
+public class JsonUrlData extends tih<r6w>
 {
     @JsonField(name = { "full_url", "url" })
     public String a;
@@ -31,6 +31,6 @@ public class JsonUrlData extends aih<r5w>
         else {
             parse2 = null;
         }
-        return new r5w(parse, b, parse2);
+        return new r6w(parse, b, parse2);
     }
 }

@@ -1,35 +1,26 @@
-import com.twitter.util.user.UserIdentifier;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class l00
+public interface l00<TLog>
 {
-    public static final b Companion;
-    public final v00 a;
+    void b();
     
-    static {
-        Companion = new b();
-    }
+    void c();
     
-    public l00(final v00 a, final uew uew) {
-        czd.f((Object)a, "repositoryRegistry");
-        czd.f((Object)uew, "userManager");
-        this.a = a;
-        final h5j r = uew.r();
-        final w19 b;
-        b.c(r.doOnComplete((oj)new l00$c(b = mw.b(r, "userManager.observeLogOut()"))).subscribe((lj6)new f$i((qsb)new qsb<UserIdentifier, fzv>(this) {
-            public final l00 D0;
-            
-            public final Object invoke(final Object o) {
-                rw0.c((oj)new l00$a(this.D0, (UserIdentifier)o));
-                return fzv.a;
-            }
-        })));
-    }
+    void d();
     
-    public static final class b
-    {
-    }
+    List<TLog> e(final String p0);
+    
+    void f(final String p0, final int p1);
+    
+    void g(final String p0);
+    
+    void h(final String p0);
+    
+    void i(final String p0);
+    
+    void j(final List<? extends TLog> p0);
 }

@@ -4,6 +4,6 @@
 
 package com.twitter.android.settings.theme;
 
-public class ThemeSettingsActivity extends vmd
+public class ThemeSettingsActivity extends vnd
 {
 }

@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonDate extends fih<o98>
+public class JsonDate extends tih<sa8>
 {
     @JsonField
     public int a;
@@ -17,7 +17,8 @@ public class JsonDate extends fih<o98>
     @JsonField
     public int c;
     
+    @Override
     public final Object s() {
-        return new o98(this.c, this.b, this.a);
+        return new sa8(this.c, this.b, this.a);
     }
 }

@@ -1,66 +1,49 @@
-import android.util.AttributeSet;
-import android.content.Context;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import android.view.View$OnLayoutChangeListener;
 import android.view.View;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class j9x<V extends View> extends c<V>
+public final class j9x extends t5j<vzv>
 {
-    public l9x a;
-    public int b;
+    public final View F0;
     
-    public j9x() {
-        this.b = 0;
+    public j9x(final View f0) {
+        this.F0 = f0;
     }
     
-    public j9x(final Context context, final AttributeSet set) {
-        super(context, set);
-        this.b = 0;
+    public final void subscribeActual(final ocj<? super vzv> ocj) {
+        e0e.g((Object)ocj, "observer");
+        if (!w9y.h(ocj)) {
+            return;
+        }
+        final a a = new a(this.F0, ocj);
+        ocj.onSubscribe((b39)a);
+        this.F0.addOnLayoutChangeListener((View$OnLayoutChangeListener)a);
     }
     
-    @Override
-    public boolean i(final CoordinatorLayout coordinatorLayout, final V v, int b) {
-        this.u(coordinatorLayout, v, b);
-        if (this.a == null) {
-            this.a = new l9x((View)v);
+    public static final class a extends wig implements View$OnLayoutChangeListener
+    {
+        public final View G0;
+        public final ocj<? super vzv> H0;
+        
+        public a(final View g0, final ocj<? super vzv> h0) {
+            e0e.g((Object)g0, "view");
+            e0e.g((Object)h0, "observer");
+            this.G0 = g0;
+            this.H0 = h0;
         }
-        final l9x a = this.a;
-        a.b = a.a.getTop();
-        a.c = a.a.getLeft();
-        this.a.a();
-        b = this.b;
-        if (b != 0) {
-            this.a.b(b);
-            this.b = 0;
+        
+        public final void c() {
+            this.G0.removeOnLayoutChangeListener((View$OnLayoutChangeListener)this);
         }
-        return true;
-    }
-    
-    public final int t() {
-        final l9x a = this.a;
-        int d;
-        if (a != null) {
-            d = a.d;
+        
+        public final void onLayoutChange(final View view, final int n, final int n2, final int n3, final int n4, final int n5, final int n6, final int n7, final int n8) {
+            e0e.g((Object)view, "v");
+            if (!this.isDisposed()) {
+                this.H0.onNext((Object)vzv.a);
+            }
         }
-        else {
-            d = 0;
-        }
-        return d;
-    }
-    
-    public void u(final CoordinatorLayout coordinatorLayout, final V v, final int n) {
-        coordinatorLayout.u((View)v, n);
-    }
-    
-    public final boolean v(final int b) {
-        final l9x a = this.a;
-        if (a != null) {
-            return a.b(b);
-        }
-        this.b = b;
-        return false;
     }
 }

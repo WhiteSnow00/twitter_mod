@@ -9,17 +9,17 @@ import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTDismissInfo extends aih<eov>
+public class JsonURTDismissInfo extends tih<opv>
 {
     @JsonField
-    public List<lnv> a;
+    public List<vov> a;
     
     @Override
     public final Object s() {
         Object o;
         if ((o = this.a) == null) {
-            o = v2a.C0;
+            o = h3a.F0;
         }
-        return new eov((List)o);
+        return new opv((List<vov>)o);
     }
 }

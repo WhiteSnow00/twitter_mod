@@ -1,26 +1,35 @@
+import java.io.IOException;
+import com.google.firebase.encoders.EncodingException;
+import java.io.OutputStream;
+import java.util.Map;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jml extends ste implements ftb<x66, Integer, fzv>
+public final class jml
 {
-    public final iml D0;
-    public final okh E0;
-    public final int F0;
-    public final int G0;
+    public final Map<Class<?>, b5j<?>> a;
+    public final Map<Class<?>, dpw<?>> b;
+    public final b5j<Object> c;
     
-    public jml(final iml d0, final okh e0, final int f0, final int g0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = g0;
-        super(2);
+    public jml(final Map<Class<?>, b5j<?>> a, final Map<Class<?>, dpw<?>> b, final b5j<Object> c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public final Object invoke(final Object o, final Object o2) {
-        final x66 x66 = (x66)o;
-        ((Number)o2).intValue();
-        this.D0.c(this.E0, x66, this.F0 | 0x1, this.G0);
-        return fzv.a;
+    public final void a(final Object o, final OutputStream outputStream) throws IOException {
+        final Map<Class<?>, b5j<?>> a = this.a;
+        final hml hml = new hml(outputStream, (Map)a, (Map)this.b, (b5j)this.c);
+        if (o != null) {
+            final b5j b5j = a.get(o.getClass());
+            if (b5j == null) {
+                final StringBuilder f = ehk.f("No encoder for ");
+                f.append(o.getClass());
+                throw new EncodingException(f.toString());
+            }
+            ((s4a)b5j).a(o, (Object)hml);
+        }
     }
 }

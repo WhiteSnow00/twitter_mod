@@ -1,20 +1,54 @@
-import com.twitter.util.user.UserIdentifier;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
 public final class k22
 {
-    public k22(final t10 t10, final trc trc, final UserIdentifier userIdentifier, final uew uew, final d4s d4s) {
-        czd.f((Object)t10, "applicationManager");
-        czd.f((Object)trc, "httpRequestController");
-        czd.f((Object)userIdentifier, "owner");
-        czd.f((Object)uew, "userManager");
-        czd.f((Object)d4s, "requestFactory");
-        final h5j b = ((ar0)t10).b().B();
-        czd.e((Object)b, "applicationManager.lifec\u2026.observeEnterForeground()");
-        final w19 w19;
-        w19.c(b.doOnComplete((oj)new k22$b(w19 = new w19())).subscribe((lj6)new f$p((qsb)new k22$c(uew, userIdentifier, d4s, trc))));
+    public static final a Companion;
+    public static final k22 c;
+    public final long a;
+    public final int b;
+    
+    static {
+        Companion = new a();
+        c = new k22(-1L, 3);
+    }
+    
+    public k22(final long a, final int b) {
+        mqb.n(b, "action");
+        this.a = a;
+        this.b = b;
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof k22)) {
+            return false;
+        }
+        final k22 k22 = (k22)o;
+        return this.a == k22.a && this.b == k22.b;
+    }
+    
+    @Override
+    public final int hashCode() {
+        final long a = this.a;
+        return lb0.G(this.b) + (int)(a ^ a >>> 32) * 31;
+    }
+    
+    @Override
+    public final String toString() {
+        final long a = this.a;
+        final int b = this.b;
+        final StringBuilder c = qd.C("BlockedUser(id=", a, ", action=");
+        c.append(xj0.E(b));
+        c.append(")");
+        return c.toString();
+    }
+    
+    public static final class a
+    {
     }
 }

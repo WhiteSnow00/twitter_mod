@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonMediaVideoVariant extends fih<j2h>
+public class JsonMediaVideoVariant extends tih<a3h>
 {
     @JsonField
     public String a;
@@ -17,14 +17,15 @@ public class JsonMediaVideoVariant extends fih<j2h>
     @JsonField(name = { "bit_rate", "bitrate" })
     public int c;
     
+    @Override
     public final Object s() {
-        j2h j2h;
-        if (ikr.g((CharSequence)this.a) && ikr.g((CharSequence)this.b)) {
-            j2h = new j2h(this.a, this.b, this.c);
+        a3h a3h;
+        if (flr.g((CharSequence)this.a) && flr.g((CharSequence)this.b)) {
+            a3h = new a3h(this.a, this.b, this.c);
         }
         else {
-            j2h = null;
+            a3h = null;
         }
-        return j2h;
+        return a3h;
     }
 }

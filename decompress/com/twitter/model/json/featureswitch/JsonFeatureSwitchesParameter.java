@@ -12,21 +12,22 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonFeatureSwitchesParameter extends fih<tta>
+public class JsonFeatureSwitchesParameter extends tih<ava>
 {
     @JsonField
     public String a;
     @JsonField(name = { "default" })
     public JsonFeatureSwitchesValueObject b;
     @JsonField
-    public List<aua> c;
+    public List<hva> c;
     
     public JsonFeatureSwitchesParameter() {
-        final gdd$b e0 = gdd.E0;
-        final int a = c5j.a;
-        this.c = (AbstractCollection)e0;
+        final ged$b g0 = ged.G0;
+        final int a = o5j.a;
+        this.c = (AbstractCollection)g0;
     }
     
+    @Override
     public final Object s() {
         final String a = this.a;
         Object o = null;
@@ -35,18 +36,18 @@ public class JsonFeatureSwitchesParameter extends fih<tta>
             final JsonFeatureSwitchesValueObject b = this.b;
             Object a2 = o2;
             if (b != null) {
-                final aua a3 = b.a;
+                final hva a3 = b.a;
                 a2 = o2;
                 if (a3 != null) {
                     a2 = a3.a;
                 }
             }
-            final rif h = rif.H();
+            final ojf h = ojf.H();
             final Iterator iterator = ((List)this.c).iterator();
             while (iterator.hasNext()) {
-                h.p(((aua)iterator.next()).a);
+                h.p(((hva)iterator.next()).a);
             }
-            o = new tta(this.a, a2, (List)((n4j)h).e());
+            o = new ava(this.a, a2, (List)((z4j)h).e());
         }
         return o;
     }

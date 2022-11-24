@@ -2,11 +2,21 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface ulv
+public enum ulv
 {
-    void a(final oy5<f9p> p0);
+    F0, 
+    G0, 
+    H0, 
+    I0, 
+    J0, 
+    K0, 
+    L0, 
+    M0, 
+    N0, 
+    O0, 
+    P0, 
+    Q0, 
+    R0;
     
-    t19 b();
-    
-    void c(final oy5<f9p> p0);
+    public static final ulv[] S0;
 }

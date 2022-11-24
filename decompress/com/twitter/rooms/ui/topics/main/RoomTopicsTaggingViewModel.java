@@ -4,7 +4,6 @@
 
 package com.twitter.rooms.ui.topics.main;
 
-import java.util.Set;
 import java.util.Iterator;
 import java.util.Objects;
 import com.twitter.rooms.model.AudioSpaceTopicItem;
@@ -13,66 +12,66 @@ import java.util.List;
 import kotlin.Metadata;
 import com.twitter.weaver.mvi.MviViewModel;
 
-@Metadata(bv = {}, d1 = { "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00052\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001:\u0001\u0006¨\u0006\u0007" }, d2 = { "Lcom/twitter/rooms/ui/topics/main/RoomTopicsTaggingViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lpho;", "", "Ldho;", "Companion", "e", "feature.tfa.rooms.ui.topics.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
-public final class RoomTopicsTaggingViewModel extends MviViewModel<pho, Object, dho>
+@Metadata(bv = {}, d1 = { "\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u0000 \u00052\u0014\u0012\u0004\u0012\u00020\u0002\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\u00040\u0001:\u0001\u0006¨\u0006\u0007" }, d2 = { "Lcom/twitter/rooms/ui/topics/main/RoomTopicsTaggingViewModel;", "Lcom/twitter/weaver/mvi/MviViewModel;", "Lhio;", "", "Lwho;", "Companion", "e", "feature.tfa.rooms.ui.topics.api-legacy_release" }, k = 1, mv = { 1, 7, 1 })
+public final class RoomTopicsTaggingViewModel extends MviViewModel<hio, Object, who>
 {
-    public static final e Companion;
-    public final leo O0;
-    public final vjo P0;
-    public final r8x Q0;
-    public final List<cgo> R0;
+    public static final RoomTopicsTaggingViewModel.RoomTopicsTaggingViewModel$e Companion;
+    public final ffo Q0;
+    public final oko R0;
+    public final k9x S0;
+    public final List<vgo> T0;
     
     static {
-        Companion = new e();
+        Companion = new RoomTopicsTaggingViewModel.RoomTopicsTaggingViewModel$e();
     }
     
-    public RoomTopicsTaggingViewModel(final xbm xbm, final u21 u21, final adn adn, final leo o0, final vjo p8, final fgo fgo, final vwn vwn, final r8x q0) {
-        czd.f((Object)xbm, "releaseCompletable");
-        czd.f((Object)u21, "recommendedTopicsDataSource");
-        czd.f((Object)adn, "roomDescriptionDispatcher");
-        czd.f((Object)o0, "roomTaggedTopicsDispatcher");
-        czd.f((Object)p8, "roomsScribeReporter");
-        czd.f((Object)fgo, "roomTopicItemClickDispatcher");
-        czd.f((Object)vwn, "recentTopicsRepository");
-        czd.f((Object)q0, "viewLifecycle");
-        super((k9e)xbm, (jbx)new pho((List)null, 1, (rf8)null));
-        this.O0 = o0;
-        this.P0 = p8;
+    public RoomTopicsTaggingViewModel(final kcm kcm, final a31 a31, final sdn sdn, final ffo q0, final oko r0, final ygo ygo, final nxn nxn, final k9x s0) {
+        e0e.f((Object)kcm, "releaseCompletable");
+        e0e.f((Object)a31, "recommendedTopicsDataSource");
+        e0e.f((Object)sdn, "roomDescriptionDispatcher");
+        e0e.f((Object)q0, "roomTaggedTopicsDispatcher");
+        e0e.f((Object)r0, "roomsScribeReporter");
+        e0e.f((Object)ygo, "roomTopicItemClickDispatcher");
+        e0e.f((Object)nxn, "recentTopicsRepository");
+        e0e.f((Object)s0, "viewLifecycle");
+        super((iae)kcm, (ccx)new hio(null, 1, null));
         this.Q0 = q0;
-        this.R0 = new ArrayList();
-        if (djo.J()) {
-            final amq<swn$a> a = vwn.a;
-            final shc d0 = shc.D0;
-            final m1d b = vhh.b((Class)swn$a.class, (Class)AudioSpaceTopicItem.class);
-            czd.c((Object)b);
-            MviViewModel.N((MviViewModel)this, ((rsl$a)rsl.b(j8a.s((amq)a, b), (qsl)d0)).R((Object)tmi.a), (String)null, (jrx)null, (ftb)new lho(this, (go6)null), 3, (Object)null);
-            MviViewModel.M((MviViewModel)this, (h5j)((wgm)o0).D0, (String)null, (jrx)null, (ftb)new mho(this, (go6)null), 3, (Object)null);
-            MviViewModel.M((MviViewModel)this, q0.k(), (String)null, (jrx)null, (ftb)new RoomTopicsTaggingViewModel$a(this, (go6)null), 3, (Object)null);
-            ((wgm)o0).a((Object)p2a.D0);
+        this.R0 = r0;
+        this.S0 = s0;
+        this.T0 = new ArrayList();
+        if (vjo.J()) {
+            final xmq a32 = nxn.a;
+            final utg f0 = utg.F0;
+            final m2d b = jih.b((Class)kxn$a.class, (Class)AudioSpaceTopicItem.class);
+            e0e.c((Object)b);
+            MviViewModel.N((MviViewModel)this, ((ctl$a)ctl.b(d4j.J(a32, b), (btl)f0)).S((Object)kni.a), (String)null, (asx)null, (hub)new dio(this, (mp6)null), 3, (Object)null);
+            MviViewModel.M((MviViewModel)this, (t5j)q0.F0, (String)null, (asx)null, (hub)new eio(this, (mp6)null), 3, (Object)null);
+            MviViewModel.M((MviViewModel)this, s0.l(), (String)null, (asx)null, (hub)new RoomTopicsTaggingViewModel$a(this, (mp6)null), 3, (Object)null);
+            q0.a((Object)r3a.F0);
         }
         else {
-            final h5j debounce = ((h5j)((wgm)adn).D0).debounce((psb)new hpn((qsb)new RoomTopicsTaggingViewModel$b(this), 13));
-            czd.e((Object)debounce, "roomDescriptionDispatche\u2026ce { debounceSelector() }");
-            MviViewModel.M((MviViewModel)this, debounce, (String)null, (jrx)null, (ftb)new RoomTopicsTaggingViewModel$c(this, u21, (go6)null), 3, (Object)null);
+            final t5j debounce = ((t5j)((lhm)sdn).F0).debounce((rtb)new uyn((stb)new RoomTopicsTaggingViewModel$b(this), 12));
+            e0e.e((Object)debounce, "roomDescriptionDispatche\u2026ce { debounceSelector() }");
+            MviViewModel.M((MviViewModel)this, debounce, (String)null, (asx)null, (hub)new RoomTopicsTaggingViewModel$c(this, a31, (mp6)null), 3, (Object)null);
         }
-        final nnl a2 = ((t9a)fgo).a;
-        czd.e((Object)a2, "observe()");
-        MviViewModel.M((MviViewModel)this, (h5j)a2, (String)null, (jrx)null, (ftb)new RoomTopicsTaggingViewModel$d(this, (go6)null), 3, (Object)null);
+        final znl a33 = ((zaa)ygo).a;
+        e0e.e((Object)a33, "observe()");
+        MviViewModel.M((MviViewModel)this, (t5j)a33, (String)null, (asx)null, (hub)new RoomTopicsTaggingViewModel$d(this, (mp6)null), 3, (Object)null);
     }
     
-    public static final void W(final RoomTopicsTaggingViewModel roomTopicsTaggingViewModel, final fgo.a a, final int n, final boolean b) {
+    public static final void W(final RoomTopicsTaggingViewModel roomTopicsTaggingViewModel, final ygo.a a, final int n, final boolean b) {
         Objects.requireNonNull(roomTopicsTaggingViewModel);
         final String b2 = a.b;
-        final boolean j = djo.J();
+        final boolean j = vjo.J();
         final int n2 = 1;
         int n3 = 0;
         Label_0123: {
             Label_0120: {
                 if (j) {
                     while (true) {
-                        for (final Object next : roomTopicsTaggingViewModel.R0) {
-                            final cgo cgo = (cgo)next;
-                            if (czd.a((Object)cgo.a, (Object)a.a) && czd.a((Object)cgo.b, (Object)b2)) {
+                        for (final Object next : roomTopicsTaggingViewModel.T0) {
+                            final vgo vgo = (vgo)next;
+                            if (e0e.a((Object)vgo.a, (Object)a.a) && e0e.a((Object)vgo.b, (Object)b2)) {
                                 final Object o = next;
                                 if (o != null) {
                                     n3 = n2;
@@ -89,50 +88,26 @@ public final class RoomTopicsTaggingViewModel extends MviViewModel<pho, Object, 
             n3 = 0;
         }
         if (n3 != 0 && b) {
-            final vjo p4 = roomTopicsTaggingViewModel.P0;
-            Objects.requireNonNull(p4);
-            czd.f((Object)b2, "topicId");
-            p4.Z(b2, n, p4.b.d(), "recent_topic", "select");
+            final oko r0 = roomTopicsTaggingViewModel.R0;
+            Objects.requireNonNull(r0);
+            e0e.f((Object)b2, "topicId");
+            r0.Z(b2, n, r0.b.g(), "recent_topic", "select");
         }
         else if (n3 != 0) {
-            final vjo p5 = roomTopicsTaggingViewModel.P0;
-            Objects.requireNonNull(p5);
-            czd.f((Object)b2, "topicId");
-            p5.Z(b2, n, p5.b.d(), "recent_topic", "deselect");
+            final oko r2 = roomTopicsTaggingViewModel.R0;
+            Objects.requireNonNull(r2);
+            e0e.f((Object)b2, "topicId");
+            r2.Z(b2, n, r2.b.g(), "recent_topic", "deselect");
         }
         else if (b) {
-            roomTopicsTaggingViewModel.P0.P(b2, n);
+            roomTopicsTaggingViewModel.R0.P(b2, n);
         }
         else {
-            roomTopicsTaggingViewModel.P0.C(b2, n);
+            roomTopicsTaggingViewModel.R0.C(b2, n);
         }
     }
     
     public final boolean X() {
-        return this.R0.isEmpty() ^ true;
-    }
-    
-    public static final class e
-    {
-        public static final cgo a(final e e, final AudioSpaceTopicItem audioSpaceTopicItem, final boolean b) {
-            Objects.requireNonNull(e);
-            return new cgo(audioSpaceTopicItem.getCategoryId(), audioSpaceTopicItem.getTopicId(), audioSpaceTopicItem.getName(), b, true, true);
-        }
-        
-        public static final List b(final e e, final List list, final Set set) {
-            Objects.requireNonNull(e);
-            final boolean b = set.size() >= 3;
-            final ArrayList<cgo> list2 = new ArrayList<cgo>();
-            for (final Object next : list) {
-                if (set.contains(((cgo)next).b) ^ true) {
-                    list2.add((cgo)next);
-                }
-            }
-            final ArrayList list3 = new ArrayList<cgo>(iq4.H((Iterable)list2, 10));
-            for (final cgo cgo : list2) {
-                list3.add(new cgo(cgo.a, cgo.b, cgo.c, false, b ^ true, true));
-            }
-            return list3;
-        }
+        return this.T0.isEmpty() ^ true;
     }
 }

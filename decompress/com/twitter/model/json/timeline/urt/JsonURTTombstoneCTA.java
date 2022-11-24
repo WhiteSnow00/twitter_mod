@@ -9,23 +9,23 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTTombstoneCTA extends aih<xqv>
+public class JsonURTTombstoneCTA extends tih<dsv>
 {
     @JsonField
     public String a;
     @JsonField
-    public q7t b;
+    public c9t b;
     
     @Override
     public final Object s() {
-        xqv xqv;
-        if (pjr.g((CharSequence)this.a)) {
-            xqv = new xqv(this.a, this.b);
+        dsv dsv;
+        if (flr.g((CharSequence)this.a)) {
+            dsv = new dsv(this.a, this.b);
         }
         else {
-            e9a.d((Throwable)new IllegalStateException(String.format(Locale.ENGLISH, "Tombstone CTA must have a valid text. text: %s", this.a)));
-            xqv = null;
+            r9a.d((Throwable)new IllegalStateException(String.format(Locale.ENGLISH, "Tombstone CTA must have a valid text. text: %s", this.a)));
+            dsv = null;
         }
-        return xqv;
+        return dsv;
     }
 }

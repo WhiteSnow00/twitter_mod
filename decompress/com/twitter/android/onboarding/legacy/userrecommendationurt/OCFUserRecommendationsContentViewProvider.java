@@ -9,70 +9,69 @@ import android.content.Context;
 import java.util.Set;
 
 @a91
-public class OCFUserRecommendationsContentViewProvider extends a1c implements oej
+public class OCFUserRecommendationsContentViewProvider extends c1c implements gfj
 {
-    public int t1;
-    public boolean u1;
-    public boolean v1;
-    public Set<Long> w1;
-    public final j3j x1;
-    public final zml<Boolean> y1;
+    public final c4j A1;
+    public final znl<Boolean> B1;
+    public int w1;
+    public boolean x1;
+    public boolean y1;
+    public Set<Long> z1;
     
-    public OCFUserRecommendationsContentViewProvider(final ybv ybv, final fxe<e1c> fxe, final aws aws, final qrs qrs, final zh7<vo6> zh7, final udf<nws> udf, final dsb dsb, final rpd rpd, final zoi<nws> zoi, final Context context, final uc uc, final exs exs, final g0t g0t, final x3e<nws> x3e, final pca<bo> pca, final adx adx, final alj alj, final jev jev, final k8t k8t, final sso sso, final gdj gdj, final j3j x1) {
-        super(ybv, fxe, aws, qrs, zh7, udf, dsb, rpd, zoi, context, uc, exs, g0t, x3e, pca, adx, alj, jev);
-        this.t1 = 0;
-        this.u1 = true;
-        this.v1 = false;
-        this.w1 = iuh.a(0);
-        this.y1 = (zml<Boolean>)new zml();
-        this.x1 = x1;
-        sso.b((Object)this);
-        final Iterator iterator = x1.b.iterator();
+    public OCFUserRecommendationsContentViewProvider(final hdv hdv, final mxe<h1c> mxe, final fxs fxs, final bts bts, final ii7<hp6> ii7, final def<vxs> def, final dsb dsb, final vpd vpd, final vpi<vxs> vpi, final Context context, final tc tc, final oys oys, final p1t p1t, final d4e<vxs> d4e, final fda<fo> fda, final mex mex, final ulj ulj, final sfv sfv, final w9t w9t, final duo duo, final ydj ydj, final c4j a1) {
+        super(hdv, (mxe)mxe, fxs, bts, (ii7)ii7, (def)def, dsb, vpd, (vpi)vpi, context, tc, oys, p1t, (d4e)d4e, (fda)fda, mex, ulj, sfv);
+        this.w1 = 0;
+        this.x1 = true;
+        this.y1 = false;
+        this.z1 = cvh.a(0);
+        this.B1 = (znl<Boolean>)new znl();
+        this.A1 = a1;
+        duo.b(this);
+        final Iterator iterator = a1.b.iterator();
         while (iterator.hasNext()) {
-            super.c1.j((long)iterator.next(), 1);
+            ((xus)this).f1.j((long)iterator.next(), 1);
         }
-        final int a = w4j.a;
-        final p3j p3j = (p3j)k8t;
-        super.G0.r1((u93)new ngc((Object)this, 3));
-        super.G0.u1((u93)new lg1((Object)this, 3));
-        if (gdj != null && !gdj.D0) {
-            super.X0.H0.o(gdj.C0.C0);
+        final int a2 = o5j.a;
+        final h4j h4j = (h4j)w9t;
+        ((idv)this).J0.r1((fa3)new pgc(this, 3));
+        ((idv)this).J0.u1((fa3)new kg1((Object)this, 3));
+        if (ydj != null && !ydj.G0) {
+            ((idv)this).a1.K0.o(ydj.F0.F0);
         }
     }
     
-    public final b5j<Boolean> H0() {
-        return (b5j<Boolean>)this.y1;
+    public final t5j<Boolean> H0() {
+        return (t5j<Boolean>)this.B1;
     }
     
-    public final b5j<Set<Long>> d() {
-        return (b5j<Set<Long>>)this.x1.d;
+    public final t5j<Set<Long>> e() {
+        return (t5j<Set<Long>>)this.A1.d;
     }
     
-    @Override
-    public final lcv$b m0(final lcv$b lcv$b) {
-        super.m0(lcv$b);
-        lcv$b.a = "user_recommendations";
-        lcv$b.g = 2131624722;
-        final y2a.d b = lcv$b.b;
+    public final udv$b l0(final udv$b udv$b) {
+        super.l0(udv$b);
+        udv$b.a = "user_recommendations";
+        udv$b.g = 2131624722;
+        final k3a$d b = udv$b.b;
         b.c = b.d;
-        return lcv$b;
+        return udv$b;
     }
     
-    public final void p1(final gkf$a gkf$a) {
-        super.p1(gkf$a);
-        this.y1.onNext((Object)Boolean.TRUE);
+    public final void p1(final nkf$a nkf$a) {
+        super.p1(nkf$a);
+        this.B1.onNext((Object)Boolean.TRUE);
     }
     
-    public final void w(final gnf gnf, final int n) {
-        if (this.v1) {
+    public final void u(final onf onf, final int n) {
+        if (this.y1) {
             return;
         }
-        final k6m k6m = (k6m)gnf;
-        final int k = k6m.k();
-        final int count = ((gnf)k6m).getCount();
-        if (n == 0 && k + 1 == count && (this.u1 || !this.w1.equals(this.x1.b) || this.t1 != count)) {
-            this.t1 = count;
-            this.d1(1);
+        final n7m n7m = (n7m)onf;
+        final int k = n7m.k();
+        final int count = ((onf)n7m).getCount();
+        if (n == 0 && k + 1 == count && (this.x1 || !this.z1.equals(this.A1.b) || this.w1 != count)) {
+            this.w1 = count;
+            ((xus)this).d1(1);
         }
     }
 }

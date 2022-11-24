@@ -8,26 +8,27 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonFoundMediaResponse extends fih<smb>
+public class JsonFoundMediaResponse extends tih<tnb>
 {
     @JsonField
-    public hmb a;
+    public inb a;
     @JsonField
-    public gmb b;
+    public hnb b;
     
+    @Override
     public final Object s() {
-        final hmb a = this.a;
+        final inb a = this.a;
         Object o = null;
         if (a == null) {
-            i48.t("JsonFoundMediaResponse has no data");
+            mqb.o("JsonFoundMediaResponse has no data");
         }
         else {
-            final gmb b = this.b;
+            final hnb b = this.b;
             if (b == null) {
-                i48.t("JsonFoundMediaResponse has no cursor");
+                mqb.o("JsonFoundMediaResponse has no cursor");
             }
             else {
-                o = new smb(a, b);
+                o = new tnb(a, b);
             }
         }
         return o;

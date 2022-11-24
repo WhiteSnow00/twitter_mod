@@ -19,49 +19,49 @@ import androidx.work.RxWorker;
 public final class PrefetchWorker extends RxWorker
 {
     public static final PrefetchWorker.PrefetchWorker$a Companion;
-    public final bwk J0;
+    public final swk L0;
     
     static {
         Companion = new PrefetchWorker.PrefetchWorker$a();
     }
     
     public PrefetchWorker(final Context context, final WorkerParameters workerParameters) {
-        czd.f((Object)context, "appContext");
-        czd.f((Object)workerParameters, "workerParams");
+        e0e.f((Object)context, "appContext");
+        e0e.f((Object)workerParameters, "workerParams");
         super(context, workerParameters);
-        final bwk e0 = x68.i().e0();
-        czd.e((Object)e0, "get().preloadWorkerDelegate");
-        this.J0 = e0;
+        final swk e0 = o6f.b().e0();
+        e0e.e((Object)e0, "get().preloadWorkerDelegate");
+        this.L0 = e0;
     }
     
-    public final eaq<c$a> h() {
-        final bwk j0 = this.J0;
-        final b b = ((c)this).E0.b;
-        czd.e((Object)b, "inputData");
-        final int c = ((c)this).E0.c;
-        Objects.requireNonNull(j0);
-        final UserIdentifier userIdentifier = (UserIdentifier)klp.a(b.c("recipient_id"), UserIdentifier.SERIALIZER);
+    public final bbq<c$a> h() {
+        final swk l0 = this.L0;
+        final b b = ((c)this).G0.b;
+        e0e.e((Object)b, "inputData");
+        final int c = ((c)this).G0.c;
+        Objects.requireNonNull(l0);
+        final UserIdentifier userIdentifier = (UserIdentifier)gmp.a(b.c("recipient_id"), UserIdentifier.SERIALIZER);
         Object v;
         if (userIdentifier == null) {
-            v = eaq.v((Object)new c$a$a());
+            v = bbq.v((Object)new c$a$a());
         }
         else {
             final long d = b.d("notification_id", 0L);
             final long d2 = b.d("status_id", 0L);
-            eaq eaq;
+            bbq bbq;
             if (d2 == 0L) {
-                eaq = eaq.v((Object)new c$a$a());
+                bbq = bbq.v((Object)new c$a$a());
             }
             else {
                 final String e = b.e("scribe_target");
-                j0.a(e, userIdentifier, "request");
-                final trc a = j0.a;
-                final awk c2 = j0.c;
+                l0.a(e, userIdentifier, "request");
+                final tsc a = l0.a;
+                final rwk c2 = l0.c;
                 Objects.requireNonNull(c2);
-                eaq = a.a((orc)new oov(c2.a, userIdentifier, userIdentifier, d2, (vav)((ycq)vav.I2(userIdentifier)).D0, new pqv(qjg.o((Object)"referrer", (Object)"push")))).w((psb)new fgr((qsb)new dwk(j0, e, userIdentifier, c), 26));
+                bbq = a.a(new zov(c2.a, userIdentifier, userIdentifier, d2, (kbv)((vdq)kbv.J2(userIdentifier)).F0, new arv(kkg.o((Object)"referrer", (Object)"push")))).w((rtb)new m7k((stb)new uwk(l0, e, userIdentifier, c), 25));
             }
-            v = new kbq((lcq)eaq, (psb)new ld5((qsb)new cwk(b, j0, userIdentifier, d), 26));
+            v = new hcq((idq)bbq, (rtb)new mr0((stb)new twk(b, l0, userIdentifier, d), 24));
         }
-        return (eaq<c$a>)v;
+        return (bbq<c$a>)v;
     }
 }

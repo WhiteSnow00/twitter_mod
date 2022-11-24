@@ -1,159 +1,98 @@
-import java.util.Iterator;
-import java.util.Collections;
-import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.ArrayList;
-import java.util.List;
-import android.os.SystemClock;
-import android.os.Bundle;
+import com.google.android.gms.common.api.internal.BasePendingResult;
+import com.google.android.gms.common.api.b;
+import android.os.Binder;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.common.api.internal.a;
+import com.google.android.gms.common.api.c;
+import com.google.android.gms.common.api.Status;
 import java.util.Objects;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import android.os.Parcel;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class z8y extends jsy
+public final class z8y extends i7y
 {
-    public final n8z a;
-    public final bgz b;
+    public final Context a;
     
-    public z8y(final n8z a) {
-        Objects.requireNonNull(a, "null reference");
+    public z8y(final Context a) {
+        super("com.google.android.gms.auth.api.signin.internal.IRevocationService");
         this.a = a;
-        this.b = a.w();
     }
     
-    public final long c() {
-        return this.a.B().n0();
-    }
-    
-    public final String h() {
-        return this.b.H();
-    }
-    
-    public final String j() {
-        final sgz f0 = ((pbz)this.b).D0.y().F0;
-        String b;
-        if (f0 != null) {
-            b = f0.b;
+    public final boolean s(int n, final Parcel parcel, final Parcel parcel2) {
+        boolean b = false;
+        if (n != 1) {
+            if (n != 2) {
+                return b;
+            }
+            this.x();
+            p8y.a(this.a).b();
         }
         else {
-            b = null;
+            this.x();
+            final mjr a = mjr.a(this.a);
+            final GoogleSignInAccount b2 = a.b();
+            GoogleSignInOptions googleSignInOptions = GoogleSignInOptions.Q0;
+            if (b2 != null) {
+                googleSignInOptions = a.c();
+            }
+            final Context a2 = this.a;
+            Objects.requireNonNull(googleSignInOptions, "null reference");
+            final i6c i6c = new i6c(a2, googleSignInOptions);
+            if (b2 != null) {
+                final n3y h = ((b)i6c).h;
+                final Context a3 = ((b)i6c).a;
+                if (i6c.l() == 3) {
+                    n = 1;
+                }
+                else {
+                    n = 0;
+                }
+                m8y.a.a("Revoking access", new Object[0]);
+                final String e = mjr.a(a3).e("refreshToken");
+                m8y.b(a3);
+                Object g0;
+                if (n != 0) {
+                    final lag h2 = h7y.H0;
+                    if (e == null) {
+                        final Status status = new Status(4, (String)null);
+                        iuk.q(status.p() ^ true, (Object)"Status code must not be SUCCESS");
+                        g0 = new c5y<Object>((etm)status);
+                        ((BasePendingResult)g0).g((etm)status);
+                    }
+                    else {
+                        final h7y h7y = new h7y(e);
+                        new Thread((Runnable)h7y).start();
+                        g0 = h7y.G0;
+                    }
+                }
+                else {
+                    g0 = new g8y(h);
+                    h.G0.j(1, (a)g0);
+                }
+                v2k.a((u2k)g0);
+            }
+            else {
+                i6c.g();
+            }
         }
+        b = true;
         return b;
     }
     
-    public final String k() {
-        final sgz f0 = ((pbz)this.b).D0.y().F0;
-        String a;
-        if (f0 != null) {
-            a = f0.a;
+    public final void x() {
+        if (jtv.a(this.a, Binder.getCallingUid())) {
+            return;
         }
-        else {
-            a = null;
-        }
-        return a;
-    }
-    
-    public final String m() {
-        return this.b.H();
-    }
-    
-    public final void n(final String s, final String s2, final Bundle bundle) {
-        this.b.m(s, s2, bundle);
-    }
-    
-    public final void o(final String s) {
-        final ksy o = this.a.o();
-        Objects.requireNonNull(this.a.Q0);
-        o.h(s, SystemClock.elapsedRealtime());
-    }
-    
-    public final void p(final String s) {
-        final ksy o = this.a.o();
-        Objects.requireNonNull(this.a.Q0);
-        o.i(s, SystemClock.elapsedRealtime());
-    }
-    
-    public final int q(final String s) {
-        final bgz b = this.b;
-        Objects.requireNonNull(b);
-        eli.n(s);
-        Objects.requireNonNull(((pbz)b).D0);
-        return 25;
-    }
-    
-    public final List r(final String s, final String s2) {
-        final bgz b = this.b;
-        ArrayList t;
-        if (((pbz)b).D0.a().s()) {
-            ((pbz)b).D0.b().I0.a("Cannot get conditional user properties from analytics worker thread");
-            t = new ArrayList(0);
-        }
-        else {
-            Objects.requireNonNull(((pbz)b).D0);
-            if (nza.Y1()) {
-                ((pbz)b).D0.b().I0.a("Cannot get conditional user properties from main thread");
-                t = new ArrayList(0);
-            }
-            else {
-                final AtomicReference atomicReference = new AtomicReference();
-                ((pbz)b).D0.a().n(atomicReference, 5000L, "get conditional user properties", new rez(b, atomicReference, s, s2));
-                final List list = atomicReference.get();
-                if (list == null) {
-                    ((pbz)b).D0.b().I0.b("Timed out waiting for get conditional user properties", (Object)null);
-                    t = new ArrayList();
-                }
-                else {
-                    t = lpz.t((List)list);
-                }
-            }
-        }
-        return t;
-    }
-    
-    public final Map s(final String s, final String s2, final boolean b) {
-        final bgz b2 = this.b;
-        Object o;
-        if (((pbz)b2).D0.a().s()) {
-            ((pbz)b2).D0.b().I0.a("Cannot get user properties from analytics worker thread");
-            o = Collections.emptyMap();
-        }
-        else {
-            Objects.requireNonNull(((pbz)b2).D0);
-            if (nza.Y1()) {
-                ((pbz)b2).D0.b().I0.a("Cannot get user properties from main thread");
-                o = Collections.emptyMap();
-            }
-            else {
-                final AtomicReference atomicReference = new AtomicReference();
-                ((pbz)b2).D0.a().n(atomicReference, 5000L, "get user properties", (Runnable)new vez(b2, atomicReference, s, s2, b));
-                final List list = atomicReference.get();
-                if (list == null) {
-                    ((pbz)b2).D0.b().I0.b("Timed out waiting for handle get user properties, includeInternal", (Object)b);
-                    o = Collections.emptyMap();
-                }
-                else {
-                    o = new ts0(list.size());
-                    for (final yoz yoz : list) {
-                        final Object r = yoz.r();
-                        if (r != null) {
-                            ((d8q<String, Object>)o).put(yoz.E0, r);
-                        }
-                    }
-                }
-            }
-        }
-        return (Map)o;
-    }
-    
-    public final void t(final Bundle bundle) {
-        final bgz b = this.b;
-        Objects.requireNonNull(((pbz)b).D0.Q0);
-        b.v(bundle, System.currentTimeMillis());
-    }
-    
-    public final void u(final String s, final String s2, final Bundle bundle) {
-        this.a.w().k(s, s2, bundle);
+        final int callingUid = Binder.getCallingUid();
+        final StringBuilder sb = new StringBuilder(52);
+        sb.append("Calling UID ");
+        sb.append(callingUid);
+        sb.append(" is not Google Play services.");
+        throw new SecurityException(sb.toString());
     }
 }

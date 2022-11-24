@@ -1,40 +1,45 @@
-import java.util.List;
+import android.os.BaseBundle;
+import android.os.RemoteException;
+import java.util.Objects;
+import android.app.Activity;
+import android.os.Bundle;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gxy implements Runnable
+public final class gxy extends uwy
 {
-    public final ara D0;
-    public final List E0;
-    public final List F0;
-    public final List G0;
-    public final long H0;
+    public final Bundle J0;
+    public final Activity K0;
+    public final fzy L0;
     
-    public gxy(final ara d0, final List e0, final List f0, final List g0, final long h0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = g0;
-        this.H0 = h0;
+    public gxy(final fzy l0, final Bundle j0, final Activity k0) {
+        this.L0 = l0;
+        this.J0 = j0;
+        this.K0 = k0;
+        super(l0.F0, true);
     }
     
     @Override
-    public final void run() {
-        final ara d0 = this.D0;
-        final List e0 = this.E0;
-        final List f0 = this.F0;
-        final List g0 = this.G0;
-        final long h0 = this.H0;
-        if (d0.n.get()) {
-            d0.m(6, -6, (Long)null, (Long)null, (List)null, (Integer)null, (List)null);
-        }
-        else if (d0.i.b() != null) {
-            d0.k(e0, f0, g0, h0, false);
+    public final void a() throws RemoteException {
+        Bundle bundle2;
+        if (this.J0 != null) {
+            final Bundle bundle = bundle2 = new Bundle();
+            if (((BaseBundle)this.J0).containsKey("com.google.app_measurement.screen_service")) {
+                final Object value = ((BaseBundle)this.J0).get("com.google.app_measurement.screen_service");
+                bundle2 = bundle;
+                if (value instanceof Bundle) {
+                    bundle.putBundle("com.google.app_measurement.screen_service", (Bundle)value);
+                    bundle2 = bundle;
+                }
+            }
         }
         else {
-            d0.l(f0, g0, h0);
+            bundle2 = null;
         }
+        final npy f = this.L0.F0.f;
+        Objects.requireNonNull(f, "null reference");
+        f.onActivityCreated((l3d)new p5j(this.K0), bundle2, super.G0);
     }
 }

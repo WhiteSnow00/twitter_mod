@@ -8,18 +8,18 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTerminateTimelineInstruction extends aih<ids>
+public class JsonTerminateTimelineInstruction extends tih<ves>
 {
     @JsonField
-    public hds a;
+    public ues a;
     
     @Override
     public final Object s() {
-        final hds a = this.a;
-        hds e0 = hds.E0;
-        if (a != null) {
-            e0 = a;
+        ues a = this.a;
+        final ues h0 = ues.H0;
+        if (a == null) {
+            a = h0;
         }
-        return new ids(e0);
+        return new ves(a);
     }
 }

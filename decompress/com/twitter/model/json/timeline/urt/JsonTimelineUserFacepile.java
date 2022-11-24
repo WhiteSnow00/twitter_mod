@@ -11,51 +11,51 @@ import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineUserFacepile extends aih<m8t>
+public class JsonTimelineUserFacepile extends tih<y9t>
 {
     @JsonField
     public List<String> a;
     @JsonField(name = { "usersResults", "facepileUserResults" })
-    public List<rhw> b;
+    public List<ziw> b;
     @JsonField
     public List<String> c;
     @JsonField(name = { "featuredUsersResults", "facepileFeaturedUserResults" })
-    public List<rhw> d;
+    public List<ziw> d;
     @JsonField(name = { "action", "facepileButtonAction" })
-    public fpv e;
-    @JsonField(name = { "actionType", "facepileActionType" }, typeConverter = fqa.class)
-    public eqa f;
+    public nqv e;
+    @JsonField(name = { "actionType", "facepileActionType" }, typeConverter = kqa.class)
+    public jqa f;
     @JsonField(name = { "displaysFeaturingText", "facepileDisplaysFeaturingText" })
     public boolean g;
-    @JsonField(name = { "displayType", "facepileDisplayType" }, typeConverter = mqa.class)
-    public lqa h;
+    @JsonField(name = { "displayType", "facepileDisplayType" }, typeConverter = rqa.class)
+    public qqa h;
     
     @Override
     public final Object s() {
-        m8t m8t;
+        y9t y9t;
         try {
-            if (this.f != eqa.C0) {
+            if (this.f != jqa.F0) {
                 final ArrayList b = this.b;
                 if (b != null) {
-                    this.a = u4c.a((List)b, true);
+                    this.a = y4c.a(b, true);
                 }
                 final ArrayList d = this.d;
                 if (d != null) {
-                    this.c = u4c.a((List)d, false);
+                    this.c = y4c.a(d, false);
                 }
                 final List<String> a = this.a;
                 if (a != null) {
                     final List<String> c = this.c;
                     if (c != null) {
-                        final m8t$a m8t$a = new m8t$a();
-                        m8t$a.a = a;
-                        m8t$a.b = c;
-                        m8t$a.c = this.e;
-                        m8t$a.d = this.f;
-                        m8t$a.e = this.g;
-                        m8t$a.g = this.h;
-                        m8t = (m8t)((h4j)m8t$a).e();
-                        return m8t;
+                        final y9t$a y9t$a = new y9t$a();
+                        y9t$a.a = a;
+                        y9t$a.b = c;
+                        y9t$a.c = this.e;
+                        y9t$a.d = this.f;
+                        y9t$a.e = this.g;
+                        y9t$a.g = this.h;
+                        y9t = (y9t)((z4j)y9t$a).e();
+                        return y9t;
                     }
                 }
                 throw new InvalidDataException("User ID and Featured user ID list can't be null");
@@ -66,9 +66,9 @@ public class JsonTimelineUserFacepile extends aih<m8t>
             throw new InvalidDataException(sb.toString());
         }
         catch (final Exception ex) {
-            e9a.d((Throwable)ex);
-            m8t = null;
+            r9a.d((Throwable)ex);
+            y9t = null;
         }
-        return m8t;
+        return y9t;
     }
 }

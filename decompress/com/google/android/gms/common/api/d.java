@@ -6,5 +6,5 @@ package com.google.android.gms.common.api;
 
 public interface d<O extends a.d>
 {
-    sf0<O> h();
+    tf0<O> h();
 }

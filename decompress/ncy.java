@@ -1,59 +1,69 @@
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ncy extends pmy
+public final class ncy implements ecy
 {
-    public final ley E0;
+    public final Object F0;
+    public final int G0;
+    public final c100<Void> H0;
+    public int I0;
+    public int J0;
+    public int K0;
+    public Exception L0;
+    public boolean M0;
     
-    public ncy(final ley e0, final Map map) {
-        this.E0 = e0;
-        super(map);
+    public ncy(final int g0, final c100<Void> h0) {
+        this.F0 = new Object();
+        this.G0 = g0;
+        this.H0 = h0;
     }
     
-    public final void clear() {
-        final Iterator iterator = this.iterator();
-        while (true) {
-            final ecy ecy = (ecy)iterator;
-            if (!ecy.hasNext()) {
-                break;
-            }
-            ecy.next();
-            ecy.remove();
+    public final void a() {
+        synchronized (this.F0) {
+            ++this.K0;
+            this.M0 = true;
+            this.d();
         }
     }
     
-    public final boolean containsAll(final Collection<?> collection) {
-        return super.D0.keySet().containsAll(collection);
-    }
-    
-    public final boolean equals(final Object o) {
-        return this == o || super.D0.keySet().equals(o);
-    }
-    
-    public final int hashCode() {
-        return super.D0.keySet().hashCode();
-    }
-    
-    public final Iterator iterator() {
-        return (Iterator)new ecy(this, (Iterator)super.D0.entrySet().iterator());
-    }
-    
-    public final boolean remove(final Object o) {
-        final Collection collection = super.D0.remove(o);
-        if (collection != null) {
-            final int size = collection.size();
-            collection.clear();
-            final ley e0 = this.E0;
-            e0.G0 -= size;
-            if (size > 0) {
-                return true;
-            }
+    @Override
+    public final void b(final Object o) {
+        synchronized (this.F0) {
+            ++this.I0;
+            this.d();
         }
-        return false;
+    }
+    
+    public final void c(final Exception l0) {
+        synchronized (this.F0) {
+            ++this.J0;
+            this.L0 = l0;
+            this.d();
+        }
+    }
+    
+    public final void d() {
+        if (this.I0 + this.J0 + this.K0 == this.G0) {
+            if (this.L0 != null) {
+                final c100<Void> h0 = this.H0;
+                final int j0 = this.J0;
+                final int g0 = this.G0;
+                final StringBuilder sb = new StringBuilder(54);
+                sb.append(j0);
+                sb.append(" out of ");
+                sb.append(g0);
+                sb.append(" underlying tasks failed");
+                h0.w(new ExecutionException(sb.toString(), this.L0));
+                return;
+            }
+            if (this.M0) {
+                this.H0.y();
+                return;
+            }
+            this.H0.x(null);
+        }
     }
 }

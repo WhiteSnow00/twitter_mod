@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOcfScribeConfig extends fih<gej>
+public class JsonOcfScribeConfig extends tih<tej>
 {
     @JsonField
     public String a;
@@ -22,7 +22,8 @@ public class JsonOcfScribeConfig extends fih<gej>
     @JsonField
     public String e;
     
+    @Override
     public final Object s() {
-        return new gej(this.a, this.b, this.c, this.d, this.e);
+        return new tej(this.a, this.b, this.c, this.d, this.e);
     }
 }

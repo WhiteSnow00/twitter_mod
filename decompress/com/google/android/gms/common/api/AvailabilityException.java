@@ -11,24 +11,24 @@ import java.util.ArrayList;
 
 public class AvailabilityException extends Exception
 {
-    public final ts0<sf0<?>, vg6> D0;
+    public final ws0<tf0<?>, bi6> F0;
     
-    public AvailabilityException(final ts0<sf0<?>, vg6> d0) {
-        this.D0 = d0;
+    public AvailabilityException(final ws0<tf0<?>, bi6> f0) {
+        this.F0 = f0;
     }
     
     @Override
     public final String getMessage() {
         final ArrayList list = new ArrayList();
-        final Iterator iterator = ((ts0$c)this.D0.keySet()).iterator();
+        final Iterator iterator = ((ws0$c)this.F0.keySet()).iterator();
         boolean b = true;
         while (iterator.hasNext()) {
-            final sf0 sf0 = iterator.next();
-            final vg6 vg6 = ((d8q<K, vg6>)this.D0).getOrDefault(sf0, null);
-            Objects.requireNonNull(vg6, "null reference");
-            b &= (vg6.s() ^ true);
-            final String c = sf0.b.c;
-            final String value = String.valueOf(vg6);
+            final tf0 tf0 = iterator.next();
+            final bi6 bi6 = (bi6)this.F0.getOrDefault((Object)tf0, (Object)null);
+            Objects.requireNonNull(bi6, "null reference");
+            b &= (bi6.s() ^ true);
+            final String c = tf0.b.c;
+            final String value = String.valueOf(bi6);
             final StringBuilder sb = new StringBuilder(String.valueOf(c).length() + 2 + value.length());
             sb.append(c);
             sb.append(": ");

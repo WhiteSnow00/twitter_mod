@@ -1,21 +1,47 @@
-import android.view.View;
-import android.view.View$OnClickListener;
-import android.widget.Button;
-import com.twitter.navigation.profile.BaseImageActivityArgs;
-import com.twitter.util.user.UserIdentifier;
-import android.view.LayoutInflater;
-import android.content.res.Resources;
-import android.content.Intent;
+import java.util.Objects;
+import com.twitter.business.profilemodule.modulecontainer.ProfileModuleContainerViewModel;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class acl extends o6d
+public final class acl extends pue implements kub<String, vzv, Boolean, bbq<awj<? extends noj<btm<z9w, zbv>>, ? extends String>>>
 {
-    public acl(final Intent intent, final z7x z7x, final Resources resources, final p9s p9s, final fxe<z9i> fxe, final kn kn, final gob gob, final uaf uaf, final sag sag, final LayoutInflater layoutInflater, final pca<p4h> pca, final UserIdentifier userIdentifier, final cbv cbv, final fxe<spa> fxe2, final q6g q6g, final c8p c8p, final gam gam, final mbi<?> mbi, final r6p r6p, final BaseImageActivityArgs baseImageActivityArgs, final bft bft, final c7f c7f, final pca<bo> pca2, final c4i c4i, final on6 on6, final a8p a8p) {
-        super(intent, z7x, resources, p9s, (fxe)fxe, kn, gob, uaf, sag, layoutInflater, (pca)pca, userIdentifier, cbv, (fxe)fxe2, q6g, c8p, gam, (mbi)mbi, r6p, baseImageActivityArgs, bft, c7f, a8p);
-        ((View)((x9)this).C4(2131429059)).setOnClickListener((View$OnClickListener)new hpa(this, on6, 6));
-        ro.a((pca)pca2, 2, (u93)new l3((Object)this, (Object)c4i, 1));
+    public final ProfileModuleContainerViewModel F0;
+    
+    public acl(final ProfileModuleContainerViewModel f0) {
+        this.F0 = f0;
+        super(3);
+    }
+    
+    public final Object h0(final Object o, final Object o2, final Object o3) {
+        final String a = (String)o;
+        final vzv vzv = (vzv)o2;
+        final Boolean b = (Boolean)o3;
+        e0e.f((Object)a, "profileId");
+        e0e.f((Object)vzv, "<anonymous parameter 1>");
+        e0e.f((Object)b, "shouldShowData");
+        final c5l$a companion = c5l.Companion;
+        final boolean a2 = e0e.a((Object)a, (Object)this.F0.U0);
+        Objects.requireNonNull(companion);
+        final rmv b2 = ita.b();
+        boolean b3 = false;
+        if (!b2.b("professionals_launch_holdback_profile_suppression_enabled", false) || a2) {
+            b3 = ita.b().b("android_profile_modules_fetch_enabled", false);
+        }
+        bbq bbq;
+        if (b3 && b) {
+            final ocl t0 = this.F0.T0;
+            Objects.requireNonNull(t0);
+            t0.a = a;
+            this.F0.T0.a(ocl.c);
+            bbq = ((tnm<String, Object, osc>)this.F0.R0).S(a).w((rtb)new nav((stb)new zbl(a), 25));
+        }
+        else {
+            final noj b4 = noj.b;
+            final int a3 = o5j.a;
+            bbq = bbq.v((Object)new awj((Object)b4, (Object)a));
+        }
+        return bbq;
     }
 }

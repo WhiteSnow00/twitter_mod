@@ -305,8 +305,8 @@
         <item quantity="other">%d ακόμη</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Σούπερ ακόλουθος</item>
-        <item quantity="other">Σούπερ ακόλουθοι</item>
+        <item quantity="one">Συνδρομητής</item>
+        <item quantity="other">Συνδρομητές</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">Αρέσει στο χρήστη %s</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Απάντηση στο χρήστη ﻿%1$s και σε %2$d άλλους﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Απάντηση στον χρήστη ﻿%1$s και %2$d άλλους﻿. Η απάντησή σας θα είναι επίσης ορατή σε άλλους σούπερ ακόλουθους.</item>
+        <item quantity="other">Απάντηση στους χρήστες ﻿%1$s και %2$d άλλους﻿. Η απάντησή σας θα είναι επίσης ορατή σε άλλους Συνδρομητές.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Απάντηση στον χρήστη ﻿%1$s και σε %2$d ακόμη﻿ στον χώρο ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Απάντηση στους χρήστες ﻿%1$s, %2$s και σε %3$d ακόμη﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Απάντηση στους χρήστες ﻿%1$s, %2$s και %3$dάλλους﻿. Η απάντησή σας θα είναι επίσης ορατή σε άλλους σούπερ ακόλουθους.</item>
+        <item quantity="other">Απάντηση στους χρήστες ﻿%1$s %2$s και %3$dάλλους﻿. Η απάντησή σας θα είναι επίσης ορατή σε άλλους Συνδρομητές.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Απάντηση στον χρήστη ﻿%1$s, %2$s και σε %3$d ακόμη﻿ στον χώρο ﻿ %4$s﻿</item>

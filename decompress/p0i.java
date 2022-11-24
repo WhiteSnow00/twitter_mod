@@ -2,6 +2,6 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class p0i implements qcw
+public interface p0i
 {
 }

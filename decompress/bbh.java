@@ -2,42 +2,26 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class bbh implements yzd
+public final class bbh extends yah
 {
-    public static final bbh C0;
+    public static final bbh c;
     
     static {
-        C0 = new bbh();
+        c = new bbh();
     }
     
-    public final Object X(final Object o, final gub gub) {
-        zzd.f((Object)gub, "operation");
-        return gub.invoke(o, (Object)this);
+    public bbh() {
+        super(15, 16);
     }
     
-    public final int e(final wzd wzd, final ezd ezd, final int n) {
-        zzd.f((Object)wzd, "<this>");
-        return ezd.H(n);
-    }
-    
-    public final int k(final wzd wzd, final ezd ezd, final int n) {
-        zzd.f((Object)wzd, "<this>");
-        return ezd.x(n);
-    }
-    
-    public final int m(final wzd wzd, final ezd ezd, final int n) {
-        zzd.f((Object)wzd, "<this>");
-        return ezd.x(n);
-    }
-    
-    public final int w(final wzd wzd, final ezd ezd, final int n) {
-        zzd.f((Object)wzd, "<this>");
-        return ezd.K(n);
-    }
-    
-    @Override
-    public final long z0(final jqg jqg, final dqg dqg, final long n) {
-        zzd.f((Object)jqg, "$this$calculateContentConstraints");
-        return jj6.Companion.d(((ezd)dqg).x(jj6.h(n)));
+    public final void a(final h0s h0s) {
+        e0e.f((Object)h0s, "database");
+        final oqb oqb = (oqb)h0s;
+        oqb.y("DELETE FROM SystemIdInfo WHERE work_spec_id IN (SELECT work_spec_id FROM SystemIdInfo LEFT JOIN WorkSpec ON work_spec_id = id WHERE WorkSpec.id IS NULL)");
+        oqb.y("ALTER TABLE `WorkSpec` ADD COLUMN `generation` INTEGER NOT NULL DEFAULT 0");
+        oqb.y("CREATE TABLE IF NOT EXISTS `_new_SystemIdInfo` (\n            `work_spec_id` TEXT NOT NULL, \n            `generation` INTEGER NOT NULL DEFAULT 0, \n            `system_id` INTEGER NOT NULL, \n            PRIMARY KEY(`work_spec_id`, `generation`), \n            FOREIGN KEY(`work_spec_id`) REFERENCES `WorkSpec`(`id`) \n                ON UPDATE CASCADE ON DELETE CASCADE )");
+        oqb.y("INSERT INTO `_new_SystemIdInfo` (`work_spec_id`,`system_id`) SELECT `work_spec_id`,`system_id` FROM `SystemIdInfo`");
+        oqb.y("DROP TABLE `SystemIdInfo`");
+        oqb.y("ALTER TABLE `_new_SystemIdInfo` RENAME TO `SystemIdInfo`");
     }
 }

@@ -6,37 +6,37 @@ package com.twitter.android.onboarding.core.showcode;
 
 import com.twitter.weaver.mvi.MviViewModel;
 
-@gb8(c = "com.twitter.android.onboarding.core.showcode.ShowCodeViewModel$intents$2$1", f = "ShowCodeViewModel.kt", l = {}, m = "invokeSuspend")
-public final class a extends xzr implements gub<f3q.b, ap6<? super oyv>, Object>
+@vb8(c = "com.twitter.android.onboarding.core.showcode.ShowCodeViewModel$intents$2$1", f = "ShowCodeViewModel.kt", l = {}, m = "invokeSuspend")
+public final class a extends l1s implements hub<t4q$b, mp6<? super vzv>, Object>
 {
-    public /* synthetic */ Object C0;
-    public final /* synthetic */ ShowCodeViewModel D0;
+    public Object F0;
+    public final ShowCodeViewModel G0;
     
-    public a(final ShowCodeViewModel d0, final ap6<? super a> ap6) {
-        this.D0 = d0;
-        super(2, (ap6)ap6);
+    public a(final ShowCodeViewModel g0, final mp6<? super a> mp6) {
+        this.G0 = g0;
+        super(2, (mp6)mp6);
     }
     
-    public final ap6<oyv> create(final Object c0, final ap6<?> ap6) {
-        final a a = new a(this.D0, (ap6<? super a>)ap6);
-        a.C0 = c0;
-        return (ap6<oyv>)a;
+    public final mp6<vzv> create(final Object f0, final mp6<?> mp6) {
+        final a a = new a(this.G0, (mp6<? super a>)mp6);
+        a.F0 = f0;
+        return (mp6<vzv>)a;
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final a a = (a)this.create(o, (ap6<?>)o2);
-        final oyv a2 = oyv.a;
+        final a a = (a)this.create(o, (mp6<?>)o2);
+        final vzv a2 = vzv.a;
         a.invokeSuspend(a2);
         return a2;
     }
     
     public final Object invokeSuspend(final Object o) {
-        kq9.b1(o);
-        final f3q.b b = (f3q.b)this.C0;
-        final ShowCodeViewModel d0 = this.D0;
-        final d3q$b d3q$b = new d3q$b(b.a);
-        final soe[] o2 = ShowCodeViewModel.O0;
-        ((MviViewModel)d0).V((Object)d3q$b);
-        return oyv.a;
+        jb2.M0(o);
+        final t4q$b t4q$b = (t4q$b)this.F0;
+        final ShowCodeViewModel g0 = this.G0;
+        final r4q$b r4q$b = new r4q$b(t4q$b.a);
+        final ape[] r0 = ShowCodeViewModel.R0;
+        ((MviViewModel)g0).V((Object)r4q$b);
+        return vzv.a;
     }
 }

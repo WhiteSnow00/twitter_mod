@@ -1,21 +1,16 @@
+import com.bluelinelabs.logansquare.typeconverters.BooleanBasedTypeConverter;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lhe extends row<ozl>
+public final class lhe extends BooleanBasedTypeConverter<khe>
 {
-    public lhe() {
-        super((Object[])ozl.values(), (Object)ozl.J0);
+    public final boolean convertToBoolean(final Object o) {
+        return ((khe)o).a;
     }
     
-    public final Object getFromString(final String s) {
-        ozl j0;
-        if (s == null) {
-            j0 = ozl.J0;
-        }
-        else {
-            j0 = (ozl)super.getFromString(s.toLowerCase(m5s.d()));
-        }
-        return j0;
+    public final Object getFromBoolean(final boolean b) {
+        return new khe(b);
     }
 }

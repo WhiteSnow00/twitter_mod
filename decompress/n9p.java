@@ -1,34 +1,30 @@
-import com.twitter.util.user.UserIdentifier;
+import j$.util.concurrent.ConcurrentHashMap;
+import java.util.Map;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class n9p extends i1v<pmi>
+public final class n9p implements m9p
 {
-    public static final n9p.n9p$a Companion;
-    public final String i1;
+    public final Map<String, ogv> a;
     
-    static {
-        Companion = new n9p.n9p$a();
+    public n9p() {
+        this.a = new ConcurrentHashMap();
     }
     
-    public n9p(final UserIdentifier userIdentifier, final String i1) {
-        zzd.f((Object)userIdentifier, "owner");
-        zzd.f((Object)i1, "query");
-        super(userIdentifier, 0);
-        this.i1 = i1;
+    public final ogv a(final String s) {
+        e0e.f((Object)s, "query");
+        return (ogv)this.a.get((Object)eg8.K0(s));
     }
     
-    @Override
-    public final qrc f0() {
-        final o7c e = q1a.e("search_unsubscribe");
-        e.p("search_term", this.i1);
-        return (qrc)e.e();
+    public final void b(final String s, final ogv ogv) {
+        e0e.f((Object)s, "query");
+        e0e.f((Object)ogv, "results");
+        this.a.put((Object)eg8.K0(s), (Object)ogv);
     }
     
-    @Override
-    public final wsc<pmi, pav> g0() {
-        return (wsc<pmi, pav>)xha.d(d8c.Companion);
+    public final void clear() {
+        this.a.clear();
     }
 }

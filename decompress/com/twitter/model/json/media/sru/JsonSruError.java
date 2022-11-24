@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonSruError extends fih<v4r>
+public class JsonSruError extends tih<u5r>
 {
     @JsonField
     public int a;
@@ -18,7 +18,8 @@ public class JsonSruError extends fih<v4r>
     @JsonField
     public String c;
     
+    @Override
     public final Object s() {
-        return new v4r(this.a, this.b, this.c);
+        return new u5r(this.a, this.b, this.c);
     }
 }

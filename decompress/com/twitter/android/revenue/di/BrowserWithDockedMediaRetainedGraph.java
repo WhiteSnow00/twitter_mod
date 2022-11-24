@@ -7,10 +7,10 @@ package com.twitter.android.revenue.di;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@l4j
+@d5j
 public interface BrowserWithDockedMediaRetainedGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
-    @l4j
+    @d5j
     public interface BrowserWithDockedMediaViewGraph extends TwitterFragmentActivityViewObjectGraph
     {
     }

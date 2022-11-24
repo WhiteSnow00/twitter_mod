@@ -8,23 +8,23 @@ import android.os.Parcel;
 import java.util.Arrays;
 import android.os.Parcelable$Creator;
 
-public final class b extends p51
+public final class b extends w51
 {
     public static final Parcelable$Creator<b> CREATOR;
-    public final ErrorCode D0;
-    public final String E0;
+    public final ErrorCode F0;
+    public final String G0;
     
     static {
-        CREATOR = (Parcelable$Creator)new u6z();
+        CREATOR = (Parcelable$Creator)new t7z();
     }
     
-    public b(final int n, final String e0) {
+    public b(final int n, final String g0) {
         try {
-            this.D0 = ErrorCode.b(n);
-            this.E0 = e0;
+            this.F0 = ErrorCode.b(n);
+            this.G0 = g0;
         }
-        catch (final ErrorCode.UnsupportedErrorCodeException ex) {
-            throw new IllegalArgumentException(ex);
+        catch (final ErrorCode$UnsupportedErrorCodeException ex) {
+            throw new IllegalArgumentException((Throwable)ex);
         }
     }
     
@@ -33,32 +33,32 @@ public final class b extends p51
             return false;
         }
         final b b = (b)o;
-        return f5j.a(this.D0, b.D0) && f5j.a(this.E0, b.E0);
+        return r5j.a(this.F0, b.F0) && r5j.a(this.G0, b.G0);
     }
     
     public final int hashCode() {
-        return Arrays.hashCode(new Object[] { this.D0, this.E0 });
+        return Arrays.hashCode(new Object[] { this.F0, this.G0 });
     }
     
     public final String toString() {
-        final kcy kcy = new kcy(b.class.getSimpleName());
-        final int d0 = this.D0.D0;
-        final tdy tdy = new tdy();
-        kcy.c.c = tdy;
-        kcy.c = tdy;
-        tdy.b = String.valueOf(d0);
-        tdy.a = "errorCode";
-        final String e0 = this.E0;
-        if (e0 != null) {
-            kcy.a("errorMessage", (Object)e0);
+        final edy edy = new edy(b.class.getSimpleName());
+        final int f0 = this.F0.F0;
+        final ney ney = new ney();
+        edy.c.c = ney;
+        edy.c = ney;
+        ney.b = String.valueOf(f0);
+        ney.a = "errorCode";
+        final String g0 = this.G0;
+        if (g0 != null) {
+            edy.a("errorMessage", (Object)g0);
         }
-        return kcy.toString();
+        return edy.toString();
     }
     
-    public final void writeToParcel(final Parcel parcel, int d1) {
-        d1 = fli.d1(parcel, 20293);
-        fli.T0(parcel, 2, this.D0.D0);
-        fli.Y0(parcel, 3, this.E0);
-        fli.g1(parcel, d1);
+    public final void writeToParcel(final Parcel parcel, int x1) {
+        x1 = xd.x1(parcel, 20293);
+        xd.n1(parcel, 2, this.F0.F0);
+        xd.s1(parcel, 3, this.G0);
+        xd.B1(parcel, x1);
     }
 }

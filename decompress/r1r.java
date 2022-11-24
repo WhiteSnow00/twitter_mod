@@ -1,146 +1,152 @@
-import android.widget.ImageView;
-import com.twitter.media.ui.image.c;
-import android.graphics.Bitmap;
-import android.content.res.ColorStateList;
-import com.twitter.media.ui.fresco.FrescoDraweeView;
-import android.widget.ImageView$ScaleType;
-import android.view.View;
-import com.twitter.ui.widget.ToggleImageButton;
-import android.widget.Button;
-import com.twitter.media.av.autoplay.ui.VideoContainerHost;
-import com.twitter.media.ui.fresco.FrescoMediaImageView;
-import androidx.cardview.widget.CardView;
-import android.content.Context;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class r1r implements jd3
+public final class r1r<E> implements Cloneable
 {
-    public final Context D0;
-    public final CardView E0;
-    public final FrescoMediaImageView F0;
-    public final VideoContainerHost G0;
-    public final Button H0;
-    public final String I0;
-    public final String J0;
-    public final ToggleImageButton K0;
-    public final h5j<Boolean> L0;
-    public final h5j<tmi> M0;
-    public final h5j<tmi> N0;
-    public final h5j<tmi> O0;
-    public int P0;
-    public boolean Q0;
+    public static final Object I0;
+    public int[] F0;
+    public Object[] G0;
+    public int H0;
     
-    public r1r(final CardView e0, final FrescoMediaImageView f0, final VideoContainerHost g0, final Button button, final Button h0, final String i0, final String j0, final View view, final ToggleImageButton k0) {
-        this.D0 = ((View)e0).getContext();
-        this.E0 = e0;
-        this.F0 = f0;
-        this.G0 = g0;
-        this.H0 = h0;
-        this.I0 = i0;
-        this.J0 = j0;
-        final h5j e2 = aoo.e(view);
-        final cjc l0 = cjc.L0;
-        this.M0 = (h5j<tmi>)e2.map((psb)l0);
-        this.N0 = (h5j<tmi>)aoo.e((View)button).map((psb)l0);
-        this.O0 = (h5j<tmi>)aoo.e((View)h0).map((psb)l0);
-        this.K0 = k0;
-        this.L0 = (h5j<Boolean>)aoo.d((View)k0).map((psb)new gy0((Object)this, 3));
+    static {
+        I0 = new Object();
     }
     
-    public final void D0() {
-        ((View)this.G0).setVisibility(8);
-        ((View)this.K0).setVisibility(8);
+    public r1r() {
+        final int k = iwl.k(10);
+        this.F0 = new int[k];
+        this.G0 = new Object[k];
     }
     
-    public final void M0() {
-        ((View)this.F0).setVisibility(8);
+    public final void a(final int n, final E e) {
+        final int h0 = this.H0;
+        if (h0 != 0 && n <= this.F0[h0 - 1]) {
+            this.g(n, e);
+            return;
+        }
+        if (h0 >= this.F0.length) {
+            final int k = iwl.k(h0 + 1);
+            final int[] f0 = new int[k];
+            final Object[] g0 = new Object[k];
+            final int[] f2 = this.F0;
+            System.arraycopy(f2, 0, f0, 0, f2.length);
+            final Object[] g2 = this.G0;
+            System.arraycopy(g2, 0, g0, 0, g2.length);
+            this.F0 = f0;
+            this.G0 = g0;
+        }
+        this.F0[h0] = n;
+        this.G0[h0] = e;
+        this.H0 = h0 + 1;
     }
     
-    public final VideoContainerHost P0() {
-        return this.G0;
+    public final r1r<E> c() {
+        try {
+            final r1r r1r = (r1r)super.clone();
+            r1r.F0 = this.F0.clone();
+            r1r.G0 = this.G0.clone();
+            return r1r;
+        }
+        catch (final CloneNotSupportedException ex) {
+            throw new AssertionError((Object)ex);
+        }
     }
     
-    public final boolean Q0() {
-        return this.Q0;
+    public final /* bridge */ Object clone() throws CloneNotSupportedException {
+        return this.c();
     }
     
-    public final void Z0(final i6d i6d) {
-        this.Q0 = true;
-        ((c)this.F0).p(new x7d$a(((jvg)i6d).g().toString(), (jvg)null));
-        final float h = ((jvg)i6d).b.h();
-        final FrescoDraweeView imageView = this.F0.getImageView();
-        ImageView$ScaleType scaleType;
-        if (ib0.E(jc3.b(this.D0, h)) != 2) {
-            scaleType = ImageView$ScaleType.FIT_CENTER;
+    public final boolean d(final int n) {
+        return iwl.b(this.F0, this.H0, n) >= 0;
+    }
+    
+    public final E e(int b, final E e) {
+        b = iwl.b(this.F0, this.H0, b);
+        if (b >= 0) {
+            final Object[] g0 = this.G0;
+            if (g0[b] != r1r.I0) {
+                return (E)g0[b];
+            }
+        }
+        return e;
+    }
+    
+    public final int f(final int n) {
+        return this.F0[n];
+    }
+    
+    public final void g(final int n, final E e) {
+        final int b = iwl.b(this.F0, this.H0, n);
+        if (b >= 0) {
+            this.G0[b] = e;
         }
         else {
-            scaleType = ImageView$ScaleType.CENTER_CROP;
+            final int n2 = ~b;
+            final int h0 = this.H0;
+            if (n2 < h0) {
+                final Object[] g0 = this.G0;
+                if (g0[n2] == r1r.I0) {
+                    this.F0[n2] = n;
+                    g0[n2] = e;
+                    return;
+                }
+            }
+            if (h0 >= this.F0.length) {
+                final int k = iwl.k(h0 + 1);
+                final int[] f0 = new int[k];
+                final Object[] g2 = new Object[k];
+                final int[] f2 = this.F0;
+                System.arraycopy(f2, 0, f0, 0, f2.length);
+                final Object[] g3 = this.G0;
+                System.arraycopy(g3, 0, g2, 0, g3.length);
+                this.F0 = f0;
+                this.G0 = g2;
+            }
+            final int n3 = this.H0 - n2;
+            if (n3 != 0) {
+                final int[] f3 = this.F0;
+                final int n4 = n2 + 1;
+                System.arraycopy(f3, n2, f3, n4, n3);
+                final Object[] g4 = this.G0;
+                System.arraycopy(g4, n2, g4, n4, this.H0 - n2);
+            }
+            this.F0[n2] = n;
+            this.G0[n2] = e;
+            ++this.H0;
         }
-        ((ImageView)imageView).setScaleType(scaleType);
-        ((View)this.F0).setTranslationY((float)jc3.a(this.D0, h));
     }
     
-    public final void a() {
-        ((View)this.E0).setVisibility(8);
+    public final int h() {
+        return this.H0;
     }
     
-    public final int g0() {
-        return this.P0;
+    public final E i(final int n) {
+        return (E)this.G0[n];
     }
     
-    public final e81 getAutoPlayableItem() {
-        return this.G0.getAutoPlayableItem();
-    }
-    
-    public final void h0() {
-        ((View)this.F0).setVisibility(0);
-    }
-    
-    public final h5j<Boolean> j0() {
-        return this.L0;
-    }
-    
-    public final void l1() {
-        this.E0.setCardBackgroundColor(null);
-    }
-    
-    public final void setBackgroundColor(final int n) {
-        this.P0 = n;
-        this.E0.setCardBackgroundColor(n);
-    }
-    
-    public final void setMuted(final boolean b) {
-        this.K0.setToggledOn(b ^ true);
-    }
-    
-    public final void show() {
-        ((View)this.E0).setVisibility(0);
-    }
-    
-    public final void t1(final Bitmap imageBitmap) {
-        this.Q0 = true;
-        ((ud9)this.F0.getImageView()).setImageBitmap(imageBitmap);
-        final FrescoDraweeView imageView = this.F0.getImageView();
-        ImageView$ScaleType scaleType;
-        if (ib0.E(jc3.b(this.D0, imageBitmap.getWidth() / (float)imageBitmap.getHeight())) != 2) {
-            scaleType = ImageView$ScaleType.FIT_CENTER;
+    @Override
+    public final String toString() {
+        if (this.h() <= 0) {
+            return "{}";
         }
-        else {
-            scaleType = ImageView$ScaleType.CENTER_CROP;
+        final StringBuilder sb = new StringBuilder(this.H0 * 28);
+        sb.append('{');
+        for (int i = 0; i < this.H0; ++i) {
+            if (i > 0) {
+                sb.append(", ");
+            }
+            sb.append(this.f(i));
+            sb.append('=');
+            final E j = this.i(i);
+            if (j != this) {
+                sb.append(j);
+            }
+            else {
+                sb.append("(this Map)");
+            }
         }
-        ((ImageView)imageView).setScaleType(scaleType);
-        ((View)this.F0).setTranslationY((float)jc3.a(this.D0, imageBitmap.getWidth() / (float)imageBitmap.getHeight()));
-    }
-    
-    public final boolean u() {
-        return this.K0.J0 ^ true;
-    }
-    
-    public final void u0() {
-        ((View)this.G0).setVisibility(0);
-        ((View)this.K0).setVisibility(0);
+        sb.append('}');
+        return sb.toString();
     }
 }

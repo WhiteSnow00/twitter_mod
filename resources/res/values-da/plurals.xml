@@ -305,8 +305,8 @@
         <item quantity="other">%d andre</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super-følger</item>
-        <item quantity="other">Super-følgere</item>
+        <item quantity="one">Abonnent</item>
+        <item quantity="other">Abonnenter</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s like</item>
@@ -402,7 +402,7 @@
         <item quantity="other">Svarer ﻿%1$s og %2$d andre﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Svarer ﻿%1$s og %2$d andre﻿. Dit svar er også synligt for andre Super-følgere.</item>
+        <item quantity="other">Svarer ﻿%1$s og %2$d andre﻿. Dit svar er også synligt for andre abonnenter.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Svarer ﻿%1$s og %2$d others﻿ i ﻿%3$s﻿</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Svarer ﻿%1$s %2$s og %3$d andre﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Svarer ﻿%1$s %2$s og %3$d andre﻿. Dit svar er også synligt for andre Super-følgere.</item>
+        <item quantity="other">Svarer ﻿%1$s %2$s og %3$d andre﻿. Dit svar er også synligt for andre abonnenter.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Svarer ﻿%1$s %2$s og %3$d andre﻿ i ﻿%4$s﻿</item>

@@ -7,13 +7,14 @@ package com.google.android.material.floatingactionbutton;
 import android.widget.TextView;
 import android.view.View;
 import android.content.res.ColorStateList;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout$c;
+import androidx.coordinatorlayout.widget.CoordinatorLayout$b;
 import com.google.android.material.button.MaterialButton;
 
-public final class ExtendedFloatingActionButton extends MaterialButton implements b
+public final class ExtendedFloatingActionButton extends MaterialButton implements CoordinatorLayout$b
 {
-    public static final int W0 = 0;
-    public boolean V0;
+    public static final int Y0 = 0;
+    public boolean X0;
     
     static {
         new ExtendedFloatingActionButton$a();
@@ -22,7 +23,7 @@ public final class ExtendedFloatingActionButton extends MaterialButton implement
         new ExtendedFloatingActionButton$d();
     }
     
-    public c<ExtendedFloatingActionButton> getBehavior() {
+    public CoordinatorLayout$c<ExtendedFloatingActionButton> getBehavior() {
         return null;
     }
     
@@ -34,19 +35,19 @@ public final class ExtendedFloatingActionButton extends MaterialButton implement
         return 0;
     }
     
-    public jrh getExtendMotionSpec() {
+    public yrh getExtendMotionSpec() {
         throw null;
     }
     
-    public jrh getHideMotionSpec() {
+    public yrh getHideMotionSpec() {
         throw null;
     }
     
-    public jrh getShowMotionSpec() {
+    public yrh getShowMotionSpec() {
         throw null;
     }
     
-    public jrh getShrinkMotionSpec() {
+    public yrh getShrinkMotionSpec() {
         throw null;
     }
     
@@ -54,16 +55,16 @@ public final class ExtendedFloatingActionButton extends MaterialButton implement
         super.onAttachedToWindow();
     }
     
-    public void setAnimateShowBeforeLayout(final boolean v0) {
-        this.V0 = v0;
+    public void setAnimateShowBeforeLayout(final boolean x0) {
+        this.X0 = x0;
     }
     
-    public void setExtendMotionSpec(final jrh jrh) {
+    public void setExtendMotionSpec(final yrh yrh) {
         throw null;
     }
     
     public void setExtendMotionSpecResource(final int n) {
-        this.setExtendMotionSpec(jrh.b(((View)this).getContext(), n));
+        this.setExtendMotionSpec(yrh.b(((View)this).getContext(), n));
     }
     
     public void setExtended(final boolean b) {
@@ -73,12 +74,12 @@ public final class ExtendedFloatingActionButton extends MaterialButton implement
         throw null;
     }
     
-    public void setHideMotionSpec(final jrh jrh) {
+    public void setHideMotionSpec(final yrh yrh) {
         throw null;
     }
     
     public void setHideMotionSpecResource(final int n) {
-        this.setHideMotionSpec(jrh.b(((View)this).getContext(), n));
+        this.setHideMotionSpec(yrh.b(((View)this).getContext(), n));
     }
     
     public final void setPadding(final int n, final int n2, final int n3, final int n4) {
@@ -89,20 +90,20 @@ public final class ExtendedFloatingActionButton extends MaterialButton implement
         super.setPaddingRelative(n, n2, n3, n4);
     }
     
-    public void setShowMotionSpec(final jrh jrh) {
+    public void setShowMotionSpec(final yrh yrh) {
         throw null;
     }
     
     public void setShowMotionSpecResource(final int n) {
-        this.setShowMotionSpec(jrh.b(((View)this).getContext(), n));
+        this.setShowMotionSpec(yrh.b(((View)this).getContext(), n));
     }
     
-    public void setShrinkMotionSpec(final jrh jrh) {
+    public void setShrinkMotionSpec(final yrh yrh) {
         throw null;
     }
     
     public void setShrinkMotionSpecResource(final int n) {
-        this.setShrinkMotionSpec(jrh.b(((View)this).getContext(), n));
+        this.setShrinkMotionSpec(yrh.b(((View)this).getContext(), n));
     }
     
     public void setTextColor(final int textColor) {

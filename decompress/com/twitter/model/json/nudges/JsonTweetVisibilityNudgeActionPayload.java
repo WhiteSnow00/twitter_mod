@@ -10,31 +10,32 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonTweetVisibilityNudgeActionPayload extends fih<b0j.c>
+public class JsonTweetVisibilityNudgeActionPayload extends tih<o0j$c>
 {
     @JsonField
     public String a;
     @JsonField
-    public oxm b;
+    public fym b;
     @JsonField
     public String c;
     @JsonField
     public String d;
     @JsonField
-    public i8t e;
+    public c9t e;
     @JsonField
-    public oxm f;
+    public fym f;
     
+    @Override
     public final Object s() {
-        final oxm f = this.f;
+        final fym f = this.f;
         final Object o = null;
         Icon icon = null;
-        String d0;
-        if (f != null && !f.D0.isEmpty()) {
-            d0 = this.f.D0;
+        String f2;
+        if (f != null && !f.F0.isEmpty()) {
+            f2 = this.f.F0;
         }
         else {
-            d0 = null;
+            f2 = null;
         }
         Object o2;
         if (this.b == null) {
@@ -43,9 +44,9 @@ public class JsonTweetVisibilityNudgeActionPayload extends fih<b0j.c>
         else {
             final String c = this.c;
             if (c != null) {
-                icon = (Icon)b0j.a.get(c);
+                icon = (Icon)o0j.a.get(c);
             }
-            o2 = new b0j.c(this.a, (oxm<sfs>)this.b, this.c, icon, this.d, this.e, d0);
+            o2 = new o0j$c(this.a, this.b, this.c, icon, this.d, this.e, f2);
         }
         return o2;
     }

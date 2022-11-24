@@ -8,15 +8,20 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineReaction extends aih<j1t>
+public class JsonTimelineReaction extends tih<s2t>
 {
     @JsonField
-    public k1t a;
+    public t2t a;
     @JsonField
     public Integer b;
     
-    public final j1t t() {
-        final k1t a = this.a;
+    @Override
+    public final /* bridge */ Object s() {
+        return this.t();
+    }
+    
+    public final s2t t() {
+        final t2t a = this.a;
         if (a != null) {
             final Integer b = this.b;
             int max;
@@ -26,7 +31,7 @@ public class JsonTimelineReaction extends aih<j1t>
             else {
                 max = Math.max(0, b);
             }
-            return new j1t(a, max);
+            return new s2t(a, max);
         }
         return null;
     }

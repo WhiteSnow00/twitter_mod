@@ -1,21 +1,31 @@
-import java.io.IOException;
+import java.util.concurrent.Executor;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class b3z implements p4j<hdz>
+public final class b3z<ResultT> implements n7z<ResultT>
 {
-    public static final b3z a;
+    public final Executor a;
+    public final Object b;
+    public final nkj<? super ResultT> c;
     
-    static {
-        a = new b3z();
-        fu8.p(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, new dqy(1)), 2)), 3)));
+    public b3z(final Executor a, final nkj<? super ResultT> c) {
+        this.b = new Object();
+        this.a = a;
+        this.c = c;
     }
     
-    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final hdz hdz = (hdz)o;
-        final q4j q4j = (q4j)o2;
-        throw null;
+    @Override
+    public final void a(final crz crz) {
+        if (crz.b()) {
+            synchronized (this.b) {
+                if (this.c == null) {
+                    return;
+                }
+                monitorexit(this.b);
+                this.a.execute((Runnable)new vlz((Object)this, (Object)crz, 3, (j98)null));
+            }
+        }
     }
 }

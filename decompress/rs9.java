@@ -1,40 +1,42 @@
+import com.twitter.android.media.imageeditor.b$e;
+import com.twitter.android.media.imageeditor.b;
+import com.twitter.media.filters.Filters;
+import com.twitter.app.dm.DMConversationSettingsPreferenceFragment;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface rs9
+public final class rs9 implements fa3
 {
-    public static final class a implements rs9
-    {
-        public final String a;
-        
-        public a(final String a) {
-            czd.f((Object)a, "pronouns");
-            this.a = a;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            return this == o || (o instanceof a && czd.a((Object)this.a, (Object)((a)o).a));
-        }
-        
-        @Override
-        public final int hashCode() {
-            return this.a.hashCode();
-        }
-        
-        @Override
-        public final String toString() {
-            return da8.j("FinishActivity(pronouns=", this.a, ")");
-        }
+    public static final rs9 b;
+    public static final rs9 c;
+    public final int a;
+    
+    static {
+        b = new rs9(0);
+        c = new rs9(1);
     }
     
-    public static final class b implements rs9
-    {
-        public static final b a;
-        
-        static {
-            a = new b();
+    public rs9(final int a) {
+        this.a = a;
+    }
+    
+    public final void a(final Object o) {
+        switch (this.a) {
+            default: {
+                final f4w f4w = (f4w)o;
+                final int o2 = DMConversationSettingsPreferenceFragment.O2;
+                f4w.C(((osc)f4w).T());
+                return;
+            }
+            case 0: {
+                final Filters filters = (Filters)o;
+                final b$e u2 = com.twitter.android.media.imageeditor.b.U2;
+                if (filters != null) {
+                    filters.d();
+                }
+            }
         }
     }
 }

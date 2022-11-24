@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonImageCrop extends fih<v5d>
+public class JsonImageCrop extends tih<w6d>
 {
     @JsonField
     public int a;
@@ -26,12 +26,13 @@ public class JsonImageCrop extends fih<v5d>
         this.d = -1;
     }
     
+    @Override
     public final Object s() {
-        final v5d$a v5d$a = new v5d$a();
-        v5d$a.a = this.a;
-        v5d$a.b = this.b;
-        v5d$a.c = this.c;
-        v5d$a.d = this.d;
-        return ((n4j)v5d$a).e();
+        final w6d.a a = new w6d.a();
+        a.a = this.a;
+        a.b = this.b;
+        a.c = this.c;
+        a.d = this.d;
+        return a.e();
     }
 }

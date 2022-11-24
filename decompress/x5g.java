@@ -1,36 +1,45 @@
+import java.util.Locale;
+import android.os.LocaleList;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class x5g
+public final class x5g implements w5g
 {
-    public final int a;
-    public final int b;
+    public final LocaleList a;
     
-    public x5g(final int a, final int b) {
-        this.a = a;
-        this.b = b;
+    public x5g(final Object o) {
+        this.a = (LocaleList)o;
+    }
+    
+    @Override
+    public final Object a() {
+        return this.a;
     }
     
     @Override
     public final boolean equals(final Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (!(o instanceof x5g)) {
-            return false;
-        }
-        final x5g x5g = (x5g)o;
-        return this.a == x5g.a && this.b == x5g.b;
+        return this.a.equals(((w5g)o).a());
+    }
+    
+    @Override
+    public final Locale get(final int n) {
+        return this.a.get(n);
     }
     
     @Override
     public final int hashCode() {
-        return this.a * 31 + this.b;
+        return this.a.hashCode();
+    }
+    
+    @Override
+    public final int size() {
+        return this.a.size();
     }
     
     @Override
     public final String toString() {
-        return k1b.f("Location(line=", this.a, ", column=", this.b, ")");
+        return this.a.toString();
     }
 }

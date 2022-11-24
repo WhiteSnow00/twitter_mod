@@ -13,7 +13,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonFeatureSwitchesEmbeddedExperiment extends fih<mta>
+public class JsonFeatureSwitchesEmbeddedExperiment extends tih<tua>
 {
     public static final SimpleDateFormat f;
     @JsonField
@@ -21,7 +21,7 @@ public class JsonFeatureSwitchesEmbeddedExperiment extends fih<mta>
     @JsonField
     public int b;
     @JsonField
-    public List<mta$b> c;
+    public List<tua$b> c;
     @JsonField
     public String d;
     @JsonField
@@ -31,39 +31,41 @@ public class JsonFeatureSwitchesEmbeddedExperiment extends fih<mta>
         f = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss ZZZZ", Locale.US);
     }
     
+    @Override
     public final Object s() {
         if (this.a == null) {
-            i48.t("Invalid embedded experiment name");
+            mqb.o("Invalid embedded experiment name");
         }
         else {
             try {
                 final SimpleDateFormat f = JsonFeatureSwitchesEmbeddedExperiment.f;
-                return new mta(this.a, this.b, gdd.g((List)this.c), f.parse(this.d), f.parse(this.e));
+                return new tua(this.a, this.b, ged.g((List)this.c), f.parse(this.d), f.parse(this.e));
             }
             catch (final ParseException ex) {
-                i48.t("Invalid embedded experiment timeframe");
+                mqb.o("Invalid embedded experiment timeframe");
             }
         }
         return null;
     }
     
     @JsonObject
-    public static class JsonFeatureSwitchesBucket extends fih<mta$b>
+    public static class JsonFeatureSwitchesBucket extends tih<tua$b>
     {
         @JsonField
         public String a;
         @JsonField
         public int b;
         
+        @Override
         public final Object s() {
             final String a = this.a;
             Object o;
             if (a == null) {
-                i48.t("Invalid embedded bucket");
+                mqb.o("Invalid embedded bucket");
                 o = null;
             }
             else {
-                o = new mta$b(a, this.b);
+                o = new tua$b(a, this.b);
             }
             return o;
         }

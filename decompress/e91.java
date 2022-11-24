@@ -1,54 +1,51 @@
+import android.animation.TimeInterpolator;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.util.AttributeSet;
+import android.content.Context;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class e91 extends tf1
+public final class e91 extends c1u
 {
-    public final int a;
-    public final long b;
+    public final int o1;
     
-    public e91(final int a, final long b) {
-        if (a != 0) {
-            this.a = a;
-            this.b = b;
+    public e91(final int o1) {
+        this.o1 = o1;
+        if (o1 != 1) {
+            this.X();
             return;
         }
-        throw new NullPointerException("Null status");
+        this.X();
     }
     
-    public final long b() {
-        return this.b;
+    public e91(final Context context, final AttributeSet set) {
+        this.o1 = 0;
+        super(context, set);
+        this.X();
     }
     
-    public final int c() {
-        return this.a;
-    }
-    
-    public final boolean equals(final Object o) {
-        boolean b = true;
-        if (o == this) {
-            return true;
-        }
-        if (o instanceof tf1) {
-            final tf1 tf1 = (tf1)o;
-            if (!ib0.e(this.a, tf1.c()) || this.b != tf1.b()) {
-                b = false;
+    public final void X() {
+        switch (this.o1) {
+            default: {
+                this.W(1);
+                this.V((TimeInterpolator)new AccelerateDecelerateInterpolator());
+                this.U(250L);
+                this.S((g0u)new pp3());
+                final c1u c1u = new c1u();
+                c1u.W(0);
+                c1u.S((g0u)new hra(1));
+                c1u.S((g0u)new dwl());
+                this.S(c1u);
+                return;
             }
-            return b;
+            case 0: {
+                this.W(1);
+                this.S((g0u)new hra(2));
+                this.S((g0u)new fp3());
+                this.S((g0u)new hra(1));
+            }
         }
-        return false;
-    }
-    
-    public final int hashCode() {
-        final int e = ib0.E(this.a);
-        final long b = this.b;
-        return (e ^ 0xF4243) * 1000003 ^ (int)(b ^ b >>> 32);
-    }
-    
-    public final String toString() {
-        final StringBuilder j = fu8.j("BackendResponse{status=");
-        j.append(sk0.F(this.a));
-        j.append(", nextRequestWaitMillis=");
-        return hmg.i(j, this.b, "}");
     }
 }

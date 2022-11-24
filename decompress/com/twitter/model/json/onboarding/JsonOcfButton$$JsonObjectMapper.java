@@ -11,77 +11,77 @@ import com.bluelinelabs.logansquare.JsonMapper;
 
 public final class JsonOcfButton$$JsonObjectMapper extends JsonMapper<JsonOcfButton>
 {
-    public static final h53 BUTTON_STYLE_TYPE_CONVERTER;
+    public static final a63 BUTTON_STYLE_TYPE_CONVERTER;
     
     static {
-        BUTTON_STYLE_TYPE_CONVERTER = new h53();
+        BUTTON_STYLE_TYPE_CONVERTER = new a63();
     }
     
-    public static JsonOcfButton _parse(final tge tge) throws IOException {
+    public static JsonOcfButton _parse(final qhe qhe) throws IOException {
         final JsonOcfButton jsonOcfButton = new JsonOcfButton();
-        if (tge.e() == null) {
-            tge.h0();
+        if (qhe.e() == null) {
+            qhe.i0();
         }
-        if (tge.e() != vie.L0) {
-            tge.l0();
+        if (qhe.e() != rje.N0) {
+            qhe.m0();
             return null;
         }
-        while (tge.h0() != vie.M0) {
-            final String d = tge.d();
-            tge.h0();
-            parseField(jsonOcfButton, d, tge);
-            tge.l0();
+        while (qhe.i0() != rje.O0) {
+            final String d = qhe.d();
+            qhe.i0();
+            parseField(jsonOcfButton, d, qhe);
+            qhe.m0();
         }
         return jsonOcfButton;
     }
     
-    public static void _serialize(final JsonOcfButton jsonOcfButton, final afe afe, final boolean b) throws IOException {
+    public static void _serialize(final JsonOcfButton jsonOcfButton, final yfe yfe, final boolean b) throws IOException {
         if (b) {
-            afe.q0();
+            yfe.r0();
         }
         if (jsonOcfButton.d != null) {
-            LoganSquare.typeConverterFor((Class)mdj.class).serialize((Object)jsonOcfButton.d, "icon", true, afe);
+            LoganSquare.typeConverterFor((Class)zdj.class).serialize((Object)jsonOcfButton.d, "icon", true, yfe);
         }
         if (jsonOcfButton.a != null) {
-            LoganSquare.typeConverterFor((Class)ssv.class).serialize((Object)jsonOcfButton.a, "navigation_link", true, afe);
+            LoganSquare.typeConverterFor((Class)dtv.class).serialize((Object)jsonOcfButton.a, "navigation_link", true, yfe);
         }
         if (jsonOcfButton.b != null) {
-            LoganSquare.typeConverterFor((Class)vjp.class).serialize((Object)jsonOcfButton.b, "separator", true, afe);
+            LoganSquare.typeConverterFor((Class)rkp.class).serialize((Object)jsonOcfButton.b, "separator", true, yfe);
         }
-        ((StringBasedTypeConverter)JsonOcfButton$$JsonObjectMapper.BUTTON_STYLE_TYPE_CONVERTER).serialize((Object)jsonOcfButton.c, "style", true, afe);
+        ((StringBasedTypeConverter)JsonOcfButton$$JsonObjectMapper.BUTTON_STYLE_TYPE_CONVERTER).serialize((Object)jsonOcfButton.c, "style", true, yfe);
         if (b) {
-            afe.h();
+            yfe.h();
         }
     }
     
-    public static void parseField(final JsonOcfButton jsonOcfButton, final String s, final tge tge) throws IOException {
+    public static void parseField(final JsonOcfButton jsonOcfButton, final String s, final qhe qhe) throws IOException {
         if ("icon".equals(s)) {
-            jsonOcfButton.d = (mdj)LoganSquare.typeConverterFor((Class)mdj.class).parse(tge);
+            jsonOcfButton.d = (zdj)LoganSquare.typeConverterFor((Class)zdj.class).parse(qhe);
         }
         else if ("navigation_link".equals(s)) {
-            jsonOcfButton.a = (ssv)LoganSquare.typeConverterFor((Class)ssv.class).parse(tge);
+            jsonOcfButton.a = (dtv)LoganSquare.typeConverterFor((Class)dtv.class).parse(qhe);
         }
         else if ("separator".equals(s)) {
-            jsonOcfButton.b = (vjp)LoganSquare.typeConverterFor((Class)vjp.class).parse(tge);
+            jsonOcfButton.b = (rkp)LoganSquare.typeConverterFor((Class)rkp.class).parse(qhe);
         }
         else if ("style".equals(s)) {
-            jsonOcfButton.c = (int)((StringBasedTypeConverter)JsonOcfButton$$JsonObjectMapper.BUTTON_STYLE_TYPE_CONVERTER).parse(tge);
+            jsonOcfButton.c = (int)((StringBasedTypeConverter)JsonOcfButton$$JsonObjectMapper.BUTTON_STYLE_TYPE_CONVERTER).parse(qhe);
         }
     }
     
-    public JsonOcfButton parse(final tge tge) throws IOException {
-        return _parse(tge);
+    public JsonOcfButton parse(final qhe qhe) throws IOException {
+        return _parse(qhe);
     }
     
-    public /* bridge */ Object parse(final tge tge) throws IOException {
-        return this.parse(tge);
+    public /* bridge */ Object parse(final qhe qhe) throws IOException {
+        return this.parse(qhe);
     }
     
-    public void serialize(final JsonOcfButton jsonOcfButton, final afe afe, final boolean b) throws IOException {
-        _serialize(jsonOcfButton, afe, b);
+    public void serialize(final JsonOcfButton jsonOcfButton, final yfe yfe, final boolean b) throws IOException {
+        _serialize(jsonOcfButton, yfe, b);
     }
     
-    public /* bridge */ void serialize(final Object o, final afe afe, final boolean b) throws IOException {
-        this.serialize((JsonOcfButton)o, afe, b);
+    public /* bridge */ void serialize(final Object o, final yfe yfe, final boolean b) throws IOException {
+        this.serialize((JsonOcfButton)o, yfe, b);
     }
 }

@@ -9,26 +9,27 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonOcfButton extends fih<jcj>
+public class JsonOcfButton extends tih<wcj>
 {
     @JsonField
-    public ssv a;
+    public dtv a;
     @JsonField
-    public vjp b;
-    @JsonField(typeConverter = h53.class)
+    public rkp b;
+    @JsonField(typeConverter = a63.class)
     public int c;
     @JsonField
-    public mdj d;
+    public zdj d;
     
+    @Override
     public final Object s() {
-        final jcj$a jcj$a = new jcj$a();
-        jcj$a.c = this.c;
-        jcj$a.o(this.a);
-        jcj$a.b = this.b;
-        final mdj d = this.d;
+        final wcj.a a = new wcj.a();
+        a.c = this.c;
+        a.o(this.a);
+        a.b = this.b;
+        final zdj d = this.d;
         if (d != null) {
-            jcj$a.e = d;
+            a.e = d;
         }
-        return ((n4j)jcj$a).e();
+        return a.e();
     }
 }

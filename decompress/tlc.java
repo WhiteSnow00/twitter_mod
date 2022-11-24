@@ -26,24 +26,24 @@ public final class tlc
     public final vlc a;
     public final a b;
     public final a c;
-    public final zng d;
+    public final sog d;
     public final Uri[] e;
     public final n[] f;
     public final HlsPlaylistTracker g;
-    public final lvt h;
+    public final swt h;
     public final List<n> i;
-    public final btb j;
-    public final hnk k;
+    public final ctb j;
+    public final cok k;
     public boolean l;
     public byte[] m;
     public BehindLiveWindowException n;
     public Uri o;
     public boolean p;
-    public hha q;
+    public tha q;
     public long r;
     public boolean s;
     
-    public tlc(final vlc a, final HlsPlaylistTracker g, final Uri[] e, final n[] f, final ulc ulc, final zxt zxt, final zng d, final List<n> i, final hnk k) {
+    public tlc(final vlc a, final HlsPlaylistTracker g, final Uri[] e, final n[] f, final ulc ulc, final hzt hzt, final sog d, final List<n> i, final cok k) {
         this.a = a;
         this.g = g;
         this.e = e;
@@ -51,40 +51,40 @@ public final class tlc
         this.d = d;
         this.i = i;
         this.k = k;
-        this.j = new btb();
-        this.m = imw.f;
+        this.j = new ctb();
+        this.m = rnw.f;
         this.r = -9223372036854775807L;
         final a a2 = ulc.a(1);
         this.b = a2;
-        if (zxt != null) {
-            a2.g(zxt);
+        if (hzt != null) {
+            a2.g(hzt);
         }
         this.c = ulc.a(3);
-        this.h = new lvt("", f);
+        this.h = new swt("", f);
         final ArrayList list = new ArrayList();
         for (int j = 0; j < e.length; ++j) {
-            if ((f[j].G0 & 0x4000) == 0x0) {
+            if ((f[j].J0 & 0x4000) == 0x0) {
                 list.add(j);
             }
         }
-        this.q = (hha)new tlc.tlc$d(this.h, g0e.t((Collection)list));
+        this.q = (tha)new tlc.tlc$d(this.h, l0e.t(list));
     }
     
-    public final org[] a(final xlc xlc, final long n) {
+    public final gsg[] a(final xlc xlc, final long n) {
         int a;
         if (xlc == null) {
             a = -1;
         }
         else {
-            a = this.h.a(((ia4)xlc).d);
+            a = this.h.a(((pa4)xlc).d);
         }
-        final int length = ((qvt)this.q).length();
-        final org[] array = new org[length];
+        final int length = ((xwt)this.q).length();
+        final gsg[] array = new gsg[length];
         for (int i = 0; i < length; ++i) {
-            final int j = ((qvt)this.q).i(i);
+            final int j = ((xwt)this.q).i(i);
             final Uri uri = this.e[j];
-            if (!this.g.h(uri)) {
-                array[i] = (org)org.a;
+            if (!this.g.j(uri)) {
+                array[i] = (gsg)gsg.a;
             }
             else {
                 final c o = this.g.o(uri, false);
@@ -94,25 +94,25 @@ public final class tlc
                 final long longValue = (long)c.first;
                 final int intValue = (int)c.second;
                 final int n3 = (int)(longValue - o.k);
-                Object o3;
-                if (n3 >= 0 && ((List)o.r).size() >= n3) {
+                List<Object> list2;
+                if (n3 >= 0 && o.r.size() >= n3) {
                     final ArrayList<Object> list = new ArrayList<Object>();
                     int n4 = intValue;
-                    if (n3 < ((List)o.r).size()) {
+                    if (n3 < o.r.size()) {
                         int n5 = n3;
                         if (intValue != -1) {
-                            final c$c c$c = ((List<c$c>)o.r).get(n3);
+                            final c$c c$c = (c$c)o.r.get(n3);
                             if (intValue == 0) {
                                 list.add(c$c);
                             }
-                            else if (intValue < ((List)c$c.O0).size()) {
-                                final aed o2 = c$c.O0;
-                                list.addAll(((List)o2).subList(intValue, ((List)o2).size()));
+                            else if (intValue < c$c.R0.size()) {
+                                final eed r0 = c$c.R0;
+                                list.addAll(r0.subList(intValue, r0.size()));
                             }
                             n5 = n3 + 1;
                         }
-                        final aed r = o.r;
-                        list.addAll(((List)r).subList(n5, ((List)r).size()));
+                        final eed r2 = o.r;
+                        list.addAll(r2.subList(n5, r2.size()));
                         n4 = 0;
                     }
                     if (o.n != -9223372036854775807L) {
@@ -120,18 +120,18 @@ public final class tlc
                         if ((n6 = n4) == -1) {
                             n6 = 0;
                         }
-                        if (n6 < ((List)o.s).size()) {
-                            final aed s = o.s;
-                            list.addAll(((List)s).subList(n6, ((List)s).size()));
+                        if (n6 < o.s.size()) {
+                            final eed s = o.s;
+                            list.addAll(s.subList(n6, s.size()));
                         }
                     }
-                    o3 = Collections.unmodifiableList((List<?>)list);
+                    list2 = Collections.unmodifiableList((List<?>)list);
                 }
                 else {
-                    final aed$b d0 = aed.D0;
-                    o3 = lam.G0;
+                    final eed.b g0 = eed.G0;
+                    list2 = nbm.J0;
                 }
-                array[i] = (org)new tlc.tlc$c(n2, (List)o3);
+                array[i] = (gsg)new tlc.tlc$c(n2, (List)list2);
             }
         }
         return array;
@@ -143,27 +143,27 @@ public final class tlc
         if (o == -1) {
             return 1;
         }
-        final c o2 = this.g.o(this.e[this.h.a(((ia4)xlc).d)], false);
+        final c o2 = this.g.o(this.e[this.h.a(((pa4)xlc).d)], false);
         Objects.requireNonNull(o2);
-        final int n2 = (int)(((nrg)xlc).j - o2.k);
+        final int n2 = (int)(((fsg)xlc).j - o2.k);
         if (n2 < 0) {
             return 1;
         }
-        aed aed;
-        if (n2 < ((List)o2.r).size()) {
-            aed = ((List<c$c>)o2.r).get(n2).O0;
+        eed eed;
+        if (n2 < o2.r.size()) {
+            eed = ((c$c)o2.r.get(n2)).R0;
         }
         else {
-            aed = o2.s;
+            eed = o2.s;
         }
-        if (xlc.o >= ((List)aed).size()) {
+        if (xlc.o >= eed.size()) {
             return 2;
         }
-        final c$a c$a = (c$a)((List)aed).get(xlc.o);
-        if (c$a.O0) {
+        final c$a c$a = (c$a)eed.get(xlc.o);
+        if (c$a.R0) {
             return 0;
         }
-        if (!imw.a((Object)Uri.parse(n5w.c(o2.a, ((c$d)c$a).C0)), (Object)((ia4)xlc).b.a)) {
+        if (!rnw.a((Object)Uri.parse(n6w.c(o2.a, ((c$d)c$a).F0)), (Object)((pa4)xlc).b.a)) {
             n = 2;
         }
         return n;
@@ -176,14 +176,14 @@ public final class tlc
             Pair pair;
             if (xlc.H) {
                 if (xlc.o == -1) {
-                    n = ((nrg)xlc).j;
+                    n = ((fsg)xlc).j;
                     j = -1L;
                     if (n != -1L) {
                         j = n + 1L;
                     }
                 }
                 else {
-                    j = ((nrg)xlc).j;
+                    j = ((fsg)xlc).j;
                 }
                 final int o = xlc.o;
                 if (o != -1) {
@@ -192,52 +192,52 @@ public final class tlc
                 pair = new Pair((Object)j, (Object)n2);
             }
             else {
-                pair = new Pair((Object)((nrg)xlc).j, (Object)xlc.o);
+                pair = new Pair((Object)((fsg)xlc).j, (Object)xlc.o);
             }
             return (Pair<Long, Integer>)pair;
         }
         final long u = c.u;
         if (xlc != null) {
             if (!this.p) {
-                n = ((ia4)xlc).g;
+                n = ((pa4)xlc).g;
             }
         }
         if (!c.o && n >= j + u) {
-            return (Pair<Long, Integer>)new Pair((Object)(c.k + ((List)c.r).size()), (Object)(-1));
+            return (Pair<Long, Integer>)new Pair((Object)(c.k + c.r.size()), (Object)(-1));
         }
         final long n3 = n - j;
-        final aed r = c.r;
-        final boolean i = this.g.j();
+        final eed r = c.r;
+        final boolean k = this.g.k();
         int n4 = 0;
         boolean b3 = b2;
-        if (i) {
+        if (k) {
             b3 = (xlc == null && b2);
         }
-        final int d = imw.d((List)r, (Comparable)n3, b3);
+        final int d = rnw.d((List)r, (Comparable)n3, b3);
         n = d + c.k;
         int n5 = n2;
         j = n;
         if (d >= 0) {
-            final c$c c$c = ((List<c$c>)c.r).get(d);
-            aed aed;
-            if (n3 < ((c$d)c$c).G0 + ((c$d)c$c).E0) {
-                aed = c$c.O0;
+            final c$c c$c = (c$c)c.r.get(d);
+            eed eed;
+            if (n3 < ((c$d)c$c).J0 + ((c$d)c$c).H0) {
+                eed = c$c.R0;
             }
             else {
-                aed = c.s;
+                eed = c.s;
             }
             while (true) {
                 n5 = n2;
                 j = n;
-                if (n4 >= ((List)aed).size()) {
+                if (n4 >= eed.size()) {
                     break;
                 }
-                final c$a c$a = (c$a)((List)aed).get(n4);
-                if (n3 < ((c$d)c$a).G0 + ((c$d)c$a).E0) {
+                final c$a c$a = (c$a)eed.get(n4);
+                if (n3 < ((c$d)c$a).J0 + ((c$d)c$a).H0) {
                     n5 = n2;
                     j = n;
-                    if (c$a.N0) {
-                        if (aed == c.s) {
+                    if (c$a.Q0) {
+                        if (eed == c.s) {
                             j = 1L;
                         }
                         else {
@@ -257,21 +257,21 @@ public final class tlc
         return (Pair<Long, Integer>)new Pair((Object)j, (Object)n5);
     }
     
-    public final ia4 d(final Uri uri, final int n) {
+    public final pa4 d(final Uri uri, final int n) {
         if (uri == null) {
             return null;
         }
         final byte[] array = ((AbstractMap<K, byte[]>)this.j.a).remove(uri);
         if (array != null) {
-            final byte[] array2 = this.j.a.put(uri, array);
+            final byte[] array2 = ((AbstractMap<Uri, byte[]>)this.j.a).put(uri, array);
             return null;
         }
-        return (ia4)new tlc.tlc$a(this.c, new com.google.android.exoplayer2.upstream.b(uri, 0L, 1, (byte[])null, (Map)Collections.emptyMap(), 0L, -1L, (String)null, 1, (Object)null), this.f[n], this.q.s(), this.q.k(), this.m);
+        return (pa4)new tlc.tlc$a(this.c, new com.google.android.exoplayer2.upstream.b(uri, 0L, 1, (byte[])null, (Map)Collections.emptyMap(), 0L, -1L, (String)null, 1, (Object)null), this.f[n], this.q.s(), this.q.k(), this.m);
     }
     
     public static final class b
     {
-        public ia4 a;
+        public pa4 a;
         public boolean b;
         public Uri c;
         
@@ -293,7 +293,7 @@ public final class tlc
             this.a = a;
             this.b = b;
             this.c = c;
-            this.d = (a instanceof c$a && ((c$a)a).O0);
+            this.d = (a instanceof c$a && ((c$a)a).R0);
         }
     }
 }

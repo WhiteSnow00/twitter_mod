@@ -8,28 +8,28 @@ import tv.periscope.model.NarrowcastSpaceType;
 import java.util.List;
 import java.util.Map;
 
-public final class e0 extends gue implements rtb<f6n, f6n>
+public final class e0 extends pue implements stb<l7n, l7n>
 {
-    public final /* synthetic */ o0n$a C0;
-    public final /* synthetic */ f6n D0;
+    public final t1n.a F0;
+    public final l7n G0;
     
-    public e0(final o0n$a c0, final f6n d0) {
-        this.C0 = c0;
-        this.D0 = d0;
+    public e0(final t1n.a f0, final l7n g0) {
+        this.F0 = f0;
+        this.G0 = g0;
         super(1);
     }
     
     public final Object invoke(final Object o) {
-        final f6n f6n = (f6n)o;
-        zzd.f((Object)f6n, "$this$setState");
-        final hm a = this.C0.a;
-        f6n f6n2;
-        if (a == this.D0.g) {
-            f6n2 = f6n.l(f6n, false, null, null, false, null, hm.F0, null, null, null, false, null, null, false, null, false, false, null, null, 0, null, null, null, null, null, null, false, false, null, false, false, false, false, false, false, null, null, false, false, 0, false, null, false, 0, false, false, false, false, false, false, null, false, false, -65, 4194303);
+        final l7n l7n = (l7n)o;
+        e0e.f((Object)l7n, "$this$setState");
+        final im a = this.F0.a;
+        l7n l7n2;
+        if (a == this.G0.g) {
+            l7n2 = l7n.l(l7n, false, (ci6)null, (wah)null, false, (r31)null, im.I0, (String)null, (Long)null, (String)null, false, (lrp)null, (mrn)null, false, (Map)null, false, false, (String)null, (List)null, 0, (wjt)null, (wjt)null, (yh5)null, (String)null, (wjt)null, (wjt)null, false, false, (faw)null, false, false, false, false, false, false, (List)null, (Long)null, false, false, 0, false, (NarrowcastSpaceType)null, false, 0, false, false, false, false, false, false, (kmu)null, false, false, -65, 4194303);
         }
         else {
-            f6n2 = f6n.l(f6n, false, null, null, false, null, a, null, null, null, false, null, null, false, null, false, false, null, null, 0, null, null, null, null, null, null, false, false, null, false, false, false, false, false, false, null, null, false, false, 0, false, null, false, 0, false, false, false, false, false, false, null, false, false, -65, 4194303);
+            l7n2 = l7n.l(l7n, false, (ci6)null, (wah)null, false, (r31)null, a, (String)null, (Long)null, (String)null, false, (lrp)null, (mrn)null, false, (Map)null, false, false, (String)null, (List)null, 0, (wjt)null, (wjt)null, (yh5)null, (String)null, (wjt)null, (wjt)null, false, false, (faw)null, false, false, false, false, false, false, (List)null, (Long)null, false, false, 0, false, (NarrowcastSpaceType)null, false, 0, false, false, false, false, false, false, (kmu)null, false, false, -65, 4194303);
         }
-        return f6n2;
+        return l7n2;
     }
 }

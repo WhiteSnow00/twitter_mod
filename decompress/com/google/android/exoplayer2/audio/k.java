@@ -17,7 +17,7 @@ public final class k extends c
     public long o;
     
     public k() {
-        this.m = imw.f;
+        this.m = rnw.f;
     }
     
     public final ByteBuffer a() {
@@ -48,9 +48,9 @@ public final class k extends c
         final int n2 = n - min;
         final int n3 = this.n + n2 - this.m.length;
         final ByteBuffer l = this.l(n3);
-        final int i = imw.i(n3, 0, this.n);
+        final int i = rnw.i(n3, 0, this.n);
         l.put(this.m, 0, i);
-        final int j = imw.i(n3 - i, 0, n2);
+        final int j = rnw.i(n3 - i, 0, n2);
         byteBuffer.limit(byteBuffer.position() + j);
         l.put(byteBuffer);
         byteBuffer.limit(limit);
@@ -107,6 +107,6 @@ public final class k extends c
     }
     
     public final void k() {
-        this.m = imw.f;
+        this.m = rnw.f;
     }
 }

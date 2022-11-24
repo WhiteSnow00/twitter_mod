@@ -1,21 +1,29 @@
-import java.util.List;
+import com.twitter.ui.widget.timeline.InlineDismissView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wpd implements g3e
+public final class wpd implements sj
 {
-    public static final wpd b;
-    public static final List<Integer> c;
+    public final cqd F0;
+    public final InlineDismissView G0;
+    public final vxs H0;
+    public final long I0;
     
-    static {
-        b = new wpd();
-        c = s9i.s(8, 10, 11, 18, 21, 22, 23);
+    public wpd(final cqd f0, final InlineDismissView g0, final vxs h0, final long i0) {
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
+        this.I0 = i0;
     }
     
-    public final boolean b(final Object o) {
-        czd.f(o, "item");
-        return o instanceof qs6 && wpd.c.contains(((qs6)o).h.getType());
+    public final void run() {
+        final cqd f0 = this.F0;
+        final InlineDismissView g0 = this.G0;
+        final vxs h0 = this.H0;
+        final long i0 = this.I0;
+        f0.g(g0, h0);
+        f0.f(i0);
     }
 }

@@ -2,21 +2,30 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class a7o extends gue implements rtb<gvj<? extends Integer, ? extends Integer>, Boolean>
+public final class a7o implements ccx
 {
-    public static final a7o C0;
-    
-    static {
-        C0 = new a7o();
-    }
+    public final String a;
     
     public a7o() {
-        super(1);
+        this.a = "";
     }
     
-    public final Object invoke(final Object o) {
-        final gvj gvj = (gvj)o;
-        zzd.f((Object)gvj, "it");
-        return ((Number)gvj.C0).intValue() != ((Number)gvj.D0).intValue();
+    public a7o(final String s, final int n, final wg8 wg8) {
+        this.a = "";
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        return this == o || (o instanceof a7o && e0e.a((Object)this.a, (Object)((a7o)o).a));
+    }
+    
+    @Override
+    public final int hashCode() {
+        return this.a.hashCode();
+    }
+    
+    @Override
+    public final String toString() {
+        return c0e.h("RoomSettingsMultiScheduledSpacesViewState(someText=", this.a, ")");
     }
 }

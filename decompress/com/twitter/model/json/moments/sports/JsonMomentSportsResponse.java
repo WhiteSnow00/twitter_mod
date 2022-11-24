@@ -10,12 +10,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonMomentSportsResponse extends fih<qph>
+public class JsonMomentSportsResponse extends tih<fqh>
 {
     @JsonField
-    public List<mph> a;
+    public List<bqh> a;
     
+    @Override
     public final Object s() {
-        return new qph(rif.x((List)this.a));
+        return new fqh(ojf.x((List)this.a));
     }
 }

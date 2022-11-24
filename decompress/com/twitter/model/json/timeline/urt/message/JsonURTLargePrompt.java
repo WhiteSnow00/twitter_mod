@@ -8,22 +8,22 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTLargePrompt extends aih<mqv>
+public class JsonURTLargePrompt extends tih<trv>
 {
     @JsonField(name = { "headerText", "largeHeaderText" })
     public String a;
     @JsonField(name = { "primaryButtonAction", "largePrimaryButtonAction" })
-    public fpv b;
+    public nqv b;
     
     @Override
     public final Object s() {
         Object o;
         if (this.a == null) {
-            xpa.p("JsonURTLargePrompt has no titleText");
+            mqb.o("JsonURTLargePrompt has no titleText");
             o = null;
         }
         else {
-            o = new mqv(this.a, this.b);
+            o = new trv(this.a, this.b);
         }
         return o;
     }

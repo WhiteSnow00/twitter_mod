@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Anda akan menerima pemberitahuan untuk Tweet baharu.</item>
-        <item>Anda akan menerima pemberitahuan bagi Tweet untuk Super Pengikut sahaja yang baharu.</item>
+        <item>Anda akan menerima pemberitahuan untuk Tweet Langganan baharu.</item>
         <item>Anda akan menerima pemberitahuan untuk Tweet video Siaran Langsung baharu.</item>
         <item>Anda akan menerima pemberitahuan untuk Tweet Spaces baharu.</item>
         <item>Anda tidak akan lagi menerima pemberitahuan untuk Tweet baharu.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweet</item>
-        <item>Tweet untuk Super Pengikut sahaja</item>
+        <item>Tweet Langganan sahaja</item>
         <item>Video siaran langsung</item>
         <item>Spaces</item>
         <item>Tiada</item>
     </array>
     <array name="account_notif_options_old">
         <item>Semua Tweet</item>
-        <item>Hanya Tweet Super Ikut</item>
+        <item>Hanya Tweet Langganan</item>
         <item>Hanya video siaran langsung</item>
         <item>Spaces sahaja</item>
         <item>Matikan</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Dapatkan pemberitahuan untuk semua Tweet akaun ini.</item>
-        <item>Hanya terima pemberitahuan untuk Tweet Super Ikut.</item>
+        <item>Dapatkan pemberitahuan hanya untuk Tweet Langganan.</item>
         <item>Dapatkan pemberitahuan hanya untuk siaran langsung.</item>
         <item>Dapatkan pemberitahuan untuk Spaces sahaja.</item>
         <item>Matikan pemberitahuan untuk Tweet akaun ini.</item>

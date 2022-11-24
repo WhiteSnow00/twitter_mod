@@ -301,8 +301,8 @@
         <item quantity="other">%d ಇತರರು</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">ಸೂಪರ್ ಹಿಂಬಾಲಕರು</item>
-        <item quantity="other">ಸೂಪರ್ ಹಿಂಬಾಲಕರುಗಳು</item>
+        <item quantity="one">ಸಬ್‌ಸ್ಕ್ರೈಬರ್</item>
+        <item quantity="other">ಸಬ್‌ಸ್ಕ್ರೈಬರ್‌ಗಳು</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s ಇಷ್ಟ</item>
@@ -341,7 +341,7 @@
         <item quantity="other">﻿%1$s ಮತ್ತು %2$d ಇತರರಿಗೆ ಉತ್ತರಿಸಲಾಗುತ್ತಿದೆ﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s ಮತ್ತು %2$d ಇತರರಿಗೆ﻿ ಪ್ರತಿಕ್ರಿಯಿಸಲಾಗುತ್ತಿದೆ. ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯು ಇತರ ಸೂಪರ್ ಫಾಲೋವರ್‌ಗಳಿಗೂ ಗೋಚರಿಸುತ್ತದೆ.</item>
+        <item quantity="other">﻿%1$s ಮತ್ತು %2$d ಇತರರಿಗೆ﻿ ಪ್ರತಿಕ್ರಿಯಿಸಲಾಗುತ್ತಿದೆ. ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯು ಇತರ ಸಬ್‌ಸ್ಕ್ರೈಬರ್‌ಗಳಿಗೆ ಗೋಚರಿಸುತ್ತದೆ.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">﻿%3$s﻿ ನಲ್ಲಿ ﻿%1$s ಮತ್ತು %2$d ಇತರರರು ﻿ ಅವರಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸಲಾಗುತ್ತಿದೆ</item>
@@ -350,7 +350,7 @@
         <item quantity="other">﻿%1$s %2$s ಮತ್ತು %3$d ಇತರರಿಗೆ﻿ ಪ್ರತಿಕ್ರಿಯಿಸಲಾಗುತ್ತಿದೆ</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">﻿%1$s%2$s ಮತ್ತು %3$d ಇತರರಿಗೆ﻿ ಪ್ರತಿಕ್ರಿಯಿಸಲಾಗುತ್ತಿದೆ. ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯು ಇತರ ಸೂಪರ್ ಫಾಲೋವರ್‌ಗಳಿಗೂ ಗೋಚರಿಸುತ್ತದೆ.</item>
+        <item quantity="other">﻿%1$s%2$s ಮತ್ತು %3$d ಇತರರಿಗೆ﻿ ಪ್ರತಿಕ್ರಿಯಿಸಲಾಗುತ್ತಿದೆ. ನಿಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಯು ಇತರ ಸಬ್‌ಸ್ಕ್ರೈಬರ್‌ಗಳಿಗೆ ಗೋಚರಿಸುತ್ತದೆ.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">﻿%4$s﻿ ನಲ್ಲಿ ﻿%1$s%2$s ಮತ್ತು %3$d ಇತರರರು ﻿ ಅವರಿಗೆ ಪ್ರತಿಕ್ರಿಯಿಸಲಾಗುತ್ತಿದೆ</item>

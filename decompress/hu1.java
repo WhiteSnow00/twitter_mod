@@ -1,50 +1,69 @@
-import java.util.LinkedHashMap;
-import android.view.View;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class hu1 extends ste implements qsb<b3e<Object>, fzv>
+public final class hu1
 {
-    public final ku1 D0;
+    public static final b Companion;
+    public final List<yu1> a;
     
-    public hu1(final ku1 d0) {
-        this.D0 = d0;
-        super(1);
+    static {
+        Companion = new b();
     }
     
-    public final Object invoke(final Object o) {
-        final b3e b3e = (b3e)o;
-        if (b3e instanceof b3e$a) {
-            final rv1 b = this.D0.b;
-            final View heldView = ((b3e$a)b3e).a.getHeldView();
-            czd.e((Object)heldView, "event.viewHolder.heldView");
-            final lca<f7x> k = b.k(heldView);
-            final LinkedHashMap d = this.D0.d;
-            final m4s a = hq1.a;
-            d.put(k, System.currentTimeMillis());
+    public hu1(final List<yu1> a) {
+        e0e.f((Object)a, "metadataContexts");
+        this.a = a;
+    }
+    
+    @Override
+    public final boolean equals(final Object o) {
+        return this == o || (o instanceof hu1 && e0e.a((Object)this.a, (Object)((hu1)o).a));
+    }
+    
+    @Override
+    public final int hashCode() {
+        return this.a.hashCode();
+    }
+    
+    @Override
+    public final String toString() {
+        return rh.x("BceHierarchyContext(metadataContexts=", (List)this.a, ")");
+    }
+    
+    public static final class a extends k5j<hu1>
+    {
+        public static final a b;
+        
+        static {
+            b = new a();
         }
-        else if (b3e instanceof b3e$d) {
-            final rv1 b2 = this.D0.b;
-            final View heldView2 = ((b3e$d)b3e).a.getHeldView();
-            czd.e((Object)heldView2, "event.viewHolder.heldView");
-            final lca<f7x> i = b2.k(heldView2);
-            final Long n = this.D0.d.get(i);
-            if (n != null) {
-                final long longValue = n.longValue();
-                final m4s a2 = hq1.a;
-                ((yaa)i).e((Object)new ned(longValue, System.currentTimeMillis()));
+        
+        public final Object d(final rmp rmp, final int n) {
+            e0e.f((Object)rmp, "input");
+            final List list = (List)((k5j)new ar4$a((nmp)yu1$a.b)).a(rmp);
+            hu1 hu1;
+            if (list != null) {
+                hu1 = new hu1(list);
             }
-            this.D0.d.remove(i);
+            else {
+                hu1 = new hu1((List<yu1>)h3a.F0);
+            }
+            return hu1;
         }
-        else if (b3e instanceof b3e$c) {
-            final rv1 b3 = this.D0.b;
-            final b3e$c b3e$c = (b3e$c)b3e;
-            final View heldView3 = b3e$c.a.getHeldView();
-            czd.e((Object)heldView3, "event.viewHolder.heldView");
-            b3.d(heldView3, (View)b3e$c.b);
+        
+        public final void f(final smp smp, final Object o) {
+            final hu1 hu1 = (hu1)o;
+            e0e.f((Object)smp, "output");
+            e0e.f((Object)hu1, "bceHierarchyContext");
+            ((k5j)new ar4$a((nmp)yu1$a.b)).c(smp, (Object)hu1.a);
+            final int a = o5j.a;
         }
-        return fzv.a;
+    }
+    
+    public static final class b
+    {
     }
 }

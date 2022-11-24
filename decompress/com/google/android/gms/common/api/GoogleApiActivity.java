@@ -24,10 +24,10 @@ import android.app.Activity;
 @KeepName
 public class GoogleApiActivity extends Activity implements DialogInterface$OnCancelListener
 {
-    public int D0;
+    public int F0;
     
     public GoogleApiActivity() {
-        this.D0 = 0;
+        this.F0 = 0;
     }
     
     public static Intent a(final Context context, final PendingIntent pendingIntent, final int n, final boolean b) {
@@ -42,39 +42,39 @@ public class GoogleApiActivity extends Activity implements DialogInterface$OnCan
         super.onActivityResult(n, n2, intent);
         if (n == 1) {
             final boolean booleanExtra = this.getIntent().getBooleanExtra("notify_manager", true);
-            this.D0 = 0;
+            this.F0 = 0;
             this.setResult(n2, intent);
             if (booleanExtra) {
-                final r4c h = r4c.h((Context)this);
+                final t5c h = t5c.h((Context)this);
                 if (n2 != -1) {
                     if (n2 == 0) {
-                        h.i(new vg6(13, null, null), this.getIntent().getIntExtra("failing_client_id", -1));
+                        h.i(new bi6(13, (PendingIntent)null, (String)null), this.getIntent().getIntExtra("failing_client_id", -1));
                     }
                 }
                 else {
-                    final j5y q0 = h.Q0;
-                    ((Handler)q0).sendMessage(((Handler)q0).obtainMessage(3));
+                    final d6y s0 = h.S0;
+                    ((Handler)s0).sendMessage(((Handler)s0).obtainMessage(3));
                 }
             }
         }
         else if (n == 2) {
-            this.D0 = 0;
+            this.F0 = 0;
             this.setResult(n2, intent);
         }
         this.finish();
     }
     
     public final void onCancel(final DialogInterface dialogInterface) {
-        this.setResult(this.D0 = 0);
+        this.setResult(this.F0 = 0);
         this.finish();
     }
     
     public final void onCreate(Bundle extras) {
         super.onCreate(extras);
         if (extras != null) {
-            this.D0 = ((BaseBundle)extras).getInt("resolution");
+            this.F0 = ((BaseBundle)extras).getInt("resolution");
         }
-        if (this.D0 != 1) {
+        if (this.F0 != 1) {
             extras = this.getIntent().getExtras();
             if (extras == null) {
                 Log.e("GoogleApiActivity", "Activity started without extras");
@@ -90,7 +90,7 @@ public class GoogleApiActivity extends Activity implements DialogInterface$OnCan
                 else if (pendingIntent != null) {
                     try {
                         this.startIntentSenderForResult(pendingIntent.getIntentSender(), 1, (Intent)null, 0, 0, 0);
-                        this.D0 = 1;
+                        this.F0 = 1;
                     }
                     catch (final IntentSender$SendIntentException ex) {
                         Log.e("GoogleApiActivity", "Failed to launch pendingIntent", (Throwable)ex);
@@ -98,33 +98,33 @@ public class GoogleApiActivity extends Activity implements DialogInterface$OnCan
                     }
                     catch (final ActivityNotFoundException ex2) {
                         if (extras.getBoolean("notify_manager", true)) {
-                            r4c.h((Context)this).i(new vg6(22, null, null), this.getIntent().getIntExtra("failing_client_id", -1));
+                            t5c.h((Context)this).i(new bi6(22, (PendingIntent)null, (String)null), this.getIntent().getIntExtra("failing_client_id", -1));
                         }
                         else {
                             final String string = pendingIntent.toString();
-                            String s = ta0.z(new StringBuilder(string.length() + 36), "Activity not found while launching ", string, ".");
+                            String s = wa0.y(new StringBuilder(string.length() + 36), "Activity not found while launching ", string, ".");
                             if (Build.FINGERPRINT.contains("generic")) {
                                 s = s.concat(" This may occur when resolving Google Play services connection issues on emulators with Google APIs but not Google Play Store.");
                             }
                             Log.e("GoogleApiActivity", s, (Throwable)ex2);
                         }
-                        this.D0 = 1;
+                        this.F0 = 1;
                         this.finish();
                     }
                 }
                 else {
                     Objects.requireNonNull(n, "null reference");
                     final int intValue = n;
-                    final int c = p4c.c;
-                    p4c.e.e((Activity)this, intValue, (DialogInterface$OnCancelListener)this);
-                    this.D0 = 1;
+                    final int c = r5c.c;
+                    r5c.e.e((Activity)this, intValue, (DialogInterface$OnCancelListener)this);
+                    this.F0 = 1;
                 }
             }
         }
     }
     
     public final void onSaveInstanceState(final Bundle bundle) {
-        ((BaseBundle)bundle).putInt("resolution", this.D0);
+        ((BaseBundle)bundle).putInt("resolution", this.F0);
         super.onSaveInstanceState(bundle);
     }
 }

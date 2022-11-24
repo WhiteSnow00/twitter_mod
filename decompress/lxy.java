@@ -1,36 +1,36 @@
+import java.lang.annotation.Annotation;
 import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
 import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class lxy implements j4j<usy>
+public final class lxy implements b5j<saz>
 {
     public static final lxy a;
     
     static {
+        final z000 f0 = z000.F0;
         a = new lxy();
-        final vpy vpy = new vpy(0);
-        vpy.b = 1;
-        final qqy f = vpy.f();
+        final czz czz = new czz(1, f0);
         final HashMap hashMap = new HashMap();
-        final vpy l = sbl.l(f, hashMap, f, hashMap, 0);
-        l.b = 2;
-        final qqy f2 = l.f();
+        hashMap.put(((Annotation)czz).annotationType(), czz);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final czz czz2 = new czz(2, f0);
         final HashMap hashMap2 = new HashMap();
-        final vpy i = sbl.l(f2, hashMap2, f2, hashMap2, 0);
-        i.b = 3;
-        final qqy f3 = i.f();
+        hashMap2.put(((Annotation)czz2).annotationType(), czz2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final czz czz3 = new czz(3, f0);
         final HashMap hashMap3 = new HashMap();
-        final vpy j = sbl.l(f3, hashMap3, f3, hashMap3, 0);
-        j.b = 4;
-        final qqy f4 = j.f();
-        final HashMap hashMap4 = new HashMap();
-        final vpy k = sbl.l(f4, hashMap4, f4, hashMap4, 0);
-        k.b = 5;
-        final qqy f5 = k.f();
-        final HashMap hashMap5 = new HashMap();
-        eta.i(f5, hashMap5, f5, hashMap5);
+        ehk.g(czz3, hashMap3, czz3, hashMap3);
+    }
+    
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final saz saz = (saz)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

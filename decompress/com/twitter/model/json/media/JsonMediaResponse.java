@@ -9,12 +9,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonMediaResponse extends fih<ezg>
+public class JsonMediaResponse extends tih<vzg>
 {
     @JsonField
     public long a;
     
+    @Override
     public final Object s() {
-        return new ezg(this.a);
+        return new vzg(this.a);
     }
 }

@@ -1,47 +1,48 @@
+import android.util.Log;
+import java.io.Writer;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class o9g
+public final class o9g extends Writer
 {
-    public static final Object a;
-    public static volatile o9g b;
+    public final String F0;
+    public StringBuilder G0;
     
-    static {
-        a = new Object();
+    public o9g() {
+        this.G0 = new StringBuilder(128);
+        this.F0 = "FragmentManager";
     }
     
-    public static o9g e() {
-        synchronized (o9g.a) {
-            if (o9g.b == null) {
-                o9g.b = (o9g)new o9g.o9g$a(3);
+    public final void a() {
+        if (this.G0.length() > 0) {
+            Log.d(this.F0, this.G0.toString());
+            final StringBuilder g0 = this.G0;
+            g0.delete(0, g0.length());
+        }
+    }
+    
+    @Override
+    public final void close() {
+        this.a();
+    }
+    
+    @Override
+    public final void flush() {
+        this.a();
+    }
+    
+    @Override
+    public final void write(final char[] array, final int n, final int n2) {
+        for (int i = 0; i < n2; ++i) {
+            final char c = array[n + i];
+            if (c == '\n') {
+                this.a();
             }
-            return o9g.b;
+            else {
+                this.G0.append(c);
+            }
         }
     }
-    
-    public static String g(final String s) {
-        final int length = s.length();
-        final StringBuilder sb = new StringBuilder(23);
-        sb.append("WM-");
-        if (length >= 20) {
-            sb.append(s.substring(0, 20));
-        }
-        else {
-            sb.append(s);
-        }
-        return sb.toString();
-    }
-    
-    public abstract void a(final String p0, final String p1);
-    
-    public abstract void b(final String p0, final String p1, final Throwable p2);
-    
-    public abstract void c(final String p0, final String p1);
-    
-    public abstract void d(final String p0, final String p1, final Throwable p2);
-    
-    public abstract void f(final String p0, final String p1);
-    
-    public abstract void h(final String p0, final String p1);
 }

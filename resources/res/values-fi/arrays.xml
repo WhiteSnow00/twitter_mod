@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Saat ilmoituksia uusista twiiteistä.</item>
-        <item>Saat ilmoitukset uusista twiiteistä vain Superseuraajille.</item>
+        <item>Saat ilmoituksen uusista twiiteistä Tilaajille.</item>
         <item>Saat ilmoitukset uusista live-videotwiiteistä.</item>
         <item>Saat ilmoitukset uusista Huoneet-twiiteistä.</item>
         <item>Et enää saa ilmoituksia uusista twiiteistä.</item>
     </array>
     <array name="account_notif_options">
         <item>uutta twiittiä</item>
-        <item>Twiitit vain Superseuraajille</item>
+        <item>Twiitit vain Tilaajille</item>
         <item>Live-video</item>
         <item>Huoneet</item>
         <item>Ei mitään</item>
     </array>
     <array name="account_notif_options_old">
         <item>Kaikki twiitit</item>
-        <item>Twiitit vain Superseuraajille</item>
+        <item>Vain twiitit Tilaajille</item>
         <item>Vain live-video</item>
         <item>Vain Huoneet</item>
         <item>Pois</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Saa ilmoitus kaikista tämän tilin twiiteistä.</item>
-        <item>Saa ilmoitus uusista twiiteistä vain Superseuraajille.</item>
+        <item>Saa ilmoituksia vain twiiteistä Tilaajille.</item>
         <item>Saa ilmoitus vain live-lähetyksistä.</item>
         <item>Saa ilmoitus vain Huoneista.</item>
         <item>Poista käytöstä ilmoitus tämän tilin twiiteistä.</item>

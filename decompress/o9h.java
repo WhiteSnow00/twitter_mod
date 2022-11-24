@@ -1,8 +1,13 @@
+import org.json.JSONException;
+import org.json.JSONObject;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface o9h
+public final class o9h extends JSONObject
 {
-    void h(final z8h p0);
+    public o9h(final String s) throws JSONException {
+        this.put("userId", (Object)s);
+    }
 }

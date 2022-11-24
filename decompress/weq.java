@@ -1,60 +1,40 @@
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class weq<Param, Item, Request extends orc<seq<? extends Item>, kbv>> extends enm<Param, msm<List<? extends Item>, kbv>, Request>
+public final class weq<T>
 {
-    public teq E0;
+    public final d86 a;
     
-    public weq() {
-        super((trc)null, 1, (rf8)null);
+    public weq(final d86 a) {
+        this.a = a;
     }
     
-    public /* bridge */ Object d(final orc orc) {
-        return this.h(orc);
+    @Override
+    public final boolean equals(final Object o) {
+        final d86 a = this.a;
+        final boolean b = o instanceof weq;
+        boolean b2 = false;
+        if (b) {
+            if (e0e.a((Object)a, (Object)((weq)o).a)) {
+                b2 = true;
+            }
+        }
+        return b2;
     }
     
-    public final boolean f() {
-        final teq e0 = this.E0;
-        String b;
-        if (e0 != null) {
-            b = e0.b;
-        }
-        else {
-            b = null;
-        }
-        return b != null;
+    @Override
+    public final int hashCode() {
+        return this.a.hashCode();
     }
     
-    public msm<List<Item>, kbv> h(final Request request) {
-        czd.f((Object)request, "request");
-        msm msm;
-        if (request.T().b) {
-            final seq seq = (seq)request.T().g;
-            teq a;
-            if (seq != null) {
-                a = seq.a;
-            }
-            else {
-                a = null;
-            }
-            this.E0 = a;
-            final seq seq2 = (seq)request.T().g;
-            Object o;
-            if (seq2 == null || (o = seq2.b) == null) {
-                o = f2a.D0;
-            }
-            msm = msm.e(o);
-        }
-        else {
-            kbv kbv;
-            if ((kbv = (kbv)request.T().h) == null) {
-                kbv = new kbv(new hbv[] { new hbv(request.T().c) });
-            }
-            msm = msm.a((Object)kbv);
-        }
-        return (msm<List<Item>, kbv>)msm;
+    @Override
+    public final String toString() {
+        final d86 a = this.a;
+        final StringBuilder sb = new StringBuilder();
+        sb.append("SkippableUpdater(composer=");
+        sb.append(a);
+        sb.append(')');
+        return sb.toString();
     }
 }

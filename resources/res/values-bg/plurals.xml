@@ -305,8 +305,8 @@
         <item quantity="other">%d други</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Суперпоследовател</item>
-        <item quantity="other">Суперпоследователи</item>
+        <item quantity="one">Абонат</item>
+        <item quantity="other">Абонати</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s харесване</item>
@@ -402,7 +402,7 @@
         <item quantity="other">В отговор на ﻿%1$s и още %2$d души﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">В отговор на %1$s и още %2$d души. Отговорът ти ще се вижда и от другите суперпоследователи.</item>
+        <item quantity="other">В отговор на ﻿%1$s и още %2$d души﻿. Отговорът ти ще се вижда и от другите абонати.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">В отговор на %1$s и още %2$d души в(ъв) %3$s</item>
@@ -411,7 +411,7 @@
         <item quantity="other">В отговор на ﻿%1$s, %2$s и още %3$d души﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">В отговор на %1$s, %2$s и още %3$d души. Отговорът ти ще се вижда и от другите суперпоследователи.</item>
+        <item quantity="other">В отговор на ﻿%1$s, %2$s и още %3$d души﻿. Отговорът ти ще се вижда и от другите абонати.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">В отговор на %1$s, %2$s и още %3$d души в(ъв) %4$s</item>

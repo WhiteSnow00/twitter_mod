@@ -4,9 +4,31 @@
 
 public final class jnz
 {
-    public static final hez[] a;
+    public String a;
+    public Boolean b;
+    public Integer c;
     
-    static {
-        a = new hez[] { (hez)gqz.a, (hez)gqz.b };
+    public final rnz a() {
+        final String a = this.a;
+        if (a != null) {
+            final Boolean b = this.b;
+            if (b != null) {
+                if (this.c != null) {
+                    return new nnz(a, b, this.c);
+                }
+            }
+        }
+        final StringBuilder sb = new StringBuilder();
+        if (this.a == null) {
+            sb.append(" libraryName");
+        }
+        if (this.b == null) {
+            sb.append(" enableFirelog");
+        }
+        if (this.c == null) {
+            sb.append(" firelogEventType");
+        }
+        final String value = String.valueOf(sb);
+        throw new IllegalStateException(m51.y(new StringBuilder(value.length() + 28), "Missing required properties:", value));
     }
 }

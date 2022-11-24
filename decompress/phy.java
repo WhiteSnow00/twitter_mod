@@ -4,13 +4,4 @@
 
 public final class phy
 {
-    public final rzz<Void> a;
-    
-    public phy() {
-        this.a = (rzz<Void>)new rzz();
-    }
-    
-    public final boolean a() {
-        return this.a.r();
-    }
 }

@@ -1,39 +1,37 @@
-import java.util.List;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wlt implements xq<tlt$b>
+public final class wlt extends ort
 {
-    public static final wlt a;
-    public static final List<String> b;
+    public final ult a;
+    public final int b;
+    public boolean c;
     
-    static {
-        a = new wlt();
-        b = s9i.r("__typename");
+    public wlt(final ult a, final int b, final boolean c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
     }
     
-    public final void a(final ale ale, final fa7 fa7, final Object o) {
-        final tlt$b tlt$b = (tlt$b)o;
-        czd.f((Object)ale, "writer");
-        czd.f((Object)fa7, "customScalarAdapters");
-        czd.f((Object)tlt$b, "value");
-        ale.z1("__typename");
-        ar.a.a(ale, fa7, (Object)tlt$b.a);
-        sx8.a.d(ale, fa7, tlt$b.b);
-    }
-    
-    public final Object b(final ohe ohe, final fa7 fa7) {
-        czd.f((Object)ohe, "reader");
-        czd.f((Object)fa7, "customScalarAdapters");
-        Object o = null;
-        while (ohe.j3((List)wlt.b) == 0) {
-            o = ar.a.b(ohe, fa7);
+    @Override
+    public final boolean equals(final Object o) {
+        boolean b = true;
+        if (this == o) {
+            return true;
         }
-        ohe.G();
-        final rx8 c = sx8.a.c(ohe, fa7);
-        czd.c(o);
-        return new tlt$b((String)o, c);
+        if (o != null && wlt.class == o.getClass()) {
+            final wlt wlt = (wlt)o;
+            if (!o5j.a((Object)this.a, (Object)wlt.a) || !o5j.a((Object)this.b, (Object)wlt.b)) {
+                b = false;
+            }
+            return b;
+        }
+        return false;
+    }
+    
+    @Override
+    public final int hashCode() {
+        return o5j.g((Object)this.a, (Object)this.b);
     }
 }

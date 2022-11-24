@@ -1,20 +1,30 @@
-import com.twitter.media.ui.fresco.FrescoDraweeView;
-import android.view.View;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class h8d extends nk8
+public final class h8d
 {
-    public final View E0;
-    public final FrescoDraweeView F0;
+    public long a;
+    public long b;
+    public int c;
+    public long d;
+    public long e;
+    public String f;
     
-    public h8d(View viewById) {
-        super(viewById);
-        this.E0 = viewById;
-        viewById = viewById.findViewById(2131429534);
-        czd.e((Object)viewById, "contentView.findViewById(R.id.image)");
-        this.F0 = (FrescoDraweeView)viewById;
+    @Override
+    public final String toString() {
+        final StringBuilder f = ehk.f("operation=");
+        f.append(this.f);
+        f.append(",status=");
+        f.append(this.c);
+        if (this.a != 0L) {
+            f.append(",size=");
+            f.append(this.a);
+            f.append(",timeMs=");
+            f.append(this.e);
+            f.append(",rateBps=");
+            f.append(this.b);
+        }
+        return f.toString();
     }
 }

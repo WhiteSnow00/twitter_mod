@@ -9,34 +9,35 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonStickerVariants extends fih<whr>
+public class JsonStickerVariants extends tih<sir>
 {
     @JsonField
-    public bhr a;
+    public xhr a;
     @JsonField(name = { "size_1x" })
-    public bhr b;
+    public xhr b;
     @JsonField(name = { "size_2x" })
-    public bhr c;
+    public xhr c;
     @JsonField(name = { "size_3x" })
-    public bhr d;
+    public xhr d;
     @JsonField(name = { "size_4x" })
-    public bhr e;
+    public xhr e;
     @JsonField
     public float f;
     
+    @Override
     public final Object s() {
-        final bhr a = this.a;
+        final xhr a = this.a;
         Object o = null;
         if (a == null) {
-            i48.t("JsonStickerVariants must include a raw size");
+            mqb.o("JsonStickerVariants must include a raw size");
         }
         else {
             final float f = this.f;
             if (f == 0.0f) {
-                i48.t("JsonStickerVariants must include an aspect ratio");
+                mqb.o("JsonStickerVariants must include an aspect ratio");
             }
             else {
-                o = new whr(a, this.b, this.c, this.d, this.e, f);
+                o = new sir(a, this.b, this.c, this.d, this.e, f);
             }
         }
         return o;

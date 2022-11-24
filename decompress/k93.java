@@ -1,35 +1,36 @@
+import android.view.ViewParent;
+import android.view.View;
+import android.graphics.Matrix;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public enum k93
+public final class k93 implements i93
 {
-    public static final a Companion;
-    public static final alp<k93> D0;
+    public final Matrix a;
+    public final int[] b;
     
-    E0("BookAnAppointment"), 
-    F0("ListenNow"), 
-    G0("MakeAReservation"), 
-    H0("ReadNow"), 
-    I0("SeeLive"), 
-    J0("StreamLive"), 
-    K0("ViewMenu"), 
-    L0("WatchNow"), 
-    M0("Unknown");
-    
-    public final String C0;
-    
-    static {
-        Companion = new a();
-        final hx6$h a = hx6.a;
-        k93.D0 = new ix6((Class)k93.class);
+    public k93() {
+        this.a = new Matrix();
+        this.b = new int[2];
     }
     
-    public k93(final String c0) {
-        this.C0 = c0;
-    }
-    
-    public static final class a
-    {
+    public void a(View view, final float[] array) {
+        e0e.f((Object)view, "view");
+        e0e.f((Object)array, "matrix");
+        this.a.reset();
+        view.transformMatrixToGlobal(this.a);
+        for (ViewParent viewParent = view.getParent(); viewParent instanceof View; viewParent = view.getParent()) {
+            view = (View)viewParent;
+        }
+        view.getLocationOnScreen(this.b);
+        final int[] b = this.b;
+        final int n = b[0];
+        final int n2 = b[1];
+        view.getLocationInWindow(b);
+        final int[] b2 = this.b;
+        this.a.postTranslate((float)(b2[0] - n), (float)(b2[1] - n2));
+        amz.A(array, this.a);
     }
 }

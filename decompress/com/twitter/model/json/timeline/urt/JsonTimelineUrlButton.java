@@ -8,22 +8,22 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonTimelineUrlButton extends aih<r7t>
+public class JsonTimelineUrlButton extends tih<d9t>
 {
     @JsonField
     public String a;
     @JsonField
-    public q7t b;
+    public c9t b;
     
     @Override
     public final Object s() {
-        r7t r7t;
-        if (pjr.g((CharSequence)this.a) && this.b != null) {
-            r7t = new r7t(this.a, this.b);
+        d9t d9t;
+        if (flr.g((CharSequence)this.a) && this.b != null) {
+            d9t = new d9t(this.a, this.b);
         }
         else {
-            r7t = null;
+            d9t = null;
         }
-        return r7t;
+        return d9t;
     }
 }

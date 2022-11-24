@@ -18,44 +18,44 @@ import android.graphics.Path;
 // Decompiled by Procyon v0.6.0
 // 
 
-public abstract class ym1 implements aj9, wm1$a, pqe
+public abstract class ym1 implements lj9, wm1$a, yqe
 {
     public final Path a;
     public final Matrix b;
-    public final dte c;
-    public final dte d;
-    public final dte e;
-    public final dte f;
-    public final dte g;
+    public final lte c;
+    public final lte d;
+    public final lte e;
+    public final lte f;
+    public final lte g;
     public final RectF h;
     public final RectF i;
     public final RectF j;
     public final RectF k;
     public final String l;
     public final Matrix m;
-    public final sdg n;
-    public final kve o;
-    public img p;
-    public p7b q;
+    public final ceg n;
+    public final tve o;
+    public zmg p;
+    public o7b q;
     public ym1 r;
     public ym1 s;
     public List<ym1> t;
     public final List<wm1<?, ?>> u;
-    public final eyt v;
+    public final nzt v;
     public boolean w;
     public boolean x;
-    public dte y;
+    public lte y;
     
-    public ym1(final sdg n, final kve o) {
+    public ym1(final ceg n, final tve o) {
         this.a = new Path();
         this.b = new Matrix();
         boolean b = true;
-        this.c = new dte(1);
-        this.d = new dte(1, PorterDuff$Mode.DST_IN);
-        this.e = new dte(1, PorterDuff$Mode.DST_OUT);
-        final dte f = new dte(1);
+        this.c = new lte(1);
+        this.d = new lte(1, PorterDuff$Mode.DST_IN);
+        this.e = new lte(1, PorterDuff$Mode.DST_OUT);
+        final lte f = new lte(1);
         this.f = f;
-        this.g = new dte(PorterDuff$Mode.CLEAR);
+        this.g = new lte(PorterDuff$Mode.CLEAR);
         this.h = new RectF();
         this.i = new RectF();
         this.j = new RectF();
@@ -65,42 +65,42 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         this.w = true;
         this.n = n;
         this.o = o;
-        this.l = hi.I(new StringBuilder(), o.c, "#draw");
+        this.l = m51.y(new StringBuilder(), o.c, "#draw");
         if (o.u == 3) {
-            ((Paint)f).setXfermode((Xfermode)new PorterDuffXfermode(PorterDuff$Mode.DST_OUT));
+            f.setXfermode((Xfermode)new PorterDuffXfermode(PorterDuff$Mode.DST_OUT));
         }
         else {
-            ((Paint)f).setXfermode((Xfermode)new PorterDuffXfermode(PorterDuff$Mode.DST_IN));
+            f.setXfermode((Xfermode)new PorterDuffXfermode(PorterDuff$Mode.DST_IN));
         }
-        final u80 i = o.i;
+        final s80 i = o.i;
         Objects.requireNonNull(i);
-        (this.v = new eyt(i)).b((wm1$a)this);
+        (this.v = new nzt(i)).b((wm1$a)this);
         final List h = o.h;
         if (h != null && !h.isEmpty()) {
-            final img p2 = new img(o.h);
+            final zmg p2 = new zmg(o.h);
             this.p = p2;
-            final Iterator iterator = ((List)p2.C0).iterator();
+            final Iterator iterator = ((List)p2.F0).iterator();
             while (iterator.hasNext()) {
                 ((wm1)iterator.next()).a((wm1$a)this);
             }
-            for (final wm1 wm1 : (List)this.p.D0) {
+            for (final wm1 wm1 : (List)this.p.G0) {
                 this.d((wm1<?, ?>)wm1);
                 wm1.a((wm1$a)this);
             }
         }
         if (!this.o.t.isEmpty()) {
-            final p7b q = new p7b(this.o.t);
+            final o7b q = new o7b(this.o.t);
             this.q = q;
             ((wm1)q).b = true;
             ((wm1)q).a((wm1$a)new xm1(this));
             if ((float)((wm1)this.q).f() != 1.0f) {
                 b = false;
             }
-            this.s(b);
+            this.r(b);
             this.d((wm1<?, ?>)this.q);
         }
         else {
-            this.s(true);
+            this.r(true);
         }
     }
     
@@ -108,9 +108,10 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         this.n.invalidateSelf();
     }
     
-    public final void b(final List<jl6> list, final List<jl6> list2) {
+    public final void b(final List<wl6> list, final List<wl6> list2) {
     }
     
+    @Override
     public void c(final RectF rectF, final Matrix matrix, final boolean b) {
         this.h.set(0.0f, 0.0f, 0.0f, 0.0f);
         this.h();
@@ -140,40 +141,41 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         this.u.add(wm1);
     }
     
-    public <T> void e(final T t, final ieg ieg) {
-        this.v.c((Object)t, ieg);
+    public <T> void e(final T t, final seg seg) {
+        this.v.c((Object)t, seg);
     }
     
-    public final void f(final oqe oqe, final int n, final List<oqe> list, oqe oqe2) {
+    public final void f(final xqe xqe, final int n, final List<xqe> list, xqe xqe2) {
         final ym1 r = this.r;
         if (r != null) {
-            final oqe a = oqe2.a(r.o.c);
-            if (oqe.c(this.r.o.c, n)) {
-                list.add(a.g((pqe)this.r));
+            final xqe a = xqe2.a(r.o.c);
+            if (xqe.c(this.r.o.c, n)) {
+                list.add(a.g((yqe)this.r));
             }
-            if (oqe.f(this.o.c, n)) {
-                this.r.o(oqe, oqe.d(this.r.o.c, n) + n, list, a);
+            if (xqe.f(this.o.c, n)) {
+                this.r.o(xqe, xqe.d(this.r.o.c, n) + n, list, a);
             }
         }
-        if (!oqe.e(this.o.c, n)) {
+        if (!xqe.e(this.o.c, n)) {
             return;
         }
-        oqe a2 = oqe2;
+        xqe a2 = xqe2;
         if (!"__container".equals(this.o.c)) {
-            oqe2 = (a2 = oqe2.a(this.o.c));
-            if (oqe.c(this.o.c, n)) {
-                list.add(oqe2.g((pqe)this));
-                a2 = oqe2;
+            xqe2 = (a2 = xqe2.a(this.o.c));
+            if (xqe.c(this.o.c, n)) {
+                list.add(xqe2.g((yqe)this));
+                a2 = xqe2;
             }
         }
-        if (oqe.f(this.o.c, n)) {
-            this.o(oqe, oqe.d(this.o.c, n) + n, list, a2);
+        if (xqe.f(this.o.c, n)) {
+            this.o(xqe, xqe.d(this.o.c, n) + n, list, a2);
         }
     }
     
+    @Override
     public final void g(final Canvas canvas, final Matrix matrix, int i) {
         if (!this.w || this.o.v) {
-            yos.g();
+            tpz.y();
             return;
         }
         this.h();
@@ -182,7 +184,7 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         for (int j = this.t.size() - 1; j >= 0; --j) {
             this.b.preConcat(this.t.get(j).v.e());
         }
-        yos.g();
+        tpz.y();
         final wm1 k = this.v.j;
         int intValue;
         if (k == null) {
@@ -195,8 +197,8 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         if (!this.l() && !this.k()) {
             this.b.preConcat(this.v.e());
             this.j(canvas, this.b, n);
-            yos.g();
-            yos.g();
+            tpz.y();
+            tpz.y();
             this.m();
             return;
         }
@@ -218,27 +220,27 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         Label_0608: {
             if (this.k()) {
                 int size;
-                hmg hmg;
-                int d;
+                ymg ymg;
+                int g;
                 RectF l;
-                for (size = ((List)this.p.E0).size(), i = 0; i < size; ++i) {
-                    hmg = ((List)this.p.E0).get(i);
-                    this.a.set((Path)((List)this.p.C0).get(i).f());
+                for (size = ((List)this.p.H0).size(), i = 0; i < size; ++i) {
+                    ymg = ((List)this.p.H0).get(i);
+                    this.a.set((Path)((List)this.p.F0).get(i).f());
                     this.a.transform(b);
-                    d = nb0.D(hmg.a);
+                    g = lb0.G(ymg.a);
                     Label_0474: {
-                        if (d != 0) {
-                            if (d == 1) {
+                        if (g != 0) {
+                            if (g == 1) {
                                 break Label_0608;
                             }
-                            if (d != 2) {
-                                if (d != 3) {
+                            if (g != 2) {
+                                if (g != 3) {
                                     break Label_0474;
                                 }
                                 break Label_0608;
                             }
                         }
-                        if (hmg.d) {
+                        if (ymg.d) {
                             break Label_0608;
                         }
                     }
@@ -259,41 +261,41 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         if (!this.h.intersect(0.0f, 0.0f, (float)canvas.getWidth(), (float)canvas.getHeight())) {
             this.h.set(0.0f, 0.0f, 0.0f, 0.0f);
         }
-        yos.g();
+        tpz.y();
         if (this.h.width() >= 1.0f && this.h.height() >= 1.0f) {
-            ((Paint)this.c).setAlpha(255);
-            mmw.f(canvas, this.h, (Paint)this.c, 31);
-            yos.g();
+            this.c.setAlpha(255);
+            wnw.f(canvas, this.h, (Paint)this.c, 31);
+            tpz.y();
             this.i(canvas);
             this.j(canvas, this.b, n);
-            yos.g();
+            tpz.y();
             if (this.k()) {
                 final Matrix b2 = this.b;
-                mmw.f(canvas, this.h, (Paint)this.d, 19);
+                wnw.f(canvas, this.h, (Paint)this.d, 19);
                 if (Build$VERSION.SDK_INT < 28) {
                     this.i(canvas);
                 }
-                yos.g();
-                hmg hmg2;
+                tpz.y();
+                ymg ymg2;
                 wm1 wm1;
                 wm1 wm2;
-                int d2;
+                int g2;
                 int n2;
                 boolean b3 = false;
-                for (i = 0; i < ((List)this.p.E0).size(); ++i) {
-                    hmg2 = ((List)this.p.E0).get(i);
-                    wm1 = ((List)this.p.C0).get(i);
-                    wm2 = ((List)this.p.D0).get(i);
-                    d2 = nb0.D(hmg2.a);
-                    if (d2 != 0) {
-                        if (d2 != 1) {
-                            if (d2 != 2) {
-                                if (d2 == 3) {
+                for (i = 0; i < ((List)this.p.H0).size(); ++i) {
+                    ymg2 = ((List)this.p.H0).get(i);
+                    wm1 = ((List)this.p.F0).get(i);
+                    wm2 = ((List)this.p.G0).get(i);
+                    g2 = lb0.G(ymg2.a);
+                    if (g2 != 0) {
+                        if (g2 != 1) {
+                            if (g2 != 2) {
+                                if (g2 == 3) {
                                     Label_0963: {
                                         Label_0895: {
-                                            if (!((List)this.p.C0).isEmpty()) {
-                                                for (n2 = 0; n2 < ((List)this.p.E0).size(); ++n2) {
-                                                    if (((hmg)((List)this.p.E0).get(n2)).a != 4) {
+                                            if (!((List)this.p.F0).isEmpty()) {
+                                                for (n2 = 0; n2 < ((List)this.p.H0).size(); ++n2) {
+                                                    if (((ymg)((List)this.p.H0).get(n2)).a != 4) {
                                                         break Label_0895;
                                                     }
                                                 }
@@ -304,39 +306,39 @@ public abstract class ym1 implements aj9, wm1$a, pqe
                                         b3 = false;
                                     }
                                     if (b3) {
-                                        ((Paint)this.c).setAlpha(255);
+                                        this.c.setAlpha(255);
                                         canvas.drawRect(this.h, (Paint)this.c);
                                     }
                                 }
                             }
-                            else if (hmg2.d) {
-                                mmw.f(canvas, this.h, (Paint)this.d, 31);
+                            else if (ymg2.d) {
+                                wnw.f(canvas, this.h, (Paint)this.d, 31);
                                 canvas.drawRect(this.h, (Paint)this.c);
-                                ((Paint)this.e).setAlpha((int)((int)wm2.f() * 2.55f));
+                                this.e.setAlpha((int)((int)wm2.f() * 2.55f));
                                 this.a.set((Path)wm1.f());
                                 this.a.transform(b2);
                                 canvas.drawPath(this.a, (Paint)this.e);
                                 canvas.restore();
                             }
                             else {
-                                mmw.f(canvas, this.h, (Paint)this.d, 31);
+                                wnw.f(canvas, this.h, (Paint)this.d, 31);
                                 this.a.set((Path)wm1.f());
                                 this.a.transform(b2);
-                                ((Paint)this.c).setAlpha((int)((int)wm2.f() * 2.55f));
+                                this.c.setAlpha((int)((int)wm2.f() * 2.55f));
                                 canvas.drawPath(this.a, (Paint)this.c);
                                 canvas.restore();
                             }
                         }
                         else {
                             if (i == 0) {
-                                ((Paint)this.c).setColor(-16777216);
-                                ((Paint)this.c).setAlpha(255);
+                                this.c.setColor(-16777216);
+                                this.c.setAlpha(255);
                                 canvas.drawRect(this.h, (Paint)this.c);
                             }
-                            if (hmg2.d) {
-                                mmw.f(canvas, this.h, (Paint)this.e, 31);
+                            if (ymg2.d) {
+                                wnw.f(canvas, this.h, (Paint)this.e, 31);
                                 canvas.drawRect(this.h, (Paint)this.c);
-                                ((Paint)this.e).setAlpha((int)((int)wm2.f() * 2.55f));
+                                this.e.setAlpha((int)((int)wm2.f() * 2.55f));
                                 this.a.set((Path)wm1.f());
                                 this.a.transform(b2);
                                 canvas.drawPath(this.a, (Paint)this.e);
@@ -349,50 +351,50 @@ public abstract class ym1 implements aj9, wm1$a, pqe
                             }
                         }
                     }
-                    else if (hmg2.d) {
-                        mmw.f(canvas, this.h, (Paint)this.c, 31);
+                    else if (ymg2.d) {
+                        wnw.f(canvas, this.h, (Paint)this.c, 31);
                         canvas.drawRect(this.h, (Paint)this.c);
                         this.a.set((Path)wm1.f());
                         this.a.transform(b2);
-                        ((Paint)this.c).setAlpha((int)((int)wm2.f() * 2.55f));
+                        this.c.setAlpha((int)((int)wm2.f() * 2.55f));
                         canvas.drawPath(this.a, (Paint)this.e);
                         canvas.restore();
                     }
                     else {
                         this.a.set((Path)wm1.f());
                         this.a.transform(b2);
-                        ((Paint)this.c).setAlpha((int)((int)wm2.f() * 2.55f));
+                        this.c.setAlpha((int)((int)wm2.f() * 2.55f));
                         canvas.drawPath(this.a, (Paint)this.c);
                     }
                 }
                 canvas.restore();
-                yos.g();
+                tpz.y();
             }
             if (this.l()) {
-                mmw.f(canvas, this.h, (Paint)this.f, 19);
-                yos.g();
+                wnw.f(canvas, this.h, (Paint)this.f, 19);
+                tpz.y();
                 this.i(canvas);
                 this.r.g(canvas, matrix, n);
                 canvas.restore();
-                yos.g();
-                yos.g();
+                tpz.y();
+                tpz.y();
             }
             canvas.restore();
-            yos.g();
+            tpz.y();
         }
         if (this.x) {
-            final dte y = this.y;
+            final lte y = this.y;
             if (y != null) {
-                ((Paint)y).setStyle(Paint$Style.STROKE);
-                ((Paint)this.y).setColor(-251901);
-                ((Paint)this.y).setStrokeWidth(4.0f);
+                y.setStyle(Paint$Style.STROKE);
+                this.y.setColor(-251901);
+                this.y.setStrokeWidth(4.0f);
                 canvas.drawRect(this.h, (Paint)this.y);
-                ((Paint)this.y).setStyle(Paint$Style.FILL);
-                ((Paint)this.y).setColor(1357638635);
+                this.y.setStyle(Paint$Style.FILL);
+                this.y.setColor(1357638635);
                 canvas.drawRect(this.h, (Paint)this.y);
             }
         }
-        yos.g();
+        tpz.y();
         this.m();
     }
     
@@ -417,14 +419,14 @@ public abstract class ym1 implements aj9, wm1$a, pqe
     public final void i(final Canvas canvas) {
         final RectF h = this.h;
         canvas.drawRect(h.left - 1.0f, h.top - 1.0f, h.right + 1.0f, h.bottom + 1.0f, (Paint)this.g);
-        yos.g();
+        tpz.y();
     }
     
     public abstract void j(final Canvas p0, final Matrix p1, final int p2);
     
     public final boolean k() {
-        final img p = this.p;
-        return p != null && !((List)p.C0).isEmpty();
+        final zmg p = this.p;
+        return p != null && !((List)p.F0).isEmpty();
     }
     
     public final boolean l() {
@@ -432,24 +434,24 @@ public abstract class ym1 implements aj9, wm1$a, pqe
     }
     
     public final void m() {
-        final f3k a = this.n.D0.a;
+        final y3k a = this.n.G0.a;
         final String c = this.o.c;
         if (a.a) {
-            cqg cqg;
-            if ((cqg = a.c.get(c)) == null) {
-                cqg = new cqg();
-                a.c.put(c, cqg);
+            vqg vqg;
+            if ((vqg = a.c.get(c)) == null) {
+                vqg = new vqg();
+                a.c.put(c, vqg);
             }
-            final int a2 = cqg.a + 1;
-            if ((cqg.a = a2) == Integer.MAX_VALUE) {
-                cqg.a = a2 / 2;
+            final int a2 = vqg.a + 1;
+            if ((vqg.a = a2) == Integer.MAX_VALUE) {
+                vqg.a = a2 / 2;
             }
             if (c.equals("__container")) {
-                final ft0 b = a.b;
+                final bt0 b = a.b;
                 Objects.requireNonNull(b);
-                final ft0$a ft0$a = new ft0$a(b);
-                while (((vkd)ft0$a).hasNext()) {
-                    ((f3k$a)((vkd)ft0$a).next()).a();
+                final bt0.a a3 = b.new a();
+                while (a3.hasNext()) {
+                    ((zkd<y3k$a>)a3).next().a();
                 }
             }
         }
@@ -459,18 +461,18 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         this.u.remove(wm1);
     }
     
-    public void o(final oqe oqe, final int n, final List<oqe> list, final oqe oqe2) {
+    public void o(final xqe xqe, final int n, final List<xqe> list, final xqe xqe2) {
     }
     
     public void p(final boolean x) {
         if (x && this.y == null) {
-            this.y = new dte();
+            this.y = new lte();
         }
         this.x = x;
     }
     
     public void q(final float n) {
-        final eyt v = this.v;
+        final nzt v = this.v;
         final wm1 j = v.j;
         if (j != null) {
             j.j(n);
@@ -499,19 +501,19 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         if (i != null) {
             i.j(n);
         }
-        final p7b k = v.k;
+        final o7b k = v.k;
         if (k != null) {
             ((wm1)k).j(n);
         }
-        final p7b l = v.l;
+        final o7b l = v.l;
         if (l != null) {
             ((wm1)l).j(n);
         }
-        final img p = this.p;
+        final zmg p = this.p;
         final int n3 = 0;
         if (p != null) {
-            for (int n4 = 0; n4 < ((List)this.p.C0).size(); ++n4) {
-                ((wm1)((List)this.p.C0).get(n4)).j(n);
+            for (int n4 = 0; n4 < ((List)this.p.F0).size(); ++n4) {
+                ((wm1)((List)this.p.F0).get(n4)).j(n);
             }
         }
         final float m2 = this.o.m;
@@ -519,7 +521,7 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         if (m2 != 0.0f) {
             n5 = n / m2;
         }
-        final p7b q = this.q;
+        final o7b q = this.q;
         if (q != null) {
             ((wm1)q).j(n5 / m2);
         }
@@ -535,7 +537,7 @@ public abstract class ym1 implements aj9, wm1$a, pqe
         }
     }
     
-    public final void s(final boolean w) {
+    public final void r(final boolean w) {
         if (w != this.w) {
             this.w = w;
             this.n.invalidateSelf();

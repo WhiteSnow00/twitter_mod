@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonAttributionRequestResponse extends aih<ny0>
+public class JsonAttributionRequestResponse extends tih<my0>
 {
     @JsonField
     public String a;
@@ -17,6 +17,6 @@ public class JsonAttributionRequestResponse extends aih<ny0>
     
     @Override
     public final Object s() {
-        return new ny0(this.a, this.b);
+        return new my0(this.a, this.b);
     }
 }

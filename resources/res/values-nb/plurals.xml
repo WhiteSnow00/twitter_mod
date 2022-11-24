@@ -305,8 +305,8 @@
         <item quantity="other">%d andre</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Superfølger</item>
-        <item quantity="other">Superfølgere</item>
+        <item quantity="one">Abonnent</item>
+        <item quantity="other">Abonnenter</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s Liker</item>
@@ -411,7 +411,7 @@
         <item quantity="other">Svar til ﻿%1$s %2$s og %3$d andre﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Svarer ﻿%1$s, %2$s og %3$d andre﻿. Svaret ditt blir også synlig for andre superfølgere.</item>
+        <item quantity="other">Svarer på ﻿%1$s %2$s og %3$d annet﻿. Svaret ditt er også synlig for andre abonnenter.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Svar til ﻿%1$s, %2$s og %3$d andre﻿ i ﻿%4$s﻿</item>

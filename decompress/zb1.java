@@ -5,23 +5,23 @@ import java.util.Map;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zb1 extends svo
+public final class zb1 extends dxo
 {
-    public final mi4 a;
-    public final Map<azk, svo$a> b;
+    public final si4 a;
+    public final Map<zzk, dxo$a> b;
     
-    public zb1(final mi4 a, final Map<azk, svo$a> b) {
+    public zb1(final si4 a, final Map<zzk, dxo$a> b) {
         Objects.requireNonNull(a, "Null clock");
         this.a = a;
         Objects.requireNonNull(b, "Null values");
         this.b = b;
     }
     
-    public final mi4 a() {
+    public final si4 a() {
         return this.a;
     }
     
-    public final Map<azk, svo$a> c() {
+    public final Map<zzk, dxo$a> c() {
         return this.b;
     }
     
@@ -30,9 +30,9 @@ public final class zb1 extends svo
         if (o == this) {
             return true;
         }
-        if (o instanceof svo) {
-            final svo svo = (svo)o;
-            if (!this.a.equals(svo.a()) || !this.b.equals(svo.c())) {
+        if (o instanceof dxo) {
+            final dxo dxo = (dxo)o;
+            if (!this.a.equals(dxo.a()) || !this.b.equals(dxo.c())) {
                 b = false;
             }
             return b;
@@ -45,11 +45,11 @@ public final class zb1 extends svo
     }
     
     public final String toString() {
-        final StringBuilder g = w48.g("SchedulerConfig{clock=");
-        g.append(this.a);
-        g.append(", values=");
-        g.append(this.b);
-        g.append("}");
-        return g.toString();
+        final StringBuilder f = ehk.f("SchedulerConfig{clock=");
+        f.append(this.a);
+        f.append(", values=");
+        f.append(this.b);
+        f.append("}");
+        return f.toString();
     }
 }

@@ -5,7 +5,6 @@
 package com.twitter.model.json.timeline.urt;
 
 import com.twitter.util.InvalidDataException;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.HashMap;
@@ -14,7 +13,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public final class JsonTimelineEntry extends aih<pus>
+public final class JsonTimelineEntry extends tih<yvs>
 {
     @JsonField(name = { "entryId" })
     public String a;
@@ -32,92 +31,81 @@ public final class JsonTimelineEntry extends aih<pus>
     @Override
     public final Object s() {
         final String a = this.a;
-        final wws wws = null;
+        final fys fys = null;
         Object t;
         if (a != null) {
             final JsonTimelineEntry.JsonTimelineEntry$a c = this.c;
             final boolean b = c instanceof JsonTimelineItem;
-            final int n = 0;
+            boolean b2 = false;
             if (b) {
-                final int a2 = w4j.a;
+                final int a2 = o5j.a;
                 t = this.t((JsonTimelineItem)c, a, false, null);
             }
             else if (c instanceof JsonTimelineOperation) {
-                final int a3 = w4j.a;
-                final spv a4 = ((JsonTimelineOperation)c).a;
-                t = wws;
+                final int a3 = o5j.a;
+                final zqv a4 = ((JsonTimelineOperation)c).a;
+                t = fys;
                 if (a4 != null) {
-                    t = new vts(a, this.b, a4, this.d);
+                    t = new fvs(a, this.b, a4, this.d);
                 }
             }
             else {
-                t = wws;
+                t = fys;
                 if (c instanceof JsonTimelineModule) {
-                    final int a5 = w4j.a;
+                    final int a5 = o5j.a;
                     final JsonTimelineModule jsonTimelineModule = (JsonTimelineModule)c;
-                    t = wws;
-                    if (!hr4.t((Collection)jsonTimelineModule.a)) {
-                        t = wws;
-                        if (jzs.m.contains(jsonTimelineModule.d)) {
-                            final List c2 = hr4.c((List)jsonTimelineModule.a, (kub)new kje(this, new HashMap()));
+                    t = fys;
+                    if (!kr4.t((Collection)jsonTimelineModule.a)) {
+                        t = fys;
+                        if (s0t.m.contains(jsonTimelineModule.d)) {
+                            final List c2 = kr4.c((List)jsonTimelineModule.a, (lub)new qje(this, (Map)new HashMap()));
                             final String d = jsonTimelineModule.d;
                             final boolean equals = "Carousel".equals(d);
-                            final int n2 = 1;
+                            boolean a6 = true;
                             if (equals || "GridCarousel".equals(d)) {
-                                final Object p = hr4.p((Iterable)c2);
-                                int n3 = 0;
-                                Label_0293: {
-                                    if (p == null) {
-                                        n3 = n2;
-                                    }
-                                    else {
-                                        final Class<?> class1 = p.getClass();
-                                        final Iterator iterator = c2.iterator();
-                                        while (iterator.hasNext()) {
-                                            if (!iterator.next().getClass().equals(class1)) {
-                                                n3 = n;
-                                                break Label_0293;
-                                            }
-                                        }
-                                        n3 = 1;
-                                    }
+                                b2 = true;
+                            }
+                            if (b2) {
+                                final Object p = kr4.p((Iterable)c2);
+                                if (p != null) {
+                                    a6 = k6e.a((Iterable)c2, (nuk)new e1c((Object)p.getClass(), 5));
                                 }
-                                if (n3 == 0) {
-                                    t = wws;
+                                if (!a6) {
+                                    t = fys;
                                     return t;
                                 }
                             }
-                            final jzs$a jzs$a = new jzs$a();
-                            jzs$a.a = this.a;
-                            jzs$a.b = this.b;
-                            jzs$a.c = this.d;
-                            jzs$a.d = c2;
-                            jzs$a.e = jsonTimelineModule.d;
-                            jzs$a.f = jsonTimelineModule.b;
-                            jzs$a.g = jsonTimelineModule.c;
-                            jzs$a.h = (qzo)fih.b((aih)jsonTimelineModule.e);
-                            jzs$a.i = jsonTimelineModule.f;
-                            jzs$a.j = jsonTimelineModule.g;
-                            jzs$a.k = jsonTimelineModule.h;
-                            t = ((h4j)jzs$a).j();
+                            final s0t$a s0t$a = new s0t$a();
+                            s0t$a.a = this.a;
+                            s0t$a.b = this.b;
+                            s0t$a.c = this.d;
+                            s0t$a.d = c2;
+                            s0t$a.e = jsonTimelineModule.d;
+                            s0t$a.f = jsonTimelineModule.b;
+                            s0t$a.g = jsonTimelineModule.c;
+                            s0t$a.h = yih.b(jsonTimelineModule.e);
+                            s0t$a.i = jsonTimelineModule.f;
+                            s0t$a.j = jsonTimelineModule.g;
+                            s0t$a.k = jsonTimelineModule.h;
+                            t = ((z4j)s0t$a).j();
                         }
                     }
                 }
             }
         }
         else {
-            zi.A("A JsonTimelineEntry must have a non-null ID");
-            t = wws;
+            c0e.i("A JsonTimelineEntry must have a non-null ID");
+            t = fys;
         }
         return t;
     }
     
-    public final wws t(final JsonTimelineItem jsonTimelineItem, final String s, final boolean b, final vlh vlh) {
+    public final fys t(final JsonTimelineItem jsonTimelineItem, final String s, final boolean b, final pmh pmh) {
         final JsonTimelineEntry.JsonTimelineEntry$b a = jsonTimelineItem.a;
         if (a != null) {
-            return a.a(jsonTimelineItem, s, this.b, this.d, b, vlh);
+            return a.a(jsonTimelineItem, s, this.b, this.d, b, pmh);
         }
-        e9a.h((Throwable)new InvalidDataException("JsonTimelineItem.itemContent is null for the itemEntry"));
+        r9a.h((Throwable)new InvalidDataException("JsonTimelineItem.itemContent is null for the itemEntry"));
         return null;
     }
 }

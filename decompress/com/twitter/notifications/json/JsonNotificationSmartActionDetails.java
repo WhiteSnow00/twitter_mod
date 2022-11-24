@@ -9,7 +9,7 @@ import java.util.List;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonNotificationSmartActionDetails extends fih<gvi>
+public class JsonNotificationSmartActionDetails extends tih<xvi>
 {
     @JsonField(name = { "target_ids" })
     public List<String> a;
@@ -18,13 +18,14 @@ public class JsonNotificationSmartActionDetails extends fih<gvi>
     @JsonField(name = { "max_notification_slots" })
     public String c;
     
+    @Override
     public final Object s() {
-        final List e = fq4.e((Iterable)this.a, (xtk)g69.g);
+        final List e = kr4.e((Iterable)this.a, (nuk)z7g.f);
         final long long1 = Long.parseLong(this.b);
         String c;
         if ((c = this.c) == null) {
             c = "1";
         }
-        return new gvi(e, long1, Integer.parseInt(c));
+        return new xvi(e, long1, Integer.parseInt(c));
     }
 }

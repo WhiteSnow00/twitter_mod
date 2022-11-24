@@ -1,121 +1,84 @@
-import android.graphics.PathMeasure;
-import android.graphics.Path;
-import java.util.ArrayList;
-import java.util.List;
+import com.twitter.ui.components.button.compose.HorizonComposeButton;
+import androidx.recyclerview.widget.RecyclerView$e;
+import java.util.Objects;
+import android.view.ViewGroup;
+import android.view.View;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class gzk
+public final class gzk implements xlx<mzk, fzk, ezk>
 {
-    public List a = a;
+    public final lzk F0;
+    public final ex8 G0;
+    public final j4e<l94> H0;
+    public final nzk I0;
+    public final fih<mzk> J0;
     
-    public gzk(final int n) {
-        if (n != 3) {
-            this.a = new ArrayList();
-            return;
+    public gzk(View n0, final qej qej, final afj afj, final bur bur, final lzk f0, final ex8 g0, final j4e<l94> h0, final nzk i0) {
+        e0e.f((Object)n0, "rootView");
+        e0e.f((Object)qej, "ocfRichTextProcessorHelper");
+        e0e.f((Object)afj, "header");
+        e0e.f((Object)bur, "properties");
+        e0e.f((Object)f0, "viewHolder");
+        e0e.f((Object)g0, "dialogNavDelegate");
+        e0e.f((Object)h0, "adapter");
+        e0e.f((Object)i0, "toggleHandler");
+        this.F0 = f0;
+        this.G0 = g0;
+        this.H0 = h0;
+        this.I0 = i0;
+        this.J0 = (fih<mzk>)ma7.S((stb)new stb<fih$a<mzk>, vzv>(this) {
+            public final gzk F0;
+            
+            public final Object invoke(final Object o) {
+                final fih$a fih$a = (fih$a)o;
+                e0e.f((Object)fih$a, "$this$watch");
+                fih$a.c(new dpe[] { (dpe)hzk.F0 }, (stb)new izk(this.F0));
+                fih$a.c(new dpe[] { (dpe)jzk.F0 }, (stb)new kzk(this.F0));
+                return vzv.a;
+            }
+        });
+        ((ViewGroup)n0).addView(((sl8)f0).F0);
+        Objects.requireNonNull(f0);
+        n0 = f0.N0;
+        e0e.e((Object)n0, "headerView");
+        final xdj xdj = new xdj(n0);
+        xdj.B((tym)qej, afj.a);
+        xdj.q((tym)qej, afj.b);
+        Objects.requireNonNull(f0);
+        f0.M0.z((RecyclerView$e)h0);
+        final dtv a = bur.a;
+        e0e.c((Object)a);
+        final String c = a.c;
+        e0e.c((Object)c);
+        Objects.requireNonNull(f0);
+        f0.O0.setText((CharSequence)c);
+    }
+    
+    public final void T(final ccx ccx) {
+        final mzk mzk = (mzk)ccx;
+        e0e.f((Object)mzk, "state");
+        this.J0.b((Object)mzk);
+    }
+    
+    public final void r(final Object o) {
+        final ezk ezk = (ezk)o;
+        e0e.f((Object)ezk, "effect");
+        if (ezk instanceof ezk$a) {
+            this.G0.T(((ezk$a)ezk).a);
         }
-        this.a = new ArrayList();
-    }
-    
-    public final int a(final String s) {
-        this.a.add(s);
-        return this.a.size() - 1;
-    }
-    
-    public final void b(final int n) {
-        Label_0064: {
-            if (this.a.isEmpty() ^ true) {
-                if (this.a.get(0).intValue() != n) {
-                    final List a = this.a;
-                    if (((Number)a.get(a.size() - 1)).intValue() != n) {
-                        break Label_0064;
-                    }
-                }
-                return;
-            }
-        }
-        int i = this.a.size();
-        this.a.add(n);
-        while (i > 0) {
-            final int n2 = (i + 1 >>> 1) - 1;
-            final int intValue = this.a.get(n2).intValue();
-            if (n <= intValue) {
-                break;
-            }
-            this.a.set(i, intValue);
-            i = n2;
-        }
-        this.a.set(i, n);
-    }
-    
-    public final void c(final g3u g3u) {
-        this.a.add(g3u);
-    }
-    
-    public final void d(final Path path) {
-        int size = this.a.size();
-        while (true) {
-            final int n = size - 1;
-            if (n < 0) {
-                break;
-            }
-            final g3u g3u = this.a.get(n);
-            final ThreadLocal<PathMeasure> a = mmw.a;
-            size = n;
-            if (g3u == null) {
-                continue;
-            }
-            if (g3u.a) {
-                size = n;
-            }
-            else {
-                mmw.a(path, g3u.d.l() / 100.0f, g3u.e.l() / 100.0f, g3u.f.l() / 360.0f);
-                size = n;
-            }
+        else if (ezk instanceof ezk$b) {
+            ((RecyclerView$e)this.H0).f();
         }
     }
     
-    public final int e() {
-        if (this.a.size() > 0) {
-            final int intValue = this.a.get(0).intValue();
-            while ((this.a.isEmpty() ^ true) && this.a.get(0).intValue() == intValue) {
-                final List a = this.a;
-                a.set(0, or4.O1(a));
-                final List a2 = this.a;
-                a2.remove(a2.size() - 1);
-                final int size = this.a.size();
-                final int size2 = this.a.size();
-                int i = 0;
-                while (i < size2 >>> 1) {
-                    final int intValue2 = this.a.get(i).intValue();
-                    final int n = (i + 1) * 2;
-                    final int n2 = n - 1;
-                    final int intValue3 = this.a.get(n2).intValue();
-                    if (n < size) {
-                        final int intValue4 = this.a.get(n).intValue();
-                        if (intValue4 > intValue3) {
-                            if (intValue4 > intValue2) {
-                                this.a.set(i, intValue4);
-                                this.a.set(n, intValue2);
-                                i = n;
-                                continue;
-                            }
-                            break;
-                        }
-                    }
-                    if (intValue3 <= intValue2) {
-                        break;
-                    }
-                    this.a.set(i, intValue3);
-                    this.a.set(n2, intValue2);
-                    i = n2;
-                }
-            }
-            return intValue;
-        }
-        ea6.d("Set is empty".toString());
-        throw null;
+    public final t5j<fzk> w() {
+        final HorizonComposeButton o0 = this.F0.O0;
+        e0e.e((Object)o0, "ctaButton");
+        final t5j merge = t5j.merge((fbj)too.f((View)o0).map((rtb)new yj4((stb)gzk$b.F0, 5)), (fbj)((t5j)this.I0.b).map((rtb)new nav((stb)gzk$c.F0, 2)));
+        e0e.e((Object)merge, "merge(\n        viewHolde\u2026.ItemSelected(it) }\n    )");
+        return (t5j<fzk>)merge;
     }
 }

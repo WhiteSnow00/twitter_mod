@@ -1,41 +1,28 @@
-import android.os.RemoteException;
+import android.os.Parcelable;
 import android.os.Parcel;
-import android.os.IBinder;
-import android.os.IInterface;
+import com.google.android.gms.auth.api.credentials.Credential;
+import android.os.Parcelable$Creator;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public class r8y implements IInterface
+public final class r8y extends sd
 {
-    public final IBinder a;
-    public final String b;
+    public static final Parcelable$Creator<r8y> CREATOR;
+    public final Credential F0;
     
-    public r8y(final IBinder a, final String b) {
-        this.a = a;
-        this.b = b;
+    static {
+        CREATOR = (Parcelable$Creator)new s8y();
     }
     
-    public final IBinder asBinder() {
-        return this.a;
+    public r8y(final Credential f0) {
+        this.F0 = f0;
     }
     
-    public final Parcel s() {
-        final Parcel obtain = Parcel.obtain();
-        obtain.writeInterfaceToken(this.b);
-        return obtain;
-    }
-    
-    public final void x(final int n, final Parcel parcel) throws RemoteException {
-        final Parcel obtain = Parcel.obtain();
-        try {
-            this.a.transact(n, parcel, obtain, 0);
-            obtain.readException();
-        }
-        finally {
-            parcel.recycle();
-            obtain.recycle();
-        }
+    public final void writeToParcel(final Parcel parcel, final int n) {
+        final int x1 = xd.x1(parcel, 20293);
+        xd.r1(parcel, 1, (Parcelable)this.F0, n);
+        xd.B1(parcel, x1);
     }
 }

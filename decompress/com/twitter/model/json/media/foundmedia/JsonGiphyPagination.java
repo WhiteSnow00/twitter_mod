@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonGiphyPagination extends fih<z2c>
+public class JsonGiphyPagination extends tih<b4c>
 {
     @JsonField(name = { "total_count" })
     public int a;
@@ -17,7 +17,8 @@ public class JsonGiphyPagination extends fih<z2c>
     @JsonField(name = { "offset" })
     public int c;
     
+    @Override
     public final Object s() {
-        return new z2c();
+        return new b4c();
     }
 }

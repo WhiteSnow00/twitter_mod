@@ -2,18 +2,9 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface tcc
+public final class tcc extends foa
 {
-    public static final a Companion = a.a;
-    
-    String d();
-    
-    public static final class a
-    {
-        public static final a a;
-        
-        static {
-            a = new a();
-        }
+    public tcc() {
+        super(shw.y0((Object[])new String[] { "com.google.android.apps.hangout", "com.google.android.apps.babel", "com.google.android.talk" }), 10, 2, null);
     }
 }

@@ -1,4 +1,7 @@
-import java.util.Arrays;
+import android.text.TextUtils;
+import android.content.Intent;
+import androidx.annotation.RecentlyNonNull;
+import android.content.Context;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -6,39 +9,15 @@ import java.util.Arrays;
 
 public final class poj
 {
-    public float[] a;
-    public double[] b;
-    public double[] c;
-    public aqh d;
-    public int e;
-    
-    public poj() {
-        this.a = new float[0];
-        this.b = new double[0];
-    }
-    
-    public final void a(final double n, final float n2) {
-        final int n3 = this.a.length + 1;
-        int binarySearch;
-        final int n4 = binarySearch = Arrays.binarySearch(this.b, n);
-        if (n4 < 0) {
-            binarySearch = -n4 - 1;
-        }
-        this.b = Arrays.copyOf(this.b, n3);
-        this.a = Arrays.copyOf(this.a, n3);
-        this.c = new double[n3];
-        final double[] b = this.b;
-        System.arraycopy(b, binarySearch, b, binarySearch + 1, n3 - binarySearch - 1);
-        this.b[binarySearch] = n;
-        this.a[binarySearch] = n2;
-    }
-    
-    @Override
-    public final String toString() {
-        final StringBuilder g = w48.g("pos =");
-        g.append(Arrays.toString(this.b));
-        g.append(" period=");
-        g.append(Arrays.toString(this.a));
-        return g.toString();
+    public static void a(@RecentlyNonNull final Context context) {
+        final gey g0 = xey.G0;
+        final Object[] array = { "ocr" };
+        kqe.u0(array, 1);
+        final lfy lfy = new lfy(array, 1);
+        final Intent intent = new Intent();
+        intent.setClassName("com.google.android.gms", "com.google.android.gms.vision.DependencyBroadcastReceiverProxy");
+        intent.setAction("com.google.android.gms.vision.DEPENDENCY");
+        intent.putExtra("com.google.android.gms.vision.DEPENDENCIES", TextUtils.join((CharSequence)",", (Iterable)lfy));
+        context.sendBroadcast(intent);
     }
 }

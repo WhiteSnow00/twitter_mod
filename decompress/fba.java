@@ -4,101 +4,33 @@
 
 public final class fba
 {
-    public static final fba a;
-    public static final nca b;
-    public static final nca c;
-    public static final nca d;
-    public static final nca e;
-    public static final nca f;
+    public final mm3 a;
+    public final Iterable<mm3> b;
+    public final boolean c;
+    public final boolean d;
+    public final boolean e;
+    public final boolean f;
+    public final tna<mm3> g;
+    public final int h;
     
-    static {
-        final nca$a companion = nca.Companion;
-        b = companion.e("", "", "", "", "bookmark_error");
-        c = companion.e("", "", "", "", "unbookmark_error");
-        d = companion.e("bookmark_folders", "", "", "", "error");
-        e = companion.e("bookmarks", "", "", "clear_all_menu_item", "click");
-        f = companion.e("bookmarks", "", "toolbar", "clear_all_bookmarks_overflow", "click");
-    }
-    
-    public static final class a
-    {
-        public static final a a;
-        public static final nca b;
-        public static final nca c;
-        public static final nca d;
-        public static final nca e;
-        
-        static {
-            final nca$a companion = nca.Companion;
-            b = companion.e("bookmark_folder_create", "", "", "", "impression");
-            c = companion.e("bookmark_folder_create", "", "", "done", "click");
-            d = companion.e("bookmark_folder_create", "", "", "cancel", "click");
-            e = companion.e("bookmark_folder_create", "", "", "", "error");
+    public fba(final mm3 a, final Iterable<? extends mm3> b, final boolean c, final boolean d, final boolean e, final boolean f) {
+        e0e.f((Object)a, "current");
+        e0e.f((Object)b, "items");
+        this.a = a;
+        this.b = (Iterable<mm3>)b;
+        this.c = c;
+        this.d = d;
+        this.e = e;
+        this.f = f;
+        tna j;
+        if (b instanceof tna) {
+            j = (tna)b;
         }
-    }
-    
-    public static final class b
-    {
-        public static final b a;
-        public static final nca b;
-        public static final nca c;
-        public static final nca d;
-        public static final nca e;
-        public static final nca f;
-        public static final nca g;
-        
-        static {
-            final nca$a companion = nca.Companion;
-            companion.e("bookmark_folder_edit", "", "", "", "impression");
-            b = companion.e("bookmark_folder", "", "", "edit", "click");
-            c = companion.e("bookmark_folder_edit", "", "", "", "save");
-            d = companion.e("bookmark_folder_edit", "", "", "", "delete");
-            e = companion.e("bookmark_folder_edit", "", "", "", "cancel");
-            f = companion.e("bookmark_folder_edit", "", "", "delete", "cancel");
-            g = companion.e("bookmark_folder_edit", "", "", "", "error");
+        else {
+            j = k6e.j((Iterable)b);
+            e0e.e((Object)j, "{\n            IterableUt\u2026Extended(items)\n        }");
         }
-    }
-    
-    public static final class c
-    {
-        public static final c a;
-        public static final nca b;
-        public static final nca c;
-        public static final nca d;
-        
-        static {
-            final nca$a companion = nca.Companion;
-            b = companion.e("bookmark_folder", "", "", "", "impression");
-            c = companion.e("bookmark_folders", "", "", "empty", "impression");
-            d = companion.e("bookmarks", "", "", "", "empty");
-        }
-    }
-    
-    public static final class d
-    {
-        public static final d a;
-        public static final nca b;
-        public static final nca c;
-        public static final nca d;
-        
-        static {
-            final nca$a companion = nca.Companion;
-            b = companion.e("bookmark_folders", "", "", "", "impression");
-            c = companion.e("bookmark_folders", "", "", "bookmark_folder", "click");
-            d = companion.e("bookmark_folders", "", "", "bookmarks", "click");
-        }
-    }
-    
-    public static final class e
-    {
-        public static final e a;
-        public static final nca b;
-        public static final nca c;
-        
-        static {
-            final nca$a companion = nca.Companion;
-            b = companion.e("bookmark_folders", "", "bookmark_folder", "add", "click");
-            c = companion.e("bookmark_folders", "", "bookmark_folder", "remove", "click");
-        }
+        this.g = (tna<mm3>)j;
+        this.h = j.j1((nuk)new eba((Object)this, 0));
     }
 }

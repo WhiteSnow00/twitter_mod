@@ -6,8 +6,8 @@ package com.twitter.app.legacy.list.di;
 
 import com.twitter.app.common.inject.view.ViewObjectGraph;
 
-@r4j
+@d5j
 public interface TwitterListViewObjectGraph extends ViewObjectGraph
 {
-    gdv<Object> v7();
+    udv<Object> v7();
 }

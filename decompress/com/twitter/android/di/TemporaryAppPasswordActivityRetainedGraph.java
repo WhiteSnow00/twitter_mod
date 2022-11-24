@@ -7,10 +7,10 @@ package com.twitter.android.di;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@l4j
+@d5j
 public interface TemporaryAppPasswordActivityRetainedGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
-    @l4j
+    @d5j
     public interface TemporaryAppPasswordActivityViewGraph extends TwitterFragmentActivityViewObjectGraph
     {
     }

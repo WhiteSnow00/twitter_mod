@@ -1,13 +1,20 @@
-import java.util.AbstractMap;
-import java.util.Map;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dbi extends akr<Integer>
+public final class dbi
 {
+    public final znl<a> a;
+    
     public dbi() {
-        super((Object)(-1), new Map.Entry[] { (Map.Entry)new AbstractMap.SimpleImmutableEntry("task", 1), (Map.Entry)new AbstractMap.SimpleImmutableEntry("subtask", 2), (Map.Entry)new AbstractMap.SimpleImmutableEntry("finish", 3), (Map.Entry)new AbstractMap.SimpleImmutableEntry("abort", 4), (Map.Entry)new AbstractMap.SimpleImmutableEntry("deep_link", 5), (Map.Entry)new AbstractMap.SimpleImmutableEntry("deep_link_and_abort", 6), (Map.Entry)new AbstractMap.SimpleImmutableEntry("web_link", 7), (Map.Entry)new AbstractMap.SimpleImmutableEntry("chromeless_web_link", 8), (Map.Entry)new AbstractMap.SimpleImmutableEntry("deep_link_in_place", 9) });
+        this.a = (znl<a>)new znl();
+    }
+    
+    public enum a
+    {
+        F0, 
+        G0;
+        
+        public static final a[] H0;
     }
 }

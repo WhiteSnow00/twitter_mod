@@ -4,33 +4,33 @@
 
 package com.twitter.app.safetymode.implementation;
 
-@sa8(c = "com.twitter.app.safetymode.implementation.SafetyModePreviewViewModel$intents$2$3", f = "SafetyModePreviewViewModel.kt", l = {}, m = "invokeSuspend")
-public final class i extends p0s implements ftb<rqo.f, go6<? super fzv>, Object>
+@vb8(c = "com.twitter.app.safetymode.implementation.SafetyModePreviewViewModel$intents$2$3", f = "SafetyModePreviewViewModel.kt", l = {}, m = "invokeSuspend")
+public final class i extends l1s implements hub<kro$f, mp6<? super vzv>, Object>
 {
-    public final SafetyModePreviewViewModel D0;
+    public final SafetyModePreviewViewModel F0;
     
-    public i(final SafetyModePreviewViewModel d0, final go6<? super i> go6) {
-        this.D0 = d0;
-        super(2, (go6)go6);
+    public i(final SafetyModePreviewViewModel f0, final mp6<? super i> mp6) {
+        this.F0 = f0;
+        super(2, (mp6)mp6);
     }
     
-    public final go6<fzv> create(final Object o, final go6<?> go6) {
-        return (go6<fzv>)new i(this.D0, (go6<? super i>)go6);
+    public final mp6<vzv> create(final Object o, final mp6<?> mp6) {
+        return (mp6<vzv>)new i(this.F0, (mp6<? super i>)mp6);
     }
     
     public final Object invoke(final Object o, final Object o2) {
-        final i i = (i)this.create(o, (go6<?>)o2);
-        final fzv a = fzv.a;
+        final i i = (i)this.create(o, (mp6<?>)o2);
+        final vzv a = vzv.a;
         i.invokeSuspend(a);
         return a;
     }
     
     public final Object invokeSuspend(final Object o) {
-        b1n.u(o);
-        final SafetyModePreviewViewModel d0 = this.D0;
-        final oqo$c a = oqo$c.a;
-        final coe<Object>[] q0 = SafetyModePreviewViewModel.Q0;
-        d0.V((Object)a);
-        return fzv.a;
+        jb2.M0(o);
+        final SafetyModePreviewViewModel f0 = this.F0;
+        final hro$c a = hro$c.a;
+        final ape<Object>[] s0 = SafetyModePreviewViewModel.S0;
+        f0.V((Object)a);
+        return vzv.a;
     }
 }

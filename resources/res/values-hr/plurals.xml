@@ -308,8 +308,8 @@
         <item quantity="other">Još njih %d</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Super korisnik</item>
-        <item quantity="other">Super korisnici</item>
+        <item quantity="one">pretplatnik</item>
+        <item quantity="other">pretplatnika</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s lajk</item>
@@ -405,7 +405,7 @@
         <item quantity="other">Odgovor za korisnika/cu ﻿%1$s i još njih %2$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">Odgovor za korisnika/cu ﻿%1$s i njih još %2$d﻿. Vaš će odgovor biti vidljiv i drugim super korisnicima.</item>
+        <item quantity="other">Odgovarate korisnicima/korisnicama ﻿%1$s i njima još %2$d﻿. Vaš će odgovor biti vidljiv i drugim pretplatnicima.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">Odgovor koriniku/ci ﻿%1$s i drugima (njih %2$d)﻿ u Prostoru ﻿%3$s﻿</item>
@@ -414,7 +414,7 @@
         <item quantity="other">Odgovor za korisnike ﻿%1$s, %2$s i njih još %3$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">Odgovor za korisnika/cu ﻿%1$s%2$s i njih još %3$d﻿. Vaš će odgovor biti vidljiv i drugim super korisnicima.</item>
+        <item quantity="other">Odgovarate korisnicima/korisnicama ﻿%1$s %2$s i njima još%3$d﻿. Vaš će odgovor biti vidljiv i drugim pretplatnicima.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">Odgovor korisnicima ﻿%1$s, %2$s i drugima (njih %3$d)﻿ u Prostoru ﻿%4$s﻿</item>

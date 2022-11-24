@@ -8,7 +8,7 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonPayloadBadgeCount extends fih<j0k>
+public class JsonPayloadBadgeCount extends tih<z0k>
 {
     @JsonField(name = { "app_icon" })
     public Integer a;
@@ -17,7 +17,8 @@ public class JsonPayloadBadgeCount extends fih<j0k>
     @JsonField(name = { "dm" })
     public Integer c;
     
+    @Override
     public final Object s() {
-        return new j0k(this.a, this.b, this.c);
+        return new z0k(this.a, this.b, this.c);
     }
 }

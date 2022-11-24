@@ -9,12 +9,13 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonMomentAccessInfo extends fih<soh>
+public class JsonMomentAccessInfo extends tih<hph>
 {
     @JsonField
     public String a;
     
+    @Override
     public final Object s() {
-        return new soh(this.a);
+        return new hph(this.a);
     }
 }

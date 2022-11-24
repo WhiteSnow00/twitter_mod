@@ -1,32 +1,35 @@
-import android.net.NetworkInfo;
-import android.net.ConnectivityManager;
+import java.io.IOException;
+import java.util.Collections;
+import java.util.Map;
+import java.util.HashMap;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class n3z extends zmz
+public final class n3z implements b5j<ydz>
 {
-    public n3z(final poz poz) {
-        super(poz);
+    public static final n3z a;
+    
+    static {
+        final vry f0 = vry.F0;
+        a = new n3z();
+        final cry cry = new cry(1, f0);
+        final HashMap hashMap = new HashMap();
+        hashMap.put(cry.annotationType(), cry);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap));
+        final cry cry2 = new cry(2, f0);
+        final HashMap hashMap2 = new HashMap();
+        hashMap2.put(cry2.annotationType(), cry2);
+        Collections.unmodifiableMap((Map<?, ?>)new HashMap<Object, Object>(hashMap2));
+        final cry cry3 = new cry(3, f0);
+        final HashMap hashMap3 = new HashMap();
+        awg.i(cry3, hashMap3, cry3, hashMap3);
     }
     
-    public final void j() {
-    }
-    
-    public final boolean k() {
-        this.h();
-        final ConnectivityManager connectivityManager = (ConnectivityManager)((pbz)this).D0.D0.getSystemService("connectivity");
-        NetworkInfo activeNetworkInfo;
-        final NetworkInfo networkInfo = activeNetworkInfo = null;
-        if (connectivityManager != null) {
-            try {
-                activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-            }
-            catch (final SecurityException ex) {
-                activeNetworkInfo = networkInfo;
-            }
-        }
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
+        final ydz ydz = (ydz)o;
+        final c5j c5j = (c5j)o2;
+        throw null;
     }
 }

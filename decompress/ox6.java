@@ -1,9 +1,14 @@
+import okhttp3.CookieJar;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ox6 implements o29
+public interface ox6 extends gr0
 {
-    public final void dispose() {
-    }
+    CookieJar S2();
+    
+    hsc T3();
+    
+    dsc Z5();
 }

@@ -9,17 +9,17 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonURTMessageAction extends aih<apv>
+public class JsonURTMessageAction extends tih<iqv>
 {
     @JsonField
     public boolean a;
     @JsonField
     public String b;
     @JsonField
-    public List<lnv> c;
+    public List<vov> c;
     
     @Override
     public final Object s() {
-        return new apv(this.a, this.b, (List)this.c);
+        return new iqv(this.a, this.b, (List)this.c);
     }
 }

@@ -8,21 +8,13 @@ import java.io.IOException;
 import android.os.Parcel;
 import android.os.Parcelable$Creator;
 
-@xoe
-public class EditBirthdateContentViewProvider$SavedState<OBJ extends EditBirthdateContentViewProvider> extends zp1<OBJ>
+@upe
+public class EditBirthdateContentViewProvider$SavedState<OBJ extends EditBirthdateContentViewProvider> extends eq1<OBJ>
 {
     public static final Parcelable$Creator CREATOR;
     
     static {
-        CREATOR = (Parcelable$Creator)new Parcelable$Creator<EditBirthdateContentViewProvider$SavedState>() {
-            public final Object createFromParcel(final Parcel parcel) {
-                return new EditBirthdateContentViewProvider$SavedState(parcel);
-            }
-            
-            public final Object[] newArray(final int n) {
-                return new EditBirthdateContentViewProvider$SavedState[n];
-            }
-        };
+        CREATOR = (Parcelable$Creator)new EditBirthdateContentViewProvider$SavedState$a();
     }
     
     public EditBirthdateContentViewProvider$SavedState(final Parcel parcel) {
@@ -33,24 +25,24 @@ public class EditBirthdateContentViewProvider$SavedState<OBJ extends EditBirthda
         super((Object)obj);
     }
     
-    public OBJ deserializeValue(final vlp vlp, final OBJ obj) throws IOException, ClassNotFoundException {
-        final EditBirthdateContentViewProvider editBirthdateContentViewProvider = (EditBirthdateContentViewProvider)super.deserializeValue(vlp, (Object)obj);
-        editBirthdateContentViewProvider.X0 = vlp.s();
-        editBirthdateContentViewProvider.Y0 = vlp.s();
+    public OBJ deserializeValue(final rmp rmp, final OBJ obj) throws IOException, ClassNotFoundException {
+        final EditBirthdateContentViewProvider editBirthdateContentViewProvider = (EditBirthdateContentViewProvider)super.deserializeValue(rmp, (Object)obj);
+        editBirthdateContentViewProvider.Z0 = rmp.u();
+        editBirthdateContentViewProvider.a1 = rmp.u();
         return (OBJ)editBirthdateContentViewProvider;
     }
     
-    public /* bridge */ Object deserializeValue(final vlp vlp, final Object o) throws IOException, ClassNotFoundException {
-        return this.deserializeValue(vlp, (EditBirthdateContentViewProvider)o);
+    public /* bridge */ Object deserializeValue(final rmp rmp, final Object o) throws IOException, ClassNotFoundException {
+        return this.deserializeValue(rmp, (EditBirthdateContentViewProvider)o);
     }
     
-    public void serializeValue(final wlp wlp, final OBJ obj) throws IOException {
-        super.serializeValue(wlp, (Object)obj);
-        wlp.r(obj.X0);
-        wlp.r(obj.Y0);
+    public void serializeValue(final smp smp, final OBJ obj) throws IOException {
+        super.serializeValue(smp, (Object)obj);
+        smp.t(obj.Z0);
+        smp.t(obj.a1);
     }
     
-    public /* bridge */ void serializeValue(final wlp wlp, final Object o) throws IOException {
-        this.serializeValue(wlp, (EditBirthdateContentViewProvider)o);
+    public /* bridge */ void serializeValue(final smp smp, final Object o) throws IOException {
+        this.serializeValue(smp, (EditBirthdateContentViewProvider)o);
     }
 }

@@ -1,17 +1,13 @@
-import java.io.IOException;
-import java.io.OutputStream;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface f9d
+public final class f9d implements ipp, qzb
 {
-    e9d a(final z3a p0, final OutputStream p1, final cko p2, final Integer p3) throws IOException;
+    public final g9d a;
     
-    String b();
-    
-    boolean c(final z3a p0, final cko p1);
-    
-    boolean d(final f7d p0);
+    public f9d(final g9d a) {
+        e0e.f((Object)a, "settingsValue");
+        this.a = a;
+    }
 }

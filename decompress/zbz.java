@@ -1,21 +1,36 @@
-import java.io.IOException;
+import java.util.concurrent.Executor;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class zbz implements p4j<wlz>
+public final class zbz<TResult> implements gxz<TResult>
 {
-    public static final zbz a;
+    public final Executor F0;
+    public final Object G0;
+    public nhj H0;
     
-    static {
-        a = new zbz();
-        fu8.p(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, jg9.t(oqf.o((Class)ary.class, new dqy(1)), 2)), 3)), 4)), 5)));
+    public zbz(final Executor f0, final nhj h0) {
+        this.G0 = new Object();
+        this.F0 = f0;
+        this.H0 = h0;
     }
     
-    public final /* bridge */ void a(final Object o, final Object o2) throws IOException {
-        final wlz wlz = (wlz)o;
-        final q4j q4j = (q4j)o2;
-        throw null;
+    public final void d() {
+        synchronized (this.G0) {
+            this.H0 = null;
+        }
+    }
+    
+    public final void e(final mcs<TResult> mcs) {
+        if (mcs.q()) {
+            synchronized (this.G0) {
+                if (this.H0 == null) {
+                    return;
+                }
+                monitorexit(this.G0);
+                this.F0.execute((Runnable)new f3y((Object)this, 3));
+            }
+        }
     }
 }

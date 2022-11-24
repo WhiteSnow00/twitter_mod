@@ -2,7 +2,7 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class sb1 extends n7k
+public final class sb1 extends i8k
 {
     public final String b;
     public final int c;
@@ -47,44 +47,44 @@ public final class sb1 extends n7k
         if (o == this) {
             return true;
         }
-        if (o instanceof n7k) {
-            final n7k n7k = (n7k)o;
+        if (o instanceof i8k) {
+            final i8k i8k = (i8k)o;
             final String b2 = this.b;
             if (b2 == null) {
-                if (n7k.c() != null) {
+                if (i8k.c() != null) {
                     return false;
                 }
             }
-            else if (!b2.equals(n7k.c())) {
+            else if (!b2.equals(i8k.c())) {
                 return false;
             }
-            if (nb0.e(this.c, n7k.f())) {
+            if (lb0.g(this.c, i8k.f())) {
                 final String d = this.d;
                 if (d == null) {
-                    if (n7k.a() != null) {
+                    if (i8k.a() != null) {
                         return false;
                     }
                 }
-                else if (!d.equals(n7k.a())) {
+                else if (!d.equals(i8k.a())) {
                     return false;
                 }
                 final String e = this.e;
                 if (e == null) {
-                    if (n7k.e() != null) {
+                    if (i8k.e() != null) {
                         return false;
                     }
                 }
-                else if (!e.equals(n7k.e())) {
+                else if (!e.equals(i8k.e())) {
                     return false;
                 }
-                if (this.f == n7k.b() && this.g == n7k.g()) {
+                if (this.f == i8k.b() && this.g == i8k.g()) {
                     final String h = this.h;
                     if (h == null) {
-                        if (n7k.d() == null) {
+                        if (i8k.d() == null) {
                             return b;
                         }
                     }
-                    else if (h.equals(n7k.d())) {
+                    else if (h.equals(i8k.d())) {
                         return b;
                     }
                 }
@@ -113,14 +113,14 @@ public final class sb1 extends n7k
         else {
             hashCode2 = b.hashCode();
         }
-        final int d = nb0.D(this.c);
-        final String d2 = this.d;
+        final int g = lb0.G(this.c);
+        final String d = this.d;
         int hashCode3;
-        if (d2 == null) {
+        if (d == null) {
             hashCode3 = 0;
         }
         else {
-            hashCode3 = d2.hashCode();
+            hashCode3 = d.hashCode();
         }
         final String e = this.e;
         int hashCode4;
@@ -132,33 +132,33 @@ public final class sb1 extends n7k
         }
         final long f = this.f;
         final int n = (int)(f ^ f >>> 32);
-        final long g = this.g;
-        final int n2 = (int)(g ^ g >>> 32);
+        final long g2 = this.g;
+        final int n2 = (int)(g2 ^ g2 >>> 32);
         final String h = this.h;
         if (h != null) {
             hashCode = h.hashCode();
         }
-        return ((((((hashCode2 ^ 0xF4243) * 1000003 ^ d) * 1000003 ^ hashCode3) * 1000003 ^ hashCode4) * 1000003 ^ n) * 1000003 ^ n2) * 1000003 ^ hashCode;
+        return ((((((hashCode2 ^ 0xF4243) * 1000003 ^ g) * 1000003 ^ hashCode3) * 1000003 ^ hashCode4) * 1000003 ^ n) * 1000003 ^ n2) * 1000003 ^ hashCode;
     }
     
     public final String toString() {
-        final StringBuilder g = w48.g("PersistedInstallationEntry{firebaseInstallationId=");
-        g.append(this.b);
-        g.append(", registrationStatus=");
-        g.append(l7k.g(this.c));
-        g.append(", authToken=");
-        g.append(this.d);
-        g.append(", refreshToken=");
-        g.append(this.e);
-        g.append(", expiresInSecs=");
-        g.append(this.f);
-        g.append(", tokenCreationEpochInSecs=");
-        g.append(this.g);
-        g.append(", fisError=");
-        return hi.I(g, this.h, "}");
+        final StringBuilder f = ehk.f("PersistedInstallationEntry{firebaseInstallationId=");
+        f.append(this.b);
+        f.append(", registrationStatus=");
+        f.append(mw.D(this.c));
+        f.append(", authToken=");
+        f.append(this.d);
+        f.append(", refreshToken=");
+        f.append(this.e);
+        f.append(", expiresInSecs=");
+        f.append(this.f);
+        f.append(", tokenCreationEpochInSecs=");
+        f.append(this.g);
+        f.append(", fisError=");
+        return m51.y(f, this.h, "}");
     }
     
-    public static final class a extends n7k$a
+    public static final class a extends i8k$a
     {
         public String a;
         public int b;
@@ -171,17 +171,17 @@ public final class sb1 extends n7k
         public a() {
         }
         
-        public a(final n7k n7k) {
-            this.a = n7k.c();
-            this.b = n7k.f();
-            this.c = n7k.a();
-            this.d = n7k.e();
-            this.e = n7k.b();
-            this.f = n7k.g();
-            this.g = n7k.d();
+        public a(final i8k i8k) {
+            this.a = i8k.c();
+            this.b = i8k.f();
+            this.c = i8k.a();
+            this.d = i8k.e();
+            this.e = i8k.b();
+            this.f = i8k.g();
+            this.g = i8k.d();
         }
         
-        public final n7k a() {
+        public final i8k a() {
             String s;
             if (this.b == 0) {
                 s = " registrationStatus";
@@ -189,26 +189,26 @@ public final class sb1 extends n7k
             else {
                 s = "";
             }
-            String c = s;
+            String l = s;
             if (this.e == null) {
-                c = l7k.c(s, " expiresInSecs");
+                l = mqb.l(s, " expiresInSecs");
             }
-            String c2 = c;
+            String i = l;
             if (this.f == null) {
-                c2 = l7k.c(c, " tokenCreationEpochInSecs");
+                i = mqb.l(l, " tokenCreationEpochInSecs");
             }
-            if (c2.isEmpty()) {
+            if (i.isEmpty()) {
                 return new sb1(this.a, this.b, this.c, this.d, this.e, this.f, this.g);
             }
-            throw new IllegalStateException(l7k.c("Missing required properties:", c2));
+            throw new IllegalStateException(mqb.l("Missing required properties:", i));
         }
         
-        public final n7k$a b(final long n) {
+        public final i8k$a b(final long n) {
             this.e = n;
             return this;
         }
         
-        public final n7k$a c(final int b) {
+        public final i8k$a c(final int b) {
             if (b != 0) {
                 this.b = b;
                 return this;
@@ -216,7 +216,7 @@ public final class sb1 extends n7k
             throw new NullPointerException("Null registrationStatus");
         }
         
-        public final n7k$a d(final long n) {
+        public final i8k$a d(final long n) {
             this.f = n;
             return this;
         }

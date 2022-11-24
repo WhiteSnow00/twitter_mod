@@ -1,8 +1,18 @@
+import java.util.concurrent.CopyOnWriteArrayList;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface jhj
+public abstract class jhj
 {
-    void a();
+    public boolean a;
+    public CopyOnWriteArrayList<og3> b;
+    
+    public jhj(final boolean a) {
+        this.b = new CopyOnWriteArrayList<og3>();
+        this.a = a;
+    }
+    
+    public abstract void a();
 }

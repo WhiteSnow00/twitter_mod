@@ -14,7 +14,7 @@ public abstract class c<T> extends a
 {
     public final HashMap<T, c.c$b<T>> h;
     public Handler i;
-    public zxt j;
+    public hzt j;
     
     public c() {
         this.h = new HashMap<T, c.c$b<T>>();
@@ -48,22 +48,22 @@ public abstract class c<T> extends a
     public abstract void w(final T p0, final i p1, final e0 p2);
     
     public final void x(final T t, final i i) {
-        ri4.k(this.h.containsKey(null) ^ true);
-        final yd6 yd6 = new yd6(this);
+        omi.m(this.h.containsKey(null) ^ true);
+        final ke6 ke6 = new ke6(this);
         final c.c$a c$a = new c.c$a(this);
-        this.h.put(null, (c.c$b<T>)new c.c$b((i)t, (i$c)yd6, c$a));
+        this.h.put(null, (c.c$b<T>)new c.c$b((i)t, (i$c)ke6, c$a));
         final Handler j = this.i;
         Objects.requireNonNull(j);
         ((i)t).c(j, (j)c$a);
         final Handler k = this.i;
         Objects.requireNonNull(k);
         ((i)t).j(k, (com.google.android.exoplayer2.drm.c)c$a);
-        final zxt l = this.j;
-        final hnk g = super.g;
-        ri4.y((Object)g);
-        ((i)t).n((i$c)yd6, l, g);
+        final hzt l = this.j;
+        final cok g = super.g;
+        omi.r((Object)g);
+        ((i)t).n((i$c)ke6, l, g);
         if (!(super.b.isEmpty() ^ true)) {
-            ((i)t).i((i$c)yd6);
+            ((i)t).i((i$c)ke6);
         }
     }
 }

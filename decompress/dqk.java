@@ -1,36 +1,39 @@
-import android.graphics.PointF;
+import android.view.View;
+import android.view.MotionEvent;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class dqk implements nm6
+public final class dqk extends pue implements stb<MotionEvent, Boolean>
 {
-    public final String a;
-    public final int b;
-    public final g80 c;
-    public final w80<PointF, PointF> d;
-    public final g80 e;
-    public final g80 f;
-    public final g80 g;
-    public final g80 h;
-    public final g80 i;
-    public final boolean j;
+    public final s70 F0;
     
-    public dqk(final String a, final Object b, final g80 c, final w80<PointF, PointF> d, final g80 e, final g80 f, final g80 g, final g80 h, final g80 i, final boolean j) {
-        this.a = a;
-        this.b = (int)b;
-        this.c = c;
-        this.d = d;
-        this.e = e;
-        this.f = f;
-        this.g = g;
-        this.h = h;
-        this.i = i;
-        this.j = j;
+    public dqk(final s70 f0) {
+        this.F0 = f0;
+        super(1);
     }
     
-    public final jl6 a(final sdg sdg, final ym1 ym1) {
-        return (jl6)new cqk(sdg, ym1, this);
+    public final Object invoke(final Object o) {
+        final MotionEvent motionEvent = (MotionEvent)o;
+        e0e.f((Object)motionEvent, "motionEvent");
+        boolean b = false;
+        switch (motionEvent.getActionMasked()) {
+            default: {
+                b = ((View)this.F0).dispatchGenericMotionEvent(motionEvent);
+                break;
+            }
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6: {
+                b = ((View)this.F0).dispatchTouchEvent(motionEvent);
+                break;
+            }
+        }
+        return b;
     }
 }

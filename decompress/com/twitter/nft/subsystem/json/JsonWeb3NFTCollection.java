@@ -9,7 +9,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonWeb3NFTCollection extends fih<tlx>
+public class JsonWeb3NFTCollection extends tih<jmx>
 {
     @JsonField
     public String a;
@@ -18,8 +18,9 @@ public class JsonWeb3NFTCollection extends fih<tlx>
     @JsonField
     public String c;
     @JsonField
-    public i4i d;
+    public b5i d;
     
+    @Override
     public final Object s() {
         final String a = this.a;
         final String c = this.c;
@@ -31,6 +32,6 @@ public class JsonWeb3NFTCollection extends fih<tlx>
         else {
             intValue = b;
         }
-        return new tlx(a, c, intValue, this.d);
+        return new jmx(a, c, intValue, this.d);
     }
 }

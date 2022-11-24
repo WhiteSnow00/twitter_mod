@@ -1,36 +1,21 @@
-import android.view.MenuItem;
-import android.app.Activity;
+import android.animation.Animator;
+import com.twitter.android.media.imageeditor.b;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ws9 implements ebi
+public final class ws9 extends ej1
 {
-    public final Activity D0;
-    public final ccj<Object> E0;
+    public final b F0;
     
-    public ws9(final Activity d0, final ccj<Object> e0) {
-        czd.f((Object)d0, "activity");
-        czd.f((Object)e0, "observer");
-        this.D0 = d0;
-        this.E0 = e0;
+    public ws9(final b f0) {
+        this.F0 = f0;
     }
     
-    public final void a3() {
-        this.D0.onBackPressed();
-    }
-    
-    public final boolean n(final MenuItem menuItem) {
-        czd.f((Object)menuItem, "item");
-        boolean b;
-        if (2131430013 == menuItem.getItemId()) {
-            this.E0.onNext((Object)us9.a);
-            b = true;
-        }
-        else {
-            b = false;
-        }
-        return b;
+    public final void onAnimationEnd(final Animator animator) {
+        this.F0.i2.setTranslationY(0.0f);
+        this.F0.i2.setAlpha(1.0f);
+        this.F0.i2.setVisibility(8);
     }
 }

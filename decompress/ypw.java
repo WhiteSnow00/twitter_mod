@@ -1,29 +1,71 @@
-import java.util.Map;
+import java.util.Objects;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class ypw extends ste implements ktb<Float, Float, x66, Integer, fzv>
+public final class ypw extends ra<fow>
 {
-    public final q8d D0;
-    
-    public ypw(final q8d d0) {
-        this.D0 = d0;
-        super(4);
+    public ypw(final fow fow) {
+        e0e.f((Object)fow, "root");
+        super((Object)fow);
     }
     
-    public final Object I(final Object o, final Object o2, final Object o3, final Object o4) {
-        ((Number)o).floatValue();
-        ((Number)o2).floatValue();
-        final x66 x66 = (x66)o3;
-        if ((((Number)o4).intValue() & 0xB) == 0x2 && x66.i()) {
-            x66.H();
+    public final void a() {
+        final a9c k = this.k((fow)super.a);
+        k.e(0, k.c.size());
+    }
+    
+    public final void c(final int n, int n2, final int n3) {
+        final a9c k = this.k((fow)super.c);
+        int i = 0;
+        final int n4 = 0;
+        if (n > n2) {
+            for (int j = n4; j < n3; ++j) {
+                final fow fow = k.c.get(n);
+                k.c.remove(n);
+                k.c.add(n2, fow);
+                ++n2;
+            }
         }
         else {
-            final n96$b a = n96.a;
-            xpw.a(this.D0.f, (Map)null, x66, 0, 2);
+            while (i < n3) {
+                final fow fow2 = k.c.get(n);
+                k.c.remove(n);
+                k.c.add(n2 - 1, fow2);
+                ++i;
+            }
         }
-        return fzv.a;
+        ((fow)k).c();
+    }
+    
+    public final void d(final int n, final int n2) {
+        this.k((fow)super.c).e(n, n2);
+    }
+    
+    public final void e(final int n, final Object o) {
+        final fow fow = (fow)o;
+        e0e.f((Object)fow, "instance");
+        final a9c k = this.k((fow)super.c);
+        Objects.requireNonNull(k);
+        if (n < k.c.size()) {
+            k.c.set(n, fow);
+        }
+        else {
+            k.c.add(fow);
+        }
+        fow.d(k.h);
+        ((fow)k).c();
+    }
+    
+    public final void g(final int n, final Object o) {
+        e0e.f((Object)o, "instance");
+    }
+    
+    public final a9c k(final fow fow) {
+        if (fow instanceof a9c) {
+            return (a9c)fow;
+        }
+        throw new IllegalStateException("Cannot only insert VNode into Group".toString());
     }
 }

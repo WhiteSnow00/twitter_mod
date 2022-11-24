@@ -1,71 +1,72 @@
-import java.util.Set;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.Locale;
+import android.database.Cursor;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class fa7 implements vea
+public final class fa7<T extends Cursor> extends p4e<T>
 {
-    public static final fa7 G0;
-    public final yq D0;
-    public final boolean E0;
-    public final Map<String, xq<?>> F0;
+    public final T G0;
     
-    static {
-        G0 = new fa7(new LinkedHashMap(), new yq((uea.a)null, (Set)null, (rf8)null), false, null);
-        new LinkedHashMap();
+    public fa7(final T g0) {
+        this.G0 = g0;
     }
     
-    public fa7(final Map f0, final yq d0, final boolean e0, final rf8 rf8) {
-        this.D0 = d0;
-        this.E0 = e0;
-        this.F0 = f0;
+    @Override
+    public final boolean equals(final Object o) {
+        return this == o || (o instanceof fa7 && o5j.a((Object)((fa7)o).G0, (Object)this.G0));
     }
     
-    public final <T> xq<T> a(final ga7 ga7) {
-        czd.f((Object)ga7, "customScalar");
-        Object o;
-        if (this.F0.get(((ry5)ga7).a) != null) {
-            o = this.F0.get(((ry5)ga7).a);
+    @Override
+    public final int getSize() {
+        final Cursor g0 = this.G0;
+        if (g0 == null) {
+            return 0;
         }
-        else if (czd.a((Object)ga7.b, (Object)"com.apollographql.apollo3.api.Upload")) {
-            o = ar.h;
+        if (g0.isClosed()) {
+            c0e.i("Cursor is closed");
+            return 0;
         }
-        else if (s9i.s("kotlin.String", "java.lang.String").contains(ga7.b)) {
-            o = ar.a;
-        }
-        else if (s9i.s("kotlin.Boolean", "java.lang.Boolean").contains(ga7.b)) {
-            o = ar.f;
-        }
-        else if (s9i.s("kotlin.Int", "java.lang.Int").contains(ga7.b)) {
-            o = ar.b;
-        }
-        else if (s9i.s("kotlin.Double", "java.lang.Double").contains(ga7.b)) {
-            o = ar.c;
-        }
-        else if (s9i.s("kotlin.Long", "java.lang.Long").contains(ga7.b)) {
-            o = ar.e;
-        }
-        else if (s9i.s("kotlin.Float", "java.lang.Float").contains(ga7.b)) {
-            o = ar.d;
-        }
-        else if (s9i.s("kotlin.Any", "java.lang.Object").contains(ga7.b)) {
-            o = ar.g;
+        return this.G0.getCount();
+    }
+    
+    @Override
+    public final int hashCode() {
+        final Cursor g0 = this.G0;
+        int hashCode;
+        if (g0 == null) {
+            hashCode = 0;
         }
         else {
-            if (!this.E0) {
-                final StringBuilder j = fu8.j("Can't map GraphQL type: `");
-                j.append(((ry5)ga7).a);
-                j.append("` to: `");
-                j.append(ga7.b);
-                j.append("`. Did you forget to add a CustomScalarAdapter?");
-                throw new IllegalStateException(j.toString().toString());
-            }
-            o = new pyj();
+            hashCode = g0.hashCode();
         }
-        czd.d(o, "null cannot be cast to non-null type com.apollographql.apollo3.api.Adapter<T of com.apollographql.apollo3.api.CustomScalarAdapters.responseAdapterFor>");
-        return (xq<T>)o;
+        return hashCode;
+    }
+    
+    @Override
+    public final void i() {
+        final Cursor g0 = this.G0;
+        if (g0 != null) {
+            g0.close();
+        }
+    }
+    
+    @Override
+    public final /* bridge */ Object m(final int n) {
+        return this.q(n);
+    }
+    
+    public final T q(final int n) {
+        if (n < this.getSize()) {
+            final Cursor g0 = this.G0;
+            if (g0 != null) {
+                if (g0.moveToPosition(n)) {
+                    return this.G0;
+                }
+                r9a.d((Throwable)new IllegalArgumentException(String.format(Locale.ENGLISH, "CursorItemCollection: can't move to position = %s in collection of size = %s", n, this.getSize())));
+            }
+        }
+        return null;
     }
 }

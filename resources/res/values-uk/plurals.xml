@@ -311,8 +311,8 @@
         <item quantity="other">Ще %d</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">Суперчитач</item>
-        <item quantity="other">Суперчитачі</item>
+        <item quantity="one">Передплатник</item>
+        <item quantity="other">Передплатники</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">%s вподобав(ла)</item>
@@ -408,7 +408,7 @@
         <item quantity="other">У відповідь ﻿%1$s і ще %2$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">У відповідь ﻿%1$s і ще %2$d﻿. Ваша відповідь також буде видима для інших Суперчитачів.</item>
+        <item quantity="other">У відповідь ﻿%1$s і ще %2$d﻿. Ваша відповідь також буде видима для інших Передплатників.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">У відповідь ﻿%1$s і ще %2$d﻿ у ﻿%3$s﻿</item>
@@ -417,7 +417,7 @@
         <item quantity="other">У відповідь ﻿%1$s, %2$s і ще %3$d﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">У відповідь ﻿%1$s, %2$s і ще %3$d﻿. Ваша відповідь також буде видима для інших Суперчитачів.</item>
+        <item quantity="other">У відповідь ﻿%1$s, %2$s і ще %3$d﻿. Ваша відповідь також буде видима для інших Передплатників.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">У відповідь ﻿%1$s, %2$s і ще %3$d ﻿ у ﻿%4$s﻿</item>

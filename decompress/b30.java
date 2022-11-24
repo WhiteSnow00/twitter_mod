@@ -5,7 +5,7 @@ import android.content.Context;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class b30 implements y19
+public final class b30 implements g39
 {
     public final Context a;
     public final d30 b;

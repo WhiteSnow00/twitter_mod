@@ -1,6 +1,6 @@
+import android.os.SystemClock;
 import java.util.Objects;
-import android.os.Bundle;
-import java.util.concurrent.atomic.AtomicReference;
+import java.util.List;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -8,51 +8,62 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public final class rez implements Runnable
 {
-    public final int D0;
-    public final String E0;
-    public final String F0;
-    public final Object G0;
+    public final int F0;
+    public final long G0;
     public final Object H0;
+    public final Object I0;
+    public final Object J0;
+    public final Object K0;
     
-    public rez(final bgz h0, final AtomicReference g0, final String e0, final String f0) {
-        this.D0 = 0;
+    public rez(final ahz k0, final String h0, final String i0, final Object j0, final long g0) {
+        this.F0 = 0;
+        this.K0 = k0;
         this.H0 = h0;
+        this.I0 = i0;
+        this.J0 = j0;
         this.G0 = g0;
-        this.E0 = e0;
-        this.F0 = f0;
     }
     
-    public rez(final sek h0, final String e0, final Bundle g0) {
-        this.D0 = 1;
+    public rez(final isa h0, final long g0, final List i0, final List j0, final List k0) {
+        this.F0 = 1;
         this.H0 = h0;
-        this.E0 = e0;
-        this.F0 = "_err";
         this.G0 = g0;
+        this.I0 = i0;
+        this.J0 = j0;
+        this.K0 = k0;
     }
     
     @Override
     public final void run() {
-        switch (this.D0) {
+        switch (this.F0) {
             default: {
-                final lpz q = ((poz)((sek)this.H0).D0).Q();
-                final String e0 = this.E0;
-                final String f0 = this.F0;
-                final Bundle bundle = (Bundle)this.G0;
-                Objects.requireNonNull((ffz)((poz)((sek)this.H0).D0).c());
-                final wgy s0 = q.s0(e0, f0, bundle, "auto", System.currentTimeMillis(), false);
-                final poz poz = (poz)((sek)this.H0).D0;
-                Objects.requireNonNull(s0, "null reference");
-                poz.j(s0, this.E0);
+                final isa isa = (isa)this.H0;
+                final long g0 = this.G0;
+                final List list = (List)this.I0;
+                final List list2 = (List)this.J0;
+                final List list3 = (List)this.K0;
+                Objects.requireNonNull(isa);
+                final long n = g0 / 3L;
+                long min = 0L;
+                int i = 0;
+                while (i < 3) {
+                    min = Math.min(g0, min + n);
+                    isa.m(2, 0, Long.valueOf(min), Long.valueOf(g0), (List)null, (Integer)null, (List)null);
+                    SystemClock.sleep(isa.o);
+                    final n3r g2 = isa.g();
+                    if (g2.h() != 9 && g2.h() != 7) {
+                        if (g2.h() != 6) {
+                            ++i;
+                            continue;
+                        }
+                    }
+                    return;
+                }
+                isa.h.execute((Runnable)new cyy(isa, list, list2, list3, g0));
                 return;
             }
             case 0: {
-                final glz z = ((pbz)this.H0).D0.z();
-                final AtomicReference atomicReference = (AtomicReference)this.G0;
-                final String e2 = this.E0;
-                final String f2 = this.F0;
-                ((axy)z).g();
-                z.h();
-                z.t((Runnable)new qjz(z, atomicReference, e2, f2, z.q(false)));
+                ((ahz)this.K0).D((String)this.H0, (String)this.I0, this.J0, this.G0);
             }
         }
     }

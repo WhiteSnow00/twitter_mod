@@ -8,26 +8,29 @@ import com.facebook.imagepipeline.request.a;
 import android.content.ContentResolver;
 import java.util.concurrent.Executor;
 
-public final class LocalExifThumbnailProducer implements cos<z3a>
+public final class LocalExifThumbnailProducer implements pps<l4a>
 {
     public final Executor a;
-    public final lqk b;
+    public final grk b;
     public final ContentResolver c;
     
-    public LocalExifThumbnailProducer(final Executor a, final lqk b, final ContentResolver c) {
+    public LocalExifThumbnailProducer(final Executor a, final grk b, final ContentResolver c) {
         this.a = a;
         this.b = b;
         this.c = c;
     }
     
-    public final void a(final dk6<z3a> dk6, final q0l q0l) {
-        final u0l i = q0l.i();
-        final a l = q0l.l();
-        q0l.f("local", "exif");
-        final LocalExifThumbnailProducer$a localExifThumbnailProducer$a = new LocalExifThumbnailProducer$a(this, (dk6)dk6, i, q0l, l);
-        q0l.p((r0l)new xo1() {
+    @Override
+    public final void a(final pk6<l4a> pk6, final n1l n1l) {
+        final r1l i = n1l.i();
+        final a l = n1l.l();
+        n1l.f("local", "exif");
+        final LocalExifThumbnailProducer$a localExifThumbnailProducer$a = new LocalExifThumbnailProducer$a(this, (pk6)pk6, i, n1l, l);
+        n1l.p((o1l)new zo1(localExifThumbnailProducer$a) {
+            public final par a;
+            
             public final void b() {
-                ((v8r)localExifThumbnailProducer$a).a();
+                this.a.a();
             }
         });
         this.a.execute((Runnable)localExifThumbnailProducer$a);

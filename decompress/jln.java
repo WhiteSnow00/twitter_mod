@@ -1,20 +1,20 @@
+import com.twitter.rooms.ui.stationstab.follow.RoomFollowPodcastWrapperViewModel;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jln extends kkl
+public final class jln extends pue implements ptb<vzv>
 {
-    public static final jln D0;
+    public final RoomFollowPodcastWrapperViewModel F0;
     
-    static {
-        D0 = new jln();
+    public jln(final RoomFollowPodcastWrapperViewModel f0) {
+        this.F0 = f0;
+        super(0);
     }
     
-    public jln() {
-        super((Class)oln.class, "shownView", "getShownView()Lcom/twitter/rooms/subsystem/api/models/RoomViewType;", 0);
-    }
-    
-    public final Object get(final Object o) {
-        return ((oln)o).a;
+    public final Object invoke() {
+        RoomFollowPodcastWrapperViewModel.X(this.F0, dkb.F0);
+        return vzv.a;
     }
 }

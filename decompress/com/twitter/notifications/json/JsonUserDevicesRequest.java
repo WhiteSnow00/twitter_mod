@@ -10,7 +10,7 @@ import com.bluelinelabs.logansquare.annotation.JsonObject$FieldNamingPolicy;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject(fieldNamingPolicy = JsonObject$FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-public class JsonUserDevicesRequest extends qhh<saw>
+public class JsonUserDevicesRequest extends eih<ibw>
 {
     @JsonField
     public String a;
@@ -29,16 +29,16 @@ public class JsonUserDevicesRequest extends qhh<saw>
     @JsonField
     public Map<String, String> h;
     
-    public final n4j t() {
-        final saw$a saw$a = new saw$a();
-        saw$a.a = this.a;
-        saw$a.b = this.b;
-        saw$a.c = this.c;
-        saw$a.d = this.d;
-        saw$a.e = this.e;
-        saw$a.f = this.f;
-        saw$a.h = this.h;
-        saw$a.g = this.g;
-        return (n4j)saw$a;
+    public final z4j t() {
+        final ibw$a ibw$a = new ibw$a();
+        ibw$a.a = this.a;
+        ibw$a.b = this.b;
+        ibw$a.c = this.c;
+        ibw$a.d = this.d;
+        ibw$a.e = this.e;
+        ibw$a.f = this.f;
+        ibw$a.h = this.h;
+        ibw$a.g = this.g;
+        return (z4j)ibw$a;
     }
 }

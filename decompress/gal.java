@@ -2,13 +2,13 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface gal
+public final class gal extends jbs$a<Object, gal>
 {
-    CharSequence b();
+    public gal() {
+        super(0);
+    }
     
-    String c();
-    
-    String d();
-    
-    String getTitle();
+    public final bl1 x() {
+        return (bl1)new fal();
+    }
 }

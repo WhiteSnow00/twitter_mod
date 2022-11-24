@@ -1,12 +1,4 @@
-import com.twitter.profilemodules.model.business.Weekday;
-import java.util.Iterator;
-import java.util.List;
-import com.twitter.business.model.hours.DayAndOpenHours;
-import com.twitter.business.model.hours.OpenHoursInterval;
-import java.util.ArrayList;
-import com.twitter.business.model.hours.BusinessHoursData;
-import java.util.Objects;
-import java.util.TimeZone;
+import com.twitter.profilemodules.model.business.HourMinute;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -14,62 +6,14 @@ import java.util.TimeZone;
 
 public final class dw2
 {
-    public final iw2 a;
-    public final jv2 b;
-    public final TimeZone c;
+    public HourMinute a;
+    public HourMinute b;
     
-    public dw2(final iw2 a, final jv2 b, final TimeZone c) {
-        zzd.f((Object)a, "hoursTypeSelection");
-        zzd.f((Object)c, "timezone");
+    public dw2(final HourMinute a, final HourMinute b) {
+        e0e.f((Object)a, "start");
+        e0e.f((Object)b, "end");
         this.a = a;
         this.b = b;
-        this.c = c;
-    }
-    
-    public static dw2 a(final dw2 dw2, iw2 a, TimeZone c, final int n) {
-        if ((n & 0x1) != 0x0) {
-            a = dw2.a;
-        }
-        jv2 b;
-        if ((n & 0x2) != 0x0) {
-            b = dw2.b;
-        }
-        else {
-            b = null;
-        }
-        if ((n & 0x4) != 0x0) {
-            c = dw2.c;
-        }
-        Objects.requireNonNull(dw2);
-        zzd.f((Object)a, "hoursTypeSelection");
-        zzd.f((Object)b, "dayEntries");
-        zzd.f((Object)c, "timezone");
-        return new dw2(a, b, c);
-    }
-    
-    public final BusinessHoursData b() {
-        final iw2 a = this.a;
-        final List a2 = this.b.a;
-        final ArrayList list = new ArrayList();
-        for (final kv2 kv2 : a2) {
-            Object o;
-            if (!kv2.b() && a == iw2.E0) {
-                final Weekday a3 = kv2.a;
-                final List<sv2> b = kv2.b;
-                final ArrayList list2 = new ArrayList<OpenHoursInterval>(kr4.h1((Iterable)b, 10));
-                for (final sv2 sv2 : b) {
-                    list2.add(new OpenHoursInterval(sv2.a, sv2.b));
-                }
-                o = new DayAndOpenHours(a3, (List)list2);
-            }
-            else {
-                o = null;
-            }
-            if (o != null) {
-                list.add(o);
-            }
-        }
-        return new BusinessHoursData(a, (List)list, this.c);
     }
     
     @Override
@@ -81,27 +25,90 @@ public final class dw2
             return false;
         }
         final dw2 dw2 = (dw2)o;
-        return this.a == dw2.a && zzd.a((Object)this.b, (Object)dw2.b) && zzd.a((Object)this.c, (Object)dw2.c);
+        return e0e.a((Object)this.a, (Object)dw2.a) && e0e.a((Object)this.b, (Object)dw2.b);
     }
     
     @Override
     public final int hashCode() {
-        return this.c.hashCode() + (this.b.hashCode() + this.a.hashCode() * 31) * 31;
+        return this.b.hashCode() + this.a.hashCode() * 31;
     }
     
     @Override
     public final String toString() {
-        final iw2 a = this.a;
-        final jv2 b = this.b;
-        final TimeZone c = this.c;
+        final HourMinute a = this.a;
+        final HourMinute b = this.b;
         final StringBuilder sb = new StringBuilder();
-        sb.append("BusinessHoursStateData(hoursTypeSelection=");
+        sb.append("BusinessHoursInterval(start=");
         sb.append(a);
-        sb.append(", dayEntries=");
+        sb.append(", end=");
         sb.append(b);
-        sb.append(", timezone=");
-        sb.append(c);
         sb.append(")");
         return sb.toString();
+    }
+    
+    public final class a
+    {
+        public static final int[] a;
+        
+        static {
+            // 
+            // This method could not be decompiled.
+            // 
+            // Original Bytecode:
+            // 
+            //     3: arraylength    
+            //     4: newarray        I
+            //     6: astore_0       
+            //     7: aload_0        
+            //     8: getstatic       com/twitter/business/model/hours/IntervalPosition.START:Lcom/twitter/business/model/hours/IntervalPosition;
+            //    11: invokevirtual   java/lang/Enum.ordinal:()I
+            //    14: iconst_1       
+            //    15: iastore        
+            //    16: aload_0        
+            //    17: getstatic       com/twitter/business/model/hours/IntervalPosition.END:Lcom/twitter/business/model/hours/IntervalPosition;
+            //    20: invokevirtual   java/lang/Enum.ordinal:()I
+            //    23: iconst_2       
+            //    24: iastore        
+            //    25: aload_0        
+            //    26: putstatic       dw2$a.a:[I
+            //    29: return         
+            //    30: astore_1       
+            //    31: goto            16
+            //    34: astore_1       
+            //    35: goto            25
+            //    Exceptions:
+            //  Try           Handler
+            //  Start  End    Start  End    Type                        
+            //  -----  -----  -----  -----  ----------------------------
+            //  7      16     30     34     Ljava/lang/NoSuchFieldError;
+            //  16     25     34     38     Ljava/lang/NoSuchFieldError;
+            // 
+            // The error that occurred was:
+            // 
+            // java.lang.IllegalStateException: Expression is linked from several locations: Label_0016:
+            //     at com.strobel.decompiler.ast.Error.expressionLinkedFromMultipleLocations(Error.java:27)
+            //     at com.strobel.decompiler.ast.AstOptimizer.mergeDisparateObjectInitializations(AstOptimizer.java:2604)
+            //     at com.strobel.decompiler.ast.AstOptimizer.optimize(AstOptimizer.java:235)
+            //     at com.strobel.decompiler.ast.AstOptimizer.optimize(AstOptimizer.java:42)
+            //     at com.strobel.decompiler.languages.java.ast.AstMethodBodyBuilder.createMethodBody(AstMethodBodyBuilder.java:206)
+            //     at com.strobel.decompiler.languages.java.ast.AstMethodBodyBuilder.createMethodBody(AstMethodBodyBuilder.java:93)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createMethodBody(AstBuilder.java:868)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createMethod(AstBuilder.java:761)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.addTypeMembers(AstBuilder.java:638)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeCore(AstBuilder.java:605)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeNoCache(AstBuilder.java:195)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.addTypeMembers(AstBuilder.java:662)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeCore(AstBuilder.java:605)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createTypeNoCache(AstBuilder.java:195)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.createType(AstBuilder.java:162)
+            //     at com.strobel.decompiler.languages.java.ast.AstBuilder.addType(AstBuilder.java:137)
+            //     at com.strobel.decompiler.languages.java.JavaLanguage.buildAst(JavaLanguage.java:71)
+            //     at com.strobel.decompiler.languages.java.JavaLanguage.decompileType(JavaLanguage.java:59)
+            //     at com.strobel.decompiler.DecompilerDriver.decompileType(DecompilerDriver.java:333)
+            //     at com.strobel.decompiler.DecompilerDriver.decompileJar(DecompilerDriver.java:254)
+            //     at com.strobel.decompiler.DecompilerDriver.main(DecompilerDriver.java:129)
+            // 
+            throw new IllegalStateException("An error occurred while decompiling this method.");
+        }
     }
 }

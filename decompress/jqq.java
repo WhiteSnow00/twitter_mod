@@ -1,20 +1,23 @@
+import com.twitter.rooms.cards.view.SpacesCardViewModel;
+
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class jqq extends kkl
+public final class jqq extends pue implements stb<gzh<uqq, vzv>, vzv>
 {
-    public static final jqq D0;
+    public final SpacesCardViewModel F0;
     
-    static {
-        D0 = new jqq();
+    public jqq(final SpacesCardViewModel f0) {
+        this.F0 = f0;
+        super(1);
     }
     
-    public jqq() {
-        super((Class)vrq.class, "speakerAvatarUrl", "getSpeakerAvatarUrl()Ljava/lang/String;", 0);
-    }
-    
-    public final Object get(final Object o) {
-        return ((vrq)o).m;
+    public final Object invoke(final Object o) {
+        final gzh gzh = (gzh)o;
+        e0e.f((Object)gzh, "$this$intoWeaver");
+        gzh.e((hub)new hqq(this.F0, (mp6)null));
+        gzh.c((hub)new iqq((mp6)null));
+        return vzv.a;
     }
 }

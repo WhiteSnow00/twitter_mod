@@ -7,10 +7,10 @@ package com.twitter.android.geo.places;
 import com.twitter.app.legacy.di.TwitterFragmentActivityViewObjectGraph;
 import com.twitter.app.legacy.di.TwitterFragmentActivityRetainedObjectGraph;
 
-@l4j
+@d5j
 public interface PlaceLandingActivityRetainedGraph extends TwitterFragmentActivityRetainedObjectGraph
 {
-    @l4j
+    @d5j
     public interface PlaceLandingActivityViewGraph extends TwitterFragmentActivityViewObjectGraph
     {
     }

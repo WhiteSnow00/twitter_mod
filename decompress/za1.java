@@ -2,18 +2,18 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class za1<T> extends haa<T>
+public final class za1<T> extends vaa<T>
 {
     public final T a;
-    public final azk b;
+    public final zzk b;
     
-    public za1(final Integer p0, final T p1, final azk p2) {
+    public za1(final Integer p0, final T p1, final zzk p2) {
         // 
         // This method could not be decompiled.
         // 
         // Original Bytecode:
         // 
-        //     1: invokespecial   haa.<init>:()V
+        //     1: invokespecial   vaa.<init>:()V
         //     4: aload_1        
         //     5: ldc             "Null payload"
         //     7: invokestatic    java/util/Objects.requireNonNull:(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
@@ -27,10 +27,10 @@ public final class za1<T> extends haa<T>
         //    22: pop            
         //    23: aload_0        
         //    24: aload_2        
-        //    25: putfield        za1.b:Lazk;
+        //    25: putfield        za1.b:Lzzk;
         //    28: return         
         //    Signature:
-        //  (Ljava/lang/Integer;TT;Lazk;)V
+        //  (Ljava/lang/Integer;TT;Lzzk;)V
         // 
         // The error that occurred was:
         // 
@@ -66,7 +66,7 @@ public final class za1<T> extends haa<T>
     }
     
     @Override
-    public final azk c() {
+    public final zzk c() {
         return this.b;
     }
     
@@ -76,9 +76,9 @@ public final class za1<T> extends haa<T>
         if (o == this) {
             return true;
         }
-        if (o instanceof haa) {
-            final haa haa = (haa)o;
-            if (haa.a() != null || !this.a.equals(haa.b()) || !this.b.equals(haa.c())) {
+        if (o instanceof vaa) {
+            final vaa vaa = (vaa)o;
+            if (vaa.a() != null || !this.a.equals(vaa.b()) || !this.b.equals(vaa.c())) {
                 b = false;
             }
             return b;

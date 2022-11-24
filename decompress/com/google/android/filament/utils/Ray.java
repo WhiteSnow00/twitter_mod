@@ -13,15 +13,15 @@ public final class Ray
     private Float3 origin;
     
     public Ray(final Float3 origin, final Float3 direction) {
-        czd.f((Object)origin, "origin");
-        czd.f((Object)direction, "direction");
+        e0e.f((Object)origin, "origin");
+        e0e.f((Object)direction, "direction");
         this.origin = origin;
         this.direction = direction;
     }
     
-    public Ray(Float3 float3, final Float3 float4, final int n, final rf8 rf8) {
+    public Ray(Float3 float3, final Float3 float4, final int n, final wg8 wg8) {
         if ((n & 0x1) != 0x0) {
-            float3 = new Float3(0.0f, 0.0f, 0.0f, 7, (rf8)null);
+            float3 = new Float3(0.0f, 0.0f, 0.0f, 7, null);
         }
         this(float3, float4);
     }
@@ -45,8 +45,8 @@ public final class Ray
     }
     
     public final Ray copy(final Float3 float3, final Float3 float4) {
-        czd.f((Object)float3, "origin");
-        czd.f((Object)float4, "direction");
+        e0e.f((Object)float3, "origin");
+        e0e.f((Object)float4, "direction");
         return new Ray(float3, float4);
     }
     
@@ -59,7 +59,7 @@ public final class Ray
             return false;
         }
         final Ray ray = (Ray)o;
-        return czd.a((Object)this.origin, (Object)ray.origin) && czd.a((Object)this.direction, (Object)ray.direction);
+        return e0e.a((Object)this.origin, (Object)ray.origin) && e0e.a((Object)this.direction, (Object)ray.direction);
     }
     
     public final Float3 getDirection() {
@@ -76,22 +76,22 @@ public final class Ray
     }
     
     public final void setDirection(final Float3 direction) {
-        czd.f((Object)direction, "<set-?>");
+        e0e.f((Object)direction, "<set-?>");
         this.direction = direction;
     }
     
     public final void setOrigin(final Float3 origin) {
-        czd.f((Object)origin, "<set-?>");
+        e0e.f((Object)origin, "<set-?>");
         this.origin = origin;
     }
     
     @Override
     public String toString() {
-        final StringBuilder j = fu8.j("Ray(origin=");
-        j.append(this.origin);
-        j.append(", direction=");
-        j.append(this.direction);
-        j.append(')');
-        return j.toString();
+        final StringBuilder f = ehk.f("Ray(origin=");
+        f.append(this.origin);
+        f.append(", direction=");
+        f.append(this.direction);
+        f.append(')');
+        return f.toString();
     }
 }

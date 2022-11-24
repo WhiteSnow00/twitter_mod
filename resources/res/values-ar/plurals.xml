@@ -317,8 +317,8 @@
         <item quantity="other">‏%d آخرون</item>
     </plurals>
     <plurals name="profile_super_followers_count">
-        <item quantity="one">‏المتابِع الفائق</item>
-        <item quantity="other">‏المتابعون الفائقون</item>
+        <item quantity="one">‏مشترك فائق</item>
+        <item quantity="other">‏المشتركون الفائقون</item>
     </plurals>
     <plurals name="profile_toolbar_subtitle_likes">
         <item quantity="one">‏%s أعجبه</item>
@@ -414,7 +414,7 @@
         <item quantity="other">‏ردا على ﻿%1$s و%2$d آخرين﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_exclusive">
-        <item quantity="other">‏ردًا على ﻿%1$s و%2$d آخرين﻿. سيكون ردك مرئيًا أيضًا للمتابعين الفائقين الآخرين.</item>
+        <item quantity="other">‏ردًا على ﻿%1$s و %2$d آخرين﻿. سيظهر ردّك أيضًا للمشتركين الآخرين.</item>
     </plurals>
     <plurals name="reply_context_to_someone_and_n_others_in_space">
         <item quantity="other">‏ردًّا على ﻿%1$s و%2$d آخرين﻿ في ﻿%3$s﻿</item>
@@ -423,7 +423,7 @@
         <item quantity="other">‏ردًا على ﻿%1$s %2$s و%3$d آخرين﻿</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_exclusive">
-        <item quantity="other">‏ردًا على ﻿%1$s %2$s و%3$d آخرين﻿. سيكون ردك مرئيًا أيضًا للمتابعين الفائقين الآخرين.</item>
+        <item quantity="other">‏ردًا على ﻿%1$s %2$s و%3$d آخرين﻿. سيظهر ردّك أيضًا للمشتركين الفائقين الآخرين.</item>
     </plurals>
     <plurals name="reply_context_to_someone_someone_and_n_others_in_space">
         <item quantity="other">‏ردًّا على ﻿%1$s %2$s و%3$d آخرين﻿ في ﻿%4$s﻿</item>

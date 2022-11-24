@@ -1,231 +1,201 @@
-import java.util.Iterator;
-import java.util.zip.ZipEntry;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.content.res.Resources$NotFoundException;
-import java.io.Closeable;
-import java.io.InputStream;
-import java.io.IOException;
-import java.util.zip.ZipInputStream;
-import android.content.Context;
+import java.util.LinkedHashMap;
 import java.util.Objects;
-import java.util.concurrent.Callable;
-import java.util.HashMap;
 import java.util.Map;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class cdg
+public abstract class cdg extends bdg implements wqg
 {
-    public static final Map<String, wdg<adg>> a;
-    public static final byte[] b;
+    public final qni L0;
+    public final gdg M0;
+    public long N0;
+    public Map<fx, Integer> O0;
+    public final edg P0;
+    public arg Q0;
+    public final Map<fx, Integer> R0;
     
-    static {
-        cdg.a = new HashMap();
-        b = new byte[] { 80, 75, 3, 4 };
+    public cdg(final qni l0, final gdg m0) {
+        e0e.f((Object)l0, "coordinator");
+        e0e.f((Object)m0, "lookaheadScope");
+        this.L0 = l0;
+        this.M0 = m0;
+        Objects.requireNonNull(hud.Companion);
+        this.N0 = hud.b;
+        this.P0 = new edg(this);
+        this.R0 = new LinkedHashMap();
     }
     
-    public static wdg<adg> a(final String s, final Callable<udg<adg>> callable) {
-        adg adg;
-        if (s == null) {
-            adg = null;
+    public static final void U0(final cdg cdg, final arg q0) {
+        Objects.requireNonNull(cdg);
+        vzv a;
+        if (q0 != null) {
+            ((khk)cdg).I0(shw.f(q0.getWidth(), q0.getHeight()));
+            a = vzv.a;
         }
         else {
-            final bdg b = bdg.b;
-            Objects.requireNonNull(b);
-            adg = (adg)b.a.c(s);
+            a = null;
         }
-        if (adg != null) {
-            return (wdg<adg>)new wdg((Callable)new Callable<udg<adg>>(adg) {
-                public final adg D0;
-                
-                @Override
-                public final Object call() throws Exception {
-                    return new udg(this.D0);
+        if (a == null) {
+            Objects.requireNonNull(nud.Companion);
+            ((khk)cdg).I0(0L);
+        }
+        if (!e0e.a((Object)cdg.Q0, (Object)q0) && q0 != null) {
+            final LinkedHashMap o0 = cdg.O0;
+            if (((o0 != null && !o0.isEmpty()) || (q0.d().isEmpty() ^ true)) && !e0e.a((Object)q0.d(), (Object)cdg.O0)) {
+                ((lx)((ywe$a)cdg.V0()).P0).g();
+                LinkedHashMap o2;
+                if ((o2 = cdg.O0) == null) {
+                    o2 = new LinkedHashMap();
+                    cdg.O0 = o2;
                 }
-            }, false);
-        }
-        if (s != null) {
-            final HashMap a = cdg.a;
-            if (a.containsKey(s)) {
-                return (wdg<adg>)a.get(s);
+                o2.clear();
+                o2.putAll(q0.d());
             }
         }
-        final wdg wdg = new wdg((Callable)callable, false);
-        if (s != null) {
-            wdg.b((mdg)new cdg$a(s));
-            wdg.a((mdg)new cdg$b(s));
-            cdg.a.put(s, wdg);
-        }
-        return (wdg<adg>)wdg;
+        cdg.Q0 = q0;
     }
     
-    public static udg<adg> b(final Context context, final String s, final String s2) {
-        try {
-            if (!s.endsWith(".zip") && !s.endsWith(".lottie")) {
-                return c(context.getAssets().open(s), s2);
+    public final void G0(final long n0, final float n2, final stb<? super q8c, vzv> stb) {
+        if (!hud.b(this.N0, n0)) {
+            this.N0 = n0;
+            final ywe$a l = this.L0.L0.h1.l;
+            if (l != null) {
+                l.M0();
             }
-            return f(new ZipInputStream(context.getAssets().open(s)), s2);
+            this.S0(this.L0);
         }
-        catch (final IOException ex) {
-            return new udg<adg>(ex);
+        if (super.J0) {
+            return;
         }
+        this.W0();
     }
     
-    public static udg<adg> c(final InputStream inputStream, final String s) {
-        try {
-            final dr2 j = yvl.j(yvl.V(inputStream));
-            final String[] h0 = nhe.H0;
-            return d((nhe)new nke(j), s, true);
-        }
-        finally {
-            hnw.b((Closeable)inputStream);
-        }
+    public int H(final int n) {
+        final qni m0 = this.L0.M0;
+        e0e.c((Object)m0);
+        final cdg u0 = m0.U0;
+        e0e.c((Object)u0);
+        return u0.H(n);
     }
     
-    public static udg<adg> d(final nhe nhe, final String s, final boolean b) {
-        try {
-            try {
-                final adg a = hdg.a(nhe);
-                if (s != null) {
-                    bdg.b.a(s, a);
-                }
-                final udg udg = new udg<adg>(a);
-                if (b) {
-                    hnw.b((Closeable)nhe);
-                }
-                return (udg<adg>)udg;
-            }
-            finally {
-                if (b) {
-                    hnw.b((Closeable)nhe);
-                }
-                hnw.b((Closeable)nhe);
-                return;
-            }
-        }
-        catch (final Exception ex) {}
+    public int K(final int n) {
+        final qni m0 = this.L0.M0;
+        e0e.c((Object)m0);
+        final cdg u0 = m0.U0;
+        e0e.c((Object)u0);
+        return u0.K(n);
     }
     
-    public static udg<adg> e(final Context context, int i, final String s) {
-        try {
-            final dr2 j = yvl.j(yvl.V(context.getResources().openRawResource(i)));
-            Boolean b2 = null;
-            Label_0098: {
-                try {
-                    final dr2 peek = ((m2m)j).peek();
-                    final byte[] b = cdg.b;
-                    int length;
-                    for (length = b.length, i = 0; i < length; ++i) {
-                        if (((m2m)peek).readByte() != b[i]) {
-                            b2 = Boolean.FALSE;
-                            break Label_0098;
-                        }
-                    }
-                    ((m2m)peek).close();
-                    b2 = Boolean.TRUE;
-                }
-                catch (final Exception ex) {
-                    Objects.requireNonNull(p9g.a);
-                    b2 = Boolean.FALSE;
-                }
-            }
-            if (b2) {
-                return f(new ZipInputStream((InputStream)new m2m$a((m2m)j)), s);
-            }
-            return c((InputStream)new m2m$a((m2m)j), s);
-        }
-        catch (final Resources$NotFoundException ex2) {
-            return new udg<adg>((Throwable)ex2);
-        }
-    }
-    
-    public static udg<adg> f(final ZipInputStream zipInputStream, final String s) {
-        try {
-            return g(zipInputStream, s);
-        }
-        finally {
-            hnw.b((Closeable)zipInputStream);
-        }
-    }
-    
-    public static udg<adg> g(final ZipInputStream zipInputStream, final String s) {
-        final HashMap hashMap = new HashMap();
-        try {
-            ZipEntry zipEntry = zipInputStream.getNextEntry();
-            adg adg = null;
-            while (zipEntry != null) {
-                final String name = zipEntry.getName();
-                if (name.contains("__MACOSX")) {
-                    zipInputStream.closeEntry();
-                }
-                else if (zipEntry.getName().equalsIgnoreCase("manifest.json")) {
-                    zipInputStream.closeEntry();
-                }
-                else if (zipEntry.getName().contains(".json")) {
-                    final dr2 j = yvl.j(yvl.V((InputStream)zipInputStream));
-                    final String[] h0 = nhe.H0;
-                    adg = d((nhe)new nke(j), null, false).a;
-                }
-                else if (!name.contains(".png") && !name.contains(".webp")) {
-                    zipInputStream.closeEntry();
-                }
-                else {
-                    final String[] split = name.split("/");
-                    hashMap.put(split[split.length - 1], BitmapFactory.decodeStream((InputStream)zipInputStream));
-                }
-                zipEntry = zipInputStream.getNextEntry();
-            }
-            if (adg == null) {
-                return new udg<adg>(new IllegalArgumentException("Unable to parse composition"));
-            }
-        Label_0210:
-            for (final Map.Entry<String, V> entry : hashMap.entrySet()) {
-                final String s2 = entry.getKey();
-                while (true) {
-                    for (final ldg ldg : adg.d.values()) {
-                        if (ldg.c.equals(s2)) {
-                            if (ldg != null) {
-                                ldg.d = hnw.e((Bitmap)entry.getValue(), ldg.a, ldg.b);
-                                continue Label_0210;
-                            }
-                            continue Label_0210;
-                        }
-                    }
-                    ldg ldg = null;
-                    continue;
-                }
-            }
-            for (final Map.Entry<K, ldg> entry2 : adg.d.entrySet()) {
-                if (entry2.getValue().d == null) {
-                    final StringBuilder i = fu8.j("There is no image for ");
-                    i.append(entry2.getValue().c);
-                    return new udg<adg>(new IllegalStateException(i.toString()));
-                }
-            }
-            if (s != null) {
-                bdg.b.a(s, adg);
-            }
-            return new udg<adg>(adg);
-        }
-        catch (final IOException ex) {
-            return new udg<adg>(ex);
-        }
-    }
-    
-    public static String h(final Context context, final int n) {
-        final StringBuilder j = fu8.j("rawRes");
-        String s;
-        if ((context.getResources().getConfiguration().uiMode & 0x30) == 0x20) {
-            s = "_night_";
+    public final bdg L0() {
+        final qni m0 = this.L0.M0;
+        cdg u0;
+        if (m0 != null) {
+            u0 = m0.U0;
         }
         else {
-            s = "_day_";
+            u0 = null;
         }
-        j.append(s);
-        j.append(n);
-        return j.toString();
+        return u0;
+    }
+    
+    public final bwe M0() {
+        return (bwe)this.P0;
+    }
+    
+    public final boolean N0() {
+        return this.Q0 != null;
+    }
+    
+    public final swe O0() {
+        return this.L0.L0;
+    }
+    
+    public final arg P0() {
+        final arg q0 = this.Q0;
+        if (q0 != null) {
+            return q0;
+        }
+        throw new IllegalStateException("LookaheadDelegate has not been measured yet when measureResult is requested.".toString());
+    }
+    
+    public final bdg Q0() {
+        final qni n0 = this.L0.N0;
+        cdg u0;
+        if (n0 != null) {
+            u0 = n0.U0;
+        }
+        else {
+            u0 = null;
+        }
+        return u0;
+    }
+    
+    public final long R0() {
+        return this.N0;
+    }
+    
+    public final void T0() {
+        this.G0(this.N0, 0.0f, null);
+    }
+    
+    public final mx V0() {
+        final ywe$a l = this.L0.L0.h1.l;
+        e0e.c((Object)l);
+        return (mx)l;
+    }
+    
+    public void W0() {
+        final khk$a.a companion = khk$a.Companion;
+        final int width = this.P0().getWidth();
+        final cwe v0 = this.L0.L0.V0;
+        final bwe c = khk$a.c;
+        Objects.requireNonNull(companion);
+        final int b = khk$a.b;
+        Objects.requireNonNull(companion);
+        final cwe a = khk$a.a;
+        final ywe d = khk$a.d;
+        khk$a.b = width;
+        khk$a.a = v0;
+        final boolean n = khk.khk$a.a.n(companion, this);
+        this.P0().c();
+        super.K0 = n;
+        khk$a.b = b;
+        khk$a.a = a;
+        khk$a.c = c;
+        khk$a.d = d;
+    }
+    
+    public int e(final int n) {
+        final qni m0 = this.L0.M0;
+        e0e.c((Object)m0);
+        final cdg u0 = m0.U0;
+        e0e.c((Object)u0);
+        return u0.e(n);
+    }
+    
+    public final float getDensity() {
+        return this.L0.getDensity();
+    }
+    
+    public final cwe getLayoutDirection() {
+        return this.L0.L0.V0;
+    }
+    
+    public final Object m() {
+        return this.L0.m();
+    }
+    
+    public final float p0() {
+        return this.L0.p0();
+    }
+    
+    public int x(final int n) {
+        final qni m0 = this.L0.M0;
+        e0e.c((Object)m0);
+        final cdg u0 = m0.U0;
+        e0e.c((Object)u0);
+        return u0.x(n);
     }
 }

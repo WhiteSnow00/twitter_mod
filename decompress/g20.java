@@ -9,28 +9,28 @@ import java.io.Serializable;
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class g20 implements g6s<g20, g20.g20$a>, Serializable, Cloneable
+public final class g20 implements a7s<g20, g20.g20$a>, Serializable, Cloneable
 {
-    public static final j6s E0;
-    public static final Map<g20.g20$a, kwa> F0;
-    public static final g20.g20$a G0;
-    public s70 D0;
+    public static final d7s G0;
+    public static final Map<g20.g20$a, oxa> H0;
+    public static final g20.g20$a I0;
+    public t70 F0;
     
     static {
-        E0 = new j6s("visibility", (byte)8, (short)1);
+        G0 = new d7s("visibility", (byte)8, (short)1);
         final EnumMap enumMap = new EnumMap((Class<K>)g20.g20$a.class);
-        final g20.g20$a f0 = g20.g20$a.F0;
-        enumMap.put(f0, new kwa());
-        kwa.a((Class)g20.class, F0 = Collections.unmodifiableMap((Map<?, ?>)enumMap));
-        G0 = f0;
+        final g20.g20$a h0 = g20.g20$a.H0;
+        enumMap.put(h0, new oxa());
+        oxa.a((Class)g20.class, H0 = Collections.unmodifiableMap((Map<?, ?>)enumMap));
+        I0 = h0;
     }
     
     public g20() {
     }
     
-    public g20(final s70 d0) {
-        if (d0 != null) {
-            this.D0 = d0;
+    public g20(final t70 f0) {
+        if (f0 != null) {
+            this.F0 = f0;
         }
     }
     
@@ -41,11 +41,11 @@ public final class g20 implements g6s<g20, g20.g20$a>, Serializable, Cloneable
             n = g20.class.getName().compareTo(g20.class.getName());
         }
         else {
-            final g20.g20$a f0 = g20.g20$a.F0;
+            final g20.g20$a h0 = g20.g20$a.H0;
             n = Boolean.valueOf(this.i()).compareTo(Boolean.valueOf(g20.i()));
             if (n == 0) {
                 if (this.i()) {
-                    n = ((Enum)this.D0).compareTo((Object)g20.D0);
+                    n = ((Enum)this.F0).compareTo((Object)g20.F0);
                     if (n != 0) {
                         return n;
                     }
@@ -56,16 +56,16 @@ public final class g20 implements g6s<g20, g20.g20$a>, Serializable, Cloneable
         return n;
     }
     
-    public final void e(final p6s p6s) throws TException {
-        Objects.requireNonNull(p6s);
-        if (this.D0 != null) {
-            final g20.g20$a f0 = g20.g20$a.F0;
+    public final void e(final j7s j7s) throws TException {
+        Objects.requireNonNull(j7s);
+        if (this.F0 != null) {
+            final g20.g20$a h0 = g20.g20$a.H0;
             if (this.i()) {
-                p6s.m(g20.E0);
-                p6s.o(this.D0.D0);
+                j7s.m(g20.G0);
+                j7s.o(this.F0.F0);
             }
         }
-        ((i6s)p6s).k((byte)0);
+        ((c7s)j7s).k((byte)0);
     }
     
     @Override
@@ -73,22 +73,22 @@ public final class g20 implements g6s<g20, g20.g20$a>, Serializable, Cloneable
         return o != null && o instanceof g20 && this.g((g20)o);
     }
     
-    public final void f(final p6s p6s) throws TException {
-        Objects.requireNonNull(p6s);
+    public final void f(final j7s j7s) throws TException {
+        Objects.requireNonNull(j7s);
         while (true) {
-            final j6s d = p6s.d();
+            final d7s d = j7s.d();
             final byte b = d.b;
             if (b == 0) {
                 break;
             }
             if (d.c != 1) {
-                pps.q(p6s, b);
+                xli.F(j7s, b);
             }
             else if (b == 8) {
-                this.D0 = s70.b(p6s.f());
+                this.F0 = t70.b(j7s.f());
             }
             else {
-                pps.q(p6s, b);
+                xli.F(j7s, b);
             }
         }
     }
@@ -97,14 +97,14 @@ public final class g20 implements g6s<g20, g20.g20$a>, Serializable, Cloneable
         if (g20 == null) {
             return false;
         }
-        final g20.g20$a f0 = g20$a.F0;
+        final g20.g20$a h0 = g20$a.H0;
         final boolean i = this.i();
         final boolean j = g20.i();
         if (i || j) {
             if (!i || !j) {
                 return false;
             }
-            if (!this.D0.equals(g20.D0)) {
+            if (!this.F0.equals(g20.F0)) {
                 return false;
             }
         }
@@ -113,10 +113,10 @@ public final class g20 implements g6s<g20, g20.g20$a>, Serializable, Cloneable
     
     @Override
     public final int hashCode() {
-        final g20.g20$a f0 = g20.g20$a.F0;
+        final g20.g20$a h0 = g20.g20$a.H0;
         int n;
         if (this.i()) {
-            n = this.D0.hashCode() + 31;
+            n = this.F0.hashCode() + 31;
         }
         else {
             n = 1;
@@ -125,22 +125,22 @@ public final class g20 implements g6s<g20, g20.g20$a>, Serializable, Cloneable
     }
     
     public final boolean i() {
-        final g20.g20$a f0 = g20.g20$a.F0;
-        return this.D0 != null;
+        final g20.g20$a h0 = g20.g20$a.H0;
+        return this.F0 != null;
     }
     
     @Override
     public final String toString() {
         final StringBuilder sb = new StringBuilder("AndroidCardView(");
-        final g20.g20$a f0 = g20.g20$a.F0;
+        final g20.g20$a h0 = g20.g20$a.H0;
         if (this.i()) {
             sb.append("visibility:");
-            final s70 d0 = this.D0;
-            if (d0 == null) {
+            final t70 f0 = this.F0;
+            if (f0 == null) {
                 sb.append("null");
             }
             else {
-                sb.append(d0);
+                sb.append(f0);
             }
         }
         sb.append(")");

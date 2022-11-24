@@ -1,26 +1,22 @@
-import java.util.List;
+import android.view.View;
+import android.widget.TextView;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class epp extends ste implements qsb<bqp, bqp>
+public final class epp extends sl8
 {
-    public final List<oap> D0;
-    public final String E0;
+    public final TextView G0;
+    public final TextView H0;
+    public final TextView I0;
+    public final e39 J0;
     
-    public epp(final List<oap> d0, final String e0) {
-        this.D0 = d0;
-        this.E0 = e0;
-        super(1);
-    }
-    
-    public final Object invoke(final Object o) {
-        czd.f((Object)o, "$this$setState");
-        final List<oap> d0 = this.D0;
-        final String e0 = this.E0;
-        czd.f((Object)d0, "results");
-        czd.f((Object)e0, "query");
-        return new bqp(d0, e0);
+    public epp(final View view) {
+        super(view);
+        this.J0 = new e39();
+        this.G0 = (TextView)view.findViewById(2131430698);
+        this.H0 = (TextView)view.findViewById(2131431298);
+        this.I0 = (TextView)view.findViewById(2131431750);
     }
 }

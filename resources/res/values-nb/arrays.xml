@@ -2,28 +2,28 @@
 <resources>
     <array name="account_notif_confirmations">
         <item>Du vil motta varsler for nye Tweeter.</item>
-        <item>Du mottar varsler om nye tweets bare for superfølgere.</item>
+        <item>Du blir varslet om nye abonnementstweets.</item>
         <item>Du mottar varsler om nye tweets med direktesendt video.</item>
         <item>Du mottar varsler om nye tweets om Områder.</item>
         <item>Du vil ikke lenger motta varsler om nye tweets.</item>
     </array>
     <array name="account_notif_options">
         <item>Tweets</item>
-        <item>Tweets bare for superfølgere</item>
+        <item>Tweets bare for abonnenter</item>
         <item>Direktesendt video</item>
         <item>Områder</item>
         <item>Ingen</item>
     </array>
     <array name="account_notif_options_old">
         <item>Alle tweets</item>
-        <item>Bare superfølgertweets</item>
+        <item>Bare abonnementstweets</item>
         <item>Bare direktesendt video</item>
         <item>Bare Områder</item>
         <item>Av</item>
     </array>
     <array name="account_notif_subtitles">
         <item>Få varsler for alle denne kontoens Tweets.</item>
-        <item>Bare bli varslet om superfølgertweets.</item>
+        <item>Bare bli varslet om abonnementstweets.</item>
         <item>Bare bli varslet om direktesendinger.</item>
         <item>Bare bli varslet om Områder.</item>
         <item>Slå av varsler for denne kontoens tweets.</item>

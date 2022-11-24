@@ -10,21 +10,21 @@ import com.bluelinelabs.logansquare.annotation.JsonField;
 import com.bluelinelabs.logansquare.annotation.JsonObject;
 
 @JsonObject
-public class JsonSpellingResult extends aih<z0r>
+public class JsonSpellingResult extends tih<r2r>
 {
     @JsonField(name = { "text" })
     public String a;
     @JsonField(name = { "hitHighlights" })
-    public List<d7w> b;
+    public List<c8w> b;
     @JsonField(name = { "score" })
     public float c;
     
     @Override
     public final Object s() {
-        if (!pjr.e((CharSequence)this.a)) {
+        if (!flr.e((CharSequence)this.a)) {
             final ArrayList b = this.b;
             if (b != null) {
-                return new z0r(this.a, (List)b, this.c);
+                return new r2r(this.a, b, this.c);
             }
         }
         return null;

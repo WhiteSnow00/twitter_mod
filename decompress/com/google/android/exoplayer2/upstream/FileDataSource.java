@@ -4,8 +4,6 @@
 
 package com.google.android.exoplayer2.upstream;
 
-import android.system.OsConstants;
-import android.system.ErrnoException;
 import java.io.FileNotFoundException;
 import android.text.TextUtils;
 import java.io.IOException;
@@ -13,7 +11,7 @@ import java.util.Objects;
 import android.net.Uri;
 import java.io.RandomAccessFile;
 
-public final class FileDataSource extends jk1
+public final class FileDataSource extends nk1
 {
     public RandomAccessFile e;
     public Uri f;
@@ -60,7 +58,7 @@ public final class FileDataSource extends jk1
         }
         catch (final FileNotFoundException ex4) {
             if (TextUtils.isEmpty((CharSequence)a.getQuery()) && TextUtils.isEmpty((CharSequence)a.getFragment())) {
-                if (cnw.a < 21 || !FileDataSource.a.a(ex4.getCause())) {
+                if (rnw.a < 21 || !FileDataSource.FileDataSource$a.a(ex4.getCause())) {
                     n = 2005;
                 }
                 throw new FileDataSource.FileDataSource$FileDataSourceException((Throwable)ex4, n);
@@ -79,7 +77,7 @@ public final class FileDataSource extends jk1
         }
         try {
             final RandomAccessFile e = this.e;
-            final int a = cnw.a;
+            final int a = rnw.a;
             read = e.read(array, read, (int)Math.min(g, n));
             if (read > 0) {
                 this.g -= read;
@@ -119,16 +117,5 @@ public final class FileDataSource extends jk1
     
     public final Uri m() {
         return this.f;
-    }
-    
-    public static final class a
-    {
-        public static boolean a(final Throwable t) {
-            return b(t);
-        }
-        
-        private static boolean b(final Throwable t) {
-            return t instanceof ErrnoException && ((ErrnoException)t).errno == OsConstants.EACCES;
-        }
     }
 }

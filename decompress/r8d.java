@@ -1,88 +1,74 @@
-import android.content.res.Resources$Theme;
-import java.lang.ref.WeakReference;
-import java.util.HashMap;
+import android.content.Context;
+import com.facebook.common.memory.PooledByteBuffer;
+import java.util.Set;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class r8d
+public interface r8d
 {
-    public final HashMap<b, WeakReference<a>> a;
+    p6d A();
     
-    public r8d() {
-        this.a = new HashMap<b, WeakReference<a>>();
-    }
+    x4h B();
     
-    public static final class a
-    {
-        public final q8d a;
-        public final int b;
-        
-        public a(final q8d a, final int b) {
-            this.a = a;
-            this.b = b;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof a)) {
-                return false;
-            }
-            final a a = (a)o;
-            return czd.a((Object)this.a, (Object)a.a) && this.b == a.b;
-        }
-        
-        @Override
-        public final int hashCode() {
-            return this.a.hashCode() * 31 + this.b;
-        }
-        
-        @Override
-        public final String toString() {
-            final StringBuilder j = fu8.j("ImageVectorEntry(imageVector=");
-            j.append(this.a);
-            j.append(", configFlags=");
-            return x70.C(j, this.b, ')');
-        }
-    }
+    void C();
     
-    public static final class b
-    {
-        public final Resources$Theme a;
-        public final int b;
-        
-        public b(final Resources$Theme a, final int b) {
-            this.a = a;
-            this.b = b;
-        }
-        
-        @Override
-        public final boolean equals(final Object o) {
-            if (this == o) {
-                return true;
-            }
-            if (!(o instanceof b)) {
-                return false;
-            }
-            final b b = (b)o;
-            return czd.a((Object)this.a, (Object)b.a) && this.b == b.b;
-        }
-        
-        @Override
-        public final int hashCode() {
-            return this.a.hashCode() * 31 + this.b;
-        }
-        
-        @Override
-        public final String toString() {
-            final StringBuilder j = fu8.j("Key(theme=");
-            j.append(this.a);
-            j.append(", id=");
-            return x70.C(j, this.b, ')');
-        }
-    }
+    s8d D();
+    
+    mga E();
+    
+    Set<xpm> a();
+    
+    zzr<Boolean> b();
+    
+    idi c();
+    
+    k4h<z73, PooledByteBuffer> d();
+    
+    p09 e();
+    
+    Set<ypm> f();
+    
+    k4h$a g();
+    
+    Context getContext();
+    
+    xil h();
+    
+    p09 i();
+    
+    zz6.b<z73> j();
+    
+    void k();
+    
+    void l();
+    
+    void m();
+    
+    void n();
+    
+    c7d o();
+    
+    boolean p();
+    
+    zzr<l4h> q();
+    
+    void r();
+    
+    zzr<l4h> s();
+    
+    crk t();
+    
+    void u();
+    
+    dya v();
+    
+    d4j w();
+    
+    s02 x();
+    
+    d83 y();
+    
+    boolean z();
 }

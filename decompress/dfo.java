@@ -2,15 +2,11 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public interface dfo
+public final class dfo
 {
-    void a(final String p0);
+    public jk6<Integer> a;
     
-    afo b(final String p0);
-    
-    void c(final String p0, final afo p1);
-    
-    String d();
-    
-    void e(final String p0);
+    public dfo() {
+        this.a = (jk6<Integer>)new jk6((Object)(-1));
+    }
 }

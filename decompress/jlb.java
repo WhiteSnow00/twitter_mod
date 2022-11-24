@@ -1,13 +1,13 @@
-import android.annotation.SuppressLint;
-import android.content.pm.PackageManager$NameNotFoundException;
-import android.content.Context;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.TimeUnit;
+import android.util.Base64;
+import java.util.Collections;
+import java.util.List;
+import java.io.IOException;
+import android.content.res.TypedArray;
+import org.xmlpull.v1.XmlPullParserException;
 import java.util.ArrayList;
-import java.util.concurrent.ThreadPoolExecutor;
-import android.graphics.Typeface;
+import android.util.Xml;
+import android.content.res.Resources;
+import org.xmlpull.v1.XmlPullParser;
 
 // 
 // Decompiled by Procyon v0.6.0
@@ -15,106 +15,173 @@ import android.graphics.Typeface;
 
 public final class jlb
 {
-    public static final seg<String, Typeface> a;
-    public static final ThreadPoolExecutor b;
-    public static final Object c;
-    public static final l7q<String, ArrayList<hk6<a>>> d;
-    
-    static {
-        a = new seg(16);
-        final ThreadPoolExecutor b2 = new ThreadPoolExecutor(0, 1, 10000, TimeUnit.MILLISECONDS, new LinkedBlockingDeque<Runnable>(), (ThreadFactory)new umm());
-        b2.allowCoreThreadTimeOut(true);
-        b = b2;
-        c = new Object();
-        d = new l7q();
-    }
-    
-    public static String a(final dlb dlb, final int n) {
-        final StringBuilder sb = new StringBuilder();
-        sb.append(dlb.e);
-        sb.append("-");
-        sb.append(n);
-        return sb.toString();
-    }
-    
-    public static a b(final String s, final Context context, final dlb dlb, final int n) {
-        final Typeface typeface = (Typeface)jlb.a.c((Object)s);
-        if (typeface != null) {
-            return new a(typeface);
-        }
-        try {
-            final slb a = clb.a(context, dlb);
-            final int a2 = a.a;
-            final int n2 = 1;
-            int n3 = 0;
-            Label_0147: {
-                Label_0124: {
-                    if (a2 != 0) {
-                        if (a2 == 1) {
-                            n3 = -2;
-                            break Label_0147;
+    public static b a(final XmlPullParser xmlPullParser, final Resources resources) throws XmlPullParserException, IOException {
+        int next;
+        do {
+            next = xmlPullParser.next();
+        } while (next != 2 && next != 1);
+        if (next == 2) {
+            xmlPullParser.require(2, (String)null, "font-family");
+            if (xmlPullParser.getName().equals("font-family")) {
+                final TypedArray obtainAttributes = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), xd.N0);
+                final String string = obtainAttributes.getString(0);
+                final String string2 = obtainAttributes.getString(4);
+                final String string3 = obtainAttributes.getString(5);
+                final int resourceId = obtainAttributes.getResourceId(1, 0);
+                final int integer = obtainAttributes.getInteger(2, 1);
+                final int integer2 = obtainAttributes.getInteger(3, 500);
+                final String string4 = obtainAttributes.getString(6);
+                obtainAttributes.recycle();
+                if (string != null && string2 != null && string3 != null) {
+                    while (xmlPullParser.next() != 3) {
+                        c(xmlPullParser);
+                    }
+                    final Object o = new jlb.jlb$e(new clb(string, string2, string3, b(resources, resourceId)), integer, integer2, string4);
+                    return (b)o;
+                }
+                final ArrayList list = new ArrayList();
+                while (xmlPullParser.next() != 3) {
+                    if (xmlPullParser.getEventType() != 2) {
+                        continue;
+                    }
+                    if (xmlPullParser.getName().equals("font")) {
+                        final TypedArray obtainAttributes2 = resources.obtainAttributes(Xml.asAttributeSet(xmlPullParser), xd.O0);
+                        int n = 8;
+                        if (!obtainAttributes2.hasValue(8)) {
+                            n = 1;
                         }
+                        final int int1 = obtainAttributes2.getInt(n, 400);
+                        int n2;
+                        if (obtainAttributes2.hasValue(6)) {
+                            n2 = 6;
+                        }
+                        else {
+                            n2 = 2;
+                        }
+                        final boolean b = 1 == obtainAttributes2.getInt(n2, 0);
+                        int n3 = 9;
+                        if (!obtainAttributes2.hasValue(9)) {
+                            n3 = 3;
+                        }
+                        int n4 = 7;
+                        if (!obtainAttributes2.hasValue(7)) {
+                            n4 = 4;
+                        }
+                        final String string5 = obtainAttributes2.getString(n4);
+                        final int int2 = obtainAttributes2.getInt(n3, 0);
+                        int n5;
+                        if (obtainAttributes2.hasValue(5)) {
+                            n5 = 5;
+                        }
+                        else {
+                            n5 = 0;
+                        }
+                        final int resourceId2 = obtainAttributes2.getResourceId(n5, 0);
+                        final String string6 = obtainAttributes2.getString(n5);
+                        obtainAttributes2.recycle();
+                        while (xmlPullParser.next() != 3) {
+                            c(xmlPullParser);
+                        }
+                        list.add(new d(string6, int1, b, string5, int2, resourceId2));
                     }
                     else {
-                        final tlb[] b = a.b;
-                        n3 = n2;
-                        if (b == null) {
-                            break Label_0147;
-                        }
-                        if (b.length == 0) {
-                            n3 = n2;
-                            break Label_0147;
-                        }
-                        final int length = b.length;
-                        int i = 0;
-                        while (i < length) {
-                            final int e = b[i].e;
-                            if (e != 0) {
-                                if (e < 0) {
-                                    break Label_0124;
-                                }
-                                n3 = e;
-                                break Label_0147;
-                            }
-                            else {
-                                ++i;
-                            }
-                        }
-                        n3 = 0;
-                        break Label_0147;
+                        c(xmlPullParser);
                     }
                 }
-                n3 = -3;
+                if (!list.isEmpty()) {
+                    final Object o = new jlb.jlb$c((d[])list.toArray(new d[0]));
+                    return (b)o;
+                }
             }
-            if (n3 != 0) {
-                return new a(n3);
+            else {
+                c(xmlPullParser);
             }
-            final Typeface b2 = ilv.a.b(context, a.b, n);
-            if (b2 != null) {
-                jlb.a.d((Object)s, (Object)b2);
-                return new a(b2);
-            }
-            return new a(-3);
+            final Object o = null;
+            return (b)o;
         }
-        catch (final PackageManager$NameNotFoundException ex) {
-            return new a(-1);
+        throw new XmlPullParserException("No start tag found");
+    }
+    
+    public static List<List<byte[]>> b(final Resources resources, int i) {
+        if (i == 0) {
+            return Collections.emptyList();
         }
+        final TypedArray obtainTypedArray = resources.obtainTypedArray(i);
+        try {
+            if (obtainTypedArray.length() == 0) {
+                return Collections.emptyList();
+            }
+            final ArrayList<List<byte[]>> list = new ArrayList<List<byte[]>>();
+            if (a.a(obtainTypedArray, 0) == 1) {
+                int resourceId;
+                for (i = 0; i < obtainTypedArray.length(); ++i) {
+                    resourceId = obtainTypedArray.getResourceId(i, 0);
+                    if (resourceId != 0) {
+                        list.add(d(resources.getStringArray(resourceId)));
+                    }
+                }
+            }
+            else {
+                list.add(d(resources.getStringArray(i)));
+            }
+            return list;
+        }
+        finally {
+            obtainTypedArray.recycle();
+        }
+    }
+    
+    public static void c(final XmlPullParser xmlPullParser) throws XmlPullParserException, IOException {
+        int i = 1;
+        while (i > 0) {
+            final int next = xmlPullParser.next();
+            if (next != 2) {
+                if (next != 3) {
+                    continue;
+                }
+                --i;
+            }
+            else {
+                ++i;
+            }
+        }
+    }
+    
+    public static List<byte[]> d(final String[] array) {
+        final ArrayList list = new ArrayList();
+        for (int length = array.length, i = 0; i < length; ++i) {
+            list.add(Base64.decode(array[i], 0));
+        }
+        return list;
     }
     
     public static final class a
     {
-        public final Typeface a;
-        public final int b;
-        
-        public a(final int b) {
-            this.a = null;
-            this.b = b;
+        public static int a(final TypedArray typedArray, final int n) {
+            return typedArray.getType(n);
         }
+    }
+    
+    public interface b
+    {
+    }
+    
+    public static final class d
+    {
+        public final String a;
+        public final int b;
+        public final boolean c;
+        public final String d;
+        public final int e;
+        public final int f;
         
-        @SuppressLint({ "WrongConstant" })
-        public a(final Typeface a) {
+        public d(final String a, final int b, final boolean c, final String d, final int e, final int f) {
             this.a = a;
-            this.b = 0;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+            this.e = e;
+            this.f = f;
         }
     }
 }

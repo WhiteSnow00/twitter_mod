@@ -2,25 +2,19 @@
 // Decompiled by Procyon v0.6.0
 // 
 
-public enum b7l
+public final class b7l extends pue implements stb<q7l, vzv>
 {
-    public static final a Companion;
+    public final q6l F0;
     
-    E0("UNKNOWN__");
-    
-    public static final b7l[] F0;
-    public final String D0;
-    
-    static {
-        Companion = new a();
-        s9i.s("Business", "Creator");
+    public b7l(final q6l f0) {
+        this.F0 = f0;
+        super(1);
     }
     
-    public b7l(final String d0) {
-        this.D0 = d0;
-    }
-    
-    public static final class a
-    {
+    public final Object invoke(final Object o) {
+        final q7l q7l = (q7l)o;
+        e0e.f((Object)q7l, "$this$distinct");
+        this.F0.R0.setChecked(q7l.d);
+        return vzv.a;
     }
 }

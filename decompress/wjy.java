@@ -1,28 +1,38 @@
-import java.io.Serializable;
+import android.os.Build$VERSION;
 
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class wjy<K, V> extends dey<K, V> implements Serializable
+public final class wjy
 {
-    public final K C0;
-    public final V D0;
-    
-    public wjy(final K c0, final V d0) {
-        this.C0 = c0;
-        this.D0 = d0;
-    }
-    
-    public final K getKey() {
-        return this.C0;
-    }
-    
-    public final V getValue() {
-        return this.D0;
-    }
-    
-    public final V setValue(final V v) {
-        throw new UnsupportedOperationException();
+    public static iiy a() {
+        switch (Build$VERSION.SDK_INT) {
+            case 27: {
+                if (Build$VERSION.PREVIEW_SDK_INT == 0) {
+                    return (iiy)new kny(6);
+                }
+                break;
+            }
+            case 26: {
+                return (iiy)new dnl();
+            }
+            case 25: {
+                return (iiy)new cmi();
+            }
+            case 24: {
+                return (iiy)new d4j();
+            }
+            case 23: {
+                return (iiy)new tpz();
+            }
+            case 22: {
+                return (iiy)new llg();
+            }
+            case 21: {
+                return (iiy)new kny(5);
+            }
+        }
+        return (iiy)new uvx();
     }
 }

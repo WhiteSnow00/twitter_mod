@@ -1,27 +1,26 @@
-import com.google.android.exoplayer2.upstream.cache.c;
-import android.os.ConditionVariable;
-
 // 
 // Decompiled by Procyon v0.6.0
 // 
 
-public final class h8q extends Thread
+public enum h8q
 {
-    public final ConditionVariable D0;
-    public final c E0;
+    public static final a Companion;
     
-    public h8q(final c e0, final ConditionVariable d0) {
-        this.E0 = e0;
-        this.D0 = d0;
-        super("ExoPlayer:SimpleCacheInit");
+    G0("UNKNOWN__");
+    
+    public static final h8q[] H0;
+    public final String F0;
+    
+    static {
+        Companion = new a();
+        shw.y0((Object[])new String[] { "Cheer", "Haha", "Hmm", "Like", "Placeholder10", "Placeholder11", "Placeholder12", "Placeholder13", "Placeholder14", "Placeholder15", "Placeholder16", "Placeholder17", "Placeholder18", "Placeholder19", "Placeholder20", "Placeholder6", "Placeholder7", "Placeholder8", "Placeholder9", "Sad" });
     }
     
-    @Override
-    public final void run() {
-        synchronized (this.E0) {
-            this.D0.open();
-            c.s(this.E0);
-            this.E0.b.e();
-        }
+    public h8q(final String f0) {
+        this.F0 = f0;
+    }
+    
+    public static final class a
+    {
     }
 }
